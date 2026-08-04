@@ -330,6 +330,33 @@ class LiquidResolver:
 
 
 # --------------------------------------------------------------------------
+# Redacao de segredos de exemplo
+# --------------------------------------------------------------------------
+
+# Padrao: tokens do GitHub (ghp_, ghs_, github_pat_, secret_scanning_, etc.)
+# que aparecem em documentacao de exemplo e disparam o push protection.
+_SECRET_PATTERNS = [
+    # GitHub fine-grained PAT
+    re.compile(r"\bgithub_pat_[A-Za-z0-9_]{36,}\b"),
+    # GitHub classic PAT / OAuth token
+    re.compile(r"\bghp_[A-Za-z0-9]{36,}\b"),
+    # GitHub Actions token
+    re.compile(r"\bghs_[A-Za-z0-9]{36,}\b"),
+    # GitHub refresh token
+    re.compile(r"\bghr_[A-Za-z0-9]{36,}\b"),
+    # Secret scanning example token (used in learner exercises)
+    re.compile(r"\bsecret_scanning_[A-Za-z0-9_]{20,}\b"),
+]
+
+
+def redact_secrets(text: str) -> str:
+    """Remove padroes de tokens que acionariam o push protection do GitHub."""
+    for pattern in _SECRET_PATTERNS:
+        text = pattern.sub("<TOKEN_REDACTED>", text)
+    return text
+
+
+# --------------------------------------------------------------------------
 # Pipeline principal
 # --------------------------------------------------------------------------
 
@@ -368,6 +395,7 @@ def run(sections: list[str], output_dir: str, keep_raw: bool):
                 resolved = resolver.resolve_autotitles(resolved)
                 resolved = resolver.strip_front_matter(resolved)
                 resolved = resolver.strip_html_comments(resolved)
+                resolved = redact_secrets(resolved)
                 resolved = resolved.strip() + "\n"
 
                 # Pula paginas de indice sem conteudo real (so titulo/navegacao/comentarios)
