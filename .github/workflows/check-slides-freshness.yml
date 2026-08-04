@@ -17,6 +17,15 @@ jobs:
   check:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    env:
+      ALERT_ISSUE_NUMBER: ${{ secrets.ALERT_ISSUE_NUMBER }}
+      DISCUSSION_CATEGORY_ID: ${{ secrets.DISCUSSION_CATEGORY_ID }}
+      SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+      ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
     steps:
       - uses: actions/checkout@v4
 
@@ -70,14 +79,14 @@ jobs:
           fi
 
       - name: Comentar em issue de alerta (opcional)
-        if: steps.freshness.outputs.exit_code == '2' && secrets.ALERT_ISSUE_NUMBER != ''
+        if: steps.freshness.outputs.exit_code == '2' && env.ALERT_ISSUE_NUMBER != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh issue comment "${{ secrets.ALERT_ISSUE_NUMBER }}" --body-file decks/.freshness-summary.md
+          gh issue comment "$ALERT_ISSUE_NUMBER" --body-file decks/.freshness-summary.md
 
       - name: Criar discussion de alerta (opcional)
-        if: steps.freshness.outputs.exit_code == '2' && secrets.DISCUSSION_CATEGORY_ID != ''
+        if: steps.freshness.outputs.exit_code == '2' && env.DISCUSSION_CATEGORY_ID != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -87,13 +96,13 @@ jobs:
           gh api graphql \
             -f query='mutation($repositoryId: ID!, $categoryId: ID!, $title: String!, $body: String!) { createDiscussion(input: {repositoryId: $repositoryId, categoryId: $categoryId, title: $title, body: $body}) { discussion { id url } } }' \
             -f repositoryId="$repo_id" \
-            -f categoryId="${{ secrets.DISCUSSION_CATEGORY_ID }}" \
+            -f categoryId="$DISCUSSION_CATEGORY_ID" \
             -f title="$title" \
             -f body="$body" \
             --jq '.data.createDiscussion.discussion.url' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Enviar e-mail de alerta
-        if: steps.freshness.outputs.exit_code == '2' && secrets.SMTP_SERVER != '' && secrets.SMTP_PORT != '' && secrets.SMTP_USERNAME != '' && secrets.SMTP_PASSWORD != '' && secrets.ALERT_EMAIL_TO != '' && secrets.ALERT_EMAIL_FROM != ''
+        if: steps.freshness.outputs.exit_code == '2' && env.SMTP_SERVER != '' && env.SMTP_PORT != '' && env.SMTP_USERNAME != '' && env.SMTP_PASSWORD != '' && env.ALERT_EMAIL_TO != '' && env.ALERT_EMAIL_FROM != ''
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
@@ -110,6 +119,6 @@ jobs:
           attachments: decks/.freshness-summary.md
 
       - name: Avisar secrets de e-mail ausentes
-        if: steps.freshness.outputs.exit_code == '2' && (secrets.SMTP_SERVER == '' || secrets.SMTP_PORT == '' || secrets.SMTP_USERNAME == '' || secrets.SMTP_PASSWORD == '' || secrets.ALERT_EMAIL_TO == '' || secrets.ALERT_EMAIL_FROM == '')
+        if: steps.freshness.outputs.exit_code == '2' && (env.SMTP_SERVER == '' || env.SMTP_PORT == '' || env.SMTP_USERNAME == '' || env.SMTP_PASSWORD == '' || env.ALERT_EMAIL_TO == '' || env.ALERT_EMAIL_FROM == '')
         run: |
           echo "Nao foi enviado e-mail porque faltam secrets SMTP/ALERT_EMAIL_* configurados." >> "$GITHUB_STEP_SUMMARY"
