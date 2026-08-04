@@ -1,7 +1,27 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-04 02:10 UTC  
+> Atualizado em: 2026-08-04 09:35 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [Customize the reasoning level for Copilot cloud agent](https://github.blog/changelog/2026-08-03-customize-the-reasoning-level-for-copilot-cloud-agent)
+
+**Data:** 2026-08-03  **Categorias:** `Release`, `copilot`
+
+When you delegate a task to GitHub Copilot cloud agent, you can now set the reasoning level for models that support it. This allows you to control how much the&#8230;
+
+The post [Customize the reasoning level for Copilot cloud agent](https://github.blog/changelog/2026-08-03-customize-the-reasoning-level-for-copilot-cloud-agent) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [Trigger Copilot automations with comments](https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments)
+
+**Data:** 2026-08-03  **Categorias:** `Release`, `copilot`
+
+You can now create Copilot cloud agent automations that run when an issue comment or pull request comment is created. Common use cases include: Generate documentation: Comment on a pull&#8230;
+
+The post [Trigger Copilot automations with comments](https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
