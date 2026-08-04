@@ -1,0 +1,103 @@
+name: Atualizar GitHub Changelog
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   # todo dia as 07:00 UTC
+  workflow_dispatch: {}    # permite rodar manualmente pela aba Actions
+
+env:
+  CHANGELOG_OUTPUT: "./github-changelog"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Baixar GitHub Changelog
+        run: python3 scripts/fetch_changelog.py --output "$CHANGELOG_OUTPUT"
+
+      - name: Commit se houver mudancas
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$CHANGELOG_OUTPUT"/
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "changelog: atualizar GitHub Changelog"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extrair novos itens para o e-mail
+        id: extract
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          if [ -f "$CHANGELOG_OUTPUT/_index.md" ]; then
+            summary="$(head -n 30 "$CHANGELOG_OUTPUT/_index.md")"
+          else
+            summary="Sem novidades."
+          fi
+
+          delimiter="EOF_CHANGELOG"
+          {
+            echo "summary<<$delimiter"
+            echo "$summary"
+            echo "$delimiter"
+          } >> "$GITHUB_OUTPUT"
+
+      # Requer os secrets: MAIL_USERNAME, MAIL_PASSWORD, MAIL_TO
+      # Configure em: Settings > Secrets and variables > Actions
+      - name: Verificar configuracao de e-mail
+        id: check-mail
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: |
+          if [ -n "$MAIL_USERNAME" ] && [ -n "$MAIL_TO" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Enviar e-mail com novidades
+        if: steps.commit.outputs.changed == 'true' && steps.check-mail.outputs.configured == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ secrets.MAIL_TO }}
+          from: GitHub Changelog <${{ secrets.MAIL_USERNAME }}>
+          subject: "🆕 GitHub Changelog atualizado — ${{ github.run_id }}"
+          body: |
+            Olá!
+
+            O GitHub Changelog foi atualizado. Aqui estão as novidades mais recentes:
+
+            ${{ steps.extract.outputs.summary }}
+
+            ---
+            Veja o indice por tema:
+            https://github.com/${{ github.repository }}/blob/main/github-changelog/_index.md
+
+            Fonte: https://github.blog/changelog/
+
+      - name: Avisar secrets de e-mail ausentes
+        if: steps.commit.outputs.changed == 'true' && steps.check-mail.outputs.configured == 'false'
+        run: |
+          echo "Nao foi enviado e-mail porque faltam secrets MAIL_USERNAME e/ou MAIL_TO configurados." >> "$GITHUB_STEP_SUMMARY"
