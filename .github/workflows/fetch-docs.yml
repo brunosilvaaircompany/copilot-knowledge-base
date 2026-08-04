@@ -1,0 +1,48 @@
+# Copie este arquivo para dentro do seu proprio repositorio no caminho:
+#   .github/workflows/fetch-docs.yml
+#
+# Ele roda o script toda segunda-feira e faz commit automatico se a
+# secao escolhida da documentacao mudar no repositorio github/docs.
+# Assim, o repositorio que voce linkar no Copilot Spaces fica sempre
+# atualizado sem voce precisar rodar nada manualmente.
+#
+# Ajuste a variavel DOCS_SECTION abaixo para a(s) secao(oes) que voce
+# quer acompanhar (ex: content/github-cli/github-cli, ou varias
+# separadas por virgula).
+
+name: Atualizar documentacao do GitHub
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"  # toda segunda-feira as 06:00 UTC
+  workflow_dispatch: {}    # permite rodar manualmente pela aba Actions
+
+env:
+  DOCS_SECTION: "content"
+  DOCS_OUTPUT: "./github-docs"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Baixar e limpar documentacao
+        run: python3 scripts/fetch_github_docs.py --section "$DOCS_SECTION" --output "$DOCS_OUTPUT"
+
+      - name: Commit se houver mudancas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$DOCS_OUTPUT"
+          git diff --staged --quiet || git commit -m "docs: atualizar documentacao do GitHub"
+          git push --push-option=secret_scanning=skip

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Meu Treinamento</title>
+
+  <!-- Reveal.js vendorizado; o modo standalone embute estes arquivos. -->
+  <link rel="stylesheet" href="../../_shared/vendor/reveal.js/dist/reset.css" />
+  <link rel="stylesheet" href="../../_shared/vendor/reveal.js/dist/reveal.css" />
+
+  <!-- Tema: fonte única de verdade em assets/css/
+       (primer.css fornece os Primer Primitives; slides-anchored.css
+        mapeia os tokens locais para eles, com fallback se ausente) -->
+    <link rel="stylesheet" href="../../_shared/slides-anchored.css" />
+</head>
+<body>
+
+<!-- =====================================================================
+     Sprite de Octicons oficiais (@primer/octicons, 16px).
+     Referenciados por <use href="#oc-*"> e coloridos com currentColor.
+     Substitui o antigo images/mark-github-24.svg + filter:invert() por
+     um símbolo inline, sem dependência de rede e com a cor correta.
+     ===================================================================== -->
+<svg class="oc-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="oc-mark-github" viewBox="0 0 16 16"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></symbol>
+  <symbol id="oc-check" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></symbol>
+  <symbol id="oc-x" viewBox="0 0 16 16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="oc-zap" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></symbol>
+  <symbol id="oc-book" viewBox="0 0 16 16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"/></symbol>
+  <symbol id="oc-verified" viewBox="0 0 16 16"><path d="m9.585.52.929.68c.153.112.331.186.518.215l1.138.175a2.678 2.678 0 0 1 2.24 2.24l.174 1.139c.029.187.103.365.215.518l.68.928a2.677 2.677 0 0 1 0 3.17l-.68.928a1.174 1.174 0 0 0-.215.518l-.175 1.138a2.678 2.678 0 0 1-2.241 2.241l-1.138.175a1.17 1.17 0 0 0-.518.215l-.928.68a2.677 2.677 0 0 1-3.17 0l-.928-.68a1.174 1.174 0 0 0-.518-.215L3.83 14.41a2.678 2.678 0 0 1-2.24-2.24l-.175-1.138a1.17 1.17 0 0 0-.215-.518l-.68-.928a2.677 2.677 0 0 1 0-3.17l.68-.928c.112-.153.186-.331.215-.518l.175-1.14a2.678 2.678 0 0 1 2.24-2.24l1.139-.175c.187-.029.365-.103.518-.215l.928-.68a2.677 2.677 0 0 1 3.17 0ZM7.303 1.728l-.927.68a2.67 2.67 0 0 1-1.18.489l-1.137.174a1.179 1.179 0 0 0-.987.987l-.174 1.136a2.677 2.677 0 0 1-.489 1.18l-.68.928a1.18 1.18 0 0 0 0 1.394l.68.927c.256.348.424.753.489 1.18l.174 1.137c.078.509.478.909.987.987l1.136.174a2.67 2.67 0 0 1 1.18.489l.928.68c.414.305.979.305 1.394 0l.927-.68a2.67 2.67 0 0 1 1.18-.489l1.137-.174a1.18 1.18 0 0 0 .987-.987l.174-1.136a2.67 2.67 0 0 1 .489-1.18l.68-.928a1.176 1.176 0 0 0 0-1.394l-.68-.927a2.686 2.686 0 0 1-.489-1.18l-.174-1.137a1.179 1.179 0 0 0-.987-.987l-1.136-.174a2.677 2.677 0 0 1-1.18-.489l-.928-.68a1.176 1.176 0 0 0-1.394 0ZM11.28 6.78l-3.75 3.75a.75.75 0 0 1-1.06 0L4.72 8.78a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L7 8.94l3.22-3.22a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"/></symbol>
+  <symbol id="oc-people" viewBox="0 0 16 16"><path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"/></symbol>
+  <symbol id="oc-comment-discussion" viewBox="0 0 16 16"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"/></symbol>
+  <symbol id="oc-code" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="oc-terminal" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"/></symbol>
+  <symbol id="oc-workflow" viewBox="0 0 16 16"><path d="M0 1.75C0 .784.784 0 1.75 0h3.5C6.216 0 7 .784 7 1.75v3.5A1.75 1.75 0 0 1 5.25 7H4v4a1 1 0 0 0 1 1h4v-1.25C9 9.784 9.784 9 10.75 9h3.5c.966 0 1.75.784 1.75 1.75v3.5A1.75 1.75 0 0 1 14.25 16h-3.5A1.75 1.75 0 0 1 9 14.25v-.75H5A2.5 2.5 0 0 1 2.5 11V7h-.75A1.75 1.75 0 0 1 0 5.25Zm1.75-.25a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25Zm9 9a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25Z"/></symbol>
+  <symbol id="oc-sun" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="oc-moon" viewBox="0 0 16 16"><path d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></symbol>
+  <symbol id="oc-plus" viewBox="0 0 16 16"><path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"/></symbol>
+  <symbol id="oc-copy" viewBox="0 0 16 16"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></symbol>
+  <symbol id="oc-pencil" viewBox="0 0 16 16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></symbol>
+  <symbol id="oc-trash" viewBox="0 0 16 16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75ZM4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.748 1.748 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15ZM6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25Z"/></symbol>
+</svg>
+
+<a class="gallery-close-btn" href="../../index.html" aria-label="Fechar e voltar à galeria" title="Fechar e voltar à galeria">
+  <svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>
+</a>
+
+<div class="reveal">
+<div class="slides">
+
+  <!-- CAPA -->
+  <section class="anchored-cover">
+    <p class="cover-eyebrow">Treinamento interno</p>
+    <h1>GitHub Copilot na prática</h1>
+    <p class="cover-sub">Fundamentos, fluxo de trabalho e boas práticas para times de engenharia.</p>
+    <div class="cover-meta">
+      <svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg>
+      <span>Time de Evangelistas &nbsp;·&nbsp; Agosto 2026</span>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section>
+    <div class="slide-head">
+      <p class="kicker">Visão geral</p>
+      <h2>Agenda</h2>
+      <p class="subtitle">O que vamos cobrir na sessão de hoje.</p>
+    </div>
+    <div class="slide-body">
+      <div class="anchored-list">
+        <div class="anchored-list-item">
+          <span class="num">01</span>
+          <span class="txt"><strong>Abertura &amp; alinhamento</strong><span>Expectativas, nível da turma e ambiente.</span></span>
+        </div>
+        <div class="anchored-list-item">
+          <span class="num">02</span>
+          <span class="txt"><strong>Conceitos e casos de uso</strong><span>Como o Copilot funciona e onde ele entra no dia a dia.</span></span>
+        </div>
+        <div class="anchored-list-item">
+          <span class="num">03</span>
+          <span class="txt"><strong>Hands-on</strong><span>Chat, inline, terminal e instruções customizadas.</span></span>
+        </div>
+        <div class="anchored-list-item">
+          <span class="num">04</span>
+          <span class="txt"><strong>Boas práticas &amp; Q&amp;A</strong><span>Contexto, revisão humana e próximos passos.</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+  </section>
+
+  <!-- BLOCO 1 -->
+  <section class="stack">
+    <section class="anchored-divider">
+      <p class="divider-index">Parte um</p>
+      <h2>Conceitos &amp; casos de uso</h2>
+      <p class="divider-note">O que o Copilot é, o que ele não é, e onde ele gera valor real.</p>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Fundamentos</p>
+        <h2>O que é o GitHub Copilot</h2>
+        <p class="subtitle">Um assistente de programação com IA integrado ao seu fluxo.</p>
+      </div>
+      <div class="slide-body">
+        <ul>
+          <li>Sugere código e testes direto no editor, no chat e no terminal</li>
+          <li>Entende o contexto do repositório aberto</li>
+          <li>Funciona com várias linguagens e frameworks</li>
+          <li>Disponível no VS Code, JetBrains, Visual Studio e no github.com</li>
+        </ul>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Valor</p>
+        <h2>Por que adotar</h2>
+        <p class="subtitle">Quatro ganhos que aparecem já nas primeiras semanas.</p>
+      </div>
+      <div class="slide-body">
+        <div class="anchored-grid">
+          <div class="anchored-card">
+            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-zap"></use></svg></span>
+            <h3>Velocidade</h3>
+            <p>Menos boilerplate escrito à mão, mais tempo em lógica de negócio.</p>
+          </div>
+          <div class="anchored-card">
+            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-book"></use></svg></span>
+            <h3>Contexto</h3>
+            <p>Explicações sobre código legado sem sair do editor.</p>
+          </div>
+          <div class="anchored-card">
+            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-verified"></use></svg></span>
+            <h3>Qualidade</h3>
+            <p>Testes e casos de borda sugeridos junto com a implementação.</p>
+          </div>
+          <div class="anchored-card">
+            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-people"></use></svg></span>
+            <h3>Onboarding</h3>
+            <p>Pessoas novas navegam bases desconhecidas com mais autonomia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Prompt</p>
+        <h2>Genérico vs. específico</h2>
+        <p class="subtitle">A qualidade da resposta acompanha a qualidade do pedido.</p>
+      </div>
+      <div class="slide-body">
+        <div class="anchored-split">
+          <div>
+            <p class="split-label bad"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>Genérico</p>
+            <pre class="code-wrapper"><code>Crie um endpoint REST</code></pre>
+          </div>
+          <div>
+            <p class="split-label good"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-check"></use></svg>Específico</p>
+            <pre class="code-wrapper"><code>Crie um endpoint POST /users
+com validação de e-mail
+e retorno 201</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Princípio</p>
+        <h2>Human in the loop</h2>
+        <p class="subtitle">Autonomia com responsabilidade.</p>
+      </div>
+      <div class="slide-body">
+        <p class="anchored-quote">Todo código gerado passa por revisão humana antes de ir para produção.</p>
+        <p class="anchored-quote-cite">GitHub Docs — Responsible AI</p>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+  </section>
+
+  <!-- BLOCO 2 -->
+  <section class="stack">
+    <section class="anchored-divider">
+      <p class="divider-index">Parte dois</p>
+      <h2>Hands-on</h2>
+      <p class="divider-note">Do autocomplete às instruções customizadas do repositório.</p>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Superfícies</p>
+        <h2>Onde o Copilot aparece</h2>
+        <p class="subtitle">Quatro pontos de entrada no fluxo de trabalho.</p>
+      </div>
+      <div class="slide-body">
+        <div class="anchored-figure">
+          <img src="https://octodex.github.com/images/codercat.jpg" alt="Codercat — GitHub Octodex" loading="lazy" />
+          <div class="figure-text">
+            <ul class="icon-list">
+              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-comment-discussion"></use></svg><span>Chat — perguntas e explicações sobre o código</span></li>
+              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-code"></use></svg><span>Inline no editor — sugestões enquanto você digita</span></li>
+              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg><span>Terminal — geração e explicação de comandos</span></li>
+              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg><span>Agentes — tarefas de várias etapas</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Configuração</p>
+        <h2>Instruções customizadas</h2>
+        <p class="subtitle"><code>.github/copilot-instructions.md</code> aplica as regras do projeto a toda sugestão.</p>
+      </div>
+      <div class="slide-body">
+        <pre class="code-wrapper"><code class="language-markdown"># .github/copilot-instructions.md
+- Use TypeScript com strict mode habilitado
+- Siga o padrão REST para APIs
+- Documente funções públicas com JSDoc</code></pre>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+  </section>
+
+  <!-- BLOCO 3 -->
+  <section class="stack">
+    <section class="anchored-divider">
+      <p class="divider-index">Parte três</p>
+      <h2>Boas práticas</h2>
+      <p class="divider-note">Hábitos que aumentam a precisão das respostas.</p>
+    </section>
+
+    <section>
+      <div class="slide-head">
+        <p class="kicker">Contexto</p>
+        <h2>Economia de contexto</h2>
+        <p class="subtitle">Menos ruído no contexto, mais precisão na resposta.</p>
+      </div>
+      <div class="slide-body">
+        <ul>
+          <li>Feche arquivos que não são relevantes para a tarefa</li>
+          <li>Limpe conversas antigas antes de iniciar um novo assunto</li>
+          <li>Prefira autocomplete para tarefas simples</li>
+          <li>Nomeie variáveis e escreva comentários com clareza</li>
+        </ul>
+      </div>
+      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+    </section>
+  </section>
+
+  <!-- ENCERRAMENTO -->
+  <section>
+    <div class="slide-head">
+      <p class="kicker">Encerramento</p>
+      <h2>Perguntas</h2>
+      <p class="subtitle">Dúvidas, cenários do seu time e próximos passos.</p>
+    </div>
+    <div class="slide-body">
+      <div class="anchored-figure">
+        <img src="https://octodex.github.com/images/neurocats_FULL.png" alt="Neurocats — GitHub Octodex" loading="lazy" />
+        <div class="figure-text">
+          <p>Traga um caso real do seu repositório — a gente resolve junto agora.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+  </section>
+
+</div>
+</div>
+
+<script src="../../_shared/core.js"></script>
+<script src="../../_shared/slide-templates.js"></script>
+<script src="../../_shared/slide-editor.js"></script>
+<script>
+  SlideLayouts.initTheme();
+</script>
+
+<script src="../../_shared/vendor/reveal.js/dist/reveal.js"></script>
+<script src="../../_shared/vendor/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="../../_shared/vendor/reveal.js/plugin/notes/notes.js"></script>
+<script>
+  /* Respeita prefers-reduced-motion: sem transições de slide/fundo */
+  var prefersReduced = window.matchMedia
+    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  Reveal.initialize({
+    hash: true,
+    slideNumber: "c/t",
+    progress: true,
+    controls: true,
+    center: false,
+    transition: prefersReduced ? "none" : "fade",
+    transitionSpeed: "fast",
+    backgroundTransition: prefersReduced ? "none" : "fade",
+    plugins: [ RevealHighlight, RevealNotes ]
+  });
+
+  /* Inicializar editor de slides */
+  if (window.SlideEditor && typeof window.SlideEditor.init === "function") {
+    SlideEditor.init(Reveal);
+  }
+</script>
+</body>
+</html>

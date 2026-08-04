@@ -1,0 +1,30 @@
+# Manifesto de freshness: mapeia cada deck HTML para os arquivos Markdown
+# (sincronizados em github-docs/) que serviram de fonte para o conteúdo.
+# O workflow check-slides-freshness.yml compara os hashes das fontes e
+# abre/atualiza uma issue quando a documentação muda e o deck fica defasado.
+#
+# Ao criar um deck novo com o build.js, adicione uma entrada aqui.
+
+slides:
+  # Deck linkado gerado pelo build.js (decks/copilot-training/)
+  - slide: decks/copilot-training/index.html
+    sources:
+      # Fundamentos — o que é o Copilot, recursos e primeiros passos
+      - path: github-docs/content/copilot/get-started/what-is-github-copilot.md
+      - path: github-docs/content/copilot/get-started/features.md
+      - path: github-docs/content/copilot/get-started/quickstart.md
+      # Prompts — genérico vs. específico
+      - path: github-docs/content/copilot/concepts/prompting/prompt-engineering.md
+      # Instruções customizadas (.github/copilot-instructions.md)
+      - path: github-docs/content/copilot/concepts/prompting/response-customization.md
+      - path: github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md
+      # Boas práticas — contexto, revisão humana
+      - path: github-docs/content/copilot/get-started/best-practices.md
+
+# Seletores opcionais por fonte (restringem a comparação a trechos):
+#   - path: github-docs/content/copilot/get-started/best-practices.md
+#     selectors:
+#       headings:
+#         - Best practices
+#       regex_patterns:
+#         - "(?i)custom instructions?"

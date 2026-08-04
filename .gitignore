@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Freshness dos decks — o .freshness-state.json é a baseline (deve ser commitado);
+# report/summary são artefatos regenerados a cada execução do workflow.
+decks/.freshness-report.json
+decks/.freshness-summary.md

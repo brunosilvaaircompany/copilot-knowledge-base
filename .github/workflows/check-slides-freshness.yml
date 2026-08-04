@@ -1,0 +1,115 @@
+name: Verificar desatualizacao dos slides
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["Atualizar documentacao do GitHub"]
+    types: [completed]
+
+permissions:
+  contents: read
+  issues: write
+  discussions: write
+
+jobs:
+  check:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Verificar desatualizacao dos slides
+        id: freshness
+        run: |
+          set +e
+          python3 scripts/check_slides_freshness.py \
+            --manifest decks/deck-sources.yml \
+            --state decks/.freshness-state.json \
+            --report-json decks/.freshness-report.json \
+            --summary-file decks/.freshness-summary.md
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -eq 1 ]; then
+            exit 1
+          fi
+          exit 0
+
+      - name: Publicar resumo
+        if: always()
+        run: cat decks/.freshness-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Garantir label
+        if: steps.freshness.outputs.exit_code == '2'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh label create slides-stale --color FBCA04 --description "Slides HTML desatualizados em relacao ao markdown fonte" --force
+
+      - name: Criar ou atualizar issue de slides stale
+        if: steps.freshness.outputs.exit_code == '2'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Slides HTML desatualizados"
+          existing="$(gh issue list --state open --label slides-stale --search "$title in:title" --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file decks/.freshness-summary.md
+          else
+            gh issue create \
+              --title "$title" \
+              --label slides-stale \
+              --body-file decks/.freshness-summary.md
+          fi
+
+      - name: Comentar em issue de alerta (opcional)
+        if: steps.freshness.outputs.exit_code == '2' && secrets.ALERT_ISSUE_NUMBER != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ secrets.ALERT_ISSUE_NUMBER }}" --body-file decks/.freshness-summary.md
+
+      - name: Criar discussion de alerta (opcional)
+        if: steps.freshness.outputs.exit_code == '2' && secrets.DISCUSSION_CATEGORY_ID != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          repo_id="$(gh repo view --json id --jq '.id')"
+          title="Slides HTML desatualizados - run #${{ github.run_number }}"
+          body="$(cat decks/.freshness-summary.md)"
+          gh api graphql \
+            -f query='mutation($repositoryId: ID!, $categoryId: ID!, $title: String!, $body: String!) { createDiscussion(input: {repositoryId: $repositoryId, categoryId: $categoryId, title: $title, body: $body}) { discussion { id url } } }' \
+            -f repositoryId="$repo_id" \
+            -f categoryId="${{ secrets.DISCUSSION_CATEGORY_ID }}" \
+            -f title="$title" \
+            -f body="$body" \
+            --jq '.data.createDiscussion.discussion.url' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Enviar e-mail de alerta
+        if: steps.freshness.outputs.exit_code == '2' && secrets.SMTP_SERVER != '' && secrets.SMTP_PORT != '' && secrets.SMTP_USERNAME != '' && secrets.SMTP_PASSWORD != '' && secrets.ALERT_EMAIL_TO != '' && secrets.ALERT_EMAIL_FROM != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "[Slides stale] ${{ github.repository }}"
+          to: ${{ secrets.ALERT_EMAIL_TO }}
+          from: ${{ secrets.ALERT_EMAIL_FROM }}
+          body: |
+            Foram detectados slides HTML desatualizados no repositorio ${{ github.repository }}.
+            Veja o resumo no job e acompanhe a issue aberta/atualizada.
+            Execucao: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          attachments: decks/.freshness-summary.md
+
+      - name: Avisar secrets de e-mail ausentes
+        if: steps.freshness.outputs.exit_code == '2' && (secrets.SMTP_SERVER == '' || secrets.SMTP_PORT == '' || secrets.SMTP_USERNAME == '' || secrets.SMTP_PASSWORD == '' || secrets.ALERT_EMAIL_TO == '' || secrets.ALERT_EMAIL_FROM == '')
+        run: |
+          echo "Nao foi enviado e-mail porque faltam secrets SMTP/ALERT_EMAIL_* configurados." >> "$GITHUB_STEP_SUMMARY"
