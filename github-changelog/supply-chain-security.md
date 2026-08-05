@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-04 09:35 UTC  
+> Atualizado em: 2026-08-05 09:31 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Restricting npm bypass-2FA granular access tokens](https://github.blog/changelog/2026-07-31-restricting-npm-bypass-2fa-granular-access-tokens)
+## [Customize Dependabot pull request branch names](https://github.blog/changelog/2026-08-04-customize-dependabot-pull-request-branch-names)
 
-**Data:** 2026-07-31  **Categorias:** `Retired`, `supply chain security`
+**Data:** 2026-08-04  **Categorias:** `Improvement`, `supply chain security`
 
-npm granular access tokens (GATs) configured to bypass 2FA can no longer perform sensitive account, org, and package management actions. These now require an interactive 2FA challenge, closing one of&#8230;
+You can now customize the branch names Dependabot creates for pull requests. New pull-request-branch-name options in .github/dependabot.yml let you set a prefix and maximum length, choose segment and word separators,&#8230;
 
-The post [Restricting npm bypass-2FA granular access tokens](https://github.blog/changelog/2026-07-31-restricting-npm-bypass-2fa-granular-access-tokens) appeared first on [The GitHub Blog](https://github.blog).
+The post [Customize Dependabot pull request branch names](https://github.blog/changelog/2026-08-04-customize-dependabot-pull-request-branch-names) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
