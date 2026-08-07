@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-06 09:35 UTC  
+> Atualizado em: 2026-08-07 08:09 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [Kimi K3 is now available in GitHub Copilot](https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot)
+
+**Data:** 2026-08-06  **Categorias:** `Release`, `copilot`
+
+Editor&#8217;s note (August 6, 2026): We have resumed rolling out Kimi K3 in GitHub Copilot. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot&#8217;s pricing&#8230;
+
+The post [Kimi K3 is now available in GitHub Copilot](https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
