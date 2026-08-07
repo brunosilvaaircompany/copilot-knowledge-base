@@ -2,7 +2,12 @@
 
 ## Reusable workflows
 
-Reference information for reusable workflows.
+This article provides reference information for reusable workflows and workflow templates, including access rules, limitations, supported keywords, and runner behavior.
+
+
+
+You can centralize deterministic, repeatable logic in reusable workflows, and use agentic workflows for tasks that require contextual judgment about your repository's content such as analysis, summaries, and recommendations. For more information, see [Creating GitHub Agentic Workflows](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/creating-github-agentic-workflows).
+
 
 ### Access to reusable workflows
 

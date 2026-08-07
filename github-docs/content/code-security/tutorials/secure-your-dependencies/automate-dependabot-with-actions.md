@@ -30,6 +30,13 @@ Dependabot creates pull requests to keep your dependencies up to date. You can u
 Dependabot is able to trigger GitHub Actions workflows on its pull requests and comments; however, certain events are treated differently.
  For more information, see [Dependabot On Actions](https://docs.github.com/en/code-security/reference/supply-chain-security/troubleshoot-dependabot/dependabot-on-actions).
 
+
+
+> [!NOTE]
+> You can also use agentic workflows for dependency analysis, update summaries, and remediation recommendations, while keeping security enforcement and merge gating in deterministic GitHub Actions workflows. For more information, see [Creating GitHub Agentic Workflows](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/creating-github-agentic-workflows).
+
+
+
 Here are several common scenarios for pull requests that can be automated using GitHub Actions.
 
 ## Fetching metadata about a pull request
@@ -150,7 +157,7 @@ jobs:
 
 If you want to allow maintainers to mark certain pull requests for automerge, you can use GitHub's automerge functionality. This enables the pull request to be merged when any tests and approvals required by the branch protection rules are successfully met.
 
-For more information, see [Automatically Merging A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) and [Managing A Branch Protection Rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule).
+For more information, see [Automatically Merging A Pull Request](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/automatically-merging-a-pull-request) and [Managing A Branch Protection Rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule).
 
 You can instead use GitHub Actions and the GitHub CLI. Here is an example that automerges all patch updates to `my-dependency`:
 

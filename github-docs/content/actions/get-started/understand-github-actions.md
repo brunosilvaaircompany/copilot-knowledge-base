@@ -116,6 +116,13 @@ GitHub Actions can help you automate nearly every aspect of your application dev
 
 
 
+> [!NOTE]
+> For automations that require contextual judgment about your repository's content, you can also author agentic workflows in natural language instead of a traditional GitHub Actions workflow. For more information, see [Quickstart](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/quickstart) and [Creating GitHub Agentic Workflows](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/creating-github-agentic-workflows).
+
+
+
+
+
 ## Further reading
 
 * [About GitHub Actions For Enterprises](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/getting-started-with-github-actions-for-your-enterprise/about-github-actions-for-enterprises)

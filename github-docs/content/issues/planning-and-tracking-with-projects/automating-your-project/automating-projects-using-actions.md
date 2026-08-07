@@ -14,9 +14,14 @@ For more information about other changes you can make to your project through th
 
 You may also want to use the **actions/add-to-project** workflow, which is maintained by GitHub and will add the current issue or pull request to the project specified. For more information, see the [actions/add-to-project](https://github.com/actions/add-to-project) repository and README.
 
+
+
+For project management tasks that require understanding repository context—such as triaging new issues, summarizing backlogs, classifying issues by type or priority, and recommending field values—agentic workflows are a better fit than traditional GitHub Actions workflows. Unlike fixed workflow steps, agentic workflows let you describe what you want in natural language, and an AI coding agent handles the reasoning and decision-making.  For more information, see [Creating GitHub Agentic Workflows](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/creating-github-agentic-workflows).
+
+
+
 > [!NOTE]
 > `GITHUB_TOKEN` is scoped to the repository level and cannot access projects. To access projects you can either create a GitHub App (recommended for organization projects) or a personal access token (recommended for user projects). Workflow examples for both approaches are shown below.
-
 ## Example workflow authenticating with a GitHub App
 
 For more information about authenticating in a GitHub Actions workflow with a GitHub App, see [Making Authenticated API Requests With A GitHub App In A GitHub Actions Workflow](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/making-authenticated-api-requests-with-a-github-app-in-a-github-actions-workflow).

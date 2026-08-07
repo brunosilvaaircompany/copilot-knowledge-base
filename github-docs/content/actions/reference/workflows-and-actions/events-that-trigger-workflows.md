@@ -9,6 +9,12 @@ Some events have multiple activity types. For these events, you can specify whic
 > [!NOTE]
 > Not all webhook events trigger workflows.
 
+
+
+Like GitHub Actions workflows, agentic workflows can be triggered by repository events and schedules. For an example, see [Creating GitHub Agentic Workflows](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/creating-github-agentic-workflows).
+
+
+
 ## `branch_protection_rule`
 
 | Webhook event payload | Activity types | `GITHUB_SHA` | `GITHUB_REF` |
@@ -390,7 +396,7 @@ on:
 > * If your repository uses GitHub Actions to perform required checks or if you require workflows via organization rulesets on pull requests in your repository, you need to update the workflows to include the `merge_group` event as an additional trigger. Otherwise, status checks will not be triggered when you add a pull request to a merge queue. The merge will fail as the required status check will not be reported. The `merge_group` event is separate from the `pull_request` and `push` events.
 
 
-Runs your workflow when a pull request is added to a merge queue, which adds the pull request to a merge group. For more information see [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request-with-a-merge-queue).
+Runs your workflow when a pull request is added to a merge queue, which adds the pull request to a merge group. For more information see [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request-with-a-merge-queue).
 
 For example, you can run a workflow when the `checks_requested` activity has occurred.
 
@@ -482,7 +488,7 @@ on:
 
 Runs your workflow when activity on a pull request in the workflow's repository occurs. For example, if no activity types are specified, the workflow runs when a pull request is opened or reopened or when the head branch of the pull request is updated. For activity related to pull request reviews, pull request review comments, or pull request comments, use the [`pull_request_review`](#pull_request_review), [`pull_request_review_comment`](#pull_request_review_comment), or [`issue_comment`](#issue_comment) events instead. For information about the pull request APIs, see [Pulls](https://docs.github.com/en/graphql/reference/pulls#object-pullrequest) in the GraphQL API documentation or [Pulls](https://docs.github.com/en/rest/pulls).
 
-Note that `GITHUB_SHA` for this event is the last merge commit of the pull request merge branch. If you want to get the commit ID for the last commit to the head branch of the pull request, use `github.event.pull_request.head.sha` instead. For more information about merge branches, see [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#pull-request-refs-and-merge-branches).
+Note that `GITHUB_SHA` for this event is the last merge commit of the pull request merge branch. If you want to get the commit ID for the last commit to the head branch of the pull request, use `github.event.pull_request.head.sha` instead. For more information about merge branches, see [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#pull-request-refs-and-merge-branches).
 
 ### How the merge branch affects your workflow
 

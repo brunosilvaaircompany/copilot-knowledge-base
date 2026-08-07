@@ -20,7 +20,7 @@ People with the team maintainer role can manage team membership and settings.
 
 
 > [!NOTE]
-> If your enterprise uses managed user accounts and manages a team's membership with an identity provider (IdP) group, you cannot assign the team maintainer role manually for that team. For more information, see [Managing Team Memberships With Identity Provider Groups](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/managing-team-memberships-with-identity-provider-groups).
+> If you are managing a team's membership with an identity provider (IdP) group, you cannot assign the team maintainer role to a member of that team.
 
 
 

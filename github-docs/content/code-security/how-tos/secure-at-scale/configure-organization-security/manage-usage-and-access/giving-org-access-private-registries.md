@@ -2,7 +2,7 @@
 
 ## About the importance of providing access to private registries
 
-When code in a repository has dependencies that are stored in a private registry, some security features need access to the registry to enable them to work effectively. Without access to all the dependencies of a repository, the effectiveness of Code Quality (public preview), code scanning default setup and Dependabot are limited.
+When code in a repository has dependencies that are stored in a private registry, some security features need access to the registry to enable them to work effectively. Without access to all the dependencies of a repository, the effectiveness of Code Quality, code scanning default setup and Dependabot are limited.
 
 ## Code scanning default setup access to private registries
 
@@ -101,13 +101,6 @@ For more information about how OIDC works, see [Openid Connect](https://docs.git
 
 
 ## Code Quality access to private registries
-
-
-> [!NOTE]
-> GitHub Code Quality is currently in public preview and will become generally available on July 20, 2026.
-> During public preview, Code Quality will not be billed, although Code Quality scans will consume GitHub Actions minutes. From July 20, 2026, usage will incur charges. See [GitHub Code Quality](https://docs.github.com/en/billing/concepts/product-billing/github-code-quality).
-
-
 
 GitHub Code Quality can use any of the organization-level private registries that are available when it is enabled for a repository.
 

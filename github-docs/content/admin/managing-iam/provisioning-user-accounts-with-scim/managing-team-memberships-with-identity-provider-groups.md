@@ -15,6 +15,8 @@ When a change to an IdP group or a new team connection results in a user joining
 
 Teams connected to IdP groups cannot be parents of other teams nor a child of another team. If the team you want to connect to an IdP group is a parent or child team, we recommend creating a new team or removing the nested relationships that make your team a parent team.
 
+If you are managing a team's membership with an IdP group, you cannot assign the team maintainer role to a member of that team. For more information, see [Assigning The Team Maintainer Role To A Team Member](https://docs.github.com/en/organizations/organizing-members-into-teams/assigning-the-team-maintainer-role-to-a-team-member).
+
 To manage repository access for any team in your enterprise, including teams connected to an IdP group, you must make changes on GitHub. For more information, see [Managing Team Access To An Organization Repository](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-team-access-to-an-organization-repository).
 
 ## Requirements for connecting IdP groups with teams
@@ -63,7 +65,7 @@ Any member of an organization can create a new team and connect the team to an I
 
 ## Managing the connection between an existing organization team and an IdP group
 
-Organization owners and team maintainers can manage the existing connection between an IdP group and a team. If your enterprise does not use managed user accounts, team maintainers can also manage the connection.
+Organization owners can manage the existing connection between an IdP group and a team.
 
 > [!NOTE]
 > Before you connect an existing team on GitHub to an IdP group for the first time, all members of the team on GitHub must first be removed. For more information, see [Removing Organization Members From A Team](https://docs.github.com/en/organizations/organizing-members-into-teams/removing-organization-members-from-a-team).
