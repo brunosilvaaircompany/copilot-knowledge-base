@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-04 09:35 UTC  
+> Atualizado em: 2026-08-08 07:42 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [GitHub Models is now retired](https://github.blog/changelog/2026-07-30-github-models-is-now-retired)
+## [Enterprises can now install third-party GitHub Apps](https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps)
 
-**Data:** 2026-07-30  **Categorias:** `Retired`, `ecosystem &amp; accessibility`
+**Data:** 2026-08-07  **Categorias:** `Improvement`, `ecosystem &amp; accessibility`, `enterprise management tools`
 
-As of July 30, 2026, GitHub Models is now retired. The playground, model catalog, inference API, and bring your own key (BYOK) are no longer available to any customer, including&#8230;
+Enterprise owners can now install public GitHub Apps created outside their enterprise on their enterprise account. This allows third-party integrators to build apps for enterprise management scenarios. Enterprise installations grant&#8230;
 
-The post [GitHub Models is now retired](https://github.blog/changelog/2026-07-30-github-models-is-now-retired) appeared first on [The GitHub Blog](https://github.blog).
+The post [Enterprises can now install third-party GitHub Apps](https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

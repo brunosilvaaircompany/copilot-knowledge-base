@@ -1,36 +1,26 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-07 08:09 UTC  
+> Atualizado em: 2026-08-08 07:42 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Customize code scanning default setup at scale](https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale)
+## [Secret scanning coverage updates](https://github.blog/changelog/2026-08-07-secret-scanning-coverage-updates)
 
-**Data:** 2026-08-04  **Categorias:** `Release`, `application security`
+**Data:** 2026-08-07  **Categorias:** `Improvement`, `application security`
 
-You can now apply your own configuration file to code scanning default setup, using the new github-codeql-config-file repository property. This gives you control over how CodeQL scans your code for&#8230;
+This release expands secret scanning&#8217;s coverage with more secrets blocked by push protection, one new secret scanning partner, and richer metadata on alerts. Secret scanning partnership program Lovable Labs is&#8230;
 
-The post [Customize code scanning default setup at scale](https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Code coverage automatic enablement in Code Quality settings](https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings)
-
-**Data:** 2026-08-04  **Categorias:** `Improvement`, `application security`
-
-We&#8217;re making code coverage setup faster and simpler. You&#8217;ll now see a new option in your repository&#8217;s Code Quality settings that lets GitHub generate your coverage workflow automatically with AI.&#8230;
-
-The post [Code coverage automatic enablement in Code Quality settings](https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings) appeared first on [The GitHub Blog](https://github.blog).
+The post [Secret scanning coverage updates](https://github.blog/changelog/2026-08-07-secret-scanning-coverage-updates) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [CodeQL 2.26.2 adds Swift 6.3.3 and Kotlin 2.4.10 support](https://github.blog/changelog/2026-08-04-codeql-2-26-2-adds-swift-6-3-3-and-kotlin-2-4-10-support)
+## [GitHub Code Quality no longer adds Copilot as a reviewer](https://github.blog/changelog/2026-08-07-github-code-quality-no-longer-adds-copilot-as-a-reviewer)
 
-**Data:** 2026-08-04  **Categorias:** `Improvement`, `application security`
+**Data:** 2026-08-07  **Categorias:** `Retired`, `application security`, `copilot`
 
-CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We&#8217;ve recently released CodeQL 2.26.2, which adds support for Swift 6.3.3&#8230;
+Enabling GitHub Code Quality on a repository no longer creates a ruleset that automatically requests a code review from GitHub Copilot on your pull requests. In repositories that already have&#8230;
 
-The post [CodeQL 2.26.2 adds Swift 6.3.3 and Kotlin 2.4.10 support](https://github.blog/changelog/2026-08-04-codeql-2-26-2-adds-swift-6-3-3-and-kotlin-2-4-10-support) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Code Quality no longer adds Copilot as a reviewer](https://github.blog/changelog/2026-08-07-github-code-quality-no-longer-adds-copilot-as-a-reviewer) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

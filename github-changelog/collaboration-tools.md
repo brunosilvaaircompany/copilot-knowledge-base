@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-06 09:35 UTC  
+> Atualizado em: 2026-08-08 07:42 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Triage role can bypass issue creation restrictions](https://github.blog/changelog/2026-08-03-triage-role-can-bypass-issue-creation-restrictions)
+## [Set pull request limits at the organization level](https://github.blog/changelog/2026-08-06-set-pull-request-limits-at-the-organization-level)
 
-**Data:** 2026-08-03  **Categorias:** `Improvement`, `collaboration tools`
+**Data:** 2026-08-06  **Categorias:** `Improvement`, `collaboration tools`
 
-If your repository restricts issue creation to collaborators only, users with the triage role can now create issues. Previously, the restricted setting only allowed users with write access to create&#8230;
+You can now set pull request limits at the organization level. Pull request limits let you define how many open pull requests a user without write access can have at&#8230;
 
-The post [Triage role can bypass issue creation restrictions](https://github.blog/changelog/2026-08-03-triage-role-can-bypass-issue-creation-restrictions) appeared first on [The GitHub Blog](https://github.blog).
+The post [Set pull request limits at the organization level](https://github.blog/changelog/2026-08-06-set-pull-request-limits-at-the-organization-level) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
