@@ -1,8 +1,7 @@
 # Allowing use of GitHub Code Quality in your enterprise
 
 > [!NOTE]
-> * GitHub Code Quality is currently in public preview and subject to change. During public preview, Code Quality will not be billed, although Code Quality scans will consume GitHub Actions minutes.
-> * Previously, Advanced Security policies also controlled access to Code Quality. Those existing policy settings are automatically applied to the standalone Code Quality policies.
+> Previously, Advanced Security policies also controlled access to Code Quality. Those existing policy settings are automatically applied to the standalone Code Quality policies.
 
 1. Navigate to your enterprise. For example, from [https://github.com/settings/enterprises](https://github.com/settings/enterprises?ref_product=ghec&ref_type=engagement&ref_style=text).
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.

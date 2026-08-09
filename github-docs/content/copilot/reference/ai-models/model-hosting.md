@@ -108,7 +108,7 @@ When using MAI-Code-1-Flash, input prompts and output completions continue to ru
 
 ## Open-weight models
 
-Open-weight models have publicly available weights. These models are hosted on US-based Azure AI Foundry infrastructure managed by GitHub and Microsoft. Customer prompts and responses are not sent to the original model developers.
+Open-weight models have publicly available weights. Hosting differs by model and is described in the sections below. Customer prompts and responses are not sent to the original model developers.
 
 
 ### Moonshot AI models
@@ -116,10 +116,13 @@ Open-weight models have publicly available weights. These models are hosted on U
 Used for:
 
 * Kimi K2.7 Code
+* Kimi K3
 
-Kimi K2.7 Code was developed by Moonshot AI. It is an open-weight model. GitHub's content filtering applies, but you should review the [Kimi K2.7 Code model card](https://huggingface.co/moonshotai/Kimi-K2.7-Code) and conduct your own evaluations before enabling it.
+Kimi K2.7 Code and Kimi K3 were developed by Moonshot AI. They are open-weight models that may be less aligned than other Copilot models, with an elevated risk of geographic bias. Before you enable either model, review the [Kimi K2.7 Code model card](https://huggingface.co/moonshotai/Kimi-K2.7-Code) or the [Kimi K3 model card](https://huggingface.co/moonshotai/Kimi-K3) and run your own evaluations before enabling.
 
-When using Kimi K2.7 Code, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content.
+Kimi K2.7 Code is hosted on US-based Azure AI Foundry infrastructure managed by GitHub and Microsoft.
+
+Kimi K3 is hosted by GitHub on Fireworks AI.
 
 ## Inline suggestions
 

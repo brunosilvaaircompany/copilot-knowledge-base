@@ -71,6 +71,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | GPT-5.6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Terra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Kimi K3 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 {% endrowheaders %}
 
@@ -131,6 +132,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
 | Claude Fable 5      | `v1.124` | `17.14.6`                    | TBD | TBD | TBD |
 | Kimi K2.7 Code     | `v1.127` | `17.14.6`            | `1.9.1-251` | TBD | TBD |
+| Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |
 | MAI-Code-1-Flash    | `v1.121` | TBD                            | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
 
@@ -226,7 +228,7 @@ The following models are **not** eligible for default enablement, regardless of 
 
 * Models that have been explicitly disabled
 * Pre-GA models
-* Open weight models (DeepSeek, Kimi K2.7 Code)
+* Open weight models (DeepSeek, Kimi K2.7 Code, Kimi K3)
 * Models that are not covered by GitHub's data retention agreement (Claude Fable 5)
 * For enterprises that have restricted models to data-resident or FedRAMP-compliant models, any models that do not respect these policies
 

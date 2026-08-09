@@ -5,23 +5,17 @@
 
 ## How Code Quality works on pull requests
 
-When you open a pull request, Code Quality runs **two types of analysis** and posts findings as comments on the pull request.
-
-1. **`github-code-quality[bot]` findings**: Code Quality uses CodeQL to perform a rule-based scan of your changes. These findings are posted as comments by `github-code-quality[bot]` and include a suggested autofix. Findings are labeled by severity (**Error**, **Warning**, **Note**), and administrators can set quality gates to block merges based on the severity of these findings.
-
-1. **Copilot findings**:  If your organization has Copilot licenses and AI features are enabled for your enterprise, Code Quality uses **Copilot code review** to identify quality issues that rules-based analysis may not detect. These findings are posted as comments by **Copilot**, and include a suggested autofix. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review).
+When you open a pull request, Code Quality uses CodeQL to perform a rule-based scan of your changes and posts findings as comments by `github-code-quality[bot]`. Each finding includes a suggested autofix. Findings are labeled by severity (**Error**, **Warning**, **Note**), and administrators can set quality gates to block merges based on the severity of these findings.
 
 ## Resolving a finding
 
 1. On GitHub, navigate to your open pull request.
-1. On the **Files Changed** tab, scroll to a comment left by **`github-code-quality[bot]`** or **Copilot**.
+1. On the **Files Changed** tab, scroll to a comment left by **`github-code-quality[bot]`**.
 1. Carefully review the comment and the suggested autofix for logic, security, and style.
 
 1. If you agree with the suggestion and you want to apply the fix, click **Commit suggestion**, or **Add suggestion to batch**.
 
-1. Alternatively, if the finding isn't relevant or actionable, you can dismiss the finding. For example, you might dismiss a finding that is in legacy code no longer maintained, is a known exception to your team's coding standards, or is a false positive that doesn't pose a real quality risk.
-   * For comments left by `github-code-quality[bot]`, click **Dismiss finding**.
-   * For comments left by Copilot, click **Resolve**.
+1. Alternatively, if the finding isn't relevant or actionable, you can dismiss it by clicking **Dismiss finding**. For example, you might dismiss a finding that is in legacy code no longer maintained, is a known exception to your team's coding standards, or is a false positive that doesn't pose a real quality risk.
 
 ## Delegating remediation work to Copilot
 

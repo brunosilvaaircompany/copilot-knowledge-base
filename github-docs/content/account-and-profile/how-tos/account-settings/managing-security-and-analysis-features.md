@@ -8,7 +8,7 @@
 
 1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Code security**.
 
-1. Under "Advanced Security", to the right of the feature, click **Disable all** or **Enable all**.
+1. Under "Repositories", to the right of the feature, click **Disable all** or **Enable all**.
 1. Optionally, enable the feature by default for new repositories that you own.
 
    ![Screenshot of the "Enable FEATURE" modal dialog, with the "Enable by default for new private repositories" option outlined in dark orange.](/assets/images/help/settings/security-and-analysis-enable-by-default-in-modal.png)
@@ -21,7 +21,7 @@
 
 1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Code security**.
 
-1. Under "Advanced Security", to the right of the feature, enable or disable the feature by default for new repositories that you own.
+1. Under "Repositories", to the right of the feature, enable or disable the feature by default for new repositories that you own.
 
 ## Next steps
 

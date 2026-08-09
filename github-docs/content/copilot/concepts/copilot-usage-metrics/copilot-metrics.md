@@ -14,7 +14,7 @@ Metrics are available through:
 
 ## Which usage is included?
 
-Copilot usage metrics are derived from telemetry across multiple Copilot surfaces, including IDE and Copilot CLI activity. Most metrics come from client-side IDE telemetry, and **end users need telemetry enabled in their IDE** for the richest data in these metrics.
+Copilot usage metrics are derived from telemetry across multiple Copilot surfaces, including IDE, Copilot CLI, and agent apps activity. Most metrics come from client-side IDE telemetry, and **end users need telemetry enabled in their IDE** for the richest data in these metrics.
 
 In addition, Copilot usage metrics incorporate **server-side telemetry** to identify active users that client-side telemetry alone may miss. Network conditions, proxy configurations, and client settings can prevent client telemetry from reaching GitHub, so server-side signals ensure those users still appear in your reports.
 

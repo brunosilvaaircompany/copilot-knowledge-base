@@ -1,5 +1,8 @@
 # Configure an MCP registry for your organization or enterprise
 
+> [!IMPORTANT] This feature is in public preview and is not the recommended method for restricting access to MCP servers. The more secure, generally available method is to define settings in your enterprise's `managed-settings.json` file. See [Configure Enterprise Allowlist](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-enterprise-allowlist).
+
+
 ## Prerequisites
 
 Before you create your Model Context Protocol (MCP) registry, you should understand the functionality and benefits of MCP management for your company. See [MCP Management](https://docs.github.com/en/copilot/concepts/mcp-management).

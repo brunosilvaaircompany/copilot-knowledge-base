@@ -27,7 +27,7 @@ The following models are **not** eligible for default enablement, regardless of 
 
 * Models that have been explicitly disabled
 * Pre-GA models
-* Open weight models (DeepSeek, Kimi K2.7 Code)
+* Open weight models (DeepSeek, Kimi K2.7 Code, Kimi K3)
 * Models that are not covered by GitHub's data retention agreement (Claude Fable 5)
 * For enterprises that have restricted models to data-resident or FedRAMP-compliant models, any models that do not respect these policies
 

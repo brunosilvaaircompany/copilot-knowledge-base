@@ -274,7 +274,9 @@ From GitHub:
 
 ### Setting up streaming to Azure Event Hubs
 
-> [!NOTE] Event Hubs instances in Azure Government are not supported.
+> [!NOTE] 
+> - Event Hubs instances in Azure Government are not supported.
+> - With **GitHub Enterprise Cloud with data residency,** audit log streaming to Azure Event Hubs is not supported with IP Firewall rules enabled.
 
 Before setting up a stream in GitHub, you need:
 

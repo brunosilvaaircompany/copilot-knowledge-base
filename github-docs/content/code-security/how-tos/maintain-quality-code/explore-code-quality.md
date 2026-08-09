@@ -38,7 +38,3 @@ You can sort the repository table in ascending or descending order for any colum
 1. Scroll down to the repository table. By default, the table is sorted from most to least recent repository scan, helping you prioritize current quality issues.
 1. Optionally, to prioritize repositories with the highest number of CodeQL findings, click **Standard Findings** twice.
 1. To view the repository-level dashboard for a specific repository, click the repository's name.
-
-## Next steps
-
-To understand the code health information available on the repository-level dashboard, see [Interpret Results](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/interpret-results).

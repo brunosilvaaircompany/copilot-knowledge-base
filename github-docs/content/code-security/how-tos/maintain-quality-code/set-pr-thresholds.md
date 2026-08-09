@@ -35,7 +35,7 @@ The following steps create or update a ruleset at the repository level. To enfor
 1. If you don't already have a ruleset to protect your default branch, expand **New ruleset** and click **New branch ruleset**. Alternatively, open your existing ruleset for the default branch and move to step 5.
 1. If you are creating a new ruleset:
    * Define a name for the ruleset.
-   * Set the "Enforcement status" to "Active."
+   * Set the "Enforcement status" to "Evaluate" while you calibrate the threshold during a pilot. If you want to enforce the threshold immediately, select "Active."
    * Under "Target branches" add a target of "Include default branch."
 1. Under "Branch rules", enable "Require code quality results".
 1. Set "Severity" to define the lowest severity of code quality results that must be resolved before a pull request can be merged into the default branch. For example:
@@ -45,10 +45,8 @@ The following steps create or update a ruleset at the repository level. To enfor
    * Set "All" to block pull requests with **any** unresolved code quality results being merged.
 1. When you have finished defining or editing the ruleset, click **Create** or **Save changes**.
 
+If you selected "Evaluate", review the ruleset insights to see which pull requests would have been blocked. When the results match the quality bar you want, change the enforcement status to "Active."
+
 ## Setting a code coverage threshold
 
 You can also block pull requests that fall below a code coverage threshold. This uses a separate **Restrict code coverage** rule, not the **Require code quality results** rule used above, and your repository must upload code coverage data first. For the full procedure, see [Restrict Code Coverage](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/restrict-code-coverage).
-
-## Next steps
-
-Learn how GitHub Code Quality works on pull requests to prevent code quality issues from reaching your default branch. See [Catch Issues Before Merge](https://docs.github.com/en/code-security/tutorials/improve-code-quality/catch-issues-before-merge).

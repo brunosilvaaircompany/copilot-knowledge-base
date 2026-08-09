@@ -61,8 +61,3 @@ Be aware of two limits so there are no surprises:
 
 * **You can't pre-estimate spend** before you enable Code Quality. Usage depends on your committers, scan frequency, and findings, so plan to watch actuals after you turn it on rather than forecast them precisely.
 * **You can't turn off the in-pull-request AI features.** Code Quality generates a fix for every detected finding, so AI credits usage is inherent to running it. To stop that usage entirely, disable Code Quality on the repository.
-
-## Next steps
-
-* **Roll out across your organization.** See [Roll Out At Scale](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/roll-out-at-scale).
-* **Assess health across your organization.** See [Explore Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/explore-code-quality).

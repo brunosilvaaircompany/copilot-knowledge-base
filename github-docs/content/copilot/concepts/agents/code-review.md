@@ -67,7 +67,7 @@ Copilot code review utilizes agentic capabilities to extend its functionality.
 * **Full project context gathering**. This provides more specific, accurate, and contextually aware code reviews. This capability analyzes your entire repository to better understand the context of code changes.
 * **The ability to pass suggestions to Copilot cloud agent**. This automates creating a new pull request against your branch with the suggested fixes applied. Passing suggestions to Copilot cloud agent is in public preview and subject to change.
 
-These capabilities are enabled automatically for all plans that include Copilot code review. See [Review effort level](#review-effort-level) later in this article for information about choosing between Low and Medium analysis levels.
+These capabilities are enabled automatically for all plans that include Copilot code review. See [Review effort level](#review-effort-level) later in this article for information about choosing between Lite and Balanced analysis levels.
 
 If GitHub Actions is unavailable or if Actions workflows used by Copilot code review fail, reviews will still be generated. However, they will not include the additional features provided by the agentic capabilities.
 
@@ -88,18 +88,18 @@ You can view the GitHub Actions minutes associated with Copilot code review runs
 
 ## Review effort level
 
-> [!NOTE]
-> Medium review effort is in public preview and subject to change. The [GitHub Pre Release License Terms](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-pre-release-license-terms) apply to your use of preview features.
-
 Copilot code review supports multiple review effort levels, so you can choose the level of thoroughness that matches the criticality of your code.
 
-* **Low**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies (default).
-* **Medium**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes. Medium reviews use more AI credits and GitHub Actions minutes than Low reviews. For better performance with Medium reviews, consider configuring larger or self-hosted runners. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
+* **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies (default).
+* **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes. Balanced reviews use more AI credits and GitHub Actions minutes than Lite reviews. For better performance with Balanced reviews, consider configuring larger or self-hosted runners. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
 
-Use Medium for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Low for routine changes where fast feedback is more important than exhaustive analysis.
+Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
 
+Organization owners can set a default review effort level for automatic code reviews in their organization. Repository administrators can override the organization default for a specific repository.
 
-Repository administrators can set the default review effort level for automatic code reviews. For configuration steps, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review).
+After Copilot code review reviews a pull request, the pull request overview comment shows the effort level used for each review run.
+
+For configuration steps, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review).
 
 ## Code review usage
 
@@ -226,7 +226,7 @@ GitHub Copilot code review reviews the changes in a pull request and suggests fi
 
 GitHub Code Quality complements Copilot code review by adding:
 
-* **Hybrid detection** that combines rules-based CodeQL analysis with AI-powered analysis, on pull requests and on your default branch.
+* **Rules-based  CodeQL-powered analysis** on pull requests and on your default branch.
 * **Test-coverage metrics** on pull requests, so you can see whether a change maintains or reduces coverage.
 * **One-click, Copilot-powered fixes**, including delegating remediation to Copilot cloud agent.
 * **Optional merge gating** with rulesets, so pull requests with unresolved rules-based findings (or that miss a coverage threshold) can be blocked from merging.

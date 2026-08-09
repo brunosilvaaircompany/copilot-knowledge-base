@@ -73,7 +73,7 @@ Reports come in different shapes depending on their scope and granularity, so th
 
 Organization-scope reports also include `organization_id` alongside `enterprise_id`. For example schemas of the data returned by the APIs, see [Example Schema](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/example-schema).
 
-The **Type** column uses JSON Schema types: `string`, `integer`, `number`, `boolean`, `array`, and `object`. The **Nullable** column indicates whether a field's value can be `null` or absent from a record where it would otherwise apply. Arrays are always present but can be empty (`[]`), so they are not nullable.
+The **Type** column uses JSON Schema types: `string`, `integer`, `number`, `boolean`, `array`, and `object`. The **Nullable** column indicates whether a field's value can be `null` or absent from a record where it would otherwise apply. Activity breakdown arrays are always present but can be empty (`[]`). Optional arrays are marked as nullable and can be absent.
 
 ### Report identification and partition fields
 
@@ -114,6 +114,7 @@ Per-user reports contain one record per user for the reporting period. The 28-da
 | `ai_adoption_phase` | `object` | No | The user's AI adoption phase for the day. Always present; defaults to the "No Cohort" phase. See [AI adoption phase fields](#ai-adoption-phase-fields). |
 | `totals_by_cli` | `object` | Yes | CLI-specific metrics for the user. Omitted when the user had no Copilot CLI usage that day. See [Copilot CLI metrics fields](#copilot-cli-metrics-fields). |
 | `totals_by_copilot_app` | `object` | Yes | Copilot app metrics for the user. Omitted when the user had no Copilot app usage that day. See [Copilot app metrics fields](#copilot-app-metrics-fields). |
+| `totals_by_3rd_party_agent` | `array` | Yes | Per-agent usage metrics for recognized agent apps. Omitted when the user had no recognized agent app activity during the reporting period. See [Agent apps metrics fields](#agent-apps-metrics-fields). |
 | `totals_by_ide` | `array` | No | Per-IDE breakdown of the user's activity. See [Activity breakdown objects](#activity-breakdown-objects). |
 | `totals_by_feature` | `array` | No | Per-feature breakdown of the user's activity. See [Activity breakdown objects](#activity-breakdown-objects). |
 | `totals_by_language_feature` | `array` | No | Breakdown combining language and feature dimensions. See [Activity breakdown objects](#activity-breakdown-objects). |
@@ -163,6 +164,7 @@ Activity totals and breakdowns:
 | `totals_by_model_feature` | `array` | No | Aggregated model-and-feature activity breakdown. See [Activity breakdown objects](#activity-breakdown-objects). |
 | `totals_by_cli` | `object` | Yes | Aggregated Copilot CLI metrics for the day. Omitted when there is no CLI usage that day. Unlike the per-user form, it does not include `last_known_cli_version`. See [Copilot CLI metrics fields](#copilot-cli-metrics-fields). |
 | `totals_by_copilot_app` | `object` | Yes | Aggregated Copilot app metrics for the day. Enterprise reports only. Null when the enterprise has no Copilot app activity that day. See [Copilot app metrics fields](#copilot-app-metrics-fields). |
+| `totals_by_3rd_party_agent` | `array` | Yes | Aggregated per-agent usage metrics for recognized agent apps. Omitted when the enterprise or organization had no recognized agent app activity that day. See [Agent apps metrics fields](#agent-apps-metrics-fields). |
 | `totals_by_ai_adoption_phase` | `array` | Yes | Per-phase aggregates of users and their average activity. Omitted when no adoption-phase data is available. See [AI adoption phase fields](#ai-adoption-phase-fields). |
 | `pull_requests` | `object` | No | Daily pull request activity for the enterprise or organization. See [Pull request activity fields](#pull-request-activity-fields). |
 
@@ -262,6 +264,19 @@ The `totals_by_copilot_app` object contains the following nested fields when Cop
 | `totals_by_copilot_app.token_usage.output_tokens_sum` | `integer` | No | Total output tokens generated across all Copilot app requests on this day. |
 | `totals_by_copilot_app.token_usage.prompt_tokens_sum` | `integer` | No | Total prompt tokens sent across all Copilot app requests on this day. |
 | `totals_by_copilot_app.token_usage.avg_tokens_per_request` | `number` | Yes | Average of output and prompt tokens per Copilot app request, computed as `(output_tokens_sum + prompt_tokens_sum) ÷ request_count`. Null when there were no requests that day. |
+
+### Agent apps metrics fields
+
+The `totals_by_3rd_party_agent` array contains one entry for each recognized agent app used during the reporting period. Entries are grouped by `agent_id`, and integrations that map to the same agent are combined. Use `agent_id` as the stable grouping key and `agent_name` for display. The array is omitted when no recognized agent app activity is available during the reporting period.
+
+These metrics come from server-side job activity. The nested `user_initiated_interaction_count` counts agent app job starts and is distinct from the top-level field with the same name, which counts explicit prompts from other supported telemetry.
+
+| Field | Type | Nullable | Description |
+|:--|:--|:--|:--|
+| `totals_by_3rd_party_agent[].agent_name` | `string` | No | Display name of the agent app. The name can change, so use `agent_id` for grouping. |
+| `totals_by_3rd_party_agent[].agent_id` | `string` | No | Stable identifier for the agent app. |
+| `totals_by_3rd_party_agent[].user_initiated_interaction_count` | `integer` | No | Number of user-initiated jobs started for the agent app during the reporting period. Each job start increments the count once. |
+| `totals_by_3rd_party_agent[].session_count` | `integer` | No | Sum of distinct, non-empty session counts for integrations mapped to the agent during the reporting period. Included only in aggregated enterprise and organization reports; omitted from per-user reports. |
 
 ### Pull request activity fields
 

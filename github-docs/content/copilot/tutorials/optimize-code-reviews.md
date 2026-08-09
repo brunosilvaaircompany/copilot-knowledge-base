@@ -194,7 +194,7 @@ As you can see, identifying vulnerabilities automatically, along with suggestion
 
 ## 4. Add reliability, maintainability, and coverage checks
 
-So far, Copilot code review has provided per-pull request feedback on style and design, and Copilot Autofix for code scanning has flagged and fixed security vulnerabilities. To focus on the long-term health of your code, GitHub Code Quality adds reliability, maintainability, and code coverage checks. It combines deterministic, rules-based CodeQL analysis for well-defined anti-patterns with Copilot-powered analysis for issues that fall outside existing rules, so the two approaches complement each other on every change.
+So far, Copilot code review has provided per-pull request feedback on style and design, and Copilot Autofix for code scanning has flagged and fixed security vulnerabilities. To focus on the long-term health of your code, GitHub Code Quality adds reliability, maintainability, and code coverage checks. It uses deterministic, rules-based CodeQL analysis to detect well-defined anti-patterns.
 
 When Code Quality is enabled, it posts reliability and maintainability findings as inline comments on the pull request, each with a one-click, Copilot-powered autofix you can apply directly. It also reports coverage metrics that show whether the change maintains or reduces reported code coverage from your test suite compared to the default branch. If you want to enforce these standards, rulesets can require rules-based findings to be resolved and coverage thresholds to be met before merge.
 

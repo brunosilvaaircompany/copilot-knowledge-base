@@ -49,9 +49,3 @@ For the available access options, and how filtering and enforcement work, see [E
 Your changes are saved automatically and begin to propagate immediately. In large organizations, it can take several minutes for the changes to apply across all repositories.
 
 If you're rolling out the feature across many teams, we recommend you pilot on a small group and tune your quality thresholds before you enable everywhere. See [Roll Out At Scale](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/roll-out-at-scale).
-
-## Next steps
-
-* **Add code coverage:** Upload reported code coverage from your test suite to see coverage results directly on pull requests. You can use the automatic setup option to generate a workflow with an AI-powered agent, or configure your workflow manually. See [Set Up Code Coverage](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/set-up-code-coverage).
-
-* **For your organization:** Understand the code health of your repositories at a glance. See [Explore Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/explore-code-quality).

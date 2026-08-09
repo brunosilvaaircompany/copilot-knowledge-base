@@ -155,8 +155,3 @@ jobs:
 1. After the workflow completes, look for a comment from `github-code-quality[bot]` on the pull request. The comment includes:
    * The aggregate coverage percentage for the pull request branch compared to the default branch.
    * A per-file breakdown showing which files gained or lost coverage.
-
-## Next steps
-
-* **Interpret results:** Understand coverage metrics and per-file breakdowns on your pull requests. See [Interpret Results](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/interpret-results).
-* **Enforce coverage thresholds:** Block pull requests that don't meet a minimum coverage percentage or that cause coverage to drop. See [Restrict Code Coverage](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/restrict-code-coverage).

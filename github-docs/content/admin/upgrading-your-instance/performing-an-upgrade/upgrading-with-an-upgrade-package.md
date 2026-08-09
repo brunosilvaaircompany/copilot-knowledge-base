@@ -146,7 +146,7 @@ Phased upgrade execution allows GitHub Enterprise Server operators running versi
 1. Run the upgrade phase
 
    ```shell
-   ghe-upgrade --phase pre-upgrade GITHUB-UPGRADE.pkg
+   ghe-upgrade --phase upgrade GITHUB-UPGRADE.pkg
    ```
 
 1. Optionally, after the upgrade, validate the upgrade by configuring an IP exception list to allow access to a specified list of IP addresses. See [Enabling And Scheduling Maintenance Mode](https://docs.github.com/en/admin/administering-your-instance/configuring-maintenance-mode/enabling-and-scheduling-maintenance-mode#validating-changes-in-maintenance-mode-using-the-ip-exception-list).

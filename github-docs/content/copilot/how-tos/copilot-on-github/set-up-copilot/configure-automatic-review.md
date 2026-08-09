@@ -102,12 +102,29 @@ You can configure Copilot code review to review pull requests automatically. For
 1. At the bottom of the page, click **Create**.
 
 
+## Configuring review effort level for an organization
+
+You can set the default review effort level that Copilot code review uses for automatic reviews at both the organization and repository levels. Repository settings override organization defaults. For an overview of review effort levels, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
+
+1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
+
+1. Select an organization by clicking on it.
+1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
+
+   ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
+
+
+1. In the sidebar, under "Code, planning, and automation",
+ click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, then **Code review**.
+1. Next to "Review effort level," select the default effort level for automatic reviews in repositories in your organization.
+   * **Lite**: Standard review (default).
+   * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
+
+Balanced reviews use more GitHub Actions minutes and AI credits. If you use Balanced effort, consider configuring larger or self-hosted runners for better performance. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
+
 ## Configuring review effort level for a repository
 
-> [!NOTE]
-> Medium review effort is in public preview and subject to change.
-
-You can set the default review effort level that Copilot code review uses for automatic reviews in a repository. For an overview of review effort levels, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
+You can override the organization default and set a different default review effort level for automatic reviews in a repository.
 
 1. On GitHub, navigate to the main page of the repository.
 
@@ -118,7 +135,7 @@ You can set the default review effort level that Copilot code review uses for au
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, then **Code review**.
 1. Next to "Review effort level," select the effort level for automatic reviews in this repository.
-   * **Low**: Standard review (default).
-   * **Medium**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
+   * **Lite**: Standard review (default).
+   * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
 
-Medium reviews use more GitHub Actions minutes and AI credits. If you use Medium effort, consider configuring larger or self-hosted runners for better performance. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
+Balanced reviews use more GitHub Actions minutes and AI credits. If you use Balanced effort, consider configuring larger or self-hosted runners for better performance. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
