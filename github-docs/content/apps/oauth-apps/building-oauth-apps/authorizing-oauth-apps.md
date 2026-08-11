@@ -295,7 +295,17 @@ You can create multiple tokens for a user/application/scope combination to creat
 
 This is useful if your OAuth app supports one workflow that uses GitHub for sign-in and only requires basic user information. Another workflow may require access to a user's private repositories. Using multiple tokens, your OAuth app can perform the web flow for each use case, requesting only the scopes needed. If a user only uses your application to sign in, they are never required to grant your OAuth app access to their private repositories.
 
-There is a limit of ten tokens that are issued per user/application/scope combination, and a rate limit of ten tokens created per hour. If an application creates more than ten tokens for the same user and the same scopes, the oldest tokens with the same user/application/scope combination are revoked. However, hitting the hourly rate limit will not revoke your oldest token. Instead, it will trigger a re-authorization prompt within the browser, asking the user to double check the permissions they're granting your app. This prompt is intended to give a break to any potential infinite loop the app is stuck in, since there's little to no reason for an app to request ten tokens from the user within an hour.
+There is a limit of ten tokens that are issued per user/application/scope combination, and a rate limit of ten tokens created per hour. If an application creates more than ten tokens for the same user and the same scopes, GitHub revokes one of the existing tokens with the same user/application/scope combination, chosen in this order:
+
+
+
+1. The oldest token that has never been used and that was created more than one minute ago. Tokens created within the last minute are usually protected, so that an application has time to use a token it has just created.
+1. If there is no such token, but at least one token has been used, the token that was least recently used.
+1. If no token has ever been used, the oldest token, even if it was created within the last minute.
+
+
+
+Hitting the hourly rate limit will not revoke your oldest token. Instead, it will trigger a re-authorization prompt within the browser, asking the user to double check the permissions they're granting your app. This prompt is intended to give a break to any potential infinite loop the app is stuck in, since there's little to no reason for an app to request ten tokens from the user within an hour.
 
 
 > [!WARNING]

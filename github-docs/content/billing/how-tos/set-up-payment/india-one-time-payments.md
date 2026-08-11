@@ -1,8 +1,8 @@
-# One-time payments for customers in India
+# Payments for customers in India
 
 ## About the Reserve Bank of India's recurring payments regulation
 
-A new payments regulation from the Reserve Bank of India (RBI) recently came into effect. This regulation places additional requirements on recurring online transactions and has prevented some GitHub customers in India from making recurring payments. Customers using payment methods issued in India for any recurring transactions on GitHub may find that their payments are declined by their banks or card issuers. For more information, see [the RBI's press release](https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=51353).
+The Reserve Bank of India's (RBI) recurring payments regulation places additional requirements on recurring online transactions. Customers using payment methods issued in India for recurring transactions on GitHub may find that their payments are declined by their banks or card issuers. For more information, see [the RBI's press release](https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=51353).
 
 The regulation applies to all recurring transactions, including:
 
@@ -12,34 +12,38 @@ The regulation applies to all recurring transactions, including:
 * Git Large File Storage purchases
 * GitHub Actions, GitHub Packages, and GitHub Codespaces consumption
 
-In order to minimize disruption, recurring payments for our affected customers were paused on October 29th, 2021. Paid features and services have remained available to customers impacted by the RBI regulation.
+## About recurring payments on GitHub
+
+GitHub supports RBI-compliant payment mandates for customers in India with eligible credit card payment methods. A payment mandate allows GitHub to automatically charge your saved payment method for recurring payments without manual action during each billing cycle.
+
+You can continue to save and remove payment methods the same way. For more information, see [Manage Payment Info](https://docs.github.com/en/billing/how-tos/set-up-payment/manage-payment-info).
+
+If your saved payment method cannot be charged automatically, you may need to make a one-time payment for the current billing cycle.
 
 ## About one-time payments on GitHub
 
-As we work with our payment gateway provider to meet the new requirements, we are providing a temporary one-time payment option for impacted customers in India. From February 15th 2022, GitHub customers in India who have been affected by the new RBI regulation will be able to make one-time payments on their regular billing cycle cadence.
+If you have been impacted by the RBI regulation and GitHub cannot automatically charge your saved payment method, you can make a one-time payment on your regular billing cycle cadence.
 
 ### For customers on monthly billing
 
-Customers on monthly billing plans will be able to make a one-time payment on the same day their billing cycle usually renews. For example, if you're usually billed on the 7th of each month, you will now be able to make a one-time payment from your account from the 7th of each month. Your first one-time payment will also include any accrued usage from October 2021 onwards.
+Customers on monthly billing plans can make a one-time payment on the same day their billing cycle usually renews. For example, if you're usually billed on the 7th of each month, you can make a one-time payment from your account from the 7th of each month.
 
 If you are currently billed monthly, and would like to switch to yearly billing, you can reduce the frequency of your one-time payments. For more information, see [Billing Cycles](https://docs.github.com/en/billing/concepts/billing-cycles).
 
 ### For customers on yearly billing
 
-If you are billed yearly, and your renewal date was between October 1st, 2021 and February 14th, 2022, you will be able to make a one-time payment for your annual subscriptions from February 15th. This initial payment will include the prorated outstanding cost of your subscription for the period since your previous billing cycle ended.
+If you are billed yearly, we will attempt to take the recurring payment when your billing cycle renews. If the payment attempt is declined, you can make a one-time payment through your account's billing page.
 
-If your billing cycle is due to renew after February 15th, we will attempt to take the recurring payment. If the payment attempt is declined, you will then be able to make a one-time payment through your account's billing page.
-
-In the meantime, we are actively working with our payment partners to restore recurring payments for impacted customers. For more information or questions, you can contact us through the [GitHub Support portal](https://support.github.com){% elsif ghes %}your site administrator.
+For more information or questions, you can contact us through the [GitHub Support portal](https://support.github.com){% elsif ghes %}your site administrator.
 
 ### Impact to GitHub Sponsors
 
-Existing sponsorships will remain in place during this period and maintainers will continue to be paid out as expected. Payments for the accrued sponsorship amounts from the funding account will be collected at the same time as other accrued charges.
+Maintainers will continue receiving sponsorship payouts without interruption. Sponsorship charges will appear alongside other charges on the funding account.
 
 ## Making a one-time payment for a GitHub subscription
 
 > [!NOTE]
-> Affected customers will receive an email notification with a link to their billing settings when payment is due. Two further reminder emails will be sent 7 and 14 days later if payment has not been made. After 14 days, paid features and services will be locked until payment is made.
+> Impacted customers will receive an email notification with a link to their billing settings when payment is due. Two further reminder emails will be sent 7 and 14 days later if payment has not been made. After 14 days, paid features and services will be locked until payment is made.
 
 1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**.
 

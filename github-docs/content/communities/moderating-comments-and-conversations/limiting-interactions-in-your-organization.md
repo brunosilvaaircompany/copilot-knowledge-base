@@ -37,6 +37,24 @@ Organization owners and moderators can also block users for a specific amount of
 1. Under "Temporary interaction limits", to the right of the type of interaction limit you want to set, select the **Enable** dropdown menu, then click the duration you want for your interaction limit.
 
 
+
+
+## Limiting concurrent open pull requests for users without write access
+
+Across all public repositories owned by your organization, you can set a maximum number of pull requests that a user without write access can have open at the same time. This limit applies separately to each repository, so a user without write access can have up to the configured maximum number of open pull requests in _each_ public repository owned by the organization, not across the organization as a whole. When a user without write access reaches the limit in a repository, they must close an existing pull request or wait for someone with write access to merge one before they can open a new one.
+
+This setting helps maintainers manage contribution volume by preventing users from opening an excessive number of pull requests, which can overwhelm review queues and trigger unnecessary CI runs. The limit only applies to users without write access—users with write access or higher are not affected.
+
+Draft pull requests do not count toward a user's limit. Only open, non-draft pull requests are counted when determining whether a user has reached the maximum.
+
+The organization-level limit takes precedence, but if a repository owned by your organization has its own pull request limit configured after the organization-level limit, the repository-level limit overrides the organization-level limit. See [Limiting Interactions In Your Repository](https://docs.github.com/en/communities/moderating-comments-and-conversations/limiting-interactions-in-your-repository#limiting-concurrent-open-pull-requests-for-users-without-write-access).
+
+### Configuring the pull request limit
+
+To configure the pull request limit, navigate to the **Interaction limits** settings page following the same steps described in [Limiting interactions in your organization](#limiting-interactions-in-your-organization), then under **Pull request limits**, select the maximum number of concurrent open pull requests allowed for users without write access. You can also use the REST API to configure the pull request limit. See [Orgs](https://docs.github.com/en/rest/interactions/orgs#update-pull-request-creation-cap-for-an-org).
+
+
+
 ## Further reading
 
 * [Reporting Abuse Or Spam](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam)

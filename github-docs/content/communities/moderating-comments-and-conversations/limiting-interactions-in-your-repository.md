@@ -28,6 +28,8 @@ You can also enable activity limitations on all repositories owned by your perso
 1. Under "Temporary interaction limits", to the right of the type of interaction limit you want to set, select the **Enable** dropdown menu, then click the duration you want for your interaction limit.
 
 
+
+
 ## Limiting concurrent open pull requests for users without write access
 
 In a public repository, you can set a maximum number of pull requests that a user without write access can have open at the same time. When a user without write access reaches the limit, they can close or merge an existing pull request before they can open a new one.
@@ -48,6 +50,8 @@ To configure the pull request limit, navigate to the **Interaction limits** sett
 
 1. Under **Pull request limits**, select the maximum number of concurrent open pull requests allowed for users without write access.
 1. Optionally, under **Bypass list**, search for and select the users you want to allow to bypass the pull request limit.
+
+
 
 ## Further reading
 

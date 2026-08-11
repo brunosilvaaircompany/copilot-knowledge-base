@@ -5,7 +5,7 @@ A GitHub Enterprise license allows a user to use both GitHub Enterprise Cloud an
 To view combined license details on GitHub Enterprise Cloud and ensure users only consume one license, you must sync licenses between deployments. You can do this:
 
 * Automatically, using GitHub Connect.
-* Manually, by uploading a license file from from GitHub Enterprise Server to GitHub.
+* Manually, by uploading a license file from GitHub Enterprise Server to GitHub.
 
 When you synchronize license usage, only the user ID and email addresses for each user account on GitHub Enterprise Server are transmitted to GitHub Enterprise Cloud.
 
