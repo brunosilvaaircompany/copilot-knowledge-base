@@ -11,8 +11,8 @@ meta: "pt-BR · data-with-copilot · Agosto 2026"
 slide_id: copilot-cli-data/agenda
 template: timeline
 kicker: Roteiro
-title: Uma hora, cinco movimentos
-subtitle: O relógio orienta a demonstração; a validação decide o que entra no resultado.
+title: Uma hora, cinco fases e cinco módulos
+subtitle: A linha do tempo cobre a contextualização; o hands-on segue os cinco módulos de 15–57 min.
 items:
   - date: "00–03"
     title: "Alinhamento"
