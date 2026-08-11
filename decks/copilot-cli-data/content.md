@@ -532,7 +532,7 @@ source:
 
 ---
 slide_id: copilot-cli-data/conclusion
-template: closing
+template: header_body
 kicker: 57–60 min · conclusão
 title: Acelerar não é delegar a responsabilidade
 subtitle: "Copilot CLI reduz o atrito entre pergunta, plano, código e documentação — a evidência fecha o ciclo."
