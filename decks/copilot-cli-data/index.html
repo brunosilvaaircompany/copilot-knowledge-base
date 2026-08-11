@@ -297,7 +297,7 @@ copilot
   <p class="subtitle">O shell executa Python; o CLI ajuda a escrever e explicar o script.</p>
 </div>
   <div class="slide-body">
-    <pre class="code-wrapper"><code class="language-bash">cd /workspace/data-with-copilot
+    <pre class="code-wrapper"><code class="language-bash">cd &quot;$(git rev-parse --show-toplevel)&quot;
 python data/ecommerce/gerar_dados.py
 
 copilot
@@ -536,6 +536,7 @@ EXPLAIN ANALYZE &lt;query proposta&gt;;
     <pre class="code-wrapper"><code class="language-bash">cd modulos/05-telemetria-mcp
 docker compose up -d --build
 docker compose ps
+sleep 2  # aguarde o status &quot;Up&quot; antes da primeira chamada
 curl -s -X POST http://localhost:8000/mcp \
   -H &quot;Content-Type: application/json&quot; \
   -H &quot;Accept: application/json, text/event-stream&quot; \
@@ -646,6 +647,10 @@ docker compose down
     <div class="faq-item">
       <p class="faq-q">Copilot não autentica ou a conta está errada?</p>
       <p class="faq-a">Use `copilot login --device-code`, confira `/user` e `/user list`; para CI, use COPILOT_GITHUB_TOKEN/GH_TOKEN/GITHUB_TOKEN sem exibir o valor. `gh auth status` só verifica o gh.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">O que foi validado antes da sessão?</p>
+      <p class="faq-a">O gerador determinístico e o container MCP foram executados e o endpoint respondeu ao initialize. Este ambiente não tinha o `copilot` instalado/autenticado; confirme a descoberta com `copilot mcp get` no Codespace e não apresente essa etapa como ensaiada aqui.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Python/Jupyter ou dependências não estão prontas?</p>
