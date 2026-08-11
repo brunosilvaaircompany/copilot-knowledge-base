@@ -79,6 +79,9 @@ function runDeckBuild(args) {
     process.exit(1);
   }
 
+  // 1b. Validate global slide_id uniqueness before any disk writes
+  validateGlobalSlideIdUniqueness(manifestPath, contentPath, blocks, yaml);
+
   // 2. Derive deck title from cover slide (or first slide)
   const coverBlock = blocks.find(b => b.template === "cover") || blocks[0];
   const deckTitle = (coverBlock && coverBlock.fields && coverBlock.fields.title)
@@ -155,6 +158,36 @@ function escapeHtml(str) {
 }
 
 /**
+ * Validate that no slide_id in `blocks` collides with a slide_id already present in
+ * the manifest for a *different* deck. Must be called before any disk writes so that
+ * a failing build leaves no partial artefacts.
+ */
+function validateGlobalSlideIdUniqueness(manifestPath, contentPath, blocks, yaml) {
+  let existing = { manifest_version: 1, slides: [] };
+  if (fs.existsSync(manifestPath)) {
+    try {
+      existing = yaml.load(fs.readFileSync(manifestPath, "utf-8")) || existing;
+    } catch (_) { /* ignore parse errors */ }
+  }
+
+  const deckName = path.basename(path.dirname(contentPath));
+  // Keep only entries from OTHER decks
+  const otherDeckSlides = (existing.slides || []).filter(s => {
+    const id = s.slide_id || "";
+    return !id.startsWith(deckName + "/");
+  });
+
+  const existingIds = new Set(otherDeckSlides.map(s => s.slide_id).filter(Boolean));
+  for (const block of blocks) {
+    const id = block.slide_id;
+    if (id && existingIds.has(id)) {
+      console.error(`❌ Erro: slide_id '${id}' já existe em outro deck. Use um ID único globalmente.`);
+      process.exit(1);
+    }
+  }
+}
+
+/**
  * Generate/update decks/.freshness-manifest.generated.yml from parsed blocks.
  */
 function updateFreshnessManifest(manifestPath, contentPath, blocks, yaml) {
@@ -174,17 +207,6 @@ function updateFreshnessManifest(manifestPath, contentPath, blocks, yaml) {
     const id = s.slide_id || "";
     return !id.startsWith(deckName + "/");
   });
-
-  // Validate global slide_id uniqueness: no new slide_id may collide with an entry
-  // from another deck that is already present in the manifest.
-  const existingIds = new Set(existingSlides.map(s => s.slide_id).filter(Boolean));
-  const newIds = blocks.map(b => b.slide_id).filter(Boolean);
-  for (const id of newIds) {
-    if (existingIds.has(id)) {
-      console.error(`❌ Erro: slide_id '${id}' já existe em outro deck. Use um ID único globalmente.`);
-      process.exit(1);
-    }
-  }
 
   // Build new entries for slides with source
   const newEntries = blocks
