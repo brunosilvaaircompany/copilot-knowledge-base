@@ -543,7 +543,7 @@ Leve três hábitos: dê contexto verificável, execute com ferramentas determin
 slide_id: copilot-cli-data/takeaways
 template: cards_2col
 kicker: 57–60 min · síntese
-title: Cinco ideias para repetir amanhã
+title: Seis ideias para repetir amanhã
 subtitle: O padrão vale para dados, código e operações.
 cards:
   - icon: terminal
