@@ -1,0 +1,52 @@
+name: Verificar build dos decks
+
+on:
+  push:
+    paths:
+      - "decks/**/content.md"
+      - "build.js"
+      - "scripts/parse_content.js"
+      - "scripts/render_slides.js"
+      - "_templates/base.html"
+  pull_request:
+    paths:
+      - "decks/**/content.md"
+      - "build.js"
+      - "scripts/parse_content.js"
+      - "scripts/render_slides.js"
+      - "_templates/base.html"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências Node
+        run: npm install
+
+      - name: Verificar que index.html não diverge de content.md
+        run: |
+          errors=0
+          for content_md in decks/*/content.md; do
+            deck_dir=$(dirname "$content_md")
+            echo "Verificando: $deck_dir"
+            node build.js --deck "$deck_dir" --check-only
+            if [ $? -ne 0 ]; then
+              errors=$((errors + 1))
+            fi
+          done
+          if [ "$errors" -gt 0 ]; then
+            echo ""
+            echo "❌ $errors deck(s) com index.html divergente."
+            echo "   Execute 'node build.js --deck <deck-dir>' para regenerar."
+            exit 1
+          fi
+          echo "✓ Todos os decks estão sincronizados."

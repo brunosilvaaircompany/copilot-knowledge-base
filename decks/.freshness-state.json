@@ -1,18 +1,50 @@
 {
-  "version": 1,
+  "state_version": 1,
   "slides": {
-    "decks/copilot-training/index.html": {
-      "source_hash": "dccdcde1e36e786cfa7b3f4d1d090761cf09d5d9ebfe5fcf62201e380ebc5684",
-      "source_hashes": {
-        "github-docs/content/copilot/get-started/what-is-github-copilot.md": "47252b2184fd5241a487ccd7200ac22176807a08d2e36954cbdcf69d5d851f36",
-        "github-docs/content/copilot/get-started/features.md": "b0d183696d09580992356335003a94f2fc91f1bd06535979431528e529a152b4",
-        "github-docs/content/copilot/get-started/quickstart.md": "778c5113ea7a45b33d1f94ea379502e11a237535e99f2316f966ba5747f1b876",
-        "github-docs/content/copilot/concepts/prompting/prompt-engineering.md": "83637205aae95027d5953ddddc07c36a7b3b6aae4b6c1fb106eb7924efde07b5",
-        "github-docs/content/copilot/concepts/prompting/response-customization.md": "acd81cd5fd62361896882769eff73005a6e50bd619216dba6b2c85570caead41",
-        "github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md": "998e27a0c21586028ab1251d176fda45c77511cd193d3a09df5ccc396cecc1ef",
-        "github-docs/content/copilot/get-started/best-practices.md": "157ebd724aa909c81d299147983f6fbb104efd219aedb70f779a8aa284030e1a"
-      },
-      "checked_at": "2026-08-03T12:40:08.092628+00:00"
+    "copilot-training/what-is-copilot": {
+      "source": "github-docs/content/copilot/get-started/what-is-github-copilot.md",
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
+    },
+    "copilot-training/why-adopt": {
+      "source": "github-docs/content/copilot/get-started/features.md",
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
+    },
+    "copilot-training/generic-vs-specific": {
+      "source": "github-docs/content/copilot/concepts/prompting/prompt-engineering.md",
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
+    },
+    "copilot-training/human-in-the-loop": {
+      "source": "github-docs/content/copilot/get-started/best-practices.md",
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
+    },
+    "copilot-training/where-copilot-appears": {
+      "source": "github-docs/content/copilot/get-started/features.md",
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
+    },
+    "copilot-training/custom-instructions": {
+      "source": [
+        "github-docs/content/copilot/concepts/prompting/response-customization.md",
+        "github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md"
+      ],
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
+    },
+    "copilot-training/context-economy": {
+      "source": "github-docs/content/copilot/get-started/best-practices.md",
+      "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
+      "updated_at": "2026-08-11T03:41:05.007982+00:00",
+      "last_decision": "ok"
     }
   }
 }

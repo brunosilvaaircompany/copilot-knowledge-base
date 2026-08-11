@@ -1,24 +1,214 @@
 #!/usr/bin/env node
 /**
- * build.js — Gera novos decks a partir do template base
- * 
- * Uso:
+ * build.js — Gera novos decks a partir do template base ou de content.md
+ *
+ * Modos:
+ *   node build.js --deck decks/meu-deck
+ *       Compila decks/meu-deck/content.md → index.html + manifesto de freshness.
+ *
  *   node build.js --title "Seu Título" --output decks/seu-topico
- *   node build.js --title "Seu Título" --output decks/seu-topico --standalone
- *   node build.js --title "Seu Título" --output decks/seu-topico --source github-docs/content/copilot/features.md --register-freshness
- *   node build.js --help
- * 
- * Opções:
+ *       Cria um deck vazio a partir do template (modo legado).
+ *
+ * Opções do modo --deck:
+ *   --deck PATH          Caminho do diretório do deck com content.md (obrigatório)
+ *   --check-only         Verifica drift sem reescrever; sai com código 1 se houver divergência
+ *
+ * Opções do modo legado (--title / --output):
  *   --title TEXT         Título do deck (obrigatório)
  *   --output PATH        Caminho de saída (obrigatório), ex: decks/copilot-101
  *   --standalone         Gera arquivo único com CSS+JS embutidos
  *   --force              Sobrescreve arquivo existente
+ *   --source PATH        Fonte Markdown (pode repetir)
+ *   --register-freshness Registra fontes no freshness check (legado)
  *   --help               Mostra esta mensagem
  */
+
+"use strict";
 
 const fs = require("fs");
 const path = require("path");
 const childProcess = require("child_process");
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Detecção de modo --deck (novo pipeline declarativo)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+const rawArgs = process.argv.slice(2);
+if (rawArgs.includes("--deck") || rawArgs.includes("--check-only")) {
+  runDeckBuild(rawArgs);
+  process.exit(0);
+}
+
+/**
+ * Build pipeline para decks declarativos (content.md → index.html + manifesto).
+ */
+function runDeckBuild(args) {
+  const yaml = require("js-yaml");
+  const { parseContentMd, groupByStack } = require("./scripts/parse_content");
+  const { renderSlides } = require("./scripts/render_slides");
+
+  let deckDir = null;
+  let checkOnly = false;
+
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === "--deck") { deckDir = args[++i]; }
+    else if (args[i] === "--check-only") { checkOnly = true; }
+  }
+
+  if (!deckDir) {
+    console.error("❌ Erro: --deck PATH é obrigatório no modo declarativo.");
+    process.exit(1);
+  }
+
+  const contentPath = path.join(deckDir, "content.md");
+  const outputPath = path.join(deckDir, "index.html");
+  const manifestPath = path.join(__dirname, "decks", ".freshness-manifest.generated.yml");
+
+  if (!fs.existsSync(contentPath)) {
+    console.error(`❌ Erro: ${contentPath} não encontrado.`);
+    process.exit(1);
+  }
+
+  // 1. Parse content.md
+  let blocks;
+  try {
+    const text = fs.readFileSync(contentPath, "utf-8");
+    blocks = parseContentMd(text, contentPath);
+  } catch (e) {
+    console.error(`❌ Erro ao parsear ${contentPath}: ${e.message}`);
+    process.exit(1);
+  }
+
+  // 2. Derive deck title from cover slide (or first slide)
+  const coverBlock = blocks.find(b => b.template === "cover") || blocks[0];
+  const deckTitle = (coverBlock && coverBlock.fields && coverBlock.fields.title)
+    ? coverBlock.fields.title
+    : path.basename(deckDir);
+
+  // 3. Group by stack and render slides HTML
+  const groups = groupByStack(blocks);
+  let slidesHtml;
+  try {
+    slidesHtml = renderSlides(groups);
+  } catch (e) {
+    console.error(`❌ Erro ao renderizar slides: ${e.message}`);
+    process.exit(1);
+  }
+
+  // 4. Load base template and build final HTML
+  const basePath = path.join(__dirname, "_templates", "base.html");
+  if (!fs.existsSync(basePath)) {
+    console.error(`❌ Erro: template base não encontrado: ${basePath}`);
+    process.exit(1);
+  }
+  let html = fs.readFileSync(basePath, "utf-8");
+
+  // Replace title
+  html = html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(deckTitle)}</title>`);
+
+  // Replace slides section content
+  // Pattern: <div class="slides">\n(content)\n</div>\n</div>
+  html = html.replace(
+    /(<div class="slides">)[\s\S]*?(<\/div>\s*<\/div>\s*\n*<script)/,
+    `$1\n\n${slidesHtml}\n\n</div>\n</div>\n\n<script`
+  );
+
+  // Prepend generated-file comment
+  const generatedComment =
+    `<!-- GENERATED FILE — do not edit manually.\n` +
+    `     Source: ${path.relative(__dirname, contentPath)}\n` +
+    `     Rebuild: node build.js --deck ${deckDir}\n` +
+    `     Any manual edits will be overwritten. -->\n`;
+  html = generatedComment + html;
+
+  // 5. Handle --check-only (CI drift check)
+  if (checkOnly) {
+    if (!fs.existsSync(outputPath)) {
+      console.error(`❌ Drift: ${outputPath} não existe mas content.md está presente.`);
+      process.exit(1);
+    }
+    const existing = fs.readFileSync(outputPath, "utf-8");
+    if (existing !== html) {
+      console.error(`❌ Drift: ${outputPath} diverge do HTML que o build geraria a partir de content.md.`);
+      console.error(`   Corrija executando: node build.js --deck ${deckDir}`);
+      process.exit(1);
+    }
+    console.log(`✓ ${outputPath} está sincronizado com content.md.`);
+    return;
+  }
+
+  // 6. Write index.html
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, html, "utf-8");
+  console.log(`✓ Gerado: ${outputPath}`);
+
+  // 7. Update freshness manifest
+  updateFreshnessManifest(manifestPath, contentPath, blocks, yaml);
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/**
+ * Generate/update decks/.freshness-manifest.generated.yml from parsed blocks.
+ */
+function updateFreshnessManifest(manifestPath, contentPath, blocks, yaml) {
+  // Load existing manifest to preserve other decks' entries
+  let existing = { manifest_version: 1, slides: [] };
+  if (fs.existsSync(manifestPath)) {
+    try {
+      existing = yaml.load(fs.readFileSync(manifestPath, "utf-8")) || existing;
+    } catch (_) { /* ignore parse errors; rebuild */ }
+  }
+
+  const relContent = path.relative(path.dirname(path.dirname(manifestPath)), contentPath);
+
+  // Remove entries for this deck (slide_ids starting with the deck prefix)
+  const deckName = path.basename(path.dirname(contentPath));
+  const existingSlides = (existing.slides || []).filter(s => {
+    const id = s.slide_id || "";
+    return !id.startsWith(deckName + "/");
+  });
+
+  // Build new entries for slides with source
+  const newEntries = blocks
+    .filter(b => b.source && b.source.length > 0)
+    .map(b => {
+      const entry = {
+        slide_id: b.slide_id,
+        content_md: relContent,
+      };
+      if (b.source.length === 1) {
+        entry.source = b.source[0];
+      } else {
+        entry.source = b.source;
+      }
+      if (b.source_headings && b.source_headings.length > 0) {
+        if (b.source_headings.length === 1) {
+          entry.source_headings = b.source_headings[0];
+        } else {
+          entry.source_headings = b.source_headings;
+        }
+      }
+      return entry;
+    });
+
+  const manifest = {
+    manifest_version: 1,
+    generated_at: new Date().toISOString(),
+    slides: [...existingSlides, ...newEntries],
+  };
+
+  fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
+  const manifestText = yaml.dump(manifest, { lineWidth: 120, quotingType: '"', forceQuotes: false });
+  fs.writeFileSync(manifestPath, manifestText, "utf-8");
+  console.log(`✓ Manifesto atualizado: ${manifestPath}`);
+}
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // Argumentos

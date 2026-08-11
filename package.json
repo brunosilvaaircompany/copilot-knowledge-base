@@ -1,0 +1,22 @@
+{
+  "name": "copilot-knowledge-base",
+  "version": "1.0.0",
+  "description": "Sistema completo de slides para treinamentos de **GitHub Copilot**, no layout **anchored**: tema claro/escuro, tipografia Mona Sans, componentes oficiais (Octicons + mascotes do Octodex) e um **editor visual integrado** — edite os slides direto no navegador, sem tocar em código.",
+  "main": "build.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:26831/brunosilvaaircompany/copilot-knowledge-base"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^5.2.3"
+  }
+}

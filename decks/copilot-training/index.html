@@ -1,12 +1,16 @@
+<!-- GENERATED FILE — do not edit manually.
+     Source: decks/copilot-training/content.md
+     Rebuild: node build.js --deck decks/copilot-training
+     Any manual edits will be overwritten. -->
 <!DOCTYPE html>
 <html lang="pt-BR" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark light" />
-  <title>GitHub Copilot — Treinamento</title>
+  <title>GitHub Copilot na prática</title>
 
-  <!-- Reveal.js CDN -->
+  <!-- Reveal.js vendorizado; o modo standalone embute estes arquivos. -->
   <link rel="stylesheet" href="../../_shared/vendor/reveal.js/dist/reset.css" />
   <link rel="stylesheet" href="../../_shared/vendor/reveal.js/dist/reveal.css" />
 
@@ -50,231 +54,226 @@
 <div class="reveal">
 <div class="slides">
 
-  <!-- CAPA -->
-  <section class="anchored-cover">
-    <p class="cover-eyebrow">Treinamento interno</p>
-    <h1>GitHub Copilot na prática</h1>
-    <p class="cover-sub">Fundamentos, fluxo de trabalho e boas práticas para times de engenharia.</p>
-    <div class="cover-meta">
-      <svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg>
-      <span>Time de Evangelistas &nbsp;·&nbsp; Agosto 2026</span>
-    </div>
-  </section>
+<section class="anchored-cover">
+  <p class="cover-eyebrow">Treinamento interno</p>
+  <h1>GitHub Copilot na prática</h1>
+  <p class="cover-sub">Fundamentos, fluxo de trabalho e boas práticas para times de engenharia.</p>
+  <div class="cover-meta">
+    <svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg>
+    <span>Time de Evangelistas  ·  Agosto 2026</span>
+  </div>
+</section>
 
-  <!-- AGENDA -->
+<section>
+  <div class="slide-head">
+  <p class="kicker">Visão geral</p>
+  <h2>Agenda</h2>
+  <p class="subtitle">O que vamos cobrir na sessão de hoje.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-list">
+    <div class="anchored-list-item">
+      <span class="num">01</span>
+      <span class="txt"><strong>Abertura &amp; alinhamento</strong><span>Expectativas, nível da turma e ambiente.</span></span>
+    </div>
+    <div class="anchored-list-item">
+      <span class="num">02</span>
+      <span class="txt"><strong>Conceitos e casos de uso</strong><span>Como o Copilot funciona e onde ele entra no dia a dia.</span></span>
+    </div>
+    <div class="anchored-list-item">
+      <span class="num">03</span>
+      <span class="txt"><strong>Hands-on</strong><span>Chat, inline, terminal e instruções customizadas.</span></span>
+    </div>
+    <div class="anchored-list-item">
+      <span class="num">04</span>
+      <span class="txt"><strong>Boas práticas &amp; Q&amp;A</strong><span>Contexto, revisão humana e próximos passos.</span></span>
+    </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section class="stack">
+  <section class="anchored-divider">
+  <p class="divider-index">Parte um</p>
+  <h2>Conceitos &amp; casos de uso</h2>
+  <p class="divider-note">O que o Copilot é, o que ele não é, e onde ele gera valor real.</p>
+</section>
+
   <section>
-    <div class="slide-head">
-      <p class="kicker">Visão geral</p>
-      <h2>Agenda</h2>
-      <p class="subtitle">O que vamos cobrir na sessão de hoje.</p>
+  <div class="slide-head">
+  <p class="kicker">Fundamentos</p>
+  <h2>O que é o GitHub Copilot</h2>
+  <p class="subtitle">Um assistente de programação com IA integrado ao seu fluxo.</p>
+</div>
+  <div class="slide-body">
+<ul>
+<li>Sugere código e testes direto no editor, no chat e no terminal</li>
+<li>Não entende o contexto do repositório aberto</li>
+<li>Funciona com poucas linguagens e frameworks</li>
+<li>Disponível apenas no JetBrains</li>
+</ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+  <section>
+  <div class="slide-head">
+  <p class="kicker">Valor</p>
+  <h2>Por que adotar</h2>
+  <p class="subtitle">Quatro ganhos que aparecem já nas primeiras semanas.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-grid">
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-zap"></use></svg></span>
+    <h3>Velocidade</h3>
+    <p>Menos boilerplate escrito à mão, mais tempo em lógica de negócio.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-book"></use></svg></span>
+    <h3>Contexto</h3>
+    <p>Explicações sobre código legado sem sair do editor.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-verified"></use></svg></span>
+    <h3>Qualidade</h3>
+    <p>Testes e casos de borda sugeridos junto com a implementação.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-people"></use></svg></span>
+    <h3>Onboarding</h3>
+    <p>Pessoas novas navegam bases desconhecidas com mais autonomia.</p>
+  </div>
     </div>
-    <div class="slide-body">
-      <div class="anchored-list">
-        <div class="anchored-list-item">
-          <span class="num">01</span>
-          <span class="txt"><strong>Abertura &amp; alinhamento</strong><span>Expectativas, nível da turma e ambiente.</span></span>
-        </div>
-        <div class="anchored-list-item">
-          <span class="num">02</span>
-          <span class="txt"><strong>Conceitos e casos de uso</strong><span>Como o Copilot funciona e onde ele entra no dia a dia.</span></span>
-        </div>
-        <div class="anchored-list-item">
-          <span class="num">03</span>
-          <span class="txt"><strong>Hands-on</strong><span>Chat, inline, terminal e instruções customizadas.</span></span>
-        </div>
-        <div class="anchored-list-item">
-          <span class="num">04</span>
-          <span class="txt"><strong>Boas práticas &amp; Q&amp;A</strong><span>Contexto, revisão humana e próximos passos.</span></span>
-        </div>
-      </div>
-    </div>
-    <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-  </section>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
 
-  <!-- BLOCO 1 -->
-  <section class="stack">
-    <section class="anchored-divider">
-      <p class="divider-index">Parte um</p>
-      <h2>Conceitos &amp; casos de uso</h2>
-      <p class="divider-note">O que o Copilot é, o que ele não é, e onde ele gera valor real.</p>
-    </section>
-
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Fundamentos</p>
-        <h2>O que é o GitHub Copilot</h2>
-        <p class="subtitle">Um assistente de programação com IA integrado ao seu fluxo.</p>
+  <section>
+  <div class="slide-head">
+  <p class="kicker">Prompt</p>
+  <h2>Genérico vs. específico</h2>
+  <p class="subtitle">A qualidade da resposta acompanha a qualidade do pedido.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-split">
+      <div>
+        <p class="split-label bad"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>Genérico</p>
+        <pre class="code-wrapper"><code>Crie um endpoint REST</code></pre>
       </div>
-      <div class="slide-body">
-        <ul>
-          <li>Sugere código e testes direto no editor, no chat e no terminal</li>
-          <li>Não entende o contexto do repositório aberto</li>
-          <li>Funciona com poucas linguagens e frameworks</li>
-          <li>Disponível apenas no JetBrains</li>
-        </ul>
-      </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
-
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Valor</p>
-        <h2>Por que adotar</h2>
-        <p class="subtitle">Quatro ganhos que aparecem já nas primeiras semanas.</p>
-      </div>
-      <div class="slide-body">
-        <div class="anchored-grid">
-          <div class="anchored-card">
-            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-zap"></use></svg></span>
-            <h3>Velocidade</h3>
-            <p>Menos boilerplate escrito à mão, mais tempo em lógica de negócio.</p>
-          </div>
-          <div class="anchored-card">
-            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-book"></use></svg></span>
-            <h3>Contexto</h3>
-            <p>Explicações sobre código legado sem sair do editor.</p>
-          </div>
-          <div class="anchored-card">
-            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-verified"></use></svg></span>
-            <h3>Qualidade</h3>
-            <p>Testes e casos de borda sugeridos junto com a implementação.</p>
-          </div>
-          <div class="anchored-card">
-            <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-people"></use></svg></span>
-            <h3>Onboarding</h3>
-            <p>Pessoas novas navegam bases desconhecidas com mais autonomia.</p>
-          </div>
-        </div>
-      </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
-
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Prompt</p>
-        <h2>Genérico vs. específico</h2>
-        <p class="subtitle">A qualidade da resposta acompanha a qualidade do pedido.</p>
-      </div>
-      <div class="slide-body">
-        <div class="anchored-split">
-          <div>
-            <p class="split-label bad"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>Genérico</p>
-            <pre class="code-wrapper"><code>Crie um endpoint REST</code></pre>
-          </div>
-          <div>
-            <p class="split-label good"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-check"></use></svg>Específico</p>
-            <pre class="code-wrapper"><code>Crie um endpoint POST /users
+      <div>
+        <p class="split-label good"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-check"></use></svg>Específico</p>
+        <pre class="code-wrapper"><code>Crie um endpoint POST /users
 com validação de e-mail
 e retorno 201</code></pre>
-          </div>
-        </div>
       </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
 
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Princípio</p>
-        <h2>Human in the loop</h2>
-        <p class="subtitle">Autonomia com responsabilidade.</p>
-      </div>
-      <div class="slide-body">
-        <p class="anchored-quote">Todo código gerado passa por revisão humana antes de ir para produção.</p>
-        <p class="anchored-quote-cite">GitHub Docs — Responsible AI</p>
-      </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
-  </section>
+  <section>
+  <div class="slide-head">
+  <p class="kicker">Princípio</p>
+  <h2>Human in the loop</h2>
+  <p class="subtitle">Autonomia com responsabilidade.</p>
+</div>
+  <div class="slide-body">
+    <p class="anchored-quote">Todo código gerado passa por revisão humana antes de ir para produção.</p>
+    <p class="anchored-quote-cite">GitHub Docs — Responsible AI</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+</section>
 
-  <!-- BLOCO 2 -->
-  <section class="stack">
-    <section class="anchored-divider">
-      <p class="divider-index">Parte dois</p>
-      <h2>Hands-on</h2>
-      <p class="divider-note">Do autocomplete às instruções customizadas do repositório.</p>
-    </section>
+<section class="stack">
+  <section class="anchored-divider">
+  <p class="divider-index">Parte dois</p>
+  <h2>Hands-on</h2>
+  <p class="divider-note">Do autocomplete às instruções customizadas do repositório.</p>
+</section>
 
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Superfícies</p>
-        <h2>Onde o Copilot aparece</h2>
-        <p class="subtitle">Três pontos de entrada no fluxo de trabalho.</p>
+  <section>
+  <div class="slide-head">
+  <p class="kicker">Superfícies</p>
+  <h2>Onde o Copilot aparece</h2>
+  <p class="subtitle">Três pontos de entrada no fluxo de trabalho.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-figure">
+      <img src="https://octodex.github.com/images/codercat.jpg" alt="Codercat — GitHub Octodex" loading="lazy" />
+      <div class="figure-text">
+        <ul class="icon-list">
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-comment-discussion"></use></svg><span>Chat — perguntas e explicações sobre o código</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-code"></use></svg><span>Inline no editor — sugestões enquanto você digita</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg><span>Terminal — geração e explicação de comandos</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg><span>Agentes — não disponível</span></li>
+</ul>
       </div>
-      <div class="slide-body">
-        <div class="anchored-figure">
-          <img src="https://octodex.github.com/images/codercat.jpg" alt="Codercat — GitHub Octodex" loading="lazy" />
-          <div class="figure-text">
-            <ul class="icon-list">
-              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-comment-discussion"></use></svg><span>Chat — perguntas e explicações sobre o código</span></li>
-              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-code"></use></svg><span>Inline no editor — sugestões enquanto você digita</span></li>
-              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg><span>Terminal — geração e explicação de comandos</span></li>
-              <li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg><span>Agentes — não disponível</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
 
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Configuração</p>
-        <h2>Instruções padronizadas</h2>
-        <p class="subtitle"><code>.github/copilot-instruct.md</code> aplica as regras do projeto a toda sugestão.</p>
-      </div>
-      <div class="slide-body">
-        <pre class="code-wrapper"><code class="language-markdown"># .github/copilot-instructions.md
+  <section>
+  <div class="slide-head">
+  <p class="kicker">Configuração</p>
+  <h2>Instruções padronizadas</h2>
+  <p class="subtitle">`.github/copilot-instruct.md` aplica as regras do projeto a toda sugestão.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-markdown"># .github/copilot-instructions.md
 - Use TypeScript com strict mode habilitado
 - Siga o padrão REST para APIs
-- Documente funções públicas com JSDoc</code></pre>
-      </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
-  </section>
+- Documente funções públicas com JSDoc
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+</section>
 
-  <!-- BLOCO 3 -->
-  <section class="stack">
-    <section class="anchored-divider">
-      <p class="divider-index">Parte três</p>
-      <h2>Boas práticas</h2>
-      <p class="divider-note">Hábitos que aumentam a precisão das respostas.</p>
-    </section>
+<section class="stack">
+  <section class="anchored-divider">
+  <p class="divider-index">Parte três</p>
+  <h2>Boas práticas</h2>
+  <p class="divider-note">Hábitos que aumentam a precisão das respostas.</p>
+</section>
 
-    <section>
-      <div class="slide-head">
-        <p class="kicker">Contexto</p>
-        <h2>Economia de contexto</h2>
-        <p class="subtitle">Menos ruído no contexto, mais precisão na resposta.</p>
-      </div>
-      <div class="slide-body">
-        <ul>
-          <li>Feche arquivos que não são relevantes para a tarefa</li>
-          <li>Limpe conversas antigas antes de iniciar um novo assunto</li>
-          <li>Prefira autocomplete para tarefas simples</li>
-          <li>Nomeie variáveis e escreva comentários com clareza</li>
-        </ul>
-      </div>
-      <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-    </section>
-  </section>
-
-  <!-- ENCERRAMENTO -->
   <section>
-    <div class="slide-head">
-      <p class="kicker">Encerramento</p>
-      <h2>Perguntas</h2>
-      <p class="subtitle">Dúvidas, cenários do seu time e próximos passos.</p>
-    </div>
-    <div class="slide-body">
-      <div class="anchored-figure">
-        <img src="https://octodex.github.com/images/neurocats_FULL.png" alt="Neurocats — GitHub Octodex" loading="lazy" />
-        <div class="figure-text">
-          <p>Traga um caso real do seu repositório — a gente resolve junto agora.</p>
-        </div>
+  <div class="slide-head">
+  <p class="kicker">Contexto</p>
+  <h2>Economia de contexto</h2>
+  <p class="subtitle">Menos ruído no contexto, mais precisão na resposta.</p>
+</div>
+  <div class="slide-body">
+<ul>
+<li>Feche arquivos que não são relevantes para a tarefa</li>
+<li>Limpe conversas antigas antes de iniciar um novo assunto</li>
+<li>Prefira autocomplete para tarefas simples</li>
+<li>Nomeie variáveis e escreva comentários com clareza</li>
+</ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">Encerramento</p>
+  <h2>Perguntas</h2>
+  <p class="subtitle">Dúvidas, cenários do seu time e próximos passos.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-figure">
+      <img src="https://octodex.github.com/images/neurocats_FULL.png" alt="Neurocats — GitHub Octodex" loading="lazy" />
+      <div class="figure-text">
+        <p>Traga um caso real do seu repositório — a gente resolve junto agora.</p>
       </div>
     </div>
-    <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
-  </section>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
 
 </div>
 </div>
