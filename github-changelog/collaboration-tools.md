@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-10 08:22 UTC  
+> Atualizado em: 2026-08-11 08:05 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Set pull request limits at the organization level](https://github.blog/changelog/2026-08-06-set-pull-request-limits-at-the-organization-level)
+## [Custom thread subscriptions are being deprecated](https://github.blog/changelog/2026-08-10-custom-thread-subscriptions-are-being-deprecated)
 
-**Data:** 2026-08-06  **Categorias:** `Improvement`, `collaboration tools`
+**Data:** 2026-08-10  **Categorias:** `Retired`, `collaboration tools`, `community engagement`, `projects &amp; issues`
 
-You can now set pull request limits at the organization level. Pull request limits let you define how many open pull requests a user without write access can have at&#8230;
+You&#8217;ll no longer be able to configure custom thread subscriptions for GitHub notifications. What&#8217;s changing As part of this rollout, GitHub will remove support for custom thread subscription settings. If&#8230;
 
-The post [Set pull request limits at the organization level](https://github.blog/changelog/2026-08-06-set-pull-request-limits-at-the-organization-level) appeared first on [The GitHub Blog](https://github.blog).
+The post [Custom thread subscriptions are being deprecated](https://github.blog/changelog/2026-08-10-custom-thread-subscriptions-are-being-deprecated) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
