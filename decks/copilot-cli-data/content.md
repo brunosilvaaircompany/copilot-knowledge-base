@@ -59,11 +59,11 @@ title: O contrato da sessão
 subtitle: IA acelera o trabalho; a pessoa responsável continua respondendo pelo resultado.
 source: github-docs/content/copilot/concepts/agents/copilot-cli/about-copilot-cli.md
 ---
-- **Copilot CLI:** entende o pedido, pergunta, planeja, escreve e sugere comandos no terminal.
-- **Ferramentas determinísticas:** Python/pandas, Jupyter, matplotlib/seaborn, SQL e Docker fazem o processamento.
-- **Analista:** fornece contexto, revisa o diff, executa, confere números e decide se a interpretação é defensável.
-- **Ambiente:** use uma cópia de teste, Codespace ou devcontainer; nunca experimente a primeira vez em um projeto real.
-- **Regra de ouro:** nenhuma alteração, comando destrutivo ou conclusão segue adiante sem aprovação e validação humana.
+- **Copilot CLI**: entende o pedido, pergunta, planeja, escreve e sugere comandos no terminal.
+- **Ferramentas determinísticas**: Python/pandas, Jupyter, matplotlib/seaborn, SQL e Docker fazem o processamento.
+- **Analista**: fornece contexto, revisa o diff, executa, confere números e decide se a interpretação é defensável.
+- **Ambiente**: use uma cópia de teste, Codespace ou devcontainer; nunca experimente a primeira vez em um projeto real.
+- **Regra de ouro**: nenhuma alteração, comando destrutivo ou conclusão segue adiante sem aprovação e validação humana.
 
 ---
 slide_id: copilot-cli-data/cli-role
@@ -128,7 +128,7 @@ kicker: 06–10 min · casos de uso
 title: Onde o terminal ajuda quem trabalha com dados
 subtitle: O prompt é a interface; o repositório e as ferramentas são o contexto operacional.
 items:
-  - icon: search
+  - icon: book
     text: "Explorar CSV/JSON: shape, tipos, nulos, duplicidades, datas e normalização."
   - icon: book
     text: "Construir um notebook: alternar Markdown e Python, executar célula a célula e documentar."
@@ -165,11 +165,11 @@ source:
   - github-docs/content/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically.md
   - github-docs/content/copilot/how-tos/copilot-cli/use-copilot-cli-in-actions.md
 ---
-- **Interativo:** `copilot` permite perguntas, aprovações e correções durante a sessão.
-- **Prompt mode:** `copilot -p "..." -s` serve para uma saída reproduzível, desde que o contexto e as permissões sejam explícitos.
-- **Automação:** em CI, use token/`GITHUB_TOKEN` e permissões mínimas; nunca copie credenciais para o prompt ou para um log.
-- **Guardrail:** mantenha revisão humana para números, alterações de arquivos, chamadas externas e conclusões de negócio.
-- **Transição:** agora a mesma disciplina será aplicada aos cinco módulos do repositório [`data-with-copilot`](https://github.com/brunosilvaaircompany/data-with-copilot).
+- **Interativo**: `copilot` permite perguntas, aprovações e correções durante a sessão.
+- **Prompt mode**: `copilot -p "..." -s` serve para uma saída reproduzível, desde que o contexto e as permissões sejam explícitos.
+- **Automação**: em CI, use token/`GITHUB_TOKEN` e permissões mínimas; nunca copie credenciais para o prompt ou para um log.
+- **Guardrail**: mantenha revisão humana para números, alterações de arquivos, chamadas externas e conclusões de negócio.
+- **Transição**: agora a mesma disciplina será aplicada aos cinco módulos do repositório [`data-with-copilot`](https://github.com/brunosilvaaircompany/data-with-copilot).
 
 ---
 slide_id: copilot-cli-data/hands-on-map
@@ -284,11 +284,11 @@ kicker: 25–35 min · interpretação
 title: Resultados são da execução, não do prompt
 subtitle: Use estes valores apenas como conferência do ensaio; o notebook deve recalcular tudo.
 ---
-- **Faturamento:** `R$ 278.469,60` pela soma de `vendas.subtotal`.
-- **Mais unidades:** Luminária LED (40), Bola de Futebol (40), Aspirador de Pó (38), Halteres 5kg (35) e Jaqueta Jeans (33).
-- **Categoria líder em receita:** Eletrônicos (`R$ 62.565,57`) na execução de referência.
-- **Pedidos por status:** entregue 71, enviado 26, processando 15, cancelado 8.
-- **Pergunta de controle:** confirme moeda, arredondamento, joins e se itens cancelados foram incluídos antes de concluir.
+- **Faturamento**: `R$ 278.469,60` pela soma de `vendas.subtotal`.
+- **Mais unidades**: Luminária LED (40), Bola de Futebol (40), Aspirador de Pó (38), Halteres 5kg (35) e Jaqueta Jeans (33).
+- **Categoria líder em receita**: Eletrônicos (`R$ 62.565,57`) na execução de referência.
+- **Pedidos por status**: entregue 71, enviado 26, processando 15, cancelado 8.
+- **Pergunta de controle**: confirme moeda, arredondamento, joins e se itens cancelados foram incluídos antes de concluir.
 
 ---
 slide_id: copilot-cli-data/module3-context
