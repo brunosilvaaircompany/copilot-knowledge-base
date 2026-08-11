@@ -18,28 +18,84 @@ open http://localhost:8000/
 open http://localhost:8000/decks/copilot-training/
 ```
 
+## Formato declarativo de decks (recomendado)
+
+Cada deck tem um arquivo `decks/{nome}/content.md` que é a **única fonte
+editável** do conteúdo. O `index.html` é gerado automaticamente pelo build e
+**não deve ser editado manualmente**.
+
+### Estrutura de `content.md`
+
+```markdown
+---
+slide_id: meu-deck/capa
+template: cover
+title: Título do Deck
+subtitle: Subtítulo descritivo.
+eyebrow: Contexto
+meta: "Time · Mês Ano"
+---
+
+---
+slide_id: meu-deck/intro
+template: header_body
+kicker: Introdução
+title: Título do Slide
+subtitle: Breve contexto.
+source: github-docs/content/copilot/get-started/features.md
+source_headings:
+  - Features overview
+---
+- Ponto principal um
+- Ponto principal dois
+```
+
+Regras do formato:
+- `slide_id` é obrigatório, global e único: `^[a-z0-9][a-z0-9-]*/[a-z0-9][a-z0-9-]*$`
+- `template` é obrigatório (ver templates disponíveis abaixo)
+- `source` e `source_headings` ficam no bloco do slide; `source_headings` sem `source` é erro
+- `stack` agrupa slides contíguos em stacks do Reveal.js; reutilização não contígua do mesmo `stack` é erro
+- Markdown permitido no corpo: parágrafos, listas `-`, `**negrito**`, links `[texto](url)` e fenced code blocks
+- Template `raw` aceita HTML literal no corpo (sem freshness)
+
+### Templates disponíveis
+
+`cover`, `header_body`, `cards_2col`, `list_numbered`, `icon_list`,
+`code_demo`, `terminal_demo`, `comparison`, `quote`, `faq`, `figure`,
+`architecture`, `stats`, `timeline`, `divider`, `closing`, `exercise`,
+`resources`, `raw`.
+
+### Compilar um deck
+
+```bash
+# instalar dependências (primeira vez)
+npm install
+
+# compilar content.md → index.html + atualizar manifesto de freshness
+node build.js --deck decks/copilot-training
+
+# verificar se o index.html commitado está sincronizado (usado no CI)
+node build.js --deck decks/copilot-training --check-only
+```
+
+O build gera automaticamente `decks/.freshness-manifest.generated.yml` com as
+fontes de cada slide. O `deck-sources.yml` não é mais consumido.
+
 ## Criar um novo deck
 
 ```bash
 # atualizar Reveal.js e fontes locais quando necessário
 node scripts/vendor-assets.js
 
-# deck linkado ao _shared/ (recomendado para o repositório)
+# criar estrutura inicial (modo legado — cria index.html vazio a partir do template)
 node build.js --title "Meu Treinamento" --output decks/meu-treinamento
 
 # arquivo único com tudo embutido (para compartilhar/exportar PDF)
 node build.js --title "Meu Treinamento" --output decks/meu-treinamento --standalone
-
-# vincular fontes ao freshness check e registrar a baseline
-node build.js --title "Meu Treinamento" --output decks/meu-treinamento \
-  --source github-docs/content/copilot/get-started/features.md \
-  --source github-docs/content/copilot/get-started/best-practices.md \
-  --register-freshness
 ```
 
-`--source` pode ser repetido. O registro é opt-in: `--register-freshness`
-adiciona o deck a `decks/deck-sources.yml` e grava os hashes iniciais em
-`decks/.freshness-state.json`.
+Para o novo fluxo declarativo, crie `decks/meu-deck/content.md` diretamente
+e execute `node build.js --deck decks/meu-deck`.
 
 ## Editor visual
 
@@ -94,38 +150,63 @@ A seção **Backup dos dados** na galeria protege tudo que vive no navegador
 - **Restaurar backup** aceita o JSON em qualquer navegador, com confirmação
   antes de substituir os dados atuais.
 
-## Estrutura
+## Freshness por slide
+
+O sistema rastreia o estado de atualização de cada slide individualmente, usando
+`slide_id` como chave.
+
+### Fluxo
+
+1. O build gera `decks/.freshness-manifest.generated.yml` com as fontes de cada slide
+2. O workflow `check-slides-freshness.yml` compara as fontes com o commit anterior
+3. Para cada slide desatualizado, é criada/atualizada uma issue individual:
+   **"Slide desatualizado: {slide_id}"**
+4. A issue instrui o GitHub Copilot coding agent a avaliar o impacto e, se
+   necessário, editar `content.md` e abrir um PR
+5. O estado transita: `ok → stale → pending → ok` (ou `→ stale` se o PR for fechado sem merge)
+
+### Arquivos de estado
+
+- `decks/.freshness-manifest.generated.yml` — gerado pelo build; lista fontes por slide
+- `decks/.freshness-state.json` — mantido pelo workflow; indexado por `slide_id`
+- `decks/deck-sources.yml` — **descontinuado**; não é mais consumido
 
 ```
-index.html                        # Galeria de decks (busca + filtro por tags)
-build.js                          # Gerador de decks
-scripts/vendor-assets.js          # Baixa Reveal.js e fontes para uso local
-_shared/
-├── slides-anchored.css           # Design system: tokens claro/escuro, componentes
-├── core.js                       # Tema (persistido, sincronizado entre páginas)
-├── slide-editor.js               # Editor visual
-├── slide-templates.js             # Templates de slide
-└── vendor/                        # Reveal.js, plugins e fontes versionados
-gallery/
-├── gallery.css                    # Estilos extraídos da galeria
-└── gallery.js                     # Catálogo, filtros e backup da galeria
-_templates/
-└── base.html                     # Template base dos decks gerados
-decks/
-└── copilot-training/             # Deck de exemplo (index.html + slides.html)
-docs/
-├── EDITOR_GUIDE.md               # Editor: recursos e atalhos
-├── TEMPLATES_GUIDE.md            # Criar e usar templates
-└── PROJECT_STRUCTURE.md          # Convenções do projeto
+index.html                          # Galeria de decks
+build.js                            # Compilador de decks
+package.json                        # Dependências Node (js-yaml)
 scripts/
-├── fetch_github_docs.py          # Sincroniza github-docs/ com github/docs
-└── check_slides_freshness.py     # Verifica se os decks ficaram desatualizados
-github-docs/                      # Espelho local da documentação (gerado)
-decks/deck-sources.yml            # Manifesto: deck → fontes em github-docs/
-requirements.txt                  # Dependências Python (requests, pyyaml)
+├── parse_content.js                # Parser de content.md
+├── render_slides.js                # Renderizador HTML por template
+├── vendor-assets.js                # Baixa Reveal.js e fontes
+├── fetch_github_docs.py            # Sincroniza github-docs/
+└── check_slides_freshness.py       # Freshness por slide_id; cria issues individuais
+_shared/
+├── slides-anchored.css             # Design system
+├── core.js                         # Tema
+├── slide-editor.js                 # Editor visual (localStorage)
+├── slide-templates.js              # Templates do editor (localStorage)
+└── vendor/                         # Reveal.js, plugins e fontes
+gallery/
+├── gallery.css
+└── gallery.js
+_templates/
+└── base.html                       # Template base dos decks
+decks/
+├── copilot-training/
+│   ├── content.md                  # ← fonte editável
+│   └── index.html                  # ← gerado; não editar diretamente
+├── .freshness-manifest.generated.yml  # Gerado pelo build
+└── .freshness-state.json           # Estado de freshness por slide_id
+docs/
+├── EDITOR_GUIDE.md
+├── TEMPLATES_GUIDE.md
+└── PROJECT_STRUCTURE.md
 .github/workflows/
-├── fetch-docs.yml                # Semanal: atualiza github-docs/
-└── check-slides-freshness.yml    # Semanal: alerta decks desatualizados
+├── fetch-docs.yml                  # Semanal: atualiza github-docs/
+├── check-slides-freshness.yml      # Verifica freshness; cria issues por slide_id
+└── build-decks.yml                 # CI: verifica que index.html não diverge
+requirements.txt                    # Dependências Python (requests, pyyaml)
 ```
 
 Detalhes: [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)
@@ -169,32 +250,24 @@ O workflow **`.github/workflows/fetch-docs.yml`** roda isso automaticamente
 toda segunda-feira e commita se a documentação mudou — ajuste `DOCS_SECTION`
 no arquivo conforme as seções que seus decks usam como fonte.
 
-## Verificação de desatualização dos decks
+## Verificação de desatualização dos slides
 
-**`decks/deck-sources.yml`** mapeia cada deck HTML aos arquivos de
-`github-docs/` que serviram de fonte para o conteúdo. O workflow
-**`.github/workflows/check-slides-freshness.yml`** compara os hashes dessas
-fontes a cada atualização da documentação e abre/atualiza uma issue
-(`slides-stale`) quando um deck fica desatualizado.
+O sistema usa `decks/.freshness-manifest.generated.yml` (gerado pelo `build.js`)
+para rastrear as fontes de cada slide por `slide_id`. O workflow
+`check-slides-freshness.yml` compara o estado atual das fontes com o commit
+anterior e cria/atualiza uma issue individual por slide desatualizado.
 
 ```bash
 # rodar localmente
 python3 scripts/check_slides_freshness.py \
-  --manifest decks/deck-sources.yml \
+  --manifest decks/.freshness-manifest.generated.yml \
   --state decks/.freshness-state.json \
   --summary-file decks/.freshness-summary.md \
   --write-state
 ```
 
-Ao criar um deck novo com `build.js`, adicione uma entrada em
-`decks/deck-sources.yml` apontando para as fontes usadas — sem isso o
-workflow não sabe que o deck existe. `decks/.freshness-state.json` é a
-baseline e **deve ser commitado**; `--write-state` a atualiza após o check.
-
-Alertas opcionais (issue já é automática): comentário em issue existente,
-GitHub Discussion e/ou e-mail via SMTP — configure os secrets
-`ALERT_ISSUE_NUMBER`, `DISCUSSION_CATEGORY_ID` ou `SMTP_*`/`ALERT_EMAIL_*`
-no repositório, se quiser esses canais extras.
+O `decks/.freshness-state.json` é commitado automaticamente pelo workflow.
+O `decks/deck-sources.yml` foi descontinuado e não é mais consumido.
 
 ## Créditos e licenças
 
