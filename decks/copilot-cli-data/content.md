@@ -47,7 +47,7 @@ items:
   - icon: workflow
     text: "Docker em execução para o módulo 5; duas abas de terminal e um cronômetro visível."
   - icon: verified
-    text: "Ensaiar 15 + 10 + 10 + 8 + 4 + 10 + 3 minutos; interromper uma etapa quando o tempo acabar."
+    text: "Ensaiar contexto 0–15 (15 min), exploração 15–25 (10), notebook 25–35 (10), visualização 35–43 (8), SQL 43–47 (4), MCP 47–57 (10) e conclusão 57–60 (3); interromper uma etapa quando o tempo acabar."
 source: github-docs/content/copilot/how-tos/copilot-cli/cli-getting-started.md
 ---
 
