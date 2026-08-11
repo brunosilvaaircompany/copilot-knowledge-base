@@ -175,6 +175,17 @@ function updateFreshnessManifest(manifestPath, contentPath, blocks, yaml) {
     return !id.startsWith(deckName + "/");
   });
 
+  // Validate global slide_id uniqueness: no new slide_id may collide with an entry
+  // from another deck that is already present in the manifest.
+  const existingIds = new Set(existingSlides.map(s => s.slide_id).filter(Boolean));
+  const newIds = blocks.map(b => b.slide_id).filter(Boolean);
+  for (const id of newIds) {
+    if (existingIds.has(id)) {
+      console.error(`❌ Erro: slide_id '${id}' já existe em outro deck. Use um ID único globalmente.`);
+      process.exit(1);
+    }
+  }
+
   // Build new entries for slides with source
   const newEntries = blocks
     .filter(b => b.source && b.source.length > 0)

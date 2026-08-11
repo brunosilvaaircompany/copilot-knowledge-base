@@ -475,6 +475,9 @@ def main() -> int:
         })
         if source_headings:
             new_state["source_headings"] = source_headings
+        # Ensure issue_number and last_pr_number are always present (null if not yet set)
+        new_state.setdefault("issue_number", None)
+        new_state.setdefault("last_pr_number", None)
 
         if not changed:
             # No change — keep current decision (unless pending, which is managed externally)

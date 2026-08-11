@@ -16,6 +16,9 @@ jobs:
   check:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    concurrency:
+      group: freshness-check
+      cancel-in-progress: false
     env:
       COPILOT_ASSIGNEE: ${{ secrets.COPILOT_ASSIGNEE }}
 
@@ -66,4 +69,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add decks/.freshness-state.json
           git diff --cached --quiet || git commit -m "ci: atualiza freshness state [skip ci]"
-          git push || true
+          git push

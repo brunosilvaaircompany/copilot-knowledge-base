@@ -5,31 +5,41 @@
       "source": "github-docs/content/copilot/get-started/what-is-github-copilot.md",
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     },
     "copilot-training/why-adopt": {
       "source": "github-docs/content/copilot/get-started/features.md",
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     },
     "copilot-training/generic-vs-specific": {
       "source": "github-docs/content/copilot/concepts/prompting/prompt-engineering.md",
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     },
     "copilot-training/human-in-the-loop": {
       "source": "github-docs/content/copilot/get-started/best-practices.md",
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     },
     "copilot-training/where-copilot-appears": {
       "source": "github-docs/content/copilot/get-started/features.md",
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     },
     "copilot-training/custom-instructions": {
       "source": [
@@ -38,13 +48,17 @@
       ],
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     },
     "copilot-training/context-economy": {
       "source": "github-docs/content/copilot/get-started/best-practices.md",
       "last_checked_docs_commit": "ec62615782bc425d25b285313e2153ac2037d44e",
       "updated_at": "2026-08-11T03:41:05.007982+00:00",
-      "last_decision": "ok"
+      "last_decision": "ok",
+      "issue_number": null,
+      "last_pr_number": null
     }
   }
 }
