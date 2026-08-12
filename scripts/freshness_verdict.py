@@ -214,10 +214,10 @@ def handle_issue_reopened(args: argparse.Namespace, state: dict[str, Any]) -> bo
 def handle_pr_closed(args: argparse.Namespace, state: dict[str, Any]) -> bool:
     raw = gh(
         "pr", "view", str(args.pr), "--repo", args.repo,
-        "--json", "number,merged,closingIssuesReferences",
+        "--json", "number,state,closingIssuesReferences",
     )
     pr = json.loads(raw or "{}")
-    merged = bool(pr.get("merged"))
+    merged = pr.get("state") == "MERGED"
     references = pr.get("closingIssuesReferences") or []
     if not references:
         print(f"PR #{args.pr} não referencia nenhuma issue; ignorando.")
