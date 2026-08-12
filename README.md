@@ -153,22 +153,61 @@ A seção **Backup dos dados** na galeria protege tudo que vive no navegador
 ## Freshness por slide
 
 O sistema rastreia o estado de atualização de cada slide individualmente, usando
-`slide_id` como chave.
+`slide_id` como chave. A checagem tem **duas camadas**:
+
+- **Camada 1 — piso determinístico (sempre ativa)**: `git diff` entre o commit
+  da última checagem e o atual, restrito às fontes do slide, com extração por
+  heading quando declarada e a regra de fallback de 200 linhas / 40% do arquivo.
+  É o gatilho barato de "algo mudou na fonte" e **não** foi substituído pela
+  camada semântica.
+- **Camada 2 — avaliação semântica (opcional no gate, obrigatória no veredito)**:
+  só roda **depois** que a camada 1 disparou. Antes de abrir a issue, um
+  avaliador opcional compara o texto do slide com a mudança da fonte e pode
+  suprimir o alarme; depois da issue atribuída, o agente precisa devolver um
+  veredito com trechos citados para fechar o ciclo.
 
 ### Fluxo
 
 1. O build gera `decks/.freshness-manifest.generated.yml` com as fontes de cada slide
 2. O workflow `check-slides-freshness.yml` compara as fontes com o commit anterior
-3. Para cada slide desatualizado, é criada/atualizada uma issue individual:
-   **"Slide desatualizado: {slide_id}"**
-4. A issue instrui o GitHub Copilot coding agent a avaliar o impacto e, se
-   necessário, editar `content.md` e abrir um PR
-5. O estado transita: `ok → stale → pending → ok` (ou `→ stale` se o PR for fechado sem merge)
+3. Se houve mudança relevante, o gate semântico (quando ligado) avalia o par
+   (slide, fonte): veredito `not_divergent` **suprime** a issue e grava
+   `last_decision: "suppressed"`; `divergent` ou `unknown` seguem adiante — a
+   falha do provedor é *fail-open*, ou seja, na dúvida a issue é aberta
+4. Para cada slide desatualizado, é criada/atualizada uma issue individual:
+   **"Slide desatualizado: {slide_id}"**, com o texto atual do slide, o diff da
+   fonte e o trecho atual da fonte em blocos separados
+5. A issue instrui o GitHub Copilot coding agent a avaliar o impacto e, se
+   necessário, editar `content.md` e abrir um PR. Para fechar sem alterar o
+   slide, é exigido um comentário no formato `Veredito: / Trecho do slide: /
+   Trecho da fonte:` — o workflow `freshness-verdict.yml` valida e **reabre** a
+   issue se o formato não vier
+6. O estado transita: `ok → stale → pending → ok` (ou `→ stale` se o PR for
+   fechado sem merge, ou se a issue for reaberta); `suppressed` registra o caso
+   em que a camada 2 concluiu que a mudança não afeta o slide
+
+### Fontes por slide
+
+No front matter de `content.md`, um slide pode declarar fontes de duas formas
+equivalentes:
+
+- `source` (string ou lista) + `source_headings` — headings valem para todas as fontes
+- `sources: [{path, headings}]` — headings **por fonte**, útil quando o slide
+  cita `github-docs/` e `vscode-docs/` ao mesmo tempo (as convenções de heading
+  são diferentes)
+
+O veredito do slide combina os pares: basta uma fonte `divergent` para abrir a
+issue, e qualquer `unknown` também abre.
+
+> **Restrição de não regressão**: a camada semântica **complementa** e não
+> substitui a camada determinística. `extract_heading_sections`, o `git diff`
+> por fonte e os limiares de 200 linhas / 40% do arquivo continuam sendo o
+> gatilho barato; nada é avaliado semanticamente antes de eles dispararem.
 
 ### Arquivos de estado
 
-- `decks/.freshness-manifest.generated.yml` — gerado pelo build; lista fontes por slide
-- `decks/.freshness-state.json` — mantido pelo workflow; indexado por `slide_id`
+- `decks/.freshness-manifest.generated.yml` — gerado pelo build; lista fontes por slide (`manifest_version: 2`, leitura tolerante à 1)
+- `decks/.freshness-state.json` — mantido pelos workflows; indexado por `slide_id` (`state_version: 2`, leitura tolerante à 1)
 - `decks/deck-sources.yml` — **descontinuado**; não é mais consumido
 
 ```
@@ -181,6 +220,10 @@ scripts/
 ├── vendor-assets.js                # Baixa Reveal.js e fontes
 ├── fetch_github_docs.py            # Sincroniza github-docs/
 ├── fetch_vscode_docs.py            # Sincroniza vscode-docs/
+├── deck_content.py                 # Leitor Python dos blocos de content.md
+├── semantic_freshness.py           # Camada 2: gate semântico (none|command|http)
+├── verdict_format.py               # Contrato do veredito exigido na issue
+├── freshness_verdict.py            # Aplica o veredito ao estado (pending → ok/stale)
 └── check_slides_freshness.py       # Freshness por slide_id; cria issues individuais
 _shared/
 ├── slides-anchored.css             # Design system
@@ -289,7 +332,7 @@ para rastrear as fontes de cada slide por `slide_id`. O workflow
 anterior e cria/atualiza uma issue individual por slide desatualizado.
 
 ```bash
-# rodar localmente
+# rodar localmente (só a camada determinística — provedor semântico desligado)
 python3 scripts/check_slides_freshness.py \
   --manifest decks/.freshness-manifest.generated.yml \
   --state decks/.freshness-state.json \
@@ -297,7 +340,45 @@ python3 scripts/check_slides_freshness.py \
   --write-state
 ```
 
-O `decks/.freshness-state.json` é commitado automaticamente pelo workflow.
+> O clone do repositório pode vir raso. Sem histórico não há diff: rode
+> `git fetch --unshallow origin` antes da primeira execução local.
+
+### Camada semântica (opcional)
+
+O gate semântico roda **depois** da regra determinística e nunca no lugar dela.
+Está desligado por padrão (`--semantic-provider none`):
+
+| Flag | Efeito |
+| --- | --- |
+| `--semantic-provider none\|command\|http` | Escolhe o avaliador (padrão `none`) |
+| `--semantic-command` | Programa executado no provedor `command` (payload JSON no stdin, veredito JSON no stdout) |
+| `--semantic-endpoint` / `--semantic-model` / `--semantic-api-key-env` | Configuração do provedor `http` (API compatível com Chat Completions) |
+| `--semantic-timeout` | Timeout por chamada (padrão 60s) |
+| `--semantic-max-calls` | Orçamento de chamadas por execução (padrão 20); estourado, o restante vira `unknown` |
+
+Vereditos possíveis por par (slide, fonte): `divergent` (abre issue),
+`not_divergent` (suprime a issue e grava `last_decision: "suppressed"`) e
+`unknown` (abre a issue — qualquer falha, timeout, orçamento estourado ou
+resposta sem os dois trechos citados é rebaixada para `unknown`). Vereditos são
+cacheados por par no `.freshness-state.json` e reaproveitados enquanto o slide e
+a fonte não mudarem.
+
+No CI, o provedor vem das variáveis de repositório `SEMANTIC_PROVIDER`,
+`SEMANTIC_COMMAND`, `SEMANTIC_ENDPOINT`, `SEMANTIC_MODEL` e `SEMANTIC_MAX_CALLS`,
+com a credencial no secret `SEMANTIC_API_KEY`. Sem nada configurado, o workflow
+se comporta exatamente como a versão puramente determinística.
+
+### Fechamento do ciclo
+
+O workflow `freshness-verdict.yml` escuta `issues` (`closed`, `reopened`) e
+`pull_request` (`closed`) e aplica o resultado ao estado:
+
+- fechamento com veredito válido (`Veredito:` + os dois trechos citados) → `ok`
+- fechamento sem veredito válido → issue **reaberta** e slide continua `stale`
+- veredito `afeta` sem nenhuma alteração no `content.md` → issue reaberta
+- PR mergeado → `ok` (com `last_pr_number`); PR fechado sem merge → `stale`
+
+O `decks/.freshness-state.json` é commitado automaticamente pelos workflows.
 O `decks/deck-sources.yml` foi descontinuado e não é mais consumido.
 
 ## Créditos e licenças

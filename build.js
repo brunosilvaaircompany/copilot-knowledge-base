@@ -19,7 +19,6 @@
  *   --standalone         Gera arquivo único com CSS+JS embutidos
  *   --force              Sobrescreve arquivo existente
  *   --source PATH        Fonte Markdown (pode repetir)
- *   --register-freshness Registra fontes no freshness check (legado)
  *   --help               Mostra esta mensagem
  */
 
@@ -27,7 +26,6 @@
 
 const fs = require("fs");
 const path = require("path");
-const childProcess = require("child_process");
 
 // Versão 2: entradas do manifesto podem usar `sources: [{path, headings}]`,
 // com headings próprios por fonte. A versão 1 (`source` + `source_headings`
@@ -267,8 +265,7 @@ const options = {
   output: null,
   standalone: false,
   force: false,
-  sources: [],
-  registerFreshness: false
+  sources: []
 };
 
 for (let i = 0; i < args.length; i++) {
@@ -285,8 +282,6 @@ for (let i = 0; i < args.length; i++) {
   } else if (args[i] === "--source") {
     options.sources.push(args[i + 1]);
     i++;
-  } else if (args[i] === "--register-freshness") {
-    options.registerFreshness = true;
   } else if (args[i] === "--help") {
     console.log(`
 Uso: node build.js [opções]
@@ -298,13 +293,11 @@ Opções:
   --standalone        Gera arquivo único (CSS+JS embutidos)
   --force             Sobrescreve arquivo existente
   --source PATH       Fonte Markdown do deck (pode repetir)
-  --register-freshness Registra fontes e baseline no freshness check
   --help              Mostra esta mensagem
 
 Exemplos:
   node build.js --title "Copilot 101" --output decks/copilot-101
   node build.js --title "Advanced" --output decks/advanced --standalone
-  node build.js --title "Advanced" --output decks/advanced --source github-docs/content/copilot/features.md --register-freshness
     `);
     process.exit(0);
   }
@@ -322,11 +315,6 @@ if (!options.output) {
   console.error("❌ Erro: --output é obrigatório");
   process.exit(1);
 }
-if (options.registerFreshness && options.sources.length === 0) {
-  console.error("❌ Erro: --register-freshness exige ao menos um --source");
-  process.exit(1);
-}
-
 const deckDir = options.output;
 const deckPath = path.join(deckDir, "index.html");
 const standaloneDir = deckDir;
@@ -472,27 +460,6 @@ try {
   console.log(`   python3 -m http.server 8000`);
   console.log(`   Depois abra: http://localhost:8000/${deckDir}/`);
 
-  if (options.registerFreshness) {
-    const registerArgs = [
-      path.join(__dirname, "scripts", "register_deck_freshness.py"),
-      "--slide",
-      outputFilePath
-    ];
-    for (const source of options.sources) registerArgs.push("--source", source);
-
-    let pythonCommands = ["python3"];
-    if (process.platform === "win32") pythonCommands = ["python3", "python"];
-    if (process.env.PYTHON) pythonCommands = [process.env.PYTHON];
-    let result = null;
-    for (const command of pythonCommands) {
-      result = childProcess.spawnSync(command, registerArgs, { stdio: "inherit" });
-      if (!result.error) break;
-    }
-    if (!result || result.error || result.status !== 0) {
-      console.error("❌ Erro: não foi possível registrar o freshness do deck.");
-      process.exit(1);
-    }
-  }
 } catch (err) {
   console.error(`❌ Erro ao criar arquivo: ${err.message}`);
   process.exit(1);
