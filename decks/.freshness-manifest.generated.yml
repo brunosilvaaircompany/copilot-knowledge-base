@@ -1,5 +1,5 @@
 manifest_version: 1
-generated_at: '2026-08-11T11:02:19.725Z'
+generated_at: '2026-08-11T14:23:46.918Z'
 slides:
   - slide_id: copilot-training/what-is-copilot
     content_md: decks/copilot-training/content.md
@@ -25,3 +25,81 @@ slides:
   - slide_id: copilot-training/context-economy
     content_md: decks/copilot-training/content.md
     source: github-docs/content/copilot/get-started/best-practices.md
+  - slide_id: copilot-cli-data/preparation
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-getting-started.md
+  - slide_id: copilot-cli-data/alignment
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/concepts/agents/copilot-cli/about-copilot-cli.md
+  - slide_id: copilot-cli-data/cli-role
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-getting-started.md
+  - slide_id: copilot-cli-data/gh-vs-copilot
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli.md
+  - slide_id: copilot-cli-data/authentication
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli.md
+  - slide_id: copilot-cli-data/actions-integration
+    content_md: decks/copilot-cli-data/content.md
+    source:
+      - github-docs/content/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically.md
+      - github-docs/content/copilot/how-tos/copilot-cli/use-copilot-cli-in-actions.md
+  - slide_id: copilot-cli-data/module1-context
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-best-practices.md
+  - slide_id: copilot-cli-data/module1-commands
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/set-up-copilot-cli/configure-copilot-cli.md
+  - slide_id: copilot-cli-data/module2-context
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-getting-started.md
+  - slide_id: copilot-cli-data/module2-commands
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically.md
+  - slide_id: copilot-cli-data/module3-context
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-best-practices.md
+  - slide_id: copilot-cli-data/module3-commands
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-getting-started.md
+  - slide_id: copilot-cli-data/module4-context
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/cli-best-practices.md
+  - slide_id: copilot-cli-data/module4-commands
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically.md
+  - slide_id: copilot-cli-data/module5-context
+    content_md: decks/copilot-cli-data/content.md
+    source:
+      - github-docs/content/copilot/concepts/context/mcp.md
+      - github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md
+  - slide_id: copilot-cli-data/module5-commands
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md
+  - slide_id: copilot-cli-data/module5-config
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md
+  - slide_id: copilot-cli-data/module5-interactive
+    content_md: decks/copilot-cli-data/content.md
+    source:
+      - github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md
+      - github-docs/content/copilot/how-tos/copilot-cli/set-up-copilot-cli/configure-copilot-cli.md
+  - slide_id: copilot-cli-data/module5-report
+    content_md: decks/copilot-cli-data/content.md
+    source: github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md
+  - slide_id: copilot-cli-data/plan-b
+    content_md: decks/copilot-cli-data/content.md
+    source:
+      - github-docs/content/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli.md
+      - github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md
+  - slide_id: copilot-cli-data/takeaways
+    content_md: decks/copilot-cli-data/content.md
+    source:
+      - github-docs/content/copilot/concepts/agents/copilot-cli/about-copilot-cli.md
+      - github-docs/content/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically.md
+  - slide_id: copilot-cli-data/resources
+    content_md: decks/copilot-cli-data/content.md
+    source:
+      - github-docs/content/copilot/how-tos/copilot-cli/cli-getting-started.md
+      - github-docs/content/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers.md

@@ -20,6 +20,15 @@ SlideLayouts.initTheme();
         accentTag: "build"
       },
       {
+        id: "copilot-cli-data",
+        title: "GitHub Copilot CLI com dados",
+        desc: "Treinamento de 60 minutos, em português, com exploração, notebooks, visualização, SQL e telemetria via MCP no terminal.",
+        href: "decks/copilot-cli-data/index.html",
+        icon: "oc-terminal",
+        tags: ["60min", "hands-on", "terminal", "dados"],
+        accentTag: "60min"
+      },
+      {
         id: "teste1",
         title: "Meu Treinamento",
         desc: "Deck gerado pelo build.js, consumindo o CSS e o editor da pasta _shared/.",

@@ -1,0 +1,781 @@
+<!-- GENERATED FILE — do not edit manually.
+     Source: decks/copilot-cli-data/content.md
+     Rebuild: node build.js --deck decks/copilot-cli-data
+     Any manual edits will be overwritten. -->
+<!DOCTYPE html>
+<html lang="pt-BR" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <title>GitHub Copilot CLI com dados</title>
+
+  <!-- Reveal.js vendorizado; o modo standalone embute estes arquivos. -->
+  <link rel="stylesheet" href="../../_shared/vendor/reveal.js/dist/reset.css" />
+  <link rel="stylesheet" href="../../_shared/vendor/reveal.js/dist/reveal.css" />
+
+  <!-- Tema: fonte única de verdade em assets/css/
+       (primer.css fornece os Primer Primitives; slides-anchored.css
+        mapeia os tokens locais para eles, com fallback se ausente) -->
+    <link rel="stylesheet" href="../../_shared/slides-anchored.css" />
+</head>
+<body>
+
+<!-- =====================================================================
+     Sprite de Octicons oficiais (@primer/octicons, 16px).
+     Referenciados por <use href="#oc-*"> e coloridos com currentColor.
+     Substitui o antigo images/mark-github-24.svg + filter:invert() por
+     um símbolo inline, sem dependência de rede e com a cor correta.
+     ===================================================================== -->
+<svg class="oc-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="oc-mark-github" viewBox="0 0 16 16"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></symbol>
+  <symbol id="oc-check" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></symbol>
+  <symbol id="oc-x" viewBox="0 0 16 16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="oc-zap" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></symbol>
+  <symbol id="oc-book" viewBox="0 0 16 16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"/></symbol>
+  <symbol id="oc-verified" viewBox="0 0 16 16"><path d="m9.585.52.929.68c.153.112.331.186.518.215l1.138.175a2.678 2.678 0 0 1 2.24 2.24l.174 1.139c.029.187.103.365.215.518l.68.928a2.677 2.677 0 0 1 0 3.17l-.68.928a1.174 1.174 0 0 0-.215.518l-.175 1.138a2.678 2.678 0 0 1-2.241 2.241l-1.138.175a1.17 1.17 0 0 0-.518.215l-.928.68a2.677 2.677 0 0 1-3.17 0l-.928-.68a1.174 1.174 0 0 0-.518-.215L3.83 14.41a2.678 2.678 0 0 1-2.24-2.24l-.175-1.138a1.17 1.17 0 0 0-.215-.518l-.68-.928a2.677 2.677 0 0 1 0-3.17l.68-.928c.112-.153.186-.331.215-.518l.175-1.14a2.678 2.678 0 0 1 2.24-2.24l1.139-.175c.187-.029.365-.103.518-.215l.928-.68a2.677 2.677 0 0 1 3.17 0ZM7.303 1.728l-.927.68a2.67 2.67 0 0 1-1.18.489l-1.137.174a1.179 1.179 0 0 0-.987.987l-.174 1.136a2.677 2.677 0 0 1-.489 1.18l-.68.928a1.18 1.18 0 0 0 0 1.394l.68.927c.256.348.424.753.489 1.18l.174 1.137c.078.509.478.909.987.987l1.136.174a2.67 2.67 0 0 1 1.18.489l.928.68c.414.305.979.305 1.394 0l.927-.68a2.67 2.67 0 0 1 1.18-.489l1.137-.174a1.18 1.18 0 0 0 .987-.987l.174-1.136a2.67 2.67 0 0 1 .489-1.18l.68-.928a1.176 1.176 0 0 0 0-1.394l-.68-.927a2.686 2.686 0 0 1-.489-1.18l-.174-1.137a1.179 1.179 0 0 0-.987-.987l-1.136-.174a2.677 2.677 0 0 1-1.18-.489l-.928-.68a1.176 1.176 0 0 0-1.394 0ZM11.28 6.78l-3.75 3.75a.75.75 0 0 1-1.06 0L4.72 8.78a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L7 8.94l3.22-3.22a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"/></symbol>
+  <symbol id="oc-people" viewBox="0 0 16 16"><path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"/></symbol>
+  <symbol id="oc-comment-discussion" viewBox="0 0 16 16"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"/></symbol>
+  <symbol id="oc-code" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="oc-terminal" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"/></symbol>
+  <symbol id="oc-workflow" viewBox="0 0 16 16"><path d="M0 1.75C0 .784.784 0 1.75 0h3.5C6.216 0 7 .784 7 1.75v3.5A1.75 1.75 0 0 1 5.25 7H4v4a1 1 0 0 0 1 1h4v-1.25C9 9.784 9.784 9 10.75 9h3.5c.966 0 1.75.784 1.75 1.75v3.5A1.75 1.75 0 0 1 14.25 16h-3.5A1.75 1.75 0 0 1 9 14.25v-.75H5A2.5 2.5 0 0 1 2.5 11V7h-.75A1.75 1.75 0 0 1 0 5.25Zm1.75-.25a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25Zm9 9a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25Z"/></symbol>
+  <symbol id="oc-sun" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="oc-moon" viewBox="0 0 16 16"><path d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></symbol>
+  <symbol id="oc-plus" viewBox="0 0 16 16"><path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"/></symbol>
+  <symbol id="oc-copy" viewBox="0 0 16 16"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></symbol>
+  <symbol id="oc-pencil" viewBox="0 0 16 16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></symbol>
+  <symbol id="oc-trash" viewBox="0 0 16 16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75ZM4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.748 1.748 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15ZM6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25Z"/></symbol>
+</svg>
+
+<a class="gallery-close-btn" href="../../index.html" aria-label="Fechar e voltar à galeria" title="Fechar e voltar à galeria">
+  <svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>
+</a>
+
+<div class="reveal">
+<div class="slides">
+
+<section class="anchored-cover">
+  <p class="cover-eyebrow">Treinamento de 60 minutos</p>
+  <h1>GitHub Copilot CLI com dados</h1>
+  <p class="cover-sub">Exploração, notebooks, visualização, SQL e telemetria — com o terminal no centro.</p>
+  <div class="cover-meta">
+    <svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg>
+    <span>pt-BR · data-with-copilot · Agosto 2026</span>
+  </div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">Roteiro</p>
+  <h2>Uma hora, cinco fases e cinco módulos</h2>
+  <p class="subtitle">A linha do tempo cobre a contextualização; o hands-on segue os cinco módulos de 15–57 min.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-timeline">
+    <div class="timeline-item">
+      <span class="timeline-date">00–03</span>
+      <span class="timeline-title">Alinhamento</span>
+      <span class="timeline-desc">Expectativas, responsabilidades e ambiente seguro.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">03–06</span>
+      <span class="timeline-title">Papel do CLI</span>
+      <span class="timeline-desc">Copilot conversa e propõe; as ferramentas executam.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">06–10</span>
+      <span class="timeline-title">Casos de uso</span>
+      <span class="timeline-desc">Dados, notebooks, gráficos, SQL e investigação.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">10–13</span>
+      <span class="timeline-title">Evidência</span>
+      <span class="timeline-desc">Revisão, validação e possível automação.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">13–15</span>
+      <span class="timeline-title">Transição</span>
+      <span class="timeline-desc">Do contexto para o laboratório no terminal.</span>
+    </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">Antes do cronômetro</p>
+  <h2>Preparação e ensaio</h2>
+  <p class="subtitle">Tudo que pode falhar deve ter um plano B antes de começar.</p>
+</div>
+  <div class="slide-body">
+    <ul class="icon-list">
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-check"></use></svg><span>Repositório de teste ou Codespace separado; `git status` limpo e sem dados sensíveis.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg><span>Copilot CLI instalado, versão conferida com `copilot version` e conta Copilot habilitada.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-code"></use></svg><span>Python, Jupyter, pandas, matplotlib e seaborn disponíveis no devcontainer.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg><span>Docker em execução para o módulo 5; duas abas de terminal e um cronômetro visível.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-verified"></use></svg><span>Ensaiar contexto 0–15 (15 min), exploração 15–25 (10), notebook 25–35 (10), visualização 35–43 (8), SQL 43–47 (4), MCP 47–57 (10) e conclusão 57–60 (3); interromper uma etapa quando o tempo acabar.</span></li>
+    </ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">00–03 min · alinhamento</p>
+  <h2>O contrato da sessão</h2>
+  <p class="subtitle">IA acelera o trabalho; a pessoa responsável continua respondendo pelo resultado.</p>
+</div>
+  <div class="slide-body">
+<ul>
+<li><strong>Copilot CLI</strong>: entende o pedido, pergunta, planeja, escreve e sugere comandos no terminal.</li>
+<li><strong>Ferramentas determinísticas</strong>: Python/pandas, Jupyter, matplotlib/seaborn, SQL e Docker fazem o processamento.</li>
+<li><strong>Analista</strong>: fornece contexto, revisa o diff, executa, confere números e decide se a interpretação é defensável.</li>
+<li><strong>Ambiente</strong>: use uma cópia de teste, Codespace ou devcontainer; nunca experimente a primeira vez em um projeto real.</li>
+<li><strong>Regra de ouro</strong>: nenhuma alteração, comando destrutivo ou conclusão segue adiante sem aprovação e validação humana.</li>
+</ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">03–06 min · terminal nativo</p>
+  <h2>Copilot CLI não é o executor dos dados</h2>
+  <p class="subtitle">A resposta pode ser plausível; o cálculo executado é a evidência.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-split">
+      <div>
+        <p class="split-label bad"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>Confundir</p>
+        <pre class="code-wrapper"><code>Copilot disse que a receita é R$ 278 mil
+Logo, o número está correto.</code></pre>
+      </div>
+      <div>
+        <p class="split-label good"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-check"></use></svg>Separar papéis</p>
+        <pre class="code-wrapper"><code>Copilot gera o código
+pandas executa o cálculo
+analista revisa a saída</code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">03–06 min · nomenclatura</p>
+  <h2>`copilot` e `gh` têm escopos diferentes</h2>
+  <p class="subtitle">Não trate uma autenticação como se fosse a outra.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-grid">
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg></span>
+    <h3>GitHub Copilot CLI</h3>
+    <p>O comando `copilot` inicia o assistente, usa `/login`, `/user` e conversa com ferramentas aprovadas.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg></span>
+    <h3>GitHub CLI</h3>
+    <p>O comando `gh` opera recursos do GitHub; `gh auth status` só verifica a sessão do gh.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-verified"></use></svg></span>
+    <h3>Fallback documentado</h3>
+    <p>O Copilot CLI pode usar o token do `gh` apenas como fallback, quando não há outra credencial.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg></span>
+    <h3>Não é automático</h3>
+    <p>`gh` e `copilot` mantêm escopos, contas e prioridades de credencial que precisam ser conferidos.</p>
+  </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">03–06 min · acesso</p>
+  <h2>Autenticar antes de demonstrar</h2>
+  <p class="subtitle">Prefira o fluxo interativo; em Codespaces ou SSH, force o device flow quando necessário.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">copilot login
+copilot login --device-code
+copilot login --host https://SUBDOMINIO.ghe.com
+
+# Dentro de uma sessão interativa
+copilot
+/login
+/user
+/user list
+/user switch
+/logout
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">06–10 min · casos de uso</p>
+  <h2>Onde o terminal ajuda quem trabalha com dados</h2>
+  <p class="subtitle">O prompt é a interface; o repositório e as ferramentas são o contexto operacional.</p>
+</div>
+  <div class="slide-body">
+    <ul class="icon-list">
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-book"></use></svg><span>Explorar CSV/JSON: shape, tipos, nulos, duplicidades, datas e normalização.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-book"></use></svg><span>Construir um notebook: alternar Markdown e Python, executar célula a célula e documentar.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg><span>Visualizar: gerar gráficos, escolher encodings acessíveis e separar sugestão de interpretação.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-code"></use></svg><span>Revisar SQL: explicar anti-padrões, preservar semântica e pedir plano de execução.</span></li>
+<li><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg><span>Investigar telemetria: conectar um MCP local, consultar ferramentas e registrar evidências.</span></li>
+    </ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">10–13 min · método</p>
+  <h2>Contexto → proposta → execução → evidência</h2>
+  <p class="subtitle">Um ciclo curto evita transformar uma hipótese em fato.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Contexto:</strong> dicionário de dados, schema, instruções, arquivos e objetivo de negócio.</p>
+<p><strong>Proposta:</strong> peça ao `copilot` um plano pequeno e um artefato revisável; delimite arquivos e permissões.</p>
+<p><strong>Execução:</strong> rode `python`, Jupyter, SQL, Docker ou uma consulta MCP fora da imaginação do modelo.</p>
+<p><strong>Evidência:</strong> compare saída, diff, logs e plano; registre o que foi observado, inferido e ainda não testado.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">13–15 min · fechamento do contexto</p>
+  <h2>Resultado validado pode virar automação</h2>
+  <p class="subtitle">Primeiro reproduza manualmente; só depois pense em um job ou GitHub Actions.</p>
+</div>
+  <div class="slide-body">
+<ul>
+<li><strong>Interativo</strong>: `copilot` permite perguntas, aprovações e correções durante a sessão.</li>
+<li><strong>Prompt mode</strong>: `copilot -p &quot;...&quot; -s` serve para uma saída reproduzível, desde que o contexto e as permissões sejam explícitos.</li>
+<li><strong>Automação</strong>: em CI, use token/`GITHUB_TOKEN` e permissões mínimas; nunca copie credenciais para o prompt ou para um log.</li>
+<li><strong>Guardrail</strong>: mantenha revisão humana para números, alterações de arquivos, chamadas externas e conclusões de negócio.</li>
+<li><strong>Transição</strong>: agora a mesma disciplina será aplicada aos cinco módulos do repositório <a href="https://github.com/brunosilvaaircompany/data-with-copilot">`data-with-copilot`</a>.</li>
+</ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section class="anchored-divider">
+  <p class="divider-index">15–57 min</p>
+  <h2>Laboratório no terminal</h2>
+  <p class="divider-note">Cinco módulos independentes; cada um tem contexto, passos, comandos, resultado esperado e um limite claro.</p>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">15–25 min · módulo 1</p>
+  <h2>Exploração de dados</h2>
+  <p class="subtitle">Comece pelos arquivos reais e pelo dicionário — não pelos números que você espera encontrar.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Contexto:</strong> o gerador determinístico cria `clientes.csv`, `produtos.csv`, `vendas.csv` e `pedidos.json` na pasta `data/ecommerce`.</p>
+<p><strong>Passos:</strong> leia o README e o gerador com `@`; peça um plano para `explorar.py`; confira nomes reais de colunas; aceite somente mudanças revisadas; execute pelo shell.</p>
+<p><strong>Comandos:</strong> use `copilot` no modo interativo para criar o script e `git diff`, `python` e inspeção de saída para validar.</p>
+<p><strong>Resultado esperado:</strong> um relatório de estrutura e qualidade, sem inventar colunas, tipos ou problemas não observados.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">15–25 min · execução</p>
+  <h2>Gerar, explorar, revisar</h2>
+  <p class="subtitle">O shell executa Python; o CLI ajuda a escrever e explicar o script.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">cd &quot;$(git rev-parse --show-toplevel)&quot;
+python data/ecommerce/gerar_dados.py
+
+copilot
+&gt; Leia @data/ecommerce/README.md e @data/ecommerce/gerar_dados.py.
+&gt; Planeje e crie modulos/01-exploracao-de-dados/explorar.py
+&gt; para CSV/JSON, shape, tipos, nulos, duplicidades e datas.
+&gt; Não execute nem altere outros arquivos sem me perguntar.
+
+git status --short
+git diff -- modulos/01-exploracao-de-dados/explorar.py
+python modulos/01-exploracao-de-dados/explorar.py
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">15–25 min · saída observada no ensaio</p>
+  <h2>O que a execução atual encontrou</h2>
+  <p class="subtitle">Gerador na revisão atual, semente 42; rode novamente e registre sua própria saída.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-stats">
+    <div class="stat-item">
+      <span class="stat-value">20 × 6</span>
+      <span class="stat-label">clientes.csv</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">21 × 5</span>
+      <span class="stat-label">produtos.csv</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">290 × 7</span>
+      <span class="stat-label">vendas.csv</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">120</span>
+      <span class="stat-label">pedidos.json</span>
+    </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">25–35 min · módulo 2</p>
+  <h2>Jupyter Notebook no terminal</h2>
+  <p class="subtitle">Código gerado é proposta; cada célula executada é uma medição que precisa ficar registrada.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Contexto:</strong> crie `modulos/02-jupyter-notebook/minha_analise.ipynb` com células Markdown e Python que carreguem os quatro arquivos.</p>
+<p><strong>Passos:</strong> peça ao `copilot` uma estrutura; gere uma célula por pergunta de negócio; execute cada célula; registre em Markdown o cálculo e a interpretação; compare com a saída do kernel.</p>
+<p><strong>Comandos:</strong> abra o notebook com Jupyter ou execute-o com `jupyter nbconvert`; não trate uma sugestão do CLI como uma execução do pandas.</p>
+<p><strong>Resultado esperado:</strong> notebook executável de ponta a ponta, com faturamento, produtos mais vendidos, categoria, status e cidades documentados.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">25–35 min · células</p>
+  <h2>Pedir estrutura, executar célula a célula</h2>
+  <p class="subtitle">Inclua caminhos e critérios de ordenação no prompt para reduzir ambiguidade.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">copilot
+&gt; Crie um plano para @modulos/02-jupyter-notebook/minha_analise.ipynb.
+&gt; Gere células Markdown e Python com pandas para carregar clientes,
+&gt; produtos, vendas e pedidos; responda as cinco perguntas do README.
+&gt; Não fixe números: cada célula deve calcular e depois interpretar a saída.
+
+jupyter lab modulos/02-jupyter-notebook/minha_analise.ipynb
+# Alternativa sem interface gráfica:
+jupyter nbconvert --to notebook --execute --inplace \
+  modulos/02-jupyter-notebook/minha_analise.ipynb
+
+git diff --stat
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">25–35 min · interpretação</p>
+  <h2>Resultados são da execução, não do prompt</h2>
+  <p class="subtitle">Use estes valores apenas como conferência do ensaio; o notebook deve recalcular tudo.</p>
+</div>
+  <div class="slide-body">
+<ul>
+<li><strong>Faturamento</strong>: `R$ 278.469,60` pela soma de `vendas.subtotal`.</li>
+<li><strong>Mais unidades</strong>: Luminária LED (40), Bola de Futebol (40), Aspirador de Pó (38), Halteres 5kg (35) e Jaqueta Jeans (33).</li>
+<li><strong>Categoria líder em receita</strong>: Eletrônicos (`R$ 62.565,57`) na execução de referência.</li>
+<li><strong>Pedidos por status</strong>: entregue 71, enviado 26, processando 15, cancelado 8.</li>
+<li><strong>Pergunta de controle</strong>: confirme moeda, arredondamento, joins e se itens cancelados foram incluídos antes de concluir.</li>
+</ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">35–43 min · módulo 3</p>
+  <h2>Visualizar sem terceirizar a análise</h2>
+  <p class="subtitle">Um gráfico comunica uma decisão; não transforma uma correlação em causalidade.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Contexto:</strong> use pandas para juntar vendas e produtos e matplotlib/seaborn para receita por categoria e pedidos por status.</p>
+<p><strong>Passos:</strong> peça ao `copilot` alternativas de gráfico; explique público e pergunta; execute; escolha títulos, eixos, paleta e ordem; escreva uma interpretação em Markdown.</p>
+<p><strong>Comandos:</strong> gere o código no CLI, rode o notebook e abra os artefatos; compare a visualização com a tabela agregada.</p>
+<p><strong>Resultado esperado:</strong> gráficos legíveis e acessíveis, com a distinção explícita entre visualização sugerida e conclusão validada.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">35–43 min · gráficos</p>
+  <h2>Gerar e executar a visualização</h2>
+  <p class="subtitle">Peça também testes simples: categorias ausentes, escala, rótulos e formato de data.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">copilot
+&gt; Em @modulos/03-visualizacao-de-dados/meus_graficos.ipynb,
+&gt; gere Python com pandas, matplotlib e seaborn para receita por categoria
+&gt; e pedidos por status. Inclua títulos, eixos, paleta acessível
+&gt; e uma célula Markdown de interpretação após cada gráfico.
+
+jupyter nbconvert --to notebook --execute --inplace \
+  modulos/03-visualizacao-de-dados/meus_graficos.ipynb
+python -c &quot;import matplotlib, seaborn; print('bibliotecas OK')&quot;
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">35–43 min · revisão</p>
+  <h2>Visualização sugerida vs. conclusão validada</h2>
+  <p class="subtitle">A aparência do gráfico não valida a agregação nem a pergunta de negócio.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-split">
+      <div>
+        <p class="split-label bad"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-x"></use></svg>Pular a validação</p>
+        <pre class="code-wrapper"><code>A categoria parece maior
+logo é a mais rentável.</code></pre>
+      </div>
+      <div>
+        <p class="split-label good"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-check"></use></svg>Conferir</p>
+        <pre class="code-wrapper"><code>Tabela agregada + gráfico
+unidade e período explícitos
+interpretação com ressalvas</code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">43–47 min · módulo 4</p>
+  <h2>Refatoração SQL com ressalvas</h2>
+  <p class="subtitle">Sem banco e plano de execução, a otimização é uma hipótese conceitual.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Contexto:</strong> cada exercício traz schema, query original e resultado esperado em `modulos/04-refatoracao-sql/exercicios`.</p>
+<p><strong>Passos:</strong> peça ao `copilot` uma alternativa e a explicação dos anti-padrões; compare colunas, joins, nulos, duplicidades, filtros e equivalência semântica.</p>
+<p><strong>Comandos:</strong> use `copilot -p` para obter uma revisão textual ou a sessão interativa; não peça que ele declare ganho de performance sem um banco real.</p>
+<p><strong>Resultado esperado:</strong> query proposta, justificativa e lista de índices/hipóteses que serão testadas depois com `EXPLAIN` ou `EXPLAIN ANALYZE`.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">43–47 min · prompt de SQL</p>
+  <h2>Fornecer o contexto certo</h2>
+  <p class="subtitle">O schema e o resultado esperado são parte do contrato da refatoração.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-text">copilot -p 'Leia @modulos/04-refatoracao-sql/exercicios/exercicio_1.sql.
+Explique os anti-padrões e proponha uma alternativa equivalente.
+Compare a query original e a proposta quanto a joins, nulos,
+duplicidades e resultado esperado. Não alegue ganho de performance:
+indique quais EXPLAIN/EXPLAIN ANALYZE e benchmarks faltam.' -s
+
+# Depois, em um banco de teste compatível:
+EXPLAIN &lt;query original&gt;;
+EXPLAIN ANALYZE &lt;query original&gt;;
+EXPLAIN &lt;query proposta&gt;;
+EXPLAIN ANALYZE &lt;query proposta&gt;;
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">43–47 min · critério de aceite</p>
+  <h2>“Mais curto” não significa “mais rápido”</h2>
+  <p class="subtitle">Equivalência e plano precisam ser demonstrados no banco alvo.</p>
+</div>
+  <div class="slide-body">
+    <p class="anchored-quote">A refatoração só vira uma melhoria quando retorna o mesmo resultado e o plano/benchmark sustentam a afirmação.</p>
+    <p class="anchored-quote-cite">Schema + EXPLAIN/EXPLAIN ANALYZE + validação humana</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">47–57 min · módulo 5</p>
+  <h2>Telemetria com MCP no Copilot CLI</h2>
+  <p class="subtitle">O servidor expõe ferramentas; o CLI precisa de configuração própria, permissões e confiança no diretório.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Contexto:</strong> o módulo sobe `telemetria-lojaapi` em Docker e expõe `list_services`, `list_incidents`, `query_logs` e `get_metrics` em `http://localhost:8000/mcp`.</p>
+<p><strong>Passos:</strong> suba e verifique o container; registre o servidor no Copilot CLI; confira descoberta/status/ferramentas; mantenha aprovações explícitas; consulte o incidente `INC-1042`.</p>
+<p><strong>Comandos:</strong> use `docker compose`, `copilot mcp add/list/get`, `/mcp show` e prompts que nomeiam o servidor; encerre com `docker compose down`.</p>
+<p><strong>Resultado esperado:</strong> relatório `relatorio_incidente.md` que separa logs/métricas observados, correlação temporal, hipótese de causa raiz e limitações.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">47–57 min · servidor</p>
+  <h2>Subir e testar o transporte</h2>
+  <p class="subtitle">Primeiro prove que o MCP responde; depois peça ao agente para usá-lo.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">cd modulos/05-telemetria-mcp
+docker compose up -d --build
+docker compose ps
+sleep 2  # aguarde o status &quot;Up&quot; antes da primeira chamada
+curl -s -X POST http://localhost:8000/mcp \
+  -H &quot;Content-Type: application/json&quot; \
+  -H &quot;Accept: application/json, text/event-stream&quot; \
+  -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;method&quot;:&quot;initialize&quot;,&quot;params&quot;:{&quot;protocolVersion&quot;:&quot;2024-11-05&quot;,&quot;capabilities&quot;:{},&quot;clientInfo&quot;:{&quot;name&quot;:&quot;curl&quot;,&quot;version&quot;:&quot;1.0&quot;}}}'
+
+copilot mcp add --transport http telemetria http://localhost:8000/mcp
+copilot mcp list
+copilot mcp get telemetria
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">47–57 min · compatibilidade</p>
+  <h2>`.vscode/mcp.json` não é configuração do CLI</h2>
+  <p class="subtitle">A entrada `servers` do VS Code é ignorada pelo Copilot CLI; migre para o formato suportado.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;telemetria&quot;: {
+      &quot;type&quot;: &quot;http&quot;,
+      &quot;url&quot;: &quot;http://localhost:8000/mcp&quot;,
+      &quot;tools&quot;: [&quot;*&quot;]
+    }
+  }
+}
+
+# Alternativas suportadas:
+copilot mcp add --transport http telemetria http://localhost:8000/mcp
+# arquivo por repositório: .mcp.json ou .github/mcp.json
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">47–57 min · descoberta e permissões</p>
+  <h2>Conferir ferramentas antes de consultar</h2>
+  <p class="subtitle">Em prompt mode, a confiança do workspace e a variável de MCP precisam ser explícitas.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">copilot
+/mcp show
+/mcp show telemetria
+&gt; Use somente o servidor telemetria para listar serviços e incidentes.
+&gt; Não altere arquivos nem execute comandos sem minha aprovação.
+
+# Se usar .mcp.json com copilot -p em um workspace já confiável:
+GITHUB_COPILOT_PROMPT_MODE_WORKSPACE_MCP=true \
+  copilot -p 'Use telemetria para listar os incidentes.' -s
+
+# Permissão estreita, apenas se o ambiente exigir:
+copilot --allow-tool='telemetria'
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">47–57 min · evidência</p>
+  <h2>Investigar `INC-1042` sem confundir evidência e hipótese</h2>
+  <p class="subtitle">A correlação é um achado; a causa raiz continua sendo uma hipótese até haver confirmação adicional.</p>
+</div>
+  <div class="slide-body">
+<p><strong>Observado nos dados sintéticos:</strong> `checkout-service` registra HTTP 500 e mensagens de timeout entre 14:00 e 15:30 de 15/06/2024; `payment-gateway` apresenta latência e erros elevados no mesmo intervalo.</p>
+<p><strong>Correlação temporal:</strong> os picos aparecem juntos nas consultas de `query_logs` e `get_metrics`; compare também o período anterior e o `auth-service`.</p>
+<p><strong>Hipótese provável:</strong> timeout do provedor externo de pagamento degradou o `payment-gateway`, que propagou falhas para o checkout.</p>
+<p><strong>Limitação:</strong> o servidor é determinístico e fictício; sem traces, deploys, dependências e teste de causalidade, o resultado não comprova a causa em produção.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">47–57 min · entregável</p>
+  <h2>Escrever, revisar e encerrar</h2>
+  <p class="subtitle">Rotule cada afirmação para que o relatório continue auditável depois da demonstração.</p>
+</div>
+  <div class="slide-body">
+    <pre class="code-wrapper"><code class="language-bash">copilot
+&gt; Use telemetria para investigar INC-1042.
+&gt; Gere relatorio_incidente.md com resumo, impacto, linha do tempo,
+&gt; logs e métricas observados, hipótese de causa, limitações e ações.
+&gt; Marque cada item como Observado, Inferência ou Lacuna.
+&gt; Não invente timestamps, métricas ou ações já executadas.
+
+git diff -- relatorio_incidente.md
+docker compose logs --tail=30
+docker compose down
+</code></pre>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">Plano B · sem parar o relógio</p>
+  <h2>Se o ambiente falhar</h2>
+  <p class="subtitle">Registre a limitação; não substitua uma execução ausente por uma afirmação inventada.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-faq">
+    <div class="faq-item">
+      <p class="faq-q">Copilot não autentica ou a conta está errada?</p>
+      <p class="faq-a">Use `copilot login --device-code`, confira `/user` e `/user list`; para CI, use COPILOT_GITHUB_TOKEN/GH_TOKEN/GITHUB_TOKEN sem exibir o valor. `gh auth status` só verifica o gh.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">O que foi validado antes da sessão?</p>
+      <p class="faq-a">O gerador determinístico e o container MCP foram executados e o endpoint respondeu ao initialize. Este ambiente não tinha o `copilot` instalado/autenticado; confirme a descoberta com `copilot mcp get` no Codespace e não apresente essa etapa como ensaiada aqui.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Python/Jupyter ou dependências não estão prontas?</p>
+      <p class="faq-a">Mude para o Codespace/devcontainer, rode o gerador e execute células com nbconvert; se não houver kernel, demonstre o prompt e marque o cálculo como não executado.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Docker ou MCP não sobe?</p>
+      <p class="faq-a">Confira `docker compose ps` e logs; valide o endpoint com curl; use `.mcp.json`/`copilot mcp get` em vez de `.vscode/mcp.json`. Se continuar indisponível, faça os módulos 1–4 e declare a limitação.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">O tempo acabou?</p>
+      <p class="faq-a">Pare no último resultado validado, deixe o próximo comando anotado e não pule a revisão de números, permissões ou `docker compose down`.</p>
+    </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">57–60 min · conclusão</p>
+  <h2>Acelerar não é delegar a responsabilidade</h2>
+  <p class="subtitle">Copilot CLI reduz o atrito entre pergunta, plano, código e documentação — a evidência fecha o ciclo.</p>
+</div>
+  <div class="slide-body">
+<p>Leve três hábitos: dê contexto verificável, execute com ferramentas determinísticas e rotule evidência versus hipótese.</p>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">57–60 min · síntese</p>
+  <h2>Seis ideias para repetir amanhã</h2>
+  <p class="subtitle">O padrão vale para dados, código e operações.</p>
+</div>
+  <div class="slide-body">
+    <div class="anchored-grid">
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-terminal"></use></svg></span>
+    <h3>CLI primeiro</h3>
+    <p>Converse no terminal; escolha entre interativo e `-p` conforme a necessidade de supervisão.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-book"></use></svg></span>
+    <h3>Contexto explícito</h3>
+    <p>Dicionário, schema, caminhos, instruções e documentação reduzem suposições.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-code"></use></svg></span>
+    <h3>Ferramenta executa</h3>
+    <p>pandas, Jupyter, gráficos, banco, Docker e MCP produzem a saída verificável.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-verified"></use></svg></span>
+    <h3>Permissões mínimas</h3>
+    <p>Confie só no diretório de teste e aprove ferramentas/servidores com escopo estreito.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-people"></use></svg></span>
+    <h3>Pessoa decide</h3>
+    <p>Revisão, equivalência semântica, acessibilidade e validação continuam obrigatórias.</p>
+  </div>
+  <div class="anchored-card">
+    <span class="card-ic"><svg class="oc" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-workflow"></use></svg></span>
+    <h3>Automatize depois</h3>
+    <p>Só leve um prompt para Actions quando a execução manual for reproduzível e auditável.</p>
+  </div>
+    </div>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+<section>
+  <div class="slide-head">
+  <p class="kicker">Referências</p>
+  <h2>Continue no repositório de laboratório</h2>
+  <p class="subtitle">Fontes oficiais sincronizadas e material do hands-on para repetir a sessão.</p>
+</div>
+  <div class="slide-body">
+<ul>
+<li><a href="https://github.com/brunosilvaaircompany/data-with-copilot">Hands-on `data-with-copilot`</a>: cinco módulos, gerador e MCP fictício.</li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli">Instalar e autenticar o Copilot CLI</a>.</li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview">Visão geral do Copilot CLI</a>.</li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers">Adicionar servidores MCP ao Copilot CLI</a>.</li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically">Executar o CLI programaticamente</a>.</li>
+</ul>
+  </div>
+  <div class="slide-mark"><svg class="oc mark" viewBox="0 0 16 16" aria-hidden="true"><use href="#oc-mark-github"></use></svg><span>GitHub Copilot</span></div>
+</section>
+
+</div>
+</div>
+
+<script src="../../_shared/core.js"></script>
+<script src="../../_shared/slide-templates.js"></script>
+<script src="../../_shared/slide-editor.js"></script>
+<script>
+  SlideLayouts.initTheme();
+</script>
+
+<script src="../../_shared/vendor/reveal.js/dist/reveal.js"></script>
+<script src="../../_shared/vendor/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="../../_shared/vendor/reveal.js/plugin/notes/notes.js"></script>
+<script>
+  /* Respeita prefers-reduced-motion: sem transições de slide/fundo */
+  var prefersReduced = window.matchMedia
+    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  Reveal.initialize({
+    hash: true,
+    slideNumber: "c/t",
+    progress: true,
+    controls: true,
+    center: false,
+    transition: prefersReduced ? "none" : "fade",
+    transitionSpeed: "fast",
+    backgroundTransition: prefersReduced ? "none" : "fade",
+    plugins: [ RevealHighlight, RevealNotes ]
+  });
+
+  /* Inicializar editor de slides */
+  if (window.SlideEditor && typeof window.SlideEditor.init === "function") {
+    SlideEditor.init(Reveal);
+  }
+</script>
+</body>
+</html>
