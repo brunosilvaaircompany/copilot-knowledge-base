@@ -272,7 +272,7 @@ def _normalize_docs_path(path: str) -> str:
     return path, anchor
 
 
-def resolve_links(text: str, index: dict[str, str], output_dir: str, file_output_path: str) -> str:
+def resolve_links(text: str, index: dict[str, str], _output_dir: str, file_output_path: str) -> str:
     """
     Substitui links internos /docs/... por:
     - Caminho relativo se o alvo estiver no indice do lote.
