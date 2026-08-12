@@ -1,42 +1,42 @@
 {
-  "state_version": 1,
+  "state_version": 2,
   "slides": {
     "copilot-training/what-is-copilot": {
       "source": "github-docs/content/copilot/get-started/what-is-github-copilot.md",
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
       "last_pr_number": null
     },
     "copilot-training/why-adopt": {
       "source": "github-docs/content/copilot/get-started/features.md",
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
       "last_pr_number": null
     },
     "copilot-training/generic-vs-specific": {
       "source": "github-docs/content/copilot/concepts/prompting/prompt-engineering.md",
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
       "last_pr_number": null
     },
     "copilot-training/human-in-the-loop": {
       "source": "github-docs/content/copilot/get-started/best-practices.md",
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
       "last_pr_number": null
     },
     "copilot-training/where-copilot-appears": {
       "source": "github-docs/content/copilot/get-started/features.md",
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
       "last_pr_number": null
@@ -44,18 +44,27 @@
     "copilot-training/custom-instructions": {
       "source": [
         "github-docs/content/copilot/concepts/prompting/response-customization.md",
-        "github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md"
+        "github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md",
+        "vscode-docs/agent-customization/custom-instructions.md"
       ],
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
-      "last_pr_number": null
+      "last_pr_number": null,
+      "source_headings": {
+        "github-docs/content/copilot/concepts/prompting/response-customization.md": [
+          "About repository custom instructions"
+        ],
+        "vscode-docs/agent-customization/custom-instructions.md": [
+          "Use a `.github/copilot-instructions.md` file"
+        ]
+      }
     },
     "copilot-training/context-economy": {
       "source": "github-docs/content/copilot/get-started/best-practices.md",
-      "last_checked_docs_commit": "78dee64cb777a5de26acff6398f4c94af777cb0d",
-      "updated_at": "2026-08-12T19:53:34.175615+00:00",
+      "last_checked_docs_commit": "0cb17b9f80d36d4b21fede770523cca8a7eaeabb",
+      "updated_at": "2026-08-12T20:24:07.108136+00:00",
       "last_decision": "ok",
       "issue_number": null,
       "last_pr_number": null
