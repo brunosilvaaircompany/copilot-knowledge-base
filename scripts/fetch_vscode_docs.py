@@ -39,10 +39,7 @@ try:
 except ImportError:
     sys.exit("Falta a dependencia 'requests'. Rode: pip install requests")
 
-try:
-    import yaml
-except ImportError:
-    sys.exit("Falta a dependencia 'pyyaml'. Rode: pip install pyyaml")
+# (pyyaml nao e necessario neste script; outros scripts do repo usam essa dependencia.)
 
 
 REPO_TARBALL_URL = (
