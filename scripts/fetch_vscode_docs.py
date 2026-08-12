@@ -354,11 +354,10 @@ def run(sections: list[str], output_dir: str):
     tar_bytes = download_repo_tarball(REPO_TARBALL_URL)
     index = extract_sections(tar_bytes, sections, workdir)
 
+    os.makedirs(output_dir, exist_ok=True)
     if not index:
         print("[aviso] Nenhum arquivo extraido. Verifique as secoes informadas.")
         return
-
-    os.makedirs(output_dir, exist_ok=True)
 
     # Mapeia chave do indice -> caminho de saida final
     output_index: dict[str, str] = {}
