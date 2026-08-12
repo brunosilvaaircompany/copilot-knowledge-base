@@ -141,12 +141,16 @@ function validateBlock(raw, seenIds, stackState, sourcePath, blockIndex) {
     );
   }
 
-  // Validate source / source_headings
+  // Validate source / source_headings / sources
   if (fm.source_headings !== undefined && fm.source === undefined) {
     throw new Error(
       `Bloco ${blockIndex + 1} (${sourcePath}): 'source_headings' exige 'source'.`
     );
   }
+  // Forma aditiva: `sources` permite headings próprios por fonte. As duas
+  // formas têm o mesmo significado, mas misturá-las tornaria ambíguo qual
+  // heading vale para qual fonte.
+  const normalizedSources = normalizeSources(fm, blockIndex, sourcePath);
 
   // Validate stack contiguity
   if (fm.stack !== undefined) {
@@ -188,9 +192,66 @@ function validateBlock(raw, seenIds, stackState, sourcePath, blockIndex) {
     source_headings: fm.source_headings !== undefined
       ? (Array.isArray(fm.source_headings) ? fm.source_headings : [fm.source_headings])
       : null,
+    sources: normalizedSources,
     fields: fm,
     body: raw.body,
   };
+}
+
+/**
+ * Normaliza `source`/`source_headings` (forma 1) e `sources` (forma 2) em uma
+ * única lista [{ path, headings }]. Headings por fonte só existem na forma 2.
+ * @returns {{path: string, headings: string[]|null}[]|null}
+ */
+function normalizeSources(fm, blockIndex, sourcePath) {
+  const where = `Bloco ${blockIndex + 1} (${sourcePath})`;
+
+  if (fm.sources !== undefined) {
+    if (fm.source !== undefined || fm.source_headings !== undefined) {
+      throw new Error(
+        `${where}: use 'sources' OU 'source'/'source_headings', não os dois.`
+      );
+    }
+    if (!Array.isArray(fm.sources) || fm.sources.length === 0) {
+      throw new Error(`${where}: 'sources' deve ser uma lista não vazia.`);
+    }
+    return fm.sources.map((item, i) => {
+      if (typeof item === "string") {
+        const path = item.trim();
+        if (!path) throw new Error(`${where}: 'sources[${i}]' não pode ser string vazia.`);
+        return { path, headings: null };
+      }
+      if (!item || typeof item !== "object" || typeof item.path !== "string" || !item.path.trim()) {
+        throw new Error(
+          `${where}: 'sources[${i}]' precisa de 'path' (string não vazia).`
+        );
+      }
+      let headings = null;
+      if (item.headings !== undefined) {
+        headings = Array.isArray(item.headings) ? item.headings : [item.headings];
+        if (headings.some(h => typeof h !== "string" || !h.trim())) {
+          throw new Error(
+            `${where}: 'sources[${i}].headings' deve conter apenas strings não vazias.`
+          );
+        }
+      }
+      return { path: item.path, headings };
+    });
+  }
+
+  if (fm.source === undefined) return null;
+
+  const rawPaths = Array.isArray(fm.source) ? fm.source : [fm.source];
+  const paths = rawPaths.map((p, i) => {
+    if (typeof p !== "string" || !p.trim()) {
+      throw new Error(`${where}: 'source[${i}]' deve ser uma string não vazia.`);
+    }
+    return p.trim();
+  });
+  const headings = fm.source_headings === undefined
+    ? null
+    : (Array.isArray(fm.source_headings) ? fm.source_headings : [fm.source_headings]);
+  return paths.map(p => ({ path: p, headings }));
 }
 
 /**

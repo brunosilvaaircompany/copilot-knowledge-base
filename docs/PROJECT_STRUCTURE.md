@@ -19,10 +19,17 @@ copilot-slides/
 │   └── base.html                 ← Template base (sem conteúdo, só estrutura)
 ├── build.js                      ← Script Node que gera um novo deck a partir do template
 ├── scripts/
-│   ├── check_slides_freshness.py ← Verifica se os decks ficaram desatualizados
+│   ├── check_slides_freshness.py ← Camada 1: diff das fontes por slide_id; abre issues
+│   ├── deck_content.py           ← Leitor Python dos blocos de content.md (texto do slide)
+│   ├── semantic_freshness.py     ← Camada 2: gate semântico opcional (none|command|http)
+│   ├── verdict_format.py         ← Formato do veredito exigido para fechar a issue
+│   ├── freshness_verdict.py      ← Aplica o veredito ao estado (pending → ok/stale)
 │   ├── fetch_github_docs.py      ← Sincroniza github-docs/ a partir de github/docs
-│   ├── fetch_vscode_docs.py      ← Sincroniza vscode-docs/ a partir de microsoft/vscode-docs
-│   └── register_deck_freshness.py ← Registra fontes e baseline de um deck
+│   └── fetch_vscode_docs.py     ← Sincroniza vscode-docs/ a partir de microsoft/vscode-docs
+├── .github/workflows/
+│   ├── build-decks.yml           ← Verifica index.html vs content.md e os dois parsers
+│   ├── check-slides-freshness.yml ← Roda a checagem e abre as issues
+│   └── freshness-verdict.yml     ← Fecha o ciclo de estado a partir da issue/PR
 ├── github-docs/                   ← Espelho textual da documentação do GitHub
 ├── vscode-docs/                   ← Espelho textual da documentação do VS Code (v1: só texto, sem imagens)
 ├── decks/

@@ -23,6 +23,25 @@ jobs:
       cancel-in-progress: false
     env:
       COPILOT_ASSIGNEE: ${{ secrets.COPILOT_ASSIGNEE }}
+      # Camada 2 (semântica). Padrão `none`: sem a variável de repositório
+      # SEMANTIC_PROVIDER configurada, a checagem se comporta exatamente como
+      # a versão puramente determinística.
+      #
+      # Provedor escolhido quando ligado: `command`. GitHub Models foi
+      # aposentado em 2026-07-30 (github-docs/content/github-models/index.md:3)
+      # e o repositório é de conta pessoal, logo não há billing de organização
+      # para `copilot-requests: write` — qualquer provedor exige secret novo.
+      # `command` mantém a avaliação dentro do ecossistema já usado pelo repo
+      # (Copilot CLI autenticado por PAT em SEMANTIC_API_KEY), sem acoplar o
+      # script a um endpoint de terceiro. O provedor `http` continua disponível
+      # como alternativa, bastando trocar SEMANTIC_PROVIDER para `http` e
+      # definir SEMANTIC_ENDPOINT/SEMANTIC_MODEL.
+      SEMANTIC_PROVIDER: ${{ vars.SEMANTIC_PROVIDER || 'none' }}
+      SEMANTIC_COMMAND: ${{ vars.SEMANTIC_COMMAND }}
+      SEMANTIC_ENDPOINT: ${{ vars.SEMANTIC_ENDPOINT }}
+      SEMANTIC_MODEL: ${{ vars.SEMANTIC_MODEL }}
+      SEMANTIC_MAX_CALLS: ${{ vars.SEMANTIC_MAX_CALLS || '20' }}
+      SEMANTIC_API_KEY: ${{ secrets.SEMANTIC_API_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -49,7 +68,13 @@ jobs:
             --summary-file decks/.freshness-summary.md \
             --write-state \
             --gh-repo "${{ github.repository }}" \
-            --copilot-assignee "${COPILOT_ASSIGNEE}"
+            --copilot-assignee "${COPILOT_ASSIGNEE}" \
+            --semantic-provider "${SEMANTIC_PROVIDER}" \
+            --semantic-command "${SEMANTIC_COMMAND}" \
+            --semantic-endpoint "${SEMANTIC_ENDPOINT}" \
+            --semantic-model "${SEMANTIC_MODEL}" \
+            --semantic-api-key-env SEMANTIC_API_KEY \
+            --semantic-max-calls "${SEMANTIC_MAX_CALLS}"
           code=$?
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           if [ "$code" -eq 1 ]; then
