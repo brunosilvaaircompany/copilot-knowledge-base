@@ -1,0 +1,84 @@
+name: Aplicar veredito de desatualização
+
+# Fecha o ciclo de estado que o checker abre: `pending → ok` quando o veredito
+# do agente é aceito (ou o PR é mergeado) e `pending → stale` quando não é.
+# Sem este workflow, o `.freshness-state.json` fica preso em `pending` para
+# sempre e o slide nunca é reavaliado.
+
+on:
+  issues:
+    types: [closed, reopened]
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  verdict:
+    # Só interessa issue com o label do checker; para PR, o filtro real é o
+    # `closingIssuesReferences` verificado dentro do script.
+    if: >-
+      github.event_name == 'pull_request' ||
+      contains(join(github.event.issue.labels.*.name, ','), 'slide-stale')
+    runs-on: ubuntu-latest
+    concurrency:
+      # Mesmo grupo do check-slides-freshness.yml: os dois escrevem no
+      # .freshness-state.json e não podem rodar em paralelo.
+      group: freshness-check
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Aplicar veredito ao estado
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          case "${{ github.event_name }}:${{ github.event.action }}" in
+            issues:closed)
+              python3 scripts/freshness_verdict.py \
+                --event issue-closed \
+                --repo "${{ github.repository }}" \
+                --issue "${{ github.event.issue.number }}"
+              ;;
+            issues:reopened)
+              python3 scripts/freshness_verdict.py \
+                --event issue-reopened \
+                --repo "${{ github.repository }}" \
+                --issue "${{ github.event.issue.number }}"
+              ;;
+            pull_request:closed)
+              python3 scripts/freshness_verdict.py \
+                --event pr-closed \
+                --repo "${{ github.repository }}" \
+                --pr "${{ github.event.pull_request.number }}"
+              ;;
+            *)
+              echo "Evento não tratado; nada a fazer."
+              ;;
+          esac
+
+      - name: Commit do estado atualizado
+        run: |
+          if git diff --quiet -- decks/.freshness-state.json; then
+            echo "Estado inalterado; nada a commitar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add decks/.freshness-state.json
+          git commit -m "ci: atualiza freshness state [skip ci]"
+          # Rebase antes do push: o workflow de checagem escreve no mesmo arquivo.
+          git pull --rebase origin "${{ github.event.repository.default_branch }}"
+          git push origin "HEAD:${{ github.event.repository.default_branch }}"

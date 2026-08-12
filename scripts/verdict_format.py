@@ -57,11 +57,17 @@ def _field(text: str, label: str) -> str | None:
         raw_label, _, value = stripped.partition(":")
         if _normalize(raw_label.replace("*", "").replace("`", "")) != wanted:
             continue
-        cleaned = value.strip().strip("`").strip()
+        cleaned = value.strip().strip("*").strip().strip("`").strip()
         cleaned = re.sub(r'^["“”\']|["“”\']$', "", cleaned).strip()
         if cleaned:
             return cleaned
     return None
+
+
+def _is_placeholder(text: str) -> bool:
+    """Detecta o texto de exemplo do próprio template (`<frase citada...>`)."""
+    stripped = text.strip()
+    return stripped.startswith("<") and stripped.endswith(">")
 
 
 def parse_verdict(text: str) -> dict[str, str] | None:
@@ -70,7 +76,7 @@ def parse_verdict(text: str) -> dict[str, str] | None:
 
     Devolve {"verdict": "afeta"|"nao afeta", "slide_excerpt", "source_excerpt"}
     ou None se o comentário não seguir o contrato (rótulo ausente, veredito
-    desconhecido ou trecho curto demais para ser uma citação real).
+    desconhecido, trecho curto demais ou o placeholder do próprio template).
     """
     if not text:
         return None
@@ -92,6 +98,8 @@ def parse_verdict(text: str) -> dict[str, str] | None:
     if not slide_excerpt or not source_excerpt:
         return None
     if len(slide_excerpt) < MIN_EXCERPT_CHARS or len(source_excerpt) < MIN_EXCERPT_CHARS:
+        return None
+    if _is_placeholder(slide_excerpt) or _is_placeholder(source_excerpt):
         return None
 
     return {

@@ -66,6 +66,9 @@ MAX_EXCERPT_CHARS = 4000
 # 65536 caracteres; a folga cobre cabeçalhos e instruções).
 MAX_SOURCE_BLOCKS_CHARS = 40000
 
+# Orçamento padrão de chamadas semânticas por execução.
+DEFAULT_SEMANTIC_MAX_CALLS = 20
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Git helpers
@@ -565,6 +568,31 @@ def sources_changed(
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _semantic_provider_arg(value: str) -> str:
+    """Aceita valor vazio (variável de repositório não definida) como 'none'."""
+    provider = (value or "").strip() or semantic_freshness.PROVIDER_NONE
+    if provider not in semantic_freshness.PROVIDERS:
+        raise argparse.ArgumentTypeError(
+            f"provedor inválido: {value!r} "
+            f"(esperado: {', '.join(semantic_freshness.PROVIDERS)})"
+        )
+    return provider
+
+
+def _positive_int_arg(value: str) -> int:
+    """Aceita valor vazio (variável de repositório não definida) como padrão."""
+    text = (value or "").strip()
+    if not text:
+        return DEFAULT_SEMANTIC_MAX_CALLS
+    try:
+        number = int(text)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(f"valor inteiro inválido: {value!r}") from exc
+    if number < 0:
+        raise argparse.ArgumentTypeError(f"valor não pode ser negativo: {value!r}")
+    return number
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Per-slide freshness check.")
     parser.add_argument(
@@ -603,9 +631,11 @@ def main() -> int:
     )
     parser.add_argument(
         "--semantic-provider",
-        default=os.environ.get("SEMANTIC_PROVIDER", semantic_freshness.PROVIDER_NONE),
-        choices=list(semantic_freshness.PROVIDERS),
-        help="Avaliador semântico usado antes de abrir a issue (padrão: none)."
+        default=os.environ.get("SEMANTIC_PROVIDER", "") or semantic_freshness.PROVIDER_NONE,
+        type=_semantic_provider_arg,
+        help="Avaliador semântico usado antes de abrir a issue "
+             f"({'|'.join(semantic_freshness.PROVIDERS)}; padrão: none). "
+             "Valor vazio é tratado como 'none'."
     )
     parser.add_argument(
         "--semantic-command",
@@ -632,7 +662,8 @@ def main() -> int:
         help="Timeout (s) por chamada semântica."
     )
     parser.add_argument(
-        "--semantic-max-calls", type=int, default=20,
+        "--semantic-max-calls", type=_positive_int_arg,
+        default=DEFAULT_SEMANTIC_MAX_CALLS,
         help="Orçamento de chamadas semânticas por execução; estourado, o "
              "restante vira 'unknown' (e portanto abre issue)."
     )
@@ -667,6 +698,20 @@ def main() -> int:
     checked = 0
     semantic_calls = 0
     semantic_cached = 0
+
+    # Configuração incompleta do provedor não interrompe a checagem: o gate é
+    # fail-open, então o efeito prático é veredito `unknown` e issue aberta.
+    # Ainda assim o fato precisa ficar visível no relatório.
+    if args.semantic_provider == semantic_freshness.PROVIDER_COMMAND and not args.semantic_command:
+        errors.append(
+            "--semantic-provider command sem --semantic-command: "
+            "todos os vereditos serão 'unknown'."
+        )
+    if args.semantic_provider == semantic_freshness.PROVIDER_HTTP and not args.semantic_endpoint:
+        errors.append(
+            "--semantic-provider http sem --semantic-endpoint: "
+            "todos os vereditos serão 'unknown'."
+        )
 
     # Ensure label exists if we have gh-repo
     if args.gh_repo:
