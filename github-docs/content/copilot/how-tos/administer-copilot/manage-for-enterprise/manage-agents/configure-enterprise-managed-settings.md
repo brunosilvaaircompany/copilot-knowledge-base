@@ -9,6 +9,7 @@ The following clients are supported, although not every client supports every pr
 * JetBrains IDEs
 * The GitHub Copilot app
 * Copilot cloud agent
+* JetBrains IDEs
 
 These settings apply enterprise-wide and enterprises can customize specific keys to enterprise teams. For most supported keys, the `managed-settings.json` value takes precedence over any file-based configuration a user sets in their client. In Copilot CLI, managed `sandbox` settings instead define minimum restrictions that users can further tighten but cannot loosen.
 

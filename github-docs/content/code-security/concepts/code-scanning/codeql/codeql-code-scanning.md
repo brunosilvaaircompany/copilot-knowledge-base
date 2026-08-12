@@ -21,7 +21,7 @@ There are three main ways to use CodeQL analysis for code scanning:
 
 
 > [!NOTE]
-> On GitHub Enterprise Server {{ allVersions[currentVersion].currentRelease }}, the CodeQL action uses CodeQL CLI version {% ifversion ghes < 3.18 %}2.20.7{% elsif ghes < 3.19 %}2.21.4{% elsif ghes < 3.20 %}2.22.4{% elsif ghes < 3.21 %}2.23.9{% elsif ghes < 3.22 %}2.24.3 by default. We recommend that you use the same version of the CodeQL CLI if you run analysis in an external CI system.
+> On GitHub Enterprise Server {{ allVersions[currentVersion].currentRelease }}, the CodeQL action uses CodeQL CLI version {% ifversion ghes < 3.18 %}2.20.7{% elsif ghes < 3.19 %}2.21.4{% elsif ghes < 3.20 %}2.22.4{% elsif ghes < 3.21 %}2.23.9{% elsif ghes < 3.22 %}2.24.3{% elsif ghes < 3.23 %}2.25.6 by default. We recommend that you use the same version of the CodeQL CLI if you run analysis in an external CI system.
 
 {% endif %}
 

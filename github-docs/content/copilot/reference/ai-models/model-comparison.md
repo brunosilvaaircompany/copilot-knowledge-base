@@ -15,7 +15,7 @@ Use this table to find a suitable model quickly, see more detail in the sections
 | Model                                              | Task area             | Excels at (primary use case) | Further reading             |
 |----------------------------------------------------|-----------------------|------------------------------|-----------------------------|
 | {% for model in tables.copilot.model-comparison %} |
-| {{ model.name }}{% if model.name == 'MAI-Code-1-Flash' %}[^mai-code-1-flash]{% elsif model.name == 'Kimi K3' %}[^kimi-k3]{% endif %}                                   | {{ model.task_area }} | {{ model.excels_at }}        | {{ model.further_reading }} |
+| {{ model.name }}{% if model.name == 'MAI-Code-1-Flash' or model.name == 'MAI-Code-1.1-Flash' %}[^mai-code-1-flash]{% elsif model.name == 'Kimi K3' %}[^kimi-k3]{% endif %}                                   | {{ model.task_area }} | {{ model.excels_at }}        | {{ model.further_reading }} |
 | {% endfor %}                                       |
 
 ## Task: General-purpose coding and writing
@@ -134,7 +134,7 @@ Kimi K3 is designed for long-context, multi-step coding and agentic workflows. I
 
 ## Next steps
 
-[^mai-code-1-flash]: MAI-Code-1-Flash is a continuously improving model. Performance and behavior may evolve over time as new checkpoints are released.
+[^mai-code-1-flash]: MAI models are continuously improving models. Performance and behavior may evolve over time as new checkpoints are released.
 
 [^kimi-k3]: For important information about Kimi K3 behavior and safeguards, see [Model-specific considerations](#kimi-k3).
 

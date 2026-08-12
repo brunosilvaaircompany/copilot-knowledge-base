@@ -95,9 +95,7 @@ When you connect an IdP group to a GitHub team, all users in the group are autom
 
    ![Screenshot of the header of a team's page. A tab, labeled with a gear icon and "Settings", is outlined in dark orange.](/assets/images/help/teams/team-settings-global-nav-update.png)
 
-
 1. Under "Identity Provider Groups", select the **Select Groups** dropdown menu, and click up to 5 identity provider groups.
-
 1. Click **Save changes**.
 
 ## Disconnecting an IdP group from a team
@@ -116,7 +114,5 @@ When you connect an IdP group to a GitHub team, all users in the group are autom
 
    ![Screenshot of the header of a team's page. A tab, labeled with a gear icon and "Settings", is outlined in dark orange.](/assets/images/help/teams/team-settings-global-nav-update.png)
 
-
 1. Under "Identity Provider Groups", to the right of the IdP group you want to disconnect, click {% octicon "x" aria-label="Remove group" %}.
-
 1. Click **Save changes**.

@@ -96,15 +96,16 @@ For more information, see [xAI's enterprise terms of service](https://x.ai/legal
 Used for:
 
 * MAI-Code-1-Flash
+* MAI-Code-1.1-Flash
 * Raptor mini
 
-MAI-Code-1-Flash is a first-party Microsoft model hosted on Azure in GitHub's tenant. 
+MAI-Code-1-Flash and MAI-Code-1.1-Flash are first-party Microsoft models hosted on Azure in GitHub's tenant.
 
 GitHub does not use Copilot Business or Copilot Enterprise customer data to train AI models. For individual subscribers—Copilot Free, Copilot Pro, Copilot Pro+, and Copilot Max users—GitHub may use Copilot interaction data, including prompts (inputs), suggestions (outputs), and code snippets generated during Copilot sessions to train and improve AI models, in accordance with our [GitHub General Privacy Statement](https://docs.github.com/en/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement) and applicable user settings. Individual subscribers can opt out of having their data used for AI model training. To manage this setting, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements).
 
-MAI-Code-1-Flash is served on Microsoft Azure AI Foundry within GitHub's tenant and is subject to GitHub's data handling configuration for that deployment. For details about how data is processed, retained, and secured for models served on Azure AI Foundry, see [Data, privacy, and security for Foundry Models sold by Azure](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) in the Microsoft documentation.
+MAI-Code-1-Flash and MAI-Code-1.1-Flash are served on Microsoft Azure AI Foundry within GitHub's tenant and are subject to GitHub's data handling configuration for that deployment. For details about how data is processed, retained, and secured for models served on Azure AI Foundry, see [Data, privacy, and security for Foundry Models sold by Azure](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) in the Microsoft documentation.
 
-When using MAI-Code-1-Flash, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content.
+When using MAI-Code-1-Flash or MAI-Code-1.1-Flash, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content.
 
 ## Open-weight models
 

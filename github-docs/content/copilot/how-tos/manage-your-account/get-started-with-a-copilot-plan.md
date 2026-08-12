@@ -1,10 +1,11 @@
 # Getting started with a GitHub Copilot plan
 
-You can get started with your Copilot plan by:
+This article covers:
 
 * [Accessing Copilot Free](#accessing-copilot-free)
 * [Upgrading from Copilot Free](#upgrading-from-copilot-free)
 * [Subscribing to Copilot Pro, Copilot Pro+, or Copilot Max](#subscribing-to-copilot-pro-copilot-pro-or-copilot-max)
+* [Troubleshooting](#troubleshooting)
 
 ## Accessing Copilot Free
 
@@ -93,3 +94,16 @@ If the plan does not appear after following the checkout steps [when subscribing
 1. Confirm that the plan appears in your GitHub Copilot settings or in your personal account settings under **Billing & licensing**. For more information, see [View And Change Your Copilot Plan](https://docs.github.com/en/copilot/how-tos/manage-your-account/view-and-change-your-copilot-plan).
 1. If payment method verification failed or you did not complete the activation step, retry the checkout flow.
 1. If you completed activation and the plan still does not appear, contact [GitHub Support](https://support.github.com).
+
+### Blocked plan setup on a personal account
+
+Your personal account may have a Copilot access restriction if you see:
+
+* "It appears you are not eligible to sign up for GitHub Copilot Free"
+* "Your account is unable to sign up for Copilot. Please contact Support"
+* An upgrade that does not complete
+* Editor errors that tell you to contact support, or that mention a 403 token error
+
+First check the relevant guidance: [Accessing Copilot Free](#accessing-copilot-free) for eligibility issues, or [Account still shows Copilot Free after checkout](#account-still-shows-copilot-free-after-checkout) for paid upgrades. If those cases do not apply, these messages can indicate an account restriction rather than normal eligibility, checkout, or usage-limit issues.
+
+If your account has a Copilot access restriction, contact [GitHub Support](https://support.github.com) and request an account review. You cannot remove the restriction yourself.

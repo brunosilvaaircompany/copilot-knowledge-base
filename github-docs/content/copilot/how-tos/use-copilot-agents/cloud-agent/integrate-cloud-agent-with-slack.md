@@ -12,7 +12,7 @@ For information about additional Copilot integrations, see [About Copilot Integr
 
 ## Security considerations
 
-When you @mention Copilot in Slack, consider the following.
+Before you @mention the GitHub App in Slack, consider the following.
 
 * Copilot may perform write actions on your behalf, such as creating pull requests or issues, in addition to answering questions. Copilot uses the permissions of your linked GitHub account for any actions it takes.
 * Copilot cloud agent will capture the entire thread as context for your request, understanding and implementing solutions based on the discussion. This context is stored in the pull request. If you want to limit the context, you can send a direct message to the GitHub App for Slack instead.
@@ -27,7 +27,7 @@ When you @mention Copilot in Slack, consider the following.
 
 The first time you use the GitHub App in Slack, the app will prompt you to connect it to your GitHub account and set a default repository. The default repository is where pull requests created by Copilot cloud agent sessions will be opened.
 
-1. In Slack, open a direct message with the GitHub App or mention Copilot in a thread by typing `@GitHub Copilot`.
+1. In Slack, open a direct message with the GitHub App or mention the GitHub App in a thread by typing `@GitHub`.
 1. Send a prompt to Copilot cloud agent. This can be a request to perform a task, or simply `login`.
 1. If asked to connect your GitHub account, follow the instructions in Copilot's reply and authorize the app to access your GitHub account.
 1. In the Slack message thread, click **Configure settings** to set a default repository for pull requests. You can change this repository later using the `settings` command.

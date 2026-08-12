@@ -10,12 +10,13 @@ You can create rulesets to control how users can interact with code in repositor
 
 To learn more, see [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).
 
+As you onboard your enterprise, rulesets are how you apply consistent protections across many repositories at once, rather than configuring each repository individually.
+
+If you have used **branch protection rules** on individual repositories, rulesets serve a similar goal at enterprise scale. Unlike a branch protection rule, which applies to a single repository, a ruleset can target many organizations, repositories, and branches at the same time, and you can set it to an evaluate status to preview its impact before you enforce it.
+
 ## Importing rulesets
 
 To import a prebuilt ruleset created by GitHub, see [`github/ruleset-recipes`](https://github.com/github/ruleset-recipes).
-
-You can import an existing ruleset using a JSON file. This can be useful if you want to apply the same ruleset to multiple repositories or organizations.
- For more information, see [Managing Rulesets For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization#using-ruleset-history).
 
 ## How will I define where my ruleset applies?
 
@@ -77,9 +78,7 @@ The following are eligible for bypass access:
 * Copilot cloud agent. For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#limitations-in-copilot-cloud-agents-compatibility-with-other-features).
 
 
-1. To grant bypass permissions for the ruleset, in the "Bypass list" section, click **Add bypass**.
-
-1. In the "Add bypass" modal dialog that appears, search for the role, team, or app you would like to grant bypass permissions, then select the role, team, or app from the "Suggestions" section and click Add Selected.
+1. In the "Bypass list" section, click **Add bypass**, then search for and select the role, team, or app you want to grant bypass permissions, and click **Add Selected**.
 
 1. Optionally, to grant bypass to an actor without allowing them to push directly to a repository, to the right of "Always allow," click {% octicon "kebab-horizontal" aria-label="View logs" %}, then click **For pull requests only**.
 
@@ -178,8 +177,7 @@ You can grant certain roles, teams, or apps bypass permissions as well as the ab
 * Copilot cloud agent. For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#limitations-in-copilot-cloud-agents-compatibility-with-other-features).
 
 
-1. To grant bypass permissions for the ruleset, in the "Bypass list" section, click **Add bypass**.
-1. In the "Add bypass" modal dialog that appears, search for the role, team, or app you would like to grant bypass permissions, then select the role, team, or app from the "Suggestions" section and click Add Selected.
+1. In the "Bypass list" section, click **Add bypass**, then search for and select the role, team, or app you want to grant bypass permissions, and click **Add Selected**.
 
 ### Choosing which organizations to target in your enterprise
 

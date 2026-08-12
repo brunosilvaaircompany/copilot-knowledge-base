@@ -18,7 +18,7 @@ You should download the CodeQL bundle from https://github.com/github/codeql-acti
 
 
 > [!NOTE]
-> For GitHub Enterprise Server {{ allVersions[currentVersion].currentRelease }}, we recommend CodeQL CLI version 2.20.7{% elsif ghes < 3.19 %}2.21.4{% elsif ghes < 3.20 %}2.22.4{% elsif ghes < 3.21 %}2.23.9{% elsif ghes < 3.22 %}2.24.3.
+> For GitHub Enterprise Server {{ allVersions[currentVersion].currentRelease }}, we recommend CodeQL CLI version 2.20.7{% elsif ghes < 3.19 %}2.21.4{% elsif ghes < 3.20 %}2.22.4{% elsif ghes < 3.21 %}2.23.9{% elsif ghes < 3.22 %}2.24.3{% elsif ghes < 3.23 %}2.25.6.
 
 
 

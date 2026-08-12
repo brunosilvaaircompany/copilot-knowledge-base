@@ -101,3 +101,7 @@ end
 
 Note that this API call will retrieve single line comments, as well as comments made
 on the entire commit.
+
+
+
+Creating commit comments can be enabled or disabled for a repository. Organization owners can configure the default setting for repositories in their organization. For more information, see [Managing Commit Comments For Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-commit-comments-for-your-organization).

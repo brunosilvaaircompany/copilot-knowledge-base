@@ -19,7 +19,8 @@ To create an exception to an existing branch rule, you can create a new branch p
 For more information about each of the available branch protection settings, see [About Protected Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
 
 > [!NOTE]
-> Only a single branch protection rule can apply at a time, which means it can be difficult to know how which rule will apply when multiple versions of a rule target the same branch. Additionally, you may want to create a single set of rules that applies to multiple repositories in an organization. For information about an alternative to branch protection rules, see [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).
+> Only a single branch protection rule can apply at a time, which means it can be difficult to know how which rule will apply when multiple versions of a rule target the same branch. Additionally, you may want to create a single set of rules that applies to multiple repositories in an organization. For information about an alternative to branch protection rules, see [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets). To convert an existing branch protection rule to rulesets, see [Converting Branch Protections To Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/converting-branch-protections-to-rulesets).
+
 
 ## Creating a branch protection rule
 

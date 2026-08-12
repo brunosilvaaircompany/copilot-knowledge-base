@@ -6,7 +6,7 @@ When you're working with others on GitHub, you typically make your changes in a 
 
 Getting feedback on your pull request from others is an important part of the software development process. Pull request reviews improve the specific code you're working on, and also improves your coding and collaboration skills over time. Sometimes, especially when you're learning to code, you may not always have someone to ask for feedback. In those cases, you can get feedback and all its benefits from GitHub Copilot instead.
 
-A pull request is a collaborative place where you can show other people the changes you're proposing and get feedback. When you request a review from Copilot, you'll be learning the same process that you'll use use when working with development teams. The only difference is you'll also be requesting reviews from human colleagues alongside Copilot.
+A pull request is a collaborative place where you can show other people the changes you're proposing and get feedback. When you request a review from Copilot, you'll be learning the same process that you'll use when working with development teams. The only difference is you'll also be requesting reviews from human colleagues alongside Copilot.
 
 > [!NOTE]
 > Copilot code review on the GitHub website is a premium feature, available with paid Copilot plans. For more information about how using Copilot code review affects your quotas, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review). If you're a student, you may be able to access Copilot's premium features for free, see [Set Up For Students](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students).

@@ -18,7 +18,7 @@ This table lists the AI models available in Copilot, along with their release st
 | Model name                                             | Provider  | Release status             |
 |--------------------------------------------------------|-----------|----------------------------|
 | {% for model in tables.copilot.model-release-status %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'MAI-Code-1-Flash' %}[^mai-code-1-flash]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %}| {{ model.provider }} | {{ model.release_status }} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'MAI-Code-1-Flash' or model.name == 'MAI-Code-1.1-Flash' %}[^mai-code-1-flash]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %}| {{ model.provider }} | {{ model.release_status }} |
 | {% endfor %}                                           |
 
 {% endrowheaders %}
@@ -75,22 +75,6 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 
 {% endrowheaders %}
 
-## Model retirement history
-
-The following table lists AI models that are retired or scheduled for retirement from Copilot, along with their retirement dates and suggested alternatives.
-
-{% rowheaders %}
-
-| Model name                                                  | Retirement date             | Suggested alternative             |
-|-------------------------------------------------------------|-----------------------------|-----------------------------------|
-| {% for model in tables.copilot.model-deprecation-history %} |
-| {{ model.name }}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-annual]{% endif %} | {{ model.retirement_date }} | {{ model.suggested_alternative }} |
-| {% endfor %}                                                |
-
-{% endrowheaders %}
-
-[^claude-sonnet-46-annual]: Claude Sonnet 4.6 remains available to individual Copilot subscribers on annual plans. The retirement of Claude Sonnet 4.6 does not apply to these subscribers.
-
 ## Supported AI models per client
 
 The following table shows which models are available in each client.
@@ -134,6 +118,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Kimi K2.7 Code     | `v1.127` | `17.14.6`            | `1.9.1-251` | TBD | TBD |
 | Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |
 | MAI-Code-1-Flash    | `v1.121` | TBD                            | TBD | TBD | TBD |
+| MAI-Code-1.1-Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
 
 {% endrowheaders %}
@@ -190,7 +175,7 @@ Access to evaluation models in auto model selection  for users Copilot plans for
 
 1. For the **Evaluation models in Copilot auto model selection** setting, select **Disabled** from the dropdown.
 
-[^mai-code-1-flash]: MAI-Code-1-Flash is a continuously improving model. Performance and behavior may evolve over time as new checkpoints are released.
+[^mai-code-1-flash]: MAI models are continuously improving models. Performance and behavior may evolve over time as new checkpoints are released.
 
 ## Utility models
 
@@ -232,6 +217,26 @@ The following models are **not** eligible for default enablement, regardless of 
 * Models that are not covered by GitHub's data retention agreement (Claude Fable 5)
 * For enterprises that have restricted models to data-resident or FedRAMP-compliant models, any models that do not respect these policies
 
+
+## Model support
+
+If a particular model seems unavailable, refer to the model vendor's support page for the latest information about its availability. If more than one model from different vendors is unavailable, contact [GitHub Support](https://support.github.com) or refer to the [GitHub status page](https://www.githubstatus.com/) for additional information.
+
+## Model retirement history
+
+The following table lists AI models that are retired or scheduled for retirement from Copilot, along with their retirement dates and suggested alternatives.
+
+{% rowheaders %}
+
+| Model name                                                  | Retirement date             | Suggested alternative             |
+|-------------------------------------------------------------|-----------------------------|-----------------------------------|
+| {% for model in tables.copilot.model-deprecation-history %} |
+| {{ model.name }}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-annual]{% endif %} | {{ model.retirement_date }} | {{ model.suggested_alternative }} |
+| {% endfor %}                                                |
+
+{% endrowheaders %}
+
+[^claude-sonnet-46-annual]: Claude Sonnet 4.6 remains available to individual Copilot subscribers on annual plans. The retirement of Claude Sonnet 4.6 does not apply to these subscribers.
 
 ## Next steps
 

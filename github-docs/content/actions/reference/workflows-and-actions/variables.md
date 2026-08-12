@@ -26,6 +26,10 @@ We strongly recommend that actions use variables to access the filesystem rather
 | `GITHUB_ACTOR_ID` | The account ID of the person or app that triggered the initial workflow run. For example, `1234567`. Note that this is different from the actor username.
  |
 | `GITHUB_API_URL` | Returns the API URL. For example: `https://api.github.com{% elsif ghes %}http(s)://HOSTNAME/api/v3`. |
+|  |
+| `GITHUB_ARTIFACTS` | The path on the runner to the file that declares workflow artifacts for the current step. Write one declaration per line to identify files or OCI digest references as workflow artifacts. For more information, see [Workflow Commands](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#declaring-workflow-artifacts). |
+| `GITHUB_ARTIFACTS_LIST` | The path on the runner to a read-only file that contains aggregated workflow artifact metadata for the current job as a JSON object. For more information, see [Workflow Commands](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#reading-workflow-artifacts). |
+|  |
 | `GITHUB_BASE_REF` | The name of the base ref or target branch of the pull request in a workflow run. This is only set when the event that triggers a workflow run is either `pull_request` or `pull_request_target`. For example, `main`. |
 | `GITHUB_ENV` | The path on the runner to the file that sets variables from workflow commands. The path to this file is unique to the current step and changes for each step in a job. For example, `/home/runner/work/_temp/_runner_file_commands/set_env_87406d6e-4979-4d42-98e1-3dab1f48b13a`. For more information, see [Workflow Commands](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#setting-an-environment-variable). |
 | `GITHUB_EVENT_NAME` | The name of the event that triggered the workflow. For example, `workflow_dispatch`. |

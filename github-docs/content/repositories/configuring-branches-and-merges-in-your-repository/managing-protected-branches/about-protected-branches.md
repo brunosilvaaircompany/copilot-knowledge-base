@@ -17,7 +17,8 @@ You can configure a pull request to merge automatically when all merge requireme
 
 
 > [!NOTE]
-> Only a single branch protection rule can apply at a time, which means it can be difficult to know which rule will apply when multiple versions of a rule target the same branch. Additionally, you may want to create a single set of rules that applies to multiple repositories in an organization. For information about an alternative to branch protection rules, see [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).
+> Only a single branch protection rule can apply at a time, which means it can be difficult to know which rule will apply when multiple versions of a rule target the same branch. Additionally, you may want to create a single set of rules that applies to multiple repositories in an organization. This restriction does not apply to rulesets, see [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets). To convert an existing branch protection rule to rulesets, see [Converting Branch Protections To Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/converting-branch-protections-to-rulesets).
+
 
 ## About branch protection settings
 
