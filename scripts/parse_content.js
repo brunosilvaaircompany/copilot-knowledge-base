@@ -239,7 +239,13 @@ function normalizeSources(fm, blockIndex, sourcePath) {
 
   if (fm.source === undefined) return null;
 
-  const paths = Array.isArray(fm.source) ? fm.source : [fm.source];
+  const rawPaths = Array.isArray(fm.source) ? fm.source : [fm.source];
+  const paths = rawPaths.map((p, i) => {
+    if (typeof p !== "string" || !p.trim()) {
+      throw new Error(`${where}: 'source[${i}]' deve ser uma string não vazia.`);
+    }
+    return p.trim();
+  });
   const headings = fm.source_headings === undefined
     ? null
     : (Array.isArray(fm.source_headings) ? fm.source_headings : [fm.source_headings]);
