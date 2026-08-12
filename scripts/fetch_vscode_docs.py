@@ -145,7 +145,10 @@ def extract_sections(tar_bytes: bytes, sections: list[str], workdir: str) -> dic
             if not rel.endswith(".md"):
                 continue
 
-            dest = os.path.join(workdir, rel)
+            workdir_abs = os.path.abspath(workdir)
+            dest = os.path.normpath(os.path.join(workdir_abs, rel))
+            if not dest.startswith(workdir_abs + os.sep):
+                continue
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             f = tar.extractfile(member)
             if f is None:
