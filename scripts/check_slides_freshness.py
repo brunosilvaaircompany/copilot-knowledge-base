@@ -260,21 +260,28 @@ def slide_sources(slide_entry: dict[str, Any]) -> list[dict[str, Any]]:
         próprios por fonte
     """
     raw_sources = slide_entry.get("sources")
-    if raw_sources:
-        normalized = []
-        for item in raw_sources:
+    if raw_sources is not None:
+        if not isinstance(raw_sources, list) or not raw_sources:
+            raise ValueError("Entrada no manifesto com 'sources' inválido: esperado lista não vazia.")
+        normalized: list[dict[str, Any]] = []
+        for i, item in enumerate(raw_sources):
             if isinstance(item, str):
-                normalized.append({"path": item, "headings": None})
+                path = item.strip()
+                if not path:
+                    raise ValueError(f"Entrada no manifesto com sources[{i}] vazio.")
+                normalized.append({"path": path, "headings": None})
                 continue
-            if not isinstance(item, dict) or not item.get("path"):
-                continue
+            if not isinstance(item, dict):
+                raise ValueError(f"Entrada no manifesto com sources[{i}] inválido: esperado string ou objeto.")
+            path = str(item.get("path") or "").strip()
+            if not path:
+                raise ValueError(f"Entrada no manifesto com sources[{i}].path vazio.")
             headings = item.get("headings")
             if isinstance(headings, str):
                 headings = [headings]
-            normalized.append({
-                "path": item["path"],
-                "headings": list(headings) if headings else None,
-            })
+            elif headings is not None:
+                headings = list(headings)
+            normalized.append({"path": path, "headings": list(headings) if headings else None})
         return normalized
 
     raw_source = slide_entry.get("source")
