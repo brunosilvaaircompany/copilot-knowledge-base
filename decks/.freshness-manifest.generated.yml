@@ -1,5 +1,5 @@
-manifest_version: 1
-generated_at: '2026-08-11T11:02:19.725Z'
+manifest_version: 2
+generated_at: '2026-08-12T18:57:23.668Z'
 slides:
   - slide_id: copilot-training/what-is-copilot
     content_md: decks/copilot-training/content.md
@@ -18,10 +18,15 @@ slides:
     source: github-docs/content/copilot/get-started/features.md
   - slide_id: copilot-training/custom-instructions
     content_md: decks/copilot-training/content.md
-    source:
-      - github-docs/content/copilot/concepts/prompting/response-customization.md
-      - >-
-        github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md
+    sources:
+      - path: github-docs/content/copilot/concepts/prompting/response-customization.md
+        headings:
+          - About repository custom instructions
+      - path: >-
+          github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md
+      - path: vscode-docs/agent-customization/custom-instructions.md
+        headings:
+          - Use a `.github/copilot-instructions.md` file
   - slide_id: copilot-training/context-economy
     content_md: decks/copilot-training/content.md
     source: github-docs/content/copilot/get-started/best-practices.md

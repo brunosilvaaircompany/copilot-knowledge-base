@@ -139,9 +139,14 @@ code: |
   - Use TypeScript com strict mode habilitado
   - Siga o padrão REST para APIs
   - Documente funções públicas com JSDoc
-source:
-  - github-docs/content/copilot/concepts/prompting/response-customization.md
-  - github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md
+sources:
+  - path: github-docs/content/copilot/concepts/prompting/response-customization.md
+    headings:
+      - About repository custom instructions
+  - path: github-docs/content/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide.md
+  - path: vscode-docs/agent-customization/custom-instructions.md
+    headings:
+      - "Use a `.github/copilot-instructions.md` file"
 ---
 
 ---

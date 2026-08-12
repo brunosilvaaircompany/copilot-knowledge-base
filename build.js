@@ -29,6 +29,12 @@ const fs = require("fs");
 const path = require("path");
 const childProcess = require("child_process");
 
+// Versão 2: entradas do manifesto podem usar `sources: [{path, headings}]`,
+// com headings próprios por fonte. A versão 1 (`source` + `source_headings`
+// globais) continua sendo emitida quando não há headings por fonte, e o
+// checker lê as duas.
+const MANIFEST_VERSION = 2;
+
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // Detecção de modo --deck (novo pipeline declarativo)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -192,7 +198,7 @@ function validateGlobalSlideIdUniqueness(manifestPath, contentPath, blocks, yaml
  */
 function updateFreshnessManifest(manifestPath, contentPath, blocks, yaml) {
   // Load existing manifest to preserve other decks' entries
-  let existing = { manifest_version: 1, slides: [] };
+  let existing = { manifest_version: MANIFEST_VERSION, slides: [] };
   if (fs.existsSync(manifestPath)) {
     try {
       existing = yaml.load(fs.readFileSync(manifestPath, "utf-8")) || existing;
@@ -210,29 +216,37 @@ function updateFreshnessManifest(manifestPath, contentPath, blocks, yaml) {
 
   // Build new entries for slides with source
   const newEntries = blocks
-    .filter(b => b.source && b.source.length > 0)
+    .filter(b => b.sources && b.sources.length > 0)
     .map(b => {
       const entry = {
         slide_id: b.slide_id,
         content_md: relContent,
       };
-      if (b.source.length === 1) {
-        entry.source = b.source[0];
-      } else {
-        entry.source = b.source;
+      const perSourceHeadings = b.sources.some(s => s.headings && s.headings.length > 0)
+        && (b.sources.length > 1 || b.source === null);
+
+      if (perSourceHeadings) {
+        // Forma 2: headings pertencem a cada fonte.
+        entry.sources = b.sources.map(s => (
+          s.headings && s.headings.length > 0
+            ? { path: s.path, headings: s.headings }
+            : { path: s.path }
+        ));
+        return entry;
       }
-      if (b.source_headings && b.source_headings.length > 0) {
-        if (b.source_headings.length === 1) {
-          entry.source_headings = b.source_headings[0];
-        } else {
-          entry.source_headings = b.source_headings;
-        }
+
+      // Forma 1 (compatível com manifest_version 1): `source` + headings globais.
+      const paths = b.sources.map(s => s.path);
+      entry.source = paths.length === 1 ? paths[0] : paths;
+      const headings = (b.sources[0] && b.sources[0].headings) || [];
+      if (headings.length > 0) {
+        entry.source_headings = headings.length === 1 ? headings[0] : headings;
       }
       return entry;
     });
 
   const manifest = {
-    manifest_version: 1,
+    manifest_version: MANIFEST_VERSION,
     generated_at: new Date().toISOString(),
     slides: [...existingSlides, ...newEntries],
   };
