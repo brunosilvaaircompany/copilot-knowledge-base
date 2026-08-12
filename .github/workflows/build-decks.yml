@@ -7,6 +7,7 @@ on:
       - "build.js"
       - "scripts/parse_content.js"
       - "scripts/render_slides.js"
+      - "scripts/deck_content.py"
       - "_templates/base.html"
   pull_request:
     paths:
@@ -14,6 +15,7 @@ on:
       - "build.js"
       - "scripts/parse_content.js"
       - "scripts/render_slides.js"
+      - "scripts/deck_content.py"
       - "_templates/base.html"
 
 permissions:
@@ -29,8 +31,15 @@ jobs:
         with:
           node-version: "20"
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Instalar dependências Node
         run: npm install
+
+      - name: Instalar dependências Python
+        run: pip install pyyaml
 
       - name: Verificar que index.html não diverge de content.md
         run: |
@@ -50,3 +59,29 @@ jobs:
             exit 1
           fi
           echo "✓ Todos os decks estão sincronizados."
+
+      - name: Verificar que os parsers Python e JS enxergam os mesmos slides
+        run: |
+          errors=0
+          for content_md in decks/*/content.md; do
+            echo "Comparando parsers: $content_md"
+            python3 scripts/deck_content.py --list "$content_md" > /tmp/py-ids.txt
+            node -e '
+              const fs = require("fs");
+              const { parseContentMd } = require("./scripts/parse_content.js");
+              const file = process.argv[1];
+              const slides = parseContentMd(fs.readFileSync(file, "utf8"), file);
+              process.stdout.write(slides.map(s => s.slide_id || "").join("\n") + "\n");
+            ' "$content_md" > /tmp/js-ids.txt
+            if ! diff -u /tmp/py-ids.txt /tmp/js-ids.txt; then
+              echo "❌ Parsers divergem em $content_md"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ "$errors" -gt 0 ]; then
+            echo ""
+            echo "❌ scripts/deck_content.py e scripts/parse_content.js divergem."
+            echo "   Os dois precisam enxergar os mesmos slide_id na mesma ordem."
+            exit 1
+          fi
+          echo "✓ Parsers Python e JS concordam sobre os slide_id."
