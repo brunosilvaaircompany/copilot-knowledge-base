@@ -259,8 +259,8 @@ def convert_callouts(text: str) -> str:
 _INTERNAL_LINK_RE = re.compile(r'\]\((/docs/[^)]+)\)')
 
 
-def _normalize_docs_path(path: str) -> str:
-    """Normaliza /docs/foo/bar para 'docs/foo/bar' sem ancora."""
+def _normalize_docs_path(path: str) -> tuple[str, str]:
+    """Normaliza /docs/foo/bar para ('docs/foo/bar', '#ancora') preservando a ancora."""
     anchor = ""
     if "#" in path:
         path, anchor = path.split("#", 1)
