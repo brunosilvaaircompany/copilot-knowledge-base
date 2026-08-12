@@ -180,6 +180,7 @@ scripts/
 ├── render_slides.js                # Renderizador HTML por template
 ├── vendor-assets.js                # Baixa Reveal.js e fontes
 ├── fetch_github_docs.py            # Sincroniza github-docs/
+├── fetch_vscode_docs.py            # Sincroniza vscode-docs/
 └── check_slides_freshness.py       # Freshness por slide_id; cria issues individuais
 _shared/
 ├── slides-anchored.css             # Design system
@@ -203,7 +204,8 @@ docs/
 ├── TEMPLATES_GUIDE.md
 └── PROJECT_STRUCTURE.md
 .github/workflows/
-├── fetch-docs.yml                  # Semanal: atualiza github-docs/
+├── fetch-docs.yml                  # Semanal (seg): atualiza github-docs/
+├── fetch-vscode-docs.yml           # Semanal (qua): atualiza vscode-docs/
 ├── check-slides-freshness.yml      # Verifica freshness; cria issues por slide_id
 └── build-decks.yml                 # CI: verifica que index.html não diverge
 requirements.txt                    # Dependências Python (requests, pyyaml)
@@ -249,6 +251,35 @@ python3 scripts/fetch_github_docs.py --search copilot-cli
 O workflow **`.github/workflows/fetch-docs.yml`** roda isso automaticamente
 toda segunda-feira e commita se a documentação mudou — ajuste `DOCS_SECTION`
 no arquivo conforme as seções que seus decks usam como fonte.
+
+## Documentação sincronizada (vscode-docs/)
+
+A pasta `vscode-docs/` espelha trechos da documentação oficial do VS Code
+(`microsoft/vscode-docs`), com front matter removido, tabs e callouts
+convertidos para Markdown padrão, e prontos para leitura.
+
+> **v1:** imagens não são baixadas — o espelho contém apenas texto.
+> Links internos para arquivos do lote extraído são resolvidos como caminhos
+> relativos locais; links para páginas fora do lote caem para a URL canônica
+> em `https://code.visualstudio.com/docs/...` (âncoras preservadas).
+
+```bash
+pip install -r requirements.txt
+
+# sincronizar manualmente as seções de Agentes, Agent Customization e Chat
+python3 scripts/fetch_vscode_docs.py \
+    --section docs/agents,docs/agent-customization,docs/chat \
+    --output ./vscode-docs
+
+# listar subsecoes disponíveis em docs/
+python3 scripts/fetch_vscode_docs.py --list
+
+# buscar por palavra-chave
+python3 scripts/fetch_vscode_docs.py --search chat
+```
+
+O workflow **`.github/workflows/fetch-vscode-docs.yml`** roda isso
+automaticamente toda quarta-feira e commita se a documentação mudou.
 
 ## Verificação de desatualização dos slides
 

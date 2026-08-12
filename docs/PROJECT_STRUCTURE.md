@@ -20,7 +20,11 @@ copilot-slides/
 ├── build.js                      ← Script Node que gera um novo deck a partir do template
 ├── scripts/
 │   ├── check_slides_freshness.py ← Verifica se os decks ficaram desatualizados
+│   ├── fetch_github_docs.py      ← Sincroniza github-docs/ a partir de github/docs
+│   ├── fetch_vscode_docs.py      ← Sincroniza vscode-docs/ a partir de microsoft/vscode-docs
 │   └── register_deck_freshness.py ← Registra fontes e baseline de um deck
+├── github-docs/                   ← Espelho textual da documentação do GitHub
+├── vscode-docs/                   ← Espelho textual da documentação do VS Code (v1: só texto, sem imagens)
 ├── decks/
 │   ├── copilot-training/
 │   │   ├── index.html            ← Deck compilado (gerado por build.js ou copiado de base.html)

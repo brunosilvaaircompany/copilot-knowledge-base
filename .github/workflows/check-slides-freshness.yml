@@ -5,7 +5,9 @@ on:
     - cron: "0 7 * * 1"
   workflow_dispatch: {}
   workflow_run:
-    workflows: ["Atualizar documentação do GitHub"]
+    workflows:
+      - "Atualizar documentação do GitHub"
+      - "Atualizar documentação do VS Code"
     types: [completed]
 
 permissions:
