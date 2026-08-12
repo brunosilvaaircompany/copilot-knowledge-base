@@ -217,7 +217,9 @@ function normalizeSources(fm, blockIndex, sourcePath) {
     }
     return fm.sources.map((item, i) => {
       if (typeof item === "string") {
-        return { path: item, headings: null };
+        const path = item.trim();
+        if (!path) throw new Error(`${where}: 'sources[${i}]' não pode ser string vazia.`);
+        return { path, headings: null };
       }
       if (!item || typeof item !== "object" || typeof item.path !== "string" || !item.path.trim()) {
         throw new Error(
