@@ -269,6 +269,8 @@ def _normalize_docs_path(path: str) -> tuple[str, str]:
         path, anchor = path.split("#", 1)
         anchor = "#" + anchor
     path = path.lstrip("/").rstrip("/")
+    if path.endswith(".md"):
+        path = path[: -len(".md")]
     return path, anchor
 
 
