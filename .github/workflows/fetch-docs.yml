@@ -10,7 +10,7 @@
 # quer acompanhar (ex: content/github-cli/github-cli, ou varias
 # separadas por virgula).
 
-name: Atualizar documentacao do GitHub
+name: Atualizar documentação do GitHub
 
 on:
   schedule:
