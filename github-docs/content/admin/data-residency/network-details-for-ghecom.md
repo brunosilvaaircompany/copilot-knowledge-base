@@ -87,6 +87,10 @@ GitHub's IP address ranges for enterprises on GHE.com depend on your chosen regi
 | 40.81.180.112/28         | 40.81.176.224/28            |
 | 4.190.169.192/28         | 4.190.169.240/28            |
 
+## GitHub Copilot
+
+Most GitHub Copilot services require access to your enterprise's subdomain on GHE.com and its subdomains. For more information, see [Copilot Allowlist Reference](https://docs.github.com/en/copilot/reference/copilot-allowlist-reference#copilot-on-ghecom).
+
 ## Supported regions for Azure private networking
 
 GitHub deploys your runners in the same Azure region as the subnet you connect them to. Because of this, your subnet must be in one of the supported regions. If you use Azure private networking for GitHub-hosted runners, the supported Azure regions on GHE.com differ from those on GitHub.com.

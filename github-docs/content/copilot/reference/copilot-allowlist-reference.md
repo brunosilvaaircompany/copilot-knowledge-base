@@ -1,45 +1,72 @@
 # Copilot allowlist reference
 
-If your company employs security measures like a firewall or proxy server, you should add the URLs in this article to an allowlist to ensure Copilot works as expected.
-
-## Enable users to sign in to Copilot
-
-Allowlisting the URLs below is **not enough on its own**. If your network blocks GitHub more broadly, users won't be able to sign in to Copilot, even with every URL below allowed.
-
-To sign in, users complete the standard GitHub browser sign-in flow, which loads the GitHub sign-in page. On a restricted network, this requires access to GitHub's general website domains (for example, `*.githubassets.com` and `*.githubusercontent.com`), which are not specific to Copilot.
-
-To enable sign-in on a restricted network:
-
-1. Allow access to GitHub's general website domains. For more information, see [Allowing Access To Githubs Services From A Restricted Network](https://docs.github.com/en/get-started/using-github/allowing-access-to-githubs-services-from-a-restricted-network).
-1. Add the URLs in this article to your allowlist.
-
-## GitHub public URLs
-
-| Domain and/or URL                                           | Purpose |
-|:------------------------------------------------------------| :--------------------------------- |
-| `https://github.com/login/*`                                | Authentication |
-| `https://github.com/copilot/*`                              | Copilot on GitHub |
-| `https://github.com/enterprises/YOUR-ENTERPRISE/*`          | Authentication for managed user accounts, only required with Enterprise Managed Users |
-| `https://api.github.com/user`                               | User Management |
-| `https://api.github.com/copilot_internal/*`                 | User Management |
-| `https://collector.github.com/*`                            | Analytics telemetry |
-| `https://copilot-telemetry.githubusercontent.com/telemetry` | Copilot client telemetry |
-| `https://default.exp-tas.com`                               | Copilot client experimentation |
-| `https://copilot-proxy.githubusercontent.com`               | API service for Copilot suggestions |
-| `https://origin-tracker.githubusercontent.com`              | API service for Copilot suggestions |
-| `https://*.githubcopilot.com/*`[^1]                         | API service for Copilot suggestions |
-| `https://*.individual.githubcopilot.com`[^2]                | API service for Copilot suggestions |
-| `https://*.business.githubcopilot.com`[^3]                  | API service for Copilot suggestions |
-| `https://*.enterprise.githubcopilot.com`[^4]                | API service for Copilot suggestions |
-| `https://*.SUBDOMAIN.ghe.com`                               | For Copilot users on GHE.com |
-| `https://SUBDOMAIN.ghe.com`                                 | For Copilot users on GHE.com |
-| `https://copilot-reports.github.com`                        | Copilot usage metrics report downloads |
-| `https://copilot-reports-*.b01.azurefd.net`[^5]             | Copilot usage metrics report downloads (fallback) |
-| `https://usagereports*.blob.core.windows.net`[^6]           | Copilot usage metrics report downloads (fallback) |
-
-Depending on the security policies and editors your organization uses, you may need to allowlist additional domains and URLs. For more information on specific editors, see [Further reading](#further-reading).
+If your company employs security measures like a firewall or proxy server, you should add the URLs in this article to an allowlist to ensure Copilot works as expected. Users must be able to authenticate to GitHub and access the Copilot service on GitHub.com or GHE.com.
 
 Every user of the proxy server or firewall also needs to configure their own environment to connect to Copilot. See [Configure Network Settings](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-network-settings).
+
+## Copilot on GitHub.com
+
+We recommend using the `/meta` API endpoint to find the domains required to use GitHub on a restricted network. For more information, see [Allowing Access To Githubs Services From A Restricted Network](https://docs.github.com/en/get-started/using-github/allowing-access-to-githubs-services-from-a-restricted-network).
+
+The following request returns most of the wildcard domains required to authenticate and connect to Copilot on GitHub.com. There are some exceptions for specific services, or if you want to allow traffic based only for specific Copilot plans.
+
+```shell copy
+gh api meta -q '.domains | .website, .copilot'
+```
+
+In addition to these domains, we recommend allowing the apex domain `github.com`. This is not covered by `*.github.com` and is not returned by the above query, although it is returned by the API under `domains.actions`.
+
+### Specific required domains
+
+The following table lists specific domains required for Copilot. If you have already allowed the wildcard domains returned by the `/meta` endpoint, you will have already implicitly allowed most of these domains.
+
+| URL | Purpose | Relevant wildcard in `/meta` response |
+|:------------------------------------------------------------| :--------------------------------- | :---------------------------- |
+| `https://github.com/login/*`                                | Authentication | `github.com` |
+| `https://github.githubassets.com`                           | Authentication | `*.githubassets.com` |
+| `https://avatars.githubusercontent.com`                     | Authentication | `*.githubusercontent.com` |
+| `https://github.com/copilot/*`                              | Copilot on GitHub | `github.com` |
+| `https://github.com/enterprises/YOUR-ENTERPRISE/*`          | Authentication for managed user accounts, only required with Enterprise Managed Users | `github.com` |
+| `https://api.github.com/user`                               | User Management | `*.github.com` |
+| `https://api.github.com/copilot_internal/*`                 | User Management | `*.github.com` |
+| `https://collector.github.com/*`                            | Analytics telemetry | `*.github.com` |
+| `https://copilot-telemetry.githubusercontent.com/telemetry` | Copilot client telemetry | `*.githubusercontent.com` |
+| `https://default.exp-tas.com`                               | Copilot client experimentation | `default.exp-tas.com` |
+| `https://copilot-proxy.githubusercontent.com`               | API service for Copilot suggestions | `*.githubusercontent.com` |
+| `https://origin-tracker.githubusercontent.com`              | API service for Copilot suggestions | `*.githubusercontent.com` |
+| `https://*.githubcopilot.com/*`                             | API service for Copilot suggestions. Allows access to authorized users regardless of Copilot plan. Do not add this URL to your allowlist if you are using subscription-based network routing. For more information on subscription-based network routing, see [Manage Network Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access). | `*.githubcopilot.com` |
+| `https://*.individual.githubcopilot.com`                    | API service for Copilot suggestions. Allows access to authorized users via a Copilot Individual plan. Do not add this URL to your allowlist if you are using subscription-based network routing. | Not included |
+| `https://*.business.githubcopilot.com`                      | API service for Copilot suggestions. Allows access to authorized users via a Copilot Business plan. Do not add this URL to your allowlist if you want to use subscription-based network routing to block users from using Copilot Business on your network. | Not included |
+| `https://*.enterprise.githubcopilot.com`                    | API service for Copilot suggestions. Allows access to authorized users via a Copilot Enterprise plan. Do not add this URL to your allowlist if you want to use subscription-based network routing to block users from using Copilot Enterprise on your network. | Not included |
+| `https://copilot-reports.github.com`                        | Copilot usage metrics report downloads | `*.github.com` |
+| `https://copilot-reports-*.b01.azurefd.net`                 | Copilot usage metrics report downloads (fallback). Required for fallback scenarios where downloads bypass the custom domain and are served from an Azure Front Door CDN. | Not included |
+| `https://usagereports*.blob.core.windows.net`               | Copilot usage metrics report downloads (fallback). Required for fallback scenarios where downloads bypass the Azure Front Door CDN and are served directly from Azure Blob Storage. | Not included |
+
+## Copilot on GHE.com
+
+If you use GitHub Enterprise Cloud with data residency, your enterprise and GitHub's services are hosted on a unique subdomain of GHE.com.
+
+1. Allow access to the following domains, which cover most required services.
+
+   * `https://*.SUBDOMAIN.ghe.com`
+   * `https://SUBDOMAIN.ghe.com`
+
+   Replace SUBDOMAIN with your enterprise slug.
+
+1. If you plan to use public code detection, allow access to `https://origin-tracker.githubusercontent.com`. This is required to check generated code against public code hosted on GitHub.com. For more information, see [Code Referencing](https://docs.github.com/en/copilot/concepts/completions/code-referencing).
+
+All other domains that are required on GitHub.com are **not** required on GHE.com. For example:
+
+* Individual services have a dedicated endpoint on your subdomain (such as `https://copilot-proxy.SUBDOMAIN.ghe.com/`)
+* Client experimentation is disabled on GHE.com, so `https://default.exp-tas.com` is not required
+* Individual Copilot plans are not available on GHE.com, so subscription-based network routing (such as `https://*.individual.githubcopilot.com`) is not supported
+
+## Editor-specific requirements
+
+In addition to the URLs required to connect to Copilot, you must ensure your network rules meet the requirements the local client (for example, outbound requests to `vscode.dev` in Visual Studio Code). Find the documentation for your chosen client, for example:
+
+* [Network Connections in Visual Studio Code](https://code.visualstudio.com/docs/setup/network) in the Visual Studio documentation
+* [Install and use Visual Studio and Azure Services behind a firewall or proxy server](https://learn.microsoft.com/en-us/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server) in the Microsoft documentation
 
 ## Copilot voice features
 
@@ -50,7 +77,7 @@ Voice features in GitHub Copilot CLI and the GitHub Copilot app use Foundry Loca
 | `https://ai.azure.com`                         | Model catalog requests |
 | `https://api.catalog.azureml.ms`               | Detecting the optimal Azure region for model downloads |
 | `https://*.api.azureml.ms`                     | Regional model catalog endpoints |
-| `https://amlwlrt4*.blob.core.windows.net`[^7]  | Model downloads from regional Azure Blob Storage |
+| `https://amlwlrt4*.blob.core.windows.net`      | Model downloads from regional Azure Blob Storage. The `amlwlrt4*` wildcard matches the regional Azure Blob Storage accounts that Foundry Local voice features use to download models. The specific storage account depends on the Azure region closest to the user. |
 
 ## Copilot cloud agent recommended allowlist
 
@@ -398,16 +425,3 @@ The allowlist allows access to the following hosts:
 
 * `dl.k8s.io`
 * `pkgs.k8s.io`
-
-## Further reading
-
-* [Network Connections in Visual Studio Code](https://code.visualstudio.com/docs/setup/network) in the Visual Studio documentation
-* [Install and use Visual Studio and Azure Services behind a firewall or proxy server](https://learn.microsoft.com/en-us/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server) in the Microsoft documentation
-
-[^1]: Allows access to authorized users regardless of Copilot plan. Do not add this URL to your allowlist if you are using subscription-based network routing. For more information on subscription-based network routing, see [Manage Network Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access).
-[^2]: Allows access to authorized users via a Copilot Individual plan. Do not add this URL to your allowlist if you are using subscription-based network routing.
-[^3]: Allows access to authorized users via a Copilot Business plan. Do not add this URL to your allowlist if you want to use subscription-based network routing to block users from using Copilot Business on your network.
-[^4]: Allows access to authorized users via a Copilot Enterprise plan. Do not add this URL to your allowlist if you want to use subscription-based network routing to block users from using Copilot Enterprise on your network.
-[^5]: Required for fallback scenarios where Copilot usage metrics report downloads bypass the custom domain and are served from an Azure Front Door CDN.
-[^6]: Required for fallback scenarios where Copilot usage metrics report downloads bypass the Azure Front Door CDN and are served directly from Azure Blob Storage.
-[^7]: The `amlwlrt4*` wildcard matches the regional Azure Blob Storage accounts that Foundry Local voice features use to download models. The specific storage account depends on the Azure region closest to the user.
