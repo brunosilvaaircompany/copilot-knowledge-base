@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-11 13:36 UTC  
+> Atualizado em: 2026-08-12 08:11 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [GitHub Enterprise Server 3.22 release candidate](https://github.blog/changelog/2026-08-11-github-enterprise-server-3-22-release-candidate)
+
+**Data:** 2026-08-11  **Categorias:** `Release`, `collaboration tools`
+
+GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to&#8230;
+
+The post [GitHub Enterprise Server 3.22 release candidate](https://github.blog/changelog/2026-08-11-github-enterprise-server-3-22-release-candidate) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 

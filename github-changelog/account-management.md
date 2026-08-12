@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-11 13:36 UTC  
+> Atualizado em: 2026-08-12 08:11 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [Per-model token breakdown in the usage report](https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report)
+
+**Data:** 2026-08-11  **Categorias:** `Improvement`, `account management`, `copilot`
+
+You can now see a per-model breakdown of the tokens behind your AI credits in the usage report. For each model, the AI usage report shows the input, output, cache&#8230;
+
+The post [Per-model token breakdown in the usage report](https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
@@ -12,25 +22,5 @@
 Customers in India can now use eligible saved credit cards for automatic recurring payments on monthly and annual GitHub bills. This update uses a payment mandate, also known in the&#8230;
 
 The post [GitHub billing in India now supports automatic recurring payments](https://github.blog/changelog/2026-08-10-github-billing-in-india-now-supports-automatic-recurring-payments) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Copilot impact dashboard adds a return on investment section](https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section)
-
-**Data:** 2026-08-07  **Categorias:** `Improvement`, `account management`, `copilot`, `enterprise management tools`
-
-The Copilot impact dashboard now includes a &#8220;Potential return on investment&#8221; section that connects what you spend on Copilot to the pull request output you get back. What&#8217;s new Two&#8230;
-
-The post [Copilot impact dashboard adds a return on investment section](https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Copilot usage metrics API adds agent app activity](https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity)
-
-**Data:** 2026-08-07  **Categorias:** `Improvement`, `account management`, `copilot`, `enterprise management tools`
-
-Since agent apps arrived on GitHub, teams have been able to run agents from partners like Claude and Codex directly in their GitHub workflows. The Copilot usage metrics API now&#8230;
-
-The post [Copilot usage metrics API adds agent app activity](https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
