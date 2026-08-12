@@ -14,7 +14,7 @@ on:
 permissions:
   contents: write
   issues: write
-
+  pull-requests: read
 jobs:
   verdict:
     # Só interessa issue com o label do checker; para PR, o filtro real é o
