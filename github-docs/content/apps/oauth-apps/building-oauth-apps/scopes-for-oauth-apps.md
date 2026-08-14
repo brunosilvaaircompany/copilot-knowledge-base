@@ -6,9 +6,8 @@
 When setting up an OAuth app on GitHub, requested scopes are displayed to the user on the authorization form.
 
 > [!NOTE]
-> If you're building a GitHub App, you don’t need to provide scopes in your authorization request. For more on this, see [Authenticating With A GitHub App On Behalf Of A User](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user).
+> If you're building a GitHub App, you don’t provide scopes in your authorization request. For more on this, see [Authenticating With A GitHub App On Behalf Of A User](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user).
 
-If your OAuth app doesn't have access to a browser, such as a CLI tool, then you don't need to specify a scope for users to authenticate to your app. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#device-flow).
 
 Check headers to see what OAuth scopes you have, and what the API action accepts:
 
@@ -66,9 +65,10 @@ Name | Description
 &emsp;`manage_billing:enterprise` | Read and write enterprise billing data. For more information, see [Billing](https://docs.github.com/en/rest/billing).
 &emsp;`read:enterprise` | Read all data on an enterprise profile. Does not include profile data of enterprise members or organizations.
 **`read:audit_log`** | Read audit log data.
+**`offline_access`** | Requests an expiring access token and a refresh token, even if your OAuth app is not configured to use expiring tokens. Use this scope to test and gradually roll out support for expiring tokens. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#expiring-access-tokens).
 
 > [!NOTE]
-> Your OAuth app can request the scopes in the initial redirection. You can specify multiple scopes by separating them with a space using `%20`:
+> Your OAuth app can request the scopes in the initial authorization request. You can specify multiple scopes by separating them with a space using `%20`:
 >
 > ```text
 > https://github.com/login/oauth/authorize?

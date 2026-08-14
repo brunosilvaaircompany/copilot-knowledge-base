@@ -4,7 +4,7 @@
 
 If possible, consider using a GitHub App instead of an OAuth app. In general, GitHub Apps are preferred over OAuth apps. GitHub Apps use fine-grained permissions, give the user more control over which repositories the app can access, and use short-lived tokens. These properties can harden the security of your app by limiting the damage that could be done if your app's credentials are leaked.
 
-Similar to OAuth apps, GitHub Apps can still use OAuth 2.0 and generate a type of OAuth token (called a user access token) and take actions on behalf of a user. However, GitHub Apps can also act independently of a user.
+Similar to OAuth apps, GitHub Apps can still use OAuth 2.0 and generate a type of OAuth token (called an access token) and take actions on behalf of a user. However, GitHub Apps can also act independently of a user.
 
 For more information about GitHub Apps, see [About Creating GitHub Apps](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps).
 
@@ -57,13 +57,13 @@ To find the list of organizations a user is a member of, you can use the "List o
 
 ## Secure your app's credentials
 
-With a client secret, your app can authorize a user and generate user access tokens. These tokens can be used to make API requests on behalf of a user.
+With a client secret and a user's authorization code, your app can sign in a user and generate access tokens. These tokens can be used to make API requests on behalf of a user.
 
-You must store your app's client secret and any generated tokens securely. The storage mechanism and its relative security depends on your integrations architecture and the platform that it runs on. In general, you should use a storage mechanism that is intended to store sensitive data on the platform that you are using.
+You must store your app's client secret and any generated tokens securely, if possible. The storage mechanism and its relative security depends on your integrations architecture and the platform that it runs on. In general, you should use a storage mechanism that is intended to store sensitive data on the platform that you are using.
 
 ### Client secrets
 
-Client secrets are required to generate user access tokens for your app, unless your app uses the device flow. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#device-flow).
+Client secrets are required to generate access tokens for your app, unless your app uses the device flow. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#device-flow).
 
 If your app is a confidential client, meaning it can safely keep the client secret secure, consider storing your client secret in a key vault, such as [Azure Key Vault](https://azure.microsoft.com/products/key-vault), or as an encrypted environment variable or secret on your server.
 
@@ -73,7 +73,7 @@ If your app is a public client (a native app that runs on the user's device, CLI
 
 It is preferable to use the authorization code with PKCE over the device flow, if you are concerned about using the client secret in a public client. The device flow does not require redirect URIs at all, which means that an attacker can use the device flow to remotely impersonate your app as part of a phishing attack. For this reason, do not enable the device flow for your application unless you are using the app in a constrained environment (CLIs, IoT devices, or headless systems).
 
-### User access tokens
+### Access tokens
 
 If your app is a website or web app, you should encrypt the tokens on your back end and ensure there is security around the systems that can access the tokens. Consider storing refresh tokens in a separate place from active access tokens.
 
@@ -81,7 +81,23 @@ If your app is a native client, client-side app, or runs on a user device (as op
 
 ## Use the appropriate token type
 
-OAuth apps can generate user access tokens in order to make authenticated API requests. Your app should never use a personal access token or GitHub password to authenticate.
+OAuth apps can generate access tokens in order to make authenticated API requests. Your app should never use a personal access token or GitHub password to authenticate.
+
+
+
+## Use expiring access tokens
+
+To enforce regular token rotation and reduce the impact of a compromised token, you should configure your OAuth app to use access tokens that expire. When your app uses access tokens that expire, you will receive a refresh token when you generate a access token. The access token expires after eight hours, and the refresh token expires after six months. You can use the refresh token to generate a new access token and a new refresh token. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#expiring-access-tokens).
+
+To test and gradually roll out support for expiring tokens, you can opt in to receive expiring tokens for a sign-in by requesting the `offline_access` scope in addition to your other scopes. If your app supports both GitHub Enterprise Server and GitHub.com, be prepared for the `offline_access` scope to have no effect, because the GitHub Enterprise Server instance may not yet support expiring tokens. Check for the presence of the `expires_in` field in the token response to understand if your app has recieved an expiring token.
+
+
+
+## Enable wildcard matching for callback URLs only when necessary
+
+> [!WARNING]
+> Enabling wildcard matching can expose your app to security risks, because it allows an attacker to send authorization codes to any subdomain or subdirectory of the callback URL. Only enable wildcard matching if you absolutely need it and you are entirely certain that you control all possible subdomains and paths of the callback URL. For more information, see the [OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/info/rfc9700/#section-4.1.1-11).
+
 
 ## Make a plan for handling security breaches
 
@@ -89,7 +105,7 @@ You should have a plan in place so that you can handle any security breaches in 
 
 In the event that your app's client secret is compromised, you will need to generate a new secret, update your app to use the new secret, and delete your old secret.
 
-In the event that user access tokens are compromised, you should immediately revoke these tokens. For more information, see [OAUTH Applications](https://docs.github.com/en/rest/apps/oauth-applications#delete-an-app-token).
+In the event that access tokens are compromised, you should immediately revoke these tokens. For more information, see [OAUTH Applications](https://docs.github.com/en/rest/apps/oauth-applications#delete-an-app-token).
 
 ## Conduct regular vulnerability scans
 

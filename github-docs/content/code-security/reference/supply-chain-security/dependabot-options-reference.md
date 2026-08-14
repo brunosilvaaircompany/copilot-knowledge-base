@@ -586,7 +586,7 @@ Package manager | YAML value      | Supported versions |
 |  |
 | sbt          | `sbt`            | Not applicable   |
 |  |
-| Swift   | `swift`      | v5  |
+| Swift   | `swift`      | v5, v6  |
 | Terraform    | `terraform`      | >= 0.13, <= 1.15.x  |
 | uv           | `uv`             | v0 |
 |  |

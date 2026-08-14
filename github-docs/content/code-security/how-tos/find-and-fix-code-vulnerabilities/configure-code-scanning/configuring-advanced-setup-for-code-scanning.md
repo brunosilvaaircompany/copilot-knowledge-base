@@ -52,12 +52,10 @@ Using actions to run code scanning will use minutes. For more information, see [
 
 1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
-1. Scroll down to "Code Security", in the "CodeQL analysis" row select **Set up** {% octicon "triangle-down" aria-hidden="true" aria-label="triangle-down" %}, then click **Advanced**.
+1. In the "CodeQL analysis" row, select **Set up** {% octicon "triangle-down" aria-hidden="true" aria-label="triangle-down" %}, then click **Advanced**.
 
    > [!NOTE]
    > If you are switching from default setup to advanced setup, in the "CodeQL analysis" row, select {% octicon "kebab-horizontal" aria-label="Menu" %}, then click **{% octicon "workflow" aria-hidden="true" aria-label="workflow" %} Switch to advanced**. In the pop-up window that appears, click **Disable CodeQL**.
-
-   ![Screenshot of the "Code Security" section of "Advanced Security" settings. The "Advanced setup" button is highlighted with an orange outline.](/assets/images/help/security/advanced-code-scanning-setup-ghas.png)
 
 1. To customize how code scanning scans your code, edit the workflow.
 

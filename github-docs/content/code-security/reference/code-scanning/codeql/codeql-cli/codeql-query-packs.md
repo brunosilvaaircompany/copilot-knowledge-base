@@ -2,7 +2,7 @@
 
 ## CodeQL pack compatibility
 
-When a query pack is published, it includes pre-compiled representations of all the queries in it to increase analysis speed. However, if the version of CodeQL that performs the analysis is over 6 months newer than the the version that ran `codeql pack publish`, it may be necessary to compile the queries from source during analysis, slowing the process significantly.
+When a query pack is published, it includes pre-compiled representations of all the queries in it to increase analysis speed. However, if the version of CodeQL that performs the analysis is over 6 months newer than the version that ran `codeql pack publish`, it may be necessary to compile the queries from source during analysis, slowing the process significantly.
 
 A pack published by the _latest_ public release of CodeQL will be useable by the version of CodeQL that is used by code scanning and GitHub Actions, even though that is often a slightly older release.
 

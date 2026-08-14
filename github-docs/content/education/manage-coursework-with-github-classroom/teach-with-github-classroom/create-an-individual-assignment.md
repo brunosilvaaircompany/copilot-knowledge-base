@@ -141,7 +141,7 @@ The patterns for protected paths follow rules similar to shell filename globs. I
 
 ### Creating a pull request for feedback
 
-You can automatically create a pull request where you can provide feedback and answer a student's questions about an assignment. For more information about the review of changes in a pull request, see [Reviewing Changes In Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests).
+You can automatically create a pull request where you can provide feedback and answer a student's questions about an assignment. For more information about the review of changes in a pull request, see [Review Pull Requests](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests).
  For more information on leaving feedback in a pull request, see [Leave Feedback With Pull Requests](https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/leave-feedback-with-pull-requests).
 
 To create pull requests for the discussion of feedback, select **Enable feedback pull requests**.

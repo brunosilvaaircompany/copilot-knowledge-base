@@ -178,15 +178,15 @@ Additionally, these insights are available via the rule suites [REST API](/rest/
 
 
 
-### Rule insights dashboard
+### Viewing the rule insights dashboard
 
 > [!NOTE]
-> The rule insights dashboard is in public preview and subject to change. It is available for GitHub Team and GitHub Enterprise Cloud plans.
+> The rule insights dashboard is available for GitHub Team and GitHub Enterprise Cloud plans.
 
 The rule insights dashboard gives you a visual, high-level summary of rule evaluation activity for your repository, including:
 
-- **Successes, failures, and bypasses over time**: A chart showing trends in rule evaluation results, helping you spot spikes in blocked pushes or unusual patterns.
-- **Top bypassers**: A list of the most active bypassers for your rulesets.
+* **Successes, failures, and bypasses over time**: A chart showing trends in rule evaluation results, helping you spot spikes in blocked pushes or unusual patterns.
+* **Top bypassers**: A list of the most active bypassers for your rulesets.
 
 Each chart links back to the rule insights page with filters prefilled, so you can quickly drill into specific statuses, bypassers, or time ranges.
 
@@ -200,6 +200,8 @@ To view the dashboard:
 
 1. In the left sidebar, under "Code and automation," click **Rules**, then click **Insights**.
 1. At the top of the "Rule Insights" page, view the dashboard charts for an overview of rule evaluation activity.
+
+At the organization level, you can view the rule insights dashboard to review the evaluation activity of rulesets across your organization. See [Managing Rulesets For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization#viewing-the-rule-insights-dashboard).
 
 
 

@@ -19,5 +19,5 @@ If you select more than one merge method, collaborators can choose which type of
 
 ## Further reading
 
-* [About Pull Request Merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges)
-* [Merging A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
+* [Pull Request Merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges)
+* [Merging A Pull Request](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request)

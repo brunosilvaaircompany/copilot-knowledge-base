@@ -10,7 +10,7 @@ If you have access to GitHub Copilot via your organization or enterprise, you ca
 
 ## Getting command explanations and suggestions
 
-In the Terminal Chat chat window, type a question (for example, `how do i list all markdown files in my directory`) then press <kbd>Enter</kbd>.
+In the Terminal Chat window, type a question (for example, `how do i list all markdown files in my directory`) then press <kbd>Enter</kbd>.
 
    Copilot's answer is displayed below your question.
 

@@ -13,7 +13,7 @@ Once a pull request has passed all required branch protection checks, a user wit
 A merge queue may use GitHub Actions or your own CI provider to run required checks on pull requests in a merge queue. For more information, see [Actions](https://docs.github.com/en/actions).
 
 
-For more information on merging a pull request using a merge queue, see [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request-with-a-merge-queue).
+For more information on merging a pull request using a merge queue, see [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request-with-a-merge-queue).
 
 ## Configuring continuous integration (CI) workflows for merge queues
 
@@ -79,7 +79,7 @@ As pull requests are added to the merge queue, the merge queue ensures that they
 
 A merge queue creates temporary branches with a special prefix to validate pull request changes. When a pull request is added to the merge queue, the changes in the pull request are grouped into a `merge_group` with the latest version of the `base_branch` as well as changes from pull requests ahead of it in the queue. GitHub will merge all these changes into the `base_branch` once the checks required by the branch protections of `base_branch` pass.
 
-For information about merge methods, see [About Pull Request Merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
+For information about merge methods, see [Pull Request Merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges).
 
 ### Successful CI
 
@@ -134,5 +134,5 @@ The following scenario outlines what happens when a user jumps the queue.
 
 ## Further reading
 
-* [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request-with-a-merge-queue)
+* [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request-with-a-merge-queue)
 * [About Protected Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)

@@ -21,7 +21,7 @@ Some workflows require or benefit from rebasing instead of merging. By rebasing 
 
    ![Screenshot of the repository bar. The "Pull origin" button, displayed with an icon of a downward-facing arrow, is outlined in orange.](/assets/images/help/desktop/pull-button.png)
 
-1. Resolve any merge conflicts in your preferred way, using a text editor, the command line, or another tool. For more information, see [Addressing Merge Conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts).
+1. Resolve any merge conflicts in your preferred way, using a text editor, the command line, or another tool. For more information, see [Merge And Close Pull Requests](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests).
 
 
 ## Merging another branch into your project branch
@@ -63,7 +63,7 @@ Some workflows require or benefit from rebasing instead of merging. By rebasing 
 
 1. Click the branch you want to rebase into the current branch, then click **Rebase**.
 1. If you're sure you want to rebase, click **Begin Rebase**.
-1. Resolve any merge conflicts in your preferred way, using a text editor, the command line, or another tool. For more information, see [Addressing Merge Conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts).
+1. Resolve any merge conflicts in your preferred way, using a text editor, the command line, or another tool. For more information, see [Merge And Close Pull Requests](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests).
 
 1. To push your local changes, click **Force push origin**.
 

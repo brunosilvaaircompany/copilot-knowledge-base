@@ -61,10 +61,10 @@ An _authorized_ OAuth app has access to all of the user's or organization owner'
 
 | GitHub Apps | OAuth apps |
 | ----- | ----------- |
-| A GitHub App can request an installation access token by using a private key with a JSON web token format out-of-band. | An OAuth app can exchange a request token for an access token after a redirect via a web request. |
-| An installation token identifies the app as the GitHub Apps bot, such as @jenkins-bot. | An access token identifies the app as the user who granted the token to the app, such as @octocat. |
-| Installation access tokens expire after a predefined amount of time (currently 1 hour). | OAuth tokens remain active until they're revoked by the customer. |
-| GitHub Apps installed on organizations or repositories are subject to rate limits that scale with the number of installations. For more information, see [Rate Limits For GitHub Apps](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/rate-limits-for-github-apps). | OAuth tokens use the user's rate limit of 5,000 requests per hour. |
+| A GitHub App can request an installation access token by using a private key with a JSON web token format out-of-band. | An OAuth app requires interactive authentication by a user to receive a user access token. |
+| An installation token identifies the app as a GitHub App bot account, such as @jenkins[bot]. | A user access token identifies the app as the user who signed into the app, such as @octocat. |
+| Installation access tokens expire after a predefined amount of time (currently 1 hour). | OAuth app tokens re long-lived by default. You can also configure your OAuth app to use user access tokens that expire after eight hours and can be renewed with a refresh token. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#expiring-access-tokens). |
+| GitHub Apps installed on organizations or repositories are subject to rate limits that scale with the number of users and repositories in an account. For more information, see [Rate Limits For GitHub Apps](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/rate-limits-for-github-apps). | OAuth tokens use the user's rate limit of 5,000 requests per hour. |
 | Rate limit increases can be granted both at the GitHub Apps level (affecting all installations) and at the individual installation level. | Rate limit increases are granted per OAuth app. Every token granted to that OAuth app gets the increased limit. |
 | GitHub Apps can authenticate on behalf of the user. The flow to authorize is the same as the OAuth app authorization flow. User access tokens can expire and be renewed with a refresh token. For more information, see [Refreshing User Access Tokens](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/refreshing-user-access-tokens) and [Authenticating With A GitHub App On Behalf Of A User](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user). | The OAuth flow used by OAuth apps authorizes an OAuth app on behalf of the user. This is the same flow used to generate a GitHub App user access token. |
 
@@ -110,7 +110,7 @@ Unlike OAuth apps, GitHub Apps have targeted permissions that allow them to requ
 
 ## Machine vs. bot accounts
 
-Machine user accounts are OAuth-based personal accounts that segregate automated systems using GitHub's user system.
+Machine user accounts are personal accounts that segregate automated systems using GitHub's user system, interacting with GitHub via PATs or OAuth app tokens.
 
 Bot accounts are specific to GitHub Apps and are built into every GitHub App.
 

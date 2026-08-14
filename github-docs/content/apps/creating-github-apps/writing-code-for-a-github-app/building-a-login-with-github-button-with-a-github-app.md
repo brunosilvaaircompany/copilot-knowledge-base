@@ -133,7 +133,7 @@ These steps lead you through writing code to generate a user access token. To sk
    end
    ```
 
-1. Add the following code to `app.rb` to handle requests to your app's callback URL and get the `code` parameter from the request. Replace `CALLBACK_URL` with the callback URL for your app, minus the domain. For example, if your callback URL is `http://localhost:4567/github/callback`, replace `CALLBACK_URL` with `/github/callback`.
+1. Add the following code to `app.rb` to handle requests to your app's callback URL and get the `code` parameter from the request. Replace `CALLBACK_URL` with the callback URL for your app, minus the domain. For example, if your callback URL is `http://localhost/github/callback`, replace `CALLBACK_URL` with `/github/callback`.
 
    ```ruby copy
    get "CALLBACK_URL" do
@@ -302,7 +302,7 @@ These steps lead you through writing code to generate a user access token. To sk
 
 This is the full code example that was outlined in the previous section.
 
-Replace `CALLBACK_URL` with the callback URL for your app, minus the domain. For example, if your callback URL is `http://localhost:4567/github/callback`, replace `CALLBACK_URL` with `/github/callback`.
+Replace `CALLBACK_URL` with the callback URL for your app, minus the domain. For example, if your callback URL is `http://localhost/github/callback`, replace `CALLBACK_URL` with `/github/callback`.
 
 ```ruby copy
 require "sinatra"
@@ -417,7 +417,7 @@ This tutorial used a single callback URL, but your app can have up to 10 callbac
 
 When you link to `https://github.com/login/oauth/authorize`, you can pass additional query parameters. For more information, see [Generating A User Access Token For A GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app#using-the-web-application-flow-to-generate-a-user-access-token).
 
-Unlike a traditional OAuth token, the user access token does not use scopes so you cannot specify scopes via the `scope` parameter. Instead, it uses fine-grained permissions. A user access token only has permissions that both the user and the app have.
+Unlike OAuth apps, GitHub Apps do not use scopes, so you don't specify scopes at runtime via the `scope` parameter. Instead, they use fine-grained permissions set during app creation. A user access token only has access to a resource if both the user and the app have that access.
 
 ### Adjust the code to meet your app's needs
 

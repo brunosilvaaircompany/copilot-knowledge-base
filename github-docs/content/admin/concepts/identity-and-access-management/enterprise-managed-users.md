@@ -10,7 +10,7 @@ With Enterprise Managed Users, you manage the lifecycle and authentication of yo
 * If your enterprise uses OIDC SSO, GitHub will validate access to your enterprise and its resources using your IdP's **Conditional Access Policy (CAP)**. See [About Support For Your Idps Conditional Access Policy](https://docs.github.com/en/admin/managing-iam/configuring-authentication-for-enterprise-managed-users/about-support-for-your-idps-conditional-access-policy).
 * Managed user accounts **cannot create public content** or collaborate outside your enterprise. See [Abilities And Restrictions Of Managed User Accounts](https://docs.github.com/en/admin/managing-iam/understanding-iam-for-enterprises/abilities-and-restrictions-of-managed-user-accounts).
 
-> [!NOTE] Enterprise Managed Users is not the best solution for every customer. To determine whether it's right for your enterprise, see [Choose An Enterprise Type](https://docs.github.com/en/enterprise-onboarding/getting-started-with-your-enterprise/choose-an-enterprise-type).
+> [!NOTE] Enterprise Managed Users is not the best solution for every customer. To determine whether it's right for your enterprise, see [Choose An Enterprise Type](https://docs.github.com/en/admin/concepts/enterprise-fundamentals/choose-an-enterprise-type).
 
 ## How does EMUs integrate with identity management systems?
 

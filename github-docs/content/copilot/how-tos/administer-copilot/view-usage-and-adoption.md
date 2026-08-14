@@ -30,9 +30,3 @@ For deeper analysis, you can export NDJSON reports from the dashboard and use Co
 * Which users have `user_initiated_interaction_count` > 0 but low `code_acceptance_activity_count`?
 * Are there specific teams with lower adoption rates?
 ```
-
-## Next steps
-
-* To learn how to interpret the data in each chart and act on usage trends, see [Interpret Copilot Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics).
-* To learn how to track license activation and initial usage of GitHub Copilot with usage metrics, see [Track Usage And Adoption](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/track-usage-and-adoption).
-* To access usage data programmatically, see [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics).

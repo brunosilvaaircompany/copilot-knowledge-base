@@ -117,10 +117,10 @@ You can set the default review effort level that Copilot code review uses for au
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, then **Code review**.
 1. Next to "Review effort level," select the default effort level for automatic reviews in repositories in your organization.
-   * **Lite**: Standard review (default).
+   * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
 
-Balanced reviews use more GitHub Actions minutes and AI credits. If you use Balanced effort, consider configuring larger or self-hosted runners for better performance. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
+Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. For more information on the cost of review effort levels, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#estimated-consumption).
 
 ## Configuring review effort level for a repository
 
@@ -135,7 +135,7 @@ You can override the organization default and set a different default review eff
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, then **Code review**.
 1. Next to "Review effort level," select the effort level for automatic reviews in this repository.
-   * **Lite**: Standard review (default).
+   * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
 
-Balanced reviews use more GitHub Actions minutes and AI credits. If you use Balanced effort, consider configuring larger or self-hosted runners for better performance. See [Configure Runners](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-runners).
+Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. For more information on the cost of review effort levels, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#estimated-consumption).

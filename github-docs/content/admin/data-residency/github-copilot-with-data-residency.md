@@ -77,6 +77,9 @@ Users will be able to see available models for your region in the model selector
 * GPT-5.4 mini
 * GPT-5.4 nano
 * GPT-5.5
+* GPT-5.6 Luna
+* GPT-5.6 Sol
+* GPT-5.6 Terra
 * Claude Haiku 4.5
 * Claude Opus 4.5
 * Claude Opus 4.6

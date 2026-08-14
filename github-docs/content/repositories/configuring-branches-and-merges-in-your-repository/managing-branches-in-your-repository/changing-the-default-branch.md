@@ -2,7 +2,7 @@
 
 ## About changing the default branch
 
-You can choose the default branch for a repository. The default branch is the base branch for pull requests and code commits. For more information about the default branch, see [About Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch).
+You can choose the default branch for a repository. The default branch is the base branch for pull requests and code commits. For more information about the default branch, see [Branches](https://docs.github.com/en/pull-requests/reference/branches#about-the-default-branch).
 
 You can also rename the default branch. For more information, see [Renaming A Branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/renaming-a-branch).
 
@@ -11,7 +11,7 @@ You can set the name of the default branch for new repositories. For more inform
 
 ## Prerequisites
 
-To change the default branch, your repository must have more than one branch. For more information, see [Creating And Deleting Branches Within Your Repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch).
+To change the default branch, your repository must have more than one branch. For more information, see [Managing Branches Within Your Repository](https://docs.github.com/en/pull-requests/how-tos/commit-changes/managing-branches-within-your-repository#creating-a-branch).
 
 
 

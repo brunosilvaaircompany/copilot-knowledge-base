@@ -202,7 +202,7 @@ In Azure, create a storage account and make a note of your connection string. Fo
 
 #### Configuring blob storage in the Management Console of your GitHub Enterprise Server instance
 
-After you set up an AWS S3 storage bucket or Azure Blob Storage storage account, configure blob storage in the Management Console of your GitHub Enterprise Server instance. For more information about the Management Console, see [Administering your instance from the Management Console](/enterprise-server@latest/admin/administering-your-instance/administering-your-instance-from-the-web-ui).
+After you set up an AWS S3 storage bucket or Azure Blob Storage account, configure blob storage in the Management Console of your GitHub Enterprise Server instance. For more information about the Management Console, see [Administering your instance from the Management Console](/enterprise-server@latest/admin/administering-your-instance/administering-your-instance-from-the-web-ui).
 
 1. From an administrative account on GitHub Enterprise Server, in the upper-right corner of any page, click {% octicon "rocket" aria-label="Site admin" %}.
 1. If you're not already on the "Site admin" page, in the upper-left corner, click **Site admin**.
@@ -696,7 +696,7 @@ You will also need an AWS access key and secret key with the following permissio
 > GitHub Enterprise Importer does not delete your archive from AWS after your migration is finished. To reduce storage costs, we recommend configuring auto-deletion of your archive after a period of time. For more information, see [Setting lifecycle configuration on a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-set-lifecycle-configuration-intro.html) in the AWS documentation.
 
 
-### Setting up an Azure Blob Storage storage account
+### Setting up an Azure Blob Storage account
 
 In Azure, create a storage account and make a note of your connection string. For more information, see [Manage storage account access keys](https://learn.microsoft.com/en-gb/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#regenerate-access-keys) in Microsoft Docs.
 
@@ -735,7 +735,7 @@ If you set up blob storage with a **cloud provider** (as opposed to local storag
 > [!NOTE]
 > You only need to configure blob storage in the Management Console if you use GitHub Enterprise Server 3.8 or higher. If you use 3.7 or lower, configure your credentials in the GitHub CLI instead.
 
-After you set up an AWS S3 storage bucket or Azure Blob Storage storage account, configure blob storage in the Management Console of your GitHub Enterprise Server instance. For more information about the Management Console, see [Administering your instance from the Management Console](/enterprise-server@latest/admin/administering-your-instance/administering-your-instance-from-the-web-ui).
+After you set up an AWS S3 storage bucket or Azure Blob Storage account, configure blob storage in the Management Console of your GitHub Enterprise Server instance. For more information about the Management Console, see [Administering your instance from the Management Console](/enterprise-server@latest/admin/administering-your-instance/administering-your-instance-from-the-web-ui).
 
 1. From an administrative account on GitHub Enterprise Server, in the upper-right corner of any page, click {% octicon "rocket" aria-label="Site admin" %}.
 1. If you're not already on the "Site admin" page, in the upper-left corner, click **Site admin**.

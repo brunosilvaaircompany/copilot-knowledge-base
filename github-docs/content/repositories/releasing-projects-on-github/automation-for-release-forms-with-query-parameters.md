@@ -19,4 +19,4 @@ Query parameter | Example
 ## Further reading
 
 * [Creating An Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue#creating-an-issue-from-a-url-query)
-* [Using Query Parameters To Create A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/using-query-parameters-to-create-a-pull-request)
+* [Using Query Parameters To Create A Pull Request](https://docs.github.com/en/pull-requests/reference/using-query-parameters-to-create-a-pull-request)

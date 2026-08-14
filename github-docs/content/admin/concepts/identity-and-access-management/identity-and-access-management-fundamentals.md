@@ -7,7 +7,7 @@
 To control access to your enterprise's resources, you can allow people to use a personal account on GitHub.com and optionally configure additional SAML access restrictions, or you can provision and control the accounts for your enterprise using your identity provider (IdP) with Enterprise Managed Users.
 
 
-After learning more about authentication and provisioning for each of these options, to determine which method is best for your enterprise, see [Choose An Enterprise Type](https://docs.github.com/en/enterprise-onboarding/getting-started-with-your-enterprise/choose-an-enterprise-type).
+After learning more about authentication and provisioning for each of these options, to determine which method is best for your enterprise, see [Choose An Enterprise Type](https://docs.github.com/en/admin/concepts/enterprise-fundamentals/choose-an-enterprise-type).
 
 {% elsif ghes %}
 

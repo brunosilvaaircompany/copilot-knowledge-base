@@ -8,7 +8,7 @@ Every user of the proxy server or firewall also needs to configure their own env
 
 We recommend using the `/meta` API endpoint to find the domains required to use GitHub on a restricted network. For more information, see [Allowing Access To Githubs Services From A Restricted Network](https://docs.github.com/en/get-started/using-github/allowing-access-to-githubs-services-from-a-restricted-network).
 
-The following request returns most of the wildcard domains required to authenticate and connect to Copilot on GitHub.com. There are some exceptions for specific services, or if you want to allow traffic based only for specific Copilot plans.
+The following request returns most of the wildcard domains required to authenticate and connect to Copilot on GitHub.com. There are some exceptions for specific services, or if you want to allow traffic only for users with specific Copilot plans.
 
 ```shell copy
 gh api meta -q '.domains | .website, .copilot'
@@ -63,7 +63,7 @@ All other domains that are required on GitHub.com are **not** required on GHE.co
 
 ## Editor-specific requirements
 
-In addition to the URLs required to connect to Copilot, you must ensure your network rules meet the requirements the local client (for example, outbound requests to `vscode.dev` in Visual Studio Code). Find the documentation for your chosen client, for example:
+In addition to the URLs required to connect to Copilot, you must ensure your network rules meet the requirements of the local client (for example, outbound requests to `vscode.dev` in Visual Studio Code). Find the documentation for your chosen client, for example:
 
 * [Network Connections in Visual Studio Code](https://code.visualstudio.com/docs/setup/network) in the Visual Studio documentation
 * [Install and use Visual Studio and Azure Services behind a firewall or proxy server](https://learn.microsoft.com/en-us/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server) in the Microsoft documentation

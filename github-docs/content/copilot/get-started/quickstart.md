@@ -152,7 +152,7 @@ After you've installed Windows Terminal Canary, you can use Copilot in [Terminal
 
 1. Open **Terminal Chat (Experimental)** in the dropdown menu.
 
-1. In the Terminal Chat chat window, type `how do i list all markdown files in my directory` then press <kbd>Enter</kbd>.
+1. In the Terminal Chat window, type `how do i list all markdown files in my directory` then press <kbd>Enter</kbd>.
 
    Copilot's answer is displayed below your question.
 

@@ -60,7 +60,7 @@ Currently, the following data is **not** migrated.
 * Dependabot secrets
 * Discussions at the repository level
 * Edit history of issue comments and pull request comments
-* Fork relationships between repositories (see [About Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks))
+* Fork relationships between repositories (see [Forks](https://docs.github.com/en/pull-requests/reference/forks))
 * GitHub Actions secrets, variables, environments, self-hosted runners, larger runners, workflow artifacts, or workflow run history
 * GitHub Apps and GitHub App installations
 * Git LFS objects and large binaries (repositories using Git LFS are still supported, see [Limitations of GitHub Enterprise Importer](#limitations-of-github-enterprise-importer))
@@ -169,7 +169,7 @@ Currently, the following data is **not** migrated.
 * Dependabot secrets
 * Discussions at the repository level
 * Edit history of issue comments and pull request comments
-* Fork relationships between repositories (see [About Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks))
+* Fork relationships between repositories (see [Forks](https://docs.github.com/en/pull-requests/reference/forks))
 * GitHub Actions secrets, variables, environments, self-hosted runners, larger runners, workflow artifacts, or workflow run history
 * GitHub Apps and GitHub App installations
 * Git LFS objects and large binaries (repositories using Git LFS are still supported, see [Limitations of GitHub Enterprise Importer](#limitations-of-github-enterprise-importer))

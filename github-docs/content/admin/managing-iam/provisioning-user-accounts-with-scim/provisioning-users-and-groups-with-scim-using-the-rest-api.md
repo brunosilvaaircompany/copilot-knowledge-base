@@ -41,7 +41,7 @@ GitHub does not expressly support mixing partner IdPs for authentication and pro
 ## Prerequisites
 
 
-* When you began using GitHub Enterprise Cloud, you must have chosen to create an enterprise with managed users. For more information, see [Choose An Enterprise Type](https://docs.github.com/en/enterprise-onboarding/getting-started-with-your-enterprise/choose-an-enterprise-type).
+* When you began using GitHub Enterprise Cloud, you must have chosen to create an enterprise with managed users. For more information, see [Choose An Enterprise Type](https://docs.github.com/en/admin/concepts/enterprise-fundamentals/choose-an-enterprise-type).
 
 * Before you configure provisioning, you must configure authentication for your users. This configuration requires setup on both your identity management system and GitHub. For more information, see [Configuring Authentication For Enterprise Managed Users](https://docs.github.com/en/admin/managing-iam/configuring-authentication-for-enterprise-managed-users).
 

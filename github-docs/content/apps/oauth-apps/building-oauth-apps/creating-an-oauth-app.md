@@ -39,10 +39,14 @@
 1. Optionally, in "Application description", type a description of your app that users will see.
 1. In "Authorization callback URL", type the callback URL of your app.
 
-   > [!NOTE]
-   > OAuth apps cannot have multiple callback URLs, unlike GitHub Apps.
+   
+
+   You can enter up to 10 callback URLs. To add additional callback URLs, click **Add callback URL**.
+
+   
 
 1. If your OAuth app will use the device flow to identify and authorize users, click **Enable Device Flow**. For more information about the device flow, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#device-flow).
+1. **Expire user access tokens** is enabled by default. If your app's authentication code hasn't been updated to support short-lived tokens, uncheck the box until support is added. For more information about expiring tokens, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#expiring-access-tokens).
 1. Click **Register application**.
 
 ## Further reading

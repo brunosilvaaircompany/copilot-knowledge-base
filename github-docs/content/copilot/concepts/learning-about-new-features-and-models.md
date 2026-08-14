@@ -49,7 +49,7 @@ You can find information about the models available and upcoming models in the f
 
 
 
-On Copilot Business and Copilot Enterprise plans, a new policy will control whether unconfigured generally available (GA) models default to enabled or disabled. For more information, see [Automatic Enablement](https://docs.github.com/en/copilot/concepts/models/automatic-enablement).
+On Copilot Business and Copilot Enterprise plans, a new policy will control whether unconfigured generally available (GA) models default to enabled or disabled. For more information, see [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
 
 
 

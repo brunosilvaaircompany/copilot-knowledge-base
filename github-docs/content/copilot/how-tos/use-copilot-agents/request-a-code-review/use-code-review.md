@@ -39,6 +39,17 @@ You can also request a review from Copilot through the GitHub REST API by reques
 
 By default, you manually request a review from Copilot on each pull request, in the same way you would request a review from a human. However, you can set up Copilot to automatically review all pull requests. See [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review).
 
+## Choosing a review effort level
+
+Copilot code review supports multiple review effort levels, so you can choose the level of thoroughness that matches the criticality of your code.
+
+* **Lite**: Standard review that provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies (default).
+* **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes, using a higher-reasoning model.
+
+You can select the review effort level in the pull request, under the **Reviewers** section where Copilot appears as a reviewer. Organization owners and repository administrators can also set a default effort level for automatic reviews.
+
+For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
+
 ## Working with suggested changes provided by Copilot
 
 Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.

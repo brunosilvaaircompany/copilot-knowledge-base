@@ -144,6 +144,31 @@ You can import a ruleset from another repository or organization using the expor
 
 
 
+
+## Viewing the rule insights dashboard
+
+Use the rule insights dashboard to review the evaluation activity of rulesets across your organization. You can:
+
+* Review aggregated rule evaluation metrics across all repositories in your organization to understand where and how your rulesets take effect.
+* Identify the repositories with the most bypasses so you can prioritize your review.
+* Filter results by evaluation status, branch, ruleset, and date range to focus on the activity that matters to you.
+* Export the data to a CSV file for further analysis.
+
+1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
+
+1. Select an organization by clicking on it.
+1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
+
+   ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
+
+
+1. In the sidebar, under "Code, planning, and automation",
+ click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Dashboard**.
+
+
+
+
+
 ## Viewing insights for rulesets
 
 You can view insights for rulesets to see how rulesets are affecting the repositories in your organization. On the "Rule Insights" page, you will see a timeline of the following user actions. You can use filters to find what you're looking for.

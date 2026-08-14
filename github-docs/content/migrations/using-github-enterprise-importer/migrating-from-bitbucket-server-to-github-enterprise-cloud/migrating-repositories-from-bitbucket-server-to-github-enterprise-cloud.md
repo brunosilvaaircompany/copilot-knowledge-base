@@ -168,7 +168,7 @@ When you're ready to run your migration, you will need to provide your AWS crede
 You will also need to pass in the name of the S3 bucket using the `--aws-bucket-name` argument.
 
 
-### Setting up an Azure Blob Storage storage account
+### Setting up an Azure Blob Storage account
 
 In Azure, create a storage account and make a note of your connection string. For more information, see [Manage storage account access keys](https://learn.microsoft.com/en-gb/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#regenerate-access-keys) in Microsoft Docs.
 

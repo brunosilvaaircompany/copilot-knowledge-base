@@ -12,7 +12,7 @@ After authentication and provisioning is reconfigured at the end of the migratio
 
 ## Prerequisites
 
-* When you began using GitHub Enterprise Cloud, you must have chosen to create an enterprise with managed users. For more information, see [Choose An Enterprise Type](https://docs.github.com/en/enterprise-onboarding/getting-started-with-your-enterprise/choose-an-enterprise-type).
+* When you began using GitHub Enterprise Cloud, you must have chosen to create an enterprise with managed users. For more information, see [Choose An Enterprise Type](https://docs.github.com/en/admin/concepts/enterprise-fundamentals/choose-an-enterprise-type).
 
 * Review and understand the requirements for integration with Enterprise Managed Users from an external identity management system. To simplify configuration and support, you can use a single partner IdP for a "paved-path" integration. Alternatively, you can configure authentication using a system that adheres to the Security Assertion Markup Language (SAML) 2.0 and System for Cross-domain Identity Management (SCIM) 2.0 standards. For more information, see [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users#about-authentication-and-user-provisioning).
 * You must have already configured authentication and SCIM provisioning for your enterprise.

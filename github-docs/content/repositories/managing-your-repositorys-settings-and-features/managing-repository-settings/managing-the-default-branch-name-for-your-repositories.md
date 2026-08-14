@@ -2,7 +2,7 @@
 
 ## About management of the default branch name
 
-When you create a new repository on GitHub, the repository contains one branch, which is the default branch. You can change the name that GitHub uses for the default branch in new repositories you create. For more information about the default branch, see [About Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch).
+When you create a new repository on GitHub, the repository contains one branch, which is the default branch. You can change the name that GitHub uses for the default branch in new repositories you create. For more information about the default branch, see [Branches](https://docs.github.com/en/pull-requests/reference/branches#about-the-default-branch).
 
 You can change the default branch for an existing repository. For more information, see [Changing The Default Branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch).
 

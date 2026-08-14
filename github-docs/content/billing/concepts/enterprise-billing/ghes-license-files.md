@@ -12,7 +12,7 @@ If your license expires, you won't be able to access GitHub Enterprise Server vi
 
 ## Next steps
 
-* To download your license file, see [Download Your License](https://docs.github.com/en/billing/how-tos/manage-server-licenses/download-your-license).
+* To download your license file, see [Download Your License](https://docs.github.com/en/enterprise-cloud@latest/billing/how-tos/manage-server-licenses/download-your-license).
 * To upload your license file to GitHub Enterprise Server, see [Upload New License](https://docs.github.com/en/enterprise-server@latest/billing/how-tos/manage-server-licenses/upload-new-license) in the GitHub Enterprise Server documentation.{% elsif ghes %}[Upload New License](https://docs.github.com/en/billing/how-tos/manage-server-licenses/upload-new-license).
 * To back up your GitHub Enterprise Server instance, see [Configuring backups on your appliance](/enterprise-server@latest/admin/backing-up-and-restoring-your-instance/configuring-backups-on-your-instance) in the GitHub Enterprise Server documentation.{% elsif ghes %}[Configuring Backups On Your Instance](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/configuring-backups-on-your-instance).
 * If you have questions about renewing your license, contact [GitHub's Sales team](https://github.com/enterprise/contact).

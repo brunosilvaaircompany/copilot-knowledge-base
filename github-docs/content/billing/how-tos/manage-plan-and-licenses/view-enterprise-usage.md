@@ -55,7 +55,7 @@ The date of the last license sync occurred is shown under "Enterprise Server ins
 * "GitHub Connect server usage synced" indicates license usage between environments was automatically updated.
 * "GitHub Connect server usage never synced" indicates that GitHub Connect is configured, but license usage between environments has never updated successfully.
 
-For more information, see [Sync License Usage](https://docs.github.com/en/billing/how-tos/manage-server-licenses/sync-license-usage).
+For more information, see [Sync License Usage](https://docs.github.com/en/enterprise-cloud@latest/billing/how-tos/manage-server-licenses/sync-license-usage).
 
 ### Synchronization of Visual Studio subscriptions with GitHub Enterprise subscriptions
 

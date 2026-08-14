@@ -17,4 +17,4 @@ You can also see deployment information on the "Conversation" tab of a pull requ
 
 ## Further reading
 
-* [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+* [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests)

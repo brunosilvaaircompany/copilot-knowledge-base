@@ -21,8 +21,3 @@ To access Copilot usage metrics, the **"Copilot usage metrics"** policy must be 
 1. Click the **Insights** tab.
 
 1. In the left sidebar, click **Copilot impact**.
-
-## Next steps
-
-* To learn how to interpret cohort shifts and what action to take, see [Interpret Copilot Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics#reviewing-adoption-cohorts).
-* For raw per-team NDJSON data, such as for custom BI reporting, see [Team Level Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/team-level-metrics).

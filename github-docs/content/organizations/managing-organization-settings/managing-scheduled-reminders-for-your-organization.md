@@ -45,7 +45,7 @@ This limit is **per reminder configuration** and **per repository owner**. If yo
    * To receive reminders for a subset of repositories, click **Only select repositories**, then select one or more repositories that the chosen team has access to.
 
 1. Under "Filter by team assigned to review code", select the **Add a team** dropdown menu and click one or more teams. You can add up to 100 teams. If the team you select doesn't have access to the "Tracked repositories" selected above, you won't be able to create the scheduled reminder.
-1. Optionally, to exclude draft pull requests from scheduled reminders, select **Ignore drafts**. For more information, see [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests).
+1. Optionally, to exclude draft pull requests from scheduled reminders, select **Ignore drafts**. For more information, see [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 
 1. Optionally, to only include pull requests where a review is specifically requested from the team or a team member, select **Require review requests**. If you don't select this option, all pull requests are included in the scheduled reminder.
 

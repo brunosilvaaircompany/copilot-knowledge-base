@@ -6,7 +6,7 @@
 
 ## About feedback pull requests for assignments
 
-You can automatically create a pull request where you can provide feedback and answer a student's questions about an assignment. For more information about the review of changes in a pull request, see [Reviewing Changes In Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests).
+You can automatically create a pull request where you can provide feedback and answer a student's questions about an assignment. For more information about the review of changes in a pull request, see [Review Pull Requests](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests).
 
 
 When you enable the pull request for feedback for an assignment, GitHub Classroom will create a special pull request titled **Feedback** in the assignment repository for each student or team. The pull request automatically shows every commit that a student pushed to the assignment repository's default branch.

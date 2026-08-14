@@ -36,7 +36,7 @@ You can use repositories to manage your work and collaborate with others.
 * You can use issues to collect user feedback, report software bugs, and organize tasks you'd like to accomplish. For more information, see [About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues).
 * You can use GitHub Discussions to ask and answer questions, share information, make announcements, and conduct or participate in conversations about a project. For more information, see [About Discussions](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions).
 
-* You can use pull requests to propose changes to a repository. For more information, see [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+* You can use pull requests to propose changes to a repository. For more information, see [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests).
 * You can use Projects to organize and prioritize your issues and pull requests. For more information, see [About Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
 
@@ -91,7 +91,7 @@ If your organization is owned by an enterprise account, you can use internal rep
 
 
 
-Organization members have read permissions to all internal repositories in an enterprise, including those in organizations they are not a member of. Internal repositories are not visible to people outside of the enterprise, including outside collaborators on organization repositories. For more information, see [Abilities Of Roles](https://docs.github.com/en/admin/managing-accounts-and-repositories/managing-roles-in-your-enterprise/abilities-of-roles#enterprise-members) and [Repository Roles For An Organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization).
+Organization members have read permissions to all internal repositories in an enterprise, including those in organizations they are not a member of. Internal repositories are not visible to people outside of the enterprise, including outside collaborators on organization repositories. For more information, see [Abilities Of Roles](https://docs.github.com/en/admin/managing-accounts-and-repositories/managing-roles-in-your-enterprise/abilities-of-roles) and [Repository Roles For An Organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization).
 
 
 Internal repositories are the default setting for all new repositories created in an organization owned by an enterprise account.
@@ -108,5 +108,5 @@ Here are some helpful resources for taking your next steps with repositories.
 
 * [Best Practices For Repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/best-practices-for-repositories): Learn how to use repositories most effectively.
 * [Creating A New Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository): Create a new repository.
-* [Creating And Deleting Branches Within Your Repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository): Learn how to create and delete branches within your repository.
-* [Creating A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request): Create a pull request to propose and collaborate on changes to a repository.
+* [Managing Branches Within Your Repository](https://docs.github.com/en/pull-requests/how-tos/commit-changes/managing-branches-within-your-repository): Learn how to create and delete branches within your repository.
+* [Creating A Pull Request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request): Create a pull request to propose and collaborate on changes to a repository.

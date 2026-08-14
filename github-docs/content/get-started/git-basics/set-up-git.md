@@ -50,7 +50,7 @@ You now have Git and GitHub all set up. You can now choose to create a repositor
 * Creating a repository for your project allows you to store code in GitHub. This provides a backup of your work that you can choose to share with other developers. For more information, see [Quickstart For Repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories).
 
 
-* Forking a repository will allow you to make changes to another repository without affecting the original. For more information, see [Fork A Repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
+* Forking a repository will allow you to make changes to another repository without affecting the original. For more information, see [Fork A Repo](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo).
 
 
 * Each repository on GitHub is owned by a person or an organization. You can interact with the people, repositories, and organizations by connecting and following them on GitHub. For more information, see [Discovering Projects On GitHub](https://docs.github.com/en/get-started/exploring-projects-on-github/discovering-projects-on-github).

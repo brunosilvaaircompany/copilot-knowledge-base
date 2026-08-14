@@ -55,6 +55,8 @@ If a repository in your organization has Dependabot enabled but GitHub Actions d
 
 If you run into Dependabot timeouts and out-of-memory errors, you may want to use larger runners, as you can configure these runners to have more resources. You can only enable larger runners for Dependabot **for an organization**.
 
+Using larger runners can help update jobs finish within the 55-minute time limit, but does not increase the limit.
+
 1. Add a larger runner to your organization and ensure the name specified is `dependabot`. For more information, see [Manage Larger Runners](https://docs.github.com/en/actions/how-tos/manage-runners/larger-runners/manage-larger-runners#adding-a-larger-runner-to-an-organization).
 1. Opt in the organization to self-hosted runners. For more information, see [Configure On Self Hosted Runners](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-on-self-hosted-runners#for-your-organization). This step is required, as it ensures that future Dependabot jobs will run on the larger GitHub-hosted runner that has the `dependabot` name.
 

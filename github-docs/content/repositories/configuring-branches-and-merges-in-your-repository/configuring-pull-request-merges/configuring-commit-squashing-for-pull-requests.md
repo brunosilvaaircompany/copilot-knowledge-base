@@ -3,7 +3,7 @@
 You can configure pull request merge options to meet your workflow needs and preferences for managing Git history. For more information, see [Configuring Pull Request Merges](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges).
 
 
-For information about the default commit messages for squash merges, see [About Pull Request Merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#merge-message-for-a-squash-merge).
+For information about the default commit messages for squash merges, see [Pull Request Merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges#merge-message-for-a-squash-merge).
 
 
 1. On GitHub, navigate to the main page of the repository.
@@ -23,5 +23,5 @@ If you select more than one merge method, collaborators can choose which type of
 
 ## Further reading
 
-* [About Pull Request Merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges)
-* [Merging A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
+* [Pull Request Merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges)
+* [Merging A Pull Request](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request)

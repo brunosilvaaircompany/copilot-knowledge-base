@@ -449,7 +449,10 @@ The configuration file can be located within the repository you are analyzing, o
 
 
 
-If the configuration file is located in an external private repository and you want to use it for a code scanning default setup analysis, you can set up a _Git Source_ private registry configuration for your organization with credentials that allow access to the private repository containing the configuration file. For information about how to set up a private registry configuration, see [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
+You can also use custom configuration files in default setup and share the same configuration across multiple repositories. For more information, see [Edit Default Setup](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/manage-your-configuration/edit-default-setup#customizing-default-setup-with-a-configuration-file).
+
+The repository containing the configuration file can be public, internal, or private. To use a file from an internal or private repository other than the one being analyzed with default setup, you must set up a _Git Source_ private registry configuration. We recommend setting the registry URL to the full URL of the repository containing the configuration file, rather than the organization URL, so that the credentials are only used for requests to that repository. See [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
+
 
 
 

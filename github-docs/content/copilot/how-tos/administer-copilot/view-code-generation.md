@@ -28,7 +28,3 @@ To access Copilot usage metrics, the **"Copilot usage metrics"** policy must be 
 1. Click the **Insights** tab.
 
 1. In the left sidebar, click **Code generation**.
-
-## Next steps
-
-To learn how to interpret the data in each chart and act on usage trends, see [Interpret Copilot Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics).

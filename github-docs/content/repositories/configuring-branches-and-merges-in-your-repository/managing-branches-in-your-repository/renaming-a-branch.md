@@ -2,7 +2,7 @@
 
 ## About renaming branches
 
-You can rename a branch in a repository on your GitHub Enterprise Server instance. For more information about branches, see [About Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches).
+You can rename a branch in a repository on your GitHub Enterprise Server instance. For more information about branches, see [Branches](https://docs.github.com/en/pull-requests/reference/branches).
 
 When you rename a branch, any URLs that contain the old branch name are automatically redirected to the equivalent URL for the renamed branch. Branch protection policies are also updated, as well as the base branch for open pull requests (including those for forks) and draft releases. If the renamed branch is the head branch of an open pull request, this pull request is closed.
 
