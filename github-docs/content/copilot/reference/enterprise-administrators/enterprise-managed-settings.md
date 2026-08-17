@@ -22,7 +22,7 @@ In Copilot CLI, the `sandbox` key is an exception to these precedence rules. Man
 | Key | Purpose | Copilot CLI | VS Code | GitHub Copilot app | Copilot cloud agent | JetBrains IDEs |
 | --- | --- | --- | --- | --- | --- | --- |
 | `permissions.disableBypassPermissionsMode` | Disables bypass or YOLO-style allow-all behavior | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `permissions.model` | Sets auto model selection as the default for new conversations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `model` | Sets auto model selection as the default for new conversations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `enabledPlugins` | Enables or disables specific plugins by key | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `extraKnownMarketplaces` | Adds plugin marketplaces that users can access | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `strictKnownMarketplaces` | Restricts plugin installation to explicitly listed marketplaces | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -38,7 +38,7 @@ In Copilot CLI, the `sandbox` key is an exception to these precedence rules. Man
 
 For server-managed deployments, the enterprise can apply different governance to groups of users based on their enterprise team membership. The enterprise defines all settings—team membership only determines which users receive a given set of values.
 
-To make a key eligible for team-specific values, mark it as overridable in `managed-settings.json` using the `{ "overridable": <VALUE> }` syntax. An overridable key uses the team's value when set, or falls back to your enterprise default when the team leaves it unset. The `{ "overridable": <VALUE> }` syntax applies to the `permissions.model`, `permissions.disableBypassPermissionsMode`, `allowedMcpServers`, and `deniedMcpServers` keys. Keys not marked overridable remain an enterprise-level decision that teams can't modify.
+To make a key eligible for team-specific values, mark it as overridable in `managed-settings.json` using the `{ "overridable": <VALUE> }` syntax. An overridable key uses the team's value when set, or falls back to your enterprise default when the team leaves it unset. The `{ "overridable": <VALUE> }` syntax applies to the `model`, `permissions.disableBypassPermissionsMode`, `allowedMcpServers`, and `deniedMcpServers` keys. Keys not marked overridable remain an enterprise-level decision that teams can't modify.
 
 `enabledPlugins` and `extraKnownMarketplaces` work additively. The enterprise `managed-settings.json` sets a baseline, and an enterprise team file can add more plugins and marketplaces on top of it. For the full setup steps, see [Configure Enterprise Managed Settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/configure-enterprise-managed-settings#overriding-settings-for-specific-teams).
 
@@ -48,9 +48,9 @@ The following example shows these keys in one managed settings file.
 
 ```json
 {
+  "model": "auto",
   "permissions": {
-    "disableBypassPermissionsMode": "disable",
-    "model": "auto"
+    "disableBypassPermissionsMode": "disable"
   },
   "enabledPlugins": {
     "my-plugin@agent-skills": true
@@ -138,6 +138,13 @@ Restricts plugin installation to only the marketplaces explicitly defined by the
 * `"hostPattern"` — requires `hostPattern` (regex matching marketplace hosts)
 * `"pathPattern"` — requires `pathPattern` (regex matching marketplace paths)
 
+## model
+
+Sets auto model selection as the default for new conversations. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+
+* When you set `model` to `"auto"`, new sessions use Auto model unless the user specifies a different model on a per-conversation basis.
+* This key is overridable by enterprise team mapping. In your `managed-settings.json`, use the `{ "overridable": "auto" }` syntax to specialize the key's configuration on a per-team basis. You can then set `"model": "unmanaged"` in a team settings file, providing a specialization that takes precedence over `managed-settings.json` for members of the subject team.
+
 ## permissions
 
 ### disableBypassPermissionsMode
@@ -150,13 +157,6 @@ When you set `disableBypassPermissionsMode` to `"disable"`, users cannot turn on
 * In VS Code, the global auto-approve setting (`chat.tools.global.autoApprove`) is turned off and cannot be re-enabled.
 * In the GitHub Copilot app, the "Allow all" setting for "Tool Permissions" is blocked in the sessions settings.
 * This key is overridable by enterprise team mapping. In your `managed-settings.json`, use the `{ "overridable": "disable" }` syntax to specialize the key's configuration on a per-team basis. You can then set `"disableBypassPermissionsMode": "unmanaged"` in a team settings file, providing a specialization that takes precedence over `managed-settings.json` for members of the subject team.
-
-### model
-
-Sets auto model selection as the default for new conversations. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
-
-* When you set `permissions.model` to `"auto"`, new sessions use Auto model unless the user specifies a different model on a per-conversation basis.
-* This key is overridable by enterprise team mapping. In your `managed-settings.json`, use the `{ "overridable": "auto" }` syntax to specialize the key's configuration on a per-team basis. You can then set `"model": "unmanaged"` in a team settings file, providing a specialization that takes precedence over `managed-settings.json` for members of the subject team.
 
 ## telemetry
 

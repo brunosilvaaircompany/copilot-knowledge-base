@@ -10,6 +10,7 @@ GitHub provides default labels in every new repository. You can use these defaul
 
 Label | Description
 ---  | ---
+`accessibility` | Indicates a barrier affecting people with disabilities
 `bug` | Indicates an unexpected problem or unintended behavior
 `documentation` | Indicates a need for improvements or additions to documentation
 `duplicate` | Indicates similar issues, pull requests, or discussions

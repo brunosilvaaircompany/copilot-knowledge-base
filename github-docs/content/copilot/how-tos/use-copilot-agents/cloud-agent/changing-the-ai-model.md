@@ -30,6 +30,7 @@ The following options are currently available:
 * GPT-5.6 Sol
 * GPT-5.6 Terra
 * Grok 4.5
+* Grok 4.6
 * MAI-Code-1-Flash
 * MAI-Code-1.1-Flash
 

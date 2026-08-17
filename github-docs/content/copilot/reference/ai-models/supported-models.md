@@ -121,6 +121,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | MAI-Code-1-Flash    | `v1.121` | TBD                            | TBD | TBD | TBD |
 | MAI-Code-1.1-Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
+| Grok 4.6             | TBD | TBD | TBD | TBD | TBD |
 
 {% endrowheaders %}
 

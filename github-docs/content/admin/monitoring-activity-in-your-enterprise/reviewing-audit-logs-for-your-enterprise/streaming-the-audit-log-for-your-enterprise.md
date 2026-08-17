@@ -274,7 +274,7 @@ From GitHub:
 
 ### Setting up streaming to Azure Event Hubs
 
-> [!NOTE] 
+> [!NOTE]
 > - Event Hubs instances in Azure Government are not supported.
 > - With **GitHub Enterprise Cloud with data residency,** audit log streaming to Azure Event Hubs is not supported with IP Firewall rules enabled.
 
@@ -361,6 +361,8 @@ To set up streaming to Google Cloud Storage, create a service account in Google 
 1. After you have successfully verified the endpoint, click **Save**.
 
 
+
+
 ### Setting up streaming to Microsoft Purview
 
 >[!NOTE] This feature is in public preview and is available for enterprises that use Enterprise Managed Users and for enterprises that use GitHub Enterprise Cloud with data residency.
@@ -383,6 +385,8 @@ To set up streaming to Microsoft Purview, configure streaming in GitHub, then au
 1. Select the **Configure stream** dropdown and click **Microsoft Purview**.
 1. Click **Authorize with Entra**.
 1. When you're redirected to Microsoft Entra, add the GitHub app and authorize it for your tenant.
+
+
 
 ### Setting up streaming to Splunk
 
@@ -491,8 +495,8 @@ To restart streaming, click **Resume stream**.
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
 
 
-1. At the top of the page, click AI Controls 
-1. Under "Copilot", select **Enabled everywhere** for "Copilot Usage Records Streaming" 
+1. At the top of the page, click AI Controls
+1. Under "Copilot", select **Enabled everywhere** for "Copilot Usage Records Streaming"
 1. Configure a streaming destination. See [Setting up audit log streaming](#setting-up-audit-log-streaming).
 
 You can also retrieve Copilot usage data through the REST API by selecting **Enabled everywhere** for "Copilot Usage Records API". See [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics#get-copilot-usage-records-for-an-enterprise).
