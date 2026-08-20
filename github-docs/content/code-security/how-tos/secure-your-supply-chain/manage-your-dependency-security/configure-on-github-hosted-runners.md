@@ -18,7 +18,7 @@ If you restrict access to your organization's or repository's private resources,
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependabot", to the right of "Dependabot on Actions runners", click **Enable** to enable the feature or **Disable** to disable it.
 

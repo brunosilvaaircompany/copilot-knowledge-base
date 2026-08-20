@@ -38,7 +38,7 @@ Follow guidance in [Best Practices For GitHub Docs](https://docs.github.com/en/c
 
 Incorporate keywords, or top search terms used by your audience, into page copy and metadata. For example, if you are writing about "billing" but your audience primarily uses "cost" and "payment," use those terms instead.
 
-Google and Bing both offer keyword research tools to help you discover relevant keywords. The Docs team also consults Google Search Console data to understand what search terms lead to pages on GitHub Docs.
+Google and Bing both offer keyword research tools to help you discover relevant keywords. The Technical Content team also consults Google Search Console data to understand what search terms lead to pages on GitHub Docs.
 
 ### Include metadata
 

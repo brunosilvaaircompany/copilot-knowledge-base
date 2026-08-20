@@ -6,7 +6,7 @@ A support bundle is a compressed archive of diagnostic data from your GitHub Ent
 
 
 > [!IMPORTANT]
-> Beginning August 18, 2026, the `ghe-support-bundle`, `ghe-cluster-support-bundle`, and `ghe-support-upload` commands require you to be on 3.21.3, 3.20.5, 3.19.9, 3.18.12, or 3.17.18 (or later). Please update your GitHub Enterprise Server instance to the latest patch for your version line before August 18, 2026. If you cannot update to the required patch version before August 18, 2026, and need to upload a support bundle, contact [GitHub Enterprise Server Support](https://support.github.com/enterprise-and-teams#enterprise-administrators-server) for guidance.
+> Use of the `ghe-support-bundle`, `ghe-cluster-support-bundle`, and `ghe-support-upload` commands require you to be on 3.21.3, 3.20.5, 3.19.9, 3.18.12, or 3.17.18 (or later). Please update your GitHub Enterprise Server instance to the latest patch for your version. If you cannot update to the required patch version and need to upload a support bundle, contact [GitHub Enterprise Server Support](https://support.github.com/enterprise-and-teams#enterprise-administrators-server) for guidance.
 
 
 ## When to generate a support bundle
@@ -116,7 +116,7 @@ The Monitor page in the Management Console provides real-time and historical met
 
 
 > [!IMPORTANT]
-> Beginning August 18, 2026, the `ghe-support-bundle`, `ghe-cluster-support-bundle`, and `ghe-support-upload` commands require you to be on 3.21.3, 3.20.5, 3.19.9, 3.18.12, or 3.17.18 (or later). Please update your GitHub Enterprise Server instance to the latest patch for your version line before August 18, 2026. If you cannot update to the required patch version before August 18, 2026, and need to upload a support bundle, contact [GitHub Enterprise Server Support](https://support.github.com/enterprise-and-teams#enterprise-administrators-server) for guidance.
+> Use of the `ghe-support-bundle`, `ghe-cluster-support-bundle`, and `ghe-support-upload` commands require you to be on 3.21.3, 3.20.5, 3.19.9, 3.18.12, or 3.17.18 (or later). Please update your GitHub Enterprise Server instance to the latest patch for your version. If you cannot update to the required patch version and need to upload a support bundle, contact [GitHub Enterprise Server Support](https://support.github.com/enterprise-and-teams#enterprise-administrators-server) for guidance.
 
 
 You can generate and share support bundles using the Management Console or the command line. For detailed instructions, see [Providing Data To GitHub Support](https://docs.github.com/en/support/contacting-github-support/providing-data-to-github-support#creating-and-sharing-support-bundles).

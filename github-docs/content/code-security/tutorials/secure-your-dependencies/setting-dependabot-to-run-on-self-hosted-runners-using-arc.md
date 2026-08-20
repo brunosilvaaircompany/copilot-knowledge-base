@@ -147,7 +147,7 @@ Don't forget to add the following setting to the runner scale set configuration 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 
 1. Under "Dependabot", scroll to "Dependabot on Action Runners", and select **Enable** for "Dependabot on self-hosted runners".

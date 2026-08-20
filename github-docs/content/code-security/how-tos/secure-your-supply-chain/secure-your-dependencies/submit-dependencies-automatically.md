@@ -21,7 +21,7 @@ Organization owners can enable automatic dependency submission for multiple repo
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependency graph", click the dropdown menu next to “Automatic dependency submission”, then select **Enabled**.
 
@@ -50,7 +50,7 @@ You can configure **self-hosted runners** to run automatic dependency submission
 
 1. Provision one or more self-hosted runners, at the repository or organization level. For more information, see [Self Hosted Runners](https://docs.github.com/en/actions/concepts/runners/self-hosted-runners) and [Add Runners](https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/add-runners).
 1. Assign a `dependency-submission` label to each runner you want automatic dependency submission to use. For more information, see [Apply Labels](https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/apply-labels#assigning-a-label-to-a-self-hosted-runner).
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependency graph", click the dropdown menu next to "Automatic dependency submission", then select **Enabled for labeled runners**.
 

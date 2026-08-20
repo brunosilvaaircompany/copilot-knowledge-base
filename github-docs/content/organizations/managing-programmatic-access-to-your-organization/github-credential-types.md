@@ -135,28 +135,37 @@ On GitHub Enterprise Cloud with SSO enforced, when a credential supports SSO aut
 
 On GitHub Enterprise Cloud, enterprise administrators and organization owners can revoke SSO authorization for the credential types marked in the table above:
 
-* **Organization owners** can manage SSO authorizations for organizations with organization-level SSO via the GitHub UI. See [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization).
-* **Enterprise owners** can manage SSO authorizations for enterprises with enterprise-level SSO (including Enterprise Managed Users) via the GitHub UI. See [Viewing And Managing A Users Saml Access To Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/viewing-and-managing-a-users-saml-access-to-your-enterprise#viewing-and-revoking-authorized-credentials).
+* **Organization owners** can manage SSO authorizations for organizations with organization-level SSO via the GitHub UI or the [Orgs](https://docs.github.com/en/rest/orgs/orgs#revoke-a-single-credential-type-for-an-organization) REST API. See [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization).
+* **Enterprise owners** can manage SSO authorizations for enterprises with enterprise-level SSO (including Enterprise Managed Users) via the GitHub UI or the [Credential Authorizations](https://docs.github.com/en/rest/enterprise-admin/credential-authorizations). See [Viewing And Managing A Users Saml Access To Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/viewing-and-managing-a-users-saml-access-to-your-enterprise#viewing-and-revoking-authorized-credentials).
 
 On GitHub Enterprise Cloud, you can also manage SSO authorizations via the REST API.
 
 
-On GitHub Enterprise Cloud, during a security incident, enterprise owners can revoke SSO authorizations for individual members or in bulk. See [Actions for security incidents](#actions-for-security-incidents).
+On GitHub Enterprise Cloud, during a security incident, enterprise and organization owners can revoke SSO authorizations for individual members, for a specific credential type, or in bulk. See [Actions for security incidents](#actions-for-security-incidents).
 
 
 ## Actions for security incidents
 
-During a security incident, there are enterprise-level actions that enterprise owners on GitHub Enterprise Cloud can take to respond quickly. You can take action against individual members or against all members in bulk. These actions affect user SSH keys, OAuth app user access tokens, GitHub App user access tokens, personal access tokens (classic), and fine-grained personal access tokens. They do **not** affect GitHub App installation access tokens, deploy keys, or `GITHUB_TOKEN`.
+During a security incident, enterprise owners and organization owners can respond quickly with bulk actions. You can take action against individual members, a specific credential type, or against all members in bulk. These actions affect user SSH keys, OAuth app user access tokens, GitHub App user access tokens, personal access tokens (classic), and fine-grained personal access tokens. They do **not** affect GitHub App installation access tokens, deploy keys, or `GITHUB_TOKEN`.
 
 > [!WARNING] Bulk actions are high-impact actions that should be reserved for major security incidents. They are likely to break automations, and it could take months of work to restore your original state.
 
 
 * **Revoke SSO authorizations for a specific user**: Remove SSO authorizations for a specific user's credentials. Useful for responding to incidents affecting individual accounts. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens#taking-action-against-individual-members).
 * **Delete keys and tokens for a specific user**: Delete a specific user's credentials entirely. Available for Enterprise Managed Users **only**. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens#taking-action-against-individual-members).
+* **Revoke SSO authorizations or delete credentials for a specific credential type**: Take action against a single credential type, such as only personal access tokens (classic), across all members. This is more targeted than acting on every credential type at once. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens#taking-action-against-a-specific-credential-type).
 
 * **Lock down SSO**: Temporarily block SSO for all users except enterprise owners, preventing access to SSO-protected resources. Available for Enterprise Managed Users or enterprises that use SSO. See [Lock Down Sso](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/lock-down-sso).
 * **Revoke all SSO authorizations**: Remove SSO authorizations for user credentials across all organizations in the enterprise. Credentials are not deleted, but lose access to SSO-protected organization resources. Once revoked, credentials cannot be re-authorized—users must create new credentials. Available for Enterprise Managed Users or enterprises that use SSO. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens).
 * **Delete all user tokens and keys**: Delete user credentials entirely, removing all access. Available for Enterprise Managed Users **only**. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens).
 
+
+> [!NOTE]
+> In enterprises that do **not** use Enterprise Managed Users, organization owners can take the equivalent actions at the organization level, using the GitHub UI or the REST API. See [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization).
+
+
 > [!NOTE]
 > For enterprises with personal accounts (non-EMU) that use SSO, the "delete all tokens and keys" option is **not available**. The "revoke SSO authorizations" action blocks access to SSO-protected organization resources, but does not block credentials from accessing enterprise-level endpoints or resources in organizations that do not enforce SSO. For enterprises without SSO, neither bulk action is available.
+
+
+All user-initiated and admin-initiated de-authorization and revocation actions are recorded in the audit log, and affected users receive an email notification. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens#audit-and-security-log-events).

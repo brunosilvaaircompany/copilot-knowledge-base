@@ -119,7 +119,3 @@ Use **GitHub Apps and GitHub Actions together** when:
 * A GitHub App needs to trigger a workflow
 * External logic orchestrates in-repo execution
 * Enterprise-wide policies or workflows require both identity and runtime
-
-## Next steps
-
-Learn how to design and manage GitHub Apps at the enterprise level in [Creating GitHub Apps For Your Enterprise](https://docs.github.com/en/admin/managing-github-apps-for-your-enterprise/creating-github-apps-for-your-enterprise).

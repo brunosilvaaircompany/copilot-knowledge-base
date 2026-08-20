@@ -46,7 +46,8 @@ You can upgrade or downgrade your Copilot plan at any time from your account set
 
 You can cancel your Copilot plan at any time. You’ll retain access to your current features until your billing cycle ends. You will automatically be downgraded to Copilot Free at the end of your billing cycle.
 
-If you have been granted free access to Copilot as a verified student, teacher, or maintainer of a popular open source project, you won’t be able to cancel your plan. If you have access to Copilot through an organization or enterprise, you will not be able to cancel your plan. In these cases, you can disable Copilot in your environment. See [Configure In Ide](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide).
+If you have been granted free access to Copilot as a verified student, teacher, or maintainer of a popular open source project, you won’t be able to cancel your plan.
+ If you have access to Copilot through an organization or enterprise, you will not be able to cancel your plan. In these cases, you can disable Copilot in your environment. See [Configure In Ide](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide).
 
 If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat as part of a Copilot Business or Copilot Enterprise plan, your personal Copilot plan will be automatically canceled.
 

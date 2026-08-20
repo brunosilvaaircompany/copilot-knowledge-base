@@ -53,7 +53,7 @@ For more information about enabling or disabling Dependabot security updates for
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the "Dependabot" section, to the right of "Dependabot rules", click {% octicon "gear" aria-label="Configure Dependabot rules" %}.
 
@@ -86,7 +86,7 @@ You can add custom auto-triage rules for all eligible repositories in your organ
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the "Dependabot" section, to the right of "Dependabot rules", click {% octicon "gear" aria-label="Configure Dependabot rules" %}.
 

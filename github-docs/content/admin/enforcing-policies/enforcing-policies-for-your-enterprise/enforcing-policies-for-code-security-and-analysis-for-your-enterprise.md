@@ -4,7 +4,11 @@
 
 You can enforce policies to manage the use of security features within organizations owned by your enterprise. You can allow or disallow people with admin access to a repository to enable or disable the security and analysis features.
 
-Additionally, you can enforce policies for the use of GitHub Secret Protection, GitHub Code Security and GitHub Code Quality (public preview), or GitHub Advanced Security in your enterprise's organizations and repositories.
+Additionally, you can enforce policies for the use of GitHub Secret Protection, GitHub Code Security, or GitHub Advanced Security in your enterprise's organizations and repositories.
+
+
+Policies for Advanced Security do not control access to GitHub Code Quality. To manage access, see [Allow GitHub Code Quality In Enterprise](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/configure-specific-tools/allow-github-code-quality-in-enterprise).
+
 
 ## Enforcing a policy for the availability of Advanced Security in your enterprise's organizations
 
@@ -12,7 +16,7 @@ You are billed for GitHub Secret Protection, GitHub Code Security, and GitHub Ad
 
 You can enforce a policy that controls whether repository administrators are allowed to enable features for Advanced Security in an organization's repositories. You can configure a policy for all organizations owned by your enterprise account, or for individual organizations that you choose.
 
-Disallowing GitHub Secret Protection, GitHub Code Security and GitHub Code Quality (public preview), or GitHub Advanced Security for an organization prevents repository administrators from enabling these features for additional repositories, but does not disable the features for repositories where the features are already enabled.
+Disallowing GitHub Secret Protection, GitHub Code Security, or GitHub Advanced Security for an organization prevents repository administrators from enabling these features for additional repositories, but does not disable the features for repositories where the features are already enabled.
 
 > [!NOTE]
 > This policy only impacts repository administrators, specifically. Organization owners and security managers can always enable security features, regardless of how you set this policy. For more information, see [Roles In An Organization](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
@@ -34,7 +38,7 @@ Disallowing GitHub Secret Protection, GitHub Code Security and GitHub Code Quali
 
 
 > [!NOTE]
-> If GitHub Actions is not available for an organization, code scanning and GitHub Code Quality will be unable to run even if they are made available with this policy. See [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#policies).
+> If GitHub Actions is not available for an organization, code scanning will be unable to run even if it is made available with this policy. Similarly, GitHub Code Quality will be unable to run even if it is made available with its own policy. See [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#policies).
 
 
 
@@ -95,7 +99,7 @@ Across all of your enterprise's organizations, you can allow or disallow people 
 
 1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
 
-1. In the "Policies" section, under "Repository administrators can enable or disable `PRODUCT`", use the dropdown menu to define whether repository administrators can change the enablement of GitHub Secret Protection, GitHub Code Security and GitHub Code Quality (public preview), or GitHub Advanced Security.
+1. In the "Policies" section, under "Repository administrators can enable or disable `PRODUCT`", use the dropdown menu to define whether repository administrators can change the enablement of GitHub Secret Protection, GitHub Code Security, or GitHub Advanced Security.
 
 
 

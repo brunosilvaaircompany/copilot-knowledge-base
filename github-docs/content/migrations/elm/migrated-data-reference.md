@@ -19,8 +19,11 @@ The only organization-level action supported by ELM is the creation of a target 
 | Repository PR settings | Pull request merge and review settings |
 | Actions settings | Repository-level GitHub Actions configuration, including allowed actions and permissions |
 | Autolinks | Custom autolink references |
-| Branch protections | Branch protection rules |
+| Branch protections | Branch protection rules are partially migrated, with the limitations described below |
 | Pages | GitHub Pages configuration |
+
+> [!WARNING]
+> Branch protection migration is partially supported. ELM preserves whether actor restrictions are enabled for dismissing pull request reviews and pushing to protected branches, but it does not preserve the permitted users, teams, or apps. A push restriction can therefore be recreated on the destination with an empty allowlist. It also does not migrate pull request bypass actors, force-push actors, status check app bindings, matching-branch creation restrictions, merge queue settings, deployment requirements, or branch locking. Review and update migrated branch protection rules before allowing users to work in the destination repository.
 
 ### Git data, LFS, and wikis
 
@@ -88,7 +91,7 @@ The only organization-level action supported by ELM is the creation of a target 
 | Data | Notes |
 |---|---|
 | Repository defaults | N/A |
-| Repository rulesets | Only branch protection rules are migrated. |
+| Repository rulesets | Repository rulesets are not migrated. Branch protection rules are partially migrated. |
 | Pull requests from forks | N/A |
 | Pending pull request reviews | Only submitted reviews are migrated. |
 
@@ -119,7 +122,7 @@ The following tables document which resource types support live updates and whic
 | **Label** | `created` | `deleted`, `edited` |
 | **Release** | `created`, `edited`, `prereleased`, `published`, `released`, `unpublished` | `deleted` |
 | **Milestone** | `closed`, `created`, `edited`, `opened` | `deleted` |
-| **Branch protection rule** | `created`, `edited` | `deleted` |
+| **Branch protection rule (partial support)** | `created`, `edited` | `deleted` |
 | **Commit comment** | `created`, `edited` | `deleted` |
 | **Page build** | All actions | N/A |
 | **Commit status checks** | All actions | N/A |
@@ -130,6 +133,7 @@ The following tables document which resource types support live updates and whic
 | **Repository actions settings** | `updated` | N/A |
 | **Repository webhook** | `created`, `updated` | N/A |
 
+The branch protection limitations described in [Repository settings and configuration](#repository-settings-and-configuration) apply to both the initial migration and live updates.
 
 > [!NOTE]
 > When a pull request review is submitted, ELM imports the full review including all inline comments together. Inline comments that are part of an initial review submission are migrated correctly. However, **replies added to a review thread after the review has been submitted** are not captured as live updates and will not appear in the migrated repository.

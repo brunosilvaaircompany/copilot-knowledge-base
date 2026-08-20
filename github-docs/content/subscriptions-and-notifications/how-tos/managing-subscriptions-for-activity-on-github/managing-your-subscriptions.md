@@ -28,7 +28,7 @@ You can only filter your subscriptions by repository and the reason you're recei
 
 When you unsubscribe from notifications in your inbox, they will automatically disappear from your inbox.
 
-1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}.
+1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}. If the icon is not displayed, go directly to the [notifications page](https://github.com/notifications).
 
    ![Screenshot of the right corner of the header of GitHub. An inbox icon has a blue dot, indicating that there are unread notifications.](/assets/images/help/notifications/notifications-general-existence-indicator.png)
 
@@ -39,7 +39,7 @@ When you unsubscribe from notifications in your inbox, they will automatically d
 
 ## Unsubscribing from notifications on the subscriptions page
 
-1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}.
+1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}. If the icon is not displayed, go directly to the [notifications page](https://github.com/notifications).
 
    ![Screenshot of the right corner of the header of GitHub. An inbox icon has a blue dot, indicating that there are unread notifications.](/assets/images/help/notifications/notifications-general-existence-indicator.png)
 
@@ -53,7 +53,7 @@ When you unsubscribe from notifications in your inbox, they will automatically d
 
 When you unwatch a repository, you unsubscribe from future updates from that repository unless you participate in a conversation or are @mentioned.
 
-1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}.
+1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}. If the icon is not displayed, go directly to the [notifications page](https://github.com/notifications).
 
    ![Screenshot of the right corner of the header of GitHub. An inbox icon has a blue dot, indicating that there are unread notifications.](/assets/images/help/notifications/notifications-general-existence-indicator.png)
 

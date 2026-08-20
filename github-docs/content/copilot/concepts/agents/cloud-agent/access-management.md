@@ -52,6 +52,6 @@ In addition to the Copilot cloud agent policy, organizations can control whether
 
 * [Cloud Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent)
 * [Customize The Agent Environment](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment)
-* [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall)
+* [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall)
 * [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers)
 * [Pilot Cloud Agent](https://docs.github.com/en/copilot/tutorials/cloud-agent/pilot-cloud-agent)

@@ -10,7 +10,7 @@ After running an initial analysis of your code with default setup, you can make 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the "CodeQL analysis" row of the "Code Security" section, select {% octicon "kebab-horizontal" aria-label="Menu" %}, then click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} View CodeQL configuration**.
 1. In the "CodeQL default configuration" window, click **{% octicon "pencil" aria-hidden="true" aria-label="pencil" %} Edit**.

@@ -18,7 +18,7 @@ You will only see this error for SARIF files that contain results created using 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the "Code Security" section of the page, next to "CodeQL analysis," click {% octicon "kebab-horizontal" aria-label="Menu" %}.
 1. If there is a **{% octicon "workflow" aria-hidden="true" aria-label="workflow" %} Switch to advanced** option, default setup is enabled for the repository.

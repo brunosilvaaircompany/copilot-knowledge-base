@@ -3,7 +3,7 @@
 You can configure Copilot CLI to use your own LLM provider, also called BYOK (Bring Your Own Key), instead of GitHub-hosted models. This lets you connect to OpenAI-compatible endpoints, Azure OpenAI, or Anthropic, including locally running models such as Ollama.
 
 > [!NOTE]
-> This article is for users who want to configure their own LLM provider API key on their local machine. To set up custom models for users in an enterprise, see [Use Your Own API Keys](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-your-own-api-keys).
+> This article is for users who want to configure their own LLM provider API key on their local machine. To set up custom models for users in an enterprise, see [Enable Custom Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models).
 
 ## Prerequisites
 

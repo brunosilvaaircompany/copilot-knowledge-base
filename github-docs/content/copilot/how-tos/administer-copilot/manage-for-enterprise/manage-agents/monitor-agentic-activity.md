@@ -9,7 +9,7 @@
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
 1. Towards the top of the page, in the "Agent sessions" section, you will see the three most recent agent sessions in your enterprise. To view all agent sessions from the last 24 hours, click **View all**.
-1. To filter agent sessions, click the search bar at the top of the list, then press <kbd>Space</kbd>. From the dropdown menu that appears, select your filter criteria. For a list of available filters, see [Agent Session Filters](https://docs.github.com/en/copilot/reference/agent-session-filters).
+1. To filter agent sessions, click the search bar at the top of the list, then press <kbd>Space</kbd>. From the dropdown menu that appears, select your filter criteria. For a list of available filters, see [Agent Session Filters](https://docs.github.com/en/copilot/reference/enterprise-administrators/agent-session-filters).
 
 ## Tracking agentic activity in your enterprise through the audit log
 

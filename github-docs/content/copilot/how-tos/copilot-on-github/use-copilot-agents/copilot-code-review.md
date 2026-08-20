@@ -23,7 +23,7 @@ You can also request a review from Copilot through the GitHub REST API by reques
 
 ## Work with suggested changes
 
-Copilot's feedback often includes suggested changes you can apply in a few clicks. Accept a single suggestion or group multiple suggestions into one commit. For more information, see [Incorporating Feedback In Your Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request).
+Copilot's feedback often includes suggested changes you can apply in a few clicks. Accept a single suggestion or group multiple suggestions into one commit. For more information, see [Incorporating Feedback In Your Pull Request](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/incorporating-feedback-in-your-pull-request).
 
 To have Copilot cloud agent implement suggested changes directly:
 
@@ -46,7 +46,7 @@ Rate Copilot's comments to help improve future suggestions.
 
 When you push new changes to a pull request that Copilot has reviewed, it does not automatically re-review unless you've configured automatic reviews to include new pushes.
 
-To manually request a re-review, click the {% octicon "sync" aria-label="Re-request review" %} button next to Copilot's name in the **Reviewers** menu. For more information, see [Requesting A Pull Request Review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
+To manually request a re-review, click the {% octicon "sync" aria-label="Re-request review" %} button next to Copilot's name in the **Reviewers** menu. For more information, see [Requesting A Pull Request Review](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/requesting-a-pull-request-review).
 
 To automatically request re-reviews on every push, enable automatic code review and select **Review new pushes** in the ruleset settings. For more information, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review#configuring-automatic-code-review-for-repositories-in-an-organization).
 

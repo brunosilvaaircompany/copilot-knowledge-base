@@ -17,6 +17,10 @@ The trial lasts for **30
 * GitHub Secret Protection and GitHub Code Security (GitHub.com trials only)
 * Up to 3,000 minutes of standard GitHub-hosted runners.
 
+The 50,000 monthly GitHub Actions minutes included with a paid GitHub Enterprise Cloud plan do not apply during the trial. The trial includes up to 3,000 minutes of standard GitHub-hosted runners. If your trial uses Enterprise Managed Users, you must link an Azure subscription to exceed this limit. If your trial doesn't use Enterprise Managed Users, linking an Azure subscription immediately ends the trial and begins paid usage. For more information, see [Azure Subscription](https://docs.github.com/en/billing/reference/azure-subscription).
+
+Usage of available AI-powered features consumes AI credits. For more information, see [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+
 ## Features not included in the trial
 
 * GitHub Codespaces

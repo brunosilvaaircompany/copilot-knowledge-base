@@ -72,7 +72,3 @@ For a managed user to collaborate outside your enterprise, they must also mainta
 If you already have an enterprise that uses personal accounts on GitHub.com, adoption of Enterprise Managed Users requires **migration to a new enterprise account**. To discuss this process, contact [GitHub's Sales team](https://enterprise.github.com/contact).
 
 The migration process may require time or cost from your team. Confirm that this migration process is acceptable to your business and your users. If not, an enterprise with personal accounts may be the better choice.
-
-## Next steps
-
-When you have chosen an enterprise type, you're ready to create an enterprise account by starting a trial. See [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).

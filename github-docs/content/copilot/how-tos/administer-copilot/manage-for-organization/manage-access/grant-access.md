@@ -28,7 +28,9 @@ Billing for GitHub Copilot starts when you grant an organization member access, 
 
 
 
-> [!NOTE] You can automatically enable access for every member of a group in your identity provider (IdP) by synchronizing that group with a GitHub team, then giving that team access to GitHub Copilot. For more information, see [Synchronizing A Team With An Identity Provider Group](https://docs.github.com/en/organizations/organizing-members-into-teams/synchronizing-a-team-with-an-identity-provider-group).
+You can automatically enable access for every member of a group in your identity provider (IdP) by synchronizing that group with a GitHub team, then giving that team access to GitHub Copilot. For more information, see [Synchronizing A Team With An Identity Provider Group](https://docs.github.com/en/organizations/organizing-members-into-teams/synchronizing-a-team-with-an-identity-provider-group).
+
+When access is granted this way, the `copilot.cfb_seat_added` audit log event attributes the action to whoever originally granted Copilot access to the team, not the account or sync process that added the new team member. See [Audit Log Events For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization).
 
 
 

@@ -89,7 +89,7 @@ The Copilot cloud agent includes a built-in firewall with a recommended allowlis
 * Common certificate authorities (to allow SSL certificates to be validated).
 * Hosts used to download web browsers for the Playwright MCP server.
 
-For more information about configuring the Copilot cloud agent firewall, see [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall).
+For more information about configuring the Copilot cloud agent firewall, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 The allowlist allows access to the following hosts:
 

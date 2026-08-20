@@ -9,6 +9,8 @@ Depending on your account type, the following actions are available:
 
 > [!WARNING] These actions are irreversible. Once you revoke authorizations or delete credentials, you cannot restore them. You will need to create new credentials and re-authorize them for any organizations or processes that require access.
 
+These actions are recorded in the audit log for any enterprise you belong to, and you will receive an email notification confirming the action.
+
 ## Understanding the impact
 
 Before taking action, consider the following:
@@ -52,3 +54,4 @@ After taking action on your credentials:
 * [Token Expiration And Revocation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/token-expiration-and-revocation)
 * [Reviewing Your SSH Keys](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-ssh-keys)
 * [Reviewing And Revoking Authorization Of GitHub Apps](https://docs.github.com/en/apps/using-github-apps/reviewing-and-revoking-authorization-of-github-apps)
+* [GitHub Credential Types](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/github-credential-types)

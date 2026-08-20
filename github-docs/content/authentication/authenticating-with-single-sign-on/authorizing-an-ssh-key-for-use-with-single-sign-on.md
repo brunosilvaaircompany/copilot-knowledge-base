@@ -12,7 +12,7 @@ Before you can authorize a personal access token or SSH key, you must have a lin
 
 After you authorize a personal access token or SSH key, the token or key will stay authorized until revoked in one of the following ways.
 
-* An organization or enterprise owner revokes the authorization. Enterprise owners can also revoke authorizations for individual users or in bulk. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens).
+* An organization or enterprise owner revokes the authorization. Organization and enterprise owners can also revoke authorizations for individual users, for all users, or for a specific credential type. See [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens).
 * You are removed from the organization.
 * The scopes in a personal access token are edited, or the token is regenerated.
 * The personal access token expired as defined during creation.

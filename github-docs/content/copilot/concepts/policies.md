@@ -22,7 +22,7 @@ More rarely, if a user receives a license from multiple different enterprises, t
 
 A user's individual plan is cancelled when they are added to a Copilot Business or Copilot Enterprise plan, so a user's personal policies cannot conflict with an enterprise's or organization's.
 
-To see details for each policy, see [Policy Conflicts](https://docs.github.com/en/copilot/reference/policy-conflicts).
+To see details for each policy, see [Policy Conflicts](https://docs.github.com/en/copilot/reference/enterprise-administrators/policy-conflicts).
 
 ## Where do policies apply?
 

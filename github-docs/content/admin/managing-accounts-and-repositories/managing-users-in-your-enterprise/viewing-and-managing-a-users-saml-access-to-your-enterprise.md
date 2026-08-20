@@ -103,7 +103,7 @@ You can see each personal access token and SSH key that a member has authorized 
 
 {% ifversion single_user_cred_revocation %}
 
-You can also revoke SSO authorizations for individual users or all users. For enterprises with Enterprise Managed Users, you can delete credentials entirely. This is useful for responding to security incidents. For more information, see [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens).
+> [!TIP] To respond to security incidents, enterprise and organization owners can also revoke all SSO authorizations at once for individual users, all users, or a specific credential type such as personal access tokens (classic). For enterprises with Enterprise Managed Users, you can delete credentials entirely. For more information, see [Revoke Authorizations Or Tokens](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/respond-to-incidents/revoke-authorizations-or-tokens).
 
 
 

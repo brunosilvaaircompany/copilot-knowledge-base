@@ -71,9 +71,3 @@ For more information about what apps can do, see [About Creating GitHub Apps](ht
 Another way to delegate frequent, time-consuming tasks is to assign work to Copilot cloud agent. You can define custom agents for specific roles in your enterprise. Custom agents are created using Markdown files called "agent profiles," which define the instructions and tools the agent needs to perform a task. For example, you could create a custom agent for writing README files or generating unit tests.
 
 For more information, see [Prepare For Custom Agents](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/prepare-for-custom-agents).
-
-
-
-## Next steps
-
-Now that you've planned which roles will help your teams be productive and secure on GitHub, create custom roles for the permissions you need. Later, you will create teams to manage role assignments at scale. See [Create Custom Roles](https://docs.github.com/en/admin/managing-accounts-and-repositories/managing-roles-in-your-enterprise/create-custom-roles).

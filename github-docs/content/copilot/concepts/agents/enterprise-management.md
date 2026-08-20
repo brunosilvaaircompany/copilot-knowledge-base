@@ -34,9 +34,9 @@ An agent session encompasses an entire interaction with Copilot cloud agent, or 
 * Prompting the agent to create or edit a pull request
 * Assigning the agent to an issue
 
-Enterprise administrators can use AI Controls to view active and recent agent sessions, track audit log events, and search agentic activity in your enterprise using filters. See [Monitor Agentic Activity](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/monitor-agentic-activity) and [Agent Session Filters](https://docs.github.com/en/copilot/reference/agent-session-filters).
+Enterprise administrators can use AI Controls to view active and recent agent sessions, track audit log events, and search agentic activity in your enterprise using filters. See [Monitor Agentic Activity](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/monitor-agentic-activity) and [Agent Session Filters](https://docs.github.com/en/copilot/reference/enterprise-administrators/agent-session-filters).
 
-For long-term retention and analysis, you can stream enterprise audit log data to supported destinations. For more information, see [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) and [Agentic Audit Log Events](https://docs.github.com/en/copilot/reference/agentic-audit-log-events).
+For long-term retention and analysis, you can stream enterprise audit log data to supported destinations. For more information, see [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) and [Agentic Audit Log Events](https://docs.github.com/en/copilot/reference/enterprise-administrators/agentic-audit-log-events).
 
 For billing information on agent sessions, see [GitHub Copilot Premium Requests](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/github-copilot-premium-requests#usage-by-copilot-cloud-agent).
 

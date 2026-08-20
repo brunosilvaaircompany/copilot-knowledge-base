@@ -195,7 +195,7 @@ Copilot code review can draw on several sources of customization, and each serve
 | Scope | Repository-wide and Copilot-specific | Repository sub-paths and Copilot-specific | Cross-tool / agent-agnostic | Invoked per task |
 | Rule | "Copilot, always know this for this repository" | "Copilot, always know this when working in these paths" | "Any agent, always know this" | "Do this when needed" |
 
-For more information, see [Add Skills](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) and [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions).
+For more information, see [Add Skills](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) and [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions).
 
 ### Copilot Memory (public preview)
 
@@ -208,6 +208,9 @@ By default, Copilot only reviews a pull request if you assign it to the pull req
 * **Individual users** on the Copilot Pro or Copilot Pro+ plan can configure Copilot to automatically review all pull requests they create.
 * **Repository owners** can configure Copilot to automatically review all pull requests in the repository that are created by people with access to Copilot.
 * **Organization owners** can configure Copilot to automatically review all pull requests in some or all of the repositories in the organization where the pull request is created by a Copilot user.
+
+If your organization has enabled Copilot code review without a Copilot license, automatic reviews also apply to pull requests created by organization members without a license. This applies to repositories covered by a policy where automatic reviews are enabled. For more information, see [Copilot code review without a Copilot license](#copilot-code-review-without-a-copilot-license).
+
 
 ### Triggering an automatic pull request review
 

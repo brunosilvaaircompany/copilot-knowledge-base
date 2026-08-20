@@ -124,7 +124,7 @@ If you are on a GitHub Team or GitHub Enterprise plan, license use for the entir
 
 ## Managing GitHub Advanced Security
 
-Enterprise owners can manage GitHub Advanced Security licensing and access for their enterprise, including disabling GitHub Advanced Security across all repositories and preventing future re-enablement. See [Manage Ghas Licenses](https://docs.github.com/en/billing/how-tos/products/manage-ghas-licenses#disabling-github-advanced-security-in-an-enterprise).
+Enterprise owners can manage GitHub Advanced Security licensing and access for their enterprise, including disabling GitHub Advanced Security across all repositories and preventing future re-enablement. See [Disable Ghas For Enterprise](https://docs.github.com/en/billing/how-tos/products/disable-ghas-for-enterprise).
 
 For information about managing your GitHub Advanced Security license, see [Managing Your GitHub Advanced Security License Usage](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/managing-your-github-advanced-security-license-usage).
 

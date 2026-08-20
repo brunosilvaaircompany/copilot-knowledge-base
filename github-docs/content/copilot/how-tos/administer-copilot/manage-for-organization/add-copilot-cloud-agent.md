@@ -57,7 +57,7 @@ Automations are allowed by default in repositories where Copilot cloud agent is 
 
 ## Managing the agent firewall for your organization
 
-Organization owners can configure the Copilot cloud agent firewall for their organization, including whether it is enabled for the organization and which external hosts and URLs the agent can access. For more information, see [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall).
+Organization owners can configure the Copilot cloud agent firewall for their organization, including whether it is enabled for the organization and which external hosts and URLs the agent can access. For more information, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 ## Next steps
 

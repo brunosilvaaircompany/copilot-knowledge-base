@@ -11,7 +11,7 @@ If you are on a **GitHub Free** or **GitHub Pro** plan, you can only use code sc
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. On the settings page, scroll down to "Code Security."
 1. If there is an associated and active **Enable** button, Code Security is available for this repository but not yet enabled.

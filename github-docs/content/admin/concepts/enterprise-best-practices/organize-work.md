@@ -41,9 +41,3 @@ We recommend collaborating in organization-owned repositories whenever possible 
 Innersource makes it easy for all employees to discover and reuse work. This allows development teams to learn from each other and avoid duplicating effort to recreate common services.
 
 For guidance on setting up effective innersource practices, see [Use Innersource](https://docs.github.com/en/admin/concepts/enterprise-best-practices/use-innersource).
-
-
-
-## Next steps
-
-Learn how to set up your enterprise according to best practices in our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/enterprise-onboarding) journey for GitHub Enterprise Cloud.

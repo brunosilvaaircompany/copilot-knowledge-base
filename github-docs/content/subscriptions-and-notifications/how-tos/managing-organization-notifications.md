@@ -16,7 +16,7 @@ If an organization you're a member of restricts email notifications to an approv
 
 
 
-1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}.
+1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}. If the icon is not displayed, go directly to the [notifications page](https://github.com/notifications).
 
    ![Screenshot of the right corner of the header of GitHub. An inbox icon has a blue dot, indicating that there are unread notifications.](/assets/images/help/notifications/notifications-general-existence-indicator.png)
 
@@ -32,7 +32,7 @@ If an organization you're a member of restricts email notifications to an approv
 
 If you are a member of more than one organization, you can configure each one to send notifications to any of your verified email addresses.  For more information, see [Verifying Your Email Address](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/verifying-your-email-address).
 
-1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}.
+1. In the upper-right corner of any page, click {% octicon "inbox" aria-label="You have (no) unread notifications" %}. If the icon is not displayed, go directly to the [notifications page](https://github.com/notifications).
 
    ![Screenshot of the right corner of the header of GitHub. An inbox icon has a blue dot, indicating that there are unread notifications.](/assets/images/help/notifications/notifications-general-existence-indicator.png)
 

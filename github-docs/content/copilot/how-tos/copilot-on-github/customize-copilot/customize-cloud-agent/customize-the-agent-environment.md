@@ -17,7 +17,7 @@ Copilot code review also runs in an ephemeral development environment, and you c
 In addition, you can:
 
 * [Configure Secrets And Variables](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/configure-secrets-and-variables)
-* [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall).
+* [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 > [!NOTE]
 > Organization owners can configure the default runner type for Copilot cloud agent across all repositories in their organization, and choose whether repositories are allowed to override this default. For more information, see [Configure Runner For Coding Agent](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/configure-runner-for-coding-agent).
@@ -179,7 +179,7 @@ We recommend that you only use Copilot cloud agent with ephemeral, single-use ru
   * `registry.npmjs.org`
   * `skimdb.npmjs.com`
 
-1. Disable Copilot cloud agent's integrated firewall in your repository settings. The firewall is not compatible with self-hosted runners. Unless this is disabled, use of Copilot cloud agent will be blocked. For more information, see [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall).
+1. Disable Copilot cloud agent's integrated firewall in your repository settings. The firewall is not compatible with self-hosted runners. Unless this is disabled, use of Copilot cloud agent will be blocked. For more information, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 1. In your `copilot-setup-steps.yml` file, set the `runs-on` attribute to your ARC-managed scale set name:
 
    ```yaml
@@ -237,4 +237,4 @@ jobs:
 ## Further reading
 
 * [Configure Secrets And Variables](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/configure-secrets-and-variables)
-* [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall)
+* [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall)

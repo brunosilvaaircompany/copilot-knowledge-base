@@ -83,7 +83,7 @@ To ensure uniform access, you can set and maintain your MCP registry URL and all
 
 ## Next steps
 
-For detailed information on MCP allowlist enforcement and limitations, see [MCP Allowlist Enforcement](https://docs.github.com/en/copilot/reference/mcp-allowlist-enforcement).
+For detailed information on MCP allowlist enforcement and limitations, see [MCP Private Registry Enforcement](https://docs.github.com/en/copilot/reference/enterprise-administrators/mcp-private-registry-enforcement).
 
 ## Further reading
 

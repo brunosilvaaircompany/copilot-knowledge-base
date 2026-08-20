@@ -23,7 +23,7 @@ If you enable the feature in your settings page, GitHub creates a basic file whi
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependabot," to the right of "Dependabot version updates", click **Enable** to open a basic `dependabot.yml` configuration file in the `.github` directory of your repository. For information about the options you can use to customize how Dependabot maintains your repositories, see [Dependabot Options Reference](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference).
 
@@ -102,7 +102,7 @@ On a fork, you also need to explicitly enable Dependabot.
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependabot," to the right of "Dependabot version updates," click **Enable** to allow Dependabot to initiate version updates.
 

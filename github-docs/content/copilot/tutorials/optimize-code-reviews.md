@@ -198,7 +198,7 @@ So far, Copilot code review has provided per-pull request feedback on style and 
 
 When Code Quality is enabled, it posts reliability and maintainability findings as inline comments on the pull request, each with a one-click, Copilot-powered autofix you can apply directly. It also reports coverage metrics that show whether the change maintains or reduces reported code coverage from your test suite compared to the default branch. If you want to enforce these standards, rulesets can require rules-based findings to be resolved and coverage thresholds to be met before merge.
 
-For more information, see [About Code Quality](https://docs.github.com/en/code-security/concepts/about-code-quality).
+For more information, see [Code Quality](https://docs.github.com/en/code-security/concepts/code-quality/code-quality).
 
 ## Optimized reviews with Copilot
 

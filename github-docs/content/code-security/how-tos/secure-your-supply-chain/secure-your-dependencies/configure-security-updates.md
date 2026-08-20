@@ -27,7 +27,7 @@ You can also enable or disable Dependabot security updates for an individual rep
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. To the right of "Dependabot security updates," click **Enable** to enable the feature or **Disable** to disable it. For public repositories, the button is disabled if the feature is always enabled.
 
@@ -59,7 +59,7 @@ You can enable grouped pull requests for Dependabot security updates in one, or 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependabot," to the right of "Grouped security updates," click **Enable** to enable the feature or **Disable** to disable it.
 

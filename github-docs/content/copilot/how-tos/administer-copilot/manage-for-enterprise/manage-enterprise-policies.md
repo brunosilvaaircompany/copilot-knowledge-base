@@ -36,5 +36,5 @@ If you enable "Copilot in GitHub.com" from the "Copilot" page of the "AI Control
 
 ## Further reading
 
-* [Policy Conflicts](https://docs.github.com/en/copilot/reference/policy-conflicts)
+* [Policy Conflicts](https://docs.github.com/en/copilot/reference/enterprise-administrators/policy-conflicts)
 * [Supported Surfaces For Policies](https://docs.github.com/en/copilot/reference/supported-surfaces-for-policies)

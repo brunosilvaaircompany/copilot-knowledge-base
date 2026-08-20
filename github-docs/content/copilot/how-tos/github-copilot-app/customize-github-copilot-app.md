@@ -27,7 +27,9 @@ For more information about MCP, see [Add MCP Servers](https://docs.github.com/en
 
 Custom agents are specialized versions of Copilot cloud agent that you can tailor to specific tasks and workflows.
 
-In a session, type `/agent` to choose and invoke a custom agent.
+Use the agent picker dropdown in the prompt box to select a custom agent before or during a session.
+
+Alternatively, type `/agent` in the prompt box to choose and invoke a custom agent.
 
 For more information, see [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
 

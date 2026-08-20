@@ -30,7 +30,7 @@ To mitigate this risk, GitHub:
 
 Copilot cloud agent has access to code and other sensitive information, and could leak it, either accidentally or due to malicious user input.
 
-To mitigate this risk, GitHub **restricts Copilot cloud agent's access to the internet**. See [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall).
+To mitigate this risk, GitHub **restricts Copilot cloud agent's access to the internet**. See [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 ## AI prompts can be vulnerable to injection
 

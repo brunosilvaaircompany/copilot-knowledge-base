@@ -15,7 +15,7 @@ At its core, an MCP registry is a set of HTTPS endpoints that serve details abou
 * Publish your own custom implementation.
 
 > [!NOTE]
-> If you want your developers to have access to local MCP servers, include those servers in your registry with the correct server ID. For more information, see [MCP Allowlist Enforcement](https://docs.github.com/en/copilot/reference/mcp-allowlist-enforcement).
+> If you want your developers to have access to local MCP servers, include those servers in your registry with the correct server ID. For more information, see [MCP Private Registry Enforcement](https://docs.github.com/en/copilot/reference/enterprise-administrators/mcp-private-registry-enforcement).
 
 To create a valid MCP registry that is reachable by GitHub Copilot, the registry must meet the following requirements:
 * [Endpoint and specification requirements](#endpoint-and-specification-requirements)
@@ -59,7 +59,7 @@ Access-Control-Allow-Headers: Authorization, Content-Type
 Azure API Center provides a fully managed MCP registry with automatic CORS configuration, built-in governance features, and no additional web server setup.
 
 1. To complete the initial setup for your registry, see [Register and discover remote MCP servers in your API inventory](https://learn.microsoft.com/azure/api-center/register-discover-mcp-server) in the Azure documentation.
-1. If you want your developers to have access to local MCP servers, include those servers in your registry with the correct server ID. For more information, see [MCP Allowlist Enforcement](https://docs.github.com/en/copilot/reference/mcp-allowlist-enforcement).
+1. If you want your developers to have access to local MCP servers, include those servers in your registry with the correct server ID. For more information, see [MCP Private Registry Enforcement](https://docs.github.com/en/copilot/reference/enterprise-administrators/mcp-private-registry-enforcement).
 1. To ensure GitHub Copilot can fetch your registry, in the visibility settings of your API Center, allow anonymous access.
 1. Copy your API Center endpoint URL. In the next article, you will use this URL to make your registry available across your company.
 
@@ -69,4 +69,4 @@ Azure API Center offers a **free tier** for basic API cataloging and discovery, 
 
 ## Next steps
 
-Now that you have created your MCP registry, you can set MCP policies for your company. See [Configure MCP Server Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-server-access).
+Now that you have created your MCP registry, you can set MCP policies for your company. See [Restrict Based On Registry](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/restrict-based-on-registry).

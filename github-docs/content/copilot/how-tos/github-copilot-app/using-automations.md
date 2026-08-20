@@ -29,18 +29,25 @@ To use cloud automations, make sure the following settings are enabled.
 ## Creating an automation
 
 1. Click **New automation** in the top-right corner.
-1. Enter a **name** for the automation.
-1. Select one or more **triggers** that determine when the automation runs:
+1. Enter a name for the automation.
+1. Select a **Trigger** from the dropdown. Selecting a trigger will reveal additional fields for you to populate.
 
-   * **Manual**: Run the automation manually.
-   * **On a schedule**: choose a recurring interval, either hourly, daily, or weekly.
-   * **When an issue is created**: the automation runs each time an issue is opened in the repository. You can add a search query filter for specific issues.
+   * **Manual**: Run the automation only when you start it.
+   * **Hourly**: Run the automation every hour.
+   * **Daily**: Choose one or more hours and a minute. The automation runs at each selected time.
+   * **Weekly**: Choose one or more days of the week and a time of day.
+   * **CRON**: For a local automation, enter a custom CRON expression. The app validates the expression and shows a human-readable preview of the schedule.
+   * **Issue**: Choose the repository event that triggers the automation, such as an issue being created. You can add a search query to limit which issues trigger it.
+   * **Pull request**: Choose the repository event that triggers the automation, such as a pull request being opened or new commits being pushed to it. You can add filters to limit which pull requests trigger it.
+
+   To configure more than one trigger, click **Add another trigger**. The automation runs when any of its triggers occur.
 1. Optionally, enable **Run in the cloud** to let the automation run in a cloud environment, allowing the automation to run even when your computer is off.
 
-    For cloud automations, you can also use the **Tools** dropdown to select the tools Copilot can use when the automation runs, such as pushing changes, updating issue labels, or creating a pull request. Select only the tools the task requires. The tools you select control what actions Copilot can take in your repository.
-1. In the **prompt** field, describe the task you want Copilot to perform each time the automation runs.
-1. Optionally, select the **project** and **model** you want Copilot to use.
-1. Click **Create** to save, or select **Create and run** to save and test the automation immediately.
+   For a cloud automation, use the **Tools** dropdown to select the tools Copilot can use, such as pushing changes, updating issue labels, or creating a pull request. Select only the tools the task requires.
+1. In the prompt box, describe the task you want Copilot to perform each time the automation runs. You can type `/` to use an available skill.
+1. Use the controls below the prompt box to select the model, reasoning effort, and agent for the automation.
+1. Click **Select project**, then choose the project where the automation will run.
+1. Click **Create** to save the automation. To save and test it immediately, open the dropdown next to **Create**, then click **Create and run**.
 
 ## Running an automation on demand
 

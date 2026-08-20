@@ -28,6 +28,18 @@ To set up a trial of GitHub Advanced Security using this method, you must meet t
 
    During a trial of GitHub Advanced Security, you can add any number of committers and enable GitHub Secret Protection and GitHub Code Security for any number of organizations.
 
+## Billing during your trial
+
+During the trial, you do not pay license fees for GitHub Advanced Security.
+
+
+
+Usage-based billing continues for features that consume GitHub Actions minutes or AI credits.
+
+For private repositories, minutes used by GitHub Advanced Security workflows that run on standard GitHub-hosted runners, including code scanning workflows, count toward the 50,000 minutes included each month with your GitHub Enterprise Cloud plan. Workflows in public repositories or on self-hosted runners do not consume included minutes. larger runners are billed separately. Usage beyond the included amount is billed at the standard rate. For more information, see [Product Usage Included](https://docs.github.com/en/billing/reference/product-usage-included).
+
+
+
 ## Finishing your trial
 
 You can finish your trial at any time by purchasing licenses for GitHub Secret Protection or GitHub Code Security. If you haven't made a purchase by the end of the 30 days, your trial will expire.

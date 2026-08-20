@@ -35,7 +35,7 @@ The GitHub Copilot app supports the following operating systems:
 * **GitHub integration:** Browse and find issues, start sessions from them, create and close pull requests, review pull requests, view CI check results, and search across your repositories—all within the app.
 * **Customizations:** Configure and use global instructions, MCP servers, and agent skills.
 * **Automations:** Save recurring agent tasks and run them on a schedule or on demand.
-* **Quick chats:** Brainstorm in a conversation mode without creating a dedicated branch or workspace.
+* **Chats:** Brainstorm in a conversation mode without creating a dedicated branch or workspace.
 * **Session history:** Use `/chronicle` to get insights from previous sessions, including work you started in the app.
 * **Canvases:** Open custom, agent-driven artifacts and interfaces where people and agents can collaborate.
 
@@ -57,7 +57,7 @@ Follow these practices to use AI credits more efficiently in the app:
 
 * **Match model capability to task complexity.** Use lighter models for straightforward changes and higher-capability models for complex debugging, design decisions, and multi-step tasks.
 * **Choose the right session mode for the stage of work.** Use **Plan** mode to validate scope and approach, use **Interactive** mode when you want tighter steering, and move to **Autopilot** when the task is well-defined.
-* **Use quick chats to scope before opening a full session.** For early exploration, use **Quick chats** to clarify requirements and reduce rework before creating a dedicated session.
+* **Use chats to scope before opening a full session.** For early exploration, use **Chats** to clarify requirements and reduce rework before creating a dedicated session.
 * **Start a new session when you switch tasks.** A new session keeps context focused and avoids carrying irrelevant history into unrelated work.
 * **Use usage insights regularly.** Run `/chronicle cost tips` to find expensive patterns in your session usage and improve efficiency over time.
 

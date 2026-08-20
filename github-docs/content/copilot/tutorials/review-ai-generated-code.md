@@ -12,7 +12,7 @@ Always run automated tests and static analysis tools first.
 
 * Make sure the code compiles and all tests pass. Check for any new warnings or errors.
 * Use tools like [CodeQL](https://codeql.github.com/) and [Dependabot](/code-security/concepts/supply-chain-security/dependabot-version-updates) to catch vulnerabilities and dependency issues.
-* Use GitHub Code Quality to catch reliability and maintainability issues and see code coverage. [About Code Quality](https://docs.github.com/en/code-security/concepts/about-code-quality).
+* Use GitHub Code Quality to catch reliability and maintainability issues and see code coverage. [Code Quality](https://docs.github.com/en/code-security/concepts/code-quality/code-quality).
 * See [Generate Unit Tests](https://docs.github.com/en/copilot/tutorials/copilot-cookbook/testing-code/generate-unit-tests) and [Create End To End Tests](https://docs.github.com/en/copilot/tutorials/copilot-cookbook/testing-code/create-end-to-end-tests) for examples of verifying code with Copilot.
 
 ### Example prompts

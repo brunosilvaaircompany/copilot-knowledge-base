@@ -29,9 +29,11 @@ You'll **need help** creating an enterprise account if you require:
 * GitHub Enterprise Server
 * GitHub Enterprise Cloud with data residency
 * Invoicing
-* A dedicated enterprise for managing GitHub Copilot Business licenses without adopting GitHub Enterprise
 
 In these cases, contact [GitHub's Sales team](https://github.com/enterprise/contact).
+
+> [!NOTE]
+> GitHub no longer provisions separate "dedicated" enterprise accounts for managing GitHub Copilot Business licenses without adopting GitHub Enterprise. In any enterprise account, you can assign GitHub Copilot Business licenses directly to members who don't belong to an organization, and those members don't consume a GitHub Enterprise license. See [Set Up A Dedicated Enterprise For Copilot Business](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-a-dedicated-enterprise-for-copilot-business).
 
 ## What will happen after I upgrade my organization?
 

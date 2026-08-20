@@ -36,7 +36,7 @@ You need to follow the steps below on the repository you forked in [Prerequisite
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Dependabot", click **Enable** for Dependabot alerts, Dependabot security updates, and Dependabot version updates.
 1. If you clicked **Enable** for Dependabot version updates, you can edit the default `dependabot.yml` configuration file that GitHub creates for you in the `/.github` directory of your repository.

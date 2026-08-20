@@ -80,9 +80,3 @@ There are **limits on enterprise teams**. You can create up to 2,500 teams for a
 
 
 For more information about the capabilities of organization teams, see [About Teams](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams).
-
-## Next steps
-
-If your needs are covered by enterprise teams, create a team. See [Create Enterprise Teams](https://docs.github.com/en/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/create-enterprise-teams).
-
-If you need to create an organization team, an organization owner must do this from the organization settings. See [Creating A Team](https://docs.github.com/en/organizations/organizing-members-into-teams/creating-a-team).

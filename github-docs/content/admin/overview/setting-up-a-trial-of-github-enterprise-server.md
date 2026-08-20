@@ -6,7 +6,7 @@ You can request a 45-day trial to evaluate GitHub Enterprise Server. Your trial 
 
 Dependabot alerts and GitHub Connect are not currently available in trials of GitHub Enterprise Server. For a demonstration of these features, contact [GitHub's Sales team](https://github.com/enterprise/contact). For more information about these features, see [Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts) and [Enabling GitHub Connect For Githubcom](https://docs.github.com/en/enterprise-server@latest/admin/configuring-settings/configuring-github-connect/enabling-github-connect-for-githubcom).
 
-Trials are also available for GitHub Enterprise Cloud. For more information, see [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).
+Trials are also available for GitHub Enterprise Cloud. For more information, see [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).
 
 If you're not sure whether GitHub Enterprise Cloud, GitHub Enterprise Server, or both are best for your organization, contact [GitHub's Sales team](https://github.com/enterprise/contact). If your organization has 11 or fewer developers, consider GitHub Team; organizations with 12 or more developers typically benefit the most from GitHub Enterprise. For more information, see [Githubs Plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans).
 
@@ -52,4 +52,4 @@ If you haven't upgraded by the last day of your trial, you'll receive an email n
 
 ## Further reading
 
-* [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/admin/overview/setting-up-a-trial-of-github-enterprise-cloud)
+* [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/setting-up-a-trial-of-github-enterprise-cloud)

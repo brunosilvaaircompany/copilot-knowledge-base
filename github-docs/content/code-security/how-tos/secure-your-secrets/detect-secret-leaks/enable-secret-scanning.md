@@ -28,7 +28,7 @@ Secret scanning alerts for users are enabled when you enable Secret Protection f
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
+1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. To the right of "Secret Protection", click **Enable**.
 1. Review the impact of enabling Secret Protection, then click **Enable Secret Protection**.

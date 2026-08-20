@@ -88,7 +88,7 @@ If Copilot tries to make a request which is blocked by the firewall, a warning i
 
 ![Screenshot of a warning from Copilot about being blocked by the firewall.](/assets/images/help/copilot/cloud-agent/firewall-warning.png)
 
-For more information, see [Customize The Agent Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-firewall).
+For more information, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 ## Copilot is not picking up attached screenshots
 
