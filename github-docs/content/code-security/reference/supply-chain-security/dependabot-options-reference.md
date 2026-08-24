@@ -588,7 +588,7 @@ Package manager | YAML value      | Supported versions |
 |  |
 | Swift   | `swift`      | v5, v6  |
 | Terraform    | `terraform`      | >= 0.13, <= 1.15.x  |
-| uv           | `uv`             | v0 |
+| uv           | `uv`             | v0.11 |
 |  |
 | vcpkg       | `vcpkg`          | Not applicable   |
 |  |
@@ -836,7 +836,7 @@ Define a specific branch to check for version updates and to target pull request
 
 Dependabot default behavior:
 
-* Dependabot uses the default branch for the repository, see [About the default branch](/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch).
+* Dependabot uses the default branch for the repository, see [About the default branch](/pull-requests/reference/branches#about-the-default-branch).
 
 When `target-branch` is defined:
 

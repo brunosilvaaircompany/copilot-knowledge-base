@@ -22,7 +22,7 @@ You can use GitHub Discussions to discuss big picture ideas, brainstorm, and dev
 
 You might use repository discussions to discuss topics that are specific to the repository. If your project spans multiple repositories, you might use organization discussions to discuss topics that aren't specific to a single repository in your organization.
 
-Issues are useful for discussing specific details of a project such as bug reports and planned improvements. For more information, see [About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues). Pull requests allow you to comment directly on proposed changes. For more information, see [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and [Commenting On A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request).
+Issues are useful for discussing specific details of a project such as bug reports and planned improvements. For more information, see [About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues). Pull requests allow you to comment directly on proposed changes. For more information, see [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests) and [Commenting On A Pull Request](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/commenting-on-a-pull-request).
 
 ## Following contributing guidelines
 

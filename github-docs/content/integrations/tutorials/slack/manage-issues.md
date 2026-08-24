@@ -11,3 +11,7 @@ With the GitHub integration in Slack, you can comment on, edit, and close issues
    * To close the issue, click **Close issue**. In the dialog, confirm that you want to close the issue by clicking **Close issue** again.
 
    >[!NOTE] If you do not see these options, you may not have the necessary permissions to manage issues in the repository.
+
+
+
+Alternatively, you can ask GitHub Copilot to manage issues by @mentioning `@GitHub` in your channel or in a direct message.

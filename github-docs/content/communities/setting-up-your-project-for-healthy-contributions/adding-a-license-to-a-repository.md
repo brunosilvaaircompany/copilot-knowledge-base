@@ -66,7 +66,7 @@ Open source licenses enable others to freely use, change, and distribute the pro
     ![Screenshot of a GitHub pull request showing a dropdown menu with options to choose the commit author email address. octocat@github.com is selected.](/assets/images/help/repository/choose-commit-email-address.png)
 
 
-1. Below the commit message fields, decide whether to add your commit to the current branch or to a new branch. If your current branch is `main`, you should choose to create a new branch for your commit and then create a pull request. For more information, see [Creating A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+1. Below the commit message fields, decide whether to add your commit to the current branch or to a new branch. If your current branch is `main`, you should choose to create a new branch for your commit and then create a pull request. For more information, see [Creating A Pull Request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request).
 ![Screenshot of a GitHub pull request showing a radio button to commit directly to the main branch or to create a new branch. New branch is selected.](/assets/images/help/repository/choose-commit-branch.png)
 1. Click **Commit changes** or **Propose changes**.
 

@@ -82,40 +82,6 @@ await session.send(
 
 
 ```golang
-package main
-
-import (
-	"context"
-	copilot "github.com/github/copilot-sdk/go"
-	"github.com/github/copilot-sdk/go/rpc"
-)
-
-func main() {
-	ctx := context.Background()
-	client := copilot.NewClient(nil)
-	client.Start(ctx)
-
-	session, _ := client.CreateSession(ctx, &copilot.SessionConfig{
-		Model: "gpt-5.4",
-		OnPermissionRequest: func(req copilot.PermissionRequest, inv copilot.PermissionInvocation) (rpc.PermissionDecision, error) {
-			return &rpc.PermissionDecisionApproveOnce{}, nil
-		},
-	})
-
-	path := "/absolute/path/to/screenshot.png"
-	session.Send(ctx, copilot.MessageOptions{
-		Prompt: "Describe what you see in this image",
-		Attachments: []copilot.Attachment{
-            &copilot.AttachmentFile{
-                DisplayName: "screenshot.png",
-                Path:        path,
-			},
-		},
-	})
-}
-```
-
-```golang
 ctx := context.Background()
 client := copilot.NewClient(nil)
 client.Start(ctx)
@@ -143,38 +109,6 @@ session.Send(ctx, copilot.MessageOptions{
 
 #### .NET
 
-
-```csharp
-using GitHub.Copilot;
-using GitHub.Copilot.Rpc;
-
-public static class ImageInputExample
-{
-    public static async Task Main()
-    {
-        await using var client = new CopilotClient();
-        await using var session = await client.CreateSessionAsync(new SessionConfig
-        {
-            Model = "gpt-5.4",
-            OnPermissionRequest = (req, inv) =>
-                Task.FromResult(PermissionDecision.ApproveOnce()),
-        });
-
-        await session.SendAsync(new MessageOptions
-        {
-            Prompt = "Describe what you see in this image",
-            Attachments = new List<Attachment>
-            {
-                new AttachmentFile
-                {
-                    Path = "/absolute/path/to/screenshot.png",
-                    DisplayName = "screenshot.png",
-                },
-            },
-        });
-    }
-}
-```
 
 ```csharp
 using GitHub.Copilot;
@@ -303,43 +237,6 @@ await session.send(
 
 
 ```golang
-package main
-
-import (
-	"context"
-	copilot "github.com/github/copilot-sdk/go"
-	"github.com/github/copilot-sdk/go/rpc"
-)
-
-func main() {
-	ctx := context.Background()
-	client := copilot.NewClient(nil)
-	client.Start(ctx)
-
-	session, _ := client.CreateSession(ctx, &copilot.SessionConfig{
-		Model: "gpt-5.4",
-		OnPermissionRequest: func(req copilot.PermissionRequest, inv copilot.PermissionInvocation) (rpc.PermissionDecision, error) {
-			return &rpc.PermissionDecisionApproveOnce{}, nil
-		},
-	})
-
-	base64ImageData := "..."
-	mimeType := "image/png"
-	displayName := "screenshot.png"
-	session.Send(ctx, copilot.MessageOptions{
-		Prompt: "Describe what you see in this image",
-		Attachments: []copilot.Attachment{
-            &copilot.AttachmentBlob{
-                Data:        &base64ImageData,
-                MIMEType:    mimeType,
-				DisplayName: &displayName,
-			},
-		},
-	})
-}
-```
-
-```golang
 mimeType := "image/png"
 displayName := "screenshot.png"
 session.Send(ctx, copilot.MessageOptions{
@@ -358,40 +255,6 @@ session.Send(ctx, copilot.MessageOptions{
 
 #### .NET
 
-
-```csharp
-using GitHub.Copilot;
-using GitHub.Copilot.Rpc;
-
-public static class BlobAttachmentExample
-{
-    public static async Task Main()
-    {
-        await using var client = new CopilotClient();
-        await using var session = await client.CreateSessionAsync(new SessionConfig
-        {
-            Model = "gpt-5.4",
-            OnPermissionRequest = (req, inv) =>
-                Task.FromResult(PermissionDecision.ApproveOnce()),
-        });
-
-        var base64ImageData = "...";
-        await session.SendAsync(new MessageOptions
-        {
-            Prompt = "Describe what you see in this image",
-            Attachments = new List<Attachment>
-            {
-                new AttachmentBlob
-                {
-                    Data = base64ImageData,
-                    MimeType = "image/png",
-                    DisplayName = "screenshot.png",
-                },
-            },
-        });
-    }
-}
-```
 
 ```csharp
 await session.SendAsync(new MessageOptions
@@ -474,20 +337,6 @@ Not all models support vision. Check the model's capabilities before sending ima
 | `capabilities.limits.vision.max_prompt_image_size` | `number` | Maximum image size in bytes |
 
 ### Vision limits type
-
-
-
-```typescript
-interface VisionCapabilities {
-    vision?: {
-        supported_media_types: string[];
-        max_prompt_images: number;
-        max_prompt_image_size: number; // bytes
-    };
-}
-```
-
-
 
 ```typescript
 vision?: {

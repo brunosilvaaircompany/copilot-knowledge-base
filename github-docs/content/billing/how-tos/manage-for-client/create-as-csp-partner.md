@@ -8,7 +8,7 @@ Before you start, make sure you know:
 * Enterprise name your client would like to use
 * Email address for receipts
 * Number of seats your client needs in the enterprise
-* Enterprise account type required by your client, see [Choose An Enterprise Type](https://docs.github.com/en/enterprise-onboarding/getting-started-with-your-enterprise/choose-an-enterprise-type)
+* Enterprise account type required by your client, see [Choose An Enterprise Type](https://docs.github.com/en/admin/concepts/enterprise-fundamentals/choose-an-enterprise-type)
 
 ## Step 1: Create the enterprise account in the Azure portal
 
@@ -17,7 +17,7 @@ As a Microsoft CSP partner, you can get started with GitHub Enterprise from the 
 1. Sign in to the Microsoft Azure portal.
 1. In the search bar, type "GitHub" and select **GitHub** to go the landing page.
 1. Select **Get started with GitHub Enterprise**.
-1. Choose an enterprise type. To help you decide which choice is best for the enterprise, see [Choose An Enterprise Type](https://docs.github.com/en/enterprise-onboarding/getting-started-with-your-enterprise/choose-an-enterprise-type).
+1. Choose an enterprise type. To help you decide which choice is best for the enterprise, see [Choose An Enterprise Type](https://docs.github.com/en/admin/concepts/enterprise-fundamentals/choose-an-enterprise-type).
 1. Complete the form with your client's information.
 1. Click **Create your enterprise**.
 

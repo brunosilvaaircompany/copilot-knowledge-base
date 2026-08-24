@@ -43,8 +43,8 @@ The following table shows what's included with each paid plan.
 | Copilot Pro+ | $39 USD | 3,900 | 3,100 | 7,000 |
 | Copilot Max | $100 USD | 10,000 | 10,000 | 20,000 |
 
-Copilot Free and Copilot Student both have an allowance of AI credits and access to models through auto model selection only. Copilot Free includes 2000 code completions per month and Copilot Student includes unlimited code completions.
 
+ Copilot Free and Copilot Student both have an allowance of AI credits and access to models through auto model selection only. Copilot Free includes 2000 code completions per month and Copilot Student includes unlimited code completions.
 
 If you use everything included in your plan, you can purchase more and keep working. See [What happens if I exceed my included AI credits](#what-happens-if-i-exceed-my-included--data-variablesproductprodname_ai_credits_short-).
 

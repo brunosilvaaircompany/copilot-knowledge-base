@@ -86,7 +86,7 @@ If the banner is still there, it means a finding at or above the blocking severi
 
 The pull request you just cleared is part of a bigger picture:
 
-* **Scores.** Your repository's reliability and maintainability scores are computed from findings on the default branch. Resolving findings before merge is how you keep those scores from drifting. See [Metrics And Ratings](https://docs.github.com/en/code-security/code-quality/reference/metrics-and-ratings).
+* **Scores.** Your repository's reliability and maintainability scores are computed from findings on the default branch. Resolving findings before merge is how you keep those scores from drifting. See [Metrics And Ratings](https://docs.github.com/en/code-security/reference/code-quality/metrics-and-ratings).
 * **Backlog.** Anything you don't fix in the pull request joins the backlog of findings on the default branch. Working that backlog down is a discipline of its own. See [Raise Your Quality Rating](https://docs.github.com/en/code-security/tutorials/improve-code-quality/raise-your-quality-rating).
 * **Compliance.** When a class of findings genuinely must not reach the default branch, the "Require code quality results" ruleset helps repository administrators and organization owners encode that decision as a merge gate. See [Unblock Your Pr](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/unblock-your-pr).
 
@@ -105,4 +105,4 @@ In this tutorial, you've worked through Code Quality comments on a pull request,
 ## Next steps
 
 * Apply the same thinking to your existing backlog: [Raise Your Quality Rating](https://docs.github.com/en/code-security/tutorials/improve-code-quality/raise-your-quality-rating).
-* Learn how findings translate into scores so you can measure the impact of the work: [Metrics And Ratings](https://docs.github.com/en/code-security/code-quality/reference/metrics-and-ratings).
+* Learn how findings translate into scores so you can measure the impact of the work: [Metrics And Ratings](https://docs.github.com/en/code-security/reference/code-quality/metrics-and-ratings).

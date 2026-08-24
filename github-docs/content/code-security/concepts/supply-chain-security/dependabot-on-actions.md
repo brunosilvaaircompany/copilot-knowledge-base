@@ -15,6 +15,15 @@ Future releases of GitHub will remove the ability to disable running Dependabot 
 
 > [!NOTE] Enabling Dependabot on GitHub Actions may increase the number of concurrent jobs run in your account. If required, customers on enterprise plans can request a higher limit for concurrent jobs. For more information, contact us through the [GitHub Support portal](https://support.github.com/), or contact your sales representative.
 
+## Dynamic workflows
+
+To run Dependabot jobs on GitHub Actions, GitHub creates a dynamic workflow for each job. Unlike standard GitHub Actions workflows, dynamic workflows are generated for a specific run and are not stored in your repository's `.github/workflows` directory.
+
+You may see workflow runs named `dynamic/dependabot/dependabot-updates` or check runs with `(dynamic)` appended to their names. You can use the workflow run logs to troubleshoot errors or configuration problems.
+
+You may see workflow runs named `dynamic/dependabot/dependabot-updates` or check runs with `(dynamic)` appended to their names. To troubleshoot errors or configuration problems, on the repository's **Actions** tab, filter the workflow runs to show only Dependabot update jobs, then open a workflow run to view the logs.
+
+## Runner options
 ## Runner options
 
 You can run Dependabot on GitHub Actions using:

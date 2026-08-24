@@ -4,7 +4,7 @@ You can customize your notifications by subscribing to activity that is relevant
 
 ### Notifications enabled by default
 
-The following notifications are enabled by default, but you can disable any of them using the `@GitHub Notifications unsubscribe owner/repo [feature]` command.
+The following notifications are enabled by default, but you can disable any of them using the `@GitHub Notifications unsubscribe OWNER/REPO [FEATURE]` command.
 
 |Feature|Description|
 |-------|-----------|
@@ -20,7 +20,7 @@ The following notifications are enabled by default, but you can disable any of t
 
 ### Notifications disabled by default
 
-The following notifications are disabled by default, but you can enable any of them using the `@GitHub Notifications subscribe owner/repo [feature]` command.
+The following notifications are disabled by default, but you can enable any of them using the `@GitHub Notifications subscribe owner/repo [FEATURE]` command.
 
 |Feature|Description|
 |-------|-----------|
@@ -28,12 +28,12 @@ The following notifications are disabled by default, but you can enable any of t
 |`workflows`|GitHub Actions workflow runs and approval notifications.|
 |`branches`|Branch creation and deletion.|
 |`discussions`|Discussions created or answered.|
-|`+label:"your label"`|Filter issues, pull requests, and comments based on their labels.|
+|`+label:"YOUR-LABEL"`|Filter issues, pull requests, and comments based on their labels.|
 
 You can subscribe or unsubscribe from multiple settings at once. For example:
 
-* To turn on activity for pull request reviews and comments, use `@GitHub Notifications subscribe owner/repo reviews comments`.
-* To turn off activity for issues and pull requests, use `@GitHub Notifications unsubscribe owner/repo issues pulls`.
+* To turn on activity for pull request reviews and comments, use `@GitHub Notifications subscribe OWNER/REPO reviews comments`.
+* To turn off activity for issues and pull requests, use `@GitHub Notifications unsubscribe OWNER/REPO issues pulls`.
 
 ## Filtering notifications
 
@@ -45,12 +45,12 @@ Branch filters allow you to filter commit notifications based on branch names. B
 
 |Example configuration|Description|
 |-------|-----------|
-|`@GitHub Notifications subscribe owner/repo commits`|Receive commit notifications for the default branch.|
-|`@GitHub Notifications subscribe owner/repo commits:main`|Only receive commit notifications for the `main` branch.|
-|`@GitHub Notifications subscribe owner/repo commits:feature/*`|Receive commit notifications for all branches that start with `feature/`.|
-|`@GitHub Notifications subscribe owner/repo commits:*`|Receive commit notifications for all branches.|
+|`@GitHub Notifications subscribe OWNER/REPO commits`|Receive commit notifications for the default branch.|
+|`@GitHub Notifications subscribe OWNER/REPO commits:main`|Only receive commit notifications for the `main` branch.|
+|`@GitHub Notifications subscribe OWNER/REPO commits:feature/*`|Receive commit notifications for all branches that start with `feature/`.|
+|`@GitHub Notifications subscribe OWNER/REPO commits:*`|Receive commit notifications for all branches.|
 
-You can unsubscribe from the commits feature using `@GitHub Notifications unsubscribe owner/repo commits`.
+You can unsubscribe from the commits feature using `@GitHub Notifications unsubscribe OWNER/REPO commits`.
 
 >[!NOTE] You may have previously used the `commits:all` filter to receive commit notifications for all branches. This filter is closing down. To receive commit notifications for all branches, use the `commits:*` filter instead. If you have previously set up the `commits:all` filter, it will continue to work until you update your configuration to use the `commits:*` filter.
 
@@ -74,30 +74,30 @@ Currently, it is only possible to have one required label filter per repository.
 To create a label filter, use the following command format:
 
 ```text copy
-@GitHub Notifications subscribe [owner/repo] +label:"your label"
+@GitHub Notifications subscribe [OWNER/REPO] +label:"YOUR-LABEL"
 ```
 
-This creates a required-label filter with the value `your label`. Incoming events that support filters are discarded unless they have that label.
+This creates a required-label filter with the value `YOUR-LABEL`. Incoming events that support filters are discarded unless they have that label.
 
 #### Updating label filters
 
-You can update an existing label filter by specifying a new label value:
+You can update an existing label filter by specifying a NEW-LABEL value:
 
 ```text copy
-@GitHub Notifications subscribe [owner/repo] +label:"new label"
+@GitHub Notifications subscribe [OWNER/REPO] +label:"NEW-LABEL"
 ```
 
-This will replace the "your label" filter with the "new label" filter.
+This will replace the "YOUR-LABEL" filter with the "NEW-LABEL" filter.
 
 #### Removing label filters
 
 You can remove an existing label filter by using the unsubscribe command with the `+label` option:
 
 ```text copy
-@GitHub Notifications unsubscribe [owner/repo] +label:"new label"
+@GitHub Notifications unsubscribe [OWNER/REPO] +label:"NEW-LABEL"
 ```
 
-This will remove the "new label" filter, and the channel will receive all notifications for the subscribed events without any label filtering.
+This will remove the "NEW-LABEL" filter, and the channel will receive all notifications for the subscribed events without any label filtering.
 
 #### Viewing active label filters
 
@@ -113,7 +113,7 @@ The GitHub app in Teams supports the most common special characters for label fi
 
 ## GitHub Actions workflow notifications
 
-You can subscribe to GitHub Actions workflow run notifications from your channel or personal app using "workflows" feature, using the format `@GitHub Notifications subscribe owner/repo workflows`.
+You can subscribe to GitHub Actions workflow run notifications from your channel or personal app using "workflows" feature, using the format `@GitHub Notifications subscribe OWNER/REPO workflows`.
 
 When you are subscribed to "workflows", the following functionality is available:
 
@@ -138,18 +138,18 @@ You can filter workflow notifications by using the following options:
 You can configure workflow notification filters with the following format:
 
 ```text copy
-@GitHub Notifications subscribe owner/repo workflows:{name:"your workflow name" event:"workflow event" branch:"branch name" actor:"username"}
+@GitHub Notifications subscribe OWNER/REPO workflows:{name:"YOUR-WORKFLOW-NAME" event:"WORKFLOW-EVENT" branch:"BRANCH-NAME" actor:"USERNAME"}
 ```
 
 You can also pass multiple values for each filter, separated by commas. For example:
 
 ```text copy
-@GitHub Notifications subscribe owner/repo workflows:{name:"your workflow name","another workflow name" event:"workflow event","another workflow event" branch:"branch name","another branch name" actor:"username","another-username"}
+@GitHub Notifications subscribe OWNER/REPO workflows:{name:"YOUR-WORKFLOW-NAME","ANOTHER-WORKFLOW-NAME" event:"WORKFLOW-EVENT","ANOTHER-WORKFLOW-EVENT" branch:"BRANCH-NAME","ANOTHER-BRANCH-NAME" actor:"USERNAME","ANOTHER-USERNAME"}
 ```
 
 By default, when you configure workflow notifications without passing any filters, it is configured for workflows triggered via pull requests targeting your default branch. You can pass one or multiple entries.
 
-You can unsubscribe from workflow notifications using the command: `@GitHub Notifications unsubscribe owner/repo workflows`.
+You can unsubscribe from workflow notifications using the command: `@GitHub Notifications unsubscribe OWNER/REPO workflows`.
 
 >[!NOTE] To receive GitHub Actions notifications in Teams, the GitHub app requires additional permissions. When you attempt to subscribe to workflows for the first time, you will be prompted to grant these permissions.
 
@@ -160,8 +160,8 @@ You can also configure separate deployment notifications. These deployments can 
 You can subscribe or unsubscribe to deployment notifications using the following commands:
 
 ```text copy
-@GitHub Notifications subscribe owner/repo deployments
-@GitHub Notifications unsubscribe owner/repo deployments
+@GitHub Notifications subscribe OWNER/REPO deployments
+@GitHub Notifications unsubscribe OWNER/REPO deployments
 ```
 
 >[!NOTE] If you are using GitHub Actions and want to track your deployments to environments, the `workflows` feature is recommended, as it provides a more complete picture and the ability to approve your deployments directly from Teams.

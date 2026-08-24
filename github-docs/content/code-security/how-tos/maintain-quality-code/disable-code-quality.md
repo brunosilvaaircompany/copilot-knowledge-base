@@ -49,7 +49,4 @@ What confirms the change depends on the level you disabled it at.
 
 **At the organization level**, open the organization's "Code quality" settings page and check that **Repository access** shows your selection (for example, **No repositories**) and that **Enforce access** is on if you enforced it. The organization-level Code Quality dashboard also stops showing data for the affected repositories. See [Explore Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/explore-code-quality).
 
-**At the repository level**, the repository's "Code quality" settings page shows that Code Quality analysis is disabled. If organization or enterprise enforcement applies, the page also shows a message that a policy prevents changing the Code Quality setting. No new Code Quality runs start on later pull requests or pushes; on the **Actions** tab, these runs are labeled by trigger, for example "Code Quality: push on main".
-
-> [!NOTE]
-> These runs use the workflow name CodeQL, the same name code scanning uses, so you can't reliably tell Code Quality and code scanning runs apart by workflow name. Identify Code Quality runs by their GitHub Actions label instead, for example "Code Quality: push on main".
+**At the repository level**, the repository's "Code quality" settings page shows that Code Quality analysis is disabled. If organization or enterprise enforcement applies, the page also shows a message that a policy prevents changing the setting. No new runs start on later pull requests or pushes. On the **Actions** tab, identify existing Code Quality runs by the actor `github-code-quality` or by a run name such as "Code Quality: push on main."

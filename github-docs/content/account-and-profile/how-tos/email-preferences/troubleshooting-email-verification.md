@@ -11,8 +11,8 @@ You cannot verify email addresses from disposable email address services (servic
 
 If your account is restricted and you're told to change the email address on your account before access can be restored, you must update your account email and then ask GitHub Support to review the restriction.
 
-1. Add a different, non-disposable email address and set it as your primary email address. For more information, see [Changing Your Primary Email Address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/changing-your-primary-email-address).
-1. Verify your new primary email address. For more information, see [Verifying Your Email Address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/verifying-your-email-address).
+1. Add a different, non-disposable email address and set it as your primary email address. For more information, see [Changing Your Primary Email Address](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/changing-your-primary-email-address).
+1. Verify your new primary email address. For more information, see [Verifying Your Email Address](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/verifying-your-email-address).
 1. Remove the previous email address from your account.
 1. Contact GitHub Support and ask for a review of the restriction.
 

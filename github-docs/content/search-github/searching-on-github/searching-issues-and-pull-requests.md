@@ -264,7 +264,7 @@ You can filter issues and pull requests by the number of reactions using the `re
 
 ## Search for draft pull requests
 
-You can filter for draft pull requests. For more information, see [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests).
+You can filter for draft pull requests. For more information, see [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 
 | Qualifier        | Example
 | ------------- | -------------
@@ -273,7 +273,7 @@ You can filter for draft pull requests. For more information, see [About Pull Re
 
 ## Search by pull request review status and reviewer
 
-You can filter pull requests based on their [review status](/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) (_none_, _required_, _approved_, or _changes requested_), by reviewer, and by requested reviewer.
+You can filter pull requests based on their [review status](/pull-requests/reference/pull-request-reviews) (_none_, _required_, _approved_, or _changes requested_), by reviewer, and by requested reviewer.
 
 | Qualifier        | Example
 | ------------- | -------------

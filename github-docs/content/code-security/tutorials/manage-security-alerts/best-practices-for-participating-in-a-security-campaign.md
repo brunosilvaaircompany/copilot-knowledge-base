@@ -105,7 +105,7 @@ For example:
 
    ```
 
-If you don't already have access to Copilot Chat through your organization or enterprise, you can sign up to GitHub Copilot Free. See [Accessing GitHub Copilot Free](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/managing-copilot-free/accessing-github-copilot-free).
+If you don't already have access to Copilot Chat through your organization or enterprise, you can sign up to GitHub Copilot Free. See [Get Started With A Copilot Plan](https://docs.github.com/en/copilot/how-tos/manage-your-account/get-started-with-a-copilot-plan).
 
 {% endif %}
 

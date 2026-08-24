@@ -105,7 +105,7 @@ You can change the name and email address used to author commits in a specific r
 
 ## Configuring your default branch for new repositories
 
-You can configure the default branch that will be used when you create a new repository in GitHub Desktop. For more information about the default branch, see [About Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#about-the-default-branch).
+You can configure the default branch that will be used when you create a new repository in GitHub Desktop. For more information about the default branch, see [Branches](https://docs.github.com/en/pull-requests/reference/branches#about-the-default-branch).
 
 {% mac %}
 
@@ -191,5 +191,5 @@ For more information about Git hooks in GitHub Desktop, see [Working With Git Ho
 
 * [Adding An Email Address To Your GitHub Account](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/adding-an-email-address-to-your-github-account)
 * [Setting Your Commit Email Address](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address)
-* [About Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+* [Branches](https://docs.github.com/en/pull-requests/reference/branches)
 * [Git Basics](https://docs.github.com/en/get-started/git-basics)

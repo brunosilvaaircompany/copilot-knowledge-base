@@ -107,7 +107,7 @@ You can clone an existing repository from GitHub to your local computer, making 
 
 #### Forking a repository
 
-A fork is a copy of a repository that you manage, where any changes you make will not affect the original repository unless you submit a pull request to the project owner. Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. For more information, see [Working With Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks).
+A fork is a copy of a repository that you manage, where any changes you make will not affect the original repository unless you submit a pull request to the project owner. Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. For more information, see [Work With Forks](https://docs.github.com/en/pull-requests/how-tos/work-with-forks).
 
 ### 2. Importing your projects
 

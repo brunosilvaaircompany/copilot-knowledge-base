@@ -129,7 +129,7 @@ These examples showed you how to decide which is the best tool for your conversa
 
 For issues, for example, you can tag issues with labels for quicker searching and create issue templates to help contributors open meaningful issues. For more information, see [About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) and [About Issue And Pull Request Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates).
 
-For pull requests, you can create draft pull requests if your proposed changes are still a work in progress. Draft pull requests cannot be merged until they're marked as ready for review. For more information, see [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests).
+For pull requests, you can create draft pull requests if your proposed changes are still a work in progress. Draft pull requests cannot be merged until they're marked as ready for review. For more information, see [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 
 For GitHub Discussions, you can set up a code of conduct and pin discussions that contain important information for your community. For more information, see [About Discussions](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions).
 

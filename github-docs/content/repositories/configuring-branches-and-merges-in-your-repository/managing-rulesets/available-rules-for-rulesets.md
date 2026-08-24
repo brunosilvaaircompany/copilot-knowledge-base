@@ -120,6 +120,23 @@ Optionally, you can require a merge type of merge, squash, or rebase. This means
 
 
 
+#### Additional approval for unattributed Copilot pull requests
+
+> [!NOTE]
+> This feature is in public preview and subject to change.
+
+**Require an additional approval for unattributed Copilot pull requests** is enabled by default, for both new and existing rulesets. When Copilot opens a pull request that isn't attributed to a person, the ruleset requires one more approval than the number you configured. For example, a ruleset that requires one approval requires two approvals from people with write access.
+
+Requiring one approval usually means two people are involved in a change: the person who wrote it and the person who approved it. That assumption doesn't hold when Copilot opens a pull request under its own app identity instead of on behalf of a person, for example when you prompt it from a shared context such as a group thread or channel. See [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack) and [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams).
+
+This setting has no effect if the ruleset requires zero approvals, so repositories that use pull requests as a record of changes rather than to gate on approvals are unaffected.
+
+If you clear this setting, these pull requests require only the number of approvals you configured. If you also require an approval from someone other than the last person to push, at least one approval must cover the last push and come from someone other than Copilot.
+
+
+
+
+
 #### Required reviewers
 
 Optionally, you can require review or approval from specific teams when a pull request changes certain files or directories. You can specify up to 15 different teams, and for each team you can require a certain number of approvals from team members. For an approval from a team member to count, the team must have write permissions (or higher) for the repository.
@@ -214,8 +231,8 @@ If your repository has GitHub Code Quality enabled and code coverage data is bei
 
 This rule blocks a pull request from being merged when either of two code coverage thresholds is not met:
 
-* **Minimum coverage percentage**: the aggregated code coverage for the pull request branch is below the configured percentage.
-* **Maximum coverage drop**: code coverage drops by more than the configured number of percentage points relative to the default branch.
+* **Minimum line coverage percentage**: the aggregated line coverage for the pull request branch is below the configured percentage.
+* **Maximum line coverage drop**: line coverage drops by more than the configured number of percentage points relative to the default branch.
 
 For how to configure the thresholds, the prerequisite for uploading coverage data, and how to roll the rule out safely, see [Restrict Code Coverage](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/restrict-code-coverage).
 

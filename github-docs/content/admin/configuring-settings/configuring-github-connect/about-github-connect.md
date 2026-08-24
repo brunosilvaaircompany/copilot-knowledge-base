@@ -22,12 +22,11 @@ To enable GitHub Connect, you configure a connection between your GitHub Enterpr
 
 After you configure the connection between your GitHub Enterprise Server instance and GitHub Enterprise Cloud, you can enable individual features of GitHub Connect.
 
-
 If you're connecting to an enterprise on **GHE.com**:
+
 * Server Statistics is not available.
-* GitHub.com actions are not available.
-
-
+* Automatic user license sync requires GitHub Enterprise Server version 3.15 or later.
+* Actions from GitHub.com require GitHub Enterprise Server version 3.20.6 or later, or any feature release from 3.21.0.
 
 
 | Feature | Description | More information |

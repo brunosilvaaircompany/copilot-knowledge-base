@@ -34,4 +34,4 @@ You can link to a specific line in the Markdown file the same way you can in cod
 ## Further reading
 
 * [Creating An Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)
-* [Reviewing Changes In Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests)
+* [Review Pull Requests](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests)

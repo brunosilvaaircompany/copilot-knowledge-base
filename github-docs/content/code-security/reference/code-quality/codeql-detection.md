@@ -10,10 +10,6 @@ Code Quality uses CodeQL to perform rule-based analysis of pull requests and you
 
 Copilot Autofix suggestions are provided for findings where possible.
 
-### Scan information
-
-Each CodeQL analysis will use GitHub Actions minutes and can be seen on the **Actions** tab of the repository. These runs use the workflow name CodeQL, the same name code scanning uses, so you can't reliably tell Code Quality and code scanning runs apart by workflow name. Identify Code Quality runs by their GitHub Actions label instead, for example "Code Quality: push on main"
-
 ### Query lists for supported languages
 
 Each Code Quality rule is written as a query in CodeQL and then run using GitHub Actions.
@@ -31,7 +27,9 @@ For more information about the CodeQL project, see [https://codeql.github.com/](
 
 ## Workflow used for code quality analysis
 
-You can see all the workflow runs for Code Quality on the **Actions** tab for your repository. You can identify Code Quality runs by their GitHub Actions label, for example "Code Quality: push on main"
+Each CodeQL analysis will use GitHub Actions minutes. You can see all workflow runs for Code Quality on the repository's **Actions** tab. 
+
+Code Quality and code scanning runs both use the workflow name CodeQL. You can identify Code Quality runs by the actor `github-code-quality` or by their run name, for example, "Code Quality: push on main."
 
 By default, the Code Quality workflow runs on standard GitHub runners but you can configure Code Quality to use runners with a specific label. These may be hosted by GitHub or self-hosted.
 

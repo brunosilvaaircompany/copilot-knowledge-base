@@ -164,7 +164,7 @@ gh actions-importer audit --output-dir /data/out
 
 ## Using a proxy
 
-To access servers that are configured with a HTTP proxy, you must set the following environment variables with the proxy's URL:
+To access servers that are configured with an HTTP proxy, you must set the following environment variables with the proxy's URL:
 
 * `OCTOKIT_PROXY`: for any GitHub server.
 * `HTTP_PROXY` (or `HTTPS_PROXY`): for any other servers.

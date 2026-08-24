@@ -243,38 +243,6 @@ cd /expected/working/dir
 
 #### .NET console apps / tools
 
-
-
-```csharp
-using GitHub.Copilot;
-
-public static class McpDotnetConfigExample
-{
-    public static void Main()
-    {
-        var servers = new Dictionary<string, McpServerConfig>
-        {
-            ["my-dotnet-server"] = new McpStdioServerConfig
-            {
-                Command = @"C:\Tools\MyServer\MyServer.exe",
-                Args = new List<string>(),
-                WorkingDirectory = @"C:\Tools\MyServer",
-                Tools = new List<string> { "*" },
-            },
-            ["my-dotnet-tool"] = new McpStdioServerConfig
-            {
-                Command = "dotnet",
-                Args = new List<string> { @"C:\Tools\MyTool\MyTool.dll" },
-                WorkingDirectory = @"C:\Tools\MyTool",
-                Tools = new List<string> { "*" },
-            }
-        };
-    }
-}
-```
-
-
-
 ```csharp
 // Correct configuration for .NET exe
 ["my-dotnet-server"] = new McpStdioServerConfig
@@ -296,30 +264,6 @@ public static class McpDotnetConfigExample
 ```
 
 #### npx commands
-
-
-
-```csharp
-using GitHub.Copilot;
-
-public static class McpNpxConfigExample
-{
-    public static void Main()
-    {
-        var servers = new Dictionary<string, McpServerConfig>
-        {
-            ["filesystem"] = new McpStdioServerConfig
-            {
-                Command = "cmd",
-                Args = new List<string> { "/c", "npx", "-y", "@modelcontextprotocol/server-filesystem", "C:\\allowed\\path" },
-                Tools = new List<string> { "*" },
-            }
-        };
-    }
-}
-```
-
-
 
 ```csharp
 // Windows needs cmd /c for npx
@@ -355,22 +299,6 @@ xattr -d com.apple.quarantine /path/to/mcp-server
 ```
 
 #### Homebrew paths
-
-
-
-```typescript
-import { MCPStdioServerConfig } from "@github/copilot-sdk";
-
-const mcpServers: Record<string, MCPStdioServerConfig> = {
-  "my-server": {
-    command: "/opt/homebrew/bin/node",
-    args: ["/path/to/server.js"],
-    tools: ["*"],
-  },
-};
-```
-
-
 
 ```typescript
 // GUI apps may not have /opt/homebrew in PATH

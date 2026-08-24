@@ -34,7 +34,7 @@ We recommend testing your site locally, which allows you to see build error mess
 
 ## Viewing Jekyll build error messages in your pull request
 
-If you are publishing from a branch, when you create a pull request to update your publishing source on GitHub, you can see build error messages on the **Checks** tab of the pull request. For more information, see [About Status Checks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks).
+If you are publishing from a branch, when you create a pull request to update your publishing source on GitHub, you can see build error messages on the **Checks** tab of the pull request. For more information, see [Status Checks](https://docs.github.com/en/pull-requests/reference/status-checks).
 
 If you are publishing with a custom GitHub Actions workflow, in order to see build error messages in your pull request, you must configure your workflow to run on the `pull_request` trigger. When you do this, we recommend that you skip any deploy steps if the workflow was triggered by the `pull_request` event. This will allow you to see any build errors without deploying the changes from your pull request to your site. For more information, see [Events That Trigger Workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request) and [Expressions](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions).
 

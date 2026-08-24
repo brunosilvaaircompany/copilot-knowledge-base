@@ -43,4 +43,4 @@ After changing your organization's name:
 
 ## Further reading
 
-* [Troubleshooting Commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/troubleshooting-commits#commits-are-linked-to-the-wrong-user)
+* [Troubleshooting Commits](https://docs.github.com/en/pull-requests/how-tos/commit-changes/troubleshooting-commits#commits-are-linked-to-the-wrong-user)

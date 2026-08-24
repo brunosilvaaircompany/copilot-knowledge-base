@@ -7,7 +7,7 @@ Typically, you would use `git rebase` to:
 * Delete or revert commits that are no longer necessary
 
 > [!WARNING]
-> Because changing your commit history can make things difficult for everyone else using the repository, it's considered bad practice to rebase commits when you've already pushed to a repository. To learn how to safely rebase, see [About Pull Request Merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
+> Because changing your commit history can make things difficult for everyone else using the repository, it's considered bad practice to rebase commits when you've already pushed to a repository. To learn how to safely rebase, see [Pull Request Merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges).
 
 ## Rebasing commits against a branch
 

@@ -12,11 +12,13 @@ Use of Code Quality incurs three types of costs for an organization:
 
 Code Quality scans run as GitHub Actions workflows and consume GitHub Actions minutes, unless you use self-hosted runners. See [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
 
+In a detailed usage report, you can identify usage from Code Quality scans by filtering the `workflow_path` field for `dynamic/github-code-quality/codeql`.
+
 ### GitHub AI Credits
 
 Code Quality features that use AI models consume AI credits from your shared AI credits pool, rather than a separate Code Quality allowance. Each interaction is priced based on the number of tokens consumed, where 1 AI credit = $0.01 USD. 
 
-Code Quality is a purpose-built product that uses a carefully tuned mix of models, prompts, and system behaviors to deliver consistent, high-quality analysis across a wide range of codebases. Model switching is not supported, as changing the model is likely to compromise the reliability and accuracy of analysis results. 
+Code Quality is a purpose-built product that uses a carefully tuned mix of models, prompts, and system behaviors to deliver consistent, high-quality analysis across a wide range of codebases. Model switching is not supported, as changing the model is likely to compromise the reliability and accuracy of analysis results.
 
 For more information about how AI credits work, see [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
 

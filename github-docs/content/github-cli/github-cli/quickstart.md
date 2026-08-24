@@ -58,7 +58,7 @@ Enter `gh pr list --repo OWNER/REPO` to list the most recently created pull requ
 
 Enter `gh pr list --label LABEL-NAME` to list open pull requests with a specific label. Enter `gh search prs --review-requested=@me --state=open` to list pull requests that you've been asked to review.
 
-To create a pull request, enter `gh pr create` and follow the on-screen instructions. For more information, see [Creating A Pull Request?Tool=Cli](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=cli#creating-the-pull-request).
+To create a pull request, enter `gh pr create` and follow the on-screen instructions. For more information, see [Creating A Pull Request?Tool=Cli](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request?tool=cli#creating-the-pull-request).
 
 ### Working with codespaces
 

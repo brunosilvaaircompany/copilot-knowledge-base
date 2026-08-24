@@ -22,4 +22,4 @@ You can click a specific test run to review log output, like compilation errors 
 
 ## Further reading
 
-* [About Status Checks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks)
+* [Status Checks](https://docs.github.com/en/pull-requests/reference/status-checks)

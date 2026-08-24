@@ -72,7 +72,7 @@ You can use the dependency graph to:
 * Explore the repositories your code depends on, and those that depend on it. For more information, see [Explore Dependencies](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/explore-dependencies). 
 * View a summary of the dependencies used in your organization's repositories in a single dashboard. For more information, see [Viewing Insights For Dependencies In Your Organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/viewing-insights-for-dependencies-in-your-organization#viewing-organization-dependency-insights).
 * View and update vulnerable dependencies for your repository. For more information, see [Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts).
-* See information about vulnerable dependencies in pull requests. For more information, see [Reviewing Dependency Changes In A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-dependency-changes-in-a-pull-request).
+* See information about vulnerable dependencies in pull requests. For more information, see [Reviewing Dependency Changes In A Pull Request](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-dependency-changes-in-a-pull-request).
 * Export a software bill of materials (SBOM) for audit or compliance purposes. This is a formal, machine-readable inventory of a project's dependencies. See [Export Dependencies As Sbom](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/export-dependencies-as-sbom).
 
 ## Further reading

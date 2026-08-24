@@ -27,7 +27,7 @@ Copilot cloud agent will evaluate the task it has been assigned based on the pro
 
 While working on a coding task, Copilot cloud agent has access to its own ephemeral development environment, powered by GitHub Actions, where it can explore your code, make changes, execute automated tests and linters and more.
 
-> [!NOTE] Deep research, planning, and iterating on code changes before creating a pull request are only available with Copilot cloud agent on GitHub.com. Cloud agent integrations (such as Azure Boards, JIRA, Linear, Slack, or Teams) only support creating a pull request directly.
+> [!NOTE] Deep research, planning, and iterating on code changes before creating a pull request are only available with Copilot cloud agent on GitHub.com, and in public preview for the Microsoft Teams and Slack integrations. Other cloud agent integrations (such as Azure Boards, JIRA, or Linear) only support creating a pull request directly.
 
 ### Benefits over traditional AI workflows
 
@@ -73,7 +73,11 @@ These metrics can help you track adoption of Copilot cloud agent and monitor cha
 
 ## Integrating Copilot cloud agent with third-party tools
 
-You can also invoke Copilot cloud agent from external tools, allowing you to assign tasks to Copilot, provide context, and open pull requests without leaving your workflow. See [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/tools/about-copilot-integrations)
+You can invoke Copilot cloud agent from external tools, allowing you to assign tasks to Copilot, provide context, and open pull requests without leaving your workflow.
+
+Use Copilot cloud agent in Microsoft Teams and Slack to collaborate with your team on agent-assisted work. You can @mention GitHub in channels, threads, and direct messages to work alongside teammates and Copilot on research, planning, and coding tasks. Teammates can add context, steer Copilot sessions, monitor progress, and then review the resulting artifacts.
+
+For more information, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/tools/about-copilot-integrations).
 
 ## Making Copilot cloud agent available
 

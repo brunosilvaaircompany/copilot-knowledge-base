@@ -89,7 +89,7 @@ OAuth apps can generate access tokens in order to make authenticated API request
 
 To enforce regular token rotation and reduce the impact of a compromised token, you should configure your OAuth app to use access tokens that expire. When your app uses access tokens that expire, you will receive a refresh token when you generate a access token. The access token expires after eight hours, and the refresh token expires after six months. You can use the refresh token to generate a new access token and a new refresh token. For more information, see [Authorizing OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps#expiring-access-tokens).
 
-To test and gradually roll out support for expiring tokens, you can opt in to receive expiring tokens for a sign-in by requesting the `offline_access` scope in addition to your other scopes. If your app supports both GitHub Enterprise Server and GitHub.com, be prepared for the `offline_access` scope to have no effect, because the GitHub Enterprise Server instance may not yet support expiring tokens. Check for the presence of the `expires_in` field in the token response to understand if your app has recieved an expiring token.
+To test and gradually roll out support for expiring tokens, you can opt in to receive expiring tokens for a sign-in by requesting the `offline_access` scope in addition to your other scopes. If your app supports both GitHub Enterprise Server and GitHub.com, be prepared for the `offline_access` scope to have no effect, because the GitHub Enterprise Server instance may not yet support expiring tokens. Check for the presence of the `expires_in` field in the token response to understand if your app has received an expiring token.
 
 
 

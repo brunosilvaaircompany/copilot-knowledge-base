@@ -16,14 +16,6 @@
 
 
 ```typescript
-import type { UserPromptSubmittedHookInput, HookInvocation, UserPromptSubmittedHookOutput } from "@github/copilot-sdk";
-type UserPromptSubmittedHandler = (
-  input: UserPromptSubmittedHookInput,
-  invocation: HookInvocation
-) => Promise<UserPromptSubmittedHookOutput | null | undefined>;
-```
-
-```typescript
 type UserPromptSubmittedHandler = (
   input: UserPromptSubmittedHookInput,
   invocation: HookInvocation
@@ -34,16 +26,6 @@ type UserPromptSubmittedHandler = (
 
 #### Python
 
-
-```python
-from copilot.session import UserPromptSubmittedHookInput, UserPromptSubmittedHookOutput
-from typing import Callable, Awaitable
-
-UserPromptSubmittedHandler = Callable[
-    [UserPromptSubmittedHookInput, dict[str, str]],
-    Awaitable[UserPromptSubmittedHookOutput | None]
-]
-```
 
 ```python
 UserPromptSubmittedHandler = Callable[
@@ -58,19 +40,6 @@ UserPromptSubmittedHandler = Callable[
 
 
 ```golang
-package main
-
-import copilot "github.com/github/copilot-sdk/go"
-
-type UserPromptSubmittedHandler func(
-    input copilot.UserPromptSubmittedHookInput,
-    invocation copilot.HookInvocation,
-) (*copilot.UserPromptSubmittedHookOutput, error)
-
-func main() {}
-```
-
-```golang
 type UserPromptSubmittedHandler func(
     input UserPromptSubmittedHookInput,
     invocation HookInvocation,
@@ -83,14 +52,6 @@ type UserPromptSubmittedHandler func(
 
 
 ```csharp
-using GitHub.Copilot;
-
-public delegate Task<UserPromptSubmittedHookOutput?> UserPromptSubmittedHandler(
-    UserPromptSubmittedHookInput input,
-    HookInvocation invocation);
-```
-
-```csharp
 public delegate Task<UserPromptSubmittedHookOutput?> UserPromptSubmittedHandler(
     UserPromptSubmittedHookInput input,
     HookInvocation invocation);
@@ -100,17 +61,6 @@ public delegate Task<UserPromptSubmittedHookOutput?> UserPromptSubmittedHandler(
 
 #### Java
 
-
-```java
-import com.github.copilot.rpc.*;
-import java.util.concurrent.CompletableFuture;
-
-public class UserPromptSubmittedSignature {
-    UserPromptSubmittedHandler handler = (UserPromptSubmittedHookInput input, HookInvocation invocation) ->
-        CompletableFuture.completedFuture(null);
-    public static void main(String[] args) {}
-}
-```
 
 ```java
 @FunctionalInterface
@@ -183,30 +133,6 @@ session = await client.create_session(on_permission_request=PermissionHandler.ap
 
 
 ```golang
-package main
-
-import (
-	"context"
-	"fmt"
-	copilot "github.com/github/copilot-sdk/go"
-)
-
-func main() {
-	client := copilot.NewClient(nil)
-	session, _ := client.CreateSession(context.Background(), &copilot.SessionConfig{
-		OnPermissionRequest: copilot.PermissionHandler.ApproveAll,
-		Hooks: &copilot.SessionHooks{
-			OnUserPromptSubmitted: func(input copilot.UserPromptSubmittedHookInput, inv copilot.HookInvocation) (*copilot.UserPromptSubmittedHookOutput, error) {
-				fmt.Printf("[%s] User: %s\n", inv.SessionID, input.Prompt)
-				return nil, nil
-			},
-		},
-	})
-	_ = session
-}
-```
-
-```golang
 session, _ := client.CreateSession(context.Background(), &copilot.SessionConfig{
     Hooks: &copilot.SessionHooks{
         OnUserPromptSubmitted: func(input copilot.UserPromptSubmittedHookInput, inv copilot.HookInvocation) (*copilot.UserPromptSubmittedHookOutput, error) {
@@ -221,29 +147,6 @@ session, _ := client.CreateSession(context.Background(), &copilot.SessionConfig{
 
 #### .NET
 
-
-```csharp
-using GitHub.Copilot;
-
-public static class UserPromptSubmittedExample
-{
-    public static async Task Main()
-    {
-        await using var client = new CopilotClient();
-        var session = await client.CreateSessionAsync(new SessionConfig
-        {
-            Hooks = new SessionHooks
-            {
-                OnUserPromptSubmitted = (input, invocation) =>
-                {
-                    Console.WriteLine($"[{invocation.SessionId}] User: {input.Prompt}");
-                    return Task.FromResult<UserPromptSubmittedHookOutput?>(null);
-                },
-            },
-        });
-    }
-}
-```
 
 ```csharp
 var session = await client.CreateSessionAsync(new SessionConfig

@@ -6,7 +6,7 @@ Repositories on GitHub are remote repositories. You can clone or fork a reposito
 
 You can create a local copy of any repository on GitHub that you have access to by cloning the repository. If you own a repository or have write permissions, you can sync between the local and remote locations. For more information, see [Syncing Your Branch In GitHub Desktop](https://docs.github.com/en/desktop/working-with-your-remote-repository-on-github-or-github-enterprise/syncing-your-branch-in-github-desktop).
 
-When you clone a repository, any changes you push to GitHub will affect the original repository. To make changes without affecting the original project, you can create a separate copy by forking the repository. You can create a pull request to propose that maintainers incorporate the changes in your fork into the original upstream repository. For more information, see [About Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
+When you clone a repository, any changes you push to GitHub will affect the original repository. To make changes without affecting the original project, you can create a separate copy by forking the repository. You can create a pull request to propose that maintainers incorporate the changes in your fork into the original upstream repository. For more information, see [Forks](https://docs.github.com/en/pull-requests/reference/forks).
 
 When you use GitHub Desktop to push a change to a repository that you do not have write access to, GitHub Desktop will prompt you to create a fork. You can choose to use your fork to contribute to the original upstream repository or to work independently on your own project. Any existing forks default to contributing changes to their upstream repositories. You can modify this choice at any time. For more information, see [Managing fork behavior](#managing-fork-behavior).
 
@@ -45,7 +45,7 @@ You can also clone a repository directly from GitHub or GitHub Enterprise. For m
 
 ## Forking a repository
 
-You can fork a repository on GitHub or in GitHub Desktop. For information about forking on GitHub, see [Fork A Repo?Tool=Webui](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo?tool=webui).
+You can fork a repository on GitHub or in GitHub Desktop. For information about forking on GitHub, see [Fork A Repo?Tool=Webui](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo?tool=webui).
 
 In GitHub Desktop, if you clone a repository that you do not have write access to, and then attempt to push a change to the repository, a fork will be created for you.
 

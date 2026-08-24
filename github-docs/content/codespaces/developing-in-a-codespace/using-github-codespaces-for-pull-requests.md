@@ -61,7 +61,7 @@ GitHub Codespaces provides you with many of the capabilities you might need to w
 
    ![Screenshot of the side bar showing the dropdown options "Comment and Submit," "Approve and Submit," and "Request Changes and Submit."](/assets/images/help/codespaces/submit-review.png)
 
-For more information on reviewing a pull request, see [Reviewing Proposed Changes In A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
+For more information on reviewing a pull request, see [Reviewing Proposed Changes In A Pull Request](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
 ## View comments from a review in Codespaces
 

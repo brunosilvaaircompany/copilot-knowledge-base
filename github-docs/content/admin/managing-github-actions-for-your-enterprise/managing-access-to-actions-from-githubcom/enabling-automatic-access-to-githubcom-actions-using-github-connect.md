@@ -10,6 +10,8 @@
 
 By default, GitHub Actions workflows on GitHub Enterprise Server cannot use actions directly from GitHub.com or [GitHub Marketplace](https://github.com/marketplace?type=actions). To make public actions from GitHub.com available on your enterprise instance, you can use GitHub Connect to integrate GitHub Enterprise Server with GitHub Enterprise Cloud.
 
+If your cloud deployment is on GHE.com, GitHub Connect can still resolve public actions from GitHub.com. This requires GitHub Enterprise Server version 3.20.6 or later, or any feature release from 3.21.0.
+
 To use actions from GitHub.com, both GitHub Enterprise Server and your self-hosted runners must be able to make outbound connections to GitHub.com. No inbound connections from GitHub.com are required. For more information, see [Self Hosted Runners](https://docs.github.com/en/actions/reference/runners/self-hosted-runners#communication-between-self-hosted-runners-and-githubcom).
 
 
@@ -26,7 +28,7 @@ If a user has already created an organization and repository in your enterprise 
 
 Before enabling access to public actions from GitHub.com for your enterprise, you must:
 * Configure your GitHub Enterprise Server instance to use GitHub Actions. For more information, see [Getting Started With GitHub Actions For GitHub Enterprise Server](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/getting-started-with-github-actions-for-your-enterprise/getting-started-with-github-actions-for-github-enterprise-server).
-* Enable GitHub Connect. For more information, see [Enabling GitHub Connect For Githubcom](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/enabling-github-connect-for-githubcom).
+* Enable GitHub Connect. For more information, see [Enabling GitHub Connect For Githubcom](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/enabling-github-connect-for-githubcom) or [Enabling GitHub Connect For Ghecom](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/enabling-github-connect-for-ghecom).
 
 
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.

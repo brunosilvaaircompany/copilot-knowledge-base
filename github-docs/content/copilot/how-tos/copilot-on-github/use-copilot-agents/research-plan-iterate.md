@@ -8,13 +8,13 @@ Copilot cloud agent lets you:
 
 Sessions do not create pull requests automatically. To create one immediately, include that in your prompt—for example, "Create a pull request to ...".
 
-> [!NOTE] These capabilities are only available with Copilot cloud agent on GitHub.com. Cloud agent integrations (such as Azure Boards, JIRA, Linear, Slack, or Teams) only support creating a pull request directly.
+> [!NOTE] These capabilities are only available with Copilot cloud agent on GitHub.com, and in public preview for the Teams and Slack integrations. Other Cloud agent integrations (such as Azure Boards, JIRA, or Linear) only support creating a pull request directly.
 
 ## Perform deep research
 
 Ask Copilot cloud agent questions about a repository to understand how it works, find where to make a change, or confirm assumptions before planning.
 
-1. Start a task from the agents tab, panel, dashboard, or Copilot Chat. See [Kick Off A Task](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/kick-off-a-task).
+1. Start a task from the agents tab, panel, dashboard, Copilot Chat, or from within a supported integration. See [Kick Off A Task](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/kick-off-a-task).
 1. Ask a question about the repository.
 
    For example: `Investigate performance issues in this app and suggest improvements.`

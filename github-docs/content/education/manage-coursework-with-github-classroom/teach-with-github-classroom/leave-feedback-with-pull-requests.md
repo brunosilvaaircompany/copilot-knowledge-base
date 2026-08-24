@@ -25,7 +25,7 @@ To create and access the feedback pull request, you must enable the feedback pul
 
 1. Each student will have a submission row, press the Feedback link to navigate to the student's pull request.
 1. On the Feedback PR select the Files changed tab.
-1. Review the pull request. For more information, see [Commenting On A Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request).
+1. Review the pull request. For more information, see [Commenting On A Pull Request](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/commenting-on-a-pull-request).
 
 ## Further reading
 

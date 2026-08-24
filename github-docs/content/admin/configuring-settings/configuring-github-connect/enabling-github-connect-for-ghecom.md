@@ -2,12 +2,9 @@
 
 You can access additional features and workflows on your GitHub Enterprise Server instance by enabling GitHub Connect. See [About GitHub Connect](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/about-github-connect).
 
-
-If you're connecting to an enterprise on **GHE.com**:
 * Server Statistics is not available.
-* GitHub.com actions are not available.
-
-
+* Automatic user license sync requires GitHub Enterprise Server version 3.15 or later.
+* Actions from GitHub.com require GitHub Enterprise Server version 3.20.6 or later, or any feature release from 3.21.0.
 
 
 ## What happens when GitHub Connect is enabled?
@@ -26,7 +23,7 @@ GitHub Enterprise Server stores credentials from the GitHub App. The following c
 ## Prerequisites
 
 * **Administrative access:** You need administrative access to both an enterprise account on GHE.com and a GitHub Enterprise Server instance.
-* **Version requirement:** Your GitHub Enterprise Server instance must run GitHub Enterprise Server 3.12 or later.
+* **Version requirement:** To enable GitHub Connect for GHE.com, your GitHub Enterprise Server instance must be on version 3.12 or later. Certain individual features of GitHub Connect require later versions. See [About GitHub Connect](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/about-github-connect#github-connect-features).
 * **Proxy configuration:** If using a proxy server, allow connectivity to the following GHE.com hostnames (replace SUBDOMAIN with your enterprise's subdomain).
 
    * `SUBDOMAIN.ghe.com`

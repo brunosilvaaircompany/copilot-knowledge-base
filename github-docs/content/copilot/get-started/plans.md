@@ -1,96 +1,133 @@
 # Plans for GitHub Copilot
 
-> [!IMPORTANT] **Starting April 22, 2026**, new self-serve sign-ups for Copilot Business for organizations on GitHub Free and GitHub Team plans are temporarily paused.
+## GitHub Copilot plans
 
-GitHub offers several plans for GitHub Copilot, depending on your needs and whether you're using Copilot as an individual or as part of an organization or enterprise.
+GitHub offers a variety of plans for Copilot. Choose between them depending on your needs and whether you're using Copilot as an individual or as part of an organization or enterprise.
 
-* **GitHub Copilot Free** is available to individual developers who don't have access to Copilot through an organization or enterprise. This free plan includes limited access to a selection of Copilot features and models available through auto model selection only, allowing you to try AI-powered coding assistance at no cost.
+**Copilot Free**: [Start using Copilot Free](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text&ref_plan=free).
 
-* **GitHub Copilot Student** is available to verified students. The plan includes unlimited code completions and an allowance of GitHub AI Credits, plus limited chat and agent usage with models available through auto model selection only.
+* This plan includes limited access to a selection of Copilot features allowing you to try AI-powered coding assistance at no cost.
 
-* **GitHub Copilot Pro** is designed for individuals who want more flexibility. This paid plan includes unlimited completions, access to a selection of models, Copilot cloud agent, and a monthly allowance of AI credits. Verified teachers, and maintainers of popular open source projects may be eligible for free access.
+**Copilot Student**: [Get access to Copilot Student](/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students).
 
-* **GitHub Copilot Pro+** includes, in addition to everything in Copilot Pro, a higher monthly allowance of AI credits, and access to premium models. Ideal for AI power users who want access to the most advanced capabilities.
+* Available to verified students. Get access to Copilot's features for free. 
 
-* **GitHub Copilot Max** is designed for high-volume Copilot users. This paid plan includes, in addition to everything in Copilot Pro+, our highest individual monthly allowance of AI credits, and priority access to new models and features. Ideal for sustained, high-volume AI power users who want access to the most AI credits available to them.
+**GitHub Copilot Pro**: [Subscribe to Copilot Pro](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro).
 
-* **GitHub Copilot Business** is for organizations on GitHub Free or GitHub Team plan, or enterprises on GitHub Enterprise Cloud. This plan includes Copilot cloud agent, access to a broad model catalog, a monthly pool of AI credits, and enables centralized management and Copilot policy control for organization members.
+* Designed for individuals who want more flexibility with access to a selection of models and a monthly allowance of AI credits. 
 
-* **GitHub Copilot Enterprise** is for enterprises using GitHub Enterprise Cloud. It includes all the features of Copilot Business, priority access to new models and features, a larger monthly pool of AI credits, plus additional enterprise-grade capabilities. Enterprise owners can assign Copilot Enterprise or Copilot Business to individual organizations, or assign Copilot Business directly to users and teams.
+**GitHub Copilot Pro+**: [Subscribe to Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro-plus).
 
-Copilot is not currently available for GitHub Enterprise Server.
+* Ideal for AI power users who want access to the most advanced capabilities. This paid plan includes everything in GitHub Copilot Pro and a higher monthly allowance of AI credits. 
 
-## Comparing Copilot plans
+**GitHub Copilot Max**: [Upgrade to Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max).
 
-The tables below show the features available in each Copilot plan.
+* Ideal for sustained, high-volume AI power users who want access to the most AI credits available to them. This paid plan includes everything in Copilot Pro+, plus our highest individual monthly allowance of AI credits. 
 
-### Pricing
+> [!IMPORTANT] 
+> **Starting April 22, 2026**, new self-serve sign-ups for Copilot Business for organizations on GitHub Free and GitHub Team plans are temporarily paused.
+
+**GitHub Copilot Business**: To get started, [contact sales](https://github.com/enterprise/contact?ref_product=copilot&ref_type=purchase&ref_style=text).
+
+* Made for organizations an enterprises, this plan offers centralized management and Copilot policy control for organization members.
+
+**GitHub Copilot Enterprise**: [Contact sales](https://github.com/enterprise/contact?ref_product=copilot&ref_type=purchase&ref_style=text) to get started.
+
+* Designed for enterprises using GitHub Enterprise Cloud. This plan includes all the features of Copilot Business, offers a larger monthly pool of AI credits, plus additional enterprise-grade capabilities. 
+
+> [!NOTE]
+> Copilot is not currently available for GitHub Enterprise Server.
+
+## Copilot plans overview
+
+The table below provides an overview of differences between plans. All plans include Copilot CLI and Copilot app. 
 
 {% rowheaders %}
 
-| | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Pricing | Not applicable | Free | $10 USD per month<br>(free for some users) | $39 USD per month<br> | $100 USD per month | $19 USD per granted seat per month | $39 USD per granted seat per month |
+| Plan                                                  | Pricing                                                                             | GitHub AI Credits | Agents                                                                     | Models                            |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------- | -------------------------------------------------------------------------- | --------------------------------- |
+| Copilot Free       | Free                                                                                | An allowance of GitHub AI Credits                | Limited                                                                    | Auto model selection only         |
+| Copilot Student    | Free                                                                                | An allowance of GitHub AI Credits                | {% octicon "check" aria-label="Included" %}<br>Excludes third-party agents | Auto model selection only         |
+| Copilot Pro        | $10 USD per month<br>(free for some users) | Base: 1,000                | {% octicon "check" aria-label="Included" %}                                | A selection of models             |
+| Copilot Pro+   | $39 USD per month.                         | Base: 3,900                | {% octicon "check" aria-label="Included" %}                                | Access to premium models          |
+| Copilot Max        | $100 USD per month                           | Base: 10,000                | {% octicon "check" aria-label="Included" %}                                | Priority access to premium models |
+| Copilot Business   | $19 USD per granted seat per month         | Total per user per month: 1,900                | {% octicon "check" aria-label="Included" %}                                | Access to premium models          |
+| Copilot Enterprise | $39 USD per granted seat per month          | Total per user per month: 3,900                | {% octicon "check" aria-label="Included" %}                                | Priority access to premium models |
 
 {% endrowheaders %}
 
 Each plan comes with an allowance of GitHub AI Credits. For more information, including how GitHub AI Credits work, see [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) and [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
 
-### Agents
+For more detail on what's uniquely available in each plan, see the following sections: 
+* [Individual plans](#individual-plans)
+* [Organization and enterprise plans](#organization-and-enterprise-plans)
 
-{% rowheaders %}
+## Individual plans
 
-| Agents | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  Copilot cloud agent | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Agent mode | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Copilot code review | Only "Review selection" in VS Code | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Model Context Protocol (MCP) | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Third-party Agents (public preview) | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
+The individual plans available are: 
+* Free plans including Copilot Free and Copilot Student.
+* Paid plans including Copilot Pro, Copilot Pro+, and Copilot Max.
 
-{% endrowheaders %}
+With these plans you'll receive access to the following features and capabilities. 
 
-### Chat
+> [!NOTE] 
+> * Copilot Free plans are only available to individual developers who don't have access to Copilot through an organization or enterprise.
+> * Verified teachers, and maintainers of popular open source projects may be eligible for free access to Copilot Pro. 
 
-{% rowheaders %}
+### GitHub AI Credits allowance by plan
 
-| Chat | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Copilot Chat in IDEs[^2] [^3] | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Inline chat | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Slash commands | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Copilot Chat in GitHub Mobile | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Copilot Chat in GitHub | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Copilot Chat in Windows Terminal | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |{% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Copilot Chat skills in IDEs[^5] | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
+The following table shows what's included with each paid plan.
 
-{% endrowheaders %}
+| Plan | Price per month | Base credits | Flex allotment | Total monthly AI credits |
+| --- | --- | --- | --- | --- |
+| Copilot Pro | $10 USD | 1,000 | 500 | 1,500 |
+| Copilot Pro+ | $39 USD | 3,900 | 3,100 | 7,000 |
+| Copilot Max | $100 USD | 10,000 | 10,000 | 20,000 |
+
+
+Copilot Free and Copilot Student both have an allowance of AI credits.
+
+For more information on how GitHub AI Credits work, see [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)
+
+### Inline suggestions and Copilot Chat
+
+Inline suggestions are real-time code suggestions with included models in IDEs and Next edit suggestions. 
+* Limited to 2000 completions per month on Copilot Free. 
+
+**Copilot Chat** features available include:
+* Copilot Chat in IDEs
+* Inline chat
+* Slash commands
+* Copilot Chat in GitHub Mobile
+* Copilot Chat in GitHub
+* Copilot Chat in Windows Terminal
+* Copilot Chat skills in IDEs.[^1] (Not available in Copilot Free).
 
 ### Models
 
-> [!NOTE] Copilot Student and Copilot Free users have access to models through auto model selection only.
+On Copilot Free and Copilot Student plans, access to models is available through auto model selection only.
 
 {% rowheaders %}
 
-| Available models                               | Copilot Pro  | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-|---------------------------------------------------------|-------------------------------------------------|-----------------------------------------------------|------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------|
+| Available models                               | Copilot Pro  | Copilot Pro+ | Copilot Max |
+|---------------------------------------------------------|-------------------------------------------------|-----------------------------------------------------|------------------------------------------------|
 | {% for model in tables.copilot.model-supported-plans %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
 | {% endfor %}                                            |
 
 {% endrowheaders %}
 
-[^gpt54nano]: GPT-5.4 nano is currently only available in the Codex Visual Studio Code extension (Copilot Pro+ only) and is not available in Copilot Chat.
-
-
-### Inline suggestions
+### Agents
 
 {% rowheaders %}
 
-| Inline suggestions | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Real-time code suggestions with included models[^6] | 2000 completions per month | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Next edit suggestions | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
+| Agents                                                                  | Copilot Free                                   | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------- |
+| Copilot cloud agent                        | {% octicon "x" aria-label="Not included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Agent mode                                                              | {% octicon "check" aria-label="Included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Copilot code review         | Only "Review selection" in VS Code | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Model Context Protocol (MCP)                                            | {% octicon "check" aria-label="Included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Third-party Agents (public preview) | {% octicon "x" aria-label="Not included" %}                                       | {% octicon "x" aria-label="Not included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 
 {% endrowheaders %}
 
@@ -98,15 +135,15 @@ Each plan comes with an allowance of GitHub AI Credits. For more information, in
 
 {% rowheaders %}
 
-| Customization | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Repository and personal custom instructions | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Organization custom instructions | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Prompt files | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Model Context Protocol (MCP) | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Block suggestions matching public code | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Exclude specified files from Copilot | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Organization-wide policy management         | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
+| Customization                                                                    | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max |
+| -------------------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------- |
+| Repository and personal custom instructions                                      | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Organization custom instructions                                                 | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "x" aria-label="Not included" %}         | {% octicon "x" aria-label="Not included" %}    |
+| Prompt files                                                                     | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Model Context Protocol (MCP)                                                     | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Block suggestions matching public code                                           | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Exclude specified files from Copilot | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "x" aria-label="Not included" %}         | {% octicon "x" aria-label="Not included" %}    |
+| Organization-wide policy management                                              | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "x" aria-label="Not included" %}         | {% octicon "x" aria-label="Not included" %}    |
 
 {% endrowheaders %}
 
@@ -114,41 +151,118 @@ Each plan comes with an allowance of GitHub AI Credits. For more information, in
 
 {% rowheaders %}
 
-| | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Copilot pull request summaries | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Audit logs | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} |{% octicon "check" aria-label="Included" %}  | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Content exclusion | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| Copilot CLI | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "check" aria-label="Included" %} |
-| GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "x" aria-label="Not included" %} | {% octicon "check" aria-label="Included" %} |
+|                                                                                                  | Copilot Free | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------- |
+| Copilot pull request summaries                                                     | {% octicon "x" aria-label="Not included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Audit logs                                                                                       | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Content exclusion                                                                                | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "x" aria-label="Not included" %}         | {% octicon "x" aria-label="Not included" %}    |
+| Copilot CLI                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Copilot app                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "x" aria-label="Not included" %}    |
 
 {% endrowheaders %}
 
-[^1]: Includes base credits and flex allotment. See [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals#how-do-ai-credits-work).
-[^2]: Copilot Chat in IDEs is available in Visual Studio Code, Visual Studio, JetBrains IDEs, Eclipse, and Xcode.
-[^3]: Response times may vary during periods of high usage.
-[^5]: Copilot Chat skills in IDEs is available in Visual Studio Code and Visual Studio.
-[^6]: Inline suggestions in IDEs is available in Visual Studio Code, Visual Studio, JetBrains IDEs, Azure Data Studio, Xcode, Vim/Neovim, and Eclipse.
+## Organization and enterprise plans
 
+The Copilot plans available for organizations and enterprises are: 
+* Copilot Business
+* Copilot Enterprise
 
-For more information, see [Features](https://docs.github.com/en/copilot/get-started/features).
+With these plans you'll receive access to the following features and capabilities. 
 
-## Ready to choose a plan?
+> [!NOTE] With GitHub Enterprise Cloud, an enterprise owner chooses the plan for each organization in the enterprise. For guidance on choosing a plan, see [Choose Enterprise Plan](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/choose-enterprise-plan).
 
-Start using Copilot by signing up for the plan that best fits your needs.
+### GitHub AI Credits allowance by plan
 
-> [!IMPORTANT] **Starting April 22, 2026**, new self-serve sign-ups for Copilot Business for organizations on GitHub Free and GitHub Team plans are temporarily paused.
+| Plan | Price per granted seat per month | GitHub AI Credits per user per month | 
+| --- | --- | --- | 
+| Copilot Business | $19 USD  | 1,900 | 
+| Copilot Enterprise| $39 USD  | 3,900 | 
 
-* **Copilot Free** — Try Copilot with limited features and usage. [Start using Copilot Free](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text&ref_plan=free).
+Copilot usage is measured in AI credits under usage-based billing. Each license contributes AI credits to a shared enterprise pool, and usage beyond the pool is charged at $0.01 USD per AI credit. Code completions and next edit suggestions are not billed in AI credits and remain unlimited for all paid plans.
 
-* **GitHub Copilot Student** — Get access to Copilot's features for free. [Access GitHub Copilot Student](/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students).
+For a full explanation of how AI credits work, including pooling, additional usage, and what happens when credits run out, see [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
 
-* **Copilot Pro** — Get unlimited completions and access to select models. [Subscribe to Copilot Pro](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro).
+### Inline suggestions and Copilot Chat
 
-* **Copilot Pro+** — Unlock premium AI models and extra capabilities. [Subscribe to Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro-plus).
+**Inline suggestions**: Inline suggestion features are available in all plans:
 
-* **Copilot Max** — Unlock priority access to new AI models and our highest individual monthly allowance of AI credits. [Upgrade to Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max).
+* Real-time code suggestions with included models
+* Next edit suggestions
 
-* **Copilot Business** — For teams and organizations. [Contact Sales](https://github.com/enterprise/contact?ref_product=copilot&ref_type=purchase&ref_style=text).
+**Copilot Chat** features are available in all plans: 
 
-* **Copilot Enterprise** — For enterprises that need advanced features and centralized management. [Contact Sales](https://github.com/enterprise/contact?ref_product=copilot&ref_type=purchase&ref_style=text).
+* Copilot Chat in IDEs
+* Inline chat
+* Slash commands
+* Copilot Chat in GitHub Mobile
+* Copilot Chat in GitHub
+* Copilot Chat in Windows Terminal
+* Copilot Chat skills in IDEs[^1]
+
+### Models
+
+{% rowheaders %}
+
+| Available models                               | Copilot Business | Copilot Enterprise |
+|---------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------|
+| {% for model in tables.copilot.model-supported-plans %} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
+| {% endfor %}                                            |
+
+{% endrowheaders %}
+
+[^gpt54nano]: GPT-5.4 nano is currently only available in the Codex Visual Studio Code extension (Copilot Pro+ only) and is not available in Copilot Chat.
+
+### Agents
+
+{% rowheaders %}
+
+| Agents                                                                  | Copilot Business | Copilot Enterprise |
+| ----------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
+| Copilot cloud agent                        | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Agent mode                                                              | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Copilot code review         | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Model Context Protocol (MCP)                                            | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Third-party Agents (public preview) | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+
+{% endrowheaders %}
+
+### Customization
+
+{% rowheaders %}
+
+| Customization                                                                    | Copilot Business | Copilot Enterprise |
+| -------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
+| Repository and personal custom instructions                                      | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Organization custom instructions                                                 | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Prompt files                                                                     | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Model Context Protocol (MCP)                                                     | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Block suggestions matching public code                                           | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Exclude specified files from Copilot | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Organization-wide policy management                                              | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+
+{% endrowheaders %}
+
+### Other features
+
+{% rowheaders %}
+
+|                                                                                                  | Copilot Business | Copilot Enterprise |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------- | ----------------------------------------------------- |
+| Copilot pull request summaries                                                     | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Audit logs                                                                                       | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Content exclusion                                                                                | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Copilot CLI                                                   | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Copilot app                                                  | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %}         | {% octicon "check" aria-label="Included" %}           |
+
+{% endrowheaders %}
+
+## Further reading
+
+* To compare feature support across IDEs, see [Copilot Feature Matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix).
+* To compare models supported across plans, features, and IDEs, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
+
+[^1]: Copilot Chat skills in IDEs is available in Visual Studio Code and Visual Studio.
+[^claude-fable-5]: When Claude Fable 5 is used, Anthropic retains data, including prompts and outputs, to operate safety classifiers that detect harmful use. Other Claude models in GitHub Copilot remain covered by GitHub's existing data retention agreements, as documented at [Model Hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting#anthropic-models). Enterprise and business users need to enable the Claude Fable 5 model to make it available for your organization. You can read more about Anthropic's data handling practices for this model under section F of their [Service Specific Terms](https://www.anthropic.com/legal/service-specific-terms). To enable Claude Fable 5, see [Configure Access To Ai Models](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models).

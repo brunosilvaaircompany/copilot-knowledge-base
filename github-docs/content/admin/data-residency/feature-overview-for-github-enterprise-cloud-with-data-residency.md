@@ -89,8 +89,9 @@ To allow people to use namespaces that match actions you have used from GitHub.c
 You can use GitHub Connect to connect to GHE.com from GitHub Enterprise Server.
 
 * Server Statistics is not available.
-* GitHub.com actions are not available.
 * Automatic user license sync requires GitHub Enterprise Server version 3.15 or later.
+* Actions from GitHub.com require GitHub Enterprise Server version 3.20.6 or later, or any feature release from 3.21.0.
+
 
 To enable GitHub Connect, you must configure your GitHub Enterprise Server instance to connect to your GHE.com subdomain. See [Enabling GitHub Connect For Ghecom](https://docs.github.com/en/enterprise-server@latest/admin/configuring-settings/configuring-github-connect/enabling-github-connect-for-ghecom).
 

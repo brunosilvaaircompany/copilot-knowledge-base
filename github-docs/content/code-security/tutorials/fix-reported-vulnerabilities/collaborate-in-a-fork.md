@@ -53,7 +53,7 @@ Anyone with write permissions to a security advisory can collaborate on a patch 
 
 1. In the "Security Advisories" list, click the name of the security advisory you'd like to work on.
 1. You can make your changes on GitHub or locally:
-   * To make your changes on GitHub, under "Collaborate on a patch", click **the temporary private fork**. Then, create a new branch and edit files. For more information, see [Creating And Deleting Branches Within Your Repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) and [Editing Files](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
+   * To make your changes on GitHub, under "Collaborate on a patch", click **the temporary private fork**. Then, create a new branch and edit files. For more information, see [Managing Branches Within Your Repository](https://docs.github.com/en/pull-requests/how-tos/commit-changes/managing-branches-within-your-repository) and [Editing Files](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
    * To add changes locally, follow the instructions under "Clone and create a new branch" and "Make your changes, then push."
 
    ![Screenshot of the "Collaborate on a patch" area of a draft security advisory. The "the temporary private fork" link is outlined in dark orange.](/assets/images/help/security/add-changes-to-this-advisory-box.png)
@@ -72,7 +72,7 @@ Anyone with write permissions to a security advisory can create a pull request f
 1. Scroll to the bottom of the advisory form. Then, under "Collaborate on a patch", click **Compare & pull request** to create a pull request for the associated branch.
 
    ![Screenshot of the "Collaborate on a patch" area of a draft security advisory. The "Compare & pull request" button is outlined in dark orange.](/assets/images/help/security/security-advisory-compare-and-pr.png)
-   The "Open a pull request" includes a header showing the branches that will be compared in a three-dot Git diff comparison when the pull request is created. For more information, see [About Comparing Branches In Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests#three-dot-and-two-dot-git-diff-comparisons).
+   The "Open a pull request" includes a header showing the branches that will be compared in a three-dot Git diff comparison when the pull request is created. For more information, see [Branches](https://docs.github.com/en/pull-requests/reference/branches#three-dot-and-two-dot-git-diff-comparisons).
 1. To create a pull request that is ready for review, click **Create Pull Request**.
 To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. If you are the member of an organization, you may need to request access to draft pull requests from an organization owner. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 

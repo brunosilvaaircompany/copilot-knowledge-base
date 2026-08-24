@@ -23,7 +23,7 @@ You need to start by forking the demo repository.
 
 1. Navigate to [https://github.com/dependabot/demo](https://github.com/dependabot/demo?ref_product=supply-chain-security&ref_type=engagement&ref_style=text).
 1. At the top of the page, on the right, click **{% octicon "repo-forked" aria-hidden="true" aria-label="repo-forked" %} Fork**.
-1. Select an owner (you can select your GitHub personal account) and type a repository name. For more information about forking repositories, see [Fork A Repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
+1. Select an owner (you can select your GitHub personal account) and type a repository name. For more information about forking repositories, see [Fork A Repo](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo#forking-a-repository).
 1. Click **Create fork**.
 
 ## Enabling Dependabot for your repository

@@ -27,5 +27,5 @@ If you allow forking of private and internal repositories at the organization le
 
 ## Further reading
 
-* [About Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
+* [Forks](https://docs.github.com/en/pull-requests/reference/forks)
 * [Repository Roles For An Organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)

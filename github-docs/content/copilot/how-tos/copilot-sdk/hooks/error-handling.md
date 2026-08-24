@@ -16,14 +16,6 @@
 
 
 ```typescript
-import type { ErrorOccurredHookInput, HookInvocation, ErrorOccurredHookOutput } from "@github/copilot-sdk";
-type ErrorOccurredHandler = (
-  input: ErrorOccurredHookInput,
-  invocation: HookInvocation
-) => Promise<ErrorOccurredHookOutput | null | undefined>;
-```
-
-```typescript
 type ErrorOccurredHandler = (
   input: ErrorOccurredHookInput,
   invocation: HookInvocation
@@ -34,16 +26,6 @@ type ErrorOccurredHandler = (
 
 #### Python
 
-
-```python
-from copilot.session import ErrorOccurredHookInput, ErrorOccurredHookOutput
-from typing import Callable, Awaitable
-
-ErrorOccurredHandler = Callable[
-    [ErrorOccurredHookInput, dict[str, str]],
-    Awaitable[ErrorOccurredHookOutput | None]
-]
-```
 
 ```python
 ErrorOccurredHandler = Callable[
@@ -58,19 +40,6 @@ ErrorOccurredHandler = Callable[
 
 
 ```golang
-package main
-
-import copilot "github.com/github/copilot-sdk/go"
-
-type ErrorOccurredHandler func(
-    input copilot.ErrorOccurredHookInput,
-    invocation copilot.HookInvocation,
-) (*copilot.ErrorOccurredHookOutput, error)
-
-func main() {}
-```
-
-```golang
 type ErrorOccurredHandler func(
     input ErrorOccurredHookInput,
     invocation HookInvocation,
@@ -81,14 +50,6 @@ type ErrorOccurredHandler func(
 
 #### .NET
 
-
-```csharp
-using GitHub.Copilot;
-
-public delegate Task<ErrorOccurredHookOutput?> ErrorOccurredHandler(
-    ErrorOccurredHookInput input,
-    HookInvocation invocation);
-```
 
 ```csharp
 public delegate Task<ErrorOccurredHookOutput?> ErrorOccurredHandler(
@@ -184,32 +145,6 @@ session = await client.create_session(on_permission_request=PermissionHandler.ap
 
 
 ```golang
-package main
-
-import (
-	"context"
-	"fmt"
-	copilot "github.com/github/copilot-sdk/go"
-)
-
-func main() {
-	client := copilot.NewClient(nil)
-	session, _ := client.CreateSession(context.Background(), &copilot.SessionConfig{
-		OnPermissionRequest: copilot.PermissionHandler.ApproveAll,
-		Hooks: &copilot.SessionHooks{
-			OnErrorOccurred: func(input copilot.ErrorOccurredHookInput, inv copilot.HookInvocation) (*copilot.ErrorOccurredHookOutput, error) {
-				fmt.Printf("[%s] Error: %s\n", inv.SessionID, input.Error)
-				fmt.Printf("  Context: %s\n", input.ErrorContext)
-				fmt.Printf("  Recoverable: %v\n", input.Recoverable)
-				return nil, nil
-			},
-		},
-	})
-	_ = session
-}
-```
-
-```golang
 session, _ := client.CreateSession(context.Background(), &copilot.SessionConfig{
     Hooks: &copilot.SessionHooks{
         OnErrorOccurred: func(input copilot.ErrorOccurredHookInput, inv copilot.HookInvocation) (*copilot.ErrorOccurredHookOutput, error) {
@@ -226,31 +161,6 @@ session, _ := client.CreateSession(context.Background(), &copilot.SessionConfig{
 
 #### .NET
 
-
-```csharp
-using GitHub.Copilot;
-
-public static class ErrorHandlingExample
-{
-    public static async Task Main()
-    {
-        await using var client = new CopilotClient();
-        var session = await client.CreateSessionAsync(new SessionConfig
-        {
-            Hooks = new SessionHooks
-            {
-                OnErrorOccurred = (input, invocation) =>
-                {
-                    Console.Error.WriteLine($"[{invocation.SessionId}] Error: {input.Error}");
-                    Console.Error.WriteLine($"  Context: {input.ErrorContext}");
-                    Console.Error.WriteLine($"  Recoverable: {input.Recoverable}");
-                    return Task.FromResult<ErrorOccurredHookOutput?>(null);
-                },
-            },
-        });
-    }
-}
-```
 
 ```csharp
 var session = await client.CreateSessionAsync(new SessionConfig

@@ -10,3 +10,7 @@ With the GitHub integration in Slack, you can create issues in any repository th
     >[!NOTE] By default, the last used repository in the channel will be selected. To change the repository, click the **Change repo** dropdown and select a different repository.
 
 1. Click **Open** to create the issue.
+
+
+
+Alternatively, you can ask GitHub Copilot to create an issue by @mentioning `@GitHub` in your channel or in a direct message.

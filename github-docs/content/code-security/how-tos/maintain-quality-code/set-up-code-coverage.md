@@ -153,5 +153,5 @@ jobs:
 
 1. Open a pull request (or push to an existing one) that triggers the workflow you configured.
 1. After the workflow completes, look for a comment from `github-code-quality[bot]` on the pull request. The comment includes:
-   * The aggregate coverage percentage for the pull request branch compared to the default branch.
+   * The aggregate line coverage percentage for the pull request branch compared to the default branch.
    * A per-file breakdown showing which files gained or lost coverage.

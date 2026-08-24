@@ -16,7 +16,7 @@ After you fork a repository, you can:
 
 * Fetch updates from the upstream repository to keep your fork up to date
 * Contribute back to the original project by creating pull requests from your fork
-For more information, see [About Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
+For more information, see [Forks](https://docs.github.com/en/pull-requests/reference/forks).
 
 You can programmatically fork a repository using the REST API. For more information, see [Forks](https://docs.github.com/en/rest/repos/forks).
 

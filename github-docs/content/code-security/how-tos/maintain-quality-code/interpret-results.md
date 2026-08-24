@@ -11,7 +11,7 @@
 1. Click to expand **{% octicon "code-review" aria-hidden="true" aria-label="code review" %} Code quality**, then click **Standard findings**.
 
 
-Alternatively, if you want to view AI-powered findings for the most recently changed files, see [Fix Recent Merge Findings](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/fix-recent-merge-findings).
+Alternatively, if you want to view AI-powered findings for the most recently changed files, see [Fix Findings In Recent Merges](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/fix-findings-in-recent-merges).
 
 ## Exploring the backlog for your repository
 

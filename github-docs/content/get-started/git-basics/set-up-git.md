@@ -9,7 +9,7 @@ If you want to work with Git locally, but do not want to use the command line, y
 If you do not need to work with files locally, GitHub lets you complete many Git-related actions directly in the browser, including:
 
 * [Quickstart For Repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
-* [Fork A Repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+* [Fork A Repo](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo)
 * [Managing files](/repositories/working-with-files/managing-files)
 
 ## Setting up Git

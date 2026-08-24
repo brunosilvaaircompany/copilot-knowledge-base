@@ -540,23 +540,6 @@ const session = await client.createSession({
 
 For Azure OpenAI endpoints (`*.openai.azure.com`), use the correct type:
 
-
-
-```typescript
-import { CopilotClient } from "@github/copilot-sdk";
-
-const client = new CopilotClient();
-const session = await client.createSession({
-    model: "gpt-5.4",
-    provider: {
-        type: "azure",
-        baseUrl: "https://my-resource.openai.azure.com",
-    },
-});
-```
-
-
-
 ```typescript
 // ❌ Wrong: Using "openai" type with native Azure endpoint
 provider: {
@@ -572,23 +555,6 @@ provider: {
 ```
 
 However, if your Microsoft Foundry deployment provides an OpenAI-compatible endpoint path (for example, `/openai/v1/`), use `type: "openai"`:
-
-
-
-```typescript
-import { CopilotClient } from "@github/copilot-sdk";
-
-const client = new CopilotClient();
-const session = await client.createSession({
-    model: "gpt-5.4",
-    provider: {
-        type: "openai",
-        baseUrl: "https://your-resource.openai.azure.com/openai/v1/",
-    },
-});
-```
-
-
 
 ```typescript
 // ✅ Correct: OpenAI-compatible Microsoft Foundry endpoint

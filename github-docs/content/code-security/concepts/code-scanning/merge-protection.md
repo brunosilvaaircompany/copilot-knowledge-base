@@ -14,7 +14,7 @@ Typically, you should use code scanning merge protection on long-lived feature b
 Configuring a code scanning rule will not automatically enable code scanning. To learn how to enable code scanning, see [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning).
 
 > [!NOTE]
-> * Merge protection with rulesets is not related to status checks. For more information about status checks, see [About Status Checks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks).
+> * Merge protection with rulesets is not related to status checks. For more information about status checks, see [Status Checks](https://docs.github.com/en/pull-requests/reference/status-checks).
 
 ## Availability
 
