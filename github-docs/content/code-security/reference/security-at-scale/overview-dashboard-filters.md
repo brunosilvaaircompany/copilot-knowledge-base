@@ -176,7 +176,7 @@ For more information about production context, see [Prioritize Alerts In Product
 | `assignee` | Display alerts by assignee username or team, for example: `assignee:@octocat`, `assignee:@copilot`, or `assignee:@github/security-team`.|
 ||
 |`ecosystem`|Display Dependabot alerts detected in a specified ecosystem, for example: `ecosystem:Maven`.|
-|`epss_percentage`|Display Dependabot alerts whose EPSS score meets the defined criteria, for example: `epss_percentage:>=0.01`|
+|`epss-percentage`|Display Dependabot alerts whose EPSS score meets the defined criteria, for example: `epss-percentage:>=0.01`|
 |`has`|Display Dependabot alerts for vulnerabilities where either a secure version is already available (`patch`) or where at least one call from the repository to a vulnerable function is detected (`vulnerable-calls`). For more information, see [View Dependabot Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/view-dependabot-alerts).|
 |`is`|Display Dependabot alerts that are open (`open`) or closed (`closed`).|
 |`package`|Display Dependabot alerts detected in the specified package, for example: `package:semver`.|
@@ -212,7 +212,7 @@ For more information about production context, see [Prioritize Alerts In Product
 |`package`|Display Dependabot alerts detected in the specified package, for example: `package:lodash`.|
 |`ecosystem`|Display Dependabot alerts detected in a specified ecosystem, for example: `ecosystem:Maven`.|
 |`relationship`|Display Dependabot alerts of the specified relationship, for example: `relationship:indirect`.|
-|`epss_percentage`|Display Dependabot alerts whose EPSS score meets the defined criteria, for example: `epss_percentage:>=0.01`|
+|`epss-percentage`|Display Dependabot alerts whose EPSS score meets the defined criteria, for example: `epss-percentage:>=0.01`|
 |`exclude <QUALIFIER>`|Applies to all the available qualifiers.</br>Display alerts that do not match the selected qualifier from the list of Dependabot alerts|
 
 

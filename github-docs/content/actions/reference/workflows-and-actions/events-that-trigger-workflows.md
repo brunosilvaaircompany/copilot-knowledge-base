@@ -1425,6 +1425,9 @@ on:
 jobs:
   download:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      issues: write
     steps:
       - name: 'Download artifact'
         uses: actions/download-artifact@v5

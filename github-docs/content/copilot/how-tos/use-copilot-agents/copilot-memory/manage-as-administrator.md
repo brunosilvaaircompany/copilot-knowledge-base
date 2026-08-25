@@ -23,6 +23,7 @@ Once Copilot Memory is enabled, the feature is on for users by default. Copilot 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
 1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
+1. Under "Features & clients," click **Configure features & clients**.
 1. Under "Features", scroll down to the **Copilot Memory** setting and select a policy from the dropdown.
 
 ### Enabling Copilot Memory for an organization

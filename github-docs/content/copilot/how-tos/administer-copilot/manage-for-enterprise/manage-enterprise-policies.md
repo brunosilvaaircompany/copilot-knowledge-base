@@ -17,7 +17,8 @@ Enterprise owners can define a policy for the whole enterprise, or delegate the 
 1. Navigate to the page containing the policies you want to manage:
 
    * To view policies for **AI agents**, in the sidebar, click {% octicon "agent" aria-hidden="true" aria-label="agent" %} **Agents**.
-   * To view policies for **Copilot**, in the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
+   * To view administration, privacy, model, billing, and usage policies for **Copilot**, in the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
+   * To view policies for **Copilot** features and clients, in the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**, then, under "Features & clients," click **Configure features & clients**.
    * To view policies for **Model Context Protocol (MCP)**, in the sidebar, click {% octicon "mcp" aria-hidden="true" aria-label="mcp" %} **MCP**.
 1. Configure your policies as follows:
    * For policies with a **dropdown menu**, select the menu and click an enforcement option.
@@ -32,7 +33,7 @@ Enterprise owners can define a policy for the whole enterprise, or delegate the 
 
 ## Opting in to feedback collection
 
-If you enable "Copilot in GitHub.com" from the "Copilot" page of the "AI Controls" tab, you can also opt in to user feedback collection to help GitHub improve Copilot features.
+If you enable "Copilot in GitHub.com" from the "Features & clients" page, you can also opt in to user feedback collection to help GitHub improve Copilot features.
 
 ## Further reading
 

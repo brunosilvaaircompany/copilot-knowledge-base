@@ -22,7 +22,7 @@ In this guide, you'll create a user site at `<username>.github.io`.
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Code and automation" section of the sidebar, click **{% octicon "browser" aria-hidden="true" aria-label="browser" %} Pages**.
+1. In the "Code, planning, and automation"{% elsif ghes %} "Code and automation" section of the sidebar, click **{% octicon "browser" aria-hidden="true" aria-label="browser" %} Pages**.
 
 1. Under "Build and deployment", under "Source", select **Deploy from a branch**.
 1. Under "Build and deployment", under "Branch", use the branch dropdown menu and select a publishing source.

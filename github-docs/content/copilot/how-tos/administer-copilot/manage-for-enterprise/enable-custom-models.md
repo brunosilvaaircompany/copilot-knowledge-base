@@ -43,8 +43,7 @@ After you've added your key and selected one or more models, you and members of 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
 1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
-1. Click **Configure allowed models**.
-1. Click the **Custom models** tab.
+1. Click **Configure custom models**.
 1. Above the list of API keys, click **Add API key**.
 1. Under "Provider", select the LLM provider you want to use.
 1. Under "Name", type a name for this key. This will be shown in the model picker.

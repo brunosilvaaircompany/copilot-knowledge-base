@@ -70,7 +70,7 @@ You can expand the model options that are available to power Copilot Chat. You c
 
 * Depending on the provider or model you choose, you may need to supply an API key, or model ID, from the provider, or a GitHub personal access token (PAT).
 * To add models from the AI Toolkit for Visual Studio Code, you must <a href="vscode:extension/ms-windows-ai-studio.windows-ai-studio?ref_product=copilot&ref_type=engagement&ref_style=text">install the AI Toolkit extension</a>.
-* If you are a Copilot Business or Copilot Enterprise customer and want to use third-party models in Visual Studio Code, the **Bring Your Own Language Model Key in VS Code** policy must be enabled. For more information, see the [Copilot settings page](https://github.com/settings/copilot/features) in GitHub.com.
+* If you are on a Copilot Business or Copilot Enterprise plan and want to use third-party models in a supported IDE, the **Bring Your Own Language Model Key in Select IDEs** policy must be enabled. For more information, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
 
 ### Adding models
 

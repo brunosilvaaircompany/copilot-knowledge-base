@@ -34,7 +34,7 @@ To use a shorter and more memorable domain for your privately published site, yo
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Code and automation" section of the sidebar, click **{% octicon "browser" aria-hidden="true" aria-label="browser" %} Pages**.
+1. In the "Code, planning, and automation"{% elsif ghes %} "Code and automation" section of the sidebar, click **{% octicon "browser" aria-hidden="true" aria-label="browser" %} Pages**.
 
 1. Under "GitHub Pages", select the **GitHub Pages visibility** dropdown menu, then select a visibility.
 1. To see your published site, under "GitHub Pages", click **{% octicon "link-external" aria-hidden="true" aria-label="link-external" %} Visit site**.

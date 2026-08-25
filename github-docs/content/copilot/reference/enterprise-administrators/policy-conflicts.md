@@ -27,7 +27,7 @@ Feature, model, and privacy settings for users are set according to the **least 
 | Copilot can search the web | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot Chat in GitHub Mobile | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot Chat in the IDE | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
-| Copilot Chat agent mode in the IDE | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
+| Copilot Agent Mode in IDE Chat | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot code review | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | Copilot cloud agent | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | Spark | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
