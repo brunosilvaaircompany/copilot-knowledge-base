@@ -1,23 +1,23 @@
-# Planning with agents in VS Code
+# Planning with agents in {% data variables.product.prodname_vscode_shortname %}
 
 The plan agent enables you to create detailed implementation plans before starting the implementation to ensure all requirements are met. With todo lists, the agent can ensure it stays focused on the overall goals and tracks progress effectively.
 
 For background on how the plan agent fits into the agent architecture, see [Agents concepts](../concepts/agents.md#planning).
 
-This article explains how to use the plan agent and todo lists in VS Code.
+This article explains how to use the plan agent and todo lists in {% data variables.product.prodname_vscode_shortname %}.
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Plan a feature with agents">
 Use the Plan agent to create a structured implementation plan for a new feature.
 
-* [Open in VS Code](vscode://GitHub.Copilot-Chat/chat?agent=agent%26prompt=%2Fplan%20a%20terminal%20UI%20app%20to%20track%20my%20todo%20list.)
+* [Open in {% data variables.product.prodname_vscode_shortname %}](vscode://GitHub.Copilot-Chat/chat?agent=agent%26prompt=%2Fplan%20a%20terminal%20UI%20app%20to%20track%20my%20todo%20list.)
 
 </div>
 
 ## How to plan a task
 
-To plan a task, use the built-in **Plan** agent in the Chat view, describe your task, and iterate on the generated plan.
+To plan a task, use the built-in **Plan** agent in the {% data variables.copilot.chat_view %}, describe your task, and iterate on the generated plan.
 
-1. Open the Chat view by pressing `kb(workbench.action.chat.open)` and select **Plan** from the agents dropdown
+1. Open the {% data variables.copilot.chat_view %} by pressing `kb(workbench.action.chat.open)` and select **Plan** from the agents dropdown
 
     Alternatively, type `/plan` followed by your task description to switch to the Plan agent and start planning in one step.
 
@@ -39,7 +39,7 @@ To plan a task, use the built-in **Plan** agent in the Chat view, describe your 
 
 1. When the plan is finalized, choose to start the implementation or open the planning prompt in the editor for further review.
 
-    To implement the plan, select **Start Implementation** and choose an available implementation agent. The plan and conversation context carry over to the implementation agent. Learn more about [handing off a plan to implementation](agent-harnesses.md#hand-off-a-plan-to-implementation).
+    To implement the plan, select **Start Implementation** and choose an available implementation agent. The plan and conversation context carry over to the implementation agent. Learn more about [handing off a plan to implementation](agent-harnesses.md#hand-off-a-session).
 
 **TIP:** The Plan agent automatically saves its implementation plan to a session memory file (`/memories/session/plan.md`). To access this file, run the **Chat: Show Memory Files** command and select `plan.md` from the list. Session memory is cleared when the conversation ends, so the plan is not available in subsequent sessions.
 
@@ -56,6 +56,6 @@ You can tailor the planning process to fit your team's workflow:
 ## Related resources
 
 * [Run deep research with the research agent](agent-harnesses.md#run-deep-research-with-the-research-agent)
-* [Memory in VS Code agents](memory.md)
+* [Memory in {% data variables.product.prodname_vscode_shortname %} agents](memory.md)
 * [Configure tools for agents](tools.md)
 * [Context engineering user guide](../guides/context-engineering-guide.md)

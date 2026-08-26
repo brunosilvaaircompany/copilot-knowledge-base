@@ -1,8 +1,8 @@
-# Best practices for using AI in VS Code
+# Best practices for using AI in {% data variables.product.prodname_vscode_shortname %}
 
-This article covers proven practices for getting the most out of using AI in Visual Studio Code. Each section provides actionable guidance with links to deeper documentation.
+This article covers proven practices for getting the most out of using AI in {% data variables.product.prodname_vscode %}. Each section provides actionable guidance with links to deeper documentation.
 
-<div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="How AI works in VS Code">
+<div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="How AI works in {% data variables.product.prodname_vscode_shortname %}">
 Learn about the agent loop, context window, tools, and other core concepts.
 
 * [Read about core concepts](concepts/agents.md)
@@ -13,7 +13,7 @@ Learn about the agent loop, context window, tools, and other core concepts.
 
 By configuring your project and codebase with AI in mind, you can improve the accuracy of AI responses and ensure the AI follows your team's coding standards and practices.
 
-VS Code supports several mechanisms to configure AI behavior for your project. Enter `/init` in chat to generate a starter configuration.
+{% data variables.product.prodname_vscode_shortname %} supports several mechanisms to configure AI behavior for your project. Enter `/init` in chat to generate a starter configuration.
 
 | Mechanism | Best for | Get started |
 |-----------|----------|-------------|
@@ -29,11 +29,11 @@ Tips for effective project configuration:
 * **Limit enabled tools.** Fewer active tools means faster, more relevant responses. Enable tools only when the task needs them.
 * **Exclude generated and noisy files from search.** Configure `setting(search.exclude)` and `setting(files.exclude)` so agent text search and grep stay focused on source code. See [improve agent search with exclusion settings](reference/workspace-context.md#improve-agent-search-with-exclusion-settings).
 
-For full setup details, see [Customize agent behavior in VS Code](../agent-customization/overview.md).
+For full setup details, see [Customize agent behavior in {% data variables.product.prodname_vscode_shortname %}](../agent-customization/overview.md).
 
 ## Pick the right tool for the task
 
-AI in VS Code offers several interaction modes. Choosing the right one for the task at hand saves time and produces better results.
+AI in {% data variables.product.prodname_vscode_shortname %} offers several interaction modes. Choosing the right one for the task at hand saves time and produces better results.
 
 | Tool | Best for | Example |
 |------|----------|---------|
@@ -50,7 +50,7 @@ When working with agents, choose the harness that matches your task and workflow
 
 * **Use Copilot for day-to-day coding.** Copilot runs on your machine with access to your workspace, tools, and run-time context. It is a good default for most coding tasks.
 
-* **Use Claude or Codex for provider-specific capabilities.** These harnesses also run on your machine and provide their own SDK capabilities through the same VS Code session experience.
+* **Use Claude or Codex for provider-specific capabilities.** These harnesses also run on your machine and provide their own SDK capabilities through the same {% data variables.product.prodname_vscode_shortname %} session experience.
 
 * **Use cloud harnesses for team collaboration.** [Cloud harnesses](run/agent-harnesses.md#start-a-cloud-session) run remotely and create pull requests, making them well suited to tasks that benefit from team review or when you want to assign a GitHub issue directly to an agent.
 
@@ -104,7 +104,7 @@ The AI responds more accurately when it has relevant context. Use these techniqu
 
 * To pull information from web pages or GitHub repositories, use `#fetch` to provide the AI with up-to-date information beyond your codebase or use tools from MCP servers like GitHub MCP.
 
-* Reference VS Code environment context such as source control changes, terminal output, or test failures to help the AI understand the current state of your project and provide more relevant responses.
+* Reference {% data variables.product.prodname_vscode_shortname %} environment context such as source control changes, terminal output, or test failures to help the AI understand the current state of your project and provide more relevant responses.
 
 * Add images or screenshots to let the AI analyze visual content.
 
@@ -120,7 +120,7 @@ Each AI model has different strengths. Some are better at reasoning, others exce
 
 * **Match model to task complexity.** Use fast models for simple completions and boilerplate. Switch to reasoning-optimized models for planning, debugging, or architectural decisions.
 
-* **Use latest models.** Newer models often have improved capabilities. VS Code continuously adds support for new models and model versions. Check the [available models](../agent-customization/language-models.md) and use the latest models.
+* **Use latest models.** Newer models often have improved capabilities. {% data variables.product.prodname_vscode_shortname %} continuously adds support for new models and model versions. Check the [available models](../agent-customization/language-models.md) and use the latest models.
 
 * **Pin models in prompt files and agents.** Specify preferred models in your prompt file or custom agent definitions to ensure the right model is used consistently for specific tasks.
 
@@ -175,7 +175,7 @@ AI responses might degrade as the conversation fills with irrelevant context. Ma
 
 * **Choose the right session type.** Use local sessions for quick tasks on your current code that need your immediate attention, background tasks for tasks that can run locally and isolated from your main context, or cloud sessions that can benefit from team-collaboration.
 
-* **Scale with parallel sessions.** Run multiple sessions in parallel for independent tasks to save time and keep contexts separate. You can have multiple sessions running at once, across local, background, and cloud environments, and switch between them via the [sessions list](run/sessions/manage-sessions.md#sessions-list) in VS Code.
+* **Scale with parallel sessions.** Run multiple sessions in parallel for independent tasks to save time and keep contexts separate. You can have multiple sessions running at once, across local, background, and cloud environments, and switch between them via the [sessions list](run/sessions/manage-sessions.md#sessions-list) in {% data variables.product.prodname_vscode_shortname %}.
 
 * **Fork instead of re-prompting.** Use [`/fork`](run/sessions/manage-sessions.md#fork-a-chat-session) to explore alternatives without losing context, instead of starting over and re-establishing context from scratch.
 
@@ -197,7 +197,7 @@ For a complete set of techniques, see [optimize AI credit usage](guides/optimize
 
 Copilot is designed to work effectively with large, complex, and multi-root workspaces. Use these practices to get the best results at scale.
 
-* **Use workspace indexing.** VS Code automatically indexes your project using semantic search, language intelligence, and GitHub's code search for deep cross-file reasoning. This works for both small projects and large enterprise codebases. For large repositories, use [remote indexing](reference/workspace-context.md#semantic-index-sources) for fast, comprehensive results across your repository and related repositories on GitHub.
+* **Use workspace indexing.** {% data variables.product.prodname_vscode_shortname %} automatically indexes your project using semantic search, language intelligence, and GitHub's code search for deep cross-file reasoning. This works for both small projects and large enterprise codebases. For large repositories, use [remote indexing](reference/workspace-context.md#semantic-index-sources) for fast, comprehensive results across your repository and related repositories on GitHub.
 
 * **Scope work with multi-root workspaces.** For monorepos or projects with multiple services, use [multi-root workspaces](https://code.visualstudio.com/docs/editing/workspaces/multi-root-workspaces) to give the AI clear boundaries and focused context.
 
@@ -213,7 +213,7 @@ For more information, see [workspace context](reference/workspace-context.md) an
 
 * [Context engineering guide](guides/context-engineering-guide.md)
 * [Optimize AI credit usage](guides/optimize-usage.md)
-* [Customize agent behavior in VS Code](../agent-customization/overview.md)
+* [Customize agent behavior in {% data variables.product.prodname_vscode_shortname %}](../agent-customization/overview.md)
 * [Cheat sheet](reference/ai-features-cheat-sheet.md)
 * [GitHub Copilot security](run/security.md)
 * [Best Practices for using GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot) in the GitHub Copilot documentation

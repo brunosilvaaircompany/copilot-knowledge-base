@@ -1,6 +1,6 @@
 # Sessions and handoff
 
-A session is the unit of work with an agent in Visual Studio Code: a single conversation with an agent, along with all the context that builds up as it works. This article explains what a session is, how sessions behave, how they are shared across surfaces, and how you hand off a session from one agent to another.
+A session is the unit of work with an agent in {% data variables.product.prodname_vscode %}: a single conversation with an agent, along with all the context that builds up as it works. This article explains what a session is, how sessions behave, how they are shared across surfaces, and how you hand off a session from one agent to another.
 
 To create and organize sessions, see [Manage agent sessions](../run/sessions/manage-sessions.md).
 
@@ -26,7 +26,9 @@ Because each session is independent, you can run several at once and move betwee
 
 ## Sessions across surfaces
 
-The [Chat view](../run/chat-view.md) and the [Agents window](../run/agents-window.md) share the same sessions. You can start a task in one surface and continue it in the other, and the sessions list gives you a unified view of all your sessions regardless of where they run.
+The [{% data variables.copilot.chat_view %}](../run/chat-view.md) and the [{% data variables.copilot.agents_window %}](../run/agents-window.md) share the same sessions. You can start a task in one surface and continue it in the other, and the sessions list gives you a unified view of all your sessions regardless of where they run.
+
+{% data variables.product.prodname_vscode_shortname %} can also discover supported local sessions created in {% data variables.copilot.copilot_cli_short %}, the {% data variables.copilot.github_copilot_app %}, Claude Code, and Codex. A discovered session is external until you send a message from {% data variables.product.prodname_vscode_shortname %}. The Agent Host then adopts the session, and the external-session filter no longer controls whether it appears. Learn how to [view sessions from other applications](../run/sessions/manage-sessions.md#view-sessions-from-other-applications).
 
 On the [Agent Host](agent-host.md), an agent can also coordinate work across sessions. It can list sessions, create new sessions or chats, read another session's recent context, and send follow-up messages between sessions.
 
@@ -46,7 +48,7 @@ Learn how to [hand off an ongoing session](../run/agent-harnesses.md#hand-off-a-
 
 A session doesn't have to run on your local machine, and it doesn't have to stay on one device:
 
-* **Remote sessions** run on a machine other than the one you work from. You can connect the Agents window to a remote host over SSH or a dev tunnel, or use Copilot remote control (`/remote on`) to monitor and steer a running Copilot session from GitHub. Learn more about [connecting to a remote machine](../run/remote-agent-sessions.md) and [remote control for Copilot sessions](../run/agent-harnesses.md#remote-control-copilot-sessions).
+* **Remote sessions** run on a machine other than the one you work from. You can connect the {% data variables.copilot.agents_window %} to a remote host over SSH or a dev tunnel, or use Copilot remote control (`/remote on`) to monitor and steer a running Copilot session from GitHub. Learn more about [connecting to a remote machine](../run/remote-agent-sessions.md) and [remote control for Copilot sessions](../run/agent-harnesses.md#remote-control-copilot-sessions).
 * **Synced sessions** are backed up to your GitHub account so you can access them across devices. Learn more about [syncing sessions](../run/sessions/session-history.md).
 * **Session insights** let you query your session history to review what you worked on. Learn more about [session insights](../run/sessions/session-history.md#query-session-history-with-chronicle).
 
@@ -55,4 +57,4 @@ A session doesn't have to run on your local machine, and it doesn't have to stay
 * [Manage agent sessions](../run/sessions/manage-sessions.md)
 * [Agent harnesses](agent-harnesses.md)
 * [Agents](agents.md)
-* [VS Code Agent Host architecture](agent-host.md)
+* [{% data variables.product.prodname_vscode_shortname %} Agent Host architecture](agent-host.md)

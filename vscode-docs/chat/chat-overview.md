@@ -1,24 +1,24 @@
-# Use chat in VS Code
+# Use chat in {% data variables.product.prodname_vscode_shortname %}
 
-Chat in Visual Studio Code lets you use natural language for interacting with AI agents. Ask questions about your code, get help understanding complex logic, generate new features, fix bugs, and more, all through a conversational interface.
+Chat in {% data variables.product.prodname_vscode %} lets you use natural language for interacting with AI agents. Ask questions about your code, get help understanding complex logic, generate new features, fix bugs, and more, all through a conversational interface.
 
-This article describes the mechanics of how to interact with chat: how to send a request, add context, choose a language model, write effective prompts, and review AI-generated changes. These mechanics apply to all chat surfaces in VS Code. For an overview of what agents can do and how to configure a session, see [Build with agents in VS Code](../agents/overview.md).
+This article describes the mechanics of how to interact with chat: how to send a request, add context, choose a language model, write effective prompts, and review AI-generated changes. These mechanics apply to all chat surfaces in {% data variables.product.prodname_vscode_shortname %}. For an overview of what agents can do and how to configure a session, see [Build with agents in {% data variables.product.prodname_vscode_shortname %}](../agents/overview.md).
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Get started with agents">
-Follow a hands-on tutorial to build an app with AI agents in VS Code.
+Follow a hands-on tutorial to build an app with AI agents in {% data variables.product.prodname_vscode_shortname %}.
 
 * [Start agentic coding tutorial](../agents/agents-tutorial.md)
 
 </div>
 
-## Ways to chat in VS Code
+## Ways to chat in {% data variables.product.prodname_vscode_shortname %}
 
-VS Code gives you two main surfaces for working with agents, plus lightweight options for quick interactions. You can choose the experience that best fits your current task and workflow, and switch between them as needed.
+{% data variables.product.prodname_vscode_shortname %} gives you two main surfaces for working with agents, plus lightweight options for quick interactions. You can choose the experience that best fits your current task and workflow, and switch between them as needed.
 
 | Name | Description | How to open |
 |------|-------------|-------------|
-| [Agents window](../agents/run/agents-window.md) | A dedicated, agent-first window for orchestrating tasks across multiple projects. Focus on high-level tasks and outcomes. | <ul><li>Select **Open in Agents** in the VS Code title bar</li><li>Use the **Chat: Open Agents Window** command</li><li>Run `code --agents`</li></ul> |
-| [Chat view](../agents/run/chat-view.md) | A code-first experience running in the editor sidebar, to assist you with coding tasks in your workspace. | <ul><li>Select the chat icon in the VS Code title bar</li><li>Use the **Chat: Open Chat** command</li><li>Press `kb(workbench.action.chat.open)`</li></ul> |
+| [{% data variables.copilot.agents_window %}](../agents/run/agents-window.md) | A dedicated, agent-first window for orchestrating tasks across multiple projects. Focus on high-level tasks and outcomes. | <ul><li>Select **Open in Agents** in the {% data variables.product.prodname_vscode_shortname %} title bar</li><li>Use the **Chat: Open {% data variables.copilot.agents_window %}** command</li><li>Run `code --agents`</li></ul> |
+| [{% data variables.copilot.chat_view %}](../agents/run/chat-view.md) | A code-first experience running in the editor sidebar, to assist you with coding tasks in your workspace. | <ul><li>Select the chat icon in the {% data variables.product.prodname_vscode_shortname %} title bar</li><li>Use the **Chat: Open Chat** command</li><li>Press `kb(workbench.action.chat.open)`</li></ul> |
 | [Inline chat](inline-chat.md) | Quick, in-place code edits or terminal suggestions. | <ul><li>Press `kb(inlineChat.start)`</li></ul> |
 | [Quick Chat](inline-chat.md#use-quick-chat) | A lightweight chat panel at the top of the editor. | <ul><li>Press `kb(workbench.action.quickchat.toggle)`</li></ul> |
 
@@ -42,7 +42,7 @@ Each session has configuration options that shape how the agent responds, such a
 
 ## Run terminal commands from chat
 
-Start a message with `!` to run a terminal command directly from the Chat view or Agents window. The `!` must be the first character and must be followed by a command.
+Start a message with `!` to run a terminal command directly from the {% data variables.copilot.chat_view %} or {% data variables.copilot.agents_window %}. The `!` must be the first character and must be followed by a command.
 
 For example, enter the following message to run your tests:
 
@@ -76,7 +76,7 @@ When you have multiple pending messages (queued or steering), you can drag and d
 
 Providing the right context helps the AI generate more relevant and accurate responses.
 
-* **Implicit context**: VS Code automatically includes the active file, your current selection, and the file name as context. When you use agents, the agent decides autonomously if additional context is needed.
+* **Implicit context**: {% data variables.product.prodname_vscode_shortname %} automatically includes the active file, your current selection, and the file name as context. When you use agents, the agent decides autonomously if additional context is needed.
 
 * **`#`-mentions**: type `#` in the chat input to explicitly reference files (`#file`), folders, symbols, your codebase (`#codebase`), terminal output (`#terminalSelection`), or tools like `#fetch`.
 
@@ -96,8 +96,8 @@ When `setting(imageCarousel.chat.enabled)` is enabled, you can select images or 
 
 After the AI changes your files, review and validate the result before you commit or integrate it.
 
-* **Review diffs**: select a changed file in the agent's response or use the **Changes** panel in the Agents window. To show a changed-files summary after each request in the Chat view, set `setting(chat.checkpoints.showFileChanges)` to `true`.
-* **Request revisions**: send a follow-up prompt, leave feedback in the Agents window diff editor, or edit the files directly.
+* **Review diffs**: select a changed file in the agent's response or use the **Changes** panel in the {% data variables.copilot.agents_window %}. To show a changed-files summary after each request in the {% data variables.copilot.chat_view %}, set `setting(chat.checkpoints.showFileChanges)` to `true`.
+* **Request revisions**: send a follow-up prompt, leave feedback in the {% data variables.copilot.agents_window %} diff editor, or edit the files directly.
 * **Use checkpoints**: restore an earlier snapshot to revert a request and all later file changes. For more information, see [checkpoints and editing requests](../agents/run/review-code-edits.md#edit-requests-and-restore-checkpoints).
 * **Integrate the result**: commit folder changes with Source Control, or apply or merge changes from an isolated worktree.
 
@@ -105,7 +105,7 @@ For more information, see [reviewing AI-generated code edits](../agents/run/revi
 
 ## Get notified about chat responses
 
-When you're working in another window or application, VS Code can send you OS notifications to let you know about important chat events, so you don't have to keep checking back.
+When you're working in another window or application, {% data variables.product.prodname_vscode_shortname %} can send you OS notifications to let you know about important chat events, so you don't have to keep checking back.
 
 Use `setting(chat.notifyWindowOnResponseReceived)` to configure when you receive an OS notification when a chat response is received. The notification includes a preview of the response, and selecting it brings focus to the chat session.
 
@@ -114,16 +114,24 @@ Use `setting(chat.notifyWindowOnConfirmation)` to configure when you receive an 
 Both settings have three possible values:
 
 * `off`: never show notifications
-* `windowNotFocused` (default): show notifications only when the VS Code window is not focused
-* `always`: show notifications even when the VS Code window is in focus
+* `windowNotFocused` (default): show notifications only when the {% data variables.product.prodname_vscode_shortname %} window is not focused
+* `always`: show notifications even when the {% data variables.product.prodname_vscode_shortname %} window is in focus
 
-**TIP:** Set the value to `always` if you want to stay aware of chat activity while working in other parts of VS Code, such as when running long agent tasks in the background.
+**TIP:** Set the value to `always` if you want to stay aware of chat activity while working in other parts of {% data variables.product.prodname_vscode_shortname %}, such as when running long agent tasks in the background.
 
 ## Show request and completion timestamps
 
 Chat can show timestamps for when you send a request and when a response completes. Hover over a completion timestamp to see elapsed response time.
 
 Use `setting(chat.verbose)` to enable or disable these timestamps.
+
+## Find text in a chat session
+
+Press `kb(workbench.action.chat.find)` to search the entire conversation. Find is available in the {% data variables.copilot.chat_view %}, chat editor tabs, and the {% data variables.copilot.agents_window %}. It searches prompts and responses, including off-screen content and code blocks.
+
+Use `kb(workbench.action.chat.findNext)` and `kb(workbench.action.chat.findPrevious)` to navigate between matches. When a match is inside a collapsed **Completed N steps** section, navigating to the match expands the section. Use the **Match Case**, **Whole Word**, and **Regular Expression** options to refine the results.
+
+**NOTE:** Find is not available in Quick Chat or inline chat. It does not search text inside tool pills or collapsed reasoning.
 
 ## Navigate between prompts in a chat session
 
@@ -144,7 +152,7 @@ Chat provides several ways to improve the quality and relevance of AI responses:
 
 * **Extend with tools**: connect [MCP servers](../agent-customization/mcp-servers.md) or install extensions that contribute tools to give the agent access to external services, databases, or APIs.
 
-For more information, see [Customize agent behavior in VS Code](../agent-customization/overview.md).
+For more information, see [Customize agent behavior in {% data variables.product.prodname_vscode_shortname %}](../agent-customization/overview.md).
 
 ## Troubleshoot chat interactions
 

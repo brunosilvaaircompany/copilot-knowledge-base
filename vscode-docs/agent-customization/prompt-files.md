@@ -1,4 +1,4 @@
-# Use prompt files in VS Code
+# Use prompt files in {% data variables.product.prodname_vscode_shortname %}
 
 Prompt files, also known as slash commands, let you simplify prompting for common tasks by encoding them as standalone Markdown files that you can invoke directly in chat. Each prompt file includes task-specific context and guidelines about how the task should be performed.
 
@@ -9,9 +9,9 @@ Use prompt files to:
 * Simplify prompting for common tasks, such as scaffolding a new component, running and fixing tests, or preparing a pull request
 * Override default behavior of a custom agent, such as creating a minimal implementation plan or generating mockups for API calls
 
-You can use the [Agent Customizations editor](overview.md#use-the-agent-customizations-editor) (Preview) to discover, create, and manage all your agent customizations in one place. Run **Chat: Open Customizations** from the Command Palette.
+You can use the [Agent Customizations editor](overview.md#agent-customizations-editor) (Preview) to discover, create, and manage all your agent customizations in one place. Run **Chat: Open Customizations** from the Command Palette.
 
-**IMPORTANT:** Agents running on the [Agent Host](../agents/concepts/agent-host.md) don't use prompt files. To use an existing prompt with the Copilot agent, convert it to an [agent skill](agent-skills.md). The Agent Customizations editor offers a one-time migration that converts your prompt files to skills (experimental, enable `setting(chat.customizations.promptMigration.enabled)`). Prompt files continue to work with local agents that run in the VS Code extension host.
+**IMPORTANT:** Agents running on the [Agent Host](../agents/concepts/agent-host.md) don't use prompt files. To use an existing prompt with the Copilot agent, convert it to an [agent skill](agent-skills.md). The Agent Customizations editor offers a one-time migration that converts your prompt files to skills (experimental, enable `setting(chat.customizations.promptMigration.enabled)`). Prompt files continue to work with local agents that run in the {% data variables.product.prodname_vscode_shortname %} extension host.
 
 ## Prompt file locations
 
@@ -20,7 +20,7 @@ You can define prompt files for a specific workspace or at the user level, where
 | Scope | Default file location |
 |-------|-----------------------|
 | Workspace | `.github/prompts` folder |
-| User profile | Your user data (specific to your VS Code profile) |
+| User profile | Your user data (specific to your {% data variables.product.prodname_vscode_shortname %} profile) |
 
 To create a user-level prompt file, use the Agent Customizations editor or the **Chat: New Prompt File** command.
 
@@ -109,7 +109,7 @@ To create a prompt file:
 
 **TIP:** Type `/prompts` in the chat input to quickly open the **Configure Prompt Files** menu.
 
-1. In the Chat view, select **Configure Chat** (gear icon) to open the Agent Customizations editor and then select the **Prompts** tab.
+1. In the {% data variables.copilot.chat_view %}, select **Configure Chat** (gear icon) to open the Agent Customizations editor and then select the **Prompts** tab.
 
 1. Select **New Prompt (Workspace)** or **New Prompt (User)** from the dropdown, depending on where you want to store the prompt file.
 
@@ -138,7 +138,7 @@ You can also generate a prompt file from the Agent Customizations editor by sele
 
 You have multiple options to run a prompt file:
 
-* In the Chat view, type `/` followed by the prompt name in the chat input field. [Agent skills](agent-skills.md) also appear as slash commands alongside prompt files.
+* In the {% data variables.copilot.chat_view %}, type `/` followed by the prompt name in the chat input field. [Agent skills](agent-skills.md) also appear as slash commands alongside prompt files.
 
     You can add extra information in the chat input field. For example, `/create-react-form formName=MyForm` or `/create-api for listing customers`.
 
@@ -149,7 +149,7 @@ You have multiple options to run a prompt file:
     This option is useful for quickly testing and iterating on your prompt files.
 
 **TIP:** Use the `setting(chat.promptFilesRecommendations)` setting to show prompts as recommended actions when starting a new chat session.
-![Screenshot showing a "explain" prompt file recommendation in the Chat view.](images/customization/prompt-file-recommendations.png)
+![Screenshot showing a "explain" prompt file recommendation in the {% data variables.copilot.chat_view %}.](images/customization/prompt-file-recommendations.png)
 
 ## Tool list priority
 
@@ -163,7 +163,7 @@ The list of available tools in chat is determined by the following priority orde
 
 ## Sync user prompt files across devices
 
-VS Code can sync your user prompt files across multiple devices by using [Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync).
+{% data variables.product.prodname_vscode_shortname %} can sync your user prompt files across multiple devices by using [Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync).
 
 To sync your user prompt files, enable Settings Sync and run **Settings Sync: Configure** from the Command Palette (`kb(workbench.action.showCommands)`). Select **Prompts and Instructions** from the list of settings to sync.
 
@@ -190,7 +190,7 @@ To identify the source of a prompt file:
 1. Select **Chat: Configure Prompt Files** from the Command Palette (`kb(workbench.action.showCommands)`).
 1. Hover over the prompt file in the list. The source location is displayed in a tooltip.
 
-**TIP:** Use the Agent Debug Log panel to inspect prompt file discovery and related errors. In the Chat view, select the ellipsis (**...**) menu, then select **Show Agent Debug Logs**. Learn more about [troubleshooting AI in VS Code](../agents/agent-troubleshooting/troubleshooting.md).
+**TIP:** Use the Agent Debug Log panel to inspect prompt file discovery and related errors. In the {% data variables.copilot.chat_view %}, select the ellipsis (**...**) menu, then select **Show Agent Debug Logs**. Learn more about [troubleshooting AI in {% data variables.product.prodname_vscode_shortname %}](../agents/agent-troubleshooting/troubleshooting.md).
 
 ## Related resources
 

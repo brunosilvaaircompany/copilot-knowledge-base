@@ -1,6 +1,6 @@
 # Hooks reference
 
-This article provides a reference for agent hook configuration properties and the input and output schemas of each hook event in VS Code. For information about configuring and using hooks, see [Agent hooks](../../agent-customization/hooks.md).
+This article provides a reference for agent hook configuration properties and the input and output schemas of each hook event in {% data variables.product.prodname_vscode_shortname %}. For information about configuring and using hooks, see [Agent hooks](../../agent-customization/hooks.md).
 
 Every hook also receives a set of [common input fields](../../agent-customization/hooks.md#common-input-fields) and can return the [common output format](../../agent-customization/hooks.md#common-output-format). The fields documented in the event sections are in addition to those common fields.
 
@@ -287,6 +287,6 @@ The `PreCompact` hook uses the common output format only.
 
 ## Related resources
 
-* [Agent hooks](../../agent-customization/hooks.md) - Configure and use hooks in VS Code
+* [Agent hooks](../../agent-customization/hooks.md) - Configure and use hooks in {% data variables.product.prodname_vscode_shortname %}
 * [Custom agents](../../agent-customization/custom-agents.md) - Create specialized agent configurations
 * [Subagents](../run/subagents.md) - Delegate tasks to context-isolated subagents

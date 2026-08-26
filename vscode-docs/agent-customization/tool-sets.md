@@ -2,7 +2,7 @@
 
 A tool set is a reusable collection of agent tools that you can reference as a single entity. Use tool sets to organize related tools and make them easier to select in prompts, [prompt files](prompt-files.md), and [custom agents](custom-agents.md).
 
-VS Code also provides predefined tool sets, such as `#edit` and `#search`.
+{% data variables.product.prodname_vscode_shortname %} also provides predefined tool sets, such as `#edit` and `#search`.
 
 ## Create a tool set
 
@@ -10,7 +10,7 @@ To create a tool set:
 
 1. Run **Chat: Configure Tool Sets** from the Command Palette and select **Create new tool sets file**.
 
-    Alternatively, select the ellipsis (**...**) menu in the Chat view, select **Tool Sets**, and then select **Create new tool sets file**.
+    Alternatively, select the ellipsis (**...**) menu in the {% data variables.copilot.chat_view %}, select **Tool Sets**, and then select **Create new tool sets file**.
 
 1. Define your tool set in the `.jsonc` file that opens.
 

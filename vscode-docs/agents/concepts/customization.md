@@ -2,7 +2,7 @@
 
 AI models have broad knowledge, but they don't know your codebase, team practices, or development systems. Agent customization adapts an agent to your environment by adding persistent context, repeatable workflows, specialized roles, external tools, and deterministic controls.
 
-This article explains how customizations change an agent, how the customization types differ, and how you can combine them. To create and manage customizations, see [Customize agent behavior in Visual Studio Code](../../agent-customization/overview.md).
+This article explains how customizations change an agent, how the customization types differ, and how you can combine them. To create and manage customizations, see [Customize agent behavior in {% data variables.product.prodname_vscode %}](../../agent-customization/overview.md).
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Get started with customizations">
 Follow a hands-on tutorial to discover the customization options and configure them for your project.
@@ -44,7 +44,7 @@ The following table compares the customization types by purpose and activation.
 | Run a saved task on demand | [Prompt files](../../agent-customization/prompt-files.md) | Scaffold a React component | You invoke the prompt as a slash command |
 | Use a specialized role and tool configuration | [Custom agents](../../agent-customization/custom-agents.md) | Review code with read-only tools | You select the agent, use it as a subagent, or another agent delegates to it |
 | Connect to an external system | [MCP](../../agent-customization/mcp-servers.md) | Query a database or update an issue | The agent calls an MCP tool when the task requires it |
-| Run code at a lifecycle event | [Hooks](../../agent-customization/hooks.md) | Run a formatter after a file edit or block a risky command | VS Code runs the hook when the configured event occurs |
+| Run code at a lifecycle event | [Hooks](../../agent-customization/hooks.md) | Run a formatter after a file edit or block a risky command | {% data variables.product.prodname_vscode_shortname %} runs the hook when the configured event occurs |
 | Install a packaged customization setup | [Agent plugins](../../agent-customization/agent-plugins.md) | Add a testing workflow with a skill, agent, hooks, and MCP server | Each bundled customization follows its own activation rules |
 
 Start with instructions when your main goal is to stop repeating project context. Add other customization types when you identify a recurring task, specialized role, missing capability, or action that must always run.
@@ -85,5 +85,5 @@ Not every customization type supports every scope or agent harness. See the indi
 
 ## Related resources
 
-* [Customize agent behavior in VS Code](../../agent-customization/overview.md)
+* [Customize agent behavior in {% data variables.product.prodname_vscode_shortname %}](../../agent-customization/overview.md)
 * [Customize AI for your project](../guides/customize-copilot-guide.md)

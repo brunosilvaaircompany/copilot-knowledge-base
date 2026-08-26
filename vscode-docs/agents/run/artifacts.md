@@ -1,25 +1,25 @@
-# Agent artifacts (Preview)
+# Agent artifacts
 
-The artifacts panel in Visual Studio Code surfaces important resources, such as screenshots, plans, and documents, alongside the chat conversation. Artifacts can come from multiple sources simultaneously and are displayed in a collapsible tree control, grouped by origin.
+The artifacts panel in {% data variables.product.prodname_vscode %} surfaces important resources, such as screenshots, plans, and documents, alongside the chat conversation. Artifacts can come from multiple sources simultaneously and are displayed in a collapsible tree control, grouped by origin.
 
-**NOTE:** The features on this page work in both the [Chat view](chat-view.md) and the [Agents window](agents-window.md).
+**NOTE:** The features on this page work in both the [{% data variables.copilot.chat_view %}](chat-view.md) and the [{% data variables.copilot.agents_window %}](agents-window.md).
 
-**NOTE:** The artifacts panel is currently in preview. To enable it, set `setting(chat.artifacts.enabled)` to `true`.
+**NOTE:** To enable the artifacts panel, set `setting(chat.artifacts.enabled)` to `true`.
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Try artifacts in action">
 Launch a chat prompt that asks the agent to save a screenshot as an artifact.
 
-* [Open in VS Code](vscode://GitHub.Copilot-Chat/chat?agent=agent%26prompt=Take%20a%20screenshot%20of%20my%20app%20and%20set%20it%20as%20an%20artifact.)
+* [Open in {% data variables.product.prodname_vscode_shortname %}](vscode://GitHub.Copilot-Chat/chat?agent=agent%26prompt=Take%20a%20screenshot%20of%20my%20app%20and%20set%20it%20as%20an%20artifact.)
 
 </div>
 
-![Screenshot of the artifacts panel in the Chat view, showing example artifacts such as links, images, and documents.](../images/chat-artifacts/chat-artifacts-list.png)
+![Screenshot of the artifacts panel in the {% data variables.copilot.chat_view %}, showing example artifacts such as links, images, and documents.](../images/chat-artifacts/chat-artifacts-list.png)
 
 ## Artifact sources
 
 Artifacts can appear in the panel from different sources, which are merged and grouped by origin:
 
-* **Rules-based extraction**: VS Code automatically extracts artifacts from conversation content based on configurable MIME type patterns, file path globs, or memory file paths. For example, the built-in rules surface screenshots and plan documents. See [Configure artifact extraction rules](#configure-artifact-extraction-rules) for details.
+* **Rules-based extraction**: {% data variables.product.prodname_vscode_shortname %} automatically extracts artifacts from conversation content based on configurable MIME type patterns, file path globs, or memory file paths. For example, the built-in rules surface screenshots and plan documents. See [Configure artifact extraction rules](#configure-artifact-extraction-rules) for details.
 * **Agent-set artifacts**: the agent explicitly sets artifacts by using the `#artifacts` tool. Each update replaces the previous agent artifact list.
 * **Subagent artifacts**: when the agent delegates work to subagents, each subagent can set its own artifacts, shown in separate groups labeled with the subagent's name.
 

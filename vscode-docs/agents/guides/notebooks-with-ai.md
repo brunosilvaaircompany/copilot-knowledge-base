@@ -1,10 +1,10 @@
-# Edit Jupyter notebooks with AI in VS Code
+# Edit Jupyter notebooks with AI in {% data variables.product.prodname_vscode_shortname %}
 
-Visual Studio Code supports working with [Jupyter notebooks](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) natively, and through [Python code files](https://code.visualstudio.com/docs/python/jupyter-support-py). The AI features in VS Code can help you in creating and editing notebooks, as well as analyzing and visualizing data. In this article, you learn how to use the AI features in VS Code to work with Jupyter notebooks.
+{% data variables.product.prodname_vscode %} supports working with [Jupyter notebooks](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) natively, and through [Python code files](https://code.visualstudio.com/docs/python/jupyter-support-py). The AI features in {% data variables.product.prodname_vscode_shortname %} can help you in creating and editing notebooks, as well as analyzing and visualizing data. In this article, you learn how to use the AI features in {% data variables.product.prodname_vscode_shortname %} to work with Jupyter notebooks.
 
 ## Scaffold a new notebook
 
-To accelerate getting started with a new notebook, you can use the AI features in VS Code to scaffold a new notebook. Use natural language to provide details about what functionality you want to add and which libraries you want to use.
+To accelerate getting started with a new notebook, you can use the AI features in {% data variables.product.prodname_vscode_shortname %} to scaffold a new notebook. Use natural language to provide details about what functionality you want to add and which libraries you want to use.
 
 To create a new notebook with AI, choose either of these options:
 
@@ -26,19 +26,19 @@ You can now further edit the notebook manually, or use AI to make inline edits o
 
 If you already have a notebook and want to make some inline changes in a cell, you can use inline chat, like you would in a code file.
 
-To make inline edits in a cell, press `kb(notebook.cell.chat.start)`. This opens the inline chat view, where you can enter your prompt.
+To make inline edits in a cell, press `kb(notebook.cell.chat.start)`. This opens the inline {% data variables.copilot.chat_view %}, where you can enter your prompt.
 
 **TIP:** You can reference kernel variables in your chat prompt. Type `#` followed by the variable name to reference it. For example, if you have a variable named `df`, you can type `#df` in your chat prompt to reference it.
 
-![Screenshot that shows the inline chat view in a notebook cell.](../images/notebooks-with-ai/notebook-inline-chat.png)
+![Screenshot that shows the inline {% data variables.copilot.chat_view %} in a notebook cell.](../images/notebooks-with-ai/notebook-inline-chat.png)
 
 When the response is generated, notice that the code is updated in the notebook cell. You can **Accept** the changes and decide to **Accept and Run** the cell changes.
 
-To generate a new cell with AI, select the **Generate** button in the notebook view, or don't focus on a cell and press `kb(notebook.cell.chat.start)` to open the inline chat view for a new cell.
+To generate a new cell with AI, select the **Generate** button in the notebook view, or don't focus on a cell and press `kb(notebook.cell.chat.start)` to open the inline {% data variables.copilot.chat_view %} for a new cell.
 
 ## Make edits across multiple cells
 
-To make larger edits, across multiple cells, you can switch to use [agents](vscode://GitHub.Copilot-Chat/chat?mode=agent) in the Chat view. Provide a prompt to request changes to the notebook and the agent will iterate through the tasks to implement the changes.
+To make larger edits, across multiple cells, you can switch to use [agents](vscode://GitHub.Copilot-Chat/chat?mode=agent) in the {% data variables.copilot.chat_view %}. Provide a prompt to request changes to the notebook and the agent will iterate through the tasks to implement the changes.
 
 ![Screenshot that shows the response from chat to the prompt 'Plot a graph of the price distribution'.](../images/notebooks-with-ai/notebook-agent-mode-plot-prices.png)
 
@@ -66,7 +66,7 @@ You can do a full data analysis and visualization notebook of a dataset by using
 
 For example, to perform a data analysis of the housing dataset:
 
-1. Select [Agent](vscode://GitHub.Copilot-Chat/chat?mode=agent) from the agent picker in the Chat view.
+1. Select [Agent](vscode://GitHub.Copilot-Chat/chat?mode=agent) from the agent picker in the {% data variables.copilot.chat_view %}.
 
 1. Enter the following prompt in the chat input field: *Perform data analysis of the data in #housing.csv*.
 
@@ -79,6 +79,6 @@ You can now further edit the notebook manually, or use AI to make inline edits o
 
 ## Next steps
 
-* [Learn more about Jupyter notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
-* [Learn more about the AI features in VS Code](https://code.visualstudio.com/docs/copilot/overview)
-* [Learn more about chat in VS Code](../../chat/chat-overview.md)
+* [Learn more about Jupyter notebooks in {% data variables.product.prodname_vscode_shortname %}](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+* [Learn more about the AI features in {% data variables.product.prodname_vscode_shortname %}](https://code.visualstudio.com/docs/copilot/overview)
+* [Learn more about chat in {% data variables.product.prodname_vscode_shortname %}](../../chat/chat-overview.md)

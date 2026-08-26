@@ -1,11 +1,11 @@
 # Prompt examples
 
-This article provides example prompts for chat in Visual Studio Code across different scenarios and agents. Use these examples as inspiration to craft effective prompts for your own development tasks.
+This article provides example prompts for chat in {% data variables.product.prodname_vscode %} across different scenarios and agents. Use these examples as inspiration to craft effective prompts for your own development tasks.
 
-If you are new to using chat in VS Code, learn more about [getting started with chat](../../chat/chat-overview.md) or review [best practices for prompt crafting](../best-practices.md).
+If you are new to using chat in {% data variables.product.prodname_vscode_shortname %}, learn more about [getting started with chat](../../chat/chat-overview.md) or review [best practices for prompt crafting](../best-practices.md).
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Get started with agents">
-Follow a hands-on tutorial to build an app with AI agents in VS Code.
+Follow a hands-on tutorial to build an app with AI agents in {% data variables.product.prodname_vscode_shortname %}.
 
 * [Start agentic coding tutorial](../agents-tutorial.md)
 
