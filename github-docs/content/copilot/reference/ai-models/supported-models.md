@@ -27,7 +27,7 @@ This table lists the AI models available in Copilot, along with their release st
 
 ## Supported AI models in Auto model selection
 
-This table lists the supported AI models for Auto model selection. Available models may be limited by model policies. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+This table lists the supported AI models for Auto model selection. Available models may be limited by model policies. For example, as the long term support model, GPT-5.3-Codex will be used in the event no other models are available. See[Fallback And Lts Models](https://docs.github.com/en/copilot/concepts/models/fallback-and-lts-models) and [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 {% rowheaders %}
 
@@ -193,27 +193,13 @@ The following models are currently used as utility models:
 
 ## Models eligible for default enablement
 
+For enterprises on a Copilot Business or Copilot Enterprise plan, a policy controls whether unconfigured generally available (GA) models are enabled or disabled by default. See [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
 
 
-On Copilot Business and Copilot Enterprise plans, a new policy will control whether unconfigured generally available (GA) models default to enabled or disabled. For more information, see [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
+The default policy applies to models that you have not explicitly configured. These models are indicated in your enterprise or organization's model settings with the **Delegate to Default Policy** label. When a new model is released, it inherits the default until you explicitly configure it.
 
+The following models are **not** in scope. They are disabled by default, regardless of your "Default availability" policy setting.
 
-
-
-
-
-New and existing unconfigured models will follow the default set in the policy. Unconfigured models are:
-
-
-
-* At the enterprise level, models that have not been added to the models list on the models configuration page.
-* At the organization level, models that have been made "optional" by an enterprise administrator, and that an organization owner has not explicitly enabled or disabled. (**Does not apply** if you are opted in to the enterprise teams model access preview.)
-
-When a new model is released, it is unconfigured by default.
-
-The following models are **not** eligible for default enablement, regardless of whether they are new or existing:
-
-* Models that have been explicitly disabled
 * Pre-GA models
 * Open weight models (DeepSeek, Kimi K2.7 Code, Kimi K3)
 * Models that are not covered by GitHub's data retention agreement (Claude Fable 5)

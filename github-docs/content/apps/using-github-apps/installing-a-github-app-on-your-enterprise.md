@@ -34,6 +34,9 @@ Enterprise-installed GitHub Apps cannot call every enterprise API, but several A
 * [Manage users in your enterprise](/graphql/reference/enterprise-admin#object-enterprise)
 * Create and manage GitHub App installations in your organizations
 * Manage enterprise custom repository properties
+
+* Manage enterprise billing, including budgets, cost centers, and usage reports. For more information, see [Billing](https://docs.github.com/en/rest/billing).
+
 * Call the enterprise SCIM APIs
 
 Check the [changelog](https://github.blog/changelog/) for updates on new APIs and permissions for GitHub Apps.

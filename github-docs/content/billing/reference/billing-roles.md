@@ -15,6 +15,11 @@ To add a billing manager, see:
 * [Adding A Billing Manager To Your Organization](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/adding-a-billing-manager-to-your-organization#inviting-a-billing-manager)
 * [Inviting People To Manage Your Enterprise](https://docs.github.com/en/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/inviting-people-to-manage-your-enterprise)
 
+
+
+Enterprise owners can also grant a GitHub App the enterprise billing permission, so that an app can access enterprise billing data through the REST API without using a token that belongs to an individual. For more information, see [Automate Usage Reporting](https://docs.github.com/en/billing/tutorials/automate-usage-reporting).
+
+
 ## Organization owners
 
 You have full administrative access to your organization. You can:

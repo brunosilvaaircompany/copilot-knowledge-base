@@ -1,4 +1,4 @@
-Plugins provide a way to distribute custom Copilot functionality. You can use a plugin to add a preconfigured set of capabilities to Copilot, including Copilot CLI and Copilot cloud agent.
+Plugins provide a way to distribute custom Copilot functionality. You can use a plugin to add a preconfigured set of capabilities to Copilot, including Copilot CLI, Copilot cloud agent, and the GitHub Copilot app.
 
 ## What is a plugin?
 
@@ -66,6 +66,7 @@ How you install a plugin depends on which client you're using:
 
 * In Copilot CLI, you can install plugins imperatively using the `copilot plugin install` command or the `/plugin install` slash command, or declaratively by adding the plugin to the `enabledPlugins` field of either a user-level `~/.copilot/settings.json` file or a repository-level `.github/copilot/settings.json` file. See [Plugins Finding Installing](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing).
 * In Copilot cloud agent, you install plugins declaratively by adding them to the `enabledPlugins` field of the repository's `.github/copilot/settings.json` file. To install plugins from a marketplace that isn't registered by default, you can also add the marketplace to the `extraKnownMarketplaces` field in the same file.
+* In the GitHub Copilot app, click **Customize**, then click **Plugins** to browse marketplaces and install plugins.
 
 Enterprise administrators can define plugin standards that apply to users on the enterprise's Copilot plan, including specifying additional marketplaces and plugins that are automatically installed. See [About Enterprise Plugin Standards](https://docs.github.com/en/copilot/concepts/agents/about-enterprise-plugin-standards).
 

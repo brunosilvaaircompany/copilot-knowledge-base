@@ -14,9 +14,33 @@ Before you begin this tutorial, make sure that:
   * Enterprise-level reports: enterprise administrator or billing manager
 
 * You’re familiar with making authenticated requests to the REST API. For an introduction, see [Using The Rest API](https://docs.github.com/en/rest/using-the-rest-api).
-* You authenticate using a personal access token (classic). The billing usage endpoints do not support fine-grained personal access tokens.
+* You authenticate using a personal access token (classic). The billing usage endpoints do not support fine-grained personal access tokens. For enterprise-level reporting, you can authenticate with a GitHub App instead. See [Authenticating with a GitHub App](#authenticating-with-a-github-app).
 
 Depending on your reporting needs, you may also want access to an internal system (such as a spreadsheet, database, or BI tool) where you can store and analyze the usage data retrieved from the API.
+
+
+
+## Authenticating with a GitHub App
+
+For enterprise-level reporting, you can authenticate with a GitHub App instead of a personal access token. Your automation then does not depend on a token that belongs to an individual enterprise owner or billing manager, so your reports keep running when someone changes role or leaves the enterprise.
+
+An enterprise owner can grant an app the enterprise billing permission at one of two levels of access:
+
+* **Read**: The app can retrieve usage reports, budgets, and cost centers. This is the access the reporting in this tutorial requires.
+* **Read and write**: The app can create, update, and delete budgets and cost centers, and add or remove resources from cost centers.
+
+To report on usage with an app:
+
+1. Register a GitHub App that requests the enterprise billing permission. See [Registering A GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app).
+1. Ask an enterprise owner to install the app on your enterprise. See [Installing A GitHub App On Your Enterprise](https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-on-your-enterprise).
+1. Generate an installation access token for the enterprise installation. See [Generating An Installation Access Token For A GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app).
+1. Send the installation access token in the `Authorization` header of your requests, in place of a personal access token.
+
+An installation access token expires after one hour, so your automation must generate a new token each time it runs or whenever the current token expires.
+
+For the endpoints an app can call with each permission, see [Permissions Required For GitHub Apps](https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps).
+
+
 
 ## Step 1: Decide what level to report on
 
@@ -62,7 +86,7 @@ curl -L \
   https://api.github.com/enterprises/ENTERPRISE/settings/billing/usage/summary
 ```
 
-Replace `ENTERPRISE` with the enterprise slug and set the `GITHUB_TOKEN` environment variable to a personal access token with the required billing permissions.
+Replace `ENTERPRISE` with the enterprise slug and set the `GITHUB_TOKEN` environment variable to a personal access token with the required billing permissions. Alternatively, set `GITHUB_TOKEN` to an installation access token from a GitHub App with the enterprise billing permission.
 
 **Example using the GitHub CLI**
 

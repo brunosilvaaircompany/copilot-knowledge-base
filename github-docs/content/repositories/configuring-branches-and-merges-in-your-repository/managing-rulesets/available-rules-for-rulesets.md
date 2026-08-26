@@ -323,6 +323,15 @@ Prevent commits that include changes in specified file paths from being pushed t
 You can use `fnmatch` syntax for this. For example, a restriction targeting `test/demo/**/*` prevents any pushes to files or folders in the `test/demo/` directory. A restriction targeting `test/docs/pushrules.md` prevents pushes specifically to the `pushrules.md` file in the `test/docs/` directory. For more information, see [Creating Rulesets For A Repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository#using-fnmatch-syntax).
 
 
+
+
+You can also add allowed exceptions to this rule. A file matching an allowed exception can be pushed even when it also matches a restricted path.
+
+Allowed exceptions use `fnmatch` syntax and are validated when you save the ruleset. For example, `**/gradle/wrapper/*.jar` allows the Gradle wrapper JAR file in any directory.
+
+
+
+
 ## Restrict file path length
 
 Prevent commits that include file paths that exceed a specified character limit from being pushed to the repository.
@@ -331,6 +340,18 @@ Prevent commits that include file paths that exceed a specified character limit 
 
 Prevent commits that include files with specified file extensions from being pushed to the repository. Limit is 200 entries and up to 200 characters in each entry.
 
+
+
+If you need to allow an exception for a single file of an otherwise blocked file type, use "Restrict file paths" with a pattern such as `**/*.jar`. Only the "Restrict file paths" and "Restrict file size" rules support allowed exceptions.
+
+
+
 ## Restrict file size
 
 Prevent commits that exceed a specified file size limit from being pushed to the repository.
+
+
+
+You can also add allowed exceptions to this rule. A file matching an allowed exception can exceed the file size limit.
+
+Allowed exceptions use `fnmatch` syntax and are validated when you save the ruleset. For example, `**/gradle/wrapper/*.jar` allows the Gradle wrapper JAR file in any directory.

@@ -403,6 +403,12 @@ Any push protections you configure will block pushes in this repository and thro
    For file path restrictions, you can use partial or full paths. You can use `fnmatch` syntax for this. For example, a restriction targeting `test/demo/**/*` prevents any pushes to files or folders in the `test/demo/` directory. A restriction targeting `test/docs/pushrules.md` prevents pushes specifically to the `pushrules.md` file in the `test/docs/` directory. For more information, see [Creating Rulesets For A Repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository#using-fnmatch-syntax).
 
 
+1. Optionally, for the "Restrict file paths" and "Restrict file size" restrictions, under "Allowed exceptions," add the file paths you want to exempt from the restriction.
+
+   Allowed exceptions use `fnmatch` syntax and are validated when you save the ruleset. For example, `**/gradle/wrapper/*.jar` allows the Gradle wrapper JAR file in any directory.
+
+
+
 
 ### Finalizing your push ruleset and next steps
 

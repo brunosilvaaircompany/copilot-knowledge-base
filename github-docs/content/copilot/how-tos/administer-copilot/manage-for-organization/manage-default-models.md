@@ -6,26 +6,15 @@
 
 If your organization is part of an enterprise, the enterprise owner controls which Copilot models are available and how they can be configured at the organization level.
 
-
-
-
 When viewing the model settings for your organization, you may see the following statuses:
 
 * **Enabled** or **Disabled** with a {% octicon "shield" aria-label="shield" %} icon: The enterprise owner has enforced this setting. You cannot change the availability of this model.
-* **Enabled**, **Disabled**, or **Unconfigured** in a dropdown menu: The enterprise owner has made this model optional. You can configure the availability for your organization.
-
-> [!IMPORTANT] 
-
-On Copilot Business and Copilot Enterprise plans, a new policy will control whether unconfigured generally available (GA) models default to enabled or disabled. For more information, see [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
-
-
-
-
-
+* **Enabled** or **Disabled** in a dropdown menu: The enterprise owner has made this model optional. You can configure the availability for your organization.
+* **Delegate to Default Policy**: This model is available for you to configure, but no one has configured it in the organization. The model inherits the default set in the "Default availability" policy for your organization. See [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
 
 ## Configuring model availability for your organization
 
-If the enterprise owner has set a model to **Optional**, you can enable or disable it for your organization.
+If the enterprise owner has delegated a model to organizations, you can enable or disable it for your organization.
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
