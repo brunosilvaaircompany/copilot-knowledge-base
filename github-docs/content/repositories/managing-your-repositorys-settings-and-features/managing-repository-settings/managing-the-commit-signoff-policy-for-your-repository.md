@@ -25,4 +25,4 @@ Signing off on a commit differs from signing a commit. For more information abou
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. Select **Require contributors to sign off on web-based commits**.
+1. Under "Commits", Select **Require contributors to sign off on web-based commits**.

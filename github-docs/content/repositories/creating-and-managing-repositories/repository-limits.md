@@ -36,7 +36,7 @@ To avoid throttling and performance issues, we recommend staying within the foll
 * **Push size**: This limit is enforced at 2GB.
 * **Single object size**:
 
-  The recommended maximum limit is 1MB. This is enforced at 100MB. To track large files in a Git repository, we recommend using Git LFS. See [About Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
+  The recommended maximum limit is 1MB. By default, this is enforced at 100 MB, but enterprise owners can change or remove this limit. See [Enforcing Repository Management Policies In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-git-push-limits). To track large files in a Git repository, we recommend using Git LFS. See [About Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
 
 * **Git read operations (e.g. fetches, clones)**:
 

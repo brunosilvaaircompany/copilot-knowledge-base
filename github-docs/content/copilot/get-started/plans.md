@@ -25,7 +25,14 @@ GitHub offers a variety of plans for Copilot. Choose between them depending on y
 * Ideal for sustained, high-volume AI power users who want access to the most AI credits available to them. This paid plan includes everything in Copilot Pro+, plus our highest individual monthly allowance of AI credits. 
 
 > [!IMPORTANT] 
-> **Starting April 22, 2026**, new self-serve sign-ups for Copilot Business for organizations on GitHub Free and GitHub Team plans are temporarily paused.
+> 
+
+On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
+
+Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
+
+
+
 
 **GitHub Copilot Business**: To get started, [contact sales](https://github.com/enterprise/contact?ref_product=copilot&ref_type=purchase&ref_style=text).
 

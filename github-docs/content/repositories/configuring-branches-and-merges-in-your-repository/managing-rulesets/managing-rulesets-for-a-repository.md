@@ -28,7 +28,7 @@ For push rulesets for forked repositories, the "Rulesets" page will indicate tha
 1. Optionally, to filter the results click the tabs or use the "Search branches" search bar.
 1. Click the name of the ruleset you want to view.
 
-You can also view active ruselets:
+You can also view active rulesets:
 
 * By adding the `/rules` slug to the repository's URL. For example, to view the rules of the open source documentation repository at GitHub,  you would go to https://github.com/github/docs/rules.
 

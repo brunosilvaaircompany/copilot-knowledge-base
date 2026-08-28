@@ -45,7 +45,7 @@ The following features are either specific to GHE.com or work differently compar
 ### API access
 
 Integrators with the REST and GraphQL APIs must send requests to your enterprise's dedicated URL on GHE.com.
- For more information, see [About GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/about-github-enterprise-cloud-with-data-residency#api-access).
+ You must authenticate all API requests to GHE.com using a credential supported by the endpoint. For endpoints that do not require authentication on GitHub.com, authenticate with an access token. For more information, see [About GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/about-github-enterprise-cloud-with-data-residency#api-access).
 
 ### URL differences
 

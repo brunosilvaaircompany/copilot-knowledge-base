@@ -2,7 +2,9 @@
 
 ## About blocking users
 
-You can block a user in your account settings, from the user's profile, or from an issue or pull request in a repository you own. GitHub will not notify the user when you block them. If you want to avoid contributing to the same project as someone you've blocked, you can choose to display a warning on any repositories with prior contributions from a blocked user. For more information, see [Blocking a user in your account settings](#blocking-a-user-in-your-account-settings). You may still see the activity of blocked users in shared spaces and blocked users can delete their existing content.
+You can block a user in your account settings, from the user's profile, or from content in a repository you own.
+
+When you block a user, you can also close any open issues, pull requests, and discussions they have opened in repositories you own. GitHub will not notify the user when you block them. If you want to avoid contributing to the same project as someone you've blocked, you can choose to display a warning on any repositories with prior contributions from a blocked user. For more information, see [Blocking a user in your account settings](#blocking-a-user-in-your-account-settings). You may still see the activity of blocked users in shared spaces and blocked users can delete their existing content.
 
 > [!TIP]
 > If you're blocking a user because of a heated conversation, consider locking the conversation so only collaborators can comment. For more information, see [Locking Conversations](https://docs.github.com/en/communities/moderating-comments-and-conversations/locking-conversations).
@@ -20,6 +22,7 @@ When you block a user:
 * Any pending repository or account successor invitations to or from the blocked user are canceled
 * The user is removed as a collaborator from all the projects owned by you
 * You are removed as a collaborator from all the projects owned by the user
+* The user's comments on repository security advisories are hidden
 
 After you've blocked a user, they cannot:
 * Send you any notifications, including by [@mentioning](/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) your username
@@ -39,12 +42,19 @@ In repositories you own, blocked users also cannot:
 * Open issues
 * Send, close, or merge pull requests
 * Comment on issues, pull requests, or commits
+* Comment on repository security advisories
 * Add or edit wiki pages
 
-## Blocking a user in an issue or pull request
+Blocking a user from a comment doesn't delete the original issue, pull request, or security advisory.
 
-1. Navigate to an issue or pull request in a repository you own.
+## Blocking a user in an issue, pull request, or repository security advisory
+
+You must own the repository to block a user from its content.
+
+1. Navigate to the issue, pull request, or repository security advisory that contains the description or comment whose author you would like to block.
 1. In the upper-right corner of the description or comment whose author you would like to block, click {% octicon "kebab-horizontal" aria-label="Show options" %}, then click **Block user**.
+1. Optionally, select **Close all open issues, pull requests, and discussions opened by this user**.
+
 1. Optionally, add a note to describe why you blocked the user. The note will only be visible to you.
 1. To confirm, click **Block user**.
 
@@ -54,7 +64,10 @@ In repositories you own, blocked users also cannot:
 
 1. In the "Access" section of the sidebar, select **{% octicon "report" aria-hidden="true" aria-label="report" %} Moderation** then click **Blocked users**.
 
-1. Under "Block a user", type the username of the user you'd like to block, then click **Block user**.
+1. Under "Block a user", type the username of the user you'd like to block.
+1. Optionally, select **Close all open issues, pull requests, and discussions opened by this user**.
+
+1. Click **Block user**.
 1. Optionally, to add a note to describe why a user was blocked, click **Add Note**. The note will only be visible to you.
 1. Optionally, you can display a warning when you visit a repository where a blocked user is a contributor. Under "Blocked users", select **Warn me when a blocked user is a prior contributor to a repository**.
 
@@ -66,6 +79,7 @@ In repositories you own, blocked users also cannot:
 
    ![Screenshot of the sidebar of a user's profile page. A link, labeled "Block or report", is outlined in dark orange.](/assets/images/help/profile/profile-block-or-report-button.png)
 
+1. Optionally, select **Close all issues, pull requests, and discussions opened by this user**.
 1. Optionally, add a note to describe why a user was blocked. The note will only be visible to you.
 1. Click **Block user**.
 

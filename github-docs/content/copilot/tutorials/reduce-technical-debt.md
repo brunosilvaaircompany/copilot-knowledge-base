@@ -346,13 +346,13 @@ By automating routine refactoring and maintenance tasks, Copilot frees you to fo
 
 ### Quick survey
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 After reading this tutorial, do you feel confident you can use Copilot to reduce the technical debt in a codebase?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
 
-
+</div>
 
 ## Next steps
 

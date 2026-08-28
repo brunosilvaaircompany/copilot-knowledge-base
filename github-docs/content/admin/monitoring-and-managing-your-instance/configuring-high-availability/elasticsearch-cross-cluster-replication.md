@@ -28,19 +28,13 @@ Before you enable CCR, confirm the following.
 * Your instance is configured for high availability with at least two appliances (a primary and one or more replicas).
 * You have an updated GitHub Enterprise Server license that includes the Elasticsearch entitlement required for CCR. Contact [GitHub's Sales team](https://github.com/enterprise/contact) or GitHub Support to have your enterprise enabled for the new license, then download the updated license file.
 
-> **Nota:**
-
-**Warning:** When CCR is enabled, the upgrade preflight check requires a valid CCR-enabled license. If the flag is enabled and the license check fails, the upgrade will not proceed. Make sure your updated license is installed before you enable the feature or upgrade. If you are unsure whether your license includes the Elasticsearch entitlement, contact GitHub Support.
-
-
+> [!WARNING]
+> When CCR is enabled, the upgrade preflight check requires a valid CCR-enabled license. If the flag is enabled and the license check fails, the upgrade will not proceed. Make sure your updated license is installed before you enable the feature or upgrade. If you are unsure whether your license includes the Elasticsearch entitlement, contact GitHub Support.
 
 ## Enabling Elasticsearch Cross-Cluster Replication
 
-> **Nota:**
-
-**Note:** The migration may take a significant amount of time depending on the size of your instance, because search data is consolidated onto the primary before replication restarts. Plan to enable CCR during a maintenance window, and test the process in a non-production environment first. For more information, see [Upgrading Your Instance](https://docs.github.com/en/admin/upgrading-your-instance).
-
-
+> [!NOTE]
+> The migration may take a significant amount of time depending on the size of your instance, because search data is consolidated onto the primary before replication restarts. Plan to enable CCR during a maintenance window, and test the process in a non-production environment first. For more information, see [Upgrading Your Instance](https://docs.github.com/en/admin/upgrading-your-instance).
 
 1. Contact GitHub Support and request access to the new HA search architecture. GitHub will enable your enterprise so that you can download the required CCR-enabled license.
 1. Download your updated license and upload it to your instance. For more information, see [Download Your License](https://docs.github.com/en/billing/how-tos/manage-server-licenses/download-your-license).
@@ -72,11 +66,8 @@ After a failover with CCR enabled, the promoted appliance becomes the new leader
 
 ### Disabling Elasticsearch Cross-Cluster Replication
 
-> **Nota:**
-
-**Warning:** Do not disable CCR on a production instance without guidance from GitHub Support. Disabling CCR is not a routine self-service operation. Turning the feature off can trigger removal of replica Elasticsearch data as part of returning to the previous mode.
-
-
+> [!WARNING]
+> Do not disable CCR on a production instance without guidance from GitHub Support. Disabling CCR is not a routine self-service operation. Turning the feature off can trigger removal of replica Elasticsearch data as part of returning to the previous mode.
 
 If you need to return to the previous search architecture, contact GitHub Support before making any changes. GitHub will help you confirm that your license, replication state, and upgrade path are handled safely.
 

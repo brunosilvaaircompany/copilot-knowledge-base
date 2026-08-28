@@ -124,8 +124,10 @@ For issues you're tackling yourself, use **Copilot Chat** for help analyzing log
 
 Before you start your next task, take a moment to identify the right tool to make your work faster and more efficient.
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 Do you feel prepared to identify the right AI tool for your next task?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
+
+</div>

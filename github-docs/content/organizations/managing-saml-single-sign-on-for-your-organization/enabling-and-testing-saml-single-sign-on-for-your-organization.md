@@ -27,7 +27,7 @@ After you enable SAML SSO, OAuth app and GitHub App authorizations may need to b
 
 ## Enabling and testing SAML single sign-on for your organization
 
-Before your enforce SAML SSO in your organization, ensure that you've prepared the organization. For more information, see [Preparing To Enforce Saml Single Sign On In Your Organization](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization/preparing-to-enforce-saml-single-sign-on-in-your-organization).
+Before you enforce SAML SSO in your organization, ensure that you've prepared the organization. For more information, see [Preparing To Enforce Saml Single Sign On In Your Organization](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization/preparing-to-enforce-saml-single-sign-on-in-your-organization).
 
 For more information about the identity providers (IdPs) that GitHub supports for SAML SSO, see [Connecting Your Identity Provider To Your Organization](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization/connecting-your-identity-provider-to-your-organization).
 
