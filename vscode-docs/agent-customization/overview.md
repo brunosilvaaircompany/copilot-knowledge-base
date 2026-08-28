@@ -91,7 +91,9 @@ Some customization types support other scopes, such as organization-level instru
 
 **NOTE:** For sessions that run on [Agent Host](../agents/concepts/agent-host.md), the agent reads user-level customizations from harness-agnostic folders like `~/.copilot` (Copilot) and `~/.claude` (Claude), rather than from your {% data variables.product.prodname_vscode_shortname %} profile user data. See [instructions](custom-instructions.md#instructions-file-locations), [custom agents](custom-agents.md), and [prompt files](prompt-files.md#prompt-file-locations) for the recommended user-level locations.
 
-## Migrate user customizations (Experimental)
+## Migrate user customizations
+
+`feature(user-customization-migration)`
 
 Agents that run through an [agent host](../agents/concepts/agent-host.md) don't read custom agents and instructions stored in your {% data variables.product.prodname_vscode_shortname %} profile user data. The migration flow moves these customizations to the user folders for the active agent host without changing their names, types, or contents.
 
@@ -113,7 +115,7 @@ To migrate user customizations:
 
 1. In the confirmation dialog, choose whether to delete the original files from your profile user data, and then select **Migrate**.
 
-The migration card appears only when an agent host is active, the experimental setting is enabled, and {% data variables.product.prodname_vscode_shortname %} finds user-profile agents or instructions to migrate.
+The migration card appears only when an agent host is active, the setting is enabled, and {% data variables.product.prodname_vscode_shortname %} finds user-profile agents or instructions to migrate.
 
 ## Evaluate and improve customization files (Preview)
 
