@@ -16,9 +16,11 @@ A small number of policies work differently and govern a setting for everyone. F
 
 ## What about users with multiple licenses?
 
-A user can receive access to Copilot from multiple organizations in the same enterprise. If these organizations have configured the same policy differently, the **least restrictive** policy usually applies, but there are some exceptions.
+A user can receive access to Copilot from multiple organizations in the same enterprise. If these organizations have configured the same policy differently, the **least restrictive** policy usually applies, but there are some exceptions. 
 
 More rarely, if a user receives a license from multiple different enterprises, the **most restrictive** policy across enterprises almost always applies. For example, if any enterprise disables Copilot Chat in GitHub, that feature is disabled for the user.
+
+For model policies on a GitHub Team plan, a user's model access is determined by the organization paying for their usage. You can find this organization under "Usage billed to" on the [Copilot features page](https://github.com/settings/copilot/features).
 
 A user's individual plan is cancelled when they are added to a Copilot Business or Copilot Enterprise plan, so a user's personal policies cannot conflict with an enterprise's or organization's.
 

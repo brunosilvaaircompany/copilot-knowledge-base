@@ -40,7 +40,6 @@ You can keep steering from Teams, or continue the work on the agent-generated ar
 
 * You must have a GitHub account with access to Copilot through a paid Copilot plan.
 * You must have a Teams account.
-* You must have Microsoft Public Developer Preview enabled for your Microsoft Teams client, see [Public developer preview for Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/dev-preview/developer-preview-intro) in the Microsoft Learn documentation.
 * To use Copilot cloud agent, you must have cloud sandboxes enabled for your Copilot plan. See [Cloud sandboxing for GitHub Copilot](/copilot/concepts/about-cloud-and-local-sandboxes#cloud-sandboxing).
 
    > [!NOTE]

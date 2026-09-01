@@ -4,7 +4,11 @@
 
 Default community health files are a set of predefined files that provide guidance and templates for maintaining a healthy and collaborative open source project. These files help you automate and standardize various aspects of your project's development and community interaction, promoting transparency, good practices, and collaboration.
 
-You can add default community health files to a repository called `.github`. For an organization with managed users, the `.github` repository must be **internal**. For all other accounts, the `.github` repository must be **public**.
+You can add default community health files to a repository called `.github`. For an organization with managed users, the `.github` repository must be **internal**. For all other eligible accounts, the `.github` repository must be **public**. 
+
+
+>[!NOTE] A managed user account cannot host default community health files for their personal account because their personal `.github` repository can only be private.
+
 
 GitHub will use and display default files for any repository owned by the account, regardless of the destination repository's visibility, that does not have its own file of that type. For supported files that can be stored in more than one location, GitHub uses the following order of precedence:
 
@@ -61,11 +65,11 @@ You cannot create a default license file. License files must be added to individ
 
    ![Screenshot of a GitHub dropdown menu showing options to create new items. The menu item "New repository" is outlined in dark orange.](/assets/images/help/repository/repo-create-global-nav-update.png)
 
-1. Use the **Owner** drop-down menu, and select the organization or personal account you want to create default files for.
+1. Use the **Owner** drop-down menu, and select the organization or personal account you want to create default files for. If you are signed in with a managed user account, you must select an organization.
    ![Screenshot of the owner menu for a new GitHub repository. The menu shows two options, octocat and github.](/assets/images/help/repository/create-repository-owner.png)
 1. In the "Repository name" field, type **.github**.
 1. Optionally, in the "Description" field, type a description.
-1. If you are creating the repository for an organization with managed users, set the repository status to **Internal**. For any other account, set the status to **Public**. A repository for default files cannot be private.
+1. If you are creating the repository for an organization with managed users, set the repository status to **Internal**. For any other eligible account, set the status to **Public**. A repository for default files cannot be private.
 1. Toggle **Add README** to **On**.
 
 1. Click **Create repository**.

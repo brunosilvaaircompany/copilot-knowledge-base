@@ -18,9 +18,6 @@ GitHub Copilot includes several agentic features that go beyond suggestion and c
 * **Copilot SDK**: A programmatic library that allows developers to build custom AI-powered applications using Copilot. The SDK communicates with Copilot CLI over JSON-RPC and supports custom agents, MCP server integrations, lifecycle hooks, and session management.
 * **GitHub Copilot app**: A desktop application for directing agent sessions across local repositories, git worktrees, and cloud sandboxes. The app uses GitHub Copilot CLI and GitHub Copilot SDK as its foundation and adds a user interface for parallel sessions, quick chats, GitHub issue and pull request workflows, automations, and canvases.
 
-* **GitHub Spark (preview)**: A managed app-building experience where an agent writes code and runs commands in a development environment. Spark provides a managed runtime and can add inference capabilities via the GitHub Models SDK.
-
-
 These features share common principles—human oversight, review of outputs, and responsible use—but differ in their execution environments, permissions, and data flows. The sections below describe each experience in context.
 
 ## 2. Key terms
@@ -41,11 +38,6 @@ The following list provides a glossary of key terms related to GitHub Copilot Ag
 * **Custom agent (SDK)**: A named agent configuration within the SDK that has its own system prompt, scoped tools, and optional MCP servers. The SDK runtime can automatically delegate to sub-agents based on user intent.
 * **Hooks (SDK)**: Lifecycle callbacks in the Copilot SDK that let developers inject custom logic at specific points during a session, such as before or after tool use, on session start or end, and on error.
 
-* **Managed runtime**: The fully managed hosting environment provided by GitHub Spark that scales with your application's needs and eliminates the need to manually manage infrastructure.
-* **Spark**: An application built using GitHub Spark. Sparks can range from simple utilities to full-stack web applications and can be deployed to the public internet with configurable visibility.
-* **Targeted edit**: A feature in GitHub Spark that allows you to select a specific element within your application and provide a focused prompt to refine its style, substance, or behavior, rather than applying a global change.
-
-
 ## 3. Key features or capabilities
 
 The key features and capabilities outlined here describe what GitHub Copilot Agents are designed to do and how they perform across supported tasks.
@@ -57,10 +49,6 @@ The key features and capabilities outlined here describe what GitHub Copilot Age
 * **Automated security scanning**: During code generation, the cloud agent automatically analyzes newly generated code for security vulnerabilities using CodeQL, secret scanning, and dependency analysis, and attempts to resolve any issues before they are introduced.
 * **External integrations**: The cloud agent can receive information and context from MCP like workIQ and Microsoft 365, and external applications like Microsoft Teams, Linear, Slack, and Jira, enabling teams to assign tasks and track progress directly within their existing workflows.
 * **Local agentic execution (Copilot CLI)**: Copilot CLI provides a chat-like interface in the terminal that can autonomously create and modify files, execute commands, and perform multi-step tasks. All actions are scoped to the current directory and require explicit permission prompts before the agent modifies files or runs commands.
-
-* **Natural language app building (Spark)**: GitHub Spark offers a natural language-centric development environment for creating and deploying full-stack web applications without requiring users to write or deploy code manually. Spark provides a fully managed runtime environment that scales with your application's needs.
-* **Inference capabilities (Spark)**: Spark's SDK natively integrates with GitHub Models, allowing you to incorporate model inference into your application. If Spark determines that your application requires inference capabilities, it will add them using the Spark SDK.
-
 
 ## 4. Intended uses
 
@@ -76,10 +64,6 @@ GitHub Copilot Agents can be used in multiple scenarios across a variety of indu
 * **Multi-agent orchestration (SDK)**: Using custom agents and sub-agents, developers can build sophisticated workflows where multiple specialized agents collaborate on complex tasks, with automatic delegation based on user intent.
 * **Extending applications with external tools (SDK)**: The SDK's MCP server support allows developers to connect their applications to external data sources and services, expanding the range of tasks their agents can perform.
 
-* **Building and deploying web applications (Spark)**: You can use GitHub Spark to build full-stack web applications using natural language. Spark's integrated runtime environment allows you to deploy these applications to the public internet with configurable visibility based on GitHub account permissions.
-* **Rapid prototyping (Spark)**: Spark helps developers, designers, product managers, and other builders rapidly prototype ideas without needing to build applications from scratch or construct complex mockups. Prototypes can be deployed for ease of sharing or remain unpublished.
-
-
 ## 5. Models and training data
 
 GitHub Copilot Agents leverage a variety of AI models to power the experience that users see. For a comparison of the models available for Copilot, see [Model Comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison). For the full list of supported models, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models). For information on where models are hosted, see [Model Hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting). To learn more about the data used to train the foundation models behind GitHub Copilot Agents, refer to the linked AI model comparison above and [What data has GitHub Copilot been trained on?](https://github.com/features/copilot#faq) in the GitHub Copilot FAQ.
@@ -91,10 +75,6 @@ The Copilot cloud agent uses a large language model to reason about tasks, gener
 Copilot CLI uses a large language model to reason about tasks, generate code, modify files, and execute commands in your local terminal environment. The agent has been evaluated across a variety of programming languages. English is the primary supported language for prompts and responses.
 
 The Copilot SDK communicates with Copilot CLI over JSON-RPC, using the same underlying models and capabilities. Applications built with the SDK use the same models available to the authenticated Copilot user or organization. Developers can also bring their own API keys (BYOK) to use custom model providers.
-
-
-GitHub Spark uses a large language model to power its agent within the development environment. The agent writes code and runs commands to build your application. Spark does not test the prompts you create within your application for inference—you must ensure that your included capabilities act as intended.
-
 
 ## 6. Performance
 
@@ -140,20 +120,6 @@ The Copilot SDK provides a programmatic interface to Copilot's agentic capabilit
 1. **Agent execution**: The language model reasons about the task and may invoke tools, delegate to sub-agents, or connect to MCP servers. Lifecycle hooks fire at each stage, allowing the application to inject custom logic.
 1. **Response streaming**: Responses are streamed back to the application, which can present them in any format appropriate for its interface. The SDK provides structured events for text, tool calls, errors, and completion signals.
 
-
-
-#### GitHub Spark
-
-GitHub Spark uses an agent-based approach to build and modify applications. This process can be broken down into a number of steps:
-
-1. **Input processing**: Input prompts are pre-processed by Copilot, augmented with contextual information from your current Spark inputs—including code from your current application, previous prompts, and any error logs from your development environment—and sent to a large language model-powered agent within your development environment. The system is designed to generate code based on submitted prompts and is not capable of conversational interactions. English is the preferred language for prompts.
-1. **Language model analysis**: The prompt is passed through a large language model, which is a neural network trained on a large body of text data. The language model analyzes the input prompt to help the agent reason about the task and leverage necessary tools.
-1. **Agent execution**: The agent runs in your development environment, accepting the prompt and additional context, and decides how to update your application. The agent can write code, run commands, and read execution outputs. All actions are taken to ensure functional, accurate code. The only output from the agent is your application code.
-
-Spark uses frameworks and SDKs that ensure modern design and secure deployments seamlessly integrated into Spark's runtime component. The design framework is flexible and modular, enabling you to modify the theme to match your desired look and feel. Spark's runtime integration uses best practices for web deployments to ensure secure, scalable deployments.
-
-
-
 ## 7. Limitations
 
 Understanding GitHub Copilot agentic features' limitations is crucial to determine they are used within safe and effective boundaries. While we encourage customers to leverage these features in their innovative solutions or applications, it's important to note that they were not designed for every possible scenario. We encourage users to refer to [GitHub Terms](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms) as well as the following considerations when choosing a use case:
@@ -175,12 +141,6 @@ Understanding GitHub Copilot agentic features' limitations is crucial to determi
 * **Custom agent complexity (SDK)**: Incorrectly configured custom agents, tools, or hooks may produce unexpected behavior. Developers are responsible for testing and validating the behavior of their custom agent configurations.
 * **MCP server trust (SDK)**: MCP servers connected through the SDK can expose tools and data from external sources. Developers must ensure that connected MCP servers are trustworthy, as malicious or misconfigured servers could introduce harmful behavior or expose sensitive data.
 * **BYOK model variance (SDK)**: When using bring-your-own-key configurations with third-party model providers, behavior may differ from GitHub-hosted models. Developers are responsible for evaluating the safety and quality of responses from their chosen provider.
-
-* **Interpretation of user intent (Spark)**: Spark is not always correct in its interpretation of your intent. You should always use Spark's provided preview to confirm accurate behavior within your application.
-* **Limited scope (Spark)**: Spark has been trained on a large body of code and relevant applications but may struggle with complex or truly novel applications. Spark performs best on common and personal application scenarios (for example, productivity tools, learning aids, life management utilities), and when the natural language instruction is provided in English.
-* **Public code matches (Spark)**: Spark may generate code that is a match or near match of publicly available code, even if the "Suggestions matching public code" policy is set to "Block." If this happens, Copilot will not provide code references pointing to the original source of the code.
-* **Security limitations (Spark)**: While Spark's runtime follows best practices for application deployment, it generates code probabilistically, which can potentially introduce vulnerabilities especially if those vulnerabilities are common in the training set. You should be careful when building applications that manage personal or sensitive data and always review and test the generated application thoroughly.
-
 
 ## 8. Evaluations
 
@@ -279,16 +239,6 @@ In offline mode, web-based tools such as `web_fetch` and GitHub Code Search are 
 
 If your model provider configuration is invalid, Copilot CLI exits with an error. It does not fall back to GitHub-hosted models. Common failures, such as connection refused, authentication errors, model not found, and timeouts, produce user-friendly messages with actionable guidance.
 
-
-
-### GitHub Spark
-
-* **Content protections**: Spark has built-in protections against harmful, hateful, or offensive content.
-* **Content reporting**: You can report problematic or offensive content via feedback, or report a spark as abuse or spam. Examples of offensive content should be reported to copilot-safety@github.com with the spark's URL.
-* **Secure runtime**: Spark's runtime integration uses best practices for web deployments to ensure secure, scalable deployments.
-
-
-
 ## 10. Best practices for deploying and adopting GitHub Copilot agentic features
 
 Responsible AI is a shared commitment between GitHub and its customers. While GitHub builds AI applications with safety, fairness, and transparency at the core, customers play a critical role in deploying and using these technologies responsibly within their own contexts. To support this partnership, we offer the following best practices for deployers and end users to help customers implement responsible AI effectively.
@@ -324,12 +274,6 @@ Users should exercise caution when designing and/or deploying agentic AI applica
 * **Scope sessions appropriately (SDK)**: Configure each SDK session with only the tools, agents, and permissions required for the task at hand. Avoid granting broad access when narrow scoping is sufficient.
 * **Review BYOK provider policies (SDK)**: If using bring-your-own-key configurations, ensure your chosen model provider's terms of service and data handling policies meet your organization's requirements.
 
-* **Keep Spark prompts specific and on topic**: The more specific you can be about the intended behaviors and interactions, the better the output. Incorporating relevant context such as specific scenarios, mockups, or specifications will help Spark understand your intent. Spark incorporates context from previous prompts, so off-topic prompts may hinder performance on subsequent revisions.
-* **Use targeted edits in Spark**: Targeted edits allow you to specify elements within your application for focused refinement. Using targeted edits when possible—rather than global prompts—will result in more accurate changes and fewer side effects.
-* **Verify Spark's output**: Always use Spark's provided application preview to verify that your application behaves as intended in different scenarios. If you are comfortable with code, review the generated code to ensure it meets your quality standards.
-* **Ensure inference capabilities act as intended (Spark)**: If your Spark application uses inference capabilities via the GitHub Models SDK, you are responsible for testing the prompts you create to ensure they produce appropriate results.
-
-
 ## 11. Learn more about GitHub Copilot agentic features
 
 For additional guidance on the responsible use of Copilot agentic features, we recommend reviewing the following documentation:
@@ -342,12 +286,6 @@ For additional guidance on the responsible use of Copilot agentic features, we r
 * [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers)
 * [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli)
 * [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)
-
-* [Your First Spark](https://docs.github.com/en/copilot/tutorials/spark/your-first-spark)
-* [Build Apps With Spark](https://docs.github.com/en/copilot/tutorials/spark/build-apps-with-spark)
-* [GitHub Spark](https://docs.github.com/en/billing/concepts/product-billing/github-spark)
-* [GitHub Pre Release License Terms](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-pre-release-license-terms)
-
 * [GitHub Terms For Additional Products And Features](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot)
 * [Copilot Trust Center](https://copilot.github.trust.page/)
 
