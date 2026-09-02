@@ -19,7 +19,7 @@ Each budget has a type and a scope that define which paid use contributes to spe
 
   * **Universal**: applies to all licensed users by default
   * **Cost center user-level**: applies to every user in a cost center
-  * **Individual**: overrides the above for specific users
+  * **Individual**: overrides the above for specific users, and can be given an optional expiration date so a temporary override is removed automatically
 
 For Copilot, cost centers can also have included usage controls, which cap how much of the shared AI credits pool a cost center can use before metered usage begins. This is a separate control from the budgets and the included usage alerts described below. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#included-usage-controls-for-cost-centers).
 

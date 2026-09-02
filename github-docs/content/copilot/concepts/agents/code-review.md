@@ -48,18 +48,6 @@ In repositories where automatic code review is enabled, Copilot automatically re
 
 Copilot code review for users without a license is not available in IDEs.
 
-## Excluded files
-
-Some file types are excluded from Copilot code review:
-
-* Dependency management files, such as package.json and Gemfile.lock
-* Log files
-* SVG files
-
-If you include these file types in a pull request, Copilot code review will not review the file.
-
-For more information, see [Review Excluded Files](https://docs.github.com/en/copilot/reference/review-excluded-files).
-
 ## Agentic capabilities for Copilot code review
 
 Copilot code review utilizes agentic capabilities to extend its functionality.
@@ -86,26 +74,13 @@ For more information on configuring runners, see [Configure Runners](https://doc
 
 You can view the GitHub Actions minutes associated with Copilot code review runs. For more information, see [GitHub Actions minutes for code review](/copilot/reference/copilot-billing/models-and-pricing#pricing-and-usage-cost-considerations-for-copilot-code-review).
 
-## Review effort level
-
-Copilot code review supports multiple review effort levels, so you can choose the level of thoroughness that matches the criticality of your code.
-
-* **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies (default).
-* **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes. Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes, than Lite reviews.
-
-Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
-
-You can select the review effort level when requesting a review in the pull request, under the **Reviewers** section where Copilot appears as a reviewer. Organization owners can set a default review effort level for automatic code reviews in their organization. Repository administrators can override the organization default for a specific repository.
-
-After Copilot code review reviews a pull request, the pull request overview comment shows the effort level used for each review run.
-
 ### Estimated consumption
 
 A review typically consumes an estimated $0.05 USD to $1 USD worth of AI credits with "Lite" effort, and $0.25 USD to $5 USD worth of AI credits with "Balanced" effort.
 
 Consumption generally increases with pull request size and repository custom instructions, and the ranges may change as models evolve. These estimates do not include GitHub Actions minutes.
 
-Repository and organization administrators can set the default review effort level for automatic code reviews. For configuration steps, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review#configuring-review-effort-level-for-an-organization).
+Repository and organization administrators can set the default review effort level for automatic code reviews. For configuration steps, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review#customizing-copilot-code-review-1).
 
 ## Code review usage
 
@@ -143,6 +118,57 @@ Copilot code review is a purpose-built product that uses a carefully tuned mix o
 > Since Copilot code review is generally available, all model usage will be subject to the generally available terms. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).
 
 
+## Automatic pull request reviews
+
+By default, Copilot only reviews a pull request if you assign it to the pull request. However, you can configure automatic reviews.
+
+* **Individual users** on the Copilot Pro or Copilot Pro+ plan can configure Copilot to automatically review all pull requests they create.
+* **Repository owners** can configure Copilot to automatically review all pull requests in the repository that are created by people with access to Copilot.
+* **Organization owners** can configure Copilot to automatically review all pull requests in some or all of the repositories in the organization where the pull request is created by a Copilot user.
+
+If your organization has enabled Copilot code review without a Copilot license, automatic reviews also apply to pull requests created by organization members without a license. This applies to repositories covered by a policy where automatic reviews are enabled. For more information, see [Copilot code review without a Copilot license](#copilot-code-review-without-a-copilot-license).
+
+
+### Triggering an automatic pull request review
+
+The triggers for automatic code review depend on the configuration settings.
+
+* Basic setting:
+  * When you create a pull request as an "Open" pull request.
+  * The first time you switch a "Draft" pull request to "Open".
+* Review new pushes:
+  * Every time you push a new commit to the pull request.
+* Review draft pull requests:
+  * Pull requests are automatically reviewed while they are still drafts, before you switch them to "Open".
+
+For full instructions, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review).
+
+> [!NOTE]
+> Unless Copilot has been configured to review each push to a pull request, it will only review a pull request once. If you make changes to the pull request after it has been automatically reviewed and you want Copilot to re-review it, you can request this manually. Click the {% octicon "sync" aria-label="Re-request review" %} button next to Copilot's name in the **Reviewers** menu.
+
+## Review effort level
+
+Copilot code review supports multiple review effort levels, so you can choose the level of thoroughness that matches the criticality of your code.
+
+* **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies (default).
+* **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes. Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes, than Lite reviews.
+
+Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
+
+You can select the review effort level when requesting a review in the pull request, under the **Reviewers** section where Copilot appears as a reviewer. Organization owners can set a default review effort level for automatic code reviews in their organization. Repository administrators can override the organization default for a specific repository.
+
+After Copilot code review reviews a pull request, the pull request overview comment shows the effort level used for each review run.
+
+## Copilot approvals
+
+> [!NOTE]
+> Copilot approvals are in public preview and subject to change.
+
+
+Every Copilot code review includes an approval assessment in the overview comment, indicating whether Copilot has determined the pull request ready to approve after reviewing it. By default, Copilot's reviews do not count toward required approvals for the pull request.
+
+When Copilot approvals are enabled in repository, organization, and enterprise settings, Copilot can submit an approving review that satisfies your repository's required-approval rule the same way a teammate's approval would. If new commits are pushed after Copilot approves, the approval is dismissed, and you can re-request a review.
+
 ## MCP servers and agent skills for code review
 
 Copilot code review can use repository-level agent skills and MCP servers when they are relevant to the review.
@@ -168,11 +194,17 @@ You can configure MCP servers in your repository settings. Repository MCP config
 
 In repository settings, **Allow Copilot to use MCP tools when reviewing pull requests** is enabled by default. Disable this setting if you want MCP servers available only for Copilot cloud agent, and not for Copilot code review. For step-by-step instructions, see [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers#disabling-mcp-tools-for-code-review).
 
-## Validating Copilot code reviews
+## Excluded files
 
-Copilot is not guaranteed to spot all problems or issues in a pull request. Sometimes it will make mistakes. Always validate Copilot's feedback carefully. Supplement Copilot's feedback with a human review.
+Some file types are excluded from Copilot code review:
 
-For more information, see [Agents](https://docs.github.com/en/copilot/responsible-use/agents).
+* Dependency management files, such as package.json and Gemfile.lock
+* Log files
+* SVG files
+
+If you include these file types in a pull request, Copilot code review will not review the file.
+
+For more information, see [Review Excluded Files](https://docs.github.com/en/copilot/reference/review-excluded-files).
 
 ## Enhancing Copilot's knowledge of a repository
 
@@ -201,34 +233,6 @@ For more information, see [Add Skills](https://docs.github.com/en/copilot/how-to
 
 If you have a Copilot Pro, Copilot Pro+, or Copilot Max plan, you can enable Copilot Memory. This allows Copilot to store useful details it has learned about a repository. Copilot can then use this information when it reviews pull requests in that repository. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
 
-## About automatic pull request reviews
-
-By default, Copilot only reviews a pull request if you assign it to the pull request. However, you can configure automatic reviews.
-
-* **Individual users** on the Copilot Pro or Copilot Pro+ plan can configure Copilot to automatically review all pull requests they create.
-* **Repository owners** can configure Copilot to automatically review all pull requests in the repository that are created by people with access to Copilot.
-* **Organization owners** can configure Copilot to automatically review all pull requests in some or all of the repositories in the organization where the pull request is created by a Copilot user.
-
-If your organization has enabled Copilot code review without a Copilot license, automatic reviews also apply to pull requests created by organization members without a license. This applies to repositories covered by a policy where automatic reviews are enabled. For more information, see [Copilot code review without a Copilot license](#copilot-code-review-without-a-copilot-license).
-
-
-### Triggering an automatic pull request review
-
-The triggers for automatic code review depend on the configuration settings.
-
-* Basic setting:
-  * When you create a pull request as an "Open" pull request.
-  * The first time you switch a "Draft" pull request to "Open".
-* Review new pushes:
-  * Every time you push a new commit to the pull request.
-* Review draft pull requests:
-  * Pull requests are automatically reviewed while they are still drafts, before you switch them to "Open".
-
-For full instructions, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review).
-
-> [!NOTE]
-> Unless Copilot has been configured to review each push to a pull request, it will only review a pull request once. If you make changes to the pull request after it has been automatically reviewed and you want Copilot to re-review it, you can request this manually. Click the {% octicon "sync" aria-label="Re-request review" %} button next to Copilot's name in the **Reviewers** menu.
-
 ## Getting detailed code quality feedback across your repository
 
 GitHub Copilot code review reviews the changes in a pull request and suggests fixes. To add systematic feedback on the reliability and maintainability of your code, on pull requests and across your default branch, enable GitHub Code Quality.
@@ -242,6 +246,13 @@ GitHub Code Quality complements Copilot code review by adding:
 
 For more information, see [Code Quality](https://docs.github.com/en/code-security/concepts/code-quality/code-quality).
 
-## Further reading
+## Validating Copilot code reviews
+
+Copilot is not guaranteed to spot all problems or issues in a pull request. Sometimes it will make mistakes. Always validate Copilot's feedback carefully. Supplement Copilot's feedback with a human review.
+
+For more information, see [Agents](https://docs.github.com/en/copilot/responsible-use/agents).
+
+## Next steps
 
 * [Use Code Review](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review)
+* [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review)

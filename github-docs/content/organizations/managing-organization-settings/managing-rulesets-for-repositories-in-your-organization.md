@@ -45,8 +45,6 @@ You can edit a ruleset to change parts of the ruleset, such as the name, bypass 
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
 
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
-
 1. On the "Rulesets" page, click the name of the ruleset you want to edit.
 1. Change the ruleset as required. For information on the available rules, see [Available Rules For Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets).
 1. At the bottom of the page, click **Save changes**.
@@ -68,8 +66,6 @@ You can edit a ruleset to change parts of the ruleset, such as the name, bypass 
 
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
-
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
 
 1. Click the name of the ruleset you want to delete.
 1. To the right of the ruleset's name, select {% octicon "kebab-horizontal" aria-label="Open additional options" %}, then click **{% octicon "trash" aria-hidden="true" aria-label="trash" %} Delete ruleset**.
@@ -101,8 +97,6 @@ You can view all the changes to a ruleset and revert back to a specific iteratio
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
 
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
-
 1. To view the history of changes to the ruleset, select {% octicon "kebab-horizontal" aria-label="Open additional options" %} to the right of the ruleset's name, then click **{% octicon "history" aria-hidden="true" aria-label="history" %} History**.
 
    ![Screenshot of the page for repository rulesets. Below a button labeled with three dots, an option labeled "History" is outlined in orange.](/assets/images/help/repository/ruleset-history.png)
@@ -131,8 +125,6 @@ You can import a ruleset from another repository or organization using the expor
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
 
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
-
 1. Select the **New ruleset** dropdown, then click **Import a ruleset**.
 
    ![Screenshot of the page for repository rulesets. The "New ruleset" dropdown menu is expanded and the "Import a ruleset" option is outlined in orange.](/assets/images/help/repository/import-a-ruleset.png)
@@ -151,7 +143,7 @@ Use the rule insights dashboard to review the evaluation activity of rulesets ac
 
 * Review aggregated rule evaluation metrics across all repositories in your organization to understand where and how your rulesets take effect.
 * Identify the repositories with the most bypasses so you can prioritize your review.
-* Filter results by evaluation status, branch, ruleset, and date range to focus on the activity that matters to you.
+* Filter results by evaluation status and date range to focus on the activity that matters to you.
 * Export the data to a CSV file for further analysis.
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.

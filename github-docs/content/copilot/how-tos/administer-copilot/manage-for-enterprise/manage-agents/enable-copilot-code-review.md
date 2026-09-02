@@ -14,6 +14,7 @@ The policy for Copilot code review allows your licensed users to request reviews
 
 1. Scroll down to "Available Agents", then click **Copilot code review**.
 1. Next to "Copilot code review", select a policy.
+1. Then choose which Copilot code review features to enable for your enterprise.
 
 ### Next steps
 

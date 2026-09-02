@@ -16,7 +16,7 @@ For more information about rulesets, see [About Rulesets](https://docs.github.co
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the "Code and automation" section of the sidebar, click **{% octicon "git-branch" aria-hidden="true" aria-label="git-branch" %} Branches**.
+1. In the "Code, planning, and automation"{% elsif ghes %} "Code and automation" section of the sidebar, click **{% octicon "git-branch" aria-hidden="true" aria-label="git-branch" %} Branches**.
 
 1. Under "Branch protection rules", find the rule you want to convert, then click **Convert to ruleset**.
 1. Set the ruleset name for each ruleset that will be created in this conversion.

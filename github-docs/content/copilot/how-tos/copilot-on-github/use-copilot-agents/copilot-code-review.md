@@ -15,7 +15,7 @@ Copilot code review is also available for organization members without a Copilot
 
    ![Screenshot of a code review left by Copilot.](/assets/images/help/copilot/code-review/review-comment@2x.png)
 
-Copilot always leaves a "Comment" review, not an "Approve" or "Request changes" review. Its reviews do not count toward required approvals and will not block merging.
+By default, Copilot leaves a "Comment" review, not an "Approve" review or a "Request changes" review. This means that, by default, Copilot's reviews do not count toward required approvals for the pull request. However, if configured to do so, Copilot can leave "Approve" reviews. For more information, see [Use Code Review](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review#pull-request-approvals-from-copilot).
 
 Copilot's review comments work like comments from human reviewers. Add reactions, reply, resolve, or hide them. Any replies you add are visible to other people but not to Copilot.
 
@@ -65,6 +65,8 @@ Use `.github/copilot-instructions.md` for repository-wide review guidance that s
 Use an `AGENTS.md` file in the root of your repository to provide additional repository context that helps Copilot better understand how your project works. For example, you can explain which patterns are intentional, which parts of the codebase need closer scrutiny, and what your team considers good architecture, testing, and implementation practices. This helps make reviews more relevant and aligned with the way your team builds software.
 
 Use `.github/instructions/**/*.instructions.md` files for path-specific instructions that only apply when reviewing matching files. This is useful when different parts of the repository follow different conventions, require specialized checks, or need review guidance tailored to a particular language, framework, or subsystem.
+
+Copilot code review also reads custom instructions from `CLAUDE.md`, `GEMINI.md`, and `REVIEW.md` files in your repository, if they exist.
 
 For more information, see [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions).
 

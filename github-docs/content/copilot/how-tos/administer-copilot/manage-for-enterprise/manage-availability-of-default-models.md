@@ -25,9 +25,12 @@ This sets a baseline that you can add to with more granular controls. For models
 
 1. Select a status for each model in the list:
 
-   * **Enabled** for everyone.
-   * **Disabled** for everyone.
+   * **Enabled** for every user and agent app.
+   * **Disabled** for every user and agent app.
    * **Delegate** the decision to organizations or enterprise teams and apps.
+
+By default, agent apps have access to the models that are enabled in the organization or personal account where the app is installed. However, in the enterprise teams mode for model access, available models for agent apps are controlled at the enterprise level. 
+
 
 ### Checking for unconfigured models
 
@@ -96,6 +99,19 @@ To grant access to an enterprise team:
 1. Access the settings for the team. See [Create Enterprise Teams](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/create-enterprise-teams).
 1. Click the **Default models** tab.
 1. For each model that the team should receive access to beyond the enterprise baseline, set the dropdown to **Enabled**.
+
+### Granting access to agent apps
+
+Agent apps are GitHub Apps that expose agents on GitHub. GitHub partners build agent apps to bring their tools and services into your development workflow. These agent apps are agents you can delegate work to alongside Copilot cloud agent and other third-party agents. See [Agent Apps](https://docs.github.com/en/copilot/concepts/agents/agent-apps).
+
+Ensure models you want to enable specifically for apps are set to **Delegate to Enterprise Teams/Apps** in your enterprise's model policies.
+
+1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
+
+1. In the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
+
+1. Under **Models**, click **Configure app models**.
+1. For each available model you want to enable, change the dropdown from **Optional** to **Enabled**.
 
 ## Further reading
 

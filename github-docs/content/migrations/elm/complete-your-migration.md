@@ -1,9 +1,6 @@
 # Completing your live migration from GitHub Enterprise Server to GHE.com
 
->[!NOTE] Enterprise Live Migrations is in public preview and subject to change.
-
-
-After you have run a migration with the `elm` CLI tool, there are some follow-up tasks to complete.
+After you have run a migration with the ELM CLI tool, there are some follow-up tasks to complete.
 
 ## Restore users' access
 
@@ -17,7 +14,40 @@ Because GitHub Enterprise Server and GHE.com use different provisioning and auth
 After you run a migration with GitHub Enterprise Importer or Enterprise Live Migrations, all user activity in the migrated repository (except Git commits) is attributed to placeholder identities called mannequins.
  For more information, see [Mannequins And User Activity](https://docs.github.com/en/migrations/overview/mannequins-and-user-activity).
 
-Once user accounts have been added to the organization on GHE.com, you can invite users to reclaim a mannequin's activity. You can do this in the browser or, with the GEI extension of the GitHub CLI tool, reclaim mannequins in bulk without the invite process.
+Once user accounts have been added to the organization on GHE.com, you can invite users to reclaim a mannequin's activity. You can do this in the browser or, with the ELM CLI tool, reclaim mannequins in bulk without the invite process.
+
+### Reclaiming mannequins in bulk using the ELM CLI
+
+You can use the ELM CLI to reclaim mannequins in bulk. 
+
+1. Generate the list of mannequins in the migration. The following command produces a CSV file that maps mannequins to organization members. Optionally, to include mannequins that have already been reclaimed, add the `--include-reclaimed` flag.
+   
+   ```shell copy
+   gh target mannequin list ORGANIZATION_NAME
+   ```
+
+   This will produce a CSV file of all mannequins in the target organization, in the form `mannequin-user,mannequin-id,target-user`:
+
+   ```text
+   ghe-admin,M_kgDOAAw-zw,
+   unit-test,M_kgDOAA5FYg,
+   admin-octoshift,M_kgDOAA5FZw,
+   ```
+
+1. Output the command to a file that you can edit.
+
+   ```shell copy
+   gh elm target mannequin list ORGANIZATION_NAME > MANNEQUINS.csv
+   ```
+   
+1. Edit the CSV file, adding the username of the organization member that corresponds to each mannequin. Ensure you save the file after you edit it.
+1. Reclaim mannequins using the `mannequin reclaim` command. Use the ORGANIZATION_NAME and filename from the previous step.
+   
+   ```shell copy
+   gh target mannequin reclaim ORGANIZATION_NAME --csv MANNEQUINS.csv
+   ```
+   
+For a full reference of the reclaim command, including options to control invitations and prompting, see [Elm CLI Reference](https://docs.github.com/en/migrations/elm/elm-cli-reference).
 
 ### Reclaiming mannequins in the browser
 
@@ -41,10 +71,6 @@ Once user accounts have been added to the organization on GHE.com, you can invit
 By default, the organization member will receive an invitation via email, and the mannequin will not be reclaimed until the member accepts the invitation.
 
 
-
-### Reclaiming mannequins in bulk
-
-You can install the GEI extension of the GitHub CLI to reclaim mannequins in bulk. See [Reclaiming Mannequins For GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/completing-your-migration-with-github-enterprise-importer/reclaiming-mannequins-for-github-enterprise-importer#reclaiming-mannequins-with-the-gei-extension).
 
 ## Reattribute Git activity
 

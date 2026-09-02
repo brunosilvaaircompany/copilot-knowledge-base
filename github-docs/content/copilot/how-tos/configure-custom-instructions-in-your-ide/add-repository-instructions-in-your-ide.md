@@ -103,13 +103,13 @@ VS Code supports three types of repository custom instructions. For details of w
 
 {% endvscode %}
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 Did you successfully add a custom instructions file to your repository?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
 
-
+</div>
 
 ## Custom instructions in use
 
@@ -290,13 +290,13 @@ Visual Studio supports two types of custom instructions. For details of which Gi
 1. Add your custom instructions in natural language, using Markdown format. Whitespace between instructions is ignored, so the instructions can be written as a single paragraph, each on a new line, or separated by blank lines for legibility.
 
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 Did you successfully add a custom instructions file to your repository?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
 
-
+</div>
 
 ## Custom instructions in use
 
@@ -431,13 +431,13 @@ To apply the same instructions across all workspaces in JetBrains IDEs, you can 
 
 Once saved, these instructions will apply globally across all workspaces in JetBrains IDEs that you open with Copilot enabled.
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 Did you successfully add a custom instructions file to your repository?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
 
-
+</div>
 
 ## Custom instructions in use
 
@@ -528,13 +528,13 @@ Whitespace between instructions is ignored, so the instructions can be written a
 1. At the top of the application window, under **Settings**, click **Advanced**.
 1. To the right of "Custom Instructions", click **Current Workspace** or **Global** to choose whether the custom instructions apply to the current workspace or all workspaces.
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 Did you successfully add a custom instructions file to your repository?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
 
-
+</div>
 
 ## Custom instructions in use
 
@@ -597,13 +597,13 @@ Whitespace between instructions is ignored, so the instructions can be written a
 
 Once saved, these instructions will apply to the current project in Eclipse that you open with Copilot enabled.
 
-> **Nota:**
+<div class="border rounded-2 p-3">
 
 Did you successfully add a custom instructions file to your repository?
 
 <a href="https://docs.github.io/success-test/yes.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>Yes</span></a>  <a href="https://docs.github.io/success-test/no.html" target="_blank" class="btn btn-outline mt-3 mr-3 no-underline"><span>No</span></a>
 
-
+</div>
 
 ## Custom instructions in use
 

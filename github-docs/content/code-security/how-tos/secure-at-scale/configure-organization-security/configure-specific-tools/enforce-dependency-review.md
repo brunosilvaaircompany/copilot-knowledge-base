@@ -19,8 +19,6 @@ You need to add the dependency review action to one of the repositories in your 
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
 
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
-
 1. Click the **New ruleset** dropdown menu, and select **New branch ruleset**.
 1. To help identify your ruleset and clarify its purpose, give the ruleset a name in **Ruleset Name**.
 1. Set **Enforcement status** to **{% octicon "play" aria-hidden="true" aria-label="play" %} Active**.

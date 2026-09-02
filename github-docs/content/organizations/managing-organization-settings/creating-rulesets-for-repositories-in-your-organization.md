@@ -146,8 +146,6 @@ Using "Evaluate" mode is a great option for testing your ruleset without enforci
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
 
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
-
 1. Click **New ruleset**.
 1. To create a ruleset targeting branches, click **New branch ruleset**. Alternatively, to create a ruleset targeting tags, click **New tag ruleset**.
 
@@ -306,8 +304,6 @@ You can create a push ruleset for private or internal repositories in your organ
 
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Rulesets**.
-
-   ![Screenshot of an organization's settings page. In the sidebar, a link labeled "Rulesets" is outlined in orange.](/assets/images/help/organizations/sidebar-repository-rulesets.png)
 
 1. Click **New ruleset**.
 1. To create a ruleset targeting branches, click **New push ruleset**.

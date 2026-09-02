@@ -146,9 +146,7 @@ Using "Evaluate" mode is a great option for testing your ruleset without enforci
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rules**, then click **Rulesets**.
-
-   ![Screenshot of the sidebar of the "Settings" page for a repository. The "Rules" sub-menu is expanded, and the "Rulesets" option is outlined in orange.](/assets/images/help/repository/rulesets-settings.png)
+1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
 
 1. Click **New ruleset**.
 1. To create a ruleset targeting branches, click **New branch ruleset**. Alternatively, to create a ruleset targeting tags, click **New tag ruleset**.
@@ -246,9 +244,7 @@ You can create a push ruleset for private or internal repositories.
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rules**, then click **Rulesets**.
-
-   ![Screenshot of the sidebar of the "Settings" page for a repository. The "Rules" sub-menu is expanded, and the "Rulesets" option is outlined in orange.](/assets/images/help/repository/rulesets-settings.png)
+1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
 
 1. Click **New ruleset**.
 1. To create a ruleset targeting branches, click **New push ruleset**.

@@ -70,13 +70,7 @@ Auto model selection, optimized for model reliability and availability, is gener
   * JetBrains IDEs
   * Eclipse
   * Xcode
-
-Auto model selection, optimized for model reliability and availability, is in public preview in the following IDEs:
   * Visual Studio
-
-#### Enabling access during public preview
-
-During the public preview, if you're using a Copilot Business or Copilot Enterprise plan, the organization or enterprise that provides your plan must have the **Editor preview features** policy enabled. See [Manage Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies#enabling-copilot-features-and-models-in-your-organization) or [Manage Enterprise Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#defining-policies-for-your-enterprise).
 
 ## Auto model selection in third-party agents
 

@@ -1,11 +1,8 @@
 # About live migrations from GitHub Enterprise Server to GHE.com
 
->[!NOTE] Enterprise Live Migrations is in public preview and subject to change.
-
-
 ## What is Enterprise Live Migrations?
 
-Enterprise Live Migrations (ELM) is a service for migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud with data residency (GHE.com). It is operated using a command line tool on GitHub Enterprise Server.
+Enterprise Live Migrations (ELM) is a service for migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud with data residency (GHE.com). It is operated using an extension of the GitHub CLI.
 
 Migrations are "live" because users can continue using the source repository during most of the migration process. After the repository data is initially collected, webhooks check for changes to the repository, such as new commits or updates to settings. These changes are reported to ELM and included in the migration.
 
@@ -27,7 +24,7 @@ You may want to use both tools over the course of a platform migration, prioriti
 
 ## Overview of a migration
 
-Typically, a site administrator runs a migration using the `elm` CLI tool, in a terminal session over SSH. The operator must provide personal access tokens with access to both GitHub Enterprise Server and the destination enterprise.
+A site administrator runs a migration using the GitHub CLI. Before running the migration, the operator must configure the GitHub Enterprise Server instance and provide personal access tokens with access to both GitHub Enterprise Server and the destination enterprise.
 
 The high-level phases of a migration are:
 

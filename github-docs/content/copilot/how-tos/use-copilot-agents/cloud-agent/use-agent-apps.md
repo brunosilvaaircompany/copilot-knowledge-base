@@ -9,6 +9,11 @@ Agent apps let you delegate work to partner-built agents from within GitHub. For
 
 Before you can use an agent app, the GitHub App must be installed on the account or organization that owns the repository, and agent features must be enabled for the app. If the repository is owned by an organization that belongs to an enterprise, the "Agent apps" Copilot policy must also be enabled in your enterprise settings.
 
+## Installing an agent app
+
+1. View available apps on [GitHub Marketplace](https://github.com/marketplace?type=apps&category=agent-apps).
+1. On the app page, click **Add**, then install the app on your personal account or organization.
+
 ## Authorizing an agent app
 
 The first time you use an agent app, GitHub prompts you to authorize the app through an OAuth flow. Follow the prompts to authorize the app before the agent runs. For more information, see [Authorizing GitHub Apps](https://docs.github.com/en/apps/using-github-apps/authorizing-github-apps).

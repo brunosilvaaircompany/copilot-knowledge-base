@@ -17,7 +17,7 @@ Authorship for Git commits is not associated with mannequins and cannot be attri
 ## How can I reclaim mannequins?
 
 You can reattribute the history for each mannequin to an organization member with the GitHub CLI or in your browser. If you use the GitHub CLI, you can reclaim mannequins in bulk.
- For instructions, see [Reclaiming Mannequins For GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/completing-your-migration-with-github-enterprise-importer/reclaiming-mannequins-for-github-enterprise-importer).
+ For instructions, see [Reclaiming Mannequins For GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/completing-your-migration-with-github-enterprise-importer/reclaiming-mannequins-for-github-enterprise-importer) or [Complete Your Migration](https://docs.github.com/en/migrations/elm/complete-your-migration#reattribute-activity-to-users).
 
 By default, reclaiming a mannequin will send an attribution invitation to the target user. The target user can choose to accept or reject the invitation.
 

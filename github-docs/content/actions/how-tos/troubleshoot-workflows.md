@@ -83,7 +83,7 @@ Specific events allow for filtering by branch, tag, and/or paths you can customi
 
 You can use special characters with filters. For more information, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#filter-pattern-cheat-sheet).
 
-For path filtering, evaluating diffs is limited to the first 300 files. If there are files changed that are not matched in the first 300 files returned by the filter, the workflow will not be run. For more information, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#git-diff-comparisons).
+For path filtering, evaluating diffs is limited to the first 3,000 files. If there are files changed that are not matched in the first 3,000 files returned by the filter, the workflow will not be run. For more information, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#git-diff-comparisons).
 
 ## Troubleshoot workflow execution
 

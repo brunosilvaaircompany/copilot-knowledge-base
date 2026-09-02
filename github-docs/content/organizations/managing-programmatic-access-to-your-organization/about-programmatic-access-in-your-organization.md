@@ -32,7 +32,7 @@ Organization owners can view all fine-grained personal access tokens that can ac
 
 
 
-If their organization uses SAML, organization owners can see each personal access token that a member of their organization authorized. For more information, see [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization#viewing-and-revoking-authorized-credentials).
+If their organization uses SAML, organization owners can see each personal access token that a member of their organization authorized. For more information, see [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization#viewing-and-revoking-authorized-credentials-for-a-single-member).
 
 
 

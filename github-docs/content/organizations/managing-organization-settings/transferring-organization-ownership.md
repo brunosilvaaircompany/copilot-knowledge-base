@@ -1,7 +1,7 @@
 # Transferring organization ownership
 
 > [!NOTE]
-> Enterprise account owners can invite existing organization accounts to join their enterprise. For more information, see [Adding Organizations To Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-organizations-in-your-enterprise/adding-organizations-to-your-enterprise#inviting-an-organization-to-join-your-enterprise-account).
+> Enterprise account owners can invite existing organization accounts to join their enterprise. For more information, see [Adding Organizations To Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-organizations-in-your-enterprise/adding-organizations-to-your-enterprise#inviting-an-existing-organization).
 
 
 

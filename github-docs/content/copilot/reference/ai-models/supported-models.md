@@ -18,12 +18,12 @@ This table lists the AI models available in Copilot, along with their release st
 | Model name                                             | Provider  | Release status             |
 |--------------------------------------------------------|-----------|----------------------------|
 | {% for model in tables.copilot.model-release-status %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'MAI-Code-1-Flash' or model.name == 'MAI-Code-1.1-Flash' %}[^mai-code-1-flash]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %}| {{ model.provider }} | {{ model.release_status }} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'MAI-Code-1-Flash' or model.name == 'MAI-Code-1.1-Flash' %}[^mai-code-1-flash]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' %}[^claude-fable-5]{% endif %}| {{ model.provider }} | {{ model.release_status }} |
 | {% endfor %}                                           |
 
 {% endrowheaders %}
 
-[^claude-fable-5]: When Claude Fable 5 is used, Anthropic retains data, including prompts and outputs, to operate safety classifiers that detect harmful use. Other Claude models in GitHub Copilot remain covered by GitHub's existing data retention agreements, as documented at [Model Hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting#anthropic-models). Enterprise and business users need to enable the Claude Fable 5 model to make it available for your organization. You can read more about Anthropic's data handling practices for this model under section F of their [Service Specific Terms](https://www.anthropic.com/legal/service-specific-terms). To enable Claude Fable 5, see [Configure Access To Ai Models](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models).
+[^claude-fable-5]: When Claude Fable 5 or Claude Fable 5.1 is used, Anthropic retains data, including prompts and outputs, by default to operate safety classifiers that detect harmful use. Customers can request to use Claude Fable 5 or Claude Fable 5.1 with zero data retention (ZDR) through the end of 2026 under a time-bound exemption while Anthropic rolls out Enterprise Frontier Safeguards (EFS). After that point, continued use of these models would require EFS, which will enable eligible customers to keep their data under their own control while also enabling automated safety monitoring. For an enterprise that has been approved and configured for this type of access, Claude Fable 5 and Claude Fable 5.1 requests will use the ZDR endpoint through the end of 2026 when the models are enabled. To learn whether your enterprise is eligible and request access, contact your GitHub account team. Approval for access does not automatically enable Claude Fable 5 or Claude Fable 5.1. An enterprise or organization administrator must still enable each model before users can access it. Other Claude models, except for Claude Fable 5 and Claude Fable 5.1, continue to operate under ZDR. Customers who enable a Fable model with ZDR agree to use this model only for internal operations, including to develop and evaluate products for their own customers. They may not make the model endpoints or outputs available externally. To enable these models, see [Configure Access To Ai Models](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models).
 
 ## Supported AI models in Auto model selection
 
@@ -65,6 +65,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | Claude Sonnet 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 (fast mode) (preview) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Claude Fable 5.1 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.3-Codex | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.4 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -116,6 +117,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Claude Opus 5       | `v1.128.0` | `17.14.22` | TBD | TBD | TBD |
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
 | Claude Fable 5      | `v1.124` | `17.14.6`                    | TBD | TBD | TBD |
+| Claude Fable 5.1    | TBD | TBD                    | TBD | TBD | TBD |
 | Kimi K2.7 Code     | `v1.127` | `17.14.6`            | `1.9.1-251` | TBD | TBD |
 | Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |
 | MAI-Code-1-Flash    | `v1.121` | TBD                            | TBD | TBD | TBD |
@@ -142,7 +144,7 @@ The following table shows which AI models are available in each Copilot plan. Fo
 | Available models                               | Copilot Pro  | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
 |---------------------------------------------------------|-------------------------------------------------|-----------------------------------------------------|------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------|
 | {% for model in tables.copilot.model-supported-plans %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' %}[^claude-fable-5]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' %}[^claude-fable-5]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
 | {% endfor %}                                            |
 
 {% endrowheaders %}
@@ -202,7 +204,7 @@ The following models are **not** in scope. They are disabled by default, regardl
 
 * Pre-GA models
 * Open weight models (DeepSeek, Kimi K2.7 Code, Kimi K3)
-* Models that are not covered by GitHub's data retention agreement (Claude Fable 5)
+* Models that are not covered by GitHub's data retention agreement (Claude Fable 5, Claude Fable 5.1)
 * For enterprises that have restricted models to data-resident or FedRAMP-compliant models, any models that do not respect these policies
 
 

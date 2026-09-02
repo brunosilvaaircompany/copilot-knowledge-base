@@ -19,9 +19,7 @@
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rules**, then click **Rulesets**.
-
-   ![Screenshot of the sidebar of the "Settings" page for a repository. The "Rules" sub-menu is expanded, and the "Rulesets" option is outlined in orange.](/assets/images/help/repository/rulesets-settings.png)
+1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
 
 1. Create a new branch ruleset or click an existing one to edit it.
 1. Under "Branch rules", select **Restrict code coverage**.

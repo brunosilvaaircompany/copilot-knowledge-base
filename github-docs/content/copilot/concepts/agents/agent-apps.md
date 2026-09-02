@@ -9,6 +9,8 @@ Agent apps are GitHub Apps that expose agents on GitHub. GitHub partners build a
 
 For example, an agent app could analyze your product analytics, scan your application for security vulnerabilities, or add feature flags to a pull request, then connect back to the partner's systems to complete the task.
 
+You can view available apps on [GitHub Marketplace](https://github.com/marketplace?type=apps&category=agent-apps).
+
 ## Where you can use agent apps
 
 You can start an agent app's agent from the following entry points on GitHub.com and GitHub Mobile:
@@ -34,6 +36,9 @@ To use an agent app, the GitHub App must be installed on your account or organiz
 
 * When you install an agent app, GitHub highlights that the app includes agent features and asks you if you want to enable them. For more information, see [About Using GitHub Apps](https://docs.github.com/en/apps/using-github-apps/about-using-github-apps).
 * If the app is installed in an organization owned by an enterprise, an administrator must also enable the "agent apps" Copilot policy before the agent features become available. For more information, see the "Next steps" section.
+
+By default, agent apps have access to the models that are enabled in the organization or personal account where the app is installed. However, in the enterprise teams mode for model access, available models for agent apps are controlled at the enterprise level. 
+ See [Manage Availability Of Default Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models).
 
 ## Billing
 
