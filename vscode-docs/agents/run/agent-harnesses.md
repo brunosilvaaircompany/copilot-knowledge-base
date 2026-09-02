@@ -57,6 +57,17 @@ Git-ignored files, such as `.env` files and installed dependencies, are also abs
 
 Worktree sessions use **Bypass Approvals** because their code changes are separate from your active workspace. Folder sessions offer the [permission levels](approvals.md#permission-levels) supported by the selected harness. Worktree isolation does not restrict commands, network access, or access outside the worktree. For those protections, configure [agent sandboxing](../concepts/trust-and-safety.md#agent-sandboxing).
 
+## Use multi-root workspaces (Experimental)
+
+Copilot and Claude sessions in the editor window can work across all folders in a [multi-root workspace](https://code.visualstudio.com/docs/editing/workspaces/multi-root-workspaces). Enable the setting for the harness you use:
+
+* Copilot: `setting(chat.agentHost.copilotAgent.multiRootEnabled)`
+* Claude: `setting(chat.agentHost.claudeAgent.multiRootEnabled)`
+
+Multi-root agent sessions are only available in the editor window. The {% data variables.copilot.agents_window %} does not support multi-root sessions.
+
+[Agent hooks](../../agent-customization/hooks.md) remain scoped to one workspace folder. If hooks are present in multiple folders, {% data variables.product.prodname_vscode_shortname %} prompts you to select the primary folder from which to load them.
+
 ## Configure an agent harness
 
 Expand a harness to review its setup and capabilities.
