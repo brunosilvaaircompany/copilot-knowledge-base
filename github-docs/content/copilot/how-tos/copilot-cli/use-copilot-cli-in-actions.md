@@ -48,7 +48,7 @@ jobs:
 
 Key details about this example:
 
-* The `--yolo` flag suppresses interactive prompts, which is required for non-interactive environments like GitHub Actions.
+* The `--yolo` flag automatically approves all tool, path, and URL permission requests. Non-interactive (`-p`) runs can't display an interactive approval prompt, so any action that isn't pre-approved is denied automatically. To grant only the permissions the task needs, use narrower options such as `--allow-tool`, `--add-dir`, and `--allow-url` instead.
 * The `copilot-requests: write` permission is required for the workflow to make Copilot requests.
 * The `GITHUB_TOKEN` provided by GitHub Actions handles authentication automatically, no additional secrets are needed.
 

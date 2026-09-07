@@ -2,21 +2,7 @@
 
 Use this reference to understand the currently supported keys in `managed-settings.json`.
 
-For deployment methods and supported clients, see [Configure Enterprise Managed Settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/configure-enterprise-managed-settings).
-
-## Precedence rules
-
-When multiple settings sources are present, settings earlier in this list take precedence over settings later in the list:
-
-1. MDM-managed settings
-1. Server-managed settings
-1. File-based settings
-1. User-level settings
-
-As an exception, the following keys are composed in the most restrictive direction across different delivery methods:
-
-* `sandbox`
-* `permissions.deny`, `permissions.ask`, and `permissions.allow`
+For instructions on creating the file, see [Get Started](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started).
 
 ## Supported keys
 
@@ -40,13 +26,6 @@ As an exception, the following keys are composed in the most restrictive directi
 
 {% endrowheaders %}
 
-## Applying different settings to enterprise teams
-
-For server-managed deployments, the enterprise can apply different governance to groups of users based on their enterprise team membership. The enterprise defines all settings—team membership only determines which users receive a given set of values.
-
-To make a key eligible for team-specific values, mark it as overridable in `managed-settings.json` using the `{ "overridable": <VALUE> }` syntax. An overridable key uses the team's value when set, or falls back to your enterprise default when the team leaves it unset. The `{ "overridable": <VALUE> }` syntax applies to the `model`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, and `deniedMcpServers` keys. Keys not marked overridable remain an enterprise-level decision that teams can't modify.
-
-`enabledPlugins` and `extraKnownMarketplaces` work additively. The enterprise `managed-settings.json` sets a baseline, and an enterprise team file can add more plugins and marketplaces on top of it. For the full setup steps, see [Configure Enterprise Managed Settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/configure-enterprise-managed-settings#overriding-settings-for-specific-teams).
 
 ## Example configuration
 

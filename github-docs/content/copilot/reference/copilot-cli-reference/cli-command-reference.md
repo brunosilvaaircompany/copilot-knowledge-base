@@ -1495,8 +1495,8 @@ Wraps the entire agent invocation: all LLM calls and tool executions for one use
 | `gen_ai.usage.cache_read.input_tokens` | Cached input tokens read | Both |
 | `gen_ai.usage.cache_creation.input_tokens` | Cached input tokens created | Both |
 | `github.copilot.turn_count` | Number of LLM round-trips | Both |
-| `github.copilot.cost` | Monetary cost | Both |
-| `github.copilot.aiu` | AI units consumed | Both |
+| `github.copilot.cost` | Per-request model multiplier used for billing. **Not a monetary value.** | Both |
+| `github.copilot.nano_aiu` | AI units consumed, in nano AI units (1 AIU = 1,000,000,000 nano AIU) | Both |
 | `server.address` | Server hostname | Top-level only |
 | `server.port` | Server port | Top-level only |
 | `error.type` | Error class name (on error) | Both |
@@ -1524,8 +1524,8 @@ One span per LLM request. Span kind: `CLIENT`.
 | `gen_ai.usage.cache_read.input_tokens` | Cached tokens read |
 | `gen_ai.usage.input_tokens` | Input tokens this turn |
 | `gen_ai.usage.output_tokens` | Output tokens this turn |
-| `github.copilot.cost` | Turn cost |
-| `github.copilot.aiu` | AI units consumed this turn |
+| `github.copilot.cost` | Per-request model multiplier used for billing. **Not a monetary value.** |
+| `github.copilot.nano_aiu` | AI units consumed this turn, in nano AI units (1 AIU = 1,000,000,000 nano AIU) |
 | `github.copilot.server_duration` | Server-side duration |
 | `github.copilot.initiator` | Request initiator |
 | `github.copilot.turn_id` | Turn identifier |
@@ -1553,6 +1553,9 @@ One span per tool call. Span kind: `INTERNAL`.
 | `gen_ai.tool.call.arguments` | Tool input arguments as JSON (content capture only) |
 | `gen_ai.tool.call.result` | Tool output as JSON (content capture only) |
 
+> [!NOTE]
+> To measure AI unit consumption, read `github.copilot.nano_aiu` from the root `invoke_agent` span only. The attribute is also stamped on the child `chat` spans, so summing it across every span double-counts. `github.copilot.cost` is a per-request model multiplier used for billing calculations—it is not a currency value and must not be interpreted as one.
+
 ### Metrics
 
 #### GenAI convention metrics
@@ -1563,6 +1566,7 @@ One span per tool call. Span kind: `INTERNAL`.
 | `gen_ai.client.token.usage` | Histogram | tokens | Token counts by type (`input`/`output`) |
 | `gen_ai.client.operation.time_to_first_chunk` | Histogram | s | Time to receive first streaming chunk |
 | `gen_ai.client.operation.time_per_output_chunk` | Histogram | s | Inter-chunk latency after first chunk |
+| `gen_ai.invoke_agent.duration` | Histogram | s | End-to-end duration of one agent invocation |
 | `gen_ai.invoke_agent.inference_calls` | Histogram | `{inference_call}` | Number of model calls made during one agent invocation, counted at provider dispatch (failed and partial calls included; requests blocked before dispatch excluded). Dimension: `gen_ai.agent.name`. |
 | `gen_ai.invoke_agent.tool_calls` | Histogram | `{tool_call}` | Number of client-side tool calls made during one agent invocation (failed and partial calls included; synthetic CLI tool lifecycles and provider-executed server-side tools excluded). Dimension: `gen_ai.agent.name`. |
 

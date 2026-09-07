@@ -95,7 +95,7 @@ You can use the ID to cancel the schedule. For example, by entering `stop prompt
 
 To list the active schedules for the current session, type `/every` or `/after` with no arguments.
 
-To delete a schedule, use the arrow keys on your keyboard to move through the list and select the schedule you want to delete, then press <kbd>d</kbd>.
+To delete a schedule, use the arrow keys on your keyboard to move through the list and select the schedule you want to delete, then press <kbd>x</kbd>.
 
 Press <kbd>Esc</kbd> to exit the schedule list.
 
