@@ -30,7 +30,7 @@ Before enabling GitHub Actions, make sure you have completed the following steps
 * `kms:Decrypt` (if Key Management Service (KMS) encryption has been enabled)
 
 
-* Review the hardware requirements for GitHub Actions. For more information, see [Getting Started With GitHub Actions For GitHub Enterprise Server](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/getting-started-with-github-actions-for-your-enterprise/getting-started-with-github-actions-for-github-enterprise-server#review-hardware-considerations).
+* Review the hardware requirements for GitHub Actions. For more information, see [Getting Started With GitHub Actions For GitHub Enterprise Server](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/getting-started-with-github-actions-for-your-enterprise/getting-started-with-github-actions-for-github-enterprise-server#review-hardware-requirements).
 * TLS must be configured for GitHub Enterprise Server's domain. For more information, see [Configuring Tls](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-tls).
 
   > [!NOTE]

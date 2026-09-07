@@ -19,11 +19,8 @@ Future releases of GitHub will remove the ability to disable running Dependabot 
 
 To run Dependabot jobs on GitHub Actions, GitHub creates a dynamic workflow for each job. Unlike standard GitHub Actions workflows, dynamic workflows are generated for a specific run and are not stored in your repository's `.github/workflows` directory.
 
-You may see workflow runs named `dynamic/dependabot/dependabot-updates` or check runs with `(dynamic)` appended to their names. You can use the workflow run logs to troubleshoot errors or configuration problems.
-
 You may see workflow runs named `dynamic/dependabot/dependabot-updates` or check runs with `(dynamic)` appended to their names. To troubleshoot errors or configuration problems, on the repository's **Actions** tab, filter the workflow runs to show only Dependabot update jobs, then open a workflow run to view the logs.
 
-## Runner options
 ## Runner options
 
 You can run Dependabot on GitHub Actions using:
@@ -56,7 +53,7 @@ The Dependabot on GitHub Actions runners and Dependabot on self-hosted runners s
 If you are transitioning to using Dependabot on GitHub Actions runners and you restrict access to your organization's or repository's private resources, you may need to update your list of allowed IP addresses. For example, if you currently limit access to your private resources to the IP addresses that Dependabot uses, you should update your allowlist to use the GitHub-hosted runners IP addresses sourced from the meta API endpoint. For more information, see [Meta](https://docs.github.com/en/rest/meta).
 
 
-When you enforce a policy to only allow actions and reusable workflows from your enterprise, and you enable Dependabot on GitHub Actions, Dependabot will not run. To enable Dependabot to run with your enterprise actions and reusable workflows, you should choose either to allow actions created by GitHub, or allow specified actions and reusable workflows. For more information, see [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#allowing-select-actions-and-reusable-workflows-to-run).
+When you enforce a policy to only allow actions and reusable workflows from your enterprise, and you enable Dependabot on GitHub Actions, Dependabot will not run. To enable Dependabot to run with your enterprise actions and reusable workflows, you should choose either to allow actions created by GitHub, or allow specified actions and reusable workflows. For more information, see [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#controlling-access-to-public-actions-and-reusable-workflows).
 
 
 

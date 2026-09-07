@@ -27,7 +27,7 @@ For code scanning alerts from CodeQL analysis, you can use security overview to 
 
 
 
-With a GitHub Copilot Enterprise license, you can also ask GitHub Copilot Chat for help to better understand code scanning alerts in repositories in your organization. For more information, see [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github#asking-questions-about-alerts-from-github-advanced-security-features).
+With a GitHub Copilot Enterprise license, you can also ask GitHub Copilot Chat for help to better understand code scanning alerts in repositories in your organization. For more information, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/get-started-with-chat-in-your-ide#ask-questions-about-alerts-from-github-advanced-security-features).
 
 
 

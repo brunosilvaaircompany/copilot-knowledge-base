@@ -31,7 +31,7 @@ Copilot may generate files as part of its response, which you can view, edit, an
 
 You can choose from a selection of AI models, each with different strengths. Different models consume AI credits at different rates based on their token pricing. For details, see [Models And Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
 
-If you access Copilot Chat through a Copilot Business or Copilot Enterprise subscription, your organization or enterprise must grant members the ability to switch to a different model. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#copilot-access-to-alternative-ai-models).
+If you access Copilot Chat through a Copilot Business or Copilot Enterprise subscription, your organization or enterprise must grant members the ability to switch to a different model. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
 
 
 1. At the bottom of Copilot Chat, select the **CURRENT-MODEL** {% octicon "chevron-down" aria-hidden="true" aria-label="chevron-down" %} dropdown menu, then click the AI model of your choice.

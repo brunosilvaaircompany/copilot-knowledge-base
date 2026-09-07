@@ -50,7 +50,7 @@ To use SCIM with your organization, you must use a third-party-owned OAuth app. 
 
 
 1. Sign into GitHub using an account that is an organization owner and is ideally used only for SCIM configuration.
-1. To create an active SAML session for your organization, navigate to `https://github.com/orgs/ORGANIZATION-NAME/sso`. For more information, see [About Authentication With Single Sign On](https://docs.github.com/en/authentication/authenticating-with-single-sign-on/about-authentication-with-single-sign-on#about-oauth-apps-github-apps-and-saml-sso).
+1. To create an active SAML session for your organization, navigate to `https://github.com/orgs/ORGANIZATION-NAME/sso`. For more information, see [About Authentication With Single Sign On](https://docs.github.com/en/authentication/authenticating-with-single-sign-on/about-authentication-with-single-sign-on#about-oauth-apps-github-apps-and-sso).
 1. Navigate to Okta.
 1. In the left sidebar, use the **Applications** dropdown and click **Applications**.
 

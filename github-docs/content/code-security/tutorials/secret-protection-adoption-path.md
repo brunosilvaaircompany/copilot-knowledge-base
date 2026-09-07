@@ -2,7 +2,7 @@
 title: Secure your secrets at scale with GitHub
 shortTitle: Secret protection
 allowTitleToDifferFromFilename: true
-intro: 'Leaked credentials expose your organization to data breaches. GitHub Secret Protection detects and prevents secret leaks automatically. Follow this adoption path to assess risk, pilot the solution, and scale protection organization-wide.'
+intro: 'Leaked credentials expose your organization to data breaches. GitHub Secret Protection detects and prevents secret leaks automatically. Follow this five-phase adoption path to assess your current risk, evaluate GitHub Secret Protection, run a pilot, monitor its value, and scale protection across your organization.'
 layout: journey-landing
 versions:
   feature: secret-risk-assessment

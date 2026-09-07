@@ -188,6 +188,10 @@ When you use Copilot CLI, Copilot can perform tasks on your behalf, such as exec
 
 You should therefore always keep security considerations in mind when using Copilot CLI, just as you would when working directly with files yourself, or running commands directly in your terminal. You should always review suggested commands carefully when Copilot CLI requests your approval.
 
+### Content exclusion
+
+For Copilot Business and Copilot Enterprise users, Copilot CLI respects content exclusion policies configured at the enterprise, organization, and repository levels. Excluded files are not used as context. For more information, see [Content Exclusion](https://docs.github.com/en/copilot/concepts/context/content-exclusion).
+
 ### Trusted directories
 
 Trusted directories control where Copilot CLI can read, modify, and execute files.

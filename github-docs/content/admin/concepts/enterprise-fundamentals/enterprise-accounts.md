@@ -75,4 +75,4 @@ Users can also authorize GitHub Apps to use their GitHub account and data in oth
 
 ## Next steps
 
-Learn how to set up these features with our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/enterprise-onboarding) journey for GitHub Enterprise Cloud.
+Learn how to set up these features with our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/admin/enterprise-onboarding) journey for GitHub Enterprise Cloud.

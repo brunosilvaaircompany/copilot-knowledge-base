@@ -11,6 +11,8 @@ When you enable immutable releases, the following protections are enforced:
 * **Git tags cannot be moved**: Once an immutable release is published, its associated Git tag is locked to a specific commit, cannot be changed, and cannot be deleted while the release exists. If you delete the immutable release, you can delete the tag, but you cannot reuse the same tag name.
 * **Release assets cannot be modified or deleted**: All files attached to the release (such as binaries and archives) are protected from modification or deletion.
 
+Only the assets and tag are locked. You can still edit the title and release notes of a published immutable release, and change whether it is marked as a pre-release or as the latest release.
+
 Additionally, creating an immutable release automatically generates a **release attestation**, which is a cryptographically verifiable record of a release containing the release tag, commit SHA, and release assets. Consumers can use this attestation to make sure the releases and artifacts they are using exactly match the published GitHub releases.
 
 > [!NOTE]
@@ -26,7 +28,7 @@ We recommend you use the following workflow for publishing an immutable release.
 1. Attach all associated assets to the draft release.
 1. Publish the draft release.
 
-This ensures that all assets are in place before the release becomes immutable, preventing the need to work around immutability restrictions.
+This ensures that all assets are in place before the release becomes immutable, preventing the need to work around immutability restrictions. For more information, see [Managing Releases In A Repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release).
 
 ## Next steps
 

@@ -57,11 +57,7 @@ Users will be able to see available models for your region in the model selector
 * GPT-5.2-Codex
 * GPT-5.3-Codex
 * Claude Haiku 4.5
-* Claude Sonnet 4.5
-* Claude Opus 4.5
-* Claude Sonnet 4.6
 * Claude Sonnet 5
-* Claude Opus 4.6
 * Claude Opus 4.8
 * Claude Opus 5
 * MAI-Code-1-Flash
@@ -82,15 +78,10 @@ Users will be able to see available models for your region in the model selector
 * GPT-5.6 Sol
 * GPT-5.6 Terra
 * Claude Haiku 4.5
-* Claude Opus 4.5
-* Claude Opus 4.6
 * Claude Opus 4.7
 * Claude Opus 4.8
 * Claude Opus 5
-* Claude Sonnet 4.5
-* Claude Sonnet 4.6
 * Claude Sonnet 5
-* Gemini 3.1 Pro
 * Gemini 3.5 Flash
 * MAI-Code-1-Flash
 

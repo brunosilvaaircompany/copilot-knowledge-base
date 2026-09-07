@@ -88,4 +88,4 @@ The GitHub app in the Slack Marketplace cannot be used with GitHub Enterprise Se
 
 
 
-* [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-slack) - Learn about Copilot cloud agent with Slack.
+* [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack) - Learn about Copilot cloud agent with Slack.

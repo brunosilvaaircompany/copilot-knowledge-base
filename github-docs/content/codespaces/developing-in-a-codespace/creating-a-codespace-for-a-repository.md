@@ -16,7 +16,7 @@ Your ability to create codespaces from organization-owned repositories depends o
 
 
 > [!NOTE]
-> If you have a managed user account, you cannot create codespaces for your personal repositories, unless the repository is a fork of an organization-owned repository and you are allowed to use GitHub Codespaces at the organization's expense. For more information, see [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users#abilities-and-restrictions-of-managed-user-accounts).
+> If you have a managed user account, you cannot create codespaces for your personal repositories, unless the repository is a fork of an organization-owned repository and you are allowed to use GitHub Codespaces at the organization's expense. For more information, see [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users).
 
 
 

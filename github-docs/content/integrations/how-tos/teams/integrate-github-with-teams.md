@@ -104,4 +104,4 @@ To integrate GitHub Enterprise Server with Microsoft Teams, you first need to co
 * [Use GitHub In Teams](https://docs.github.com/en/integrations/how-tos/teams/use-github-in-teams) - Learn how to use the GitHub integration for Teams.
 * [Customize Notifications](https://docs.github.com/en/integrations/how-tos/teams/customize-notifications) - Learn how to customize your GitHub notifications in Teams.
 
-* [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-teams) - Learn about Copilot cloud agent with Teams.
+* [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams) - Learn about Copilot cloud agent with Teams.

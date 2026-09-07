@@ -1,10 +1,11 @@
 # Setting up GitHub Copilot for your organization
 
-## Enable GitHub Copilot for your organization through an enterprise account
+## Enable GitHub Copilot
 
-To enable Copilot Business for your organization, your organization needs to be part of an enterprise account with a Copilot subscription. If you don't already have an enterprise account, you can create one specifically for managing Copilot Business licenses. See [About Enterprise Accounts For Copilot Business](https://docs.github.com/en/copilot/concepts/about-enterprise-accounts-for-copilot-business).
+Owners of **organizations on GitHub Free or GitHub Team** can purchase Copilot Business for their organization. [Subscribe to Copilot Business](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=business).
 
-If your organization already belongs to an enterprise with a Copilot Enterprise or Copilot Business plan, your enterprise owner can enable Copilot for your organization. Request access from your enterprise owner at [GitHub Copilot settings](https://github.com/settings/copilot?ref_product=copilot&ref_type=engagement&ref_style=text), under "Get Copilot from an organization."
+If your organization is owned by an enterprise that has a Copilot subscription, you can ask your enterprise owner to enable Copilot for your organization. Go to [https://github.com/settings/copilot](https://github.com/settings/copilot) and request access under "Get Copilot from an organization."
+
 
 ## Set policies
 

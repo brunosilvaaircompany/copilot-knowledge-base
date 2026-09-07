@@ -58,7 +58,7 @@ Use Copilot in direct messages, threads, and channels. Besides creating issues, 
 * Review the resulting work in the open.
 * Resume work on the agent-generated artifacts outside of Slack, in GitHub, the terminal, or your preferred code editor.
 
-For more information, see [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-slack).
+For more information, see [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack).
 
 ## Working with issues and pull requests
 

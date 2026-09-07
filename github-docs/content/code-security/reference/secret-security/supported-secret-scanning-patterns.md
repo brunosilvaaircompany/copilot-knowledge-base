@@ -89,14 +89,14 @@ Precision levels are estimated based on the pattern type's typical false positiv
 
 ## Supported AI-detected patterns
 
-Secret scanning uses Copilot to detect generic secrets using AI. See [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).
+Secret scanning uses Copilot to detect generic secrets using AI.{% ifversion fpt or ghec %} See [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).
 
 | Provider | Token |
 |----------|:--------------------|
 |  Generic | password |
 
 >[!NOTE] Push protection and validity checks are not supported for passwords.
-
+{% endif %}
 
 ## Supported provider patterns
 

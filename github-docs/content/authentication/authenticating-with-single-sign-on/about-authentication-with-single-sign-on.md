@@ -22,7 +22,7 @@ Authentication is required for other access to public repositories, such as view
 
 
 > [!NOTE]
-> SSO authentication is not required for outside collaborators. For more information about outside collaborators, see [Roles In An Organization](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization#outside-collaborators).
+> SSO authentication is not required for outside collaborators. For more information about outside collaborators, see [Roles In An Organization](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
 
 
 If you have recently authenticated with your organization's SAML IdP in your browser, you are automatically authorized when you access a GitHub organization that uses SAML SSO. If you haven't recently authenticated with your organization's SAML IdP in your browser, you must authenticate at the SAML IdP before you can access the organization.

@@ -168,7 +168,7 @@ class Cart:
 
 ## Claude Haiku 4.5
 
-Claude Haiku 4.5 is a good choice for everyday coding support—including writing documentation, answering language-specific questions, or generating boilerplate code. It offers helpful, direct answers without over-complicating the task. If you're working within cost constraints, Claude Haiku 4.5 is recommended as it delivers solid performance on many of the same tasks as Claude Sonnet 4.5, but with lower resource usage.
+Claude Haiku 4.5 is a good choice for everyday coding support—including writing documentation, answering language-specific questions, or generating boilerplate code. It offers helpful, direct answers without over-complicating the task. If you're working within cost constraints, Claude Haiku 4.5 is recommended as it delivers solid performance on many of the same tasks as larger Claude models, but with lower resource usage.
 
 
 
@@ -182,22 +182,6 @@ For a complete walkthrough of the scenario, see [Write Tests](https://docs.githu
 
 * It performs well on everyday coding tasks like test generation, boilerplate scaffolding, and validation logic.
 * The task leans into multi-step reasoning, but still stays within the confidence zone of a less advanced model because the logic isn’t too deep.
-
-## Claude Sonnet 4.5
-
-Claude Sonnet 4.5 excels across the software development lifecycle, from initial design to bug fixes, maintenance to optimizations. It is particularly well-suited for multi-file refactoring or architectural planning, where understanding context across components is important.
-
-
-### Example scenario
-
-Consider a scenario where you're modernizing a legacy COBOL application by rewriting it in Node.js. The project involves understanding unfamiliar source code, converting logic across languages, iteratively building the replacement, and verifying correctness through a test suite.
-
-For a complete walkthrough of the scenario, see [Modernize Legacy Code](https://docs.github.com/en/copilot/tutorials/modernize-legacy-code).
-
-### Why Claude Sonnet 4.5 is a good fit
-
-* Claude Sonnet 4.5 handles complex context well, making it suited for workflows that span multiple files or languages.
-* Its hybrid reasoning architecture allows it to switch between quick answers and deeper, step-by-step problem-solving.
 
 ## Further reading
 

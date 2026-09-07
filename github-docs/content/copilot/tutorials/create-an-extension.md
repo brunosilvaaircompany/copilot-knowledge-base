@@ -18,7 +18,7 @@ Both examples rely only on the SDK that's bundled with the Copilot CLI, so there
 
 ## Prerequisites
 
-* **GitHub Copilot CLI**: You need Copilot CLI installed and set up. See [CLI Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-cli/cli-getting-started).
+* **GitHub Copilot CLI**: You need Copilot CLI installed and set up. See [CLI Quickstart](https://docs.github.com/en/copilot/get-started/cli-quickstart).
 * **Experimental features enabled**: Extensions are currently an experimental feature. The steps in this tutorial turn on experimental features each time you start the CLI, using the `‑‑experimental` command line option.
 * **JavaScript**: Extensions are written in JavaScript, so you'll need to be familiar with this language to create your own extensions.
 * **A repository**: The second example adds a project-level extension, so you'll need a local copy of a Git repository in which to add the extension.

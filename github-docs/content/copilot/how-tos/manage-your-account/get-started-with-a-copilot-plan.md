@@ -68,7 +68,7 @@ If you’re already using Copilot Free and reach your usage limit, you’ll be p
 
 You can subscribe to Copilot Pro, Copilot Pro+, or Copilot Max at any time to unlock advanced AI features, higher usage limits, and access to additional models.
 
-> [!TIP] Not sure which plan to choose? For a side-by-side comparison, see [Individual Plans](https://docs.github.com/en/copilot/concepts/billing/individual-plans).
+> [!TIP] Not sure which plan to choose? For a side-by-side comparison, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
 1. Go to the [plans page](https://github.com/features/copilot/plans?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro).
 1. Click **Get started** under the plan you want to subscribe to.

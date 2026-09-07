@@ -133,7 +133,7 @@ To upgrade a multi-node GitHub Enterprise Server environment using an upgrade pa
 
 ## Upgrading an instance using phased upgrade execution
 
-Phased upgrade execution allows GitHub Enterprise Server operators running versions 3.22 or greater better control over downtime-inducing actions by isolating those actions to their own phase. To use phased execution perform the following after downloading the upgrade package:
+Phased upgrade execution allows GitHub Enterprise Server operators running versions 3.21 or greater better control over downtime-inducing actions by isolating those actions to their own phase. To use phased execution perform the following after downloading the upgrade package:
 1. Run the package's pre-upgrade phase
 
    ```shell

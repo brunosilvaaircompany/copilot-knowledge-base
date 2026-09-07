@@ -39,6 +39,10 @@ Separately, users can also provide their own LLM keys locally. This is not contr
 
 Enterprise-configured custom agents are available to use with Copilot CLI.
 
+### Content exclusion
+
+Content exclusion policies configured at the enterprise, organization, and repository levels apply to Copilot CLI. Excluded files are not used as context. For more information, see [Content Exclusion](https://docs.github.com/en/copilot/concepts/context/content-exclusion).
+
 ### MCP server policies
 
 Enterprise and organization MCP policies apply to Copilot CLI. You can configure an MCP registry URL so developers can discover approved servers, and set an allowlist policy to restrict which MCP servers can run. For more information, see [Restrict Based On Registry](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/restrict-based-on-registry).
@@ -60,7 +64,6 @@ Users must have an assigned GitHub Copilot seat to access Copilot CLI.
 All other controls do **not** affect Copilot CLI, notably:
 
 * **IDE-specific policies**: Policies configured for specific IDEs or editor extensions
-* **Content exclusions**: File path-based content exclusions
 
 ## Why can't my developers access Copilot CLI?
 

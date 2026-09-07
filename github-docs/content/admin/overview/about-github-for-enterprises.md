@@ -78,4 +78,4 @@ When you purchase GitHub Enterprise, you get access to both GitHub Enterprise Cl
 
 ## Next steps
 
-Get started with our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/enterprise-onboarding) journey for GitHub Enterprise Cloud.
+Get started with our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/admin/enterprise-onboarding) journey for GitHub Enterprise Cloud.

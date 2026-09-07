@@ -32,7 +32,7 @@ The next step is to evaluate and agree on solutions to address the barriers you 
 Run trials of new tools and processes with pilot groups to gather feedback and measure success. For training resources and metrics to use during trials, see [3. Implement changes](#3-implement-changes) and [Metrics to watch](#metrics-to-watch) sections.
 
 
-<a href="https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=button" target="_blank" class="btn btn-primary mt-3 mr-3 no-underline"><span>Contact Sales</span> {% octicon "link-external" height:16 aria-label="link-external" %}</a>
+<a href="https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=trial&ref_style=button" target="_blank" class="btn btn-primary mt-3 mr-3 no-underline"><span>Sign up for Copilot</span>{% octicon "link-external" height:16 aria-label="link-external" %}</a>
 
 ### How Copilot can help
 

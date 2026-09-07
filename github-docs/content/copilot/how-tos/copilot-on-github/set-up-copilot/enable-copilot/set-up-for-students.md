@@ -2,7 +2,7 @@
 
 ## About Copilot Student access
 
-Verified students on GitHub Education get **free access to Copilot's features**. See [Individual Plans](https://docs.github.com/en/copilot/concepts/billing/individual-plans#github-copilot-student).
+Verified students on GitHub Education get **free access to Copilot's features**. See [Plans](https://docs.github.com/en/copilot/get-started/plans#individual-plans).
 
 To become a verified student, see [Apply To GitHub Education As A Student](https://docs.github.com/en/free-pro-team@latest/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student).
 

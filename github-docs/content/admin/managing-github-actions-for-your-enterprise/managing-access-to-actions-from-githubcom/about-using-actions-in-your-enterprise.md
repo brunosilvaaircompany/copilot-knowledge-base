@@ -49,7 +49,7 @@ The recommended approach is to enable automatic access to all actions from GitHu
 > [!NOTE]
 > Before you can configure access to actions on GitHub.com, you must configure your GitHub Enterprise Server instance to use GitHub Actions. For more information, see [Getting Started With GitHub Actions For GitHub Enterprise Server](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/getting-started-with-github-actions-for-your-enterprise/getting-started-with-github-actions-for-github-enterprise-server).
 
-To use actions from GitHub.com, both GitHub Enterprise Server and your self-hosted runners must be able to make outbound connections to GitHub.com. No inbound connections from GitHub.com are required. For more information, see [Self Hosted Runners](https://docs.github.com/en/actions/reference/runners/self-hosted-runners#communication-between-self-hosted-runners-and-githubcom).
+To use actions from GitHub.com, both GitHub Enterprise Server and your self-hosted runners must be able to make outbound connections to GitHub.com. No inbound connections from GitHub.com are required. For more information, see [Self Hosted Runners](https://docs.github.com/en/actions/reference/runners/self-hosted-runners#communication-with-githubcom).
 
 
 After you enable GitHub Connect, you can use policies to restrict which public actions can be used in repositories in your enterprise. For more information, see [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise).

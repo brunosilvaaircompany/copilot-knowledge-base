@@ -22,7 +22,7 @@ When you reinstate a former outside collaborator, you can restore:
 
 > [!TIP]
 > * Only organization owners can reinstate outside collaborators' access to an organization. Enterprise owners may further restrict the ability to reinstate outside collaborators' access to enterprise owners only. For more information, see [Roles In An Organization](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
-> * The reinstating a member flow on your GitHub Enterprise Server instance may use the term "member" to describe reinstating an outside collaborator but if you reinstate this person and keep their previous privileges, they will only have their previous [outside collaborator permissions](/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization#outside-collaborators).
+> * The reinstating a member flow on your GitHub Enterprise Server instance may use the term "member" to describe reinstating an outside collaborator but if you reinstate this person and keep their previous privileges, they will only have their previous [outside collaborator permissions](/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
 > * If your organization has a paid per-user subscription, an unused license must be available before you can invite a new member to join the organization or reinstate a former organization member. For more information, see [GitHub License Users](https://docs.github.com/en/billing/reference/github-license-users).
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.

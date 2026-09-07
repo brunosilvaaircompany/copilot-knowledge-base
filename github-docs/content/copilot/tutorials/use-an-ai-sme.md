@@ -21,7 +21,7 @@ The tutorial assumes you're comfortable working in a terminal and reading code i
 Before you start, make sure you have:
 
 * A GitHub Copilot subscription. See [Plans](https://docs.github.com/en/copilot/get-started/plans).
-* Copilot CLI installed and authenticated. See [CLI Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-cli/cli-getting-started).
+* Copilot CLI installed and authenticated. See [CLI Quickstart](https://docs.github.com/en/copilot/get-started/cli-quickstart).
 * A local clone of the repository you want to explore. See [Cloning A Repository?Tool=Webui](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=webui).
 
 ## 1. Start a session in the repository

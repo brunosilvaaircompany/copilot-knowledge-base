@@ -133,9 +133,9 @@ Available for public repositories by default.
 
 ### AI-detected secrets
 
-AI-detected secrets's generic secret detection is an AI-powered expansion of secret scanning that identifies unstructured secrets (passwords) in your source code and then generates an alert. For more information, see [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).
+AI-detected secrets's generic secret detection is an AI-powered expansion of secret scanning that identifies unstructured secrets (passwords) in your source code and then generates an alert.{% ifversion fpt or ghec %} For more information, see [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).
 
-
+{% endif %}
 
 ### Push protection
 

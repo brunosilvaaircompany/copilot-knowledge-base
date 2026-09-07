@@ -1239,7 +1239,7 @@ on: workflow_call
 > This event will only trigger a workflow run if the workflow file exists on the default branch.
 
 
-To enable a workflow to be triggered manually, you need to configure the `workflow_dispatch` event. You can manually trigger a workflow run using the GitHub API, GitHub CLI, or the GitHub UI. For more information, see [Manually Run A Workflow](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow).
+To enable a workflow to be triggered manually, you need to configure the `workflow_dispatch` event. On the GitHub UI, the "Run workflow" button will be present if the workflow file exists on the default branch. Once a workflow has run at least once, you can dispatch it against any branch or tag via the GitHub API or GitHub CLI. For more information, see [Manually Run A Workflow](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow).
 
 ```yaml
 on: workflow_dispatch

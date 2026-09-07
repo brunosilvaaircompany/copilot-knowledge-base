@@ -410,56 +410,6 @@ Use this command to immediately unlock the Management Console after an account l
 ghe-reactivate-admin-login
 ```
 
-### ghe-saml-mapping-csv
-
-> [!NOTE]
-> This utility does not work with configurations that use SAML with SCIM provisioning. For the SCIM version of this tool, please refer to [`ghe-scim-identities-csv` utility](#ghe-scim-identities-csv).
-
-This utility allows administrators to output or update the SAML `NameID` mappings for users on an instance. The utility can output a CSV file that lists all existing mappings. You can also update mappings for users on your instance by editing the resulting file, then using the utility to assign new mappings from the file.
-
-To output a CSV file containing a list of all user SAML `NameID` mappings on the instance, run the following command.
-
-```shell
-ghe-saml-mapping-csv -d
-```
-
-By default, the utility writes the file to `/data/user/tmp`.
-
-If you plan to update mappings, to ensure that the utility can access the file, we recommend that you keep the file in the default location.
-
-To prepare to update mappings, edit the file and make the desired changes. To see the result of updating the mappings using the new values in your edited CSV file, perform a dry run. Run the following command, replacing /PATH/TO/FILE with the actual path to the file you edited.
-
-```shell
-ghe-saml-mapping-csv -u -n -f /PATH/TO/FILE
-```
-
-To update SAML mappings on the instance with new values from the file, run the following command, replacing /PATH/TO/FILE with the actual path to the file you edited.
-
-```shell
-ghe-saml-mapping-csv -u -f /PATH/TO/FILE
-```
-
-### ghe-scim-identities-csv
-
-> [!NOTE]
-> This utility only works with configurations that use SAML with SCIM provisioning. For the SAML only version of this tool, please refer to the [`ghe-saml-mapping-csv` utility](#ghe-saml-mapping-csv).
-
-This utility allows administrators to output the SCIM identities for users on an instance. The utility can output a CSV file that lists all existing identities and the groups they are members of.
-
-To output CSV data containing a list of all user SCIM identities on the instance, run the following command. This will create a file located at `/data/user/tmp/scim-identities-DATE.csv` containing your SCIM identities.
-
-```shell
-ghe-scim-identities-csv
-```
-
-Or, if you'd like to specify the file, run the following command.
-
-```shell
-ghe-scim-identities-csv -f /PATH/TO/FILE
-```
-
-We recommend writing to a file in `/data/user/tmp`.
-
 ### ghe-service-list
 
 This utility lists all of the services that have been started or stopped (are running or waiting) on your appliance.
@@ -635,6 +585,7 @@ SSL-Session:
 ```
 
 You can use these additional options with the utility:
+
 * The `-r` flag allows you to uninstall a CA certificate.
 * The `-h` flag displays more usage information.
 
@@ -702,6 +653,8 @@ To show all hook deliveries filtered by a given event and action:
 
 ```shell
 ghe-webhook-logs --event issues.opened
+```
+
 To show all failed hook deliveries in the past day:
 
 ```shell
@@ -1171,6 +1124,7 @@ Flag | Description
 
 > [!NOTE]
 > * In an HA configuration, you can use this command to remove an additional node. You cannot use it to remove the HA primary or a replica.
+>
 > * The target node must report `ready` in `nomad node status` to complete removal. The `--no-evacuate` flag does not remove an offline node from the configuration.
 > * This command does not support parallel execution. To remove multiple nodes, you must wait until this command has finished before running it for another node.
 
@@ -1367,6 +1321,7 @@ ghe-actions-test-storage-with-oidc -p [PROVIDER] -cs ["CONNECTION-STRING"]
 This utility stops GitHub Actions from running on your GitHub Enterprise Server instance.
 
 > [!NOTE]
+>
 > * Typically, you will only execute this if you've [contacted support](https://support.github.com/) and they've asked you to do so.
 
 > * In high availability configurations, run this command from the primary.
@@ -1376,6 +1331,7 @@ This utility stops GitHub Actions from running on your GitHub Enterprise Server 
 This utility starts GitHub Actions on your GitHub Enterprise Server instance after it has been previously stopped.
 
 > [!NOTE]
+>
 > * Typically, you will only execute this if you've [contacted support](https://support.github.com/) and they've asked you to do so.
 
 > * In high availability configurations, run this command from the primary.
@@ -1885,8 +1841,7 @@ ghe-upgrade UPGRADE-PACKAGE-FILENAME
 
 
 
-
-Beginning with upgrades in version 3.21 operators may run many of the upgrade operations without requiring a maintenance window using phased execution. 
+Beginning with upgrades in version 3.21 operators may run many of the upgrade operations without requiring a maintenance window using phased execution.
 
 First run operations which do not require a maintenance window by triggering the pre-upgrade phase
 
@@ -1998,8 +1953,109 @@ This utility unsuspends the specified user, granting them access to login, push,
 ghe-user-unsuspend USERNAME
 ```
 
-## Database and storage
+## User management with SAML and SCIM
 
+These utilities help you troubleshoot SAML single sign-on (SSO) and manage SAML `NameID` mappings and SCIM identities on your GitHub Enterprise Server instance, for both individual users and in bulk.
+
+### ghe-saml-debug
+
+This utility enables or disables SAML debug logging on your GitHub Enterprise Server instance. When you enable debug logging, GitHub Enterprise Server writes verbose SAML request and response details to its logs, which can help you troubleshoot SSO. For more information, see [Troubleshooting Saml Authentication](https://docs.github.com/en/admin/managing-iam/using-saml-for-enterprise-iam/troubleshooting-saml-authentication).
+
+SAML debug logging is a global setting and is not scoped to a single user. The `USERNAME` argument must be an existing user and identifies the account that the change is attributed to in the audit log. It is not the subject of the logging.
+
+> [!WARNING]
+>
+> Only enable SAML debugging when requested by GitHub Support, and disable it immediately after troubleshooting. Leaving it enabled causes logs to grow much faster than usual, which can negatively impact the performance of GitHub Enterprise Server.
+
+To enable SAML debug logging, run the following command, replacing `USERNAME` with an existing user to attribute the change to.
+
+```shell
+ghe-saml-debug --enable USERNAME
+```
+
+To disable SAML debug logging, run the following command.
+
+```shell
+ghe-saml-debug --disable USERNAME
+```
+
+### ghe-saml-mapping-csv
+
+> [!NOTE]
+>
+> This utility does not work with configurations that use SAML with SCIM provisioning. For the SCIM version of this tool, please refer to [`ghe-scim-identities-csv` utility](#ghe-scim-identities-csv).
+
+This utility allows administrators to output or update the SAML `NameID` mappings for users on an instance. The utility can output a CSV file that lists all existing mappings. You can also update mappings for users on your instance by editing the resulting file, then using the utility to assign new mappings from the file.
+
+To output a CSV file containing a list of all user SAML `NameID` mappings on the instance, run the following command.
+
+```shell
+ghe-saml-mapping-csv --dump
+```
+
+By default, the utility writes the file to `/data/user/tmp`.
+
+If you plan to update mappings, to ensure that the utility can access the file, we recommend that you keep the file in the default location.
+
+To prepare to update mappings, edit the file and make the desired changes. To see the result of updating the mappings using the new values in your edited CSV file, perform a dry run. Run the following command, replacing `/PATH/TO/FILE` with the actual path to the file you edited.
+
+```shell
+ghe-saml-mapping-csv --update --dry-run --file /PATH/TO/FILE
+```
+
+To update SAML mappings on the instance with new values from the file, run the following command, replacing `/PATH/TO/FILE` with the actual path to the file you edited.
+
+```shell
+ghe-saml-mapping-csv --update --file /PATH/TO/FILE
+```
+
+### ghe-saml-mapping-destroy
+
+This utility permanently deletes the SAML mapping or mappings whose `NameID` matches a value that you specify. A SAML mapping links an external SAML identity (the `NameID`) to a user account. When you delete a mapping, the account must re-link its SAML identity the next time the user signs in. For more information, see [Updating A Users Saml Nameid](https://docs.github.com/en/admin/managing-iam/using-saml-for-enterprise-iam/updating-a-users-saml-nameid).
+
+> [!WARNING]
+>
+> This action is destructive and cannot be undone. By default, the utility displays the matching mappings and prompts you to confirm before it deletes anything. To skip the confirmation prompt, use the `--yes` flag.
+
+To find and delete the SAML mappings for a `NameID`, run the following command, replacing `NAME-ID` with the `NameID` to match, such as an email address or URN. If the value contains spaces or shell metacharacters, enclose it in quotes.
+
+```shell
+ghe-saml-mapping-destroy NAME-ID
+```
+
+### ghe-saml-mapping-find
+
+This utility displays the SAML mapping for a single user. It is read-only and does not change your GitHub Enterprise Server instance. For more information, see [Updating A Users Saml Nameid](https://docs.github.com/en/admin/managing-iam/using-saml-for-enterprise-iam/updating-a-users-saml-nameid).
+
+To display the SAML mapping for a user, run the following command, replacing `USERNAME` with the username.
+
+```shell
+ghe-saml-mapping-find USERNAME
+```
+
+### ghe-scim-identities-csv
+
+> [!NOTE]
+>
+> This utility only works with configurations that use SAML with SCIM provisioning. For the SAML only version of this tool, please refer to the [`ghe-saml-mapping-csv` utility](#ghe-saml-mapping-csv).
+
+This utility allows administrators to output the SCIM identities for users on an instance. The utility can output a CSV file that lists all existing identities and the groups they are members of.
+
+To output CSV data containing a list of all user SCIM identities on the instance, run the following command. This will create a file located at `/data/user/tmp/scim-identities-DATE.csv` containing your SCIM identities.
+
+```shell
+ghe-scim-identities-csv
+```
+
+Or, if you'd like to specify the file, run the following command, replacing `/PATH/TO/FILE` with the path where you want to write the file.
+
+```shell
+ghe-scim-identities-csv --file /PATH/TO/FILE
+```
+
+We recommend writing to a file in `/data/user/tmp`.
+
+## Database and storage
 
 
 
@@ -2058,7 +2114,6 @@ Flag | Description
 `-s/--summarize` | Display only a total.
 `-H/--human-readable` | Print sizes in human-readable format.
 
-
 ### ghe-mssql-console
 
 This utility opens a Microsoft SQL Server database session on your GitHub Enterprise Server instance. The MSSQL database is used by GitHub Actions services.
@@ -2101,7 +2156,6 @@ This utility runs checks on the state of the Microsoft SQL Server instance on yo
 ```shell
 ghe-mssql-health-check
 ```
-
 
 ## Dependencies
 

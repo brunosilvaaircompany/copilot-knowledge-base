@@ -1,6 +1,6 @@
 # Quickstart for GitHub Copilot
 
-This quickstart covers using Copilot on the GitHub website, in IDEs, and in Windows Terminal. To try an agent-driven workflow in the GitHub Copilot app, see [Getting Started](https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started).
+This quickstart covers using Copilot on the GitHub website, in IDEs, and in Windows Terminal. To try an agent-driven workflow in the GitHub Copilot app, see [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app).
 
 ## Introduction
 
@@ -25,15 +25,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
-
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
 
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
@@ -118,15 +109,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
 
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
-
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
 {% elsif ghec %}
@@ -207,15 +189,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
-
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
 
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
@@ -305,15 +278,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
-
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
 
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
@@ -408,15 +372,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
 
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
-
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
 {% elsif ghec %}
@@ -508,15 +463,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
-
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
 
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
@@ -614,15 +560,6 @@ To use Copilot, you’ll need a personal GitHub account with access to a Copilot
 
 * Start with Copilot Free to explore limited features without subscribing to a plan.
 * Upgrade to Copilot Pro, Copilot Pro+, or Copilot Max to unlock more features, models, and request limits.
-
-  > [!IMPORTANT] 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
 
 For more information about the different plans for GitHub Copilot, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
 

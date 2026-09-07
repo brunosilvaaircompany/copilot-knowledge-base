@@ -2,7 +2,7 @@
 
 ## About READMEs
 
-You can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct{% elsif ghes %} and contribution guidelines, communicates expectations for your project and helps you manage contributions.
+You can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions.
 
 
 For more information about providing guidelines for your project, see [Adding A Code Of Conduct To Your Project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project) and [Setting Up Your Project For Healthy Contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions).

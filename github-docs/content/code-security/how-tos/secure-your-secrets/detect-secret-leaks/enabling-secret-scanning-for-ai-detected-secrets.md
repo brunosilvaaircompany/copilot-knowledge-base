@@ -41,6 +41,8 @@ You must configure generic secret detection for your organization using a custom
 
 For information on how to view alerts for generic secrets that have been detected with AI, see [Viewing Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-secret-scanning-alerts/viewing-alerts).
 
+
+
 ## Further reading
 
 * [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features)

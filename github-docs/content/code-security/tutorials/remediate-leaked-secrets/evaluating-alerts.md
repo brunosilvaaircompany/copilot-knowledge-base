@@ -52,7 +52,7 @@ For information on which partner patterns are currently supported, see [Supporte
 
 
 
-With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to better understand security alerts, including secret scanning alerts, in repositories in your organization. For more information, see [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github#asking-questions-about-alerts-from-github-advanced-security-features).
+With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to better understand security alerts, including secret scanning alerts, in repositories in your organization. For more information, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/get-started-with-chat-in-your-ide#ask-questions-about-alerts-from-github-advanced-security-features).
 
 
 
@@ -120,7 +120,7 @@ The following table shows **all the available metadata**. Note that metadata che
 
 ## Asking GitHub Copilot Chat about secret scanning alerts
 
-With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to better understand security alerts, including secret scanning alerts, in repositories in your organization. For more information, see [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github#asking-questions-about-alerts-from-github-advanced-security-features).
+With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to better understand security alerts, including secret scanning alerts, in repositories in your organization. For more information, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/get-started-with-chat-in-your-ide#ask-questions-about-alerts-from-github-advanced-security-features).
 
 
 

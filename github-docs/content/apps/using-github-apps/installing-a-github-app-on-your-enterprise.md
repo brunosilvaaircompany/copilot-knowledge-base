@@ -13,10 +13,7 @@ When an enterprise owner installs a GitHub App on your enterprise, the app will 
 
 The GitHub App must request enterprise-level permissions. It can request other permissions as well, but only the enterprise permissions will be granted during installation.
 
-The app can be owned by your enterprise, by an organization within your enterprise, or by a third-party developer. To install a public app from a third party, use the installation link that the app's developer provides. You cannot install a private app that is owned by an account outside your enterprise.
-
-> [!NOTE]
-> There is one exception to installing a third-party app across enterprises. If an app requests the "Enterprise organization installations" permission, it can only be installed on the enterprise that owns the app. You cannot install this app on your enterprise if it is owned outside your enterprise. In EMU enterprises and GHES, enterprise's users count as being within the enterprise, so their apps can be installed on the enterprise.
+The app can be owned by your enterprise or organization in your enterprise..
 
 ## Installing a GitHub App on your enterprise
 

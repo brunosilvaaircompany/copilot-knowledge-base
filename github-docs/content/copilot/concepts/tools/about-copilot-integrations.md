@@ -10,11 +10,11 @@ For more information about Copilot cloud agent, see [About Cloud Agent](https://
 
 Currently, Copilot cloud agent supports integrations with the following tools:
 
-* **Microsoft Teams**: [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-teams) - Learn how to set up the Microsoft Teams integration to collaborate with Copilot cloud agent directly in your Teams messages and channels.
-* **Slack**: [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-slack) - Learn how to set up the Slack integration to collaborate with Copilot cloud agent directly in your Slack workspace.
-* **Linear**: [Integrate Cloud Agent With Linear](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-linear) - Learn how to set up the Linear integration to trigger Copilot cloud agent directly from your Linear issues.
-* **Azure Boards**: [Integrate Cloud Agent With Azure Boards](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-azure-boards) - Learn how to set up the Azure Boards integration to trigger Copilot cloud agent directly from your Azure Boards work items.
-* **Jira**: [Integrate Cloud Agent With Jira](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/integrate-cloud-agent-with-jira) - Learn how to set up the Jira integration to trigger Copilot cloud agent directly from your Jira workspace.
+* **Microsoft Teams**: [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams) - Learn how to set up the Microsoft Teams integration to collaborate with Copilot cloud agent directly in your Teams messages and channels.
+* **Slack**: [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack) - Learn how to set up the Slack integration to collaborate with Copilot cloud agent directly in your Slack workspace.
+* **Linear**: [Integrate Cloud Agent With Linear](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-linear) - Learn how to set up the Linear integration to trigger Copilot cloud agent directly from your Linear issues.
+* **Azure Boards**: [Integrate Cloud Agent With Azure Boards](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-azure-boards) - Learn how to set up the Azure Boards integration to trigger Copilot cloud agent directly from your Azure Boards work items.
+* **Jira**: [Integrate Cloud Agent With Jira](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-jira) - Learn how to set up the Jira integration to trigger Copilot cloud agent directly from your Jira workspace.
 
 ## Benefits of integrations
 

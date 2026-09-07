@@ -74,7 +74,7 @@ The following changes also apply to single organizations that are automatically 
 
 ## Next steps
 
-Set up your new enterprise with our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/enterprise-onboarding) journey for GitHub Enterprise Cloud.
+Set up your new enterprise with our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/admin/enterprise-onboarding) journey for GitHub Enterprise Cloud.
 
 ## Further reading
 

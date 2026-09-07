@@ -67,10 +67,14 @@ For more detailed optimization tips, see [Optimize Ai Usage](https://docs.github
 
 To share feedback, click the **Give feedback** icon in the bottom-left corner of the app.
 
+## Content exclusion
+
+For Copilot Business and Copilot Enterprise users, the GitHub Copilot app respects content exclusion policies configured at the enterprise, organization, and repository levels. Excluded files are not used as context. For more information, see [Content Exclusion](https://docs.github.com/en/copilot/concepts/context/content-exclusion).
+
 ## Public code
 
 GitHub Copilot app may generate code that is a match or near match of publicly available code, even if the "Suggestions matching public code" policy is set to "Block." See [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#enabling-or-disabling-suggestions-matching-public-code).
 
 ## Further reading
 
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started)
+* [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app)

@@ -15,7 +15,7 @@ This guide provides an overview of how to configure Octopus Deploy to trust GitH
 
 
 
-* If you're following this guide on GHE.com, understand that you must substitute certain values in the following documentation. See [Openid Connect](https://docs.github.com/en/actions/concepts/security/openid-connect#following-these-guides-on-ghecom).
+* If you're following this guide on GHE.com, understand that you must substitute certain values in the following documentation. See [Openid Connect](https://docs.github.com/en/actions/concepts/security/openid-connect#configuring-oidc-on-ghecom).
 
 
 

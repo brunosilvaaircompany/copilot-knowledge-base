@@ -57,7 +57,9 @@ Read access to the repository.
   * Audit log streaming to an external SIEM or log management system requires prior configuration. See [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise).
    * Without audit log streaming, you won't be able to run more complex queries, such as correlating events across organizations or repositories, or pivoting from a specific token to all related events.
    * Git events data are included in the stream.
+
 * We recommend streaming **API request events**; this requires prior configuration. See [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#enabling-audit-log-streaming-of-api-requests).
+
 * For enterprises on GitHub Enterprise Cloud, we recommend displaying **IP addresses** in the audit logs; this requires prior configuration. See [Displaying Ip Addresses In The Audit Log For Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/displaying-ip-addresses-in-the-audit-log-for-your-enterprise).
 * Different GitHub plans have different data availability and data retention offerings:
    * GitHub Free and GitHub Team plans can't view API activity or Git events at all.

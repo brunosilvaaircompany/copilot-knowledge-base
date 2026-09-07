@@ -58,7 +58,6 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | Model | 1 million token context window | Configurable reasoning |
 | --- | --- | --- |
 | Claude Sonnet 4.6 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| Claude Opus 4.6 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.7 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -72,6 +71,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | GPT-5.6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Terra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| GPT-6 Astra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Kimi K3 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 {% endrowheaders %}
@@ -101,10 +101,10 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 
 | Model                                                    | Visual Studio Code | Visual Studio | JetBrains IDEs | Xcode | Eclipse |
 |----------------------------------------------------------|----------------------------------------------|------------------------------------------|----------------|-------|---------|
-| Gemini 3.1 Pro       | `v1.115.0` | `17.14.22` or `18.1.0`         | `1.5.62` | `0.46.0` | `0.14.0` |
 | Gemini 3.5 Flash     | `v1.115.0` | `17.14.22` or `18.1.0`         | `1.5.62` | `0.46.0` | `0.14.0` |
 | Gemini 3.6 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.7 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
+| Gemini 3.8 Flash     | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | GPT-5.2-Codex        | No minimum listed | `17.14.19` or `18.0.0`         | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.4              | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
@@ -113,6 +113,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | GPT-5.6 Luna         | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Sol          | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Terra        | `1.128.0` | TBD | TBD | TBD | TBD |
+| GPT-6 Astra         | `1.136.1` | `17.14.19` | TBD | TBD | TBD |
 | Claude Opus 4.8      | `v1.118` | `17.14.6`                     | TBD | TBD | TBD |
 | Claude Opus 5       | `v1.128.0` | `17.14.22` | TBD | TBD | TBD |
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
@@ -144,12 +145,14 @@ The following table shows which AI models are available in each Copilot plan. Fo
 | Available models                               | Copilot Pro  | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
 |---------------------------------------------------------|-------------------------------------------------|-----------------------------------------------------|------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------|
 | {% for model in tables.copilot.model-supported-plans %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' %}[^claude-fable-5]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' %}[^claude-fable-5]{% endif %}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-plans]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
 | {% endfor %}                                            |
 
 {% endrowheaders %}
 
 [^gpt54nano]: GPT-5.4 nano is currently only available in the Codex Visual Studio Code extension (Copilot Pro+ only) and is not available in Copilot Chat.
+
+[^claude-sonnet-46-plans]: Claude Sonnet 4.6 was retired on September 1, 2026, but remains available to individual Copilot subscribers on annual Copilot Pro and Copilot Pro+ plans. It is not available to subscribers on monthly plans.
 
 
 > [!NOTE]

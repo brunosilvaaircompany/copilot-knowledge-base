@@ -4,7 +4,7 @@
 
 There are a few ways that you can get access to GitHub Copilot:
 
-* **Use Copilot Free**. Get a limited experience of Copilot with up to 2,000 inline suggestion requests and limited chat and agent usage-no paid plan required. See [Individual Plans](https://docs.github.com/en/copilot/concepts/billing/individual-plans).
+* **Use Copilot Free**. Get a limited experience of Copilot with up to 2,000 inline suggestion requests and limited chat and agent usage-no paid plan required. See [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
 * **Sign up for a paid plan**. You can subscribe to one of these plans:
 
@@ -50,6 +50,6 @@ If you have your own Copilot plan (instead of using your organization or enterpr
 
 Start using Copilot to help you write code faster and more efficiently. For all the ways you can use Copilot, see [How Tos](https://docs.github.com/en/copilot/how-tos). Copilot code suggestions, Copilot Chat in GitHub, and Copilot Chat in your IDE are a great place to start.
 
-To get started with agent-driven development in the GitHub Copilot app, see [Getting Started](https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started).
+To get started with agent-driven development in the GitHub Copilot app, see [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app).
 
 To learn how to best use Copilot, see [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices) and [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering).

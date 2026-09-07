@@ -43,21 +43,19 @@ See [Get Started With A Copilot Plan](https://docs.github.com/en/copilot/how-tos
 
 ### Organizations and enterprises
 
->[!IMPORTANT]
-> 
-
-On April 22, 2026, new self-serve purchases of Copilot Business and Copilot Enterprise were temporarily paused. 
-
-Self-serve sign-ups **are reopening soon** for customers paying by credit card or PayPal. You might be charged prorated seat costs at sign-up. Additional usage beyond your included amount requires payment as you go. Self-serve trials remain paused.
-
-
-
-
-**Organization owners** can get Copilot Business for their team through an enterprise account. If you don't already have an enterprise account, you can create one specifically for managing Copilot Business licenses. See [About Enterprise Accounts For Copilot Business](https://docs.github.com/en/copilot/concepts/about-enterprise-accounts-for-copilot-business).
+Owners of **organizations on GitHub Free or GitHub Team** can purchase Copilot Business for their organization. [Subscribe to Copilot Business](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=business).
 
 If your organization is owned by an enterprise that has a Copilot subscription, you can ask your enterprise owner to enable Copilot for your organization. Go to [https://github.com/settings/copilot](https://github.com/settings/copilot) and request access under "Get Copilot from an organization."
 
-**Enterprise owners** can set up Copilot Business or Copilot Enterprise for their enterprise by [contacting GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text). 
+
+**Enterprise owners** can set up Copilot Business or Copilot Enterprise for their enterprise.
+
+* If you want to pay by credit card or PayPal, [subscribe here](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button).
+
+   >[!NOTE] If you are currently in a trial of GitHub Enterprise Cloud, you must convert to a paid enterprise before you can purchase GitHub Copilot.
+
+* For other payment methods, [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
+
 
 ## Next steps
 

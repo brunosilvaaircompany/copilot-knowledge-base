@@ -72,7 +72,7 @@ To migrate your enterprise from SAML to OIDC, you will disable your existing Git
    > [!WARNING]
    > Do not provision new users from the application on Entra ID during the migration.
 
-1. In a new tab or window, while signed in as the setup user, create a personal access token (classic) with the **scim:enterprise** scope and **no expiration** and copy it to your clipboard. For more information about creating a new token, see [Configuring Scim Provisioning For Users](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users#creating-a-personal-access-token).
+1. In a new tab or window, while signed in as the setup user, create a personal access token (classic) with the **scim:enterprise** scope and **no expiration** and copy it to your clipboard. For more information about creating a new token, see [Configuring Scim Provisioning For Users](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users).
 1. In the provisioning settings for the GitHub Enterprise Managed User (OIDC) application in the Microsoft Entra admin center, under "Tenant URL", the tenant URL for your enterprise:
     * For **GitHub.com**: `https://api.github.com/scim/v2/enterprises/YOUR_ENTERPRISE`, replacing YOUR_ENTERPRISE with the name of your enterprise account. For example, if your enterprise account's URL is `https://github.com/enterprises/octo-corp`, the name of the enterprise account is `octo-corp`.
     * For **GHE.com**: `https://api.SUBDOMAIN.ghe.com/scim/v2/enterprises/SUBDOMAIN`, where SUBDOMAIN is your enterprise's subdomain on GHE.com.

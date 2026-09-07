@@ -136,7 +136,7 @@ A pull request proposes your branch's changes for review before they merge into 
 
 ## Further reading
 
-* [Individual Plans](https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/billing/individual-plans)
+* [Plans](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/plans)
 * [Usage Based Billing For Individuals](https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/billing/usage-based-billing-for-individuals)
 * [Monitor Ai Usage](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/manage-and-track-spending/monitor-ai-usage) in the GitHub Enterprise Cloud documentation
 

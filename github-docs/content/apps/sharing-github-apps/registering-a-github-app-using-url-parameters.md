@@ -59,7 +59,7 @@ For example, to select "Read & write" permissions in the user interface for `con
 
 If the owning account is not an enterprise or an enterprise-owned organization, it cannot request enterprise permissions.
 
-For more information about permissions and GitHub Apps, see [Choosing Permissions For A GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app). To see the list of permissions available for use and their parameterized names, see [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#account-permissions).
+For more information about permissions and GitHub Apps, see [Choosing Permissions For A GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app). To see the list of permissions available for use and their parameterized names, see [Permissions Required For GitHub Apps](https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps).
 
 ## GitHub App webhook events
 

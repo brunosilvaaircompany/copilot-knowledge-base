@@ -134,7 +134,7 @@ For information about managing your GitHub Advanced Security license, see [Manag
 
 ## Leveraging GitHub Copilot Chat to understand security alerts
 
-Additionally, with a GitHub Copilot Enterprise license, you can ask GitHub Copilot Chat for help to better understand security alerts in repositories in your organization (code scanning, secret scanning, and Dependabot alerts). See [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github#asking-questions-about-alerts-from-github-advanced-security-features).
+Additionally, with a GitHub Copilot Enterprise license, you can ask GitHub Copilot Chat for help to better understand security alerts in repositories in your organization (code scanning, secret scanning, and Dependabot alerts). See [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/get-started-with-chat-in-your-ide#ask-questions-about-alerts-from-github-advanced-security-features).
 
 
 

@@ -6,7 +6,7 @@ You can use content exclusion to configure Copilot to ignore certain files. When
 
 * Inline suggestions will not be available in the affected files.
 * The content in affected files will not inform inline suggestions in other files.
-* The content in affected files will not inform GitHub Copilot Chat's responses.
+* The content in affected files will not inform Copilot's responses.
 * Affected files will not be reviewed in a Copilot code review.
 
 ### Who can configure content exclusion
@@ -27,17 +27,19 @@ Repository administrators, organization owners, and enterprise owners can config
 
 The Copilot Business and Copilot Enterprise plans provide the following level of support for content exclusion.
 
-| Tool                                            |            Inline suggestions support         | Copilot Chat support |
-|-------------------------------------------------|:---------------------------------------------:|:----------------------------------------------------------------:|
-| Visual Studio        | {% octicon "check" aria-label="Supported" %}  |           {% octicon "check" aria-label="Supported" %}           |
-| Visual Studio Code    | {% octicon "check" aria-label="Supported" %}  |           {% octicon "check" aria-label="Supported" %}           |
-| JetBrains IDEs                                  | {% octicon "check" aria-label="Supported" %}  |           {% octicon "check" aria-label="Supported" %}           |
-| Vim/Neovim                                      | {% octicon "check" aria-label="Supported" %}  |                          Not applicable                          |
-| Xcode                                           | {% octicon "check" aria-label="Supported" %}  |           {% octicon "x" aria-label="Not supported" %}           |
-| Eclipse                                         | {% octicon "check" aria-label="Supported" %}  |           {% octicon "x" aria-label="Not supported" %}           |
-| Azure Data Studio                               | {% octicon "x" aria-label="Not supported" %}  |                          Not applicable                          |
-| The GitHub website |                Not applicable                 |           {% octicon "check" aria-label="Supported" %}           |
-| GitHub Mobile    |                Not applicable                 |           {% octicon "check" aria-label="Supported" %}           |
+| Tool                                            | Inline suggestions support                    | Chat and agent support                         |
+|-------------------------------------------------|:---------------------------------------------:|:----------------------------------------------:|
+| Visual Studio        | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
+| Visual Studio Code    | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
+| JetBrains IDEs                                  | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
+| Vim/Neovim                                      | {% octicon "check" aria-label="Supported" %}  | Not applicable                                 |
+| Xcode                                           | {% octicon "check" aria-label="Supported" %}  | {% octicon "x" aria-label="Not supported" %}   |
+| Eclipse                                         | {% octicon "check" aria-label="Supported" %}  | {% octicon "x" aria-label="Not supported" %}   |
+| Azure Data Studio                               | {% octicon "x" aria-label="Not supported" %}  | Not applicable                                 |
+| The GitHub website | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
+| GitHub Mobile    | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
+| GitHub Copilot app | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
+| GitHub Copilot CLI        | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
 
 Content exclusions also apply to Copilot code review on the GitHub website.
 

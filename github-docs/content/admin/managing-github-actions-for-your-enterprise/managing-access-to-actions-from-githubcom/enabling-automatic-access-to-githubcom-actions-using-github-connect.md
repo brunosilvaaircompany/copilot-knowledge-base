@@ -12,7 +12,7 @@ By default, GitHub Actions workflows on GitHub Enterprise Server cannot use acti
 
 If your cloud deployment is on GHE.com, GitHub Connect can still resolve public actions from GitHub.com. This requires GitHub Enterprise Server version 3.20.6 or later, or any feature release from 3.21.0.
 
-To use actions from GitHub.com, both GitHub Enterprise Server and your self-hosted runners must be able to make outbound connections to GitHub.com. No inbound connections from GitHub.com are required. For more information, see [Self Hosted Runners](https://docs.github.com/en/actions/reference/runners/self-hosted-runners#communication-between-self-hosted-runners-and-githubcom).
+To use actions from GitHub.com, both GitHub Enterprise Server and your self-hosted runners must be able to make outbound connections to GitHub.com. No inbound connections from GitHub.com are required. For more information, see [Self Hosted Runners](https://docs.github.com/en/actions/reference/runners/self-hosted-runners#communication-with-githubcom).
 
 
 Alternatively, if you want stricter control over which actions are allowed in your enterprise, you can manually download and sync public actions onto your enterprise instance using the `actions-sync` tool. For more information, see [Manually Syncing Actions From Githubcom](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom).

@@ -22,11 +22,15 @@ With streamed logs, enterprise and organization owners can independently investi
 
 To set up audit log streaming, see [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise).
 
+
+
 ### Stream API request events
 
 By default, the audit log stream won't include API request events. Enable API request streaming so that you can detect and investigate unauthorized API access or data exfiltration by compromised tokens or apps.
 
 See [Enabling audit log streaming of API requests](/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#enabling-audit-log-streaming-of-api-requests).
+
+
 
 ### Display IP addresses
 

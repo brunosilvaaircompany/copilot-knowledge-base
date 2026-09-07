@@ -62,6 +62,7 @@ Once you create custom agents, they become available to:
 
 * **Copilot cloud agent on GitHub.com**: The agents tab and panel, issue assignment, and pull requests
 * **Copilot cloud agent in IDEs**: Visual Studio Code, JetBrains IDEs, Eclipse, and Xcode
+* **GitHub Copilot app**
 * **GitHub Copilot CLI**
 
 You can use agent profiles directly in Visual Studio Code, JetBrains IDEs, Eclipse, and Xcode. Some properties may function differently or be ignored between environments.

@@ -60,7 +60,7 @@ To get started, read the guide for your chosen authentication method.
 * [Configuring Saml Single Sign On For Enterprise Managed Users](https://docs.github.com/en/admin/managing-iam/configuring-authentication-for-enterprise-managed-users/configuring-saml-single-sign-on-for-enterprise-managed-users)
 
 
-GitHub offers a "paved-path" integration and full support if you use a partner IdP for both authentication and provisioning. Alternatively, you can use any system, or combination of systems, that conforms to SAML 2.0 and SCIM 2.0. However, support for resolving problems with these systems may be limited. For more details, see [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users#identity-management-systems).
+GitHub offers a "paved-path" integration and full support if you use a partner IdP for both authentication and provisioning. Alternatively, you can use any system, or combination of systems, that conforms to SAML 2.0 and SCIM 2.0. However, support for resolving problems with these systems may be limited. For more details, see [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users#how-does-emus-integrate-with-identity-management-systems).
 
 ## Configure provisioning
 

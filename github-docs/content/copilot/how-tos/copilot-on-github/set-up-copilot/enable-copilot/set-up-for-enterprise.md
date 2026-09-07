@@ -2,9 +2,14 @@
 
 ## Enable GitHub Copilot
 
-To purchase GitHub Copilot for your enterprise, [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
+**Enterprise owners** can set up Copilot Business or Copilot Enterprise for their enterprise.
 
-A member of the Sales team will work with you to set up Copilot for your enterprise.
+* If you want to pay by credit card or PayPal, [subscribe here](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button).
+
+   >[!NOTE] If you are currently in a trial of GitHub Enterprise Cloud, you must convert to a paid enterprise before you can purchase GitHub Copilot.
+
+* For other payment methods, [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
+
 
 ## Set policies
 

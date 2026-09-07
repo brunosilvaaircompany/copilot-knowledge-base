@@ -13,4 +13,4 @@ GitHub Enterprise Cloud includes an enterprise account, which allows you to mana
 
 ## Get started
 
-To get started, see our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/enterprise-onboarding) journey for GitHub Enterprise Cloud.
+To get started, see our [Enterprise Onboarding](https://docs.github.com/en/enterprise-cloud@latest/admin/enterprise-onboarding) journey for GitHub Enterprise Cloud.

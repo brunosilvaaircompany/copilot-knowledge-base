@@ -49,7 +49,7 @@ If your enterprise does not use Enterprise Managed Users or usage-based billing,
 
 * Suspended Managed user accounts
 * Enterprise owners who are not a member or owner of at least one organization in the enterprise
-* The user who set up the enterprise
+* The setup user for an enterprise that uses Enterprise Managed Users (see [Setup User](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/identity-and-access-management/setup-user))
 * Enterprise billing managers
 * Billing managers for individual organizations
 * Anyone with a pending invitation to become a billing manager

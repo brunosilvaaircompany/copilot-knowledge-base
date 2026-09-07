@@ -48,8 +48,8 @@ Anyone can install GitHub Apps on their personal account, unless they are an Ent
 
 Organization owners can install GitHub Apps on their organization.
 
-Enterprise owners can install GitHub Apps on their enterprise accounts, if the application requests enterprise permissions. The app can be owned by the enterprise, an organization within the enterprise, or a third-party developer. Third-party apps must be public and cannot request the "Enterprise organization installations" or "Enterprise organization installation repositories" permissions.
-
+Enterprise owners can install GitHub Apps on their enterprise accounts, if the application requests enterprise permissions. The app can be owned by the enterprise{% ifversion ghes %} or organization.
+{% endif %}
 
 Repository admins can install GitHub Apps in the organization that owns the repository if the app does not request any organization permissions nor the "repository administration" permission. When doing so, they can only install the app with access to the repositories that they admin. Organization owners can restrict GitHub App installation by repository admins. When this restriction is enabled, repository admins cannot install GitHub Apps and must instead request that organization owners install the desired app. For more information, see [Limiting OAUTH App And GitHub App Access Requests And Installations](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/limiting-oauth-app-and-github-app-access-requests-and-installations).
 

@@ -16,6 +16,8 @@ Metrics are available through:
 
 Copilot usage metrics are derived from telemetry across multiple Copilot surfaces, including IDE, Copilot CLI, and agent apps activity. Most metrics come from client-side IDE telemetry, and **end users need telemetry enabled in their IDE** for the richest data in these metrics.
 
+Individual agent app metrics are available in the usage metrics APIs and NDJSON exports. They are not available in the usage metrics dashboards. Activity from agent apps is already included in daily, weekly, and monthly active-user totals through server-side telemetry. The individual metrics provide a detailed breakdown but do not change these totals.
+
 In addition, Copilot usage metrics incorporate **server-side telemetry** to identify active users that client-side telemetry alone may miss. Network conditions, proxy configurations, and client settings can prevent client telemetry from reaching GitHub, so server-side signals ensure those users still appear in your reports.
 
 Users surfaced through server-side telemetry are fully counted toward your active user totals (such as daily active users, `daily_active_users` ). When available, they may also appear in `totals_by_ide` (including the most recently detected IDE and Copilot extension versions in per-user reports). However, other dimensional breakdowns—such as `totals_by_feature` and lines-of-code metrics—remain empty until richer telemetry is available for them. Top-level totals and breakdowns for users already captured by client telemetry are unchanged.

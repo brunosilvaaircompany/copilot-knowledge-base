@@ -42,8 +42,8 @@ You can apply various filters to the alerts list to help you find the alerts you
 ||
 |`results`|Display alerts for supported secrets and custom patterns (`default`), or for generic patterns (`generic`) such as private keys, and AI-detected generic secrets such as passwords. See [Supported Secret Scanning Patterns](https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns#supported-provider-patterns), and for more information about AI-detected generic secrets, see [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).|
 |{% elsif ghes %}|
-|`results`|Display alerts for supported secrets and custom patterns (`default`), or generic patterns such as private keys (`generic`). See [Supported Secret Scanning Patterns](https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns#supported-provider-patterns).|
-||
+|`results`|Display alerts for supported secrets and custom patterns (`default`), or generic patterns such as private keys (`generic`){% ifversion secret-scanning-ai-generic-secret-detection %}, and AI-detected generic secrets such as passwords. See [Supported Secret Scanning Patterns](https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns#supported-provider-patterns).|
+|{% endif %}|
 |`secret-type`|Display alerts for a specific secret type (`SECRET-NAME`), for example, `secret-type:github_personal_access_token`. For a list of supported secret types, see [Supported Secret Scanning Patterns](https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns#supported-provider-patterns).|
 |`sort`|Display alerts from newest to oldest (`created-desc`), oldest to newest (`created-asc`), most recently updated (`updated-desc`), or least recently updated (`updated-asc`).|
 |`team`|Display alerts owned by members of the specified team, for example: `team:octocat-dependabot-team`.|

@@ -47,7 +47,7 @@ For more information, see [Code Scanning Alerts](https://docs.github.com/en/code
 
 ## Asking GitHub Copilot Chat about code scanning alerts
 
-With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to better understand security alerts, including code scanning alerts, in repositories in your organization. For more information, see [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github#asking-questions-about-alerts-from-github-advanced-security-features).
+With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to better understand security alerts, including code scanning alerts, in repositories in your organization. For more information, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/get-started-with-chat-in-your-ide#ask-questions-about-alerts-from-github-advanced-security-features).
 
 
 

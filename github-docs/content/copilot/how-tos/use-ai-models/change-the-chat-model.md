@@ -8,7 +8,7 @@ To view the available models per client, see [Supported Models](https://docs.git
 
 Copilot allows you to change the model during a chat and have the alternative model used to generate responses to your prompts.
 
-If you access Copilot Chat through a Copilot Business or Copilot Enterprise subscription, your organization or enterprise must grant members the ability to switch to a different model. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#copilot-access-to-alternative-ai-models).
+If you access Copilot Chat through a Copilot Business or Copilot Enterprise subscription, your organization or enterprise must grant members the ability to switch to a different model. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
 
 
 Changing the model used by Copilot Chat does not affect the model used for Copilot inline suggestions. See [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model).
@@ -25,7 +25,7 @@ These instructions are for Copilot on the GitHub website. For instructions on di
 
 > [!NOTE] If you use Copilot Extensions, they may override the model you select.
 
-If you access Copilot Chat through a Copilot Business or Copilot Enterprise subscription, your organization or enterprise must grant members the ability to switch to a different model. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#copilot-access-to-alternative-ai-models).
+If you access Copilot Chat through a Copilot Business or Copilot Enterprise subscription, your organization or enterprise must grant members the ability to switch to a different model. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) or [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
 
 
 1. In the top right of any page on GitHub, click the **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %}** icon.

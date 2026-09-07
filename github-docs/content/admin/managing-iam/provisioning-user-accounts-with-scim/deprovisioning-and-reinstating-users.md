@@ -7,7 +7,7 @@ If you use Enterprise Managed Users{% endif %}, you will use SCIM to:
 
 Before you deprovision a user, it's important to understand the effects of deprovisioning, which depend on the **type of deprovisioning API call** that GitHub receives from your identity provider.
 
-> [!IMPORTANT] Before reading further, ensure you understand how your enterprise has implemented SCIM. GitHub provides a "paved-path" application if you use a supported identity provider (IdP) for both authentication and provisioning. If you don't use a paved-path application, you will use the REST API to make SCIM requests. See [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users#identity-management-systems).
+> [!IMPORTANT] Before reading further, ensure you understand how your enterprise has implemented SCIM. GitHub provides a "paved-path" application if you use a supported identity provider (IdP) for both authentication and provisioning. If you don't use a paved-path application, you will use the REST API to make SCIM requests. See [Enterprise Managed Users](https://docs.github.com/en/admin/concepts/identity-and-access-management/enterprise-managed-users#how-does-emus-integrate-with-identity-management-systems).
 
 ## Types of user deprovisioning
 

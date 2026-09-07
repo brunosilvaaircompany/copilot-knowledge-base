@@ -49,7 +49,10 @@ Beyond the default detection of partner and provider secrets, you can expand and
 * **Custom patterns.** Define your own regular expressions to detect organization-specific secrets that aren't covered by default patterns.
 * **Validity checks.** Prioritize remediation by checking whether detected secrets are still active.
 
-* **AI-detected secrets.** Use AI to detect unstructured secrets like passwords, or to generate regular expressions for custom patterns.
+* **AI-detected secrets.** Use AI to detect unstructured secrets like passwords.
+
+
+* **AI-generated regular expressions.** Use AI to generate regular expressions for custom patterns.
 
 
 

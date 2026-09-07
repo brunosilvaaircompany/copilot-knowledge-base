@@ -27,7 +27,6 @@ Use these models for common development tasks that require a balance of quality,
 | GPT-5.3-Codex | Delivers higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews without lengthy instructions. |
 | GPT-5 mini   | Reliable default for most coding and writing tasks. Fast, accurate, and works well across languages and frameworks.                             |
 | GPT-5.6 Terra | Balanced all-round choice for everyday interactive and agentic coding.                                                                          |
-| Raptor mini  | Specialized for fast, accurate inline suggestions and explanations.                                        |
 | MAI-Code-1-Flash | Strong instruction-following and adaptive reasoning make it a reliable default for everyday coding tasks, writing, and multi-turn development workflows. |
 
 ### When to use these models
@@ -80,9 +79,8 @@ These models are designed for tasks that require step-by-step reasoning, complex
 | GPT-5 mini       | Delivers deep reasoning and debugging with faster responses and lower resource usage than GPT-5. Ideal for interactive sessions and step-by-step code analysis. |
 | GPT-5.5           | Great at complex reasoning, code analysis, and technical decision-making.                                                                                       |
 | GPT-5.6 Sol       | The highest reasoning ceiling in the GPT-5.6 family. Best for complex reasoning over large codebases and demanding, long-running agentic work. |
-| Claude Sonnet 4.6 | Improves on Sonnet 4.5 with more reliable completions and smarter reasoning under pressure.                                                                     |
-| Claude Opus 4.7   | Anthropic’s most powerful model. Improves on Claude Opus 4.6.                                                               |
-| Gemini 3.1 Pro    | Advanced reasoning across long contexts and scientific or technical analysis.                                                                                   |
+| Claude Sonnet 4.6 | Reliable completions and smarter reasoning under pressure.                                                                     |
+| Claude Opus 4.7   | Anthropic’s most powerful model. Strong at deep reasoning over large, complex codebases.                                                               |
 
 ### When to use these models
 
@@ -106,8 +104,7 @@ Use these models when you want to ask questions about screenshots, diagrams, UI 
 | Model                                                 | Why it's a good fit                                                                                                                                                       |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GPT-5 mini       | Reliable default for most coding and writing tasks. Fast, accurate, and supports multimodal input for visual reasoning tasks. Works well across languages and frameworks. |
-| Claude Sonnet 4.6 | Improves on Sonnet 4.5 with more reliable completions and smarter reasoning under pressure.                                                                               |
-| Gemini 3.1 Pro    | Deep reasoning and debugging, ideal for complex code generation, debugging, and research workflows.                                                                       |
+| Claude Sonnet 4.6 | Reliable completions and smarter reasoning under pressure.                                                                               |
 
 ### When to use these models
 

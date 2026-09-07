@@ -71,7 +71,7 @@ You must be an organization owner or moderator to block a user from a repository
 
 1. In the sidebar, select **{% octicon "report" aria-hidden="true" aria-label="report" %} Moderation**, then click **Blocked users**.
 
-1. Under "Block a user", in the text field, type the username of the user you'd like to block.
+1. Under "Block a user", search for the user by username, full name, or email address, then select the user.
 1. If you'd like to set a time limit for the block, next to the text field, select the **Block options** dropdown menu, and click the amount of time you'd like to block the user.
 1. Optionally, select **Close all open issues, pull requests, and discussions opened by this user**.
 

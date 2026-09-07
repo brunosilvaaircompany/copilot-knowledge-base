@@ -25,7 +25,7 @@ GitHub Copilot app supports these model providers:
 
 ## Prerequisites
 
-* The GitHub Copilot app is installed. For setup steps, see [Getting Started](https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started).
+* The GitHub Copilot app is installed. For setup steps, see [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app).
 * You have any required credentials, such as API key, for your model provider.
 ## Set up a model provider
 

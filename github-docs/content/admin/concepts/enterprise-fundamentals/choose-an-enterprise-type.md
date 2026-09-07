@@ -45,7 +45,7 @@ GitHub partners with some developers of identity management systems to provide a
 
 If you cannot use a paved-path integration, you can use another identity management system that **meets our guidelines**.
 
-For full details, see [Enterprise Managed Users](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/identity-and-access-management/enterprise-managed-users#identity-management-systems).
+For full details, see [Enterprise Managed Users](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/identity-and-access-management/enterprise-managed-users#how-does-emus-integrate-with-identity-management-systems).
 
 ### Personal accounts
 

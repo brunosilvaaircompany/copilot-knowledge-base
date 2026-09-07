@@ -4,7 +4,7 @@
 
 To make it easier for people to understand and navigate your work, we recommend that you create a README file for every repository.
 
-You can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct{% elsif ghes %} and contribution guidelines, communicates expectations for your project and helps you manage contributions.
+You can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions.
  For more information, see [About Readmes](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes).
 
 ## Secure your repository

@@ -5,7 +5,7 @@
 You can use your repository settings to specify content in your repository that GitHub Copilot should ignore.
 
 > [!NOTE]
-> GitHub Copilot CLI and Agent mode in Copilot Chat in IDEs do not support content exclusion. For more information about these Copilot features, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli) and [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+> Agent mode in Copilot Chat in IDEs does not support content exclusion. For more information, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
 
 1. On GitHub, navigate to the main page of the repository.
 
