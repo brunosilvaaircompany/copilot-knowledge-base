@@ -1,4 +1,4 @@
-# Agents
+# Understand AI agents
 
 An agent is an AI system that uses a language model and [tools](tools.md) to complete a goal on your behalf. A language model generates responses based on the information in a prompt. An agent goes further by gathering context, taking actions in your development environment, evaluating the results, and repeating these steps as needed.
 

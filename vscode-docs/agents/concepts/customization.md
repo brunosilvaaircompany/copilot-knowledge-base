@@ -1,4 +1,4 @@
-# Agent customization
+# Understand agent customization
 
 AI models have broad knowledge, but they don't know your codebase, team practices, or development systems. Agent customization adapts an agent to your environment by adding persistent context, repeatable workflows, specialized roles, external tools, and deterministic controls.
 

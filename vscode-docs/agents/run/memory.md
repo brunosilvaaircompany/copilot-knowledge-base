@@ -1,4 +1,4 @@
-# Memory in {% data variables.product.prodname_vscode_shortname %} agents
+# Use memory with agents in {% data variables.product.prodname_vscode_shortname %}
 
 Agents in {% data variables.product.prodname_vscode %} use memory to retain context across conversations. Rather than starting from scratch each session, agents recall your preferences, apply lessons from previous tasks, and build up knowledge about your codebase over time.
 

@@ -1,4 +1,4 @@
-# Language models
+# Understand language models
 
 {% data variables.product.prodname_vscode %} uses large language models (LLMs) to power its AI features. You have flexibility in which models you use and how you access them:
 

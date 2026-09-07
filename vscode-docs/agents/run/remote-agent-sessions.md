@@ -1,4 +1,4 @@
-# Remote agent sessions
+# Run and manage remote agent sessions
 
 The [{% data variables.copilot.agents_window %}](agents-window.md) lets you connect to remote machines to start agent sessions or check in on existing ones. You can connect over SSH, through a dev tunnel, or use the {% data variables.copilot.agents_window %} directly in a browser from any device.
 

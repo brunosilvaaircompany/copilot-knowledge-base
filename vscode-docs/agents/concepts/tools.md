@@ -1,10 +1,22 @@
-# Tools
+# Understand tools in AI agents
 
-Tools are the mechanism that lets the model act on your development environment. Without tools, a [language model](language-models.md) can only generate text. With tools, an [agent](agents.md) can read files, write code, run terminal commands, search your codebase, and connect to external services.
+A tool is a capability that lets an [agent](agents.md) gather information or take an action. Without tools, a [language model](language-models.md) can only generate text. With tools, an agent can read files, edit code, run terminal commands, search your codebase, and connect to external services.
 
-During the [agent loop](agents.md#agent-loop), the model decides which tools to call based on the task. Each tool call produces output that becomes part of the [context](context.md) for the next iteration.
+When the agent uses a tool, it makes a **tool call** with the inputs that the tool needs. The tool runs and returns **tool output**, which becomes part of the [context](context.md) for the next step in the [agent loop](agents.md#agent-loop).
 
-This article explains the types of tools available, how the agent selects and uses them, and how you can control which tools are enabled.
+This article explains how tools fit into the agent loop, the types of tools available in {% data variables.product.prodname_vscode_shortname %}, and how you control their use.
+
+## Tools in the agent loop
+
+For example, when you ask an agent to fix a failing test, it might:
+
+1. Call search and file-reading tools to find the test and related code.
+1. Use the returned file contents to decide what to change.
+1. Call an editing tool to apply the change.
+1. Call the terminal tool to run the test.
+1. Use the test output to decide whether the task is complete or another change is needed.
+
+Each call gives the agent new information or changes the development environment. Depending on your [permission level](../run/approvals.md#permission-levels), {% data variables.product.prodname_vscode_shortname %} might ask you to approve a tool call before it runs.
 
 ## Types of tools
 
@@ -14,36 +26,32 @@ This article explains the types of tools available, how the agent selects and us
 * **MCP tools**: tools provided by [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers, an open standard for connecting AI models to external tools and data sources. MCP servers can run locally on your machine or be hosted remotely. Use MCP tools to connect to databases, APIs, and other external services.
 * **Extension tools**: tools contributed by {% data variables.product.prodname_vscode_shortname %} extensions through the Language Model Tools API. Extension tools integrate deeply with the editor and are available when you install the extension.
 
-## How tools work
+## How agents choose tools
 
-When an agent processes a task, the model examines the available tools and decides which ones to call. This happens autonomously: you give the agent a high-level task, and it determines the right tools to use at each step.
+By default, the agent chooses from the enabled tools based on your request and the current context. You can give the agent a high-level goal without naming each tool that it should use.
 
-You can also explicitly reference tools in your prompts by typing `#` followed by the tool name. This is useful when you want to ensure a specific tool is used.
+To direct the agent to a specific tool or group of tools, add a `#` reference to your prompt. Learn how to [use tools in a request](../run/tools.md#use-tools-in-a-request).
 
-## Why limit the available tools
+## Control which tools are available
 
-Every tool the agent can call adds to the decision space the model has to reason about, and every tool call produces output that is added to the [context window](language-models.md#context-window). Narrowing the set of available tools to those relevant for the task helps to:
+An available tool comes from {% data variables.product.prodname_vscode_shortname %}, an MCP server, or an installed extension. An enabled tool is one that the agent is permitted to choose for a request.
 
-* **Preserve context**: fewer tool calls means less context consumed by intermediate results.
-* **Reduce credit consumption**: unnecessary tool calls increase token usage and consume more [AI credits](language-models.md#ai-credits-and-model-costs).
-* **Get more relevant results**: the agent focuses on the most appropriate tools rather than choosing from a large set.
-* **Improve performance**: a smaller tool set reduces the decision space for the model.
+Limit enabled tools to the capabilities that are relevant to your task. A focused set helps the agent choose appropriate tools, reduces the chance of unnecessary actions, and limits the tool output added to the [context window](language-models.md#context-window).
 
-Tool availability can be scoped per chat request or fixed for specific workflows in [custom agent configuration](../../agent-customization/custom-agents.md). For the [Copilot harness](../run/agent-harnesses.md), tool availability is configured once per [user profile](https://code.visualstudio.com/docs/configure/profiles) and applies across all sessions. See [Manage tools for the Copilot harness](../../agent-customization/tools.md).
+The scope of a tool selection depends on where the agent session runs. For the Local harness on the extension host, the selection applies to one chat request. For the Copilot harness on the Agent Host, the selection persists in your [user profile](https://code.visualstudio.com/docs/configure/profiles). Tools can also be fixed for a reusable [custom agent](../../agent-customization/custom-agents.md).
 
 ## Tool approval and trust
 
-Tools can perform actions that edit files, modify your environment, or access external services. {% data variables.product.prodname_vscode_shortname %} includes security controls to keep you in charge:
+Tools can edit files, modify your environment, or access external services. {% data variables.product.prodname_vscode_shortname %} provides controls for reviewing and limiting these actions:
 
-* **Approval prompts**: tools with side effects show a confirmation dialog before running. You can approve for a single use, the current session, or all future invocations.
+* **Approval prompts**: based on your permission level, a tool call can require confirmation before it runs.
 * **URL approval**: when a tool accesses a URL, a two-step process verifies both the request and the response content.
 * **Permission levels**: the [permissions picker](../run/approvals.md#permission-levels) controls how much autonomy the agent has, from requiring manual approval to fully autonomous operation.
 
-Learn more about [trust and safety](trust-and-safety.md).
+Review the tool name and inputs before you approve a call. Learn more about [trust and safety](trust-and-safety.md).
 
 ## Related resources
 
 * [Use tools with agents](../run/tools.md)
-* [Manage tools for the Copilot harness](../../agent-customization/tools.md)
+* [Manage approvals and permissions](../run/approvals.md)
 * [Add and manage MCP servers](../../agent-customization/mcp-servers.md)
-* [Agents](agents.md)
