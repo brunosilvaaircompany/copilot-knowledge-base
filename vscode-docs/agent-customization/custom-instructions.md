@@ -112,7 +112,7 @@ Use `.instructions.md` files for:
 
 ### Instructions file locations
 
-You can define instructions for a specific workspace or at the user level, where they are applied across all your workspaces. The following table lists the default file locations for instructions files based on their scope. You can configure additional file locations for workspace instructions files with the `setting(chat.instructionsFilesLocations)` setting.
+You can define instructions for a specific workspace or at the user level, where they are applied across all your workspaces. The following table lists the supported file locations for instructions files based on their scope.
 
 | Scope | Default file location |
 |-------|-----------------------|
@@ -120,9 +120,11 @@ You can define instructions for a specific workspace or at the user level, where
 | Workspace (Claude format) | `.claude/rules` folder |
 | User profile | `~/.copilot/instructions` or `~/.claude/rules` |
 
-**IMPORTANT:** For sessions that run on [Agent Host](../agents/concepts/agent-host.md), the agent reads user-level instructions from harness-agnostic folders like `~/.copilot/instructions` and `~/.claude/rules` and not from {% data variables.product.prodname_vscode_shortname %} profile user data. To move existing user-level instructions to these locations, use the [user customization migration](overview.md#migrate-user-customizations).
+**IMPORTANT:** For sessions that run on [Agent Host](../agents/concepts/agent-host.md), the agent reads user-level instructions from supported folders like `~/.copilot/instructions` and `~/.claude/rules` and not from {% data variables.product.prodname_vscode_shortname %} profile user data. To move existing user-level instructions to these locations, use the [user customization migration](overview.md#migrate-user-customizations).
 
-{% data variables.product.prodname_vscode_shortname %} searches these folders recursively, to enable you to organize instructions files in subdirectories. For example, you can group instructions by team, language, or module:
+**NOTE:** The `setting(chat.instructionsFilesLocations)` setting is deprecated and only used by the Local agent. If you configured other instruction locations with this setting, [migrate the customizations to supported locations](overview.md#migrate-customizations-from-configured-locations).
+
+{% data variables.product.prodname_vscode_shortname %} searches these folders recursively, which enables you to organize instructions files in subdirectories. For example, you can group instructions by team, language, or module:
 
 ```text
 .github/instructions/
@@ -133,17 +135,6 @@ You can define instructions for a specific workspace or at the user level, where
     api-design.instructions.md
   testing/
     unit-tests.instructions.md
-```
-
-The following example shows how to configure the instructions file locations to only allow workspace-level instructions:
-
-```json
-"chat.instructionsFilesLocations": {
-  ".github/instructions": true,
-  ".claude/rules": true,
-  "~/.copilot/instructions": false,
-  "~/.claude/rules": false
-}
 ```
 
 **TIP:** In a monorepo, enable `setting(chat.useCustomizationsInParentRepositories)` to discover instructions from the parent repository root. Learn more about [parent repository discovery](overview.md#use-customizations-in-a-monorepo).
@@ -200,11 +191,11 @@ You can modify existing instruction files by opening them in the Agent Customiza
 
 ### Generate an instructions file with AI
 
-You can use AI to generate a targeted instructions file. Type `/create-instruction` in chat and describe the convention or guideline you want to enforce (for example, "always use tabs and single quotes in this project"). The agent asks clarifying questions and generates an `.instructions.md` file with the appropriate `applyTo` pattern and content.
+You can use AI to generate a targeted instructions file. Type `/create-instructions` in chat and describe the convention or guideline you want to enforce (for example, "always use tabs and single quotes in this project"). The agent asks clarifying questions and generates an `.instructions.md` file with the appropriate `applyTo` pattern and content.
 
 You can also extract instructions from an ongoing conversation. For example, if you corrected the agent's import style during a chat session, ask "extract an instruction from this" to capture that correction as a project convention.
 
-**NOTE:** `/create-instruction` generates targeted, on-demand instruction files. To generate workspace-wide always-on instructions, use the [`/init` command](#generate-custom-instructions-for-your-workspace) instead.
+**NOTE:** `/create-instructions` generates targeted, on-demand instruction files. To generate workspace-wide always-on instructions, use the [`/init` command](#generate-custom-instructions-for-your-workspace) instead.
 
 <details>
 <summary>Example: Language-specific coding guidelines</summary>
@@ -389,7 +380,7 @@ When multiple types of custom instructions exist, they are all provided to the A
 
 If your instructions file is not being applied, check the following:
 
-* Verify that your instructions file is in the correct location. A `.github/copilot-instructions.md` file must be in the `.github` folder at the root of your workspace. A `*.instructions.md` file must be in one of the folders (or their subdirectories) specified in the `setting(chat.instructionsFilesLocations)` setting (default: `.github/instructions`) or in your user profile.
+* Verify that your instructions file is in a [supported instructions location](#instructions-file-locations). A `.github/copilot-instructions.md` file must be in the `.github` folder at the root of your workspace.
 
 * For `*.instructions.md` files, check that the `applyTo` glob pattern matches the file you are working on. If no `applyTo` property is specified, the instructions file is not applied automatically. Verify the **References** section in the chat response to see which instructions files were used.
 

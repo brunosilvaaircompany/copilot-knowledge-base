@@ -231,5 +231,5 @@ Agent network filtering or an organization policy might block the domain. Check 
 
 * Follow the [build and validate a web app with browser tools tutorial](../guides/browser-agent-testing-guide.md).
 * Learn about the [integrated browser](https://code.visualstudio.com/docs/debugtest/integrated-browser).
-* Explore [testing with AI](../guides/test-with-copilot.md).
+* Explore [testing with AI](../guides/test-code-with-ai.md).
 * Learn [how tools work in the agent loop](../concepts/tools.md).

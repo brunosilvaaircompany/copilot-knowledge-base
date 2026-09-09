@@ -245,7 +245,7 @@ Now that the TDD custom agents are set up, you can use them to implement feature
 
 Learn more about testing and AI customization in {% data variables.product.prodname_vscode_shortname %}:
 
-* [Testing with AI](test-with-copilot.md)
+* [Testing with AI](test-code-with-ai.md)
 * [Custom agents](../../agent-customization/custom-agents.md)
 * [Custom instructions](../../agent-customization/custom-instructions.md)
 * [Running tests with {% data variables.product.prodname_vscode_shortname %}](https://code.visualstudio.com/docs/debugtest/testing)

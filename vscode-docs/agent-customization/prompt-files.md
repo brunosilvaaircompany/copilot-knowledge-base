@@ -11,11 +11,11 @@ Use prompt files to:
 
 You can use the [Agent Customizations editor](overview.md#agent-customizations-editor) (Preview) to discover, create, and manage all your agent customizations in one place. Run **Chat: Open Customizations** from the Command Palette.
 
-**IMPORTANT:** Agents running on the [Agent Host](../agents/concepts/agent-host.md) don't use prompt files. To use an existing prompt with the Copilot agent, convert it to an [agent skill](agent-skills.md). The Agent Customizations editor offers a one-time migration that converts your prompt files to skills (experimental, enable `setting(chat.customizations.promptMigration.enabled)`). Prompt files continue to work with local agents that run in the {% data variables.product.prodname_vscode_shortname %} extension host.
+**IMPORTANT:** Prompt files are deprecated for [Agent Host](../agents/concepts/agent-host.md) sessions and aren't loaded by Agent Host. They continue to work with the Local agent for now, but the Local agent will be removed in a future release. Use [prompt file migration](overview.md#migrate-prompt-files-to-skills) to convert existing prompts to agent skills. This experimental migration is enabled by default.
 
 ## Prompt file locations
 
-You can define prompt files for a specific workspace or at the user level, where they are available across all your workspaces. The following table lists the default file locations for prompt files based on their scope. You can configure additional file locations for workspace prompt files with the `setting(chat.promptFilesLocations)` setting.
+You can define prompt files for a specific workspace or at the user level, where they are available across all your workspaces. The following table lists the default file locations that the Local agent uses for prompt files.
 
 | Scope | Default file location |
 |-------|-----------------------|
