@@ -39,4 +39,4 @@ OpenTelemetry (OTel) is an open source observability framework. It provides a st
 
 When you enable OTel monitoring, you can send data from users' Copilot clients to an OTel-compatible backend. This lets you analyze agent sessions and understand agent usage across your enterprise.
 
-For more information, see [Opentelemetry](https://docs.github.com/en/copilot/concepts/agents/opentelemetry).
+For more information, see [Opentelemetry](https://docs.github.com/en/copilot/concepts/enterprise/opentelemetry).

@@ -907,7 +907,7 @@ For full type definitions, input/output field tables, and additional examples fo
 
 ## See also
 
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started)
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart)
 * [Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/custom-agents)
 * [Streaming Events](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/streaming-events)
 * [Debugging](https://docs.github.com/en/copilot/how-tos/copilot-sdk/troubleshooting/debugging)

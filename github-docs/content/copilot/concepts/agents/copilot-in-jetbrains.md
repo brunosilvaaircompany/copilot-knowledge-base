@@ -24,14 +24,19 @@ There are three ways to use GitHub Copilot in JetBrains IDEs: the GitHub Copilot
 
 The GitHub Copilot plugin for JetBrains IDEs is the most comprehensive way to use Copilot and is the recommended choice. 
 
-The plugin is transitioning from its local agent harness to Copilot CLI as the default agent harness, which brings faster feature parity and higher-quality results. For more information, see [Copilot CLI is becoming the default agent harness in GitHub Copilot for JetBrains](https://devblogs.microsoft.com/java/github-copilot-for-jetbrains-is-moving-to-copilot-cli-as-the-default-agent-harness/). For installation instructions, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
+The plugin is transitioning from its local agent harness to Copilot agent as the default agent harness, which brings faster feature parity and higher-quality results. For installation instructions, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
 
-* **Code completion and next edit suggestions**: Copilot suggests completions as you type and proactively predicts your next intended edit.
-* **Multiple agent harnesses**: The plugin ships its own agent experience and partners with other agent providers, giving you multiple interaction modes.
+The GitHub Copilot plugin provides the following capabilities.
+
 * **Full model and feature support**: All Copilot Chat models, code completion modes, and bring-your-own-key features are available as they are released.
+* **Code completion and next edit suggestions**: Copilot suggests completions as you type and proactively predicts your next intended edit.
+* **Commit message generation**: Copilot inspects your staged changes and generates a clear, conventional commit message.
 * **Inline chat**: Explain, refactor, document, or generate code directly in the editor gutter, without switching to a separate panel.
 * **Code review**: Copilot analyzes your changes and surfaces actionable feedback, flagging potential bugs, style violations, and logic issues.
-* **Commit message generation**: Copilot inspects your staged changes and generates a clear, conventional commit message.
+* **Multiple agent harnesses**: The plugin ships its own agent experience and partners with other agent providers, giving you multiple interaction modes.
+* **Sandbox support** (public preview): Isolated execution environments for Copilot to safely interact with code, tools, filesystem, and network resources.
+* **OpenTelemetry**: Analyze agent sessions and understand agent usage across an enterprise.
+* **Enterprise managed settings**: Apply consistent controls for everyone on your enterprise’s Copilot plan, including plugins and MCP management, OpenTelemetry settings, and permission control.
 
 ## GitHub Copilot in JetBrains AI Assistant
 

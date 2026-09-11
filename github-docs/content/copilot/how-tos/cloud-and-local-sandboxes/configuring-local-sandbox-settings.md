@@ -12,6 +12,9 @@
 
 You can use the `/sandbox` slash command to grant extra paths, adjust network access, or turn sandboxing on or off.
 
+> [!NOTE]
+> If you get your Copilot license from an enterprise, some or all sandbox settings may be controlled by enterprise managed settings. A managed setting is labeled `(managed)` in the `/sandbox` interface and can't be changed.
+
 For a conceptual overview of cloud and local sandboxes for Copilot, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
 
 ## Opening the sandbox configuration

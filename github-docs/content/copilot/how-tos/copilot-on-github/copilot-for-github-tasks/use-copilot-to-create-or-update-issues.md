@@ -67,7 +67,7 @@ Review the draft in the workbench, then click **Review and create** > **Create i
 
 ## Assign an issue to Copilot
 
-With Copilot cloud agent enabled, you can assign an issue to Copilot during creation. See [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management).
+With Copilot cloud agent enabled, you can assign an issue to Copilot during creation. See [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access).
 
 * **Natural language:** Include `Assign this issue to Copilot.` in your prompt.
 * **Manually:** Select "Copilot" from the assignee list.

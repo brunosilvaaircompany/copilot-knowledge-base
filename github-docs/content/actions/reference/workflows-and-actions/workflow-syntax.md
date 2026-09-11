@@ -1111,6 +1111,48 @@ In this example, multiple pushes to a `release/1.2.3` branch would not cancel in
 
 
 
+
+
+## `cache-mode`
+
+Use `cache-mode` to control the level of GitHub Actions cache access that jobs in the workflow are granted. Setting `cache-mode` at the top level applies to every job in the workflow, unless a job overrides it with [`jobs.<job_id>.cache-mode`](#jobsjob_idcache-mode).
+
+Access is enforced with scoped cache tokens, so a job cannot restore or save caches beyond the mode it is granted. `cache-mode` accepts the following values.
+
+| Value | Restore caches | Save caches |
+| ----- | -------------- | ----------- |
+| `read` | Yes | No |
+| `write` | Yes | Yes |
+| `write-only` | No | Yes |
+| `none` | No | No |
+
+If you omit `cache-mode`, a `read` or `write` default is used based on the trigger type. For trigger-dependent effective defaults, see [Dependency Caching Reference](https://docs.github.com/en/actions/reference/dependency-caching-reference#defaults).
+
+> [!WARNING]
+> Explicitly declaring `cache-mode: write` or `cache-mode: write-only` on low-trust triggers can bypass the secure default read-only cache restriction and reintroduce cache-poisoning risk. For guidance and mitigations, see [Dependency Caching Reference](https://docs.github.com/en/actions/reference/dependency-caching-reference#bypassing-the-default-untrusted-trigger-cache-restriction).
+
+When a cache operation is not permitted by the effective mode, the cache step logs an informational message and continues. The job and workflow do not fail. A skipped restore is treated as a cache miss; a skipped save is simply not performed. For more information, see [Dependency Caching Reference](https://docs.github.com/en/actions/reference/dependency-caching-reference#controlling-cache-access-with-cache-mode).
+
+### Example of `cache-mode`
+
+```yaml
+cache-mode: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/cache@v4
+
+        with:
+          path: ~/.npm
+          key: {% raw %}npm-${{ hashFiles('**/package-lock.json') }}{% endraw %}
+```
+
+
+
 ## `jobs`
 
 A workflow run is made up of one or more `jobs`, which run in parallel by default. To run jobs sequentially, you can define dependencies on other jobs using the `jobs.<job_id>.needs` keyword.
@@ -2020,6 +2062,33 @@ concurrency:
 {% endraw %}
 
 In this example, multiple pushes to a `release/1.2.3` branch would not cancel in-progress runs. Pushes to another branch, such as `main`, would cancel in-progress runs.
+
+
+
+
+
+## `jobs.<job_id>.cache-mode`
+
+Use `jobs.<job_id>.cache-mode` to set the level of GitHub Actions cache access for a single job. A value set here overrides any workflow-level [`cache-mode`](#cache-mode) for this job only.
+
+The accepted values are `read`, `write`, `write-only`, and `none`, with the same meanings as the top-level key. If neither the job nor the workflow sets `cache-mode`, a trigger-based default applies. For more information about each value, see [`cache-mode`](#cache-mode) and [Dependency Caching Reference](https://docs.github.com/en/actions/reference/dependency-caching-reference#defaults).
+
+> [!WARNING]
+> Explicitly declaring `cache-mode: write` or `cache-mode: write-only` on low-trust triggers can bypass the secure default read-only cache restriction and reintroduce cache-poisoning risk. For guidance and mitigations, see [Dependency Caching Reference](https://docs.github.com/en/actions/reference/dependency-caching-reference#bypassing-the-default-untrusted-trigger-cache-restriction).
+
+You can also set `cache-mode` on a job that calls a reusable workflow to limit the cache access granted to the called workflow. For more information, see [Reusing Workflow Configurations](https://docs.github.com/en/actions/reference/workflows-and-actions/reusing-workflow-configurations#supported-keywords-for-jobs-that-call-a-reusable-workflow) and [Reuse Workflows](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#controlling-cache-access-in-reusable-workflows).
+
+### Example of `jobs.<job_id>.cache-mode`
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    cache-mode: write
+  test:
+    runs-on: ubuntu-latest
+    cache-mode: read
+```
 
 
 

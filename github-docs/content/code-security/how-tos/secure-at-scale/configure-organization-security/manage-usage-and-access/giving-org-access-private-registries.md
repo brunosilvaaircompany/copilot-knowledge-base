@@ -77,6 +77,19 @@ When you configure access to one or more private registries, Dependabot can prop
 
 
 
+### Automatic access to GitHub-hosted registries
+ 
+For packages stored in GitHub Packages and Container registry, Dependabot can authenticate automatically without personal access tokens or `dependabot.yml` registry configuration. 
+
+Dependabot uses its `GITHUB_TOKEN` to request read access, reusing the same package access grants that GitHub Actions workflows use.
+ 
+To enable this, grant the repository **Read** access to each package in the package settings. Once access is granted, Dependabot can pull from those packages automatically, and you can remove any personal access token-based registry entries you previously configured for them.
+ 
+See [Configure Access To Private Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#configuring-private-github-hosted-registries).
+
+
+
+
 ### Configuring OIDC authentication for a private registry
 
 OIDC (OpenID Connect) authentication allows Dependabot to use short-lived credentials from your cloud identity provider to access private registries, eliminating the need to store long-lived secrets. With OIDC, credentials are generated dynamically for each Dependabot update job. You must configure a trust relationship between your cloud provider and GitHub before Dependabot can authenticate.

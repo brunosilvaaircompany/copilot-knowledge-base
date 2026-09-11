@@ -48,3 +48,4 @@ Enterprise owners can control cloud sandbox access for all organizations in the 
 
 * [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes)
 * [Cloud And Local Sandboxes](https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes)
+* [Enterprise Managed Settings](https://docs.github.com/en/copilot/reference/enterprise-administrators/enterprise-managed-settings#sandbox)

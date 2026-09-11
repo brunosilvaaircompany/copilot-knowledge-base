@@ -181,6 +181,12 @@ The specified repository does not need to be the repository where the source cod
 If you publish a package that is linked to a repository, GitHub Actions workflows in the linked repository automatically get access to the package, unless your organization has disabled the automatic inheritance of access permissions. For more information, see [About inheritance of access permissions](#about-inheritance-of-access-permissions) above.
 
 
+
+
+Granting a repository access here also allows Dependabot to pull from this package automatically, without requiring personal access tokens or `dependabot.yml` registry configuration. See [Automatic Dependabot Access To GitHub Registries](https://docs.github.com/en/code-security/concepts/supply-chain-security/automatic-dependabot-access-to-github-registries).
+
+
+
 > [!NOTE]
 > * Syncing your package with a repository through the **Actions access** menu option is different than connecting your package to a repository. For more information about linking a repository to your package, see [Connecting A Repository To A Package](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package).
 > * You can choose to limit permissions to workflow jobs using the `permissions` key and `packages` scope. For more information, see [Authenticate With Github_Token](https://docs.github.com/en/actions/tutorials/authenticate-with-github_token#modifying-the-permissions-for-the-github_token).

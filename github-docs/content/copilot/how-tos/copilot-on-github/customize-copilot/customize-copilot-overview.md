@@ -7,7 +7,7 @@ This quickstart walks you through customizing GitHub Copilot for a repository. B
 ## Prerequisites
 
 * Any paid Copilot plan. For more information, see [Plans](https://docs.github.com/en/copilot/get-started/plans).
-* Cloud agent enabled for your organization or account. For more information, see [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management).
+* Cloud agent enabled for your organization or account. For more information, see [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access).
 * Write access to a GitHub repository.
 
 ## Step 1: Teach Copilot your project's conventions

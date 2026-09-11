@@ -51,7 +51,7 @@ If you are using an environment variable, check whether the `COPILOT_GITHUB_TOKE
 If the command prints nothing, the variable is not set. Set the variable to a valid token. To generate a token, see [Authenticate Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli#authenticating-with-environment-variables).
   
 ```bash copy
- export $COPILOT_GITHUB_TOKEN=PERSONAL_ACCESS_TOKEN
+ export COPILOT_GITHUB_TOKEN=PERSONAL_ACCESS_TOKEN
  ```
 
 #### macOS keychain
@@ -95,7 +95,31 @@ Review the token's status and permissions on GitHub. The token must be a fine-gr
 
 ## Token (classic) rejected
 
-A token starting with `ghp_` is silently ignored and the CLI behaves as if no token is set.
+A token starting with `ghp_` is rejected. What happens next depends on how you are running Copilot CLI.
+
+In an interactive session, the classic personal access token is ignored and the CLI keeps running, so you can authenticate another way, such as with `/login`. Copilot CLI displays a warning like the following, naming the environment variable that holds the token:
+
+
+```text
+Classic Personal Access Tokens (ghp_) are not supported. GITHUB_TOKEN contains a classic PAT and will be ignored. Use /login to authenticate, or replace it with a fine-grained PAT.
+```
+
+
+In non-interactive use, such as `copilot -p` or other automation, if the classic personal access token is the only credential available, the CLI refuses to start and displays the following error, naming the environment variable that holds the token:
+
+
+```text
+Error: Classic Personal Access Tokens (ghp_) are not supported by Copilot.
+
+The GITHUB_TOKEN environment variable contains a classic PAT.
+Please use a Fine-Grained Personal Access Token or another authentication method.
+
+To fix this, you can:
+  • Replace the token in GITHUB_TOKEN with a fine-grained PAT
+  • Unset GITHUB_TOKEN and run 'gh auth login' to authenticate
+  • Unset GITHUB_TOKEN and start 'copilot', then use the '/login' command
+```
+
 
 ### Cause
 

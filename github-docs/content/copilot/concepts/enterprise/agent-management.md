@@ -64,13 +64,13 @@ To help you meet security and compliance requirements, you can choose to:
 
 Private MCP registries apply to Copilot CLI and IDEs, but not to cloud agents that run on GitHub. For Copilot cloud agent, MCP servers can be configured at the repository level or in custom agent profiles defined at the enterprise level.
 
-For more information, see [MCP Management](https://docs.github.com/en/copilot/concepts/mcp-management).
+For more information, see [MCP Management](https://docs.github.com/en/copilot/concepts/enterprise/mcp-management).
 
 ## Enterprise-managed settings
 
 The `managed-settings.json` file allows enterprises to control how users can interact with agents across Copilot clients. For example: which plugins can people install, and can people use "allow all" commands that let agents run commands without asking for permission? This file can be hosted on GitHub or installed directly on users' machines.
 
-For more information, see [Configure Enterprise Managed Settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/configure-enterprise-managed-settings).
+For more information, see [Get Started](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started).
 
 ## Agent mode in the IDE
 

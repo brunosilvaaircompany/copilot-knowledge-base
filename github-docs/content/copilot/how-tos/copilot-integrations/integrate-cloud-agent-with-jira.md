@@ -125,7 +125,7 @@ Use custom instructions to set defaults that apply to every session, such as the
 
 Copilot cloud agent uses GitHub Actions minutes and AI credits.
 
-For more information, see [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+For more information, see [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 ## Adding or removing an organization to the GitHub Copilot for Jira app
 
@@ -185,6 +185,6 @@ To resolve this issue, follow these steps to start a new active SSO session for 
 ## Further reading
 
 * [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
-* [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management)
+* [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access)
 * [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers#example-atlassian)
 * [Collaborate on work items with AI agents](https://support.atlassian.com/jira-software-cloud/docs/collaborate-on-work-items-with-ai-agents/) in the Atlassian documentation

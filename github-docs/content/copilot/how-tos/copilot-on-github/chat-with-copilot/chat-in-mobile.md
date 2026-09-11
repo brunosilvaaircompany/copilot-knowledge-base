@@ -4,7 +4,7 @@
 
 The following limitations apply to Copilot Chat in GitHub Mobile:
 
-* If you're a member of an organization or enterprise, your access to Copilot Chat in GitHub Mobile may depend on policies set by your administrator. See [Policies](https://docs.github.com/en/copilot/concepts/policies).
+* If you're a member of an organization or enterprise, your access to Copilot Chat in GitHub Mobile may depend on policies set by your administrator. See [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
 * If you purchased Copilot Pro, Copilot Pro+, or Copilot Max through an in-app purchase on iOS or Android, you cannot enable additional GitHub AI Credits. To do so, cancel your mobile subscription and re-subscribe on GitHub.com through a web browser.
 
 ## Asking a general question about software development

@@ -380,6 +380,6 @@ If multiple skills provide conflicting instructions:
 
 ## See also
 
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started#create-custom-agents) - Define specialized AI personas
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started#step-4-add-a-custom-tool) - Build your own tools
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart#create-custom-agents) - Define specialized AI personas
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart#step-4-add-a-custom-tool) - Build your own tools
 * [MCP](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/mcp) - Connect external tool providers

@@ -10,7 +10,50 @@ For specific ecosystems, you can configure Dependabot to access _only_ private r
 
 To allow Dependabot access to registries hosted privately or restricted to internal networks, configure Dependabot to run on GitHub Actions self-hosted runners. For more information, see [Configure On Self Hosted Runners](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-on-self-hosted-runners).
 
-## Configuring private registries
+
+
+## Configuring private GitHub-hosted registries
+
+For packages stored in GitHub Packages or Container registry, Dependabot can authenticate automatically using its `GITHUB_TOKEN`. This uses the same "Manage Actions access" grants that GitHub Actions workflows use. No personal access tokens or `dependabot.yml` registry entries are required.
+
+The `dependabot.yml` registry configuration using Personal Access Token-based registry entries and described in [Configuring private third-party registries](#configuring-private-third-party-registries) is still required for third-party private registries (such as Artifactory, Azure Artifacts, or Nexus).
+ 
+To grant Dependabot access to a private package:
+
+ 1. On GitHub, navigate to the main page of your organization.
+1. Under your organization name, click the **{% octicon "package" aria-hidden="true" aria-label="package" %} Packages** tab.
+
+   ![Screenshot of @octo-org's profile page. The "Packages" tab is highlighted with an orange outline.](/assets/images/help/package-registry/org-tab-for-packages-with-overview-tab.png)
+
+ 1. Search for and then click the name of the package that you want to manage.
+1. On your package's landing page, on the right-hand side, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Package settings**.
+
+   ![Screenshot of a package's landing page. In the lower right corner, "Package settings" is highlighted with an orange outline.](/assets/images/help/package-registry/package-settings.png)
+
+ 
+1. In the left sidebar, click **Actions access**.
+
+
+ 1. Under "Manage Actions access", click **Add repository** and search for the repository you want to add.
+   ![Screenshot of the "Manage Actions access" section of the package settings page. The "Add repository" button is highlighted with an orange outline.](/assets/images/help/package-registry/add-repository-button.png)
+
+    Search for the repository where Dependabot runs, and select it.
+ 1. Use the **Role** drop-down menu to select the default access level that you'd like the repository to have to your package.
+
+    Select **Read** as the access level. Dependabot only needs read access to pull packages.
+
+You need to repeat these steps for each private package that you want Dependabot to access.
+ 
+Once access is granted, Dependabot can pull from those packages automatically. You can remove any personal access token-based registry entries in `dependabot.yml` that you previously configured for these packages.
+ 
+> [!NOTE]
+> This method works for every GitHub Packages ecosystem that Dependabot supports, including container images in Container registry.
+ 
+For more information about how automatic access works, see [Automatic Dependabot Access To GitHub Registries](https://docs.github.com/en/code-security/concepts/supply-chain-security/automatic-dependabot-access-to-github-registries). For more information about package access settings, see [Configuring A Packages Access Control And Visibility](https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility#ensuring-workflow-access-to-your-package).
+
+## Configuring private third-party registries
+
+
 
 
 

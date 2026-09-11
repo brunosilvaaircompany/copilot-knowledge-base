@@ -30,7 +30,7 @@ In order to use ARC, ensure you have the following.
 
     For additional Helm configuration options, see [`values.yaml`](https://github.com/actions/actions-runner-controller/blob/master/charts/gha-runner-scale-set-controller/values.yaml) in the ARC documentation.
 
-1. To enable ARC to authenticate to GitHub, generate a personal access token (classic). For more information, see [Authenticate To The API](https://docs.github.com/en/actions/how-tos/manage-runners/use-actions-runner-controller/authenticate-to-the-api#authenticating-arc-with-a-personal-access-token-classic).
+1. To enable ARC to authenticate to GitHub, choose an authentication method for your runner scale set. If you are registering runners at the repository or organization level, we recommend authenticating with a GitHub App. Runner scale sets registered at the enterprise level require personal access token (classic) authentication. For more information, see [Authenticate To The API](https://docs.github.com/en/actions/how-tos/manage-runners/use-actions-runner-controller/authenticate-to-the-api).
 
 ## Configuring a runner scale set
 
@@ -41,8 +41,9 @@ In order to use ARC, ensure you have the following.
     * Update the `INSTALLATION_NAME` value carefully. You will use the installation name as the value of `runs-on` in your workflows. For more information, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#jobsjob_idruns-on).
     * Update the `NAMESPACE` value to the location you want the runner pods to be created.
     * Set `GITHUB_CONFIG_URL` to the URL of your repository, organization, or enterprise. This is the entity that the runners will belong to.
+    * This example uses a personal access token (classic) to keep the initial setup short. For repository or organization runner scale sets, use a GitHub App in production environments when possible.
     
-    * Set `GITHUB_PAT` to a GitHub personal access token with the `repo` and `admin:org` scopes for repository and organization runners.
+    * Set `GITHUB_PAT` to a GitHub personal access token (classic) with the `repo` and `admin:org` scopes for repository and organization runners.
     
     * This example command installs the latest version of the Helm chart. To install a specific version, you can pass the `--version` argument with the version of the chart you wish to install. You can find the list of releases in the [GitHub Container Registry](https://github.com/actions/actions-runner-controller/pkgs/container/actions-runner-controller-charts%2Fgha-runner-scale-set).
 

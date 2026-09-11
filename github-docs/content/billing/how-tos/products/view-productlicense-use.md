@@ -65,7 +65,7 @@ If you use Copilot, an additional **AI usage** view is listed under **Usage**. Y
 * Which models are driving the most spend?
 * How widespread is adoption in the organizations where we rolled out Copilot?
 
-To understand how AI credits are pooled across your enterprise and what the usage data represents, see [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+To understand how AI credits are pooled across your enterprise and what the usage data represents, see [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 
 

@@ -46,7 +46,9 @@ You should download the CodeQL bundle from https://github.com/github/codeql-acti
 
 
 
-You should always use the CodeQL bundle. This ensures compatibility and gives much better performance than a separate download of the CodeQL CLI and checkout of the CodeQL queries. If you will only be running the CLI on one specific platform, download the appropriate `codeql-bundle-PLATFORM.tar.zst` file. Alternatively, you can download `codeql-bundle.tar.zst`, which contains the CLI for all supported platforms.
+You should always use the CodeQL bundle. This ensures compatibility and gives much better performance than a separate download of the CodeQL CLI and checkout of the CodeQL queries. Download the `codeql-bundle-PLATFORM.tar.zst` file for the platform where you will run the CLI. Replace `PLATFORM` with `linux64` for Linux x64, `linux-arm64` for Linux ARM64, `osx64` for macOS, or `win64` for Windows.
+
+The all-platforms bundle (`codeql-bundle.tar.zst` and `codeql-bundle.tar.gz`) is closing down and will stop being published in a future release. Download the per-platform `codeql-bundle-PLATFORM.tar.zst` file instead. In CodeQL CLI 2.27.0 and later, running the CLI from an all-platforms distribution produces a warning.
 
 There are also `tar.gz` variants of the bundle, which are identical to the `tar.zst` variants except compressed using the less efficient gzip algorithm. The only reason to download the `tar.gz` variants is if you are using older decompression tools that do not support the Zstandard compression algorithm.
 

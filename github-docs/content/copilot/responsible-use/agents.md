@@ -282,7 +282,7 @@ For additional guidance on the responsible use of Copilot agentic features, we r
 * [Get The Best Results](https://docs.github.com/en/copilot/tutorials/cloud-agent/get-the-best-results)
 * [Customize The Agent Environment](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment)
 * [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall)
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started)
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart)
 * [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers)
 * [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli)
 * [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)

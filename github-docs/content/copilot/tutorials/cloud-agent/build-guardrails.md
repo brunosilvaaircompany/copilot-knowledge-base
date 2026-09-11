@@ -12,7 +12,7 @@ Plan your policies for Copilot cloud agent in advance. Policies allow you to set
 
 Some questions to ask are:
 
-* Which organizations and repositories will Copilot cloud agent be enabled in? See [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management).
+* Which organizations and repositories will Copilot cloud agent be enabled in? See [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access).
 * Which MCP servers will you configure to give Copilot cloud agent access to external tools? See [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers).
 
 ### Which policies don't apply?

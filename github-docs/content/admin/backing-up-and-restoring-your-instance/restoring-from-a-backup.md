@@ -21,7 +21,7 @@ Before restoring a backup:
 
 1. **Enable maintenance mode** on the target instance. See [Enabling And Scheduling Maintenance Mode](https://docs.github.com/en/admin/administering-your-instance/configuring-maintenance-mode/enabling-and-scheduling-maintenance-mode).
 1. **Verify access** to the backup storage containing the snapshot.
-1. **Pause interfering services** — if using High Availability (HA), make sure replication is stopped.
+1. **Tear down replication**. If using High Availability (HA), run `ghe-repl-teardown` on the target instance. Stopping replication with `ghe-repl-stop` is not sufficient, because the target remains configured as part of a replication pair and the restore fails. See [Removing A High Availability Replica](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-high-availability/removing-a-high-availability-replica).
 1. **Prepare for GitHub Actions** — if enabled, ensure the target instance is configured with the correct external storage. See [Restoring With GitHub Actions Enabled](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/restoring-with-github-actions-enabled) for details.
 
 ## Starting the restore operation

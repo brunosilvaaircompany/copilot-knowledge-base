@@ -214,7 +214,7 @@ Automatic review comments help you optimize your reviews and secure your code mo
 To make your reviews more efficient and effective using Copilot's review capabilities, get started by following these steps.
 
 1. Create custom instructions specific to your project and repository. Write your own, or take inspiration from our library of examples. See [Custom Instructions](https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions).
-1. To enable automatic Copilot code review for your repository, see [Configure Automatic Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review).
+1. To enable automatic Copilot code review for your repository, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review).
 1. To configure Copilot Autofix for your repo you'll need to enable code scanning. Once code scanning with CodeQL analysis is enabled, Copilot Autofix is enabled by default. For the easiest setup, see [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning).
 1. To add reliability, maintainability, and coverage checks to your pull requests, enable GitHub Code Quality for your repository. See [Enable Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/enable-code-quality).
 

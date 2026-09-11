@@ -1,6 +1,6 @@
 # Setting up an enterprise for GitHub Copilot Business only
 
-Before you begin, see [About Enterprise Accounts For Copilot Business](https://docs.github.com/en/copilot/concepts/about-enterprise-accounts-for-copilot-business) to understand how to use a standard enterprise account for Copilot Business without consuming GitHub Enterprise Cloud licenses.
+Before you begin, see [About Enterprise Accounts For Copilot Business](https://docs.github.com/en/copilot/concepts/enterprise/about-enterprise-accounts-for-copilot-business) to understand how to use a standard enterprise account for Copilot Business without consuming GitHub Enterprise Cloud licenses.
 
 ## Create an enterprise account
 
@@ -45,7 +45,7 @@ For detailed steps, see [Grant Access](https://docs.github.com/en/copilot/how-to
 After you assign licenses, you can centrally govern how members use Copilot:
 
 * **Policies**. Control feature availability with policies in AI Controls.
-* **Enterprise managed settings**. Distribute client governance and extensibility configuration from a centrally defined source. For example, you can disable bypass mode, restrict plugins, and set the default model for new conversations. See [Configure Enterprise Managed Settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/configure-enterprise-managed-settings).
+* **Enterprise managed settings**. Distribute client governance and extensibility configuration from a centrally defined source. For example, you can disable bypass mode, restrict plugins, and set the default model for new conversations. See [Get Started](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started).
 
 To use server-managed settings, you need an organization and a `.github-private` repository, which requires a GitHub Enterprise license for the user who creates them. Alternatively, you can deploy managed settings through MDM or a file-based deployment without creating an organization.
 

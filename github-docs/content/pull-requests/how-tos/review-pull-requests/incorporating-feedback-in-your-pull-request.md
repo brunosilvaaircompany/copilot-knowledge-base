@@ -25,6 +25,12 @@ Each person who suggested a change included in the commit will be a co-author of
 1. In the commit message field, type a short, meaningful commit message that describes the change you made to the file or files.
 1. Click **Commit changes**.
 
+
+## Delegating review comments to Copilot
+
+If you have access to Copilot cloud agent, you can delegate review comments to have Copilot implement the feedback. For more information, see [Use Cloud Agent On GitHub](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github#delegating-review-comments).
+
+
 ## Re-requesting a review
 
 For example, you can re-request a review after you've made substantial changes to your pull request.

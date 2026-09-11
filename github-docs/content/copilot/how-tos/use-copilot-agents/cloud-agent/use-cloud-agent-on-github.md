@@ -162,11 +162,30 @@ When an GitHub Actions workflow run fails on a pull request branch, you can ask 
 
 ## Continuing work on a pull request
 
+You can ask Copilot to make changes or address review comments on an existing pull request. You can then track the resulting session and provide follow-up instructions.
+
+### Asking Copilot to make changes
+
 You can mention `@copilot` in a comment on any pull request to ask Copilot to make changes. This works on pull requests created by Copilot and on pull requests you or others created.
 
 By default, Copilot pushes commits directly to the pull request branch. To create a separate pull request instead, describe that in your comment. You can also check out the branch and push changes yourself.
 
-Batch review comments instead of submitting them individually. When submitting a pull request comment (not a review or review comment) through the GitHub web interface, select a model with the model picker. Copilot uses the model from the original pull request by default.
+When submitting a pull request comment (not a review or review comment) through the GitHub web interface, select a model with the model picker. Copilot uses the model from the original pull request by default.
+
+### Delegating review comments
+
+You can delegate review comments to have Copilot implement feedback from human reviewers and GitHub Copilot code review.
+
+1. In the pull request, open the **Files changed** tab.
+1. Navigate to the first review comment you want Copilot to implement.
+   * To delegate one comment, click **Fix with Copilot**.
+   * To delegate multiple comments, click **Add to batch**. Continue to add the comments you want Copilot to work on.
+1. In the **Manage batch** panel, add any additional instructions, and optionally select a model with the model picker. 
+1. Choose how you want Copilot to apply the changes:
+   * To commit the changes directly to the branch, click **{% octicon "agent" aria-label="The Agents icon" %} Fix and commit**.
+   * To have Copilot create a new pull request with the changes, click **Fix and open pull request** from the dropdown menu.
+
+### Tracking and continuing a session
 
 Copilot only responds to comments from people who have write access to the repository.
 

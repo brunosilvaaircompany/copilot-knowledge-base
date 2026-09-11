@@ -9,7 +9,7 @@ While CodeQL provides high-precision static analysis for a specific set of suppo
 
 During the public preview, AI-powered security detections require a GitHub Advanced Security license and a GitHub Copilot license.
 
-Usage consumes AI credits. See [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+Usage consumes AI credits. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 ## How AI-powered security detections work
 

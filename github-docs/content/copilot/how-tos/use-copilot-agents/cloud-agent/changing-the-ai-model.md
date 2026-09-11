@@ -31,7 +31,6 @@ The following options are currently available:
 * GPT-6 Astra
 * Grok 4.5
 * Grok 4.6
-* MAI-Code-1-Flash
 * MAI-Code-1.1-Flash
 
 

@@ -30,7 +30,7 @@ Copilot features generally fall into three categories:
 Each feature has its own enablement requirements and policy settings. When a new feature is released:
 
 1. Review the feature documentation to understand its capabilities.
-1. Check the policy settings available at the enterprise and organization level. See [Policies](https://docs.github.com/en/copilot/concepts/policies).
+1. Check the policy settings available at the enterprise and organization level. See [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
 1. Consider running a pilot with a subset of users before broader rollout.
 
 ### Learning about new Copilot models

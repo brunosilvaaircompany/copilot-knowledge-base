@@ -55,7 +55,7 @@ GitHub can send you email notifications when the included usage for your plan re
 ## Managing budgets for your organization or enterprise
 
 > [!IMPORTANT]
-> Copilot usage is now measured in AI credits under usage-based billing. Existing premium request budgets have been automatically converted to AI credit budgets. See [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+> Copilot usage is now measured in AI credits under usage-based billing. Existing premium request budgets have been automatically converted to AI credit budgets. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 You can set budgets and receive alerts when your usage of a product or license type reaches 75%, 90%, or 100% of a defined budget. For budgets that control metered use of a product, you can also block further use when the budget is exhausted. Each budget has a scope.
 

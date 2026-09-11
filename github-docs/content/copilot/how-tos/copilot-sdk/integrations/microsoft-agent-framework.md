@@ -21,7 +21,7 @@ The Microsoft Agent Framework is the unified successor to Semantic Kernel and Au
 
 Before you begin, ensure you have:
 
-* A working [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started) in your language of choice
+* A working [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart) in your language of choice
 * A GitHub Copilot subscription (Individual, Business, or Enterprise)
 * The Copilot CLI installed or available via the SDK's bundled CLI
 
@@ -619,7 +619,7 @@ client.stop().get();
 
 ### Copilot SDK options (passed through)
 
-All standard [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started) options are still available when creating the underlying Copilot client. The MAF wrapper delegates to the SDK under the hood:
+All standard [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart) options are still available when creating the underlying Copilot client. The MAF wrapper delegates to the SDK under the hood:
 
 | SDK Feature | MAF Support |
 |-------------|-------------|
@@ -687,7 +687,7 @@ catch (AgentException ex)
 
 ## See also
 
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started): initial Copilot SDK setup
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart): initial Copilot SDK setup
 * [Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/custom-agents): define specialized sub-agents within the SDK
 * [Skills](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills): reusable prompt modules
 * [Microsoft Agent Framework documentation](https://learn.microsoft.com/en-us/agent-framework/agents/providers/github-copilot): official MAF docs for the Copilot provider

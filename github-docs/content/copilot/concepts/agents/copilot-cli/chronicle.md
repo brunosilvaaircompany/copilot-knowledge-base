@@ -73,7 +73,7 @@ If you use Copilot CLI in JetBrains IDEs, these `/chronicle` subcommands are ava
 * **At the start of your day**: Run `/chronicle standup last 3 days` to generate a summary of recent work instead of reconstructing it manually.
 * **Periodically, to level up**: Run `/chronicle tips` every week or two to discover features and workflow improvements you might be missing.
 * **When Copilot keeps making the same mistake**: Run `/chronicle improve` to identify the pattern and generate custom instructions that make the agent more effective for your project.
-* **To understand your token usage**: Run `/chronicle cost tips` to see where tokens are going and get suggestions for reducing costs.
+* **To understand your token usage**: Run `/chronicle cost-tips` to see where tokens are going and get suggestions for reducing costs.
 * **To search for a specific topic**: Run `/chronicle search KEYWORD` to find sessions containing a specific term or topic. Unlike free-form questions, this searches session content directly for keywords rather than interpreting your query semantically.
 * **To recall past work**: Ask a free-form question like "Have I worked on anything related to the payments API?" and Copilot will search your history.
 * **To continue previous work**: Use `copilot --continue` or `copilot --resume` to pick up where you left off.

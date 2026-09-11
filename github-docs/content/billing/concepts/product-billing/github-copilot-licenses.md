@@ -1,6 +1,6 @@
 # GitHub Copilot licenses
 
-Usage of GitHub Copilot is measured through a combination of licenses and AI credits. See [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) and [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+Usage of GitHub Copilot is measured through a combination of licenses and AI credits. See [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) and [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 ## Licenses for Copilot
 

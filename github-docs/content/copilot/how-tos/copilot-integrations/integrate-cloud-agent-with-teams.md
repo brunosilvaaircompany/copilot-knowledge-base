@@ -120,4 +120,4 @@ You can view and share feedback in our [discussion forum](https://github.com/org
 ## Further reading
 
 * [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
-* [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management)
+* [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access)

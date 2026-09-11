@@ -36,6 +36,12 @@ Once a secret has been committed to a repository, you should consider the secret
 > [!NOTE]
 >Secret scanning doesn't automatically close alerts when the corresponding token has been removed from the repository. You must manually close these alerts in the alert list on GitHub.
 
+
+
+If a branch ruleset requires secret scanning alerts to be resolved, an open alert introduced by a pull request can block merging. After fixing the exposed secret, close the alert using the following steps. After all blocking alerts are closed, the alerts no longer prevent merging. The rule can continue to block merging until a secret scanning scan completes for the pull request's head commit.
+
+
+
 1. On GitHub, navigate to the main page of the repository.
 
 1. Under the repository name, click the **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality** tab. If you cannot see the "{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality" tab, select the **{% octicon "kebab-horizontal" aria-hidden="true" aria-label="kebab-horizontal" %}** dropdown menu, and then click **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality**.

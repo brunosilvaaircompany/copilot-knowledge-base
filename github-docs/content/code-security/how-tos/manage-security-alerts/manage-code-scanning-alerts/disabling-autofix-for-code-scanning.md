@@ -5,7 +5,7 @@
 Disabling agentic autofix can be done in two ways:
 
 1. By disabling Copilot Autofix since agentic autofix relies on the same underlying setting. For instructions, see the sections below.
-1. By opting repositories out of Copilot cloud agent. See [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management#opting-repositories-out-of-copilot-cloud-agent).
+1. By opting repositories out of Copilot cloud agent. See [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access#opting-repositories-out-of-copilot-cloud-agent).
 
 For more information about agentic autofix, see [Autofix For Code Scanning](https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning#agentic-autofix).
 

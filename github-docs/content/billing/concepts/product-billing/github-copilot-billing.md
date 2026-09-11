@@ -12,6 +12,6 @@ To understand how AI credits work for individual plans, see [Usage Based Billing
 
 For organizations and enterprises, each assigned Copilot license comes with a monthly amount of included AI credits, which can be pooled at the billing entity level.
 
-* To understand how AI credits work and what happens when your pool is exhausted, see [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+* To understand how AI credits work and what happens when your pool is exhausted, see [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 * To understand budget controls and how to prevent unexpected charges, see [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing).
 * To compare per-token costs across models and how they translate to AI credits, see [Models And Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).

@@ -87,7 +87,7 @@ If you are a GitHub Copilot Business or GitHub Copilot Enterprise subscriber, an
 
 Repository owners can choose to opt out some or all repositories from Copilot cloud agent.
 
-See [Access Management](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management).
+See [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access).
 
 ## AI models for Copilot cloud agent
 
@@ -111,7 +111,7 @@ The more Copilot cloud agent knows about the code in your repository, the tools 
 
 Copilot cloud agent uses GitHub Actions minutes and AI credits. The AI credits consumed depend on the model used and the number of tokens processed during the session.
 
-Within your included GitHub Actions minutes and AI credits, you can use Copilot cloud agent without incurring additional costs. See [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+Within your included GitHub Actions minutes and AI credits, you can use Copilot cloud agent without incurring additional costs. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 Copilot code review also consumes GitHub Actions minutes on private repositories. See [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions#copilot-code-review-and-github-actions-minutes).
 

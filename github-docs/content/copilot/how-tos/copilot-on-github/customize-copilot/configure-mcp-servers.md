@@ -76,6 +76,9 @@ The configuration object can contain the following keys:
 * `tools` (`string[]`): The tools from the MCP server to enable. You may be able to find a list of tools in the server's documentation, or in its code. We strongly recommend that you allowlist specific read-only tools, since the agent will be able to use these tools autonomously and will not ask you for approval first. You can also enable all tools by including `*` in the array.
 * `type` (`string`): Copilot cloud agent accepts `"local"`, `"stdio"`, `"http"`, or `"sse"`.
 
+> [!NOTE]
+> For Copilot code review, each tool in the MCP server's `tools/list` response must set `annotations.readOnlyHint` to `true` to allow Copilot to use it. Copilot code review excludes tools when this annotation is missing or set to `false`. For more information, see [Tool annotations in the MCP specification](https://modelcontextprotocol.io/specification/2025-11-25/schema#toolannotations-readonlyhint).
+
 **Local MCP specific keys**
 * `command` (`string`): Required. The command to run to start the MCP server.
 * `args` (`string[]`): Required. The arguments to pass to the `command`.

@@ -60,7 +60,6 @@ Users will be able to see available models for your region in the model selector
 * Claude Sonnet 5
 * Claude Opus 4.8
 * Claude Opus 5
-* MAI-Code-1-Flash
 
 
 ### European Union
@@ -83,7 +82,6 @@ Users will be able to see available models for your region in the model selector
 * Claude Opus 5
 * Claude Sonnet 5
 * Gemini 3.5 Flash
-* MAI-Code-1-Flash
 
 ## Pricing changes
 

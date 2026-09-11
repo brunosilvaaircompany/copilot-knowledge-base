@@ -9,7 +9,7 @@ There are a few ways that you can get access to GitHub Copilot:
 * **Sign up for a paid plan**. You can subscribe to one of these plans:
 
   * **Copilot Pro**, which includes access to premium models and a monthly allowance of AI credits. [Subscribe to Copilot Pro](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro).
-  * **Copilot Pro+**, which includes a higher monthly allowance of AI credits and access to all available models. [Subscribe to Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro).
+  * **Copilot Pro+**, which includes a higher monthly allowance of AI credits and access to all available models. [Subscribe to Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro-plus).
   * **Copilot Max**, which includes advanced AI models and our highest individual monthly allowance of AI credits. [Subscribe to Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max).
 
 * **Use Copilot through your organization or enterprise**. If you're part of an organization or enterprise with a Copilot plan, you can request access at [https://github.com/settings/copilot](https://github.com/settings/copilot) under "Get Copilot from an organization."

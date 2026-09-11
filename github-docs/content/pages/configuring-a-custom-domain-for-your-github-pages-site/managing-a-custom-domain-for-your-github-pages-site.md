@@ -96,6 +96,8 @@ If you are using an apex domain as your custom domain, we recommend also setting
 
 Navigate to your DNS provider and create a `CNAME` record for the `www` subdomain that points to your GitHub Pages default domain. For example, if your site is located at `<user>.github.io`, you should create a `CNAME` record that points `www.example.com` to `<user>.github.io` Similarly, for an organization site located at `<organization>.github.io`, you should create a `CNAME` record that points `www.example.com` to `<organization>.github.io`. Ensure that the `CNAME` record points directly to `<user>.github.io` or `<organization>.github.io` without including the repository name.
 
+These `CNAME` record values are the same for both publicly and privately published GitHub Pages sites. Privately published sites are available with GitHub Enterprise Cloud.
+
 For more information about how to create the correct record, see your DNS provider's documentation.
  For more information about the default domain for your site, see [What Is GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites).
 

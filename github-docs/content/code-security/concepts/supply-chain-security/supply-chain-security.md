@@ -156,30 +156,18 @@ When you use GitHub Actions to generate attestations for your organization's own
 
 
 
-Public repositories:
-* **Dependency graph:** Enabled by default and cannot be disabled.
-* **Dependency review:** Enabled by default and cannot be disabled.
-* **Dependabot alerts:** Not enabled by default. GitHub detects insecure dependencies and displays information in the dependency graph, but does not generate Dependabot alerts by default. Repository owners or people with admin access can enable Dependabot alerts.
+* **Dependency graph:** Not enabled by default. Available for all repositories, and can be enabled or disabled by repository administrators.
+* **Dependency review:** Available when the dependency graph is enabled. For private repositories, the repository must also be owned by an organization that uses GitHub Team or GitHub Enterprise Cloud and has a license for GitHub Code Security or GitHub Advanced Security.
+* **Dependabot alerts:** Not enabled by default. Repository owners or people with admin access can enable Dependabot alerts for repositories that have the dependency graph enabled.
   You can also enable or disable Dependabot alerts for all repositories owned by your user account or organization. For more information, see [Managing Security And Analysis Features](https://docs.github.com/en/account-and-profile/how-tos/account-settings/managing-security-and-analysis-features) or [Managing Security And Analysis Settings For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization).
+* **Dependabot security updates:** Not enabled by default. You can enable Dependabot security updates for any repository that uses Dependabot alerts and the dependency graph. See [Configure Security Updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-security-updates).
+* **Dependabot version updates:** Not enabled by default. People with write permissions to a repository can enable Dependabot version updates. See [Configure Version Updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates).
+* **Immutable releases:** Not enabled by default. You can enable release immutability for a repository or organization. See [Prevent Release Changes](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes).
 * **Artifact attestations:** Available in all public repositories, but you must explicitly generate attestations in your build workflows. See [Use Artifact Attestations](https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations).
-
-Private repositories:
-* **Dependency graph:** Not enabled by default. The feature can be enabled by repository administrators. For more information, see [Explore Dependencies](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/explore-dependencies).
-* **Dependency review:** Available in private repositories owned by organizations that use GitHub Team or GitHub Enterprise Cloud and have a license for GitHub Code Security or GitHub Advanced Security. For more information, see [About GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security) and [Explore Dependencies](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/explore-dependencies).
-* **Dependabot alerts:** Not enabled by default. Owners of private repositories, or people with admin access, can enable Dependabot alerts by enabling the dependency graph and Dependabot alerts for their repositories.
-  You can also enable or disable Dependabot alerts for all repositories owned by your user account or organization. For more information, see [Managing Security And Analysis Features](https://docs.github.com/en/account-and-profile/how-tos/account-settings/managing-security-and-analysis-features) or [Managing Security And Analysis Settings For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization).
-* **Artifact attestations:** Only available in private repositories on GitHub Enterprise Cloud.
-
-Any repository type:
-* **Dependabot security updates:** Not enabled by default. You can enable Dependabot security updates for any repository that uses Dependabot alerts and the dependency graph. For information about enabling security updates, see [Configure Security Updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-security-updates).
-* **Dependabot version updates:** Not enabled by default. People with write permissions to a repository can enable Dependabot version updates. For information about enabling version updates, see [Configure Version Updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates).
-* **Immutable releases*:** Not enabled by default. You can enable release immutability for a repository or organization. See [Prevent Release Changes](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes).
 
 
 
 * **Dependency graph and Dependabot alerts:** Not enabled by default. Both features are configured at an enterprise level by the enterprise owner. For more information, see [Enable Dependency Graph](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/configure-specific-tools/enable-dependency-graph) and [Enabling Dependabot For Your Enterprise](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/enabling-dependabot-for-your-enterprise).
 * **Dependency review:** Available when dependency graph is enabled for your instance and GitHub Code Security or GitHub Advanced Security is enabled for the organization or repository. For more information, see [About GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security).
-
-
 * **Dependabot security updates:** Not enabled by default. You can enable Dependabot security updates for any repository that uses Dependabot alerts and the dependency graph. For information about enabling security updates, see [Configure Security Updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-security-updates).
 * **Dependabot version updates:** Not enabled by default. People with write permissions to a repository can enable Dependabot version updates. For information about enabling version updates, see [Configure Version Updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates).

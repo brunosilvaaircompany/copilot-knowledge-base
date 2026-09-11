@@ -25,7 +25,7 @@ For a full comparison, see our [plans page](https://github.com/features/copilot/
 
 AI credits are consumed by advanced Copilot features and models, including AI agents. Each plan's included AI credits are pooled across your enterprise, so heavier users can draw from lighter users' unused portions. By giving members access to more AI credits, you can scale your company with AI agents and drive real business outcomes.
 
-By default, usage can continue beyond the included pool, with additional usage charged at $0.01 USD per AI credit. You can control this with budget controls. See [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+By default, usage can continue beyond the included pool, with additional usage charged at $0.01 USD per AI credit. You can control this with budget controls. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
 
 ## How does Copilot Enterprise support business goals?
 

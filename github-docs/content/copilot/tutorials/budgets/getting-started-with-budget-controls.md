@@ -4,13 +4,6 @@ Under usage-based billing, your enterprise's included AI credits are pooled and 
 
 Before you begin, make sure you understand how the four budget controls work and how the system evaluates them. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing).
 
-
-
-> [!NOTE]
-> If your enterprise was using Copilot before June 1, 2026, you are on a promotional period (June–August 2026) where your included AI credits are higher than the standard amounts. When the promotional period ends on September 1, 2026, the shared pool will be smaller. Use this period to understand your team's baseline consumption and adjust your spending limits before the transition. See [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises#how-do-ai-credits-work) for the standard and promotional amounts.
-
-
-
 ## Step 1: Set a universal user-level budget
 
 The universal user-level budget (ULB) is the single most important control. It caps how much any one user can consume per billing cycle—from both the shared pool and any additional metered usage—and applies automatically to every licensed user in your enterprise.

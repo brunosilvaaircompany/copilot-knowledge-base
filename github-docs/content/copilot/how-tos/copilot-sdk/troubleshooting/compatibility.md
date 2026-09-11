@@ -296,7 +296,7 @@ console.log("Protocol version:", status.protocolVersion);
 
 ## See also
 
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started)
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart)
 * [Hooks Overview](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/hooks-overview)
 * [MCP](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/mcp)
 * [Debugging](https://docs.github.com/en/copilot/how-tos/copilot-sdk/troubleshooting/debugging)

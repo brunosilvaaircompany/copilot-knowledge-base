@@ -75,6 +75,12 @@ The `/pr` slash command has several subcommands that you can use to perform diff
 <td align="center">No</td>
 <td align="center">Yes</td>
 </tr>
+<tr>
+<td><code>/pr automerge</code></td>
+<td>Do the same as <code>/pr auto</code>, then merge the pull request once it is green. <a href="#automatically-merging-the-pull-request">Find out more</a></td>
+<td align="center">No</td>
+<td align="center">Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -127,6 +133,8 @@ To have Copilot read and address review comments on your pull request, enter:
 ```
 
 Copilot fetches all review comment threads on the pull request, determines what changes are requested, applies the changes to your codebase, and commits and pushes the fixes. Actionable code change requests are prioritized over conversational comments.
+
+For each thread it addresses, Copilot replies within the thread on GitHub.com to explain the change, then marks the thread as resolved. Threads that need your input are answered but left unresolved.
 
 ## Resolving merge conflicts
 
@@ -187,13 +195,27 @@ To have Copilot manage the entire pull request process from creation to a fully 
 /pr auto
 ```
 
-If no pull request exists for the current branch, Copilot creates one first. It then loops through the fix phases—review feedback, conflicts, and CI—repeating until there are no more review comments, no conflicts, and all CI checks pass.
+If no pull request exists for the current branch, Copilot creates one first. It then loops through the fix phases—review feedback, conflicts, and CI—repeating until there are no more review comments, no conflicts, and all CI checks pass. It does not merge the pull request.
+
+The loop runs as a self-paced schedule rather than as a single, continuous turn, doing one pass of work each time it runs and pausing between passes while CI settles. Use the `/every` slash command to check on the loop, or to stop it.
 
 You can append instructions to guide the pull request creation. For example:
 
 ```copilot copy
 /pr auto include migration notes in the description
 ```
+
+### Automatically merging the pull request
+
+`/pr auto` deliberately stops when the pull request is green. If you also want Copilot to merge the pull request, enter:
+
+```copilot copy
+/pr automerge
+```
+
+This runs the same loop as `/pr auto`. Once the pull request is no longer a draft, has no unresolved requests for changes, and all required checks are passing, Copilot enables auto-merge rather than merging the pull request itself. GitHub then completes the merge as soon as every remaining requirement is satisfied, including any required approvals and merge queue. Copilot keeps the loop running—handling any further review feedback or check failures—until the pull request is merged or closed.
+
+You can use `/pr agentmerge` as an alias for `/pr automerge`.
 
 ## Further reading
 

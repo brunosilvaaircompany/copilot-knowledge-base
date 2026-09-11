@@ -275,6 +275,6 @@ const session = await client.createSession({
 
 ## See also
 
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started)
-* [Getting Started](https://docs.github.com/en/copilot/how-tos/copilot-sdk/getting-started#step-4-add-a-custom-tool)
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart)
+* [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart#step-4-add-a-custom-tool)
 * [Debugging](https://docs.github.com/en/copilot/how-tos/copilot-sdk/troubleshooting/debugging)

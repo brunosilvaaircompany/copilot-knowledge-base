@@ -1,7 +1,15 @@
 # Allowing use of GitHub Code Quality in your enterprise
 
 > [!NOTE]
-> Previously, Advanced Security policies also controlled access to Code Quality. Those existing policy settings are automatically applied to the standalone Code Quality policies.
+> Code Quality has its own standalone enterprise policies. Access was previously controlled by your Advanced Security policies, and those existing settings are automatically applied to the new Code Quality policies.
+
+> [!NOTE]
+> Agentic Autofix for GitHub Code Quality backlog findings is currently in public preview and subject to change.
+
+
+When you allow Code Quality for an organization and set the repository admin policy to **Allowed**, repository administrators can enable Code Quality scans and all associated capabilities, including bulk agentic remediation with Copilot. There is no separate policy for agentic remediation.
+
+If you restrict Code Quality, repository administrators cannot enable scans or use Copilot-powered autofixes for code quality findings.
 
 1. Navigate to your enterprise. For example, from [https://github.com/settings/enterprises](https://github.com/settings/enterprises?ref_product=ghec&ref_type=engagement&ref_style=text).
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.

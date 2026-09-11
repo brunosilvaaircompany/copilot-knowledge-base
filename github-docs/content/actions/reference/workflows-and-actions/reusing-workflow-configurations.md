@@ -70,6 +70,9 @@ When you call a reusable workflow, you can only use the following keywords in th
 * [`jobs.<job_id>.concurrency`](/actions/reference/workflows-and-actions/workflow-syntax#jobsjob_idconcurrency)
 * [`jobs.<job_id>.permissions`](/actions/reference/workflows-and-actions/workflow-syntax#jobsjob_idpermissions)
 
+* [`jobs.<job_id>.cache-mode`](/actions/reference/workflows-and-actions/workflow-syntax#jobsjob_idcache-mode)
+
+
   > [!NOTE]
   >
   > * If `jobs.<job_id>.permissions` is not specified in the calling job, the called workflow will have the default permissions for the `GITHUB_TOKEN`. For more information, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions).
