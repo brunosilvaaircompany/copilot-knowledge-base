@@ -18,7 +18,7 @@ The Agent Client Protocol (ACP) is a protocol that standardizes communication be
 
 Use the `--acp` option of the `copilot` command to start the CLI's ACP server. You can specify the transport mode with either the `--stdio` or `--port` options. If no transport mode is specified, the server defaults to stdio mode.
 
-ACP mode allows sessions with a configured bring-your-own-key (BYOK) provider (`COPILOT_PROVIDER_*` environment variables) to run without GitHub login, matching the behavior of `-p`/interactive mode.
+ACP mode allows sessions with a configured bring-your-own-key (BYOK) provider (`COPILOT_PROVIDER_*` environment variables, or a providers configuration file—see `COPILOT_PROVIDERS_CONFIG` in [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#environment-variables)) to run without GitHub login, matching the behavior of `-p`/interactive mode.
 
 ### Options applied to every session
 

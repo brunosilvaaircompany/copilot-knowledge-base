@@ -16,6 +16,10 @@ After you authorize a personal access token or SSH key, the token or key will st
 * The personal access token expired as defined during creation.
 
 
+Enterprise administrators can use a GitHub App to authorize credentials for multiple organizations. See [Authorizing Credentials For Single Sign On With A GitHub App](https://docs.github.com/en/authentication/authenticating-with-single-sign-on/authorizing-credentials-for-single-sign-on-with-a-github-app).
+
+## Authorizing a personal access token (classic)
+
 1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**.
 
 1. In the left sidebar, click **{% octicon "code" aria-hidden="true" aria-label="code" %} Developer settings**.
