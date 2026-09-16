@@ -36,7 +36,7 @@ Note that the syntax and qualifiers for searching for non-code content, such as 
 
 ## Getting answers with Copilot from the search bar
 
-> [!NOTE] You'll need access to GitHub Copilot. For more information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+> [!NOTE] You'll need access to GitHub Copilot. For more information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 You can use GitHub Copilot to ask questions about an entire repository directly from the main search box. Simply type your question into the search bar, and Copilot can provide insights or explanations about the repository’s structure, purpose, or specific components. This makes it easy to get quick answers without navigating through multiple files, helping you stay focused and maintain your workflow.

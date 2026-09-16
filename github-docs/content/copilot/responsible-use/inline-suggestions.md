@@ -1,6 +1,6 @@
 # Application card: GitHub Copilot inline suggestions
 
-> [!NOTE] You are currently viewing the documentation for Free, Pro, and Team plans. GitHub Copilot Enterprise is only available to customers on the GitHub Enterprise Cloud plan. For full documentation of Copilot Enterprise, see [What Is GitHub Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/what-is-github-copilot) in the GitHub Enterprise Cloud documentation.
+> [!NOTE] You are currently viewing the documentation for Free, Pro, and Team plans. GitHub Copilot Enterprise is only available to customers on the GitHub Enterprise Cloud plan. For full documentation of Copilot Enterprise, see [About GitHub Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/about-github-copilot) in the GitHub Enterprise Cloud documentation.
 
 
 

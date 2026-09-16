@@ -6,21 +6,24 @@
 
 ## Introduction
 
-Copilot cloud and local sandboxes are the execution platform powering secure sandboxed experiences for GitHub Copilot CLI, both locally and in the cloud. As Copilot takes more actions on your behalf—running tools, executing commands, and modifying files—sandboxing provides the isolation, portability, and policy controls needed to adopt agentic workflows safely.
+Copilot cloud and local sandboxes are the execution platform powering secure sandboxed experiences for GitHub Copilot CLI and the GitHub Copilot app. As Copilot takes more actions on your behalf—running tools, executing commands, and modifying files—sandboxing provides the isolation, portability, and policy controls needed to adopt agentic workflows safely.
 
-Sandboxing currently applies to Copilot CLI sessions. You can also choose to use cloud sandboxing when you start a new session in the GitHub Copilot app. For more information, see [Agent Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions#starting-a-session).
+Sandboxing is available in both GitHub Copilot CLI and the GitHub Copilot app, but the two surfaces expose it differently:
+
+* In Copilot CLI, you control both local and cloud sandboxing with the commands and settings described in this article.
+* In the GitHub Copilot app, you choose cloud sandboxing when you start a new session, without running any commands. This feature is currently in public preview and subject to change. For more information, see [Agent Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions#starting-a-session).
 
 With sandboxing, you can choose where Copilot runs:
 
 * **Local sandboxing**: Run Copilot securely on your own machine. The commands that Copilot runs have restricted access to your filesystem, network, and system capabilities. You can use local sandboxing at no extra charge.
-* **Cloud sandboxing**: Run the entire Copilot CLI session remotely, inside a fully isolated, ephemeral Linux environment hosted by GitHub. Cloud sandboxing is billed based on usage.
+* **Cloud sandboxing**: Run an entire Copilot session remotely, inside a fully isolated, ephemeral Linux environment hosted by GitHub. Cloud sandboxing is billed based on usage.
 
 ## Local sandboxing
 
 > [!NOTE]
 > Local sandboxing is currently an experimental feature. To use it, start Copilot CLI with the `‑‑experimental` command line option, or enter `/experimental on` during a session.
 
-Local sandboxing lets Copilot run in a sandboxed environment directly on your machine, with restricted access to your filesystem, network connectivity, and system capabilities.
+Local sandboxing lets Copilot run in a sandboxed environment directly on your machine, with restricted access to your filesystem, network connectivity, and system capabilities. You configure local sandboxing in Copilot CLI, using the commands and settings described in the following sections.
 
 Local sandboxing is turned off by default. Until you enable it, the shell commands that Copilot runs execute directly on your machine with the same access as your user account: they can read, write, and delete wherever you can, reach any network your machine can reach, and use your credentials without restriction. Enabling local sandboxing constrains this access to a policy that you control.
 
@@ -92,7 +95,7 @@ Enterprises can require local sandboxing and enforce its configuration through s
 
 ## Cloud sandboxing
 
-Cloud sandboxing lets you run Copilot CLI sessions inside fully isolated, ephemeral Linux environments hosted by GitHub. Each cloud sandbox session is isolated from your local environment and from other sessions.
+Cloud sandboxing lets you run sessions inside fully isolated, ephemeral Linux environments hosted by GitHub. You can use cloud sandboxing from both Copilot CLI and the GitHub Copilot app. Each cloud sandbox session is isolated from your local environment and from other sessions.
 
 Cloud sandboxing is built on Azure Container Apps Sandboxes, with GitHub providing the identity, policy, and billing layer.
 
@@ -117,6 +120,8 @@ Running `copilot ‑‑cloud` starts a single Copilot CLI session in a cloud san
 > [!NOTE]
 > Cloud sandboxing is only available for interactive Copilot CLI sessions. You can't run the CLI programmatically in a cloud sandbox—that is, you can't combine the `‑‑cloud` option with the `-p` or `-i` options.
 
+In the GitHub Copilot app, you don't use a command to start a cloud sandbox session. Instead, choose the cloud sandbox option when you create a new session. For more information, see [Agent Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions#starting-a-session).
+
 ### Continue sessions across devices
 
 Because cloud sandbox sessions run in GitHub-hosted infrastructure, you can pick up a Copilot session on any device, regardless of where the session was originally started. This enables more flexible workflows without needing to copy files or reinstall dependencies.
@@ -133,7 +138,7 @@ Cloud sandbox policies share the same configuration as Copilot cloud agent polic
 
 A cloud sandbox session has three main states:
 
-* **Active**: The session is running, and you are interacting with it from Copilot CLI.
+* **Active**: The session is running, and you are interacting with it from Copilot CLI or the GitHub Copilot app.
 * **Stopped**: The session is not currently running, but its state is saved. When you resume it, your files, environment variables, and in-progress work are restored.
 * **Deleted**: The session and its saved state are removed and cannot be recovered.
 
@@ -141,7 +146,7 @@ When you stop a session, the cloud sandbox creates a snapshot of its state so yo
 
 ## Authentication and access
 
-Sandboxing uses your existing Copilot CLI authentication. If you can sign in to Copilot CLI and have access to Copilot, you can use sandboxing. You don't need to configure a separate cloud provider, manage API keys, or set up infrastructure.
+Sandboxing uses your existing Copilot authentication. If you can sign in to Copilot CLI or the GitHub Copilot app and have access to Copilot, you don't need to configure separate authentication for the sandboxing options available in that surface. You don't need to configure a separate cloud provider, manage API keys, or set up infrastructure.
 
 An organization or enterprise owner must enable the **Cloud Sandbox access** policy in the organization or enterprise settings before members can use cloud sandboxes.
 

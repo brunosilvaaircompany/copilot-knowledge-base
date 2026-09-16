@@ -53,7 +53,7 @@ The table below provides an overview of differences between plans. All plans inc
 
 {% endrowheaders %}
 
-Each plan comes with an allowance of GitHub AI Credits. For more information, including how GitHub AI Credits work, see [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) and [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+Each plan comes with an allowance of GitHub AI Credits. For more information, including how GitHub AI Credits work, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing) and [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 For more detail on what's uniquely available in each plan, see the following sections: 
 * [Individual plans](#individual-plans)
@@ -84,7 +84,7 @@ The following table shows what's included with each paid plan.
 
 Copilot Free and Copilot Student both have an allowance of AI credits.
 
-For more information on how GitHub AI Credits work, see [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)
+For more information on how GitHub AI Credits work, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing)
 
 ### Inline suggestions and Copilot Chat
 
@@ -178,7 +178,7 @@ With these plans you'll receive access to the following features and capabilitie
 
 Copilot usage is measured in AI credits under usage-based billing. Each license contributes AI credits to a shared enterprise pool, and usage beyond the pool is charged at $0.01 USD per AI credit. Code completions and next edit suggestions are not billed in AI credits and remain unlimited for all paid plans.
 
-For a full explanation of how AI credits work, including pooling, additional usage, and what happens when credits run out, see [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+For a full explanation of how AI credits work, including pooling, additional usage, and what happens when credits run out, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 ### Inline suggestions and Copilot Chat
 

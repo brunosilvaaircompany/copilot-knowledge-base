@@ -6,7 +6,7 @@ If GitHub Copilot stops working, check GitHub's [Status page](https://githubstat
 
 ## Unable to use the GitHub Copilot extension in the IDE
 
-We recommend you follow the quickstart guide for GitHub Copilot while setting up GitHub Copilot on your machine. For more information, see [Quickstart](https://docs.github.com/en/copilot/get-started/quickstart).
+We recommend you follow the quickstart guide for GitHub Copilot while setting up GitHub Copilot on your machine. For more information, see [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide).
 
 The GitHub Copilot extension is frequently updated to fix bugs and add new features. It's important to keep your extension up to date because older clients cannot communicate with the GitHub Copilot servers. Update your GitHub Copilot extension on all the machines you have it installed.
 
@@ -69,7 +69,7 @@ Most people see rate limiting for select models, due to limited capacity.
 
 Service-level request rate limits ensure high service quality for all Copilot  users and should not affect typical or even deeply engaged Copilot usage. We are aware of some use cases that are affected by it. GitHub is iterating on Copilot’s rate-limiting heuristics to ensure it doesn’t block legitimate use cases.
 
-If you are rate limited, the error message may tell you to wait for your limit to reset, suggest a retry time, or prompt you to upgrade your plan for additional usage. For more information about what to do while your limit resets, see [Usage Limits](https://docs.github.com/en/copilot/concepts/usage-limits#what-to-do-if-you-hit-a-limit).
+If you are rate limited, the error message may tell you to wait for your limit to reset, suggest a retry time, or prompt you to upgrade your plan for additional usage. For more information about what to do while your limit resets, see [Usage Limits](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/usage-limits#what-to-do-if-you-hit-a-limit).
 
 In case you experience repeated rate limiting in Copilot contact [GitHub Support](https://support.github.com).
 

@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-To use Copilot in your IDE, you need either limited access through Copilot Free or a paid Copilot plan for full access. For more information about how to get access and choose the right plan, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+To use Copilot in your IDE, you need either limited access through Copilot Free or a paid Copilot plan for full access. For more information about how to get access and choose the right plan, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 {% azure_data_studio %}
 
@@ -14,7 +14,7 @@ To see instructions for other popular coding environments, use the tool switcher
 
 ## Installing the GitHub Copilot extension in Azure Data Studio
 
-1. Make sure you have access to GitHub Copilot. For information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+1. Make sure you have access to GitHub Copilot. For information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 1. Make sure you have a compatible version of Azure Data Studio. To use GitHub Copilot in Azure Data Studio, you must have Azure Data Studio version 1.44.0 or later installed. See the [Azure Data Studio download page](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) in the Azure Data Studio documentation.
 
@@ -49,7 +49,7 @@ GitHub, Inc. is the licensor of the JetBrains plugin. The end user license agree
 
 The following procedure will guide you through installation of the GitHub Copilot plugin in IntelliJ IDEA. Steps to install the plugin in another supported IDE may differ.
 
-1. Make sure you have access to GitHub Copilot. For information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+1. Make sure you have access to GitHub Copilot. For information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 1. Make sure you have a JetBrains IDE that is compatible with GitHub Copilot. GitHub Copilot is compatible with the following IDEs:
 
@@ -113,7 +113,7 @@ To see instructions for other popular coding environments, use the tool switcher
 
 GitHub recommends that you install the GitHub Copilot plugin with Vim/Neovim's built-in plugin manager. Alternatively, you can use a plugin manager of your choice to install `github/copilot.vim`. For more information, see the [copilot.vim repository](https://github.com/github/copilot.vim).
 
-1. Make sure you have access to GitHub Copilot. For information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+1. Make sure you have access to GitHub Copilot. For information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 1. Make sure you have a compatible version of Vim/Neovim installed. To use GitHub Copilot in Vim/Neovim you must have Vim version 9.0.0185 / Neovim version 0.6 or above and Node.js version 18 or above. See the [Vim](https://vimhelp.org/) / [Neovim documentation](https://neovim.io/doc/) and the [Node.js website](https://nodejs.org/en/).
 
@@ -178,7 +178,7 @@ The following instructions are for versions 2022 17.8 and 2022 17.9 of Visual St
 
 ## Installing the GitHub Copilot extension in Visual Studio
 
-1. Make sure you have access to GitHub Copilot. For information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+1. Make sure you have access to GitHub Copilot. For information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 1. Make sure you have a compatible version of Visual Studio installed. To use GitHub Copilot in Visual Studio, you must have version 2022 17.8 or later of Visual Studio for Windows installed. For more information, see [Install Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?ref_product=copilot&ref_type=engagement&ref_style=text) in the Microsoft documentation.
 
@@ -225,7 +225,7 @@ To use GitHub Copilot for Xcode you must have Xcode version 8.0 or above and mac
 
 ## Installing the GitHub Copilot extension for Xcode
 
-1. Make sure you have access to GitHub Copilot. For information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+1. Make sure you have access to GitHub Copilot. For information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 1. Make sure you have a compatible version of Xcode installed. To use GitHub Copilot for Xcode you must have Xcode version 8.0 or above and macOS Monterey (12.0) or above. See [Xcode](https://developer.apple.com/xcode/) on the Apple Developer site.
 1. Download the latest version of the GitHub Copilot for Xcode extension from the [`github/CopilotForXcode` repository](https://github.com/github/CopilotForXcode/releases/latest/download/GitHubCopilotForXcode.dmg?ref_product=copilot&ref_type=engagement&ref_style=text) and install it. A background item will be added for the application to be able to start itself when Xcode starts.
 1. Open the **GitHub Copilot for Xcode** application from the Applications folder and step through the on-screen instructions for setting up the extension.

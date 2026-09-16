@@ -1,6 +1,15 @@
 # Security configuration enforcement
 
+Security configurations can be enforced at the organization{% ifversion security-configuration-enterprise-level %} or enterprise level to prevent owners from changing the enablement status of configured security features.
+Enterprise owners and members with the **admin** role
+
+* At the **organization** level, enforcement means repository owners cannot change the enablement status of features that are enabled or disabled by the configuration.
+* At the **enterprise** level,  you can enforce for repository owners only, or for both repository and organization owners. When enforcement applies to both, neither repository owners nor organization owners can change the enablement status of features that are enabled or disabled by the configuration.
+{% else %}
+
 Security configurations can be enforced, meaning repository owners cannot change the enablement status of features that are enabled or disabled by the configuration.
+
+{% endif %}
 
 ## Situations that break enforcement
 

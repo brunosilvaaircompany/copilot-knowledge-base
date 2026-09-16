@@ -4,7 +4,7 @@
 
 Each session in the GitHub Copilot app runs in its own isolated workspace, so you can run multiple sessions in parallel and make progress on several tasks without conflicts.
 
-1. In the sidebar next to **Sessions**, click **+** to start a new session.
+1. In the sidebar, next to **Projects**, click {% octicon "plus" aria-label="Start a new session" %}.
 1. Choose a project—you can use a folder already on your machine, choose from GitHub, or clone from a Git URL for repositories hosted outside GitHub (for example, on Azure DevOps) or for private repositories without app access.
 1. From the dropdown under the prompt box, choose where the session should run: in a new working tree, in your local repository, or in a cloud sandbox. Cloud sandboxes for Copilot (public preview) are fully isolated environments hosted by GitHub.
 1. Select a session mode, model, and reasoning effort from the dropdowns below the prompt field. If you choose **Auto** for the model, the app selects the optimal model for your task based on task complexity.

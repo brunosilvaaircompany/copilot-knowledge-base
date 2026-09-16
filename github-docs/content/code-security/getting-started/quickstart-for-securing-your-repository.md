@@ -115,9 +115,15 @@ You can configure code scanning to automatically identify vulnerabilities and er
 1. If "Code Security" or "GitHub Advanced Security" is not already enabled, click **Enable**.
 1. To the right of "CodeQL analysis", select **Set up** {% octicon "triangle-down" aria-hidden="true" aria-label="triangle-down" %}, then click **Default**.
 1. In the pop-up window that appears, review the default configuration settings for your repository, then click **Enable CodeQL**.
-1. Choose whether you want to enable addition features, such as Copilot Autofix or AI-powered security detections.
+1. Choose whether you want to enable additional features, such as Copilot Autofix.
 
 As an alternative to default setup, you can use advanced setup, which generates a workflow file you can edit to customize your code scanning with CodeQL. For more information, see [Configuring Advanced Setup For Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configuring-advanced-setup-for-code-scanning#configuring-advanced-setup-for-code-scanning-with-codeql).
+
+
+
+You can separately enable AI Scan to extend code scanning coverage to supported languages and frameworks that CodeQL does not cover. AI Scan requires code scanning, but does not require CodeQL default setup. See [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
+
+
 
 ## Configuring Secret Protection
 

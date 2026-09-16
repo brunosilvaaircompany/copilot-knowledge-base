@@ -10,7 +10,7 @@ The AI Controls view provides a centralized platform where you can manage and mo
 
 ## Copilot cloud agent
 
-Copilot policies are also managed at the enterprise level. If your enterprise owner has selected a specific policy, such as enabling a feature everywhere, disabling it everywhere, or enabling it for selected organizations only, you cannot override that setting at the organization level. For information on how policies combine, see [Policies](https://docs.github.com/en/copilot/concepts/policies).
+Copilot policies are also managed at the enterprise level. If your enterprise owner has selected a specific policy, such as enabling a feature everywhere, disabling it everywhere, or enabling it for selected organizations only, you cannot override that setting at the organization level. For information on how policies combine, see [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
 
 
 Enterprise owners and AI managers can control how Copilot cloud agent is adopted across the enterprise by choosing one of four policy states. This allows you to pilot adoption progressively and manage risk.

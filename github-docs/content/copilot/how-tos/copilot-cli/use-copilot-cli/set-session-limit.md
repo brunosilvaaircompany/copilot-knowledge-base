@@ -15,8 +15,8 @@ These session limits are **soft limits**. If a response is in progress when the 
 
 How the limit is set and applied depends on whether you are in an interactive session or running the CLI programmatically.
 
-> [!TIP]
-> AI credit session limits work best when set to > 30 AI credits as most model calls will cost more than 20 AI credits.
+> [!NOTE]
+> AI credit session limits must be set to at least 30 AI credits.
 
 ### Setting a limit within an interactive session
 
@@ -54,4 +54,4 @@ When the limit is hit, the agent stops cleanly and lets you know.
 ## Further reading
 
 * [Optimize Ai Usage](https://docs.github.com/en/copilot/tutorials/optimize-ai-usage)
-* [What are GitHub AI Credits](/copilot/concepts/billing/usage-based-billing-for-individuals#what-are-github-ai-credits)
+* [What are GitHub AI Credits](/copilot/concepts/billing-and-usage/individuals/billing#what-are-github-ai-credits)

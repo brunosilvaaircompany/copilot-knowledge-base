@@ -26,6 +26,7 @@ You have full administrative access to your organization. You can:
 
 * View metered usage and budgets for your organization and its repositories.
 * Set budgets for the organization and its repositories.
+* Review requests from members for additional Copilot budget.
 * Download CSV usage reports.
 * View promotions and discounts.
 * View spending for pre-purchased user licenses for Advanced Security based on your usage.
@@ -36,6 +37,7 @@ You can:
 
 * View all metered usage for your organization and its repositories.
 * View organization-level budgets.
+* Review requests from members for additional Copilot budget.
 * Download CSV usage reports.
 * View payment history and download receipts.
 * Add, update, or remove payment methods.
@@ -52,6 +54,7 @@ You can:
 * See enterprise usage, including costs for organizations and repositories.
 * Download CSV usage reports for products your enterprise is using.
 * Set budgets for your enterprise.
+* Review requests from members for additional Copilot budget.
 * Create cost centers for all organizations within your enterprise.
 * View and manage user licenses.
 * Manage other billing settings, such as payment methods and billing contacts.

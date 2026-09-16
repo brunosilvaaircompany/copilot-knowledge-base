@@ -344,9 +344,8 @@ If your MCP servers require any dependencies that are not installed on the GitHu
 
 The GitHub MCP server is enabled by default and connects to GitHub with a specially scoped token that only has read-only access to the current repository.
 
-If you want to allow Copilot to access data outside the current repository, you can give it a personal access token with wider access.
+If you want to allow Copilot to access data outside the current repository, you can configure a personal access token with wider access or a GitHub App.
 
-1. Create a personal access token with the appropriate permissions. We recommend using a fine-grained personal access token, where you can limit the token's access to read-only permissions on specific repositories. For more information on personal access tokens, see [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 1. On GitHub, navigate to the main page of the repository.
 
 1. Under your repository name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
@@ -355,7 +354,9 @@ If you want to allow Copilot to access data outside the current repository, you 
 
 1. In the sidebar, under "Code, planning, and automation",
  click **Copilot** then **MCP servers**.
-1. Add your configuration in the "MCP configuration" section. For example, you can add the following:
+1. Add your configuration in the "MCP configuration" section. 
+
+   For personal access token, you can add the following example:
 
    ```javascript copy
     // If you copy and paste this example, you will need to remove the comments prefixed with `//`, which are not valid JSON.
@@ -376,10 +377,48 @@ If you want to allow Copilot to access data outside the current repository, you 
     }
    ```
 
+   For GitHub App, you can add the following example:
+
+   ```javascript copy
+    {
+      "mcpServers": {
+        "github-wider-access": {
+          "type": "stdio",
+          "command": "docker",
+          "args": [
+            "run", "--rm", "-i",
+            "-e", "GITHUB_APP_ID",
+            "-e", "GITHUB_APP_INSTALLATION_ID",
+            "-e", "GITHUB_APP_PRIVATE_KEY",
+            "-e", "GITHUB_READ_ONLY",
+            "-e", "GITHUB_TOOLSETS",
+            "ghcr.io/github/github-mcp-server"
+          ],
+          "env": {
+            "GITHUB_APP_ID": "$COPILOT_MCP_GITHUB_APP_ID",
+            "GITHUB_APP_INSTALLATION_ID": "$COPILOT_MCP_GITHUB_APP_INSTALLATION_ID",
+            "GITHUB_APP_PRIVATE_KEY": "$COPILOT_MCP_GITHUB_APP_PRIVATE_KEY",
+            "GITHUB_READ_ONLY": "true",
+            "GITHUB_TOOLSETS": "repos,pull_requests"
+          },
+          "tools": ["*"]
+        }
+      }
+    }
+   ```
+
+   For more information on the GitHub MCP server with GitHub App, refer to [GitHub App authentication](https://github.com/github/github-mcp-server/blob/main/docs/github-app-auth.md).
+
    For more information on toolsets, refer to the [README](https://github.com/github/github-mcp-server?tab=readme-ov-file#available-toolsets) in the GitHub Remote MCP Server documentation.
 
 1. Click **Save MCP configuration**.
-1. Add an Agents secret called `COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN` with your personal access token as the value. You can configure this at either the organization or repository level. For more information, see [Configure Secrets And Variables](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/configure-secrets-and-variables).
+1. Add your Agents secrets and variables. You can configure these at either the organization or repository level. For more information, see [Configure Secrets And Variables](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/configure-secrets-and-variables).
+
+   For personal access token, add a secret called `COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN` with your personal access token as the value. We recommend using a fine-grained personal access token so you can limit the token's access to read-only permissions on specific repositories. For more information on personal access tokens, see [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+
+   For GitHub App, your Agents secrets and variables must be prefixed with `COPILOT_MCP_`. For example, add a variable called `COPILOT_MCP_GITHUB_APP_ID` with your GitHub App ID as the value, a variable called `COPILOT_MCP_GITHUB_APP_INSTALLATION_ID` with your GitHub App installation ID as the value, and a secret called `COPILOT_MCP_GITHUB_APP_PRIVATE_KEY` with your GitHub App private key as the value.
+
+1. If you see a firewall warning for `api.github.com` when using the GitHub MCP server, add `api.github.com` to the custom allowlist. For more information, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 For information on using the GitHub MCP server in other environments, see [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server).
 

@@ -14,7 +14,7 @@ To learn how to use Copilot for agent-driven workflows in a desktop app, see [Qu
 
 ## Prerequisites
 
-* **Access to GitHub Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to GitHub Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 * **Latest version of Visual Studio Code**. See the [Visual Studio Code download page](https://code.visualstudio.com/Download?ref_product=copilot&ref_type=engagement&ref_style=text).
 * **Sign in to GitHub in Visual Studio Code**. If you experience authentication issues, see [Troubleshoot Common Issues](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues#authentication-problems-in-visual-studio-code).
@@ -282,7 +282,7 @@ To leave feedback about the GitHub Copilot Chat extension, open an issue in the 
 
 ## Prerequisites
 
-* **Access to GitHub Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to GitHub Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 * **Visual Studio 2022 version 17.8 or later**. See [Install Visual Studio](https://learn.microsoft.com/visualstudio/install/install-visual-studio) in the Visual Studio documentation.
   * _For Visual Studio 17.8 and 17.9:_
@@ -441,7 +441,7 @@ To share feedback about Copilot Chat, you can use the **Send feedback** button i
 
 ## Prerequisites
 
-* **Access to GitHub Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to GitHub Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 * **Compatible JetBrains IDE**. GitHub Copilot is compatible with the following IDEs:
 
@@ -690,7 +690,7 @@ To share feedback about Copilot Chat, you can use the **share feedback** link in
 
 ## Prerequisites
 
-* **Access to GitHub Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to GitHub Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 * **Latest version of the GitHub Copilot extension**. For installation instructions, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
 * **Sign in to GitHub in Xcode**.
@@ -856,7 +856,7 @@ To indicate whether a response was helpful, use {% octicon "thumbsup" aria-label
 
 ## Prerequisites
 
-* **Access to Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 * **Compatible version of Eclipse**. To use the GitHub Copilot extension, you must have Eclipse version 2024-09 or above. See the [Eclipse download page](https://www.eclipse.org/downloads/packages/).
 * If you are a member of an organization or enterprise with a Copilot Business or Copilot Enterprise plan, the "MCP servers in Copilot" policy must be enabled in order to use MCP with Copilot.

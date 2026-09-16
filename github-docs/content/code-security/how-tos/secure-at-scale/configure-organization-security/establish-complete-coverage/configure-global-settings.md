@@ -89,7 +89,7 @@ You can recommend that repositories in your organization use the "Extended" quer
 
 
 
-* [Enabling AI-powered security detections](#enabling-ai-powered-security-detections)
+* [Enabling AI Scan](#enabling-ai-scan)
 
 * [Expanding CodeQL analysis](#expanding-codeql-analysis)
 
@@ -112,9 +112,9 @@ You can select **Copilot Autofix** to enable Copilot Autofix for all the reposit
 
 
 
-### Enabling AI-powered security detections
+### Enabling AI Scan
 
-You can select **AI-powered security detections** to enable AI-powered security detections for all repositories in your organization that use CodeQL default setup. See [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
+You can select **AI Scan** to enable AI Scan for eligible repositories in your organization where code scanning is enabled. Repositories inherit the organization setting, but repository administrators can opt out for individual repositories. See [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
 
 
 

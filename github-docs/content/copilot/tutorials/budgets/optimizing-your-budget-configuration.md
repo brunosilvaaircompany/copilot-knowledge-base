@@ -1,6 +1,6 @@
 # Optimizing your budget configuration
 
-Before optimizing your budget configuration, make sure you understand how budget controls work and how the system evaluates them. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing).
+Before optimizing your budget configuration, make sure you understand how budget controls work and how the system evaluates them. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets).
 
 If you haven't set up budgets yet, start with [Getting Started With Budget Controls](https://docs.github.com/en/copilot/tutorials/budgets/getting-started-with-budget-controls) to get the basics in place, then come back to this guide to optimize your configuration.
 
@@ -18,7 +18,7 @@ Here's how to estimate:
 
 If you also use cost center budgets, the sum of your cost center budgets and your enterprise budget should cover the gap. The enterprise budget applies to users not assigned to a cost center.
 
-If you want each cost center to stay within the AI credits its own licenses fund, apply an included usage control to that cost center. This automatically caps the team's draw from the shared pool, so heavy use by one team doesn't consume another team's share before metered budgets apply. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#included-usage-controls-for-cost-centers).
+If you want each cost center to stay within the AI credits its own licenses fund, apply an included usage control to that cost center. This automatically caps the team's draw from the shared pool, so heavy use by one team doesn't consume another team's share before metered budgets apply. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#included-usage-controls-for-cost-centers).
 
 > [!TIP]
 > Whenever you raise user-level budgets, re-check this calculation. Raising ULBs without raising the enterprise budget can cause the enterprise budget to block users before they reach their individual budgets.

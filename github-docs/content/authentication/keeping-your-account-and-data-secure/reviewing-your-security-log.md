@@ -88,7 +88,7 @@ The events listed in your security log are triggered by your actions. Actions ar
 |   |
 | `billing` | Contains all activities related to your billing information. |
 | `codespaces` | Contains all activities related to GitHub Codespaces. For more information, see [Quickstart](https://docs.github.com/en/codespaces/quickstart). |
-| `copilot` | Contains all activities related to Copilot Business. For more information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot). |
+| `copilot` | Contains all activities related to Copilot Business. For more information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot). |
 | `marketplace_agreement_signature` | Contains all activities related to signing the GitHub Marketplace Developer Agreement. |
 | `marketplace_listing`| Contains all activities related to listing apps in GitHub Marketplace. |
 |   |

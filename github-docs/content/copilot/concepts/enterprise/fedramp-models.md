@@ -34,7 +34,7 @@ If a user attempts to use Copilot with an older, incompatible client, they will 
 
 ## Supported Copilot features
 
-All generally available Copilot features work with this enforcement. See [Features](https://docs.github.com/en/copilot/get-started/features).
+All generally available Copilot features work with this enforcement. The availability of features is visible under Copilot policy controls, see [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
 
 Preview features that reach general availability will be supported with compliant model alternatives at the time of their GA release.
 
@@ -45,7 +45,7 @@ Copilot requests processed with this enforcement in place include a 10% increase
 
 For example, if an interaction would normally consume 100 AI credits, the same interaction processed with this enforcement enabled consumes 110 AI credits. This pricing applies to all compliant model requests across all providers.
 
-See [Usage Based Billing For Organizations And Enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
+See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 
 ## Policy controls

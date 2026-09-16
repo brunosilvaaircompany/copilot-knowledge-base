@@ -216,7 +216,7 @@ Available for public repositories by default.
 
 
 
-### AI-powered security detections
+### AI Scan
 
 Find vulnerabilities in languages and frameworks not covered by CodeQL with an AI-based scanning engine that runs during pull request review. See [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
 

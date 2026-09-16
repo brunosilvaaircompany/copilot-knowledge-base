@@ -44,7 +44,7 @@ The following Copilot features can use premium requests.
 > [!NOTE]
 > Billing for premium requests began on June 18, 2025, for all paid Copilot plans on GitHub.com, and on August 1, 2025, on GHE.com. The request counters were only set to zero for paid plans.
 
-If you're on a **paid plan**, you get unlimited inline suggestions. Rate limiting is in place to accommodate for high demand. See [Usage Limits](https://docs.github.com/en/copilot/concepts/usage-limits).
+If you're on a **paid plan**, you get unlimited inline suggestions. Rate limiting is in place to accommodate for high demand. See [Usage Limits](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/usage-limits).
 
 Paid plans also receive a monthly allowance of premium requests, which can be used for advanced chat interactions, inline suggestions using premium models, and other premium features.
 
@@ -69,7 +69,7 @@ Unused requests for the previous month do not carry over to the following month.
 >
 > * Users who subscribe, or have subscribed, to Copilot Pro or Copilot Pro+ through GitHub Mobile on iOS or Android.
 
-If you use all of your premium requests, you can still use Copilot with one of the included models for the rest of the month. This is subject to change. Response times for the included models may vary during periods of high usage. Requests to the included models may be subject to rate limiting. See [Usage Limits](https://docs.github.com/en/copilot/concepts/usage-limits).
+If you use all of your premium requests, you can still use Copilot with one of the included models for the rest of the month. This is subject to change. Response times for the included models may vary during periods of high usage. Requests to the included models may be subject to rate limiting. See [Usage Limits](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/usage-limits).
 
 If you need more premium requests beyond your monthly allowance set a budget for additional premium requests or upgrade to a higher plan. See [Set Up Budgets](https://docs.github.com/en/billing/how-tos/set-up-budgets).
 

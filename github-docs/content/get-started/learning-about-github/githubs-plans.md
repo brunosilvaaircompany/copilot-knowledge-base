@@ -80,6 +80,10 @@ In addition to the features available with GitHub Free for organizations, GitHub
 
   For more information, see [About GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security).
 
+
+* The option to purchase GitHub Code Quality, which helps teams find and fix code quality and coverage issues. For more information, see [Code Quality](https://docs.github.com/en/code-security/concepts/code-quality/code-quality).
+
+
 * Advanced tools and insights in private repositories:
   * Required pull request reviewers
   * Multiple pull request reviewers

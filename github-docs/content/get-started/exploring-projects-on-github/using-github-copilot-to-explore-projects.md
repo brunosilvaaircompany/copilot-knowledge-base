@@ -4,7 +4,7 @@ In this guide, you’ll learn how to use Copilot Chat in GitHub to understand a 
 
 ## Prerequisites
 
-You'll need access to GitHub Copilot. For more information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+You'll need access to GitHub Copilot. For more information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 ## Understanding a repository

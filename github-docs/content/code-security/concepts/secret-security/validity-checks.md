@@ -14,6 +14,8 @@ Some secrets require more than the token itself to confirm whether they are acti
 
 GitHub displays the validation status of the secret in the alert view, so you can see if the secret is `active`, `inactive`, or if the validation status is `unknown`. For most secrets, you can optionally perform an "on-demand" validity check for the secret in the alert view.
 
+
+
 ## About extended metadata checks
 
 > [!NOTE] Extended metadata checks in security configurations is currently in public preview and subject to change.
@@ -31,6 +33,8 @@ You can enable extended metadata checks if validity checks are enabled. Then, yo
 
 The specific metadata available depends on what the service provider shares with GitHub. Not all secret types support extended metadata checks. For more information, see [Evaluating Alerts](https://docs.github.com/en/code-security/tutorials/remediate-leaked-secrets/evaluating-alerts).
 
+
+
 ## Getting started with validity and extended metadata checks
 
 You can enable validity and extended metadata checks at the repository, organization, or enterprise level to help prioritize which exposed credentials pose the most immediate security risks.
@@ -39,6 +43,6 @@ For large organizations, we recommend using **security configurations** to enabl
 
 To get started:
 
-* For repositories, see [Enable Validity Checks](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/enable-validity-checks)
+* For repositories, see [Enable Validity Checks](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/enable-validity-checks) and [Enable Metadata Checks](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/enable-metadata-checks)
 * For an organization, see [Create Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/create-custom-configuration)
 * For an enterprise, see [Create Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/establish-complete-coverage/create-custom-configuration)

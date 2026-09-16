@@ -30,7 +30,7 @@ The Copilot Business and Copilot Enterprise plans provide the following level of
 | Tool                                            | Inline suggestions support                    | Chat and agent support                         |
 |-------------------------------------------------|:---------------------------------------------:|:----------------------------------------------:|
 | Visual Studio        | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
-| Visual Studio Code    | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
+| Visual Studio Code    | {% octicon "check" aria-label="Supported" %}  | Chat: {% octicon "check" aria-label="Supported" %}<br>Edit: {% octicon "x" aria-label="Not supported" %}<br>Agent: {% octicon "x" aria-label="Not supported" %} |
 | JetBrains IDEs                                  | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
 | Vim/Neovim                                      | {% octicon "check" aria-label="Supported" %}  | Not applicable                                 |
 | Xcode                                           | {% octicon "check" aria-label="Supported" %}  | {% octicon "x" aria-label="Not supported" %}   |

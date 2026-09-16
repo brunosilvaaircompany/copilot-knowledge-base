@@ -97,7 +97,7 @@ This community maintainer started a discussion to welcome the community, and to 
 
 ## Using Copilot to gain context
 
-> [!NOTE] You'll need access to GitHub Copilot. For more information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+> [!NOTE] You'll need access to GitHub Copilot. For more information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 If you need more context or clarity on a specific issue or discussion, you can use GitHub Copilot to help answer your questions. This enables you to quickly gain insights, understand complex threads, and stay aligned with the project’s goals, fostering collaboration and knowledge sharing within the community.

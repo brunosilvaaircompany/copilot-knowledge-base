@@ -96,7 +96,7 @@ For pull requests authored by other bots, or when a bot requests the review, usa
 
 ### What happens when a budget is reached
 
-For Copilot Business and Copilot Enterprise, code review access is governed by budget controls. If a user reaches their user-level budget, or if the enterprise or cost center spending limit is exhausted, code reviews are blocked along with other AI credits-consuming features. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#what-happens-when-a-user-is-blocked).
+For Copilot Business and Copilot Enterprise, code review access is governed by budget controls. If a user reaches their user-level budget, or if the enterprise or cost center spending limit is exhausted, code reviews are blocked along with other AI credits-consuming features. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#what-happens-when-a-user-is-blocked).
 
 ### Users without a Copilot license or plan that includes Copilot code review
 

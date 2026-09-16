@@ -69,7 +69,7 @@ The Copilot usage metrics APIs include pull request lifecycle metrics such as:
 * The number of pull requests created by Copilot cloud agent that have been merged
 * Median time to merge for merged pull requests, including pull requests created by Copilot cloud agent
 
-These metrics can help you track adoption of Copilot cloud agent and monitor changes in pull request throughput and time to merge over time. See [Copilot Metrics](https://docs.github.com/en/copilot/concepts/copilot-usage-metrics/copilot-metrics).
+These metrics can help you track adoption of Copilot cloud agent and monitor changes in pull request throughput and time to merge over time. See [Copilot Metrics](https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics).
 
 ## Integrating Copilot cloud agent with third-party tools
 
@@ -111,7 +111,7 @@ The more Copilot cloud agent knows about the code in your repository, the tools 
 
 Copilot cloud agent uses GitHub Actions minutes and AI credits. The AI credits consumed depend on the model used and the number of tokens processed during the session.
 
-Within your included GitHub Actions minutes and AI credits, you can use Copilot cloud agent without incurring additional costs. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+Within your included GitHub Actions minutes and AI credits, you can use Copilot cloud agent without incurring additional costs. See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 Copilot code review also consumes GitHub Actions minutes on private repositories. See [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions#copilot-code-review-and-github-actions-minutes).
 

@@ -257,23 +257,23 @@ You also need to add the `.npmrc` file to your project so that all requests to i
 
 ### Installing packages from other organizations
 
-By default, you can only use GitHub Packages packages from one organization. If you'd like to route package requests to multiple organizations and users, you can add additional lines to your `.npmrc` file, replacing `HOSTNAME` with the host name of {% ifversion ghes %}your GitHub Enterprise Server instance and {% endif %}`NAMESPACE` with the name of the personal account or organization to which the package is scoped.
+By default, you can only use GitHub Packages packages from one organization. If you'd like to route package requests to multiple organizations and users, you can add additional lines to your `.npmrc` file, replacing `HOSTNAME` with the host name of {% ifversion ghes %}your GitHub Enterprise Server instance and {% endif %}`NAMESPACE1` and `NAMESPACE2` with the names of the personal accounts or organizations to which the packages are scoped.
 
 
 If your instance has subdomain isolation enabled:
 
 
 ```shell
-@NAMESPACE:registry=https://npm.pkg.github.com
-@NAMESPACE:registry=https://npm.pkg.github.com
+@NAMESPACE1:registry=https://npm.pkg.github.com
+@NAMESPACE2:registry=https://npm.pkg.github.com
 ```
 
 
 If your instance has subdomain isolation disabled:
 
 ```shell
-@NAMESPACE:registry=https://HOSTNAME/_registry/npm
-@NAMESPACE:registry=https://HOSTNAME/_registry/npm
+@NAMESPACE1:registry=https://HOSTNAME/_registry/npm
+@NAMESPACE2:registry=https://HOSTNAME/_registry/npm
 ```
 
 

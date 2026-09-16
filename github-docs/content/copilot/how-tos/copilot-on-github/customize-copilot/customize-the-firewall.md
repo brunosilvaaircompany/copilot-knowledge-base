@@ -22,7 +22,7 @@ If Copilot tries to make a request which is blocked by the firewall, a warning i
 
 The agent firewall has important limitations that affect its security coverage.
 
-* **Only applies to processes started by the agent**: The firewall only applies to processes started by the agent via its Bash tool. It does not apply to Model Context Protocol (MCP) servers or processes started in configured Copilot setup steps.
+* **Only applies to processes started by the agent**: The firewall only applies to processes started by the agent via its Bash tool. It does not apply directly to Model Context Protocol (MCP) server processes or processes started in configured Copilot setup steps. Other agent processes can still make network requests while an MCP server is in use, and these requests are subject to the firewall.
 * **Only applies within the GitHub Actions appliance**: The firewall only operates within the GitHub Actions appliance environment. It does not apply to processes running outside of this environment.
 * **Bypass potential**: Sophisticated attacks may bypass the firewall, potentially allowing unauthorized network access and data exfiltration.
 

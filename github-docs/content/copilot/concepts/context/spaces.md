@@ -48,7 +48,7 @@ You can use Copilot Spaces in Copilot Chat in GitHub. You can also leverage Copi
 Questions you submit in a space count as Copilot Chat requests and consume AI credits based on the model used and the number of tokens processed.
 
 * If you're a Copilot Free user, this usage counts toward your monthly chat limit.
-* For Copilot Business and Copilot Enterprise, usage draws from your enterprise's shared AI credits pool. For details on how consumption is calculated, see [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+* For Copilot Business and Copilot Enterprise, usage draws from your enterprise's shared AI credits pool. For details on how consumption is calculated, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 ## Next steps
 

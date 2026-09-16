@@ -91,6 +91,14 @@ Backup snapshots created by GitHub Enterprise Server Backup Utilities are writte
 
 For more information on advanced usage, see the [GitHub Enterprise Server Backup Utilities README](https://github.com/github/backup-utils#readme) in the GitHub Enterprise Server Backup Utilities project documentation.
 
+
+
+
+
+By default, GitHub Enterprise Server Backup Utilities backs up search index data by copying files directly from disk. You can optionally configure {% ifversion ghes %}your GitHub Enterprise Server instance to use Elasticsearch's native, incremental snapshot functionality with a customer-managed cloud storage provider instead. For more information, see [Configuring Elasticsearch Snapshots](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/configuring-elasticsearch-snapshots).
+
+{% endif %}
+
 ## Upgrading GitHub Enterprise Server Backup Utilities
 
 When upgrading GitHub Enterprise Server Backup Utilities, you must choose a version that will work with your current version of GitHub Enterprise Server. Your installation of GitHub Enterprise Server Backup Utilities must be at least the same version as your GitHub Enterprise Server instance, and cannot be more than two versions ahead. For more information, see [GitHub Enterprise Server version requirements](https://github.com/github/backup-utils/blob/master/docs/requirements.md#github-enterprise-server-version-requirements) in the GitHub Enterprise Server Backup Utilities project documentation.

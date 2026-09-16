@@ -103,7 +103,7 @@ By creating issue dependencies, you can easily see and communicate which issues 
 
 ## Understanding new issues
 
-> [!NOTE] You'll need access to GitHub Copilot. For more information, see [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+> [!NOTE] You'll need access to GitHub Copilot. For more information, see [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 When working on an unfamiliar or complex issue, GitHub Copilot can help you quickly understand the context, history, and key information, so you can get started faster and with more confidence.

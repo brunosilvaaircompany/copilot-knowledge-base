@@ -125,6 +125,8 @@ To set up a `www` or custom subdomain, such as `www.example.com` or `blog.exampl
  For more information about the default domain for your site, see [What Is GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites).
 
 
+   These `CNAME` record values are the same for both publicly and privately published GitHub Pages sites. Do not point the `CNAME` record to the unique `*.pages.github.io` subdomain shown in your repository's GitHub Pages settings. Privately published sites are available with GitHub Enterprise Cloud. For more information, see [Changing The Visibility Of Your GitHub Pages Site](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site) in the GitHub Enterprise Cloud documentation.
+
 {% indented_data_reference reusables.pages.wildcard-dns-warning spaces=3 %}
 1. Open <span class="platform-mac">Terminal</span><span class="platform-linux">Terminal</span><span class="platform-windows">Git Bash</span>.
 

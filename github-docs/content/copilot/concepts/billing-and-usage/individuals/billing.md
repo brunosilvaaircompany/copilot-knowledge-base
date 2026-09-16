@@ -75,6 +75,9 @@ For guidance on how to optimize your usage and reduce spend, including how to se
 
 ## What happens if I exceed my included AI credits?
 
+> [!NOTE]
+> This section applies to users who are on a Copilot Individual plan. If you use Copilot through a Copilot Business or Copilot Enterprise plan and exhaust all your AI credits, you'll see a banner on GitHub.com offering you the option to request more budget from your administrator.
+
 When your AI credits are exhausted, you can:
 
 * **Upgrade your plan.** As you approach your usage limits, Copilot prompts you to upgrade to the next tier. The upgrade cost is only the price difference between your current plan and the new plan, _not_ the full price of the new plan. Your usage from earlier in the billing cycle is counted within the new plan's larger allowance, so the additional credits are available to you immediately. You won't be charged for both plans for the same period.

@@ -308,7 +308,7 @@ These instructions explain how to use Copilot code review in Xcode. To see instr
 
 ## Prerequisites
 
-* **Access to Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **Compatible JetBrains IDE**. To use GitHub Copilot in JetBrains, you must have a compatible JetBrains IDE installed. GitHub Copilot is compatible with the following IDEs:
@@ -356,7 +356,7 @@ These instructions explain how to use Copilot code review in JetBrains IDEs. To 
 
 ## Prerequisites
 
-* **Access to Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 * **GitHub CLI**. You must have the GitHub CLI installed and authenticated. See [Quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart).
 

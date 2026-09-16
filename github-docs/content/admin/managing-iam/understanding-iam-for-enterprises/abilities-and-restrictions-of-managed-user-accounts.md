@@ -33,7 +33,7 @@ Managed user accounts:
 
 ## GitHub Copilot
 
-* Managed user accounts cannot sign up for GitHub Copilot Pro or GitHub Copilot Free. To allow a managed user to use Copilot, you must grant the user access to a Copilot Business or Copilot Enterprise subscription. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* Managed user accounts cannot sign up for GitHub Copilot Pro or GitHub Copilot Free. To allow a managed user to use Copilot, you must grant the user access to a Copilot Business or Copilot Enterprise subscription. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 * Copilot cloud agent is not available in personal repositories owned by managed user accounts. This is because Copilot cloud agent runs on GitHub-hosted runners, which are not available to personal repositories owned by managed user accounts. For more information, see [GitHub Hosted Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners).
 
 

@@ -47,7 +47,9 @@ Beyond the default detection of partner and provider secrets, you can expand and
 
 * **Generic patterns.** Expand detection to secrets that aren't tied to a specific service provider, such as private keys, connection strings, and generic API keys.
 * **Custom patterns.** Define your own regular expressions to detect organization-specific secrets that aren't covered by default patterns.
+
 * **Validity checks.** Prioritize remediation by checking whether detected secrets are still active.
+
 
 * **AI-detected secrets.** Use AI to detect unstructured secrets like passwords.
 

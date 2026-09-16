@@ -12,10 +12,10 @@ You can use GitHub Docs and the GitHub Blog to keep track of new releases.
 
 To learn about new Copilot features, we recommend monitoring these two locations:
 
-* **Features overview**: For a complete list of Copilot capabilities, see [Features](https://docs.github.com/en/copilot/get-started/features).
-* **Changelog**: Follow the [Copilot changelog](https://github.blog/changelog/label/copilot/) for announcements about new and updated features.
+* **Copilot blog updates**: For broader news and updates about Copilot, see the [Copilot blog](https://github.blog/ai-and-ml/github-copilot/).
+* **Changelog**: For announcements about newly released and updated features, follow the [Copilot changelog](https://github.blog/changelog/?label=copilot).
 
-Copilot features generally fall into three categories:
+Copilot's capabilities and supporting features fall into four categories:
 
 {% rowheaders %}
 
@@ -23,7 +23,8 @@ Copilot features generally fall into three categories:
 | --- | --- | --- | --- |
 | Assistive | Respond to prompts and provide suggestions, but require human review before changes are made. | Inline suggestions, Copilot Chat, Copilot pull request summaries. | All changes require user approval. |
 | Agentic | Autonomously research, plan, and make changes on behalf of users. | Copilot cloud agent, third-party agents. | Can work autonomously, but with built-in protections. |
-| Third-party | External coding agents that work alongside Copilot cloud agent to complete tasks asynchronously. | Anthropic Claude, OpenAI Codex. | Same as agentic. Review provider documentation and enable via policies. See [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents). |
+| Customizations | Add context, instructions, tools, skills, and agents to tailor how Copilot responds and works. | Custom instructions, prompt files, Copilot Spaces, MCP servers, agent skills, custom agents. | Support and configuration vary by feature and surface. Organization and enterprise policies can control access to some customizations. |
+| External AI agents, models, and tools | External coding agents, models, and tools, including MCP servers from other providers, that work alongside Copilot cloud agent to complete tasks asynchronously. | Anthropic Claude, OpenAI Codex. | Same as agentic. Review provider documentation and enable via policies. See [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents). |
 
 {% endrowheaders %}
 
@@ -47,7 +48,7 @@ You can find information about the models available and upcoming models in the f
 
 #### Default enablement
 
-For enterprises on a Copilot Business or Copilot Enterprise plan, a policy controls whether unconfigured generally available (GA) models are enabled or disabled by default. See [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
+For enterprises on a Copilot Business or Copilot Enterprise plan, a policy controls whether unconfigured generally available (GA) models are enabled or disabled by default. See [Default Model Availability](https://docs.github.com/en/copilot/concepts/enterprise/default-model-availability).
 
 
 #### Special categories

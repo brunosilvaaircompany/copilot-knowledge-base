@@ -78,4 +78,4 @@ For more information, see [Introduction To GitHub Packages](https://docs.github.
 
 Hosting your repositories on GitHub unlocks the full power of Copilot. Your codebase provides Copilot with all the context it needs to answer questions in Copilot Chat, review and make suggestions in your pull requests, and even make changes on your behalf with Copilot cloud agent.
 
-See [Quickstart](https://docs.github.com/en/copilot/get-started/quickstart).
+See [Quickstart For Using GitHub Copilot On GitHub Com](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-on-github-com).

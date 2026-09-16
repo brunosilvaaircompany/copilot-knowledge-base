@@ -68,7 +68,8 @@ When creating a security configuration, keep in mind that:
         > [!NOTE]
 > The default security configuration for an organization is only automatically applied to new repositories created in your organization. If a repository is transferred into your organization, you will still need to apply an appropriate security configuration to the repository manually.
 
-   * **Enforce configuration**. Block repository owners from changing features that are enabled or disabled by the configuration (features that are not set aren't enforced). Select **Enforce** from the dropdown menu.
+   * **Enforce configuration**. Enterprise owners and members with the **admin** role
+ can block repository owners only, or both repository and organization owners, from changing features that are enabled or disabled by the configuration. Features that are not set aren't enforced. Select **Don't enforce**, **Enforce for repository owners**, or **Enforce for repository and organization owners** from the dropdown menu.
 
     > [!NOTE] Some situations can break the enforcement of security configurations. See [Configuration Enforcement](https://docs.github.com/en/code-security/reference/security-at-scale/configuration-enforcement).
 
@@ -120,8 +121,8 @@ When creating a security configuration, keep in mind that:
         > [!NOTE]
 > The default security configuration for an organization is only automatically applied to new repositories created in your organization. If a repository is transferred into your organization, you will still need to apply an appropriate security configuration to the repository manually.
 
-   * **Enforce configuration**. Block repository owners from changing features that are enabled or disabled by the configuration (features that are not set aren't enforced). Select **Enforce** from the dropdown menu.
-
+   * **Enforce configuration**. Enterprise owners and members with the **admin** role
+ can block repository owners only, or both repository and organization owners, from changing features that are enabled or disabled by the configuration. Features that are not set aren't enforced. Select **Don't enforce**, **Enforce for repository owners**, or **Enforce for repository and organization owners** from the dropdown menu.
     > [!NOTE] Some situations can break the enforcement of security configurations. See [Configuration Enforcement](https://docs.github.com/en/code-security/reference/security-at-scale/configuration-enforcement).
 
 

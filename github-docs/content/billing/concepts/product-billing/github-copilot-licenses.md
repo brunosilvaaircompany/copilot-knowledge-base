@@ -1,6 +1,6 @@
 # GitHub Copilot licenses
 
-Usage of GitHub Copilot is measured through a combination of licenses and AI credits. See [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) and [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+Usage of GitHub Copilot is measured through a combination of licenses and AI credits. See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing) and [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 ## Licenses for Copilot
 
@@ -41,7 +41,7 @@ Usage of Copilot licenses is measured by the number of seats used.
 * Downgrades take effect at the start of the next billing cycle and are generally not prorated.
 * Canceling a monthly plan keeps access until the end of the current billing cycle, with no proration.
 
-For details on billing and proration, see [Usage Based Billing For Individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals).
+For details on billing and proration, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing).
 
 ### Organizations and enterprises
 

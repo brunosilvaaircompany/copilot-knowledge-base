@@ -38,7 +38,7 @@ Once Code Quality is running, watch your actual usage over time so costs stay pr
 You have several levers to keep spend in check. In rough order of impact:
 
 * **Enable selectively.** Turn Code Quality on where it adds value rather than across every repository at once. See [Enable Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/enable-code-quality).
-* **Disable low-value repositories.** Disabling Code Quality on a repository frees the licenses for committers unique to it, and stops its scans and AI usage. See [Disable Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/disable-code-quality).
+* **Disable low-value repositories.** Disabling Code Quality on a repository stops its scans and AI usage immediately. It can free licenses for committers unique to that repository for the next billing period, but it doesn't reduce the charge for the current period. See [Disable Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/disable-code-quality).
 * **Set a budget.** A budget for Code Quality stops your spending automatically once you hit your limit, because the hard stop is mandatory (see below).
 * **Keep the AI findings page off.** This page is **off by default** and stays in public preview, so it only draws down AI credits if you turn it on. Repositories that enabled it during the preview keep it on. To turn it off for a repository, disable **AI findings** on the repository's **Code quality** settings page.
 

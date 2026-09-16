@@ -158,3 +158,13 @@ Once the service is configured, you can define a backup schedule.
 
 
 The first run will be a full backup. Future runs will be incremental. If a new backup attempt starts while a previous one is still running, it may be skipped or fail. In that case, adjust the schedule to avoid overlap.
+
+
+
+
+
+## Using Elasticsearch snapshots for search index data
+
+By default, search index data is backed up by copying files directly from disk. You can optionally configure {% ifversion ghes %}your GitHub Enterprise Server instance to use Elasticsearch's native, incremental snapshot functionality with a customer-managed cloud storage provider instead. For more information, see [Configuring Elasticsearch Snapshots](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/configuring-elasticsearch-snapshots).
+
+{% endif %}

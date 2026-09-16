@@ -20,7 +20,7 @@ To track AI credits consumption, navigate to **Billing & licensing** > **AI usag
 
 ### Controlling usage with budgets
 
-You can set budgets at the user, cost center, and enterprise level to control how AI credits are consumed. For an overview of how budget controls work, see [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing). For guidance on choosing the right configuration, see [Optimizing Your Budget Configuration](https://docs.github.com/en/copilot/tutorials/budgets/optimizing-your-budget-configuration).
+You can set budgets at the user, cost center, and enterprise level to control how AI credits are consumed. For an overview of how budget controls work, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets). For guidance on choosing the right configuration, see [Optimizing Your Budget Configuration](https://docs.github.com/en/copilot/tutorials/budgets/optimizing-your-budget-configuration).
 
 ## Mapping spending to groups of users
 

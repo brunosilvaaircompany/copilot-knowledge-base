@@ -98,8 +98,6 @@ Will **only**:
 
 When using xAI, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content.
 
-For more information, see [xAI's enterprise terms of service](https://x.ai/legal/terms-of-service-enterprise) on the xAI website.
-
 ## Microsoft models
 
 Used for:

@@ -43,7 +43,8 @@ You can change the source repository at any time. If you change the source repos
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
 
-1. Under "Discussions", select **Enable discussions for this organization**.
+1. In the "Code, planning, and automation"{% elsif ghes %} "Code and automation" section of the sidebar, click **{% octicon "comment-discussion" aria-hidden="true" aria-label="comment-discussion" %} Discussions**.
+1. Select **Enable discussions for this organization**.
 1. Use the dropdown menu to select a repository to use as the source repository for your organization discussions.
 1. Click **Save**.
 

@@ -64,7 +64,7 @@ Creating this file is optional but is a good idea if you use Copilot cloud agent
 
    
    ```text copy
-   Analyze this repository to understand the dependencies that need to be installed on the development environment to work on the code in this repository. Using this information, and the details about the `copilot-setup-steps.yml` file that are given in https://docs.github.com/copilot/how-tos/use-copilot-agents/cloud-agent/customize-the-agent-environment, add a `.github/workflows/copilot-setup-steps.yml` to this repository. This Actions workflow file should install, in the development environment for Copilot cloud agent, all of the dependencies necessary to work on the code in this repository. Make sure that the workflow job is named `copilot-setup-steps`.
+   Analyze this repository to understand the dependencies that need to be installed on the development environment to work on the code in this repository. Using this information, and the details about the `copilot-setup-steps.yml` file that are given in https://docs.github.com/copilot/how-tos/use-copilot-agents/cloud-agent/customize-the-agent-environment, add a `.github/workflows/copilot-setup-steps.yml` to this repository. This Actions workflow file should install, in the development environment for Copilot cloud agent, all of the dependencies necessary to work on the code in this repository. Make sure that the workflow job is named `copilot-setup-steps`, and that the workflow includes a `workflow_dispatch` trigger so that it can be run manually. Choose any other triggers to suit this repository; there's no need to run on both `push` and `pull_request`.
    ```
    
 
@@ -82,12 +82,6 @@ Creating this file is optional but is a good idea if you use Copilot cloud agent
    ```yaml
    on:
      workflow_dispatch:
-     push:
-       paths:
-         - .github/workflows/copilot-setup-steps.yml
-     pull_request:
-       paths:
-         - .github/workflows/copilot-setup-steps.yml
 
    jobs:
      copilot-setup-steps:

@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-* **Access to GitHub Copilot**. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to GitHub Copilot**. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 * **Windows Terminal Canary installed**. For installation instructions, see [Installing Windows Terminal Canary](https://github.com/microsoft/terminal?tab=readme-ov-file#installing-windows-terminal-canary).
-* **GitHub Copilot connected to Terminal Chat**. See [Quickstart?Tool=Windowsterminal](https://docs.github.com/en/copilot/get-started/quickstart?tool=windowsterminal).
+* **GitHub Copilot connected to Terminal Chat**. See [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide).
 
 If you have access to GitHub Copilot via your organization or enterprise, you cannot use Copilot in Windows Terminal if your organization owner or enterprise administrator has disabled Copilot CLI. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).
 

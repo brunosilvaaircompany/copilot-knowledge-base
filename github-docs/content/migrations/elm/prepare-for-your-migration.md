@@ -6,6 +6,7 @@ ELM is available in the latest patch releases for GitHub Enterprise Server 3.17 
 
 
 
+* `3.22.0`
 * `3.21.3`
 * `3.20.5`
 * `3.19.9`

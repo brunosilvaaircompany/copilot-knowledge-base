@@ -12,7 +12,7 @@ In this example, the organization has set a budget of $50 for the "Actions" prod
 
 We recommend that you avoid creating overlapping budgets for the use of a product and a SKU, or an organization and a repository, so that users are not unexpectedly blocked from using a feature that they rely on. Alternatively, you may prefer to monitor use without blocking users by disabling the "Stop usage when budget limit is reached" option.
 
-For Copilot under usage-based billing, user-level budgets add another layer to consider. A user-level budget can block a user even when the enterprise or cost center budget still has capacity. It is the first check in the evaluation sequence. When planning your budget configuration, account for how user-level budgets, cost center budgets, and the enterprise spending limit interact. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#how-billing-flows-through-budgets).
+For Copilot under usage-based billing, user-level budgets add another layer to consider. A user-level budget can block a user even when the enterprise or cost center budget still has capacity. It is the first check in the evaluation sequence. When planning your budget configuration, account for how user-level budgets, cost center budgets, and the enterprise spending limit interact. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#how-billing-flows-through-budgets).
 
 ## Managing budgets for your personal account
 
@@ -55,7 +55,7 @@ GitHub can send you email notifications when the included usage for your plan re
 ## Managing budgets for your organization or enterprise
 
 > [!IMPORTANT]
-> Copilot usage is now measured in AI credits under usage-based billing. Existing premium request budgets have been automatically converted to AI credit budgets. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+> Copilot usage is now measured in AI credits under usage-based billing. Existing premium request budgets have been automatically converted to AI credit budgets. See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 You can set budgets and receive alerts when your usage of a product or license type reaches 75%, 90%, or 100% of a defined budget. For budgets that control metered use of a product, you can also block further use when the budget is exhausted. Each budget has a scope.
 
@@ -106,7 +106,7 @@ As the owner of an enterprise or organization account, or as a billing manager, 
    * **End of current billing cycle**: GitHub removes the budget when the current billing cycle ends.
    * **Specific date**: GitHub removes the budget on the date you choose.
 
-   When an individual budget expires, GitHub removes it and the user falls back to the next budget that applies to them: their cost center user-level budget, if they have one, or otherwise the universal user-level budget. If neither budget is configured, no user-level budget applies. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#expiration-dates-for-individual-user-level-budgets).
+   When an individual budget expires, GitHub removes it and the user falls back to the next budget that applies to them: their cost center user-level budget, if they have one, or otherwise the universal user-level budget. If neither budget is configured, no user-level budget applies. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#expiration-dates-for-individual-user-level-budgets).
 
 1. Under "Budget", set a budget amount or license count.
 
@@ -140,11 +140,15 @@ For an individual user-level budget, you can also change or clear the expiration
 1. In the list of budgets, click {% octicon "kebab-horizontal" aria-label="View actions" %} next to the budget you want to edit, and click **{% octicon "pencil" aria-hidden="true" aria-label="pencil" %} Edit** or **{% octicon "trash" aria-hidden="true" aria-label="trash" %} Delete**.
 1. Follow the prompts.
 
+### Managing requests for additional budget
+
+When a member exhausts a Copilot AI credits budget, they can ask you to increase it. See [Manage Budget Requests](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-budget-requests).
+
 ### Controlling included usage for a cost center
 
-Budgets cap metered charges after the shared pool of AI credits is exhausted. To cap how much of the pool a cost center can use **before** the metered phase, use an included usage control. GitHub sets the cap automatically based on the licenses assigned to the cost center, and you choose whether members are blocked or roll into paid overage when the cap is reached. See [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#included-usage-controls-for-cost-centers) and [Cost Centers](https://docs.github.com/en/billing/concepts/cost-centers).
+Budgets cap metered charges after the shared pool of AI credits is exhausted. To cap how much of the pool a cost center can use **before** the metered phase, use an included usage control. GitHub sets the cap automatically based on the licenses assigned to the cost center, and you choose whether members are blocked or roll into paid overage when the cap is reached. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#included-usage-controls-for-cost-centers) and [Cost Centers](https://docs.github.com/en/billing/concepts/cost-centers).
 > [!NOTE]
 > Enabling included usage controls does not retroactively redistribute the shared AI credits enterprise pool. After the setting is enabled, users in the cost center share only the included AI credits funded by licenses attributed to that cost center. When the setting is disabled, users in the cost center can continue drawing from the shared enterprise pool.
 ## Next steps
 
-For Copilot-specific budget guidance under usage-based billing, including user-level budgets and configuration scenarios, see [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing) and [Optimizing Your Budget Configuration](https://docs.github.com/en/copilot/tutorials/budgets/optimizing-your-budget-configuration).
+For Copilot-specific budget guidance under usage-based billing, including user-level budgets and configuration scenarios, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets) and [Optimizing Your Budget Configuration](https://docs.github.com/en/copilot/tutorials/budgets/optimizing-your-budget-configuration).

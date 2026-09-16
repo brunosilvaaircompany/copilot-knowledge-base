@@ -12,6 +12,9 @@ If you access Copilot through a Copilot Business or Copilot Enterprise plan, you
    * If a user-level budget has been set, the card shows credits consumed out of your budget total (for example, "450 / 1,000 AI credits used").
    * If no user-level budget applies to you, the card shows the total number of AI credits you have consumed this cycle (for example, "100 AI credits used").
 
+> [!NOTE]
+> If you use Copilot through a Copilot Business or Copilot Enterprise plan and exhaust all your AI credits, you'll see a banner on GitHub.com offering you the option to request more budget from your administrator.
+
 ## For Copilot Individual users
 
 If you're on a Copilot Individual plan, you can see your individual AI credits consumption on the **AI usage** page, under "Billing and licensing" settings.

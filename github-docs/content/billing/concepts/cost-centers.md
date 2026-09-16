@@ -34,7 +34,7 @@ For cost centers that contain Copilot licenses, you can apply included usage con
 Included usage controls cap a cost center's included usage to the amount of AI credits funded by the licenses assigned to that cost center. GitHub sets this cap automatically and adjusts it as licensed members are added or removed, you don't enter an amount. When a cost center reaches its cap, you choose whether its members are blocked or their additional usage continues as paid overage.
 
 
-This is separate from a cost center budget, which caps metered charges only after the shared pool of AI credits is exhausted. For more information, see [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing#included-usage-controls-for-cost-centers).
+This is separate from a cost center budget, which caps metered charges only after the shared pool of AI credits is exhausted. For more information, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#included-usage-controls-for-cost-centers).
 
 ## Cost center limitations
 

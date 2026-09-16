@@ -17,7 +17,8 @@ After creating and applying a custom security configuration, you may need to edi
 1. In the "Configurations" section, click the name of the custom security configuration you want to edit.
 1. Edit the name and description of your custom security configuration as desired.
 1. Edit the enablement settings of your custom security configuration as desired.
-1. In the "Policy" section, you can modify the configuration's enforcement status. Enforcing a configuration will block repository owners from changing features that are enabled or disabled by the configuration, but features that are not set aren't enforced. Next to "Enforce configuration", select **Enforce** or **Don't enforce** from the dropdown menu.
+1. In the "Policy" section, you can modify the configuration's enforcement status. Enterprise owners and members with the **admin** role
+ can block repository owners only, or both repository and organization owners, from changing features that are enabled or disabled by the configuration. Features that are not set aren't enforced. Select **Don't enforce**, **Enforce for repository owners**, or **Enforce for repository and organization owners** from the dropdown menu.
 
     > [!NOTE] Some situations can break the enforcement of security configurations. See [Configuration Enforcement](https://docs.github.com/en/code-security/reference/security-at-scale/configuration-enforcement).
 

@@ -28,7 +28,7 @@ If you want to use Copilot in the command line, install the Copilot extension fo
 
 ## 4. Use Copilot in Windows Terminal
 
-If you want to chat with Copilot in Windows Terminal, connect Copilot with Terminal Chat in Windows Terminal Canary. See [Quickstart?Tool=Windowsterminal](https://docs.github.com/en/copilot/get-started/quickstart?tool=windowsterminal).
+If you want to chat with Copilot in Windows Terminal, connect Copilot with Terminal Chat in Windows Terminal Canary. See [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide).
 
 ## 5. Set up networking (if necessary)
 

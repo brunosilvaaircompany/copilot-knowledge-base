@@ -30,7 +30,7 @@ For more information, see [Code Suggestions?Tool=Jetbrains](https://docs.github.
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in JetBrains, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in JetBrains, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **Compatible JetBrains IDE**. To use GitHub Copilot in JetBrains, you must have a compatible JetBrains IDE installed. GitHub Copilot is compatible with the following IDEs:
@@ -159,7 +159,7 @@ For more information, see [Code Suggestions?Tool=Visualstudio](https://docs.gith
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in GitHub Copilot in Visual Studio, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in GitHub Copilot in Visual Studio, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **Compatible version of Visual Studio**. To use GitHub Copilot in Visual Studio, you must have version 2022 17.8 or later of Visual Studio for Windows installed. For more information, see [Install Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?ref_product=copilot&ref_type=engagement&ref_style=text) in the Microsoft documentation.
@@ -282,7 +282,7 @@ For more information, see [Code Suggestions?Tool=Vscode](https://docs.github.com
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in Visual Studio Code, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in Visual Studio Code, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **Sign in to GitHub in Visual Studio Code**. See [Set up GitHub Copilot in Visual Studio Code](https://code.visualstudio.com/docs/copilot/setup?ref_product=copilot&ref_type=engagement&ref_style=text) in the VS Code documentation..
@@ -405,7 +405,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in Vim
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in Vim/Neovim, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in Vim/Neovim, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **Compatible version of Vim/Neovim**. To use GitHub Copilot in Vim/Neovim you must have Vim version 9.0.0185 / Neovim version 0.6 or above and Node.js version 18 or above installed. For more information, see the [Vim](https://vimhelp.org/) / [Neovim documentation](https://neovim.io/doc/) and the [Node.js website](https://nodejs.org/en/).
@@ -432,7 +432,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in Azu
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in Azure Data Studio, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in Azure Data Studio, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **Compatible version of Azure Data Studio**. To use GitHub Copilot in Azure Data Studio, you must have Azure Data Studio version 1.44.0 or later installed. For more information, see the [Azure Data Studio download page](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) in the Azure Data Studio documentation.
@@ -531,7 +531,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in Xco
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in Xcode, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in Xcode, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **GitHub Copilot extension for Xcode**. To use GitHub Copilot for Xcode, you must install the GitHub Copilot for Xcode extension. See [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
@@ -577,7 +577,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in Ecl
 
 ## Prerequisites
 
-* **Access to Copilot**. To use GitHub Copilot in Eclipse, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **Access to Copilot**. To use GitHub Copilot in Eclipse, you need either limited access through Copilot Free or a paid Copilot plan for full access. See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 
 
 * **GitHub Copilot extension for Eclipse**. To use GitHub Copilot in Eclipse, you must install the GitHub Copilot extension. See [Install Copilot Extension?Tool=Eclipse](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension?tool=eclipse).

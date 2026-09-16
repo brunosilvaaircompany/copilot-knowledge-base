@@ -92,7 +92,7 @@ GitHub Actions assumes that you will do the following tasks in the `prepare_job`
   "state": {},
   "args": {
     "jobContainer": {
-      "image": "node:18"
+      "image": "node:18",
       "workingDirectory": "/__w/octocat-test2/octocat-test2",
       "createOptions": "--cpus 1",
       "environmentVariables": {

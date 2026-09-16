@@ -20,7 +20,7 @@ To access Copilot usage metrics, the **"Copilot usage metrics"** policy must be 
 
 1. In the left sidebar, click **Copilot usage**.
 
-Data in the dashboard is primarily based on IDE telemetry and is supplemented by server-side telemetry to capture additional active users. Data may appear up to three full UTC days behind the current date. See [Copilot Metrics](https://docs.github.com/en/copilot/concepts/copilot-usage-metrics/copilot-metrics).
+Data in the dashboard is primarily based on IDE telemetry and is supplemented by server-side telemetry to capture additional active users. Data may appear up to three full UTC days behind the current date. See [Copilot Metrics](https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics).
 
 ## Using Copilot Chat to analyze exported data
 

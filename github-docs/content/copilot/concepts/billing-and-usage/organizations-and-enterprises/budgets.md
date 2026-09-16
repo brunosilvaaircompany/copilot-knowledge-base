@@ -153,6 +153,7 @@ A blocked user remains blocked until one of the following happens:
 
 * The next billing cycle begins and monthly consumption resets.
 * An administrator increases the relevant budget.
+* The user requests additional budget and an administrator approves the request.
 
 ## Next steps
 

@@ -113,7 +113,7 @@ AI credit session limits are most useful when:
 * You want to cap AI credits usage on a single session to avoid unexpected costs.
 * You're tuning agent efficiency and want to find the minimum AI credits that still produces a good result.
 
-Session limits are soft limits that help you control how many AI credits any single task consumes, but they don't replace user-level budgets or spending limits, which govern your overall monthly consumption. For those controls, see [Budgets For Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing).
+Session limits are soft limits that help you control how many AI credits any single task consumes, but they don't replace user-level budgets or spending limits, which govern your overall monthly consumption. For those controls, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets).
 
 For information on how to set a session limit in Copilot CLI, see [Set Session Limit](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/set-session-limit).
 

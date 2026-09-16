@@ -27,7 +27,7 @@ This table lists the AI models available in Copilot, along with their release st
 
 ## Supported AI models in Auto model selection
 
-This table lists the supported AI models for Auto model selection. Available models may be limited by model policies. For example, as the long term support model, GPT-5.3-Codex will be used in the event no other models are available. See[Fallback And Lts Models](https://docs.github.com/en/copilot/concepts/models/fallback-and-lts-models) and [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+This table lists the supported AI models for Auto model selection. Available models may be limited by model policies. For example, as the long term support model, GPT-5.3-Codex will be used in the event no other models are available. See [Fallback And Lts Models](https://docs.github.com/en/copilot/concepts/models/fallback-and-lts-models) and [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 {% rowheaders %}
 
@@ -197,7 +197,7 @@ The following models are currently used as utility models:
 
 ## Models eligible for default enablement
 
-For enterprises on a Copilot Business or Copilot Enterprise plan, a policy controls whether unconfigured generally available (GA) models are enabled or disabled by default. See [Default Availability](https://docs.github.com/en/copilot/concepts/models/default-availability).
+For enterprises on a Copilot Business or Copilot Enterprise plan, a policy controls whether unconfigured generally available (GA) models are enabled or disabled by default. See [Default Model Availability](https://docs.github.com/en/copilot/concepts/enterprise/default-model-availability).
 
 
 The default policy applies to models that you have not explicitly configured. These models are indicated in your enterprise or organization's model settings with the **Delegate to Default Policy** label. When a new model is released, it inherits the default until you explicitly configure it.
@@ -232,6 +232,6 @@ The following table lists AI models that are retired or scheduled for retirement
 
 ## Next steps
 
-* To get up and running with Copilot, see [Quickstart](https://docs.github.com/en/copilot/get-started/quickstart).
+* To get up and running with Copilot, see [Quickstart For Using GitHub Copilot On GitHub Com](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-on-github-com) and [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide) .
 * To configure which models are available to you, see [Configure Access To Ai Models](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models).
 * To learn more about Responsible Use and Responsible AI, see [Copilot Trust Center](https://copilot.github.trust.page/) and [Responsible Use](https://docs.github.com/en/copilot/responsible-use).
