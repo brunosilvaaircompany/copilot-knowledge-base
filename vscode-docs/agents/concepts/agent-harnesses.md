@@ -64,7 +64,7 @@ The execution environment determines where the harness runs tools and changes co
 
 For work on your machine, code isolation controls which working directory receives changes. Folder isolation applies edits directly to your current workspace, including its uncommitted changes. Worktree isolation gives the session a separate [Git worktree](https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees#understanding-worktrees) based on committed Git state.
 
-A worktree is a Git code-isolation boundary, not a security boundary. It does not restrict commands, network access, or access to files outside the worktree. Use [agent sandboxing](trust-and-safety.md#agent-sandboxing) for operating system-level file system and network restrictions.
+A worktree is a Git code-isolation boundary, not a security boundary. It does not restrict commands, network access, or access to files outside the worktree. Use [agent sandboxing](../run/agent-sandboxing.md) for operating system-level file system and network restrictions.
 
 Changing the session target for ongoing work is one type of [handoff](sessions.md#hand-off-a-session). The handoff carries the conversation history and context to the new harness or execution environment. Learn how to [choose a session target and code isolation](../run/agent-harnesses.md).
 
