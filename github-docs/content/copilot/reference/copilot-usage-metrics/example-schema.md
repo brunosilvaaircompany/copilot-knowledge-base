@@ -1,6 +1,6 @@
 # Example schema for Copilot usage metrics
 
-The following are example schemas for the user-level, enterprise-level, and repository-level data returned by the Copilot usage metrics endpoints. The actual data returned may vary based on the specific metrics being tracked and the level of aggregation. You can use these examples as a reference for understanding the structure of the data and how to interpret the various fields and metrics included in the API response.
+The following examples show schemas for user-, enterprise-, and repository-level data returned by the Copilot usage metrics endpoints. Returned fields vary by metric and aggregation level. Use these examples to understand the response structure and interpret its fields and metrics.
 
 ## User-level schema example
 
@@ -15,6 +15,11 @@ The following are example schemas for the user-level, enterprise-level, and repo
   "code_acceptance_activity_count": 3,
   "code_generation_activity_count": 3,
   "day": "2025-10-01",
+  "distinct_custom_agent_use_count": 2,
+  "distinct_mcp_use_count": 2,
+  "distinct_plugin_use_count": 1,
+  "distinct_skill_use_count": 3,
+  "distinct_slash_cmd_use_count": 2,
   "enterprise_id": "1",
   "loc_added_sum": 32,
   "loc_deleted_sum": 6,
@@ -44,6 +49,13 @@ The following are example schemas for the user-level, enterprise-level, and repo
       "prompt_tokens_sum": 5400
     }
   },
+  "totals_by_custom_agent": [{
+    "custom_agent": "general-purpose",
+    "interaction_count": 4
+  }, {
+    "custom_agent": "other",
+    "interaction_count": 2
+  }],
   "totals_by_3rd_party_agent": [{
     "agent_id": "2246796",
     "agent_name": "Claude (Anthropic)",
@@ -111,7 +123,29 @@ The following are example schemas for the user-level, enterprise-level, and repo
     "loc_suggested_to_delete_sum": 6
   }],
   "totals_by_language_model": [],
+  "totals_by_mcp": [{
+    "interaction_count": 8,
+    "mcp": "github-mcp-server"
+  }, {
+    "interaction_count": 3,
+    "mcp": "other"
+  }],
   "totals_by_model_feature": [],
+  "totals_by_plugin": [{
+    "interaction_count": 2,
+    "plugin": "other"
+  }],
+  "totals_by_skill": [{
+    "interaction_count": 5,
+    "skill": "other"
+  }],
+  "totals_by_slash_cmd": [{
+    "interaction_count": 3,
+    "slash_cmd": "/plan"
+  }, {
+    "interaction_count": 1,
+    "slash_cmd": "custom"
+  }],
   "used_agent": false,
   "used_chat": false,
   "used_cli": true,
@@ -129,7 +163,9 @@ The following are example schemas for the user-level, enterprise-level, and repo
 }]
 ```
 
-Organization per-user reports use the same `totals_by_3rd_party_agent` entry fields and also include `organization_id`. Per-user entries do not include `session_count`.
+Organization per-user reports use the same `totals_by_3rd_party_agent` entry fields and also include `organization_id`. In per-user reports, entries in `totals_by_3rd_party_agent` do not include `session_count`.
+
+The Copilot CLI customization fields shown in this example appear in both 1-day and 28-day per-user reports.
 
 In this example, `used_copilot_code_review_active` and `used_copilot_code_review_passive` are `null` because there was no Copilot code review signal for the user that day. `used_copilot_cloud_agent` and `used_copilot_coding_agent` always carry the same value.
 
@@ -147,6 +183,11 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
     "daily_active_users" : 2,
     "daily_passive_copilot_code_review_users" : 0,
     "day" : "2025-10-01",
+    "distinct_custom_agent_use_count" : 2,
+    "distinct_mcp_use_count" : 2,
+    "distinct_plugin_use_count" : 1,
+    "distinct_skill_use_count" : 3,
+    "distinct_slash_cmd_use_count" : 2,
     "enterprise_id" : "1",
     "loc_added_sum" : 54,
     "loc_deleted_sum" : 6,
@@ -200,6 +241,7 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
       "phase" : "Phase 1",
       "phase_number" : 1,
       "total_engaged_users" : 1,
+      "users_in_phase_28d" : 1,
       "total_pull_requests_merged" : 1
     }, {
       "avg_code_acceptance_activities" : 3.0,
@@ -213,9 +255,10 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
       "avg_pull_requests_review_cycles" : 2.0,
       "avg_pull_requests_reviewed" : 1.0,
       "avg_user_initiated_interactions" : 1.0,
-      "phase" : "Phase 2",
-      "phase_number" : 2,
+      "phase" : "Phase 3",
+      "phase_number" : 3,
       "total_engaged_users" : 1,
+      "users_in_phase_28d" : 1,
       "total_pull_requests_merged" : 1
     } ],
     "totals_by_cli" : {
@@ -238,6 +281,13 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
         "prompt_tokens_sum" : 8600
       }
     },
+    "totals_by_custom_agent" : [ {
+      "custom_agent" : "general-purpose",
+      "interaction_count" : 7
+    }, {
+      "custom_agent" : "other",
+      "interaction_count" : 3
+    } ],
     "totals_by_feature" : [ {
       "code_acceptance_activity_count" : 2,
       "code_generation_activity_count" : 2,
@@ -287,7 +337,29 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
       "loc_suggested_to_delete_sum" : 6
     } ],
     "totals_by_language_model" : [ ],
+    "totals_by_mcp" : [ {
+      "interaction_count" : 12,
+      "mcp" : "github-mcp-server"
+    }, {
+      "interaction_count" : 5,
+      "mcp" : "other"
+    } ],
     "totals_by_model_feature" : [ ],
+    "totals_by_plugin" : [ {
+      "interaction_count" : 4,
+      "plugin" : "other"
+    } ],
+    "totals_by_skill" : [ {
+      "interaction_count" : 9,
+      "skill" : "other"
+    } ],
+    "totals_by_slash_cmd" : [ {
+      "interaction_count" : 6,
+      "slash_cmd" : "/plan"
+    }, {
+      "interaction_count" : 2,
+      "slash_cmd" : "custom"
+    } ],
     "user_initiated_interaction_count" : 1,
     "weekly_active_copilot_cloud_agent_users" : 1,
     "weekly_active_copilot_code_review_users" : 1,
@@ -295,6 +367,31 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
     "weekly_passive_copilot_code_review_users" : 0
   } ],
   "enterprise_id" : "1",
+  "copilot_feature_engagement" : {
+    "active_user_count" : 2,
+    "totals_by_feature" : [ {
+      "feature" : "code_completion",
+      "engaged_user_count" : 2
+    }, {
+      "feature" : "agent_edit",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "code_review_passive",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "code_review_active",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "cloud_agent",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "copilot_cli",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "github_app",
+      "engaged_user_count" : 1
+    } ]
+  },
   "report_end_day" : "2025-10-01",
   "report_start_day" : "2025-09-04",
   "etl_id" : "green",
@@ -309,6 +406,11 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
     "daily_active_users" : 2,
     "daily_passive_copilot_code_review_users" : 0,
     "day" : "2025-10-01",
+    "distinct_custom_agent_use_count" : 0,
+    "distinct_mcp_use_count" : 0,
+    "distinct_plugin_use_count" : 0,
+    "distinct_skill_use_count" : 0,
+    "distinct_slash_cmd_use_count" : 0,
     "enterprise_id" : "2",
     "loc_added_sum" : 50,
     "loc_deleted_sum" : 3,
@@ -345,9 +447,10 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
       "avg_pull_requests_review_cycles" : 0.0,
       "avg_pull_requests_reviewed" : 0.0,
       "avg_user_initiated_interactions" : 0.0,
-      "phase" : "No Cohort",
-      "phase_number" : 0,
+      "phase" : "Phase 3",
+      "phase_number" : 3,
       "total_engaged_users" : 1,
+      "users_in_phase_28d" : 1,
       "total_pull_requests_merged" : 0
     }, {
       "avg_code_acceptance_activities" : 2.0,
@@ -364,8 +467,10 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
       "phase" : "Phase 1",
       "phase_number" : 1,
       "total_engaged_users" : 1,
+      "users_in_phase_28d" : 1,
       "total_pull_requests_merged" : 0
     } ],
+    "totals_by_custom_agent" : [ ],
     "totals_by_feature" : [ {
       "code_acceptance_activity_count" : 1,
       "code_generation_activity_count" : 2,
@@ -415,7 +520,11 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
       "loc_suggested_to_delete_sum" : 3
     } ],
     "totals_by_language_model" : [ ],
+    "totals_by_mcp" : [ ],
     "totals_by_model_feature" : [ ],
+    "totals_by_plugin" : [ ],
+    "totals_by_skill" : [ ],
+    "totals_by_slash_cmd" : [ ],
     "user_initiated_interaction_count" : 1,
     "weekly_active_copilot_cloud_agent_users" : 0,
     "weekly_active_copilot_code_review_users" : 0,
@@ -423,6 +532,31 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
     "weekly_passive_copilot_code_review_users" : 0
   } ],
   "enterprise_id" : "2",
+  "copilot_feature_engagement" : {
+    "active_user_count" : 2,
+    "totals_by_feature" : [ {
+      "feature" : "code_completion",
+      "engaged_user_count" : 2
+    }, {
+      "feature" : "agent_edit",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "code_review_passive",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "code_review_active",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "cloud_agent",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "copilot_cli",
+      "engaged_user_count" : 1
+    }, {
+      "feature" : "github_app",
+      "engaged_user_count" : 1
+    } ]
+  },
   "report_end_day" : "2025-10-01",
   "report_start_day" : "2025-09-04",
   "etl_id" : "green",
@@ -431,7 +565,11 @@ In this example, `used_copilot_code_review_active` and `used_copilot_code_review
 } ]
 ```
 
-Organization aggregated reports use the same `totals_by_3rd_party_agent` entry fields, including `session_count`, and also include `organization_id`.
+In each `totals_by_ai_adoption_phase` entry, `total_engaged_users` is the subset of users active on that day, while `users_in_phase_28d` is the full population classified into the phase using the rolling 28-day window as of that day.
+
+Organization aggregated reports use the same top-level `copilot_feature_engagement` object, `totals_by_ai_adoption_phase` entry fields, and `totals_by_3rd_party_agent` entry fields, including `session_count`. They also include `organization_id`.
+
+The Copilot CLI customization fields shown in `day_totals` apply to enterprise and organization aggregated 28-day reports. They also appear directly in enterprise and organization aggregated 1-day reports.
 
 The following user-teams report examples are returned by the `user-teams-1-day` endpoints and are intended to be joined with the per-user usage report on `user_id`, `day`, and the relevant entity id (`organization_id` for the organization scope, `enterprise_id` for the enterprise scope) to derive team-level metrics. For more guidance, see [Team Level Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/team-level-metrics).
 
@@ -502,7 +640,11 @@ The following user-teams report examples are returned by the `user-teams-1-day` 
 
 ## Repository-level schema example
 
-The following repository-level report example is returned in the NDJSON files downloaded from the `repos-1-day` endpoints. Each row represents one repository with pull request activity on the requested day. Both enterprise- and organization-scoped rows populate `organization_id` (the organization that owns each repository). Enterprise-scoped rows also populate `enterprise_id`, and organization-scoped rows populate `enterprise_id` only for organizations owned by an enterprise. For the field reference, see [Copilot Usage Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics#repository-level-fields-api-only).
+The following example shows a repository-level report from an NDJSON file downloaded through a `repos-1-day` endpoint. Each row represents one repository with pull request activity on the requested day.
+
+Both enterprise- and organization-scoped rows include `organization_id`, which identifies the organization that owns the repository. Enterprise-scoped rows also include `enterprise_id`. Organization-scoped rows include `enterprise_id` only when an enterprise owns the organization.
+
+For the field reference, see [Copilot Usage Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics#repository-level-fields-api-only).
 
 ```json copy
 [

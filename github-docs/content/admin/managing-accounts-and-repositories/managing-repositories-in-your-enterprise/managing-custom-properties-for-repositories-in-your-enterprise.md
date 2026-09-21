@@ -24,6 +24,18 @@ People with read permissions to a repository can view the custom property values
 
 Additionally, organization owners can search for repositories in their organization by custom property values. See [Managing Custom Properties For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#searching-and-filtering-repositories-by-custom-property-values).
 
+
+## About custom property suggestions
+
+> [!NOTE]
+> Copilot suggestions for repository custom property definitions are in public preview.
+
+
+When you create a single-select or multi-select property, Copilot can suggest allowed values for the property definition. Select a suggestion to add it to the list of allowed values.
+
+This feature is available with Copilot Business or Copilot Enterprise. By default, suggestions are enabled for enterprise-level properties and each organization can decide whether to enable suggestions. Enterprise owners can instead enable or disable suggestions everywhere with the **Repository custom property suggestions** policy. See [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
+
+
 ## Adding custom properties
 
 You can add custom properties to your enterprise to make those properties available in all of your organizations.
@@ -35,6 +47,9 @@ You can add custom properties to your enterprise to make those properties availa
 1. In the left sidebar, under "Policies", click **Custom properties**.
 1. To add a new custom property, in the upper-right corner, click **New property**.
 1. Enter a name, description, and type for the custom property. The name must be unique across all of your organizations, can't contain spaces, and cannot exceed 75 characters in length.
+
+   If you selected a single select or multi select type, Copilot can suggest allowed values for the property definition. Select **{% octicon "check" aria-label="Accept suggestion" %} Accept suggestion** to add it to the list of allowed values.
+
 1. Optionally, select **Allow repository actors to set this property**. When enabled, repository users and apps with the repository-level `custom properties` fine-grained permission will be able to set and update the property value for their repository. Additionally, any actor creating a repository can set the property on the repository.
 1. Optionally, select **Require this property for all repositories** and add a default value. This means that you require that all repositories in your enterprise have a value for this property. Repositories that don’t have an explicit value for this property will inherit the default value.
 

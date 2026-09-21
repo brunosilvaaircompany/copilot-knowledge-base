@@ -8,7 +8,7 @@ You should use query suites for the queries that you want to frequently use in y
 
 ## Built-in CodeQL query suites
 
-The built-in CodeQL query suites, `default` and `security-extended`, are created and maintained by GitHub. Both of these query suites are available with default setup for every CodeQL-supported language.
+The built-in CodeQL query suites, `default`, `security-extended`, and `security-and-quality`, are created and maintained by GitHub. The `default` and `security-extended` query suites are available with default setup for every CodeQL-supported language.
 
 Organization owners and security managers can recommend a query suite for use with default setup throughout their organization. For more information, see [Code Scanning At Scale](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/configure-specific-tools/code-scanning-at-scale).
 
@@ -25,6 +25,11 @@ For a complete list of queries included in each query suite for every language, 
 * The `security-extended` query suite consists of all the queries in the `default` query suite, plus additional queries with slightly lower precision and severity.
 * Relative to the `default` query suite, the `security-extended` suite may return a greater number of false positive code scanning results.
 * This query suite is available for use with default setup for code scanning, and is referred to as the "Extended" query suite on GitHub.
+
+### `security-and-quality` query suite
+
+* The `security-and-quality` query suite consists of all the queries in the `security-extended` query suite, plus additional queries that identify maintainability and reliability issues.
+* This query suite is available for use with advanced setup for code scanning. For more information, see [Configuring Advanced Setup For Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configuring-advanced-setup-for-code-scanning).
 
 ## Custom query suites
 

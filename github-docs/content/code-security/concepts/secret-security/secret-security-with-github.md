@@ -11,7 +11,7 @@ GitHub provides tools to help you understand and address your organization's exp
 
 The secret risk assessment provides organization owners and security managers with a free point-in-time scan of their organization's repositories to identify hardcoded credentials like API keys, tokens, and passwords, and understand the extent of secret sprawl across your organization.
 
-[<span class="btn btn-primary mt-3 mr-3 no-underline">Run a security risk assessment</span>](https://github.com/get_started?with=risk-assessment)
+<a href="https://github.com/get_started?with=risk-assessment" class="btn btn-primary mt-3 mr-3 no-underline"><span>Run a security risk assessment</span></a>
 
 ### What the assessment shows
 
