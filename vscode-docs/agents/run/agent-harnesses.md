@@ -32,14 +32,16 @@ Most targets share the same chat and session-management experience in {% data va
 | Session target | Where tools run | Code access | Choose it for |
 |----------------|-----------------|-------------|---------------|
 | **Local** | In the {% data variables.product.prodname_vscode_shortname %} extension host on your machine | Current workspace | Interactive work that needs {% data variables.product.prodname_vscode_shortname %} tools, extension tools, or any model configured in {% data variables.product.prodname_vscode_shortname %} |
-| **Copilot** | In the Agent Host on your machine or in a Dev Container | Current folder, an isolated Git worktree, or a Dev Container workspace | General coding tasks, background sessions, and Copilot-specific capabilities |
+| **Copilot** | In the Agent Host on your machine, on a remote host, or in a Dev Container | Current folder, an isolated Git worktree, or a Dev Container workspace | General coding tasks, background sessions, and Copilot-specific capabilities |
 | **Claude** | On your machine | Current folder or an isolated Git worktree | Claude-specific agent capabilities, slash commands, and permission modes |
 | **Codex** | On your machine | Current folder or an isolated Git worktree | Codex-specific capabilities for interactive or background work |
 | **Cloud** | On a provider's remote infrastructure | A GitHub repository and pull request | Independent tasks that don't need local editor context and benefit from team review |
 
 **Local** is the name of one harness. Copilot, Claude, and Codex can also run locally. **Cloud** is an execution target that groups the cloud agents available to you.
 
-For an eligible local folder, the {% data variables.copilot.agents_window %} workspace picker can start an Agent Host session in the folder's Dev Container. This selects the execution environment; use the **Session Target** control separately to choose the harness. Dev Container sessions work directly in the container workspace and don't support **New Worktree**. Learn how to [run an agent session in a Dev Container](agents-window.md#run-a-session-in-a-dev-container).
+Runtime-specific customizations, including [hooks](../../agent-customization/hooks.md#choose-the-hook-implementation-for-your-session), follow the selected harness. Running multiple harnesses in Agent Host does not give them a shared hook schema.
+
+Dev Container execution is available only in the desktop {% data variables.copilot.agents_window %}. Use the workspace picker to start an Agent Host session in a local project's Dev Container or one on an SSH, Tunnel, or WSL host. This selects the execution environment. Use the **Session Target** control separately to choose the harness. Dev Container sessions work directly in the container workspace and don't support **New Worktree**. Learn about requirements and how to [run an agent session in a Dev Container](agents-window.md#run-a-session-in-a-dev-container).
 
 ## Start a session
 
@@ -115,7 +117,7 @@ Local sessions provide these built-in agent roles:
 
 * **Ask**: asks questions and provides guidance without making changes to the code.
 * **Agent**: autonomously plans and performs complex coding tasks, edits files, runs commands, and iterates on results.
-* **Plan**: researches a task and creates a structured implementation plan before code changes. Learn more about [planning with agents](planning.md).
+* **Plan**: researches a task and creates a structured implementation plan before code changes. Learn more about [planning in a Local session](planning.md#plan-in-a-local-session).
 
 You can switch roles during a session from the agent picker.
 
@@ -133,6 +135,12 @@ The Copilot harness is powered by the [{% data variables.copilot.copilot_sdk_sho
 ### Setup and authentication
 
 Copilot sessions use the same GitHub authentication context as chat in {% data variables.product.prodname_vscode_shortname %}. If you use a GitHub Enterprise account for Copilot, the session uses that account. For managed user accounts on GHE.com, complete the setup in [Using GitHub Copilot with an account on GHE.com](https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/using-github-copilot-with-an-account-on-ghecom).
+
+### Prefer Copilot for new editor-chat sessions
+
+Enable `setting(chat.editor.preferCopilotHarness)` _(Experimental)_ to use the {% data variables.copilot.copilot_sdk_short %} harness when Local would otherwise be selected for a new editor-chat session. It does not migrate existing sessions or change explicit or remembered Claude and Codex selections.
+
+Enterprise admins can enforce the preference with the `ChatEditorPreferCopilotHarness` device policy, available from version 1.134. Copilot sessions on Agent Host use the shared SDK hooks implementation and load Copilot Policy Hooks. Local sessions do not load SDK Policy Hooks. See [migrate hooks between harnesses](../../agent-customization/hooks.md#migrate-hooks-between-harnesses) and [enterprise hook configuration](https://code.visualstudio.com/docs/enterprise/ai-settings#use-the-sdk-harness-for-policy-hooks).
 
 ### Permissions and approvals
 
@@ -314,6 +322,8 @@ Handoff continues ongoing work with a different agent configuration and carries 
 
 For example, continue a Copilot session with Claude or Codex to use provider-specific capabilities, send a well-scoped task to the Cloud target for a pull request workflow, or move from the Plan agent to an implementation agent.
 
+You can initiate a handoff only from a Local session. Local and remote Agent Host sessions don't show the **Session Target** dropdown, but they remain available as handoff destinations from a Local session.
+
 To hand off a session to another harness or execution environment:
 
 1. Open the session.
@@ -324,7 +334,7 @@ To hand off a session to another harness or execution environment:
 
 {% data variables.product.prodname_vscode_shortname %} carries the conversation history and context to the selected target. The tools, permissions, and models might change because each harness, execution environment, or agent role provides different capabilities.
 
-To hand off a completed plan, select **Start Implementation**, and then choose an available implementation agent. Learn more about [planning with agents](planning.md).
+To implement a plan from the built-in **Plan** agent in a Local session, select **Start Implementation**. This switches to **Agent** in the current conversation and submits the implementation request. To continue in another supported session, open the dropdown next to **Start Implementation** and select an available **Continue in** destination. For the different controls in Local and {% data variables.product.prodname_copilot_short %} sessions, see [planning with agents](planning.md).
 
 **TIP:** In {% data variables.copilot.copilot_cli_short %}, enter `/delegate` to continue the work with a {% data variables.copilot.copilot_cloud_agent_short %}.
 

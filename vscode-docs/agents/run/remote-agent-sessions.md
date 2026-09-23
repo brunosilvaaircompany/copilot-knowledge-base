@@ -44,6 +44,14 @@ To start a session on a remote machine via dev tunnel:
 
 **IMPORTANT:** Ensure your dev tunnel requires authentication (GitHub or Microsoft account). If the tunnel allows anonymous access, anyone who discovers the URL can reach your machine and start agent sessions. This is especially dangerous when auto-approval modes are active, because unauthorized users can trigger AI-assisted command execution with your credentials. For more information, see [Security](security.md).
 
+## Run a session in a remote Dev Container
+
+`feature(agent-host-dev-containers)`
+
+Run agents inside your remote project's Dev Container to use its configured tools and dependencies without installing them directly on the host. Starting in {% data variables.product.prodname_vscode_shortname %} 1.139, this is supported for SSH, Tunnel, and WSL hosts in the desktop {% data variables.copilot.agents_window %}.
+
+Docker must be installed and running on the remote host. For prerequisites and setup steps, see [Run a session in a Dev Container](agents-window.md#run-a-session-in-a-dev-container).
+
 ## Use the {% data variables.copilot.agents_window %} in the browser
 
 The {% data variables.copilot.agents_window %} is also available as a web client at <https://insiders.vscode.dev/agents>, so you can manage agent sessions from any device with a browser. This is useful when you're away from your main development machine, working from a mobile device, or want to check in on sessions running on a remote host without installing {% data variables.product.prodname_vscode %} locally.

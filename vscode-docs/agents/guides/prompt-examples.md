@@ -31,6 +31,8 @@ Explain the difference between async/await and promises.
 
 Use the **Ask** agent with `#codebase` to understand how your project works, locate specific functionality, or explore code relationships.
 
+For a guided investigation with source references and verification steps, see [Explore a codebase with an agent](explore-a-codebase.md).
+
 ```prompt-ask
 Explain how authentication works in #codebase
 ```
@@ -50,6 +52,8 @@ Which testing framework is used for #calculator.test.js?
 ## Code generation and editing
 
 Use **Agent** for multi-file creation and **inline chat** (`kb(inlinechat.start)`) for targeted, in-place edits.
+
+For complete workflows in an existing project, see [Add a feature](add-a-feature.md) and [Refactor without changing behavior](refactor-safely.md).
 
 ```prompt
 Add a login button and style it based on #styles.css

@@ -190,6 +190,10 @@ The agent can also choose to run commands directly in the background, without us
 
 **TIP:** To automatically approve terminal commands or restrict file system and network access for agent commands, see [Manage approvals and permissions](approvals.md).
 
+## Built-in tools and context reference
+
+For individual names, descriptions, and availability, see the [Tools and context reference](../reference/tools-reference.md). The reference groups tools by purpose and lists context items separately.
+
 ## Frequently asked questions
 
 <details>
@@ -237,6 +241,6 @@ Yes. You can create tools in two ways:
 
 ## Related resources
 
-* [Chat tools reference](../reference/ai-features-cheat-sheet.md#chat-tools)
+* [AI features cheat sheet](../reference/ai-features-cheat-sheet.md)
 * [Create and use tool sets](../../agent-customization/tool-sets.md)
 * [Security considerations for using AI in {% data variables.product.prodname_vscode_shortname %}](security.md)

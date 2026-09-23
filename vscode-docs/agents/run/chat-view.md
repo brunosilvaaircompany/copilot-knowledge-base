@@ -52,7 +52,7 @@ The {% data variables.copilot.chat_view %} operates in two modes: compact and si
 
 ## Start a session
 
-To start a workspace-scoped session, select **New Chat** (`+`) or press `kb(workbench.action.chat.newChat)`. Before you send the first prompt, use the chat input controls to choose an agent target, agent, language model, and permission level. Learn more about [configuring an agent session](../overview.md).
+To start a workspace-scoped session, select **New Chat** (`+`) or press `kb(workbench.action.chat.newChat)`. Before you send the first prompt, use the chat input controls to choose an agent target, agent, language model, and permission level. Learn more about [configuring an agent session](agent-harnesses.md#understand-the-session-controls).
 
 Type a prompt and press `kb(workbench.action.chat.submit)`. For shared request, context, and conversation controls, see [Use chat in {% data variables.product.prodname_vscode_shortname %}](../../chat/chat-overview.md). For session context, history, and organization, see [Manage agent sessions](sessions/manage-sessions.md).
 
@@ -64,6 +64,6 @@ Select a changed file in the response to inspect its diff, or set `setting(chat.
 
 ## Next steps
 
-* [Chat overview](../../chat/chat-overview.md) - add context, write effective prompts, and review changes.
+* [Chat interaction controls](../../chat/chat-overview.md) - send and steer requests, add context, and navigate a conversation.
 * [Manage agent sessions](sessions/manage-sessions.md) - organize, archive, and fork sessions.
 * [Use the {% data variables.copilot.agents_window %}](agents-window.md) - work with agents across multiple projects.

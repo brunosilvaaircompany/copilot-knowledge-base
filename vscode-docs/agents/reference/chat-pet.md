@@ -8,7 +8,7 @@ The {% data variables.product.prodname_vscode %} pet sits above the chat input b
 
 To learn how to show, hide, and control the pet, see [Personalize chat](../../chat/chat-overview.md#use-the-vs-code-pet).
 
-**NOTE:** The naming contest runs from September 10 through September 17, 2026. [Submit a name for the new VS Code pet](https://forms.cloud.microsoft/r/4iFTRDnvaY) and review the [contest terms and conditions](#contest-terms-and-conditions).
+**NOTE:** The naming contest closed on September 17, 2026. Thank you to everyone who submitted a name. We'll announce the winner and the pet's new name soon. You can still review the [contest terms and conditions](#contest-terms-and-conditions).
 
 ## Chat activity reactions
 
@@ -61,7 +61,7 @@ Open the pet's context menu to access these actions:
 
 ## Contest terms and conditions
 
-The Microsoft Name Our VS Code Pet Contest runs from September 10 through September 17, 2026. To enter, [submit a name for the new VS Code pet](https://forms.cloud.microsoft/r/4iFTRDnvaY).
+The Microsoft Name Our VS Code Pet Contest ran from September 10 through September 17, 2026. The contest is now closed.
 
 <details>
 <summary><b>Read the official contest rules</b></summary>
