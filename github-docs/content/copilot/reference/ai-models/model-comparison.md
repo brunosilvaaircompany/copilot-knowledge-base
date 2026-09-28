@@ -136,6 +136,5 @@ Kimi K3 is designed for long-context, multi-step coding and agentic workflows. F
 Choosing the right model helps you get the most out of Copilot. If you're not sure which model to use, start with a general-purpose option like GPT-5 mini, then adjust based on your needs.
 
 * For detailed model specs and pricing, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
-* For more examples of how to use different models, see [Compare Ai Models](https://docs.github.com/en/copilot/tutorials/compare-ai-models).
 * To switch between models, refer to [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model) or [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model).
 * To learn how Copilot Chat serves different AI models, see [Model Hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting).

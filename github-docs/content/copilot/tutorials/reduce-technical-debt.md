@@ -364,6 +364,6 @@ After reading this tutorial, do you feel confident you can use Copilot to reduce
 ## Further reading
 
 * [Cloud Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent)
-* [Refactor Code](https://docs.github.com/en/copilot/tutorials/refactor-code)
+* [Refactor Code](https://docs.github.com/en/copilot/tutorials/copilot-cookbook/refactor-code)
 * [How to use GitHub Copilot in your IDE: Tips, tricks, and best practices](https://github.blog/developer-skills/github/how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/) in the GitHub blog
 * [5 ways to integrate GitHub Copilot cloud agent into your workflow](https://github.blog/ai-and-ml/github-copilot/5-ways-to-integrate-github-copilot-coding-agent-into-your-workflow/) in the GitHub blog

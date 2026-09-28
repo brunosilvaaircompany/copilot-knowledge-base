@@ -127,3 +127,7 @@ After you enable SAML SSO, enable provisioning. For more information, see [Confi
 You can use the role of guest collaborator to grant limited access to vendors and contractors in your enterprise. Unlike enterprise members, guest collaborators only have access to internal repositories within organizations where they are a member.
 
 If you use Entra ID or Okta for SAML authentication, you may need to update your IdP application to use guest collaborators. For more information, see [Enabling Guest Collaborators](https://docs.github.com/en/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/enabling-guest-collaborators).
+
+### Enable Proof of Presence
+
+After you configure SAML SSO, your enterprise can use Proof of Presence to require reauthentication through your IdP before high-impact actions. During public preview, Proof of Presence supports **Microsoft Entra ID**. For more information, see [Configuring Proof Of Presence](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-proof-of-presence).

@@ -46,11 +46,6 @@ You can find information about the models available and upcoming models in the f
 * **Model comparison**: To compare model capabilities side by side, see [Model Comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison).
 * **Changelog**: Model updates are announced in the [Copilot changelog](https://github.blog/changelog/label/copilot/).
 
-#### Default enablement
-
-For enterprises on a Copilot Business or Copilot Enterprise plan, a policy controls whether unconfigured generally available (GA) models are enabled or disabled by default. See [Default Model Availability](https://docs.github.com/en/copilot/concepts/enterprise/default-model-availability).
-
-
 #### Special categories
 
 GitHub categorizes certain types of model, allowing you to plan for model transitions and set user expectations.
@@ -66,6 +61,19 @@ GitHub categorizes certain types of model, allowing you to plan for model transi
 {% endrowheaders %}
 
 For more information, see [Utility Models](https://docs.github.com/en/copilot/concepts/models/utility-models) and [Fallback And Lts Models](https://docs.github.com/en/copilot/concepts/models/fallback-and-lts-models).
+
+### Default enablement
+
+For enterprises with Copilot Business or Copilot Enterprise plans, two separate policies control whether unconfigured generally available (GA) features and models default to enabled or disabled. If these policies are enabled, users benefit from the latest features and models without the need for administrator intervention.
+
+
+
+The models policy is already active. The feature policy will become active soon.
+
+
+
+
+For more information, see [Default Availability](https://docs.github.com/en/copilot/concepts/enterprise/default-availability).
 
 ## Considering different release stages
 

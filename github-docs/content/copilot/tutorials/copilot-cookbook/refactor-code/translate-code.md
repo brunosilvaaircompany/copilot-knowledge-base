@@ -6,8 +6,6 @@ For ease of maintaining code, you might want to move code to a language that is 
 
 Copilot can help you translate code from one language to another. Translating a standalone file, such as a script, is straightforward. This process is described in this article.
 
-Translating a project containing multiple files is a more complex process, and is described in [Migrate A Project](https://docs.github.com/en/copilot/tutorials/migrate-a-project).
-
 ## Example scenario
 
 The following Perl script prompts the user to enter the path to a text file. It checks what the user enters and if a text file is found at that path, it outputs a word count and character count for the contents of the file.

@@ -252,7 +252,7 @@ Alternatively, you can rebind the shortcut for each command in the Keyboard Shor
 
 You can enable or disable GitHub Copilot from within Visual Studio Code.
 
-1. To configure inline suggestions, click the arrow next to the **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %}** icon in the title bar of Visual Studio Code, then select **Configure Inline Suggestions**.
+1. To configure inline suggestions, click the arrow next to the chat icon in the title bar of Visual Studio Code, then select **Configure Inline Suggestions**.
 
     ![Screenshot of the option in the GitHub Copilot dropdown. "Configure inline suggestions" is highlighted in orange.](/assets/images/help/copilot/configure-code-completions-option-vscode.png)
 

@@ -23,7 +23,7 @@ For a full introduction to the GitHub MCP server and an overview of MCP, see [MC
 
 The GitHub MCP server enables you to perform a wide range of actions on GitHub, via Copilot Chat in Visual Studio Code.
 
-1. Open Copilot Chat by clicking the {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} icon in the title bar of Visual Studio Code.
+1. Open Copilot Chat by clicking the chat icon in the title bar of Visual Studio Code.
 
 1. In the Copilot Chat box, select **Agent** from the agent dropdown menu.
 

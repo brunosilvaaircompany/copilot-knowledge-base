@@ -20,7 +20,7 @@ If an enterprise owner has enforced a policy for the default branch name for you
 
 
 1. In the sidebar, under "Code, planning, and automation",
- select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Repository defaults**.
+ select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **General**.
 
 1. Under "Repository default branch", click **Change default branch name now**.
 1. In the text field, type the default name that you would like to use for new branches.

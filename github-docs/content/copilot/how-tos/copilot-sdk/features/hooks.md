@@ -11,13 +11,13 @@ A hook is a callback you register once when creating a session. The SDK invokes 
 
 | Hook                                                                | When it fires                       | What you can do                            |
 | ------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------ |
-| [Session Lifecycle](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/session-lifecycle#session-start)     | Session begins (new or resumed)     | Inject context, load preferences           |
+| [Session Lifecycle](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/session-lifecycle#session-start-hook)     | Session begins (new or resumed)     | Inject context, load preferences           |
 | [User Prompt Submitted](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/user-prompt-submitted)        | User sends a message                | Rewrite prompts, add context, filter input |
 | [User Prompt Transformed](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/user-prompt-transformed)    | Runtime builds the model prompt     | Inspect or replace model-facing content    |
 | [Pre Tool Use](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/pre-tool-use)                          | Before a tool executes              | Allow / deny / modify the call             |
 | [Post Tool Use](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/post-tool-use)                        | After a tool returns (success only) | Transform results, redact secrets, audit   |
 | [Post Tool Use](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/post-tool-use#failure-variant) | After a tool returns a failure      | Inject retry guidance, log failures        |
-| [Session Lifecycle](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/session-lifecycle#session-end)         | Session ends                        | Clean up, record metrics                   |
+| [Session Lifecycle](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/session-lifecycle#session-end-hook)         | Session ends                        | Clean up, record metrics                   |
 | [Error Handling](https://docs.github.com/en/copilot/how-tos/copilot-sdk/hooks/error-handling)                     | An error is raised                  | Custom logging, retry logic, alerts        |
 
 All hooks are **optional**—register only the ones you need. Returning `null` (or the language equivalent) from any hook tells the SDK to continue with default behavior.

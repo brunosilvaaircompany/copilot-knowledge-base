@@ -71,6 +71,7 @@ Use this table to find the right guides based on what you need to do:
 | Use your own model keys (OpenAI, Azure, and more) | [Byok](https://docs.github.com/en/copilot/how-tos/copilot-sdk/auth/byok) |
 | Azure BYOK with Managed Identity (no API keys) | [Azure Managed Identity](https://docs.github.com/en/copilot/how-tos/copilot-sdk/setup/azure-managed-identity) |
 | Run the SDK on a server | [Backend Services](https://docs.github.com/en/copilot/how-tos/copilot-sdk/setup/backend-services) |
+| Host the runtime inside your application process (no separate CLI process) | [In Process Runtime](https://docs.github.com/en/copilot/how-tos/copilot-sdk/setup/in-process-runtime) *(experimental)* |
 | Configure SDK options for concurrent users | [Multi Tenancy](https://docs.github.com/en/copilot/how-tos/copilot-sdk/setup/multi-tenancy) |
 | Serve multiple users / scale horizontally | [Scaling](https://docs.github.com/en/copilot/how-tos/copilot-sdk/setup/scaling) |
 

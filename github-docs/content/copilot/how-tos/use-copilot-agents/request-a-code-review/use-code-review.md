@@ -67,7 +67,7 @@ With review effort levels, you can choose the level of thoroughness of Copilot's
 * **Lite**: Cost-efficient review that provides targeted feedback on glaring issues such as bugs, security vulnerabilities, and style inconsistencies.
 * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes, using a higher-reasoning model.
 
-You can select the review effort level in the pull request before you request a review from Copilot, under the **Reviewers** section where Copilot appears as a reviewer. Organization owners and repository administrators can also set a default effort level for automatic reviews.
+You can select Copilot review effort in the pull request before you request a review from Copilot, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort in your settings. Organization owners and repository administrators can set a default Copilot review effort for automatic reviews.
 
 For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
 

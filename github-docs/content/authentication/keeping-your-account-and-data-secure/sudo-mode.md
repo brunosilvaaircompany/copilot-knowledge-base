@@ -2,12 +2,16 @@
 
 ## About sudo mode
 
-To maintain the security of your account when you perform a potentially sensitive action on your GitHub Enterprise Server instance, you must authenticate even though you're already signed in. For example, GitHub considers the following actions sensitive because each action could allow a new person or system to access your account.
+To maintain the security of your account when you perform a protected high-impact action on your GitHub Enterprise Server instance, you must authenticate even though you're already signed in. GitHub requires authentication for actions that can affect access to accounts and resources, including but not limited to:
 
-* Modification of an associated email address
-* Authorization of a third-party application
-* Addition of a new SSH key
-* Creation of a PAT or application
+* **Account**: Deleting your user account, modifying an associated email address, adding a new SSH key, or authorizing third-party applications
+* **Developer settings**: Generating or removing a client secret, creating personal access tokens, revoking all tokens, or transferring a OAuth app
+* **Webhooks**: Creating, viewing, editing, or deleting repository, organization, or enterprise webhooks; viewing or redelivering webhook deliveries
+* **Organization membership**: Sending or editing organization invitations, adding members directly, adding team members, or changing team roles
+* **Organization security**: Changing two-factor authentication enforcement or other organization security settings
+* **Enterprise settings**: Creating organizations in an enterprise or changing app access settings for an identity provider (IdP) IP allow list
+* **Rulesets**: Creating and modifying rulesets at organization and repository level.
+* **Recovery codes**: Viewing, downloading, printing, or regenerating authentication or SSO recovery codes
 
 After you authenticate to perform a sensitive action, your session is temporarily in "sudo mode." In sudo mode, you can perform sensitive actions without authentication. GitHub has a two-hour session timeout period before prompting you for authentication again. During this time, any sensitive action that you perform will reset the timer.
 
@@ -21,6 +25,16 @@ After you authenticate to perform a sensitive action, your session is temporaril
 
 > [!NOTE]
 > If your enterprise uses Enterprise Managed Users, only the setup user will receive prompts to enter sudo mode, as managed user accounts don't have credentials stored on GitHub.
+
+
+
+
+
+## Proof of Presence for enterprise actions
+
+Enterprises can extend sudo mode with Proof of Presence (PoP). For protected high-impact actions, PoP requires you to reauthenticate through your enterprise's identity provider before the action can proceed. Follow the identity provider's prompts, including any required multi-factor authentication, then return to GitHub to complete the action.
+
+During public preview, Proof of Presence supports **Microsoft Entra ID**. For more information, see [Configuring Proof Of Presence](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-proof-of-presence).
 
 
 

@@ -9,7 +9,7 @@ While CodeQL provides high-precision static analysis for a specific set of suppo
 
 During the public preview, AI Scan requires a GitHub Advanced Security license and a GitHub Copilot license.
 
-Usage consumes AI credits. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing).
+Usage consumes AI credits. See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 ## How AI Scan works
 

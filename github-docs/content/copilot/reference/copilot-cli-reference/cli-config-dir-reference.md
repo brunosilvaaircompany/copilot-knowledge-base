@@ -315,7 +315,7 @@ Approve one MCP tool, memory writes, and extension permission access:
 
 Contains session history data, organized by session ID in subdirectories. Each session directory stores an event log (`events.jsonl`) and workspace artifacts (plans, checkpoints, tracked files). This data enables session resume (`--resume` or `--continue`).
 
-Deleting files from this directory only removes local copies. If you have synced sessions to your GitHub account, the synced data is stored separately and is not affected by local file deletion. You can delete or hide synced sessions from GitHub.com. For more information, see [Chronicle](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/chronicle#managing-your-session-data).
+Deleting files from this directory only removes local copies. If you have synced sessions to your GitHub account, the synced data is stored separately and is not affected by local file deletion. You can delete or hide synced sessions from GitHub.com. For more information, see [Session Data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data#deleting-session-data).
 
 ### `command-history-state/`
 
@@ -563,8 +563,8 @@ Each line is a glob pattern matched against model IDs, or a `fallback:` directiv
 
 ```text
 # .github/allowed_models.txt
-fallback: gpt-5.2
-gpt-5.2
+fallback: gpt-6-astra
+gpt-6-astra
 gpt-5.4
 claude-sonnet-*
 ```

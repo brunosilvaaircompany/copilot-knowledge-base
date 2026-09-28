@@ -15,7 +15,7 @@ Default labels are included in every new repository in your organization, but an
 
 
 1. In the sidebar, under "Code, planning, and automation",
- select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Repository defaults**.
+ select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **General**.
 
 1. Under "Repository labels", click **New label**.
 1. Under "Label name", type a name for your label.
@@ -38,7 +38,7 @@ Default labels are included in every new repository in your organization, but an
 
 
 1. In the sidebar, under "Code, planning, and automation",
- select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Repository defaults**.
+ select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **General**.
 
 
   1. In the labels list, to the right of the label you want to edit, click **Edit**.
@@ -63,7 +63,7 @@ Default labels are included in every new repository in your organization, but an
 
 
 1. In the sidebar, under "Code, planning, and automation",
- select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Repository defaults**.
+ select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **General**.
 
 
   1. In the labels list, to the right of the label you want to delete, click **Delete**.

@@ -72,7 +72,7 @@ Organization permissions do not grant read, write, or administrator access to an
 | View Dependabot alert dismissal requests | View Dependabot alert dismissal requests for your organization. | [Enable Delegated Alert Dismissal](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/enable-delegated-alert-dismissal) |
 |                                                                                       |
 |                                   |
-| View organization Copilot metrics                    | View Copilot usage metrics for your organization. | [Copilot Metrics](https://docs.github.com/en/copilot/concepts/copilot-usage-metrics/copilot-metrics) |
+| View organization Copilot metrics                    | View Copilot usage metrics for your organization. | [Copilot Metrics](https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics) |
 |                                                                                     |
 
 {% endrowheaders %}

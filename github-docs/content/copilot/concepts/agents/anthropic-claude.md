@@ -21,4 +21,4 @@ When starting a task with the Anthropic Claude coding agent, you can select the 
 * Claude Sonnet 4.6
 
 
-If you select **Auto**, Copilot auto model selection will select the best model based on availability and to help reduce rate limiting. For more information, see [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+If you select **Auto**, it will choose one of the available models listed above. **Auto** in Anthropic Claude coding agent does **not** leverage Copilot auto model selection.

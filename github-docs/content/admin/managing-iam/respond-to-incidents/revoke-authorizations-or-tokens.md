@@ -1,4 +1,4 @@
-# Revoking SSO authorizations or deleting credentials in your enterprise
+# Revoking authorizations or deleting credentials in your enterprise
 
 When your enterprise is affected by a security incident, you can respond by preventing programmatic access to your enterprise or its organizations.
 
@@ -9,7 +9,7 @@ Available actions:
 
 
 
-In the "Authentication security" section of your enterprise settings, you can review counts for user tokens and keys that are authorized for single sign-on (SSO). Then, if needed, you can take action against credentials:
+In the "Authentication security" section of your enterprise settings, you can take action against credentials:
 
 * **For individual members**: Revoke SSO authorizations or delete credentials for a specific user when responding to a targeted incident or performing routine access cleanup.
 * **For a specific credential type**: Revoke SSO authorizations or delete credentials of a selected type, such as only personal access tokens (classic), across your entire enterprise.
@@ -17,7 +17,7 @@ In the "Authentication security" section of your enterprise settings, you can re
 
 You can also take any of these actions using the [Credential Authorizations](https://docs.github.com/en/rest/enterprise-admin/credential-authorizations).
 
-> [!NOTE] Organization owners can take the same actions at the organization level, using the GitHub UI or the [Orgs](https://docs.github.com/en/rest/orgs/orgs#revoke-a-single-credential-type-for-an-organization). For more information, see [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization).
+> [!NOTE] Organization owners can take the same actions at the organization level, using the GitHub UI or the [Orgs](https://docs.github.com/en/rest/orgs/orgs#revoke-a-single-credential-type-for-an-organization).
 
 
 
@@ -33,16 +33,32 @@ You can also take any of these actions using the [Credential Authorizations](htt
 
 ## Reviewing credentials
 
-In the "Credentials" section, you can view how many credentials of each type have **at least one SSO authorization** for an organization in your enterprise. For more information, see [About Authentication With Single Sign On](https://docs.github.com/en/authentication/authenticating-with-single-sign-on/about-authentication-with-single-sign-on).
+Before taking action, use the "Credentials" overview and CSV export to assess which credentials can access your enterprise. The overview provides enterprise-wide visibility, but the available response depends on the credential type and where it is managed.
 
-The counts include:
+For information about the overview, export fields, and audit log correlation, see [Reviewing Credentials In Your Enterprise](https://docs.github.com/en/admin/managing-iam/respond-to-incidents/reviewing-credentials-in-your-enterprise).
 
-* Fine-grained personal access tokens
-* Personal access tokens (classic)
-* User SSH keys
-* GitHub App and OAuth app user access tokens
+## Choosing where to take action
 
-An exact count is displayed if there are 10,000 or fewer of a token type. Above that figure, the description `10k+ tokens` is displayed.
+Use the following table to determine the narrowest appropriate response. Enterprise-level actions can affect credentials across every organization in the enterprise. Organization- and user-level actions reduce disruption when you can identify the affected credential or application.
+
+| Credential type | Where it is managed | Who can take action | Scope and available action |
+| --- | --- | --- | --- |
+| Fine-grained personal access token | Organization settings or the token owner's personal settings | Organization owner or token owner | At the organization level, revoke the token's access to organization resources. At the user level, delete the token. |
+| Personal access token (classic) | SSO credential authorization settings or the token owner's personal settings | Enterprise owner, organization owner, or token owner | At the enterprise or organization level, revoke SSO authorization. At the user level, delete the token. |
+| OAuth app access token | Organization OAuth app policy or the user's authorized OAuth apps | Organization owner or user | At the organization level, deny the app access. At the user level, revoke the app authorization and its associated tokens. |
+| GitHub App user access token or installation | Installed app settings or the user's authorized GitHub Apps | Enterprise owner, organization owner, or user | At the enterprise or organization level, suspend or uninstall the app to prevent access. At the user level, revoke the user's authorization. |
+| User SSH key | SSO credential authorization settings or the key owner's personal settings | Enterprise owner, organization owner, or key owner | At the enterprise or organization level, revoke SSO authorization. At the user level, delete the key. |
+
+For a targeted response, use the procedure for the credential and action:
+
+* **Fine-grained personal access tokens**: [Reviewing And Revoking Personal Access Tokens In Your Organization](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/reviewing-and-revoking-personal-access-tokens-in-your-organization)
+* **User-owned personal access tokens**: [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#deleting-a-personal-access-token)
+* **SSO-authorized personal access tokens (classic) and user SSH keys**: [Viewing And Managing A Members Saml Access To Your Organization](https://docs.github.com/en/organizations/granting-access-to-your-organization-with-saml-single-sign-on/viewing-and-managing-a-members-saml-access-to-your-organization)
+* **OAuth app access tokens**: [Denying Access To A Previously Approved OAUTH App For Your Organization](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/denying-access-to-a-previously-approved-oauth-app-for-your-organization) or [Reviewing Your Authorized OAUTH Apps](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/reviewing-your-authorized-oauth-apps)
+* **GitHub App user access tokens or installations**: [Reviewing And Modifying Installed GitHub Apps](https://docs.github.com/en/apps/using-github-apps/reviewing-and-modifying-installed-github-apps) or [Reviewing And Revoking Authorization Of GitHub Apps](https://docs.github.com/en/apps/using-github-apps/reviewing-and-revoking-authorization-of-github-apps)
+* **User-owned SSH keys**: [Reviewing Your SSH Keys](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-ssh-keys)
+
+For an enterprise-wide response, see [Taking bulk action against all members](#taking-bulk-action-against-all-members). These actions affect user credentials, not GitHub App installation access tokens.
 
 ## Understanding the available actions
 
@@ -84,12 +100,11 @@ Both actions include the following credential types:
 * Personal access tokens (classic)
 * Fine-grained personal access tokens
 
-Note that the "revoke authorizations" action works differently for fine-grained personal access tokens, as explained above.
+The "revoke authorizations" action works differently for fine-grained personal access tokens. For details, see [Revoke SSO authorizations](#revoke-sso-authorizations).
 
-The following credential types are **not** affected:
+The following credential types are **not** affected by either action:
 
 * GitHub App installation tokens (`ghs_`)
-* Fine-grained personal access tokens
 * Deploy keys
 * GitHub Actions `GITHUB_TOKEN` access
 

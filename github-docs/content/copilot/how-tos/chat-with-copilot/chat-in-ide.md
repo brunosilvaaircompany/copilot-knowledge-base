@@ -545,7 +545,7 @@ You can change the model Copilot uses to generate responses. You may find that d
 
 Use Copilot Edits to make changes across multiple files directly from a single Copilot Chat prompt. Copilot Edits has the following modes:
 
-* [Edit mode](#edit-mode-1) lets Copilot make controlled edits to multiple files.
+* [Edit mode](#edit-mode) lets Copilot make controlled edits to multiple files.
 * [Agent mode](#agent-mode-1) lets Copilot autonomously accomplish a set task.
 
 ### Edit mode

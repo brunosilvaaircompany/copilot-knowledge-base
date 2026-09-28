@@ -77,4 +77,3 @@ Copilot starts working on the issue automatically after creation.
 ## Further reading
 
 * [Configuring Issue Templates For Your Repository](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
-* [Plan A Project](https://docs.github.com/en/copilot/tutorials/plan-a-project)

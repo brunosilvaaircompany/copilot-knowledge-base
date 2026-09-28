@@ -226,6 +226,145 @@ const client = new CopilotClient({
 
 For more information, see [GitHub OAUTH](https://docs.github.com/en/copilot/how-tos/copilot-sdk/setup/github-oauth).
 
+## Rotating session-scoped GitHub tokens
+
+For multi-user services and integrations, set a token provider on each session instead of storing one long-lived token. The runtime calls the provider for the effective GitHub host and identifies the request as `initial` or `refresh`. The session ID is absent only when a cloud session has not received its ID yet.
+
+Return a tagged token result or an explicit cancellation. Every token result must include `expiresIn`: the positive number of seconds remaining when the callback completes. Production GitHub tokens typically last eight hours, so `8 * 60 * 60` is a common value. Do not set both the static per-session token and the provider.
+
+
+
+#### TypeScript
+
+
+
+
+```typescript
+const session = await client.createSession({
+    gitHubTokenProvider: async ({ host, sessionId, reason }) => {
+        const token = await acquireGitHubToken({ host, sessionId, reason });
+        return {
+            kind: "token",
+            accessToken: token.value,
+            expiresIn: token.secondsRemaining,
+        };
+    },
+});
+```
+
+
+
+#### Python
+
+
+
+
+```python
+async def provide_github_token(args):
+    token = await acquire_github_token(
+        host=args["host"],
+        session_id=args["session_id"],
+        reason=args["reason"],
+    )
+    return {
+        "kind": "token",
+        "accessToken": token.value,
+        "expiresIn": token.seconds_remaining,
+    }
+
+
+session = await client.create_session(github_token_provider=provide_github_token)
+```
+
+
+
+#### Go
+
+
+
+
+```golang
+session, err := client.CreateSession(ctx, &copilot.SessionConfig{
+	GitHubTokenProvider: func(args copilot.GitHubTokenProviderArgs) (*copilot.GitHubTokenProviderResult, error) {
+		token, secondsRemaining, err := acquireGitHubToken(args.Host, args.SessionID, args.Reason)
+		if err != nil {
+			return nil, err
+		}
+		return copilot.GitHubTokenResult(&copilot.GitHubToken{
+			AccessToken: token,
+			ExpiresIn:   secondsRemaining,
+		}), nil
+	},
+})
+```
+
+
+
+#### .NET
+
+
+
+
+```csharp
+await using var session = await client.CreateSessionAsync(new SessionConfig
+{
+    GitHubTokenProvider = async args =>
+    {
+        var token = await AcquireGitHubTokenAsync(args.Host, args.SessionId, args.Reason);
+        return GitHubTokenProviderResult.FromToken(new GitHubToken
+        {
+            AccessToken = token.Value,
+            ExpiresIn = token.SecondsRemaining,
+        });
+    },
+});
+```
+
+
+
+#### Java
+
+
+
+
+```java
+var session = client.createSession(new SessionConfig()
+    .setGitHubTokenProvider(args ->
+        acquireGitHubToken(args.host(), args.sessionId(), args.reason())
+            .thenApply(token -> GitHubTokenProviderResult.token(
+                token.value(), token.secondsRemaining())))
+    .setOnPermissionRequest(PermissionHandler.APPROVE_ALL)
+).get();
+```
+
+
+
+#### Rust
+
+
+
+
+```rust
+let provider = Arc::new(|args: GitHubTokenProviderArgs| async move {
+    let token = acquire_github_token(&args.host, args.session_id.as_ref(), args.reason).await?;
+    Ok(GitHubTokenProviderResult::Token(GitHubToken::new(
+        token.value,
+        token.seconds_remaining,
+    )))
+});
+
+let session = client
+    .create_session(SessionConfig::default().with_github_token_provider(provider))
+    .await?;
+```
+
+
+
+
+The runtime performs the `initial` acquisition as part of session creation or resume. A cancelled acquisition, provider error, invalid response, or token without a stable account identity rejects the create or resume operation. The runtime does not fall back to ambient authentication.
+
+After the session is established, the runtime performs async preflight before each credential-consuming operation. It requests a `refresh` when the current token has one hour or less remaining. Idle sessions are not refreshed until their next credential-consuming operation. The runtime does not use background timers, rejection-driven replay, 401/403 challenge propagation, or upscope for this callback.
+
 ## Environment variables
 
 For automation, CI/CD pipelines, and server-to-server scenarios, you can authenticate using environment variables.

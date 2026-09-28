@@ -78,7 +78,7 @@ For information on configuring the GitHub MCP server, see [Use The GitHub MCP Se
 
     ![Screenshot of MCP server configuration in Visual Studio Code. The "Start" button is outlined in dark orange. ](/assets/images/help/copilot/mcp-start-server-button.png)
 
-1. Open Copilot Chat by clicking the {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} icon in the title bar of Visual Studio Code.
+1. Open Copilot Chat by clicking the chat icon in the title bar of Visual Studio Code.
 1. In the Copilot Chat box, select **Agent** from the popup menu.
 
     ![Screenshot of the Copilot Chat box in Visual Studio Code. The "Agent" option is outlined in dark orange.](/assets/images/help/copilot/copilot-chat-agent-option.png)
@@ -92,7 +92,7 @@ For more information on configuring MCP servers in Visual Studio Code, see [Use 
 
 Once you have configured your MCP servers, you can use them in Copilot Chat to access a wide range of tools and services. In the example below, we will use the Fetch MCP server to fetch details about a web page.
 
-1. Open Copilot Chat by clicking the {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} icon in the title bar of Visual Studio Code.
+1. Open Copilot Chat by clicking the chat icon in the title bar of Visual Studio Code.
 
 1. In the Copilot Chat box, select **Agent** from the agent dropdown menu.
 

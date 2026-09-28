@@ -6,12 +6,6 @@ Issues can be created in a variety of ways, so you can choose the most convenien
 
 
 
-> [!TIP] You can also use Copilot Chat to generate ideas, outlines, or drafts for discussions or blog posts, based on your issues. See [Write Discussions Or Blog Posts](https://docs.github.com/en/copilot/tutorials/copilot-cookbook/document-code/write-discussions-or-blog-posts).
-
-
-
-
-
 ## About sub-issues
 
 You can add sub-issues to an issue to quickly break down larger pieces of work into smaller issues. Sub-issues add support for hierarchies of issues on GitHub by creating relationships between your issues. You can create multiple levels of sub-issues that accurately represent your project by breaking down tasks into exactly the amount of detail that you and your team require.

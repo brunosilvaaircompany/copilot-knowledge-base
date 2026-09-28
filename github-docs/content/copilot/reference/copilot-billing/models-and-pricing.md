@@ -24,7 +24,7 @@ All prices are **per 1 million tokens**.
 
 > [!NOTE] Models with a **Long context** tier, offer extended capabilities and longer context windows. See [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models#models-with-extended-capabilities)
 
-GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, and GPT-6 Astra include a cache write cost in addition to cached input. Earlier OpenAI models have no cache write cost.
+GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-6 Astra, GPT-6 Luna, and GPT-6 Sol include a cache write cost in addition to cached input. Earlier OpenAI models have no cache write cost.
 
 | Model | Release status | Category | Tier | Threshold (input tokens) | Input | Cached input | Cache write | Output |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: |

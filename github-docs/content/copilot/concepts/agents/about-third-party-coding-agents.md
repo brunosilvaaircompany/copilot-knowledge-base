@@ -38,7 +38,7 @@ The following third-party agents are supported on GitHub:
 
 When starting a task with a third-party agent, you can select the AI model used by the agent. You may find that different models perform better, or provide more useful responses, depending on the type of task. For help deciding which model to use, see [Model Comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison).
 
-You can also select **Auto**, which allows Copilot auto model selection to choose the best available model on your behalf. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+You can also select **Auto**, which chooses between the supported models below. Choosing **Auto** with third-party agents does **not** leverage Copilot auto model selection. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 The following models are available for each agent:
 

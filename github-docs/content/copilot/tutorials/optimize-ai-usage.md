@@ -20,7 +20,7 @@ Choose the model based on the work involved:
 
 Use as much capability as the task requires, and as little as necessary. Matching capability to task improves outcomes and directly controls costs at scale.
 
-For a breakdown by model and task type, see [Compare Ai Models](https://docs.github.com/en/copilot/tutorials/compare-ai-models).
+For a breakdown by model and task type, see [Model Comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison#recommended-models-by-task).
 
 ### Configure the reasoning level of the model
 
@@ -34,7 +34,7 @@ Auto model selection chooses a capable model for you, based on the intent of you
 
 A small router looks at your prompt and sends it to the model that can **handle it most efficiently**, reserving expensive reasoning models for complex problems. It also avoids models that burn through a token budget quickly.
 
-Auto model selection also **protects your cache**. It only changes models at natural cache boundaries, when a new session starts or after you run `/compact`, never mid-task. To understand more about why this matters, see [4. Preserve the cache](#4-preserve-the-cache).
+Auto model selection also **protects your cache**. It changes models at natural cache boundaries, when a new session starts or after you run `/compact`. As conversations evolve, it will re-route at points where quality improvements outweigh cache loss. To understand more about why this matters, see [4. Preserve the cache](#4-preserve-the-cache).
 
 Auto model selection also routes around degraded or busy models, so you hit fewer rate limits and errors.
 
@@ -140,7 +140,7 @@ In Copilot CLI, `/chronicle` can generate useful insights from your session hist
 * Use `/chronicle tips` to analyze your recent session history and surface opportunities to use Copilot more efficiently.
 * Use `/chronicle cost-tips` to understand your token usage patterns and get insights into how to reduce cost.
 
-See [Chronicle](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/chronicle#the-chronicle-slash-command).
+See [Chronicle](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#using-the-chronicle-slash-command).
 
 ### Feed insights into a `copilot-instructions.md` file
 

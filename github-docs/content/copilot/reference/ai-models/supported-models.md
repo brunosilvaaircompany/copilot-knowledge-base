@@ -61,6 +61,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | Claude Opus 4.7 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Claude Opus 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Sonnet 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 (fast mode) (preview) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -72,6 +73,8 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | GPT-5.6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Terra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Astra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| GPT-6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| GPT-6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Kimi K3 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 {% endrowheaders %}
@@ -105,7 +108,6 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Gemini 3.6 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.7 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.8 Flash     | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
-| GPT-5.2-Codex        | No minimum listed | `17.14.19` or `18.0.0`         | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.4              | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
 | GPT-5.4 mini         | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
@@ -114,8 +116,11 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | GPT-5.6 Sol          | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Terra        | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-6 Astra         | `1.136.1` | `17.14.19` | TBD | TBD | TBD |
+| GPT-6 Luna          | TBD | `17.14.19` | TBD | TBD | TBD |
+| GPT-6 Sol           | TBD | `17.14.19` | TBD | TBD | TBD |
 | Claude Opus 4.8      | `v1.118` | `17.14.6`                     | TBD | TBD | TBD |
 | Claude Opus 5       | `v1.128.0` | `17.14.22` | TBD | TBD | TBD |
+| Claude Opus 5.5      | TBD | `17.14.6` | TBD | TBD | TBD |
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
 | Claude Fable 5      | `v1.124` | `17.14.6`                    | TBD | TBD | TBD |
 | Claude Fable 5.1    | TBD | TBD                    | TBD | TBD | TBD |
@@ -124,6 +129,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | MAI-Code-1.1-Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
 | Grok 4.6             | TBD | TBD | TBD | TBD | TBD |
+| Grok 4.7             | TBD | `17.14.19` | TBD | TBD | TBD |
 
 {% endrowheaders %}
 

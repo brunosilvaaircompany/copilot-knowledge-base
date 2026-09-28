@@ -96,9 +96,35 @@ After you complete this section, your `.github-private` repository will have the
 
 Later, you can add different overrides for other keys and other teams. **For a more complete example**, see [Override Settings For Teams](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/override-settings-for-teams).
 
-## 4. Check the settings are active
+## 4. Validate and check the settings
 
-Check that the settings you defined are active for users and overridden for specific teams. In this example, most of your enterprise's Copilot users should find that new conversations in their client start in auto mode. The `special-team` enterprise team should not have this experience.
+Validate your repository-based settings, then confirm that supported clients receive the expected configuration.
+
+### Validate server-managed settings
+
+For server-managed deployments, GitHub automatically validates the settings in your selected `.github-private` repository. The validator checks the following files:
+
+* `copilot/managed-settings.json`
+* `copilot/team-mappings.json`
+* Any files in `copilot/teams/` that are referenced in `copilot/team-mappings.json`
+
+To review configuration issues:
+
+
+1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
+
+
+1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
+
+1. On the **Agents** tab, find the "Copilot settings validation" section.
+1. Review the errors and warnings. Each issue identifies the affected file and JSON path.
+1. To fix an issue, update the affected file and commit the change to the default branch of the `.github-private` repository. Then reload the **Agents** page to check the updated configuration.
+
+If the validator finds no issues, the "Copilot settings validation" section isn't displayed. If validation is temporarily unavailable, your existing settings continue to apply. Reload the **Agents** page later to check again.
+
+### Check settings on clients
+
+After checking for validation issues, confirm that your settings are active for users and overridden for specific teams. In this example, new conversations should start in auto mode for most Copilot users in your enterprise. New conversations should not start in auto mode for members of the `special-team` enterprise team.
 
 For server-managed deployments, users on a supported client see the specified settings within about an hour. This includes `copilot/managed-settings.json`, `copilot/team-mappings.json`, and files in `copilot/teams/`. Restarting the client or signing in again triggers an immediate refresh.
 

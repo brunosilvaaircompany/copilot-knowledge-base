@@ -6,9 +6,9 @@ To make a key eligible for team overrides, you will mark it as `overridable` in 
 
 ## Supported keys
 
-The `{ "overridable": <VALUE> }` syntax applies to the `model`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, and `deniedMcpServers` keys.
+The `{ "overridable": <VALUE> }` syntax applies to the `model`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, `deniedMcpServers`, `extraKnownMarketplaces`, `strictKnownMarketplaces`, and `sandbox` keys.
 
-`enabledPlugins` and `extraKnownMarketplaces` work additively. The enterprise `managed-settings.json` sets a baseline, and an enterprise team file can add more plugins and marketplaces on top of it.
+`enabledPlugins` works additively. The enterprise `managed-settings.json` sets a baseline, and an enterprise team file can add more plugins on top of it.
 
 For a full description of these keys and their syntax, see [Enterprise Managed Settings](https://docs.github.com/en/copilot/reference/enterprise-administrators/enterprise-managed-settings).
 
@@ -60,7 +60,7 @@ After you complete this section, your `.github-private` repository will have the
     }
     ```
 
-1. Create the team settings file under `copilot/teams/`. You can include any keys you marked as overridable, plus the additive keys `enabledPlugins` and `extraKnownMarketplaces`. Every other key stays governed by your enterprise default.
+1. Create the team settings file under `copilot/teams/`. You can include any keys you marked as overridable, plus the additive key `enabledPlugins`. Every other key stays governed by your enterprise default.
 
    ```json
    {

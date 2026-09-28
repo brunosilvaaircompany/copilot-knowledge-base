@@ -148,6 +148,10 @@ On GitHub Enterprise Cloud, during a security incident, enterprise and organizat
 
 During a security incident, enterprise owners and organization owners can respond quickly with bulk actions. You can take action against individual members, a specific credential type, or against all members in bulk. These actions affect user SSH keys, OAuth app user access tokens, GitHub App user access tokens, personal access tokens (classic), and fine-grained personal access tokens. They do **not** affect GitHub App installation access tokens, deploy keys, or `GITHUB_TOKEN`.
 
+
+Before taking action, review your enterprise credential inventory to identify affected credentials and choose the narrowest appropriate response. See [Reviewing Credentials In Your Enterprise](https://docs.github.com/en/admin/managing-iam/respond-to-incidents/reviewing-credentials-in-your-enterprise).
+
+
 > [!WARNING] Bulk actions are high-impact actions that should be reserved for major security incidents. They are likely to break automations, and it could take months of work to restore your original state.
 
 

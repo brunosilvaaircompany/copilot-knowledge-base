@@ -6,7 +6,7 @@ This quickstart shows you how to use these capabilities. It takes about ten minu
 
 ## Prerequisites
 
-* **An active Copilot plan.** See [What Is GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot#get-access).
+* **An active Copilot plan.** See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
 * **The Copilot extension for your IDE.** See [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
 * **Signed in to GitHub in your IDE.** If you have authentication problems, see [Troubleshoot Common Issues](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues).
 

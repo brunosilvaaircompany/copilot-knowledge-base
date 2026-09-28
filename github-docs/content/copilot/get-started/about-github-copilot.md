@@ -68,6 +68,8 @@ If your organization is owned by an enterprise that has a Copilot subscription, 
 * For other payment methods, [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
 
 
+If you are on **GitHub Enterprise Server**, see [About Copilot On Ghes](https://docs.github.com/en/enterprise-server@latest/copilot/copilot-on-ghes/about-copilot-on-ghes).
+
 ## Control for organizations and enterprises
 
 If you use Copilot through an organization or enterprise, administrators decide how it can be used. They control which members have access, set policies for which features are available, exclude files that Copilot shouldn't see, and review usage data and audit logs to understand how it's being used.

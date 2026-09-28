@@ -47,6 +47,14 @@ To identify events associated with a specific token, you can use the UI or REST 
 
 ### Generating a SHA-256 hash value for a token
 
+
+
+If you do not have the token value, export your enterprise credential inventory. You can copy the `hashed_token` value from the CSV and use it in the same audit log search. The export also provides `credential_id` and SSH key `fingerprint` values that you can compare with authentication metadata in audit log events.
+
+For more information, see [Reviewing Credentials In Your Enterprise](https://docs.github.com/en/admin/managing-iam/respond-to-incidents/reviewing-credentials-in-your-enterprise).
+
+
+
 If you only have a raw token value, you'll need to generate a SHA-256 hash before you can search for the token.
 
 For macOS and Linux, you can use `echo -n TOKEN | openssl dgst -sha256 -binary | base64`, replacing TOKEN with the token value.

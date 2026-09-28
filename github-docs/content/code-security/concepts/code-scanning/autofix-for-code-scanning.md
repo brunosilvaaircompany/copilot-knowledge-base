@@ -10,7 +10,9 @@ There are two ways to get a fix for an alert: agentic autofix and Copilot Autofi
 
 ## Agentic autofix
 
-> [!NOTE] This feature is currently in public preview and is subject to change.
+> [!NOTE]
+> This feature is currently in public preview and is subject to change. Access to preview features is controlled by policy settings at the organization and enterprise level. See [Manage Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies#opting-in-to-previews-or-feedback) and [Manage Enterprise Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#defining-policies-for-your-enterprise).
+
 
 Assign a code scanning alert to Copilot to have it resolve the alert for you. Assigning an alert starts an agent session: Copilot cloud agent calls tools to explore your codebase beyond the affected file, generates a fix, validates it (for example, by re-running CodeQL), and iterates until it opens a pull request with the changes. See [Resolve Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-code-scanning-alerts/resolve-alerts#fixing-alerts-with-copilot).
 

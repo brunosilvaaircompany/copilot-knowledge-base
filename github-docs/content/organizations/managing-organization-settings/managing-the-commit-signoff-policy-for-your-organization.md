@@ -28,6 +28,6 @@ Signing off on a commit differs from signing a commit. For more information abou
 
 
 1. In the sidebar, under "Code, planning, and automation",
- select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **Repository defaults**.
+ select **{% octicon "repo" aria-hidden="true" aria-label="repo" %} Repository**, then click **General**.
 
 1. Select or deselect **Require contributors to sign off on web-based commits**.

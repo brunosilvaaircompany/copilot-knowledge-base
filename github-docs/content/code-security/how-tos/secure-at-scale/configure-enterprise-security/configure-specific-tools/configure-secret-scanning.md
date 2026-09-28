@@ -61,7 +61,7 @@ The SSSE3 set of instructions is required because secret scanning leverages hard
 
     Optionally, to allow your users to enable validity checks at the enterprise, organization, or repository level, configure validity checks for secret scanning.
 
-1. Click **secret scanning validity checks**. For information about validity checks, see [Enable Validity Checks](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/enable-validity-checks#about-validity-checks).
+1. Click **secret scanning validity checks**. For information about validity checks, see [Enable Validity Checks](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/enable-validity-checks#enabling-validity-checks).
 
     > [!NOTE]
     > Enabling validity checks will send outbound requests to partner services to verify detected secrets. This means secret metadata will leave your instance. You need to ensure that this aligns with your enterprise's security and compliance policies before enabling.

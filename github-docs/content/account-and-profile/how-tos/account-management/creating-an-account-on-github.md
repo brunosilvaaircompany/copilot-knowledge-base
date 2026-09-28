@@ -2,7 +2,7 @@
 
 ## About your personal account on GitHub
 
-To get started with GitHub.com, you need to a personal account and a verified email address.
+To get started with GitHub.com, you need to have a personal account and a verified email address.
 
 When creating a free account on GitHub.com, you can also authenticate with Google or Apple - which are the supported social login providers.
 For iOS users, even if you have enabled the setting "Hide My Email addresses" for your Apple account, using social login will result in creating a new GitHub account.

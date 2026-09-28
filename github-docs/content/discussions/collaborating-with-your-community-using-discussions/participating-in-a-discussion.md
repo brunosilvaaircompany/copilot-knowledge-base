@@ -14,12 +14,6 @@ In addition to starting or viewing discussions and polls, you can:
 
 You can block users and report disruptive content to maintain a safe and pleasant environment for yourself. For more information, see [Maintaining Your Safety On GitHub](https://docs.github.com/en/communities/maintaining-your-safety-on-github).
 
-
-
-> [!TIP] You can also use Copilot Chat to generate ideas, outlines, or drafts for discussions based on your recent pull requests and issues. See [Write Discussions Or Blog Posts](https://docs.github.com/en/copilot/tutorials/copilot-cookbook/document-code/write-discussions-or-blog-posts).
-
-
-
 ## Prerequisites
 
 GitHub Discussions must be enabled for the repository or organization for you to participate in a discussion in the repository or organization. For more information, see [Enabling Or Disabling GitHub Discussions For A Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository) and [Enabling Or Disabling GitHub Discussions For An Organization](https://docs.github.com/en/organizations/managing-organization-settings/enabling-or-disabling-github-discussions-for-an-organization).

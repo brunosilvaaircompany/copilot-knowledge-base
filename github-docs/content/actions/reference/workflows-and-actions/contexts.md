@@ -805,6 +805,10 @@ There are no standard properties in the `matrix` context, only those which are d
 | `matrix` | `object` | This context is only available for jobs in a matrix, and changes for each job in a workflow run. You can access this context from any job or step in a workflow. This object contains the properties listed below. |
 | `matrix.<property_name>` | `string` | The value of a matrix property. |
 
+> [!NOTE]
+> The variable names are case insensitive. For example, `OS` and `os` will be treated as the same variable.
+
+
 ### Example contents of the `matrix` context
 
 The following example contents of the `matrix` context is from a job in a matrix that has the `os` and `node` matrix properties defined in the workflow. The job is executing the matrix combination of an `ubuntu-latest` OS and Node.js version `16`.

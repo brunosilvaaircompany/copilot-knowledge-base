@@ -22,7 +22,7 @@ For instructions on creating the file, see [Get Started](https://docs.github.com
 | `remoteControl` | Restricts whether sessions hosted on this device can be remotely controlled, based on the controlling client's SSO authorization status for the listed organizations. Doesn't affect the user's ability to remotely control sessions hosted on other devices | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `allowedMcpServers` | Defines an allowlist of MCP servers permitted to run. Any server not matched is blocked. Omit to allow all servers, subject to any deny rules | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `deniedMcpServers` | Defines MCP servers that are unconditionally blocked, even if they also match an entry in `allowedMcpServers` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `sandbox` | Enforces minimum local sandbox restrictions for command execution, filesystem and network access, credentials, and local MCP and LSP servers | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `sandbox` | Enforces minimum local sandbox restrictions for command execution, filesystem and network access, credentials, and local MCP and LSP servers | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 
 {% endrowheaders %}
 
@@ -134,6 +134,25 @@ The following source types are supported:
 
 See [Plugin Standards](https://docs.github.com/en/copilot/concepts/enterprise/plugin-standards).
 
+For server-managed enterprise team overrides, wrap the complete marketplace map in `overridable`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "overridable": {
+      "enterprise-plugins": {
+        "source": {
+          "source": "github",
+          "repo": "OWNER/REPO"
+        }
+      }
+    }
+  }
+}
+```
+
+A team file can then provide a regular marketplace map to replace this default. Include any default marketplaces that the team should retain. If the team omits the key, the enterprise default remains.
+
 ## strictKnownMarketplaces
 
 Restricts plugin installation to only the marketplaces explicitly defined by the enterprise. An empty array means complete lockdown. Each entry is a marketplace object with a `source` property indicating the source type. The following source types are supported:
@@ -146,6 +165,20 @@ Restricts plugin installation to only the marketplaces explicitly defined by the
 * `"directory"` — requires `path`
 * `"hostPattern"` — requires `hostPattern` (regex matching marketplace hosts)
 * `"pathPattern"` — requires `pathPattern` (regex matching marketplace paths)
+
+This key is overridable for enterprise teams. Wrap the complete allowlist in `overridable` at the enterprise level:
+
+```json
+{
+  "strictKnownMarketplaces": {
+    "overridable": [
+      { "source": "github", "repo": "OWNER/REPO" }
+    ]
+  }
+}
+```
+
+Use a regular array in the team file to replace the default allowlist. Omitting the key retains the enterprise default. An explicit empty array, `[]`, means complete lockdown, not an unmanaged policy.
 
 ## model
 
@@ -257,24 +290,41 @@ Each entry uses the same `serverName`, `serverUrl`, or `serverCommand` propertie
 
 ## `sandbox`
 
-Enforces minimum local sandbox restrictions for Copilot CLI. Managed sandbox settings impose restrictions rather than defaults:
+Enforces minimum local sandbox restrictions for Copilot CLI and the GitHub Copilot app. Managed sandbox settings impose restrictions rather than defaults:
 
 * For force-on settings, a managed value of `true` enforces the setting. `false` or omission leaves the user's configuration unchanged.
 * For capability settings, a managed value of `false` prohibits the capability. `true` or omission leaves the user's configuration unchanged.
 * Managed read/write and read-only path lists restrict user-configured grants, while managed denied paths add to user-configured denials.
 
+In app sessions, the embedded runtime parses, combines, and enforces the complete managed `sandbox` object, including properties that are not available in the app's project settings. The app displays the user's project settings, not the complete effective managed policy, and does not show per-setting managed locks.
+
 The following sub-properties are supported:
 
-* `enabled`: `true` requires sandboxing by default. Users cannot disable it through their configuration or the `--no-sandbox` command line option. If the effective policy permits bypass, a user can still explicitly disable sandboxing for the rest of the current session, either from an active sandbox-bypass permission prompt or by running the `/sandbox disable` command. This session opt-out does not loosen the saved policy.
+* `enabled`: `true` requires sandboxing by default. Users cannot disable it through their configuration. In Copilot CLI, the `--no-sandbox` command line option and `/sandbox disable` command cannot override it. In the GitHub Copilot app, the project setting and `/sandbox off` command cannot override it. If the effective policy permits bypass, a user can still explicitly disable sandboxing for the rest of the current session from an active sandbox-bypass permission prompt.
 * `failIfUnavailable`: `true`, combined with `enabled: true`, makes the managed sandbox mandatory. If Copilot cannot validate, compile, or enforce the sandbox policy with an available sandbox backend, it blocks model and tool execution instead of allowing commands to fail or run unsandboxed. This property does not enable sandboxing by itself.
-* `allowBypass`: `false` prevents individual commands from running outside the sandbox and prevents users from disabling sandboxing for the rest of the current session, whether from an active sandbox-bypass permission prompt or by running `/sandbox disable`.
-* `addCurrentWorkingDirectory`: `false` prevents Copilot CLI from automatically adding the current working directory to the sandbox's read/write paths.
-* `sandboxMcpServers`: `true` requires local MCP servers started by Copilot CLI to run in the sandbox. Remote MCP servers do not run in the local sandbox.
-* `sandboxLspServers`: `true` requires language servers started by Copilot CLI to run in the sandbox.
-* `gitAuth`: `false` prevents Copilot CLI from injecting a GitHub token for authenticated Git HTTPS operations in the sandbox.
-* `ghAuth`: `false` prevents Copilot CLI from injecting a GitHub token for GitHub CLI in the sandbox.
+* `allowBypass`: `false` prevents individual commands from running outside the sandbox and prevents users from disabling sandboxing for the rest of the current session from an active sandbox-bypass permission prompt. In Copilot CLI, it also prevents users from disabling sandboxing with `/sandbox disable`.
+* `addCurrentWorkingDirectory`: `false` prevents the runtime from automatically adding the current working directory to the sandbox's read/write paths.
+* `sandboxMcpServers`: `true` requires local MCP servers started in the session to run in the sandbox. Remote MCP servers do not run in the local sandbox.
+* `sandboxLspServers`: `true` requires language servers started in the session to run in the sandbox.
+* `gitAuth`: `false` prevents the runtime from injecting a GitHub token for authenticated Git HTTPS operations in the sandbox.
+* `ghAuth`: `false` prevents the runtime from injecting a GitHub token for GitHub CLI in the sandbox.
 * `allowDevToolAccess`: `false` prevents automatic access to development-tool configuration, caches, registries, and toolchains. These locations can contain package registry credentials or tokens. Disabling access can cause package restoration, authenticated registry operations, or builds that use shared caches to fail unless you explicitly grant the required paths.
 * `userPolicy`: An object that configures filesystem, network, and macOS-specific Seatbelt restrictions. The supported properties are described in the following sections.
+
+For server-managed enterprise team overrides, wrap the entire sandbox object in `overridable`:
+
+```json
+{
+  "sandbox": {
+    "overridable": {
+      "enabled": true,
+      "allowBypass": false
+    }
+  }
+}
+```
+
+The wrapper must be the only property directly inside `sandbox`. Individual sub-properties, such as `sandbox.enabled`, cannot use their own `overridable` wrappers. A team file's regular sandbox object replaces the entire wrapped default, so include every restriction that should remain. Omitting `sandbox` retains the enterprise default.
 
 ### `sandbox.userPolicy.filesystem`
 
@@ -290,8 +340,11 @@ Configures network access for sandboxed processes.
 
 * `allowOutbound`: `false` blocks outbound network access.
 * `allowLocalNetwork`: `false` prevents access to the local network.
+* `allowedHosts`: An array of hostnames or IP addresses that sandboxed processes are allowed to reach. A non-empty list blocks hosts that do not match. Entries can be exact hostnames, exact IP addresses, `*.example.com` for subdomains, or `*` for every host.
+* `blockedHosts`: An array of hostnames or IP addresses that sandboxed processes cannot reach. Blocked hosts take precedence over allowed hosts, and blocking a domain also blocks its subdomains.
+* `proxy`: An object that routes sandboxed network traffic through an upstream HTTP proxy. Set `proxy.url` to the proxy URL. Platform support and enforcement vary.
 
-Network behavior varies by operating system. In particular, a proxy is not a complete egress-control boundary because some applications can ignore proxy settings.
+Network behavior varies by operating system. In particular, an upstream proxy is not a complete egress-control boundary because some applications can ignore proxy settings.
 
 ### `sandbox.userPolicy.seatbelt`
 

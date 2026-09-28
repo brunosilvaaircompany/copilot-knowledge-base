@@ -11,7 +11,8 @@ With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to b
 ## Fixing alerts with Copilot
 
 > [!NOTE]
-> This feature is in public preview and subject to change. Copilot cloud agent and Copilot Autofix must be available in the repository.
+> This feature is in public preview and subject to change. Copilot cloud agent and Copilot Autofix must be available in the repository. Access to preview features is controlled by policy settings at the organization and enterprise level. See [Manage Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies#opting-in-to-previews-or-feedback) and [Manage Enterprise Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#defining-policies-for-your-enterprise).
+
 
 You can assign a code scanning alert to Copilot to have it fix the alert for you. Assigning the alert starts an agent session: Copilot cloud agent explores your codebase, generates a fix, validates it, and opens a pull request.
 

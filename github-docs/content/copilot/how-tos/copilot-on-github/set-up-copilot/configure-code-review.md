@@ -2,20 +2,41 @@
 
 ## Introduction
 
-You can configure Copilot code review to review pull requests automatically. For an overview of automatic pull request reviews, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
+You can configure Copilot code review to review pull requests automatically, and you can set your Copilot review effort. For an overview, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
 
 ## Configuring automatic code review for your own pull requests
 
+You can set Copilot code review to review the pull requests you create, in any repository where Copilot code review is available to you.
+
 > [!NOTE]
-> This is only available if you are on the Copilot Pro, Copilot Pro+, or Copilot Max plans.
+> Configuring automatic code review is available on the Copilot Pro, Copilot Pro+, and Copilot Max plans, and with a Copilot Business or Copilot Enterprise license. It is not available for managed user accounts.
 
-1. In the upper-right corner of any page, click your profile picture, then click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot settings**.
+1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot settings**.
 
-1. Locate the **Automatic Copilot code review** option and click the dropdown button.
+1. In the sidebar, under **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, click **Code review**.
 
-   ![Screenshot of the "Automatic Copilot code review" setting with the dropdown menu displayed.](/assets/images/help/copilot/code-review/automatic-code-review-personal.png)
+1. Enable **Automatic Copilot code review**.
+1. Optionally, to review each new push to a pull request that Copilot is already reviewing, enable **Review new pushes**.
+1. Optionally, to review pull requests while they are still marked as drafts, enable **Review draft pull requests**.
 
-1. In the dropdown menu, select **Enabled**.
+A pull request can qualify for automatic review from several independent sources: your user settings, repository rulesets, or organization rulesets. These sources are evaluated separately. If more than one source applies, Copilot still posts a single review. Your user settings cannot disable push or draft reviews that a ruleset has enabled. For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
+
+## Configuring your Copilot review effort
+
+You can choose the Copilot review effort that Copilot code review uses for the reviews you request. Your choice applies to automatic reviews and to reviews you request manually. For an overview of the levels and how Copilot decides which to use, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
+
+1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot settings**.
+
+1. In the sidebar, under **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, click **Code review**.
+
+1. Next to "Review effort level," select the Copilot review effort for reviews you request.
+   * **Lite**: Standard review.
+   * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
+   * **Max**: Most thorough review. This option appears with a **Coming soon** label and is not available yet.
+
+To return to the built-in default, select the **Default** option at the top of the menu. Until you choose a specific level, the control shows the built-in default that applies to you, either **Default (Lite)** or **Default (Balanced)**.
+
+Your Copilot review effort is independent of **Automatic Copilot code review**. Turning automatic review off does not clear your Copilot review effort or stop it from applying to reviews you request manually.
 
 ## Configuring automatic code review for a repository
 

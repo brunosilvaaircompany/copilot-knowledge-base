@@ -33,7 +33,7 @@ From the Agents tab, you can:
 
 * **Review and merge agent code**: Once the agent completes a session, you can jump to the pull request to review the changes, request further improvements, or approve and merge. See [Review Copilot Output](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/review-copilot-output).
 * **Set up automations**: Run Copilot cloud agent automatically, on a schedule or in response to events such as an issue being opened. See [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations).
-* **Query your past sessions**: You can search and reference your past agent sessions using natural language from Copilot CLI or VS Code. See [Chronicle](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/chronicle).
+* **Query your past sessions**: You can search and reference your past agent sessions using natural language from Copilot CLI or VS Code. See [Session Data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data).
 
 ## Next steps
 

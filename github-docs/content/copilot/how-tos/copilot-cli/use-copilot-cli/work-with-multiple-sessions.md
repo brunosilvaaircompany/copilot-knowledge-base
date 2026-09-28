@@ -184,5 +184,5 @@ The sidebar is available by default. You can turn off the ability to open it, or
 For the full list of sidebar settings and their defaults, see [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#sessions-sidebar-settings).
 
 Further reading:
-* [Chronicle](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/chronicle)
+* [Session Data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data)
 * [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#session-status-indicators)

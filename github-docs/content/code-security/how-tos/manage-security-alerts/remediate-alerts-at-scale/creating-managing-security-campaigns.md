@@ -12,7 +12,7 @@ Security campaigns are created and managed from the **{% octicon "shield" aria-h
 
 You choose the alerts that you want to include in the campaign by using either:
 
-* **Campaign templates**: Campaign templates contain filters for the most common alert selections. For code campaigns, they also all include the requirement that GitHub Copilot Autofix is supported for all the alert types included (that is, `autofix:supported`).
+* **Campaign templates**: Campaign templates contain filters for the most common alert selections. When agentic autofix is disabled, they also use `autofix:supported` to include only alerts for rules supported by GitHub Copilot Autofix.
 * **Custom filters**: Creating a campaign using custom filters lets you define your own criteria for selecting alerts for the campaign, and lets you tailor your campaign to your organization's specific needs.
 
 In addition, you can use the REST API to create and interact with campaigns more efficiently and at scale. For more information, see [Campaigns](https://docs.github.com/en/rest/campaigns/campaigns).
@@ -65,7 +65,11 @@ All the template filters use `is:open` to include only alerts that need to be re
 Additional default filters for code scanning alerts:
 
 * `autofilter:true` includes only alerts that appear to be in application code. 
-* `autofix:supported` includes only alerts that are for rules that are supported for GitHub Copilot Autofix.
+
+> [!NOTE]
+> When agentic autofix is enabled for your organization or enterprise, the `autofix` filter is unavailable, and adding `autofix:supported` does not change the results. For alerts in repositories where Copilot cloud agent and Copilot Autofix are available, you can use **Assign to Copilot** for any code scanning alert in a campaign.
+
+
 
 For more information about filtering alerts, see [Best Practice Fix Alerts At Scale](https://docs.github.com/en/code-security/tutorials/secure-your-organization/best-practice-fix-alerts-at-scale#2-select-alerts-for-your-campaign) and [Filtering Alerts In Security Overview](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/filtering-alerts-in-security-overview).
 
@@ -75,11 +79,11 @@ For more information about filtering alerts, see [Best Practice Fix Alerts At Sc
 
 
 
-In addition to the core filters, you will usually want to add a filter to limit results to a specific rule name, severity, or tag.
+Use `autofilter:true` with `rule:`, `tag:`, or `severity:` to scope your campaign.
 
-* `is:open autofilter:true autofix:supported rule:java/log-injection` to show only alerts for log injection in Java code. See [Codeql Queries](https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-queries).
-* `is:open autofilter:true autofix:supported tag:external/cwe/cwe-117` to show only alerts for "CWE 117: Improper Output Neutralization for Logs". This includes log injection in Java and other languages.
-* `is:open autofilter:true autofix:supported severity:critical` to show only alerts with a security severity of critical.
+* `is:open autofilter:true rule:java/log-injection` to show only alerts for log injection in Java code. See [Codeql Queries](https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-queries).
+* `is:open autofilter:true tag:external/cwe/cwe-117` to show only alerts for "CWE 117: Improper Output Neutralization for Logs". This includes log injection in Java and other languages.
+* `is:open autofilter:true severity:critical` to show only alerts with a security severity of critical.
 
 
 

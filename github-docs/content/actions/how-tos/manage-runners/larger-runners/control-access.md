@@ -67,7 +67,7 @@ For information about how to create a runner group with the REST API, see [Actio
 
 1. Assign a policy for workflow access.
 
-   You can configure a runner group to be accessible to a specific list of workflows, or to all workflows. This setting can't be overridden if you are configuring an organization's runner group that was shared by an enterprise. If you specify what workflow can access the runner group, you must use the full path to the workflow, including the repository name and owner, and you must pin the workflow to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@refs/tags/v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@refs/heads/main`.
+   You can configure a runner group to be accessible to a specific list of workflows, or to all workflows. This setting can't be overridden if you are configuring an organization's runner group that was shared by an enterprise. If you specify what workflows can access the runner group, use the full path to the workflow, including the repository name and owner. Pin non-reusable workflows to a branch. Pin reusable workflows to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@refs/tags/v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@refs/heads/main`.
 
    It is best practice to fully qualify ambiguous refs. For example, instead of providing `main` as a ref, provide `refs/heads/main`.
 
@@ -126,7 +126,7 @@ When creating a group, you must choose a policy that defines which organizations
 
 1. Assign a policy for workflow access.
 
-   You can configure a runner group to be accessible to a specific list of workflows, or to all workflows. This setting can't be overridden if you are configuring an organization's runner group that was shared by an enterprise. If you specify what workflow can access the runner group, you must use the full path to the workflow, including the repository name and owner, and you must pin the workflow to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@refs/tags/v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@refs/heads/main`.
+   You can configure a runner group to be accessible to a specific list of workflows, or to all workflows. This setting can't be overridden if you are configuring an organization's runner group that was shared by an enterprise. If you specify what workflows can access the runner group, use the full path to the workflow, including the repository name and owner. Pin non-reusable workflows to a branch. Pin reusable workflows to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@refs/tags/v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@refs/heads/main`.
 
    It is best practice to fully qualify ambiguous refs. For example, instead of providing `main` as a ref, provide `refs/heads/main`.
 
@@ -303,7 +303,7 @@ Always include a security admonition above this procedure. This is either one of
 
 1. Under **Workflow access**, select the dropdown menu and click **Selected workflows**.
 1. Click {% octicon "gear" aria-label="the gear icon" %}.
-1. Enter a comma separated list of the workflows that can access the runner group. Use the full path, including the repository name and owner. Pin the workflow to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@main`.
+1. Enter a comma separated list of the workflows that can access the runner group. Use the full path, including the repository name and owner. Pin non-reusable workflows to a branch. Pin reusable workflows to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@main`.
 
    Only jobs directly defined within the selected workflows will have access to the runner group.
 
@@ -345,7 +345,7 @@ Always include a security admonition above this procedure. This is either one of
 
 1. Under **Workflow access**, select the dropdown menu and click **Selected workflows**.
 1. Click {% octicon "gear" aria-label="the gear icon" %}.
-1. Enter a comma separated list of the workflows that can access the runner group. Use the full path, including the repository name and owner. Pin the workflow to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@main`.
+1. Enter a comma separated list of the workflows that can access the runner group. Use the full path, including the repository name and owner. Pin non-reusable workflows to a branch. Pin reusable workflows to a branch, tag, or full SHA. For example: `octo-org/octo-repo/.github/workflows/build.yml@v2, octo-org/octo-repo/.github/workflows/deploy.yml@d6dc6c96df4f32fa27b039f2084f576ed2c5c2a5, monalisa/octo-test/.github/workflows/test.yml@main`.
 
    Only jobs directly defined within the selected workflows will have access to the runner group.
 

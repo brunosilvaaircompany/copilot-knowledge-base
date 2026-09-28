@@ -4,7 +4,7 @@ Choose from a selection of models, each with its own particular strengths. You m
 
 To view the available models per client, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models#supported-ai-models-per-client).
 
-> [!NOTE] Different models consume AI credits at different rates based on their token pricing. For details, see [Models And Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
+> [!NOTE] The models available to you depend on your Copilot plan and where you're using Copilot, such as GitHub.com or an IDE. Different models consume AI credits at different rates based on their token pricing. For details, see [Models And Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
 
 Copilot allows you to change the model during a chat and have the alternative model used to generate responses to your prompts.
 
@@ -50,7 +50,7 @@ These instructions are for Visual Studio Code. For instructions on different cli
 > * Experimental pre-release versions of the models may not interact with all filters correctly, including the setting to block suggestions matching public code (see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#enabling-or-disabling-suggestions-matching-public-code)).
 
 
-1. Open Copilot Chat by clicking the {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} icon in the title bar of Visual Studio Code.
+1. Open Copilot Chat by clicking the chat icon in the title bar of Visual Studio Code.
 
 1. At the bottom of the chat view, select the **CURRENT-MODEL** {% octicon "chevron-down" aria-hidden="true" aria-label="chevron-down" %} dropdown menu, then click the AI model of your choice.
 

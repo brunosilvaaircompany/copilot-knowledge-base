@@ -188,6 +188,14 @@ You can enable or disable SAML authentication for {% ifversion ghes %}your GitHu
 
 {% endif %}
 
+
+
+## Enabling Proof of Presence
+
+After you configure SAML SSO, your enterprise can use Proof of Presence to require reauthentication through your IdP before high-impact actions. During public preview, Proof of Presence supports **Microsoft Entra ID**. For more information, see [Configuring Proof Of Presence](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-proof-of-presence).
+
+
+
 ## Further reading
 
 

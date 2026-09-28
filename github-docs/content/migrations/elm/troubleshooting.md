@@ -117,7 +117,7 @@ The operator must use a personal access token (classic) for each endpoint:
 
 * The **source operator token** must be created on GitHub Enterprise Server.
 * The **target operator token** must be created on GHE.com.
-* Both tokens have the scopes specified in [Migrate Your Repository](https://docs.github.com/en/migrations/elm/migrate-your-repository#2-create-the-tokens-used-by-the-operator-who-will-perform-the-migration).
+* Both tokens have the scopes specified in [Migrate Your Repository](https://docs.github.com/en/migrations/elm/migrate-your-repository#2-create-operator-tokens-with-enterprise-access).
 * The token owner must be an administrator of the corresponding enterprise. Selecting a scope does not grant the user administrative access.
 * Fine-grained personal access tokens are not supported.
 

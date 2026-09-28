@@ -22,7 +22,7 @@ We typically refer to these repository-level facts and user-level preferences as
 
 ## Feature availability
 
-Copilot Memory is currently used by Copilot cloud agent, Copilot code review, and Copilot CLI.
+Copilot Memory is currently used by Copilot cloud agent, Copilot code review, Copilot CLI, and agentic autofix.
 
 Facts and preferences captured by one Copilot feature can be used by another. For example, if Copilot cloud agent discovers how your repository handles database connections, Copilot code review can later apply that knowledge to spot inconsistent patterns in a pull request. Similarly, if Copilot code review learns that certain settings must stay synchronized across two files, Copilot cloud agent will know to update both files when changing one.
 

@@ -150,3 +150,4 @@ Try the [Expand your team with Copilot cloud agent](https://github.com/skills/ex
 * [Cloud Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent) how-to articles
 * [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents)
 * [Agents](https://docs.github.com/en/copilot/responsible-use/agents)
+* [About GitHub Agentic Workflows](https://docs.github.com/en/copilot/concepts/agents/about-github-agentic-workflows) for recurring repository automation that you want to version with your code and run in GitHub Actions
