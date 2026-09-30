@@ -9,7 +9,7 @@ In this guide, you choose two changes in your own repository, run them in separa
 To follow this guide, you need:
 
 * {% data variables.product.prodname_vscode %} with [AI features set up](https://code.visualstudio.com/docs/setup/copilot).
-* Access to the [{% data variables.copilot.agents_window %}](../run/agents-window.md), which is currently in Preview, and the **{% data variables.product.prodname_copilot_short %}** session target.
+* Access to the [{% data variables.copilot.agents_window %}](../run/agents-window.md) and the **{% data variables.product.prodname_copilot_short %}** session target.
 * A local Git repository with at least one commit, a working development environment, and existing tests.
 * Experience completing a single agent-assisted task. If you're new to agents, start with the [agents quickstart](../quickstart.md).
 

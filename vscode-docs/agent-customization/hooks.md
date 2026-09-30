@@ -8,7 +8,7 @@ This article helps you choose the correct hook implementation, manage hooks from
 
 **NOTE:** The {% data variables.product.prodname_vscode_shortname %} hooks experience is in Preview. Individual provider implementations might have a different lifecycle status. For example, hooks in the {% data variables.copilot.copilot_sdk_short %} are generally available.
 
-**IMPORTANT:** Your organization might restrict which hooks can run. Contact your administrator for more information. Administrators can learn how to [manage hooks in enterprise environments](https://code.visualstudio.com/docs/enterprise/ai-settings#enable-or-disable-hooks).
+**IMPORTANT:** Your organization might restrict which hooks can run. Contact your administrator for more information. Administrators can learn how to [manage hooks in enterprise environments](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#enable-or-disable-hooks).
 
 ## Choose the hook implementation for your session
 
@@ -208,6 +208,8 @@ Follow the project's formatting requirements.
 ```
 
 When the custom agent runs as a subagent, its `Stop` hook is treated as `SubagentStop`. Agent-scoped hooks require `setting(chat.useHooks)` and a trusted workspace.
+
+For custom agents contributed by Claude-format or legacy OpenPlugin plugins, use [plugin-root tokens](agent-plugins.md#reference-plugin-paths-in-hook-commands) to reference bundled scripts without hardcoding installation paths.
 
 ### Local hook examples
 

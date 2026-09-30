@@ -1,12 +1,10 @@
-# Use the {% data variables.copilot.agents_window %} (Preview)
+# Use the {% data variables.copilot.agents_window %}
 
 The {% data variables.copilot.agents_window %} is a dedicated, agent-first {% data variables.product.prodname_vscode %} window for assigning high-level tasks and tracking agent sessions across workspaces.
 
 In this article, you learn how to open the {% data variables.copilot.agents_window %} and start, monitor, review, and finish agent sessions across your projects. To compare it with the {% data variables.copilot.chat_view %} and other interfaces, see [Ways to work with agents](../overview.md#ways-to-work-with-agents). For conversation controls shared across chat surfaces, see [Use chat in {% data variables.product.prodname_vscode_shortname %}](../../chat/chat-overview.md).
 
 <!-- <video src="../images/agents-window/agents-demo-20260510.mp4" title="Video showing the {% data variables.copilot.agents_window %} experience in {% data variables.product.prodname_vscode_shortname %} Insiders." controls></video> -->
-
-**NOTE:** The {% data variables.copilot.agents_window %} is currently in preview. Share feedback by [filing an issue on GitHub](https://github.com/microsoft/vscode/issues), or browse [existing {% data variables.copilot.agents_window %} issues](https://github.com/microsoft/vscode/issues?q=state%3Aopen%20label%3A%22agents-window%22).
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Get started with agents">
 Follow a hands-on tutorial to build an app with AI agents in {% data variables.product.prodname_vscode_shortname %}.
@@ -20,7 +18,7 @@ Follow a hands-on tutorial to build an app with AI agents in {% data variables.p
 * {% data variables.product.prodname_vscode %} installed. [Download {% data variables.product.prodname_vscode_shortname %}](/download).
 * One of the following authentication options:
   * Access to GitHub Copilot. Follow the steps in [Set up GitHub Copilot in {% data variables.product.prodname_vscode_shortname %}](https://code.visualstudio.com/docs/setup/copilot) to sign in and activate your subscription.
-  * An [existing Claude configuration](agent-harnesses.md#use-claude-without-github-sign-in-experimental) for the experimental signed-out experience.
+  * A [Claude API key or another supported bring-your-own-key (BYOK) configuration](agent-harnesses.md#use-claude-without-github-sign-in-experimental) for the experimental signed-out experience.
   * An [existing ChatGPT sign-in for Codex](agent-harnesses.md#use-codex-without-github-sign-in-experimental) for the experimental signed-out experience.
   * A [BYOK model](../../agent-customization/language-models.md#bring-your-own-language-model-key) configured for Agent Host sessions.
 
@@ -36,6 +34,8 @@ The {% data variables.copilot.agents_window %} opens as a dedicated {% data vari
 
 * Run `code --agents` from the command line.
 
+* On Windows, right-click the {% data variables.product.prodname_vscode_shortname %} taskbar icon and select **Agents Window** from the Tasks jump list.
+
 * Open <https://insiders.vscode.dev/agents> in a browser to use the {% data variables.copilot.agents_window %} from any device. See [remote agent sessions](remote-agent-sessions.md#use-the-agents-window-in-the-browser) for setup instructions.
 
 By default, the {% data variables.copilot.agents_window %} requires GitHub authentication to access your Copilot subscription and sessions. If you're already signed in to GitHub in {% data variables.product.prodname_vscode_shortname %}, you'll also be signed in when the {% data variables.copilot.agents_window %} opens.
@@ -46,7 +46,7 @@ By default, the {% data variables.copilot.agents_window %} requires GitHub authe
 
 On desktop, you can open the {% data variables.copilot.agents_window %} without signing in to GitHub when at least one of these options is available:
 
-* Claude configured with Anthropic credentials.
+* Claude configured with an API key or another supported Claude BYOK option.
 * Codex signed in to ChatGPT.
 * A visible BYOK model configured in {% data variables.product.prodname_vscode_shortname %}. Enable `setting(chat.agentHost.byokModels.enabled)` to make BYOK models available to Agent Host sessions.
 
@@ -116,7 +116,7 @@ To start a new agent session in the {% data variables.copilot.agents_window %}:
 
     ![Screenshot of the new-session input highlighting the folder name and the Create PR control.](../images/agents-window/new-session-input.png)
 
-1. Choose an available agent harness, and optionally configure the agent, language model, permission level, and isolation mode. The available options depend on the workspace. Learn how to [choose a harness and code isolation](agent-harnesses.md).
+1. Choose an available agent harness, and optionally configure the agent, language model, permission level, and isolation mode. For folder isolation in a local Git repository, you can also select an existing local branch to check out before the session starts. The available options depend on the workspace. Learn how to [choose a harness and code isolation](agent-harnesses.md).
 
 1. Type a prompt that describes what you want to accomplish, and press `kbstyle(Enter)` to submit it to the agent.
 
@@ -139,7 +139,7 @@ Before you start, make sure that:
 
 * [Docker is installed and running](https://code.visualstudio.com/docs/devcontainers/containers#installation) on the machine that contains the project folder, and the Docker CLI is available on that machine's `PATH`. For a remote folder, Docker must run on the remote host.
 * The project folder contains a [Dev Container configuration](https://code.visualstudio.com/docs/devcontainers/create-dev-container) at `.devcontainer/devcontainer.json` or `.devcontainer.json`.
-* For a remote folder, its SSH, Tunnel, or WSL connection is configured in the {% data variables.copilot.agents_window %}. Learn about [connecting to remote hosts](remote-agent-sessions.md).
+* For a remote folder, its SSH, Tunnel, or WSL connection is configured in the {% data variables.copilot.agents_window %}, and the source host advertises Dev Container support. Learn about [connecting to remote hosts](remote-agent-sessions.md).
 
 To run a session in a Dev Container:
 
@@ -152,6 +152,12 @@ To run a session in a Dev Container:
 1. Choose an available agent harness, configure the session, and enter your prompt.
 
 Dev Container sessions work directly in the container workspace and can't be combined with **New Worktree**. If the container fails to start, review the workspace-specific **Dev Container** channel in the Output view for setup and connection details.
+
+The **Use Dev Container** option isn't available for unsupported hosts or for folders whose source is nested inside another remote environment.
+
+When no session in the container is actively working, waiting for input, or holding an unsent draft, {% data variables.product.prodname_vscode_shortname %} stops the container after five minutes. Approval prompts count as waiting for input and keep the container running. Continuing a session restarts the container and reconnects it without losing the conversation history.
+
+Use `setting(chat.agentHost.devContainer.idleTimeout)` to change the inactivity period. The default is `300` seconds. Set the value to `0` to turn off automatic idle shutdown. Marking sessions as done or deleting them can still remove the container.
 
 ### Start a session from a pull request
 
@@ -174,6 +180,15 @@ To start a session from a pull request:
     **Sync Changes** updates the pull request branch on GitHub, so the existing pull request includes your commits.
 
 **NOTE:** Pull requests from forks are not supported and don't appear in the pull request picker.
+
+### Remove a pull request from a session
+
+When a pull request is no longer relevant to a session, remove its artifact from the session:
+
+* If the session has one pull request, right-click the pull request pill above the chat input, and then select **Remove Pull Request Artifact from Session**.
+* If the session has multiple pull requests, select the pull requests pill to open the dropdown, and then select **Remove Pull Request Artifact from Session** for the pull request you want to remove.
+
+Removing a pull request artifact only disassociates the artifact from the current session. It doesn't close the pull request on GitHub. If the session has a separate association with the same pull request, such as when you start a session from that pull request, that association remains unchanged.
 
 ## Start a quick chat
 
@@ -225,7 +240,7 @@ For complete instructions about feedback, revisions, checkpoints, and integratin
 
 ### Validate changes
 
-Use the [integrated browser](https://code.visualstudio.com/docs/debugtest/integrated-browser) to validate web applications in the active session. Select a `localhost` link from the chat or terminal, right-click a file in **Files** and select **Open in Integrated Browser**, or run **Open Integrated Browser** from the Command Palette (`kb(workbench.action.showCommands)`). Browser tabs and page state belong to the session where you open them. Learn how agents can [use browser tools](browser-tools.md) to inspect and interact with a web page.
+Use the [integrated browser](https://code.visualstudio.com/docs/debugtest/integrated-browser) to validate web applications in the active session. On desktop, opening a regular `.html` file in the active session opens it in the integrated browser by default. HTML diffs continue to open in the diff editor so you can review changes. You can also select a `localhost` link from the chat or terminal, right-click a file in **Files** and select **Open in Integrated Browser**, or run **Open Integrated Browser** from the Command Palette (`kb(workbench.action.showCommands)`). Browser tabs and page state belong to the session where you open them. Learn how agents can [use browser tools](browser-tools.md) to inspect and interact with a web page.
 
 To run a workspace task, select **Tasks** > **Add Task**, and then provide its name, command, run options, and save location. Run configured tasks from the **Tasks** dropdown. To run an ad hoc command in the active session's folder or worktree, select **Open Terminal** in the title bar.
 
@@ -233,11 +248,44 @@ To run a workspace task, select **Tasks** > **Add Task**, and then provide its n
 
 If the active session has uncommitted changes, select **Commit Changes** in the **Changes** view. {% data variables.product.prodname_vscode_shortname %} generates a commit message based on the changes and commits all current changes. Depending on the session type, you might also have a **Commit and Sync Changes** action.
 
-### Finish a pull request with Agent Merge
+### Create a pull request
+
+For an Agent Host session without a pull request, use the **Create PR** form to review the pull request details and choose what happens after creation:
+
+1. Open the **Changes** view, and then select **Create PR**.
+
+    The form opens while {% data variables.product.prodname_vscode_shortname %} generates a title and description. You can edit these fields without waiting for generation to finish.
+
+1. Review the repository, source branch, base branch, title, and description.
+
+1. To keep the pull request in draft until it is ready for review, select **Create as Draft**.
+
+1. Under **After creation**, choose one of these mutually exclusive options:
+
+    * **Merge Manually**: merge the pull request yourself when it is ready.
+    * **Auto-Merge**: let GitHub merge the pull request when required checks and approvals pass.
+        * **Merge method**: select **Squash**, **Merge Commit**, or **Rebase**.
+    * **{% data variables.copilot.agent_merge_caps %}**: have {% data variables.copilot.agent_merge %} monitor the pull request and ask the agent to address blockers.
+        * **Blockers**: select **Address Reviews**, **Fix CI Failures**, or **Resolve Conflicts and Behind Branches**.
+        * **Merge Pull Request**: select **Off**, **If Unchanged**, or **When Ready**. **Off** leaves the pull request open, **If Unchanged** merges it only if {% data variables.copilot.agent_merge %} makes no changes, and **When Ready** merges it after required checks and approvals pass.
+
+    GitHub auto-merge is unavailable when **Create as Draft** is selected. It also does not fix failed checks or address review feedback.
+
+1. Select **Create PR**.
+
+    Any uncommitted changes are committed and the branch is pushed before the pull request is created.
+
+The form remembers the draft setting, merge options, {% data variables.copilot.agent_merge %} options, and your last action (**Create PR** or **Send Create PR Message**). It does not remember titles or descriptions.
+
+To have the agent create the pull request instead, open the **Pull Request Actions** menu in the **Create PR** form and select **Send Create PR Message**.
+
+This action sends the title, description, draft status, and the **Merge Manually** or **Auto-Merge** choice to the session chat, including the merge method when you select **Auto-Merge**. It does not create the pull request directly. {% data variables.copilot.agent_merge_caps %} options are not included in the message.
+
+### Finish a pull request with {% data variables.copilot.agent_merge %}
 
 `feature(agent-merge)`
 
-Agent Merge is an experimental feature that monitors the pull request associated with an agent session and asks the agent to address blockers until the pull request is ready to merge. Depending on how you configure it, Agent Merge can:
+{% data variables.copilot.agent_merge_caps %} is an experimental feature that monitors the pull request associated with an agent session and asks the agent to address blockers until the pull request is ready to merge. Depending on how you configure it, {% data variables.copilot.agent_merge %} can:
 
 * Address unresolved review threads, changes-requested reviews, and new comments from repository maintainers or the Copilot pull request reviewer.
 * Fix failed required CI checks.
@@ -246,36 +294,28 @@ Agent Merge is an experimental feature that monitors the pull request associated
 
 First, enable `setting(chat.agentMerge.enabled)`.
 
-To enable Agent Merge for an existing pull request:
+To enable {% data variables.copilot.agent_merge %} for an existing pull request:
 
-1. Open a session that is associated with a pull request. To create one, follow the steps in [Start a session from a pull request](#start-a-session-from-a-pull-request).
+1. Open a session that is associated with a pull request. To create one, use the [Create PR form](#create-a-pull-request) or follow the steps in [Start a session from a pull request](#start-a-session-from-a-pull-request).
 
-1. Select **Agent Merge** in the title bar, and then select **Enable Agent Merge**.
+1. Select **{% data variables.copilot.agent_merge_caps %}** in the title bar, and then select **Enable {% data variables.copilot.agent_merge %}**.
 
-1. From the **Agent Merge** menu, configure which blockers the agent should address and whether to merge the pull request when it is ready.
+1. From the **{% data variables.copilot.agent_merge_caps %}** menu, configure which blockers the agent should address and whether to merge the pull request when it is ready.
 
-    You can also run **Configure Agent Merge for Active Session** from the Command Palette (`kb(workbench.action.showCommands)`). For a complete list of options, see the [Agent Merge settings](../reference/ai-settings.md#agent-sessions).
+    You can also run **Configure {% data variables.copilot.agent_merge %} for Active Session** from the Command Palette (`kb(workbench.action.showCommands)`). For a complete list of options, see the [{% data variables.copilot.agent_merge %} settings](../reference/ai-settings.md#agent-sessions).
 
-<!-- TODO: Add a screenshot of the Agent Merge menu in the Agents window title bar. -->
+<!-- TODO: Add a screenshot of the {% data variables.copilot.agent_merge_caps %} menu in the Agents window title bar. -->
 
-To create a draft pull request and enable Agent Merge in one step:
-
-1. Open the **Changes** view for a session that doesn't have a pull request.
-
-1. Open the pull request action menu and select **Create Draft PR & Agent Merge**.
-
-1. Configure which blockers Agent Merge should address. Agent Merge creates the draft pull request and starts monitoring it, but doesn't merge it while it remains a draft.
-
-While the pull request is a draft, **Mark Ready** is available from the **Changes** view. While Agent Merge addresses blockers, select **Mark Ready** from the action menu to make the pull request ready for review. When required checks and actionable review feedback are clear, **Mark Ready** becomes the primary action.
+While the pull request is a draft, **Mark Ready** is available from the **Changes** view. While {% data variables.copilot.agent_merge %} addresses blockers, select **Mark Ready** from the action menu to make the pull request ready for review. When required checks and actionable review feedback are clear, **Mark Ready** becomes the primary action.
 
 > [!CAUTION]
-> Agent Merge starts agent turns, changes and syncs the pull request branch, and consumes model requests. Enabling it changes the session to [Autopilot](approvals.md#how-autopilot-works) with [Assisted permissions](approvals.md#permission-levels). Review the Agent Merge options before you enable automatic merging.
+> {% data variables.copilot.agent_merge_caps %} starts agent turns, changes and syncs the pull request branch, and consumes model requests. Enabling it changes the session to [Autopilot](approvals.md#how-autopilot-works) with [Assisted permissions](approvals.md#permission-levels). Review the {% data variables.copilot.agent_merge %} options before you enable automatic merging.
 
-Agent Merge waits while required checks are pending and checks that the pull request is ready immediately before it merges or adds it to the merge queue. If the session starts tracking a different branch or pull request, Agent Merge turns off and requires you to enable it again.
+{% data variables.copilot.agent_merge_caps %} waits while required checks are pending and checks that the pull request is ready immediately before it merges or adds it to the merge queue. If the session starts tracking a different branch or pull request, {% data variables.copilot.agent_merge %} turns off and requires you to enable it again.
 
-To review the changes from the most recent Agent Merge repair cycle, open the **Changes** view and select **Agent Merge Changes** from the changeset dropdown. This changeset compares the latest completed Agent Merge repair turn with the preceding completed user turn. It remains empty after your latest message until Agent Merge completes another repair turn.
+To review the changes from the most recent {% data variables.copilot.agent_merge %} repair cycle, open the **Changes** view and select **{% data variables.copilot.agent_merge_caps %} Changes** from the changeset dropdown. This changeset compares the latest completed {% data variables.copilot.agent_merge %} repair turn with the preceding completed user turn. It remains empty after your latest message until {% data variables.copilot.agent_merge %} completes another repair turn.
 
-To stop monitoring the pull request, select **Agent Merge** in the title bar, and then select **Disable Agent Merge**.
+To stop monitoring the pull request, select **{% data variables.copilot.agent_merge_caps %}** in the title bar, and then select **Disable {% data variables.copilot.agent_merge %}**.
 
 ## Work with multiple sessions
 
@@ -303,7 +343,11 @@ These commands are also in the Command Palette (`kb(workbench.action.showCommand
 
 ### Work with multiple chats in a session
 
-Supported agent host sessions can contain multiple independent chats that share the same workspace and worktree. Arrange peer chats, side chats, and read-only subagent chats in horizontal or vertical groups to work with multiple conversations at the same time. Learn how to [run multiple chats and ask side questions](sessions/manage-sessions.md#run-multiple-chats-in-a-session) and [follow subagents](subagents.md#what-you-see-in-chat).
+In supported Agent Host sessions, use chat tabs and split groups to keep several conversations visible. Arrange interactive peer chats, [side chats](sessions/manage-sessions.md#ask-side-questions), and [read-only subagent chats](subagents.md#agents-window) horizontally or vertically.
+
+The main chat and interactive peer chats are also available in the editor's [{% data variables.copilot.chat_view %}](chat-view.md#switch-chats-within-a-session), where you select them from the **Sessions** view rather than the {% data variables.copilot.agents_window %} chat tabs.
+
+For what chats share, how to create them, and the controls in each interface, see [Run multiple chats in a session](sessions/manage-sessions.md#run-multiple-chats-in-a-session).
 
 ## Schedule recurring tasks
 

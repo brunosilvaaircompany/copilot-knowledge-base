@@ -195,7 +195,7 @@ Browser tools provide interactive validation during an agent session. Keep repea
 * Administrators can turn off browser tools with the `BrowserChatTools` policy.
 * Administrators can use agent network filtering to restrict the domains that agent tools can reach.
 
-Learn more about [approvals and permissions](approvals.md), [browser session storage](https://code.visualstudio.com/docs/debugtest/integrated-browser#session-storage), and [enterprise controls for AI](https://code.visualstudio.com/docs/enterprise/ai-settings).
+Learn more about [approvals and permissions](approvals.md), [browser session storage](https://code.visualstudio.com/docs/debugtest/integrated-browser#session-storage), and [enterprise controls for AI](https://code.visualstudio.com/docs/enterprise/manage-ai-settings).
 
 ## Troubleshoot browser tools
 

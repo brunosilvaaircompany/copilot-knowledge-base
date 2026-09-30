@@ -11,7 +11,9 @@ Build and validate a small app in the {% data variables.copilot.chat_view %}, th
 
 </div>
 
-The quickstart uses {% data variables.product.prodname_copilot %}. See the [{% data variables.product.prodname_copilot_short %} setup guide](https://code.visualstudio.com/docs/setup/copilot) for account, usage, and data-handling requirements, or compare [other agent providers and sign-in options](run/agent-harnesses.md#configure-a-harness-or-cloud-target).
+The quickstart uses the [{% data variables.product.prodname_copilot %} harness](run/agent-harnesses.md#use-the-copilot-harness). It shares its agent runtime with {% data variables.copilot.copilot_cli %} and the {% data variables.copilot.github_copilot_app %} and supports reusable project guidance, such as Agent Skills, across these experiences.
+
+See the [{% data variables.product.prodname_copilot_short %} setup guide](https://code.visualstudio.com/docs/setup/copilot) for account, usage, and data-handling requirements, or compare [other agent providers and sign-in options](run/agent-harnesses.md#configure-a-harness-or-cloud-target).
 
 ## What you can do with AI
 
@@ -55,7 +57,7 @@ Use the [{% data variables.copilot.chat_view %}](run/chat-view.md) when you're w
 
 ### Delegate and manage tasks
 
-Use the [{% data variables.copilot.agents_window %}](run/agents-window.md) (Preview) when your focus is assigning tasks and reviewing their results. Manage multiple sessions across projects, follow their progress, and open the editor when you want to work directly with the code.
+Use the [{% data variables.copilot.agents_window %}](run/agents-window.md) when your focus is assigning tasks and reviewing their results. Manage multiple sessions across projects, follow their progress, and open the editor when you want to work directly with the code.
 
 ![Screenshot showing how to start a new agent session by selecting New at the top of the sidebar in the {% data variables.copilot.agents_window %}.](images/agents-overview/agents-window-hero.png)
 
@@ -84,10 +86,10 @@ AI can produce incorrect code or misunderstand your intent. You remain responsib
 * **Control actions and redirect work.** Use [permissions and approvals](run/approvals.md) to decide which actions require confirmation. You can [steer or stop a request](../chat/chat-overview.md#send-messages-while-a-request-is-running), but stopping doesn't undo completed actions or changes to external services.
 * **Understand isolation.** A Git worktree keeps code changes separate, but isn't a security boundary. For file system and network restrictions on agent-run terminal commands, review the [platform-specific sandboxing options](run/agent-sandboxing.md).
 
-Before using agents on an existing project, review the [recommended security baseline](run/security.md#recommended-security-baseline). Your organization might also restrict available agents, models, and tools through [enterprise AI policies](https://code.visualstudio.com/docs/enterprise/ai-settings).
+Before using agents on an existing project, review the [recommended security baseline](run/security.md#recommended-security-baseline). Your organization might also restrict available agents, models, and tools through [enterprise AI policies](https://code.visualstudio.com/docs/enterprise/manage-ai-settings).
 
 ## Next steps
 
 * [Complete your first task with an agent](quickstart.md): build and validate a small app with a recommended starting configuration.
 * [Follow the agents tutorial](agents-tutorial.md): build a portfolio page and learn the agent, editor, browser, and source control workflows.
-* [Apply the workflow to your own project](best-practices.md#apply-the-workflow-to-your-project): choose a bounded task in an existing codebase and review the result.
+* [Find a guide for your task](guides/overview.md): explore a codebase, add a feature, test changes, or improve your workflow.

@@ -48,7 +48,7 @@ Use the {% data variables.copilot.agents_window %} to run and monitor agent sess
 
 </div>
 
-The {% data variables.copilot.agents_window %} (preview) is a dedicated window in {% data variables.product.prodname_vscode_shortname %} that is optimized for working with agents across all your projects without needing to open a separate {% data variables.product.prodname_vscode_shortname %} window for each one.
+The {% data variables.copilot.agents_window %} is a dedicated window in {% data variables.product.prodname_vscode_shortname %} that is optimized for working with agents across all your projects without needing to open a separate {% data variables.product.prodname_vscode_shortname %} window for each one.
 
 In this part, you open your folder in the {% data variables.copilot.agents_window %} and task an agent to build your portfolio page.
 
@@ -234,4 +234,4 @@ To go deeper with agentic coding in {% data variables.product.prodname_vscode %}
 
 * [Learn how agents work in {% data variables.product.prodname_vscode_shortname %}](concepts/agents.md)
 
-* [Customize agent behavior for recurring project needs](../agent-customization/overview.md)
+* [Find a guide for your next task](guides/overview.md#work-on-a-project)

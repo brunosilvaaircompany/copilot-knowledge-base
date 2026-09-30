@@ -1,6 +1,6 @@
 # Quickstart: Complete your first task with an agent
 
-In this quickstart, you use the **{% data variables.copilot.chat_view %}** and an AI agent in {% data variables.product.prodname_vscode %} to build a small web app from a natural-language prompt. You then review the generated code, let the agent validate the app with browser tools, and verify the result yourself. You can follow the same exercise in the **{% data variables.copilot.agents_window %}** (Preview) if you prefer an agent-first interface.
+In this quickstart, you use the **{% data variables.copilot.chat_view %}** and an AI agent in {% data variables.product.prodname_vscode %} to build a small web app from a natural-language prompt. You then review the generated code, let the agent validate the app with browser tools, and verify the result yourself. You can follow the same exercise in the **{% data variables.copilot.agents_window %}** if you prefer an agent-first interface.
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Build a complete app with agents">
 Follow a hands-on tutorial to build and refine an app with agents in {% data variables.product.prodname_vscode_shortname %}.
@@ -12,7 +12,7 @@ Follow a hands-on tutorial to build and refine an app with agents in {% data var
 ## Prerequisites
 
 * [Download and install {% data variables.product.prodname_vscode %}](/download).
-* [Set up GitHub Copilot in {% data variables.product.prodname_vscode_shortname %}](https://code.visualstudio.com/docs/setup/copilot). This quickstart uses the Copilot harness. To use Claude, Codex, or a model with your own API key instead, [choose and configure another harness](run/agent-harnesses.md).
+* [Set up {% data variables.product.prodname_copilot %} in {% data variables.product.prodname_vscode_shortname %}](https://code.visualstudio.com/docs/setup/copilot). This quickstart uses the [{% data variables.product.prodname_copilot_short %} harness](run/agent-harnesses.md#use-the-copilot-harness), which connects the model to the tools that build and test your app. To use {% data variables.product.prodname_anthropic_claude %}, {% data variables.product.prodname_openai_codex %}, or a model with your own API key instead, [choose and configure another harness](run/agent-harnesses.md).
 
 **NOTE:** Requests in this quickstart use AI credits from your Copilot plan. {% data variables.copilot.copilot_free_short %} includes a monthly allowance. Open the Copilot status dashboard from the Status Bar to monitor your monthly usage. Learn more about [AI credits and model costs](concepts/language-models.md#ai-credits-and-model-costs) and [what happens when you reach a limit](agent-troubleshooting/faq.md#i-reached-my-inline-suggestions-or-ai-credits-limit).
 
@@ -70,7 +70,7 @@ The **{% data variables.copilot.chat_view %}** lets you work with agents alongsi
 **{% data variables.copilot.agents_window %}**
 
 
-The **{% data variables.copilot.agents_window %}** (Preview) is a dedicated window for assigning high-level tasks to agents across your projects.
+The **{% data variables.copilot.agents_window %}** is a dedicated window for assigning high-level tasks to agents across your projects.
 
 1. In {% data variables.product.prodname_vscode_shortname %}, select **Open in Agents** in the title bar.
 
@@ -182,7 +182,6 @@ If a follow-up doesn't resolve the problem, use [Get an agent back on track](gui
 
 * If the **Copilot** target or **Agent** role isn't available, verify your sign-in and review the [agent harness setup requirements](run/agent-harnesses.md#configure-a-harness-or-cloud-target). Your organization's policies might restrict specific agents, models, or tools.
 * If you reach an AI credits limit, review [what remains available and when allowances reset](agent-troubleshooting/faq.md#i-reached-my-inline-suggestions-or-ai-credits-limit).
-* The {% data variables.copilot.agents_window %} is in Preview. If it isn't available in your version, use the {% data variables.copilot.chat_view %} steps.
 
 ## Optional: Continue in the other surface
 
@@ -201,6 +200,6 @@ When you no longer need the app, run these steps to clean up your local resource
 
 ## Next steps
 
-* [Apply this workflow to your own project](best-practices.md#apply-the-workflow-to-your-project).
+* [Find a guide for your next task](guides/overview.md#work-on-a-project).
 * [Build a complete app with agents](agents-tutorial.md).
 * [Review the recommended security baseline](run/security.md#recommended-security-baseline).

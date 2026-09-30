@@ -32,7 +32,7 @@ New sessions use the level configured by `setting(chat.permissions.default)`.
 
 `feature(assisted-permissions)`
 
-Enable the `setting(chat.assistedPermissions.enabled)` setting to show **Assisted permissions** in supported Agent Host permission pickers. An organization can also hide this option by [disabling global auto-approval](https://code.visualstudio.com/docs/enterprise/ai-settings#disable-global-auto-approval).
+Enable the `setting(chat.assistedPermissions.enabled)` setting to show **Assisted permissions** in supported Agent Host permission pickers. An organization can also hide this option by [disabling global auto-approval](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#disable-global-auto-approval).
 
 | Permission level | Description |
 |---|---|
@@ -99,7 +99,7 @@ Expand a source to configure approvals for individual tools, or select the top-l
 
 Set a tool to `false` in `setting(chat.tools.eligibleForAutoApproval)` to always require manual approval. The confirmation dialog then does not offer an auto-approval option for that tool.
 
-Organizations can also use device management policies to enforce manual approvals for specific tools. Learn more in the [Enterprise documentation](https://code.visualstudio.com/docs/enterprise/ai-settings).
+Organizations can also use device management policies to enforce manual approvals for specific tools. Learn more in the [Enterprise documentation](https://code.visualstudio.com/docs/enterprise/manage-ai-settings).
 
 ### Reset tool confirmations
 

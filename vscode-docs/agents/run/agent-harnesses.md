@@ -43,6 +43,22 @@ Runtime-specific customizations, including [hooks](../../agent-customization/hoo
 
 Dev Container execution is available only in the desktop {% data variables.copilot.agents_window %}. Use the workspace picker to start an Agent Host session in a local project's Dev Container or one on an SSH, Tunnel, or WSL host. This selects the execution environment. Use the **Session Target** control separately to choose the harness. Dev Container sessions work directly in the container workspace and don't support **New Worktree**. Learn about requirements and how to [run an agent session in a Dev Container](agents-window.md#run-a-session-in-a-dev-container).
 
+<a name="use-the-copilot-harness"></a>
+
+## Work with the {% data variables.product.prodname_copilot_short %} harness
+
+Use the {% data variables.product.prodname_copilot_short %} harness to work on coding tasks in {% data variables.product.prodname_vscode_shortname %} and reuse supported project customizations across {% data variables.product.prodname_copilot_short %} experiences. It uses the [{% data variables.copilot.copilot_sdk %}](https://github.com/github/copilot-sdk) to access the agent runtime also used by {% data variables.copilot.copilot_cli %} and the {% data variables.copilot.github_copilot_app %}. You don't need to install the SDK separately to use the harness in {% data variables.product.prodname_vscode_shortname %}.
+
+* **Reuse project guidance**: share coding conventions through [custom instructions](../../agent-customization/custom-instructions.md) and recurring workflows through [Agent Skills](../../agent-customization/agent-skills.md). For example, use the same repository skill to run your project's test workflow in {% data variables.product.prodname_vscode_shortname %} and {% data variables.copilot.copilot_cli_short %}.
+* **Reuse supported hooks (Preview)**: {% data variables.product.prodname_copilot_short %} sessions use the [same SDK hook implementation](../../agent-customization/hooks.md#choose-the-hook-implementation-for-your-session) as {% data variables.copilot.copilot_cli_short %}. Check the supported events and tool payloads before reusing a hook.
+* **Continue work in the terminal**: [run {% data variables.copilot.copilot_cli %} in the integrated terminal](#use-copilot-cli-from-the-terminal) and find its session in the sessions list. To continue an existing {% data variables.product.prodname_copilot_short %} session in the terminal, select **Resume in Terminal** from its context menu.
+
+In {% data variables.product.prodname_vscode_shortname %}, the harness runs in the [Agent Host](../concepts/agent-host.md) on your machine, on a connected host, or in a Dev Container. The host owns the session independently of the window that displays it, so you can return to the session from another window while the host remains running.
+
+Tools, models, permissions, and supported customizations can differ between experiences. A shared runtime does not mean that all sessions or personal settings synchronize between products. See [{% data variables.product.prodname_copilot_short %} setup and capabilities](#copilot) for authentication, permissions, and limitations.
+
+For help finding and continuing existing sessions, see the [FAQ about working across {% data variables.product.prodname_copilot_short %} experiences](../agent-troubleshooting/faq.md#working-across-copilot-experiences).
+
 ## Start a session
 
 You can select a session target when you start a session in the {% data variables.copilot.chat_view %} or the {% data variables.copilot.agents_window %}. When you change the target for an ongoing session, {% data variables.product.prodname_vscode_shortname %} considers this a [handoff](#hand-off-a-session) and carries the conversation history and context to the new target.
@@ -84,7 +100,11 @@ Code isolation controls where the agent applies file changes. The permission lev
 
 For a walkthrough that uses separate worktrees for two independent coding tasks, follow [Delegate two tasks without mixing their changes](../guides/delegate-two-tasks.md).
 
-When you [start a session in the {% data variables.copilot.agents_window %}](agents-window.md#start-an-agent-session), select **New Worktree** and choose the base branch to isolate the session. If you leave **New Worktree** unselected, the agent works directly on the code in the workspace. Sessions that you start in the {% data variables.copilot.chat_view %} always use the current workspace.
+When you [start a session in the {% data variables.copilot.agents_window %}](agents-window.md#start-an-agent-session), select **New Worktree** and choose the base branch to isolate the session. The base branch provides the initial contents of the new worktree and does not change the branch in your active workspace.
+
+If you leave **New Worktree** unselected, the agent works directly on the code in the workspace. For a local Git repository with at least one branch, you can select an existing local branch to check out before the agent starts. Checking out a branch changes the branch in your active workspace and requires a clean working tree. Commit or stash your changes before you select another branch. The branch selection is not remembered for later sessions.
+
+Sessions that you start in the {% data variables.copilot.chat_view %} always use the current workspace.
 
 In {% data variables.product.prodname_vscode_shortname %} Insiders, `setting(sessions.useWorktree)` controls whether **New Worktree** is selected when you create your first workspace session. After you start a session, {% data variables.product.prodname_vscode_shortname %} remembers your isolation choice across workspaces and uses it instead of this setting.
 
@@ -92,7 +112,7 @@ In {% data variables.product.prodname_vscode_shortname %} Insiders, `setting(ses
 
 Worktree isolation requires a Git repository with at least one commit. A new worktree contains the committed files from the selected base branch. It does not automatically contain uncommitted tracked changes or untracked files from your primary worktree. Commit changes that the agent needs, or use folder isolation when the task depends on your current uncommitted state.
 
-Git-ignored files, such as `.env` files and installed dependencies, are also absent by default. Use `setting(git.worktreeIncludeFiles)` to specify ignored files and folders that {% data variables.product.prodname_vscode_shortname %} should copy into new worktrees. Learn more about [including files in a worktree](https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees#include-files-when-creating-a-worktree).
+Git-ignored files, such as `.env` files and installed dependencies, are also absent by default. Use `setting(git.worktreeIncludeFiles)` to [copy ignored files into new worktrees](https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees#include-files-when-creating-a-worktree). For large ignored folders, `setting(git.worktreeSymlinkFolders)` (Experimental) can [symlink a folder instead](https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees#symlink-ignored-folders-when-creating-a-worktree). Changes an agent makes through the symlink affect the folder in the original checkout.
 
 Worktree sessions use **Allow all** because their code changes are separate from your active workspace. Folder sessions offer the [permission levels](approvals.md#permission-levels) supported by the selected harness. For operating system-level file system and network restrictions, configure [agent sandboxing](agent-sandboxing.md).
 
@@ -128,9 +148,7 @@ You can switch roles during a session from the agent picker.
 <details>
 <summary>Copilot</summary>
 
-<a name="use-the-copilot-harness"></a>
-
-The Copilot harness is powered by the [{% data variables.copilot.copilot_sdk_short %}](https://www.npmjs.com/package/@github/copilot-sdk) and runs locally on your machine in the [Agent Host](../concepts/agent-host.md). The Agent Host owns the session independently of the window that displays it, letting you pick up your session from the sessions list in another window or even in the browser.
+For a summary of the shared runtime and supported workflows, see [Work with the {% data variables.product.prodname_copilot_short %} harness](#use-the-copilot-harness).
 
 ### Setup and authentication
 
@@ -140,7 +158,7 @@ Copilot sessions use the same GitHub authentication context as chat in {% data v
 
 Enable `setting(chat.editor.preferCopilotHarness)` _(Experimental)_ to use the {% data variables.copilot.copilot_sdk_short %} harness when Local would otherwise be selected for a new editor-chat session. It does not migrate existing sessions or change explicit or remembered Claude and Codex selections.
 
-Enterprise admins can enforce the preference with the `ChatEditorPreferCopilotHarness` device policy, available from version 1.134. Copilot sessions on Agent Host use the shared SDK hooks implementation and load Copilot Policy Hooks. Local sessions do not load SDK Policy Hooks. See [migrate hooks between harnesses](../../agent-customization/hooks.md#migrate-hooks-between-harnesses) and [enterprise hook configuration](https://code.visualstudio.com/docs/enterprise/ai-settings#use-the-sdk-harness-for-policy-hooks).
+Enterprise admins can enforce the preference with the `ChatEditorPreferCopilotHarness` device policy, available from version 1.134. Copilot sessions on Agent Host use the shared SDK hooks implementation and load Copilot Policy Hooks. Local sessions do not load SDK Policy Hooks. See [migrate hooks between harnesses](../../agent-customization/hooks.md#migrate-hooks-between-harnesses) and [enterprise hook configuration](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#use-the-sdk-harness-for-policy-hooks).
 
 ### Permissions and approvals
 
@@ -153,9 +171,9 @@ Because Copilot sessions run on the Agent Host, **Autopilot** is an [agent mode]
 
 ### Provider-specific capabilities
 
-* **Shell initialization** _(Experimental)_: in local Copilot sessions that use the SDK built-in shell tool, enable `setting(chat.agentHost.shellTool.initScript.enabled)` to load `.bashrc` on macOS and Linux or PowerShell profiles on Windows before each command. With [Python Environments](https://code.visualstudio.com/docs/python/environments#terminal-settings) installed and `setting(python-envs.terminal.autoActivationType)` set to `shellStartup`, the selected workspace environment is also activated. This does not apply to remote sessions or the Agent Host custom terminal tool.
+* **Shell initialization** `feature(agent-host-shell-initialization)`: keep agent shell commands aligned with your development environment. In local Copilot sessions that use the SDK built-in shell tool, enable `setting(chat.agentHost.shellTool.initScript.enabled)` to load `~/.bashrc` on macOS and Linux or your PowerShell profiles on Windows before each command. With [Python Environments](https://code.visualstudio.com/docs/python/environments#terminal-settings) installed and `setting(python-envs.terminal.autoActivationType)` set to `shellStartup`, the selected workspace environment is also activated. This does not apply to remote sessions or the Agent Host custom terminal tool.
 
-* **Slash commands**: enter `/` in the chat input to view the slash commands available in a Copilot session. For example, use `/compact` to reduce conversation context or `/yolo` and `/autoApprove` to control [automatic tool approval](approvals.md#frequently-asked-questions).
+* **Slash commands**: enter `/` in the chat input to view the slash commands available in a Copilot session. For example, use `/compact` to reduce conversation context or `/yolo` and `/autoApprove` to control [automatic tool approval](approvals.md#allow-all-tools-globally).
 
 #### Get a second opinion with Rubber Duck
 
@@ -215,16 +233,16 @@ Claude support is enabled by default. Turn it on or off with `setting(github.cop
 Claude supports two authentication and billing options:
 
 * **GitHub Copilot subscription**: sign in to GitHub to use Copilot-routed models. Usage is billed through your Copilot subscription.
-* **Anthropic credentials**: use an Anthropic API key or Claude Code OAuth token. Usage is billed by Anthropic.
+* **Bring your own key (BYOK)**: use a Claude API key or another supported Claude BYOK option. Usage is billed by your configured provider.
 
-When both authentication methods are available, the model picker groups models by **Anthropic** and **Copilot**. The model you select determines the provider and billing method for the next turn. You can switch between Anthropic-native and Copilot-routed models in an existing Claude session.
+When both options are available, the model picker groups models by **Anthropic** and **Copilot**. The model you select determines the provider and billing method for the next turn. You can switch between BYOK-backed and Copilot-routed models in an existing Claude session.
 
 <a name="use-claude-without-github-sign-in"></a>
 <a name="use-claude-without-github-sign-in-experimental"></a>
 
-To use Claude without signing in to GitHub _(Experimental)_, set `ANTHROPIC_API_KEY` in your environment or in the `env` object in `~/.claude/settings.json`. Alternatively, set `CLAUDE_CODE_OAUTH_TOKEN` to a token created with `claude setup-token`. Learn more about [Claude Code authentication](https://code.claude.com/docs/en/authentication).
+To use Claude without signing in to GitHub _(Experimental)_, configure a Claude API key or another supported Claude BYOK option. For an Anthropic API key, set `ANTHROPIC_API_KEY` in your environment or in the `env` object in `~/.claude/settings.json`. Learn more about [Claude Code authentication](https://code.claude.com/docs/en/authentication).
 
-Enable `setting(chat.agentHost.allowSignedOutWhenUsable)` to open the {% data variables.copilot.agents_window %} while signed out of GitHub. The model picker only shows Anthropic-native models until you sign in. After you sign in to GitHub, Copilot-routed models are also available.
+Enable `setting(chat.agentHost.allowSignedOutWhenUsable)` to open the {% data variables.copilot.agents_window %} while signed out of GitHub. The model picker only shows models from your Claude BYOK configuration until you sign in. After you sign in to GitHub, Copilot-routed models are also available.
 
 ### Permissions and approvals
 
