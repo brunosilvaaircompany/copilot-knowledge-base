@@ -19,6 +19,8 @@ Older extension-host sessions save edits and then mark them as pending so you ca
 
 Review agent changes as you would other workspace or branch changes through the diff view, Source Control, or pull request workflow.
 
+For keyboard and screen reader access to a diff, use the [Accessible Diff Viewer](https://code.visualstudio.com/docs/configure/accessibility/accessibility#diff-editor-accessibility), which presents changes in a unified patch format.
+
 
 
 **{% data variables.copilot.chat_view %}**

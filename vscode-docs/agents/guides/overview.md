@@ -2,7 +2,9 @@
 
 Choose a tutorial to learn with a sample project, or follow a guide to apply an agent workflow to your own codebase in {% data variables.product.prodname_vscode_shortname %}.
 
-## New to agents
+## Choose where to start
+
+If you're new to both {% data variables.product.prodname_vscode_shortname %} and AI, first [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview). If you already know {% data variables.product.prodname_vscode_shortname %}, use one of these sample projects to learn the agent workflow:
 
 <div class="card-grid">
     <a class="card" href="/docs/agents/quickstart">
@@ -23,12 +25,30 @@ Choose a tutorial to learn with a sample project, or follow a guide to apply an 
     </a>
 </div>
 
-Already use agents? Jump to a task:
+Already use agents? Skip the sample projects and follow the [experienced-agent fast track](#experienced-agent-fast-track). If you want AI help without delegating changes, [choose a lighter-weight AI feature](../reference/ai-features-cheat-sheet.md#choose-a-feature).
+
+Or jump to a task:
 
 * [Work on a project](#work-on-a-project).
 * [Test and validate](#test-and-validate).
 * [Customize and coordinate agents](#customize-and-coordinate-agents).
 * [Improve results and recover](#improve-results-and-recover).
+
+## Experienced-agent fast track
+
+Use your own repository and keep the default harness and session settings for your first task. Adjust them only when your provider, environment, or project requires a different setup.
+
+1. [Open your repository as a workspace](https://code.visualstudio.com/docs/getstarted/overview#open-your-code) so that files, source control, terminals, tests, and agents share the same project context.
+
+1. Map your existing workflow to [{% data variables.product.prodname_vscode_shortname %} sessions](../concepts/sessions.md), then [understand the session controls](../run/agent-harnesses.md#understand-the-session-controls). If provider or local, remote, and cloud execution constraints matter, [choose a session target](../run/agent-harnesses.md#choose-a-session-target).
+
+1. Start with a bounded task in your own repository. [Explore the codebase](explore-a-codebase.md) without making changes, or [add a feature](add-a-feature.md) with your existing development environment and tests.
+
+1. [Review and validate the code edits](../run/review-code-edits.md) before you integrate them.
+
+After one real-project task, [adapt agents to your project](customize-copilot-guide.md) and [compare quality, reliability, and AI credit usage](optimize-usage.md). If you move between supported applications, learn how to [view sessions from other applications](../run/sessions/manage-sessions.md#view-sessions-from-other-applications).
+
+On a managed device, your organization might control which agents and providers are available. Developers can review the [agent availability troubleshooting steps](../agent-troubleshooting/faq.md#agents-are-not-available-in-chat), and administrators can [manage AI settings](https://code.visualstudio.com/docs/enterprise/manage-ai-settings). For keyboard, screen reader, and low-vision workflows, use the [Accessible View and other accessibility features](https://code.visualstudio.com/docs/configure/accessibility/accessibility#accessible-view).
 
 ## Work on a project
 
