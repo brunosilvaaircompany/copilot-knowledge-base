@@ -2,7 +2,7 @@
 
 ## Metrics
 
-OpenTelemetry metrics were introduced in GitHub Enterprise Server 3.18 and are the future foundation for monitoring your GitHub Enterprise Server instance. 
+OpenTelemetry metrics were introduced in GitHub Enterprise Server 3.18 and are the future foundation for monitoring your GitHub Enterprise Server instance.
 Collectd metrics will continue to be gathered by default, but we expect collectd metrics to be discontinued in a future release.
 
 For more information about OpenTelemetry metrics, see [About Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/about-opentelemetry-metrics).

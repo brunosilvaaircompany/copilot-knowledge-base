@@ -5,7 +5,7 @@
 
 ## Starting a session
 
-1. Install the GitHub MCP Server in your preferred IDE or agentic coding tool. See [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server).
+1. Install the GitHub MCP Server in your preferred IDE or agentic coding tool. See [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/use-the-github-mcp-server).
 
 1. Ensure the `create_pull_request_with_copilot` tool is enabled.
 

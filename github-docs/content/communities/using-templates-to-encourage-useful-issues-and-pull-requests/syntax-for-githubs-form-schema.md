@@ -126,6 +126,8 @@ For the value of the `validations` key, you can set the following keys.
 | --- | ----------- | -------- | ---- | ------- | ------- |
 | `required` | Prevents form submission until element is completed. Only for public repositories. | {% octicon "x" aria-label="Optional" %} | Boolean | false | {% octicon "dash" aria-label="Not applicable" %} |
 
+| `min_length` | Prevents form submission until the response contains at least the specified number of characters. | {% octicon "x" aria-label="Optional" %} | Integer | {% octicon "dash" aria-label="Not applicable" %} | A non-negative integer |
+
 
 #### Example of `textarea`
 
@@ -144,6 +146,7 @@ body:
     render: bash
   validations:
     required: true
+    min_length: 100
 ```
 
 ### `input`
@@ -171,6 +174,8 @@ For the value of the `validations` key, you can set the following keys.
 | --- | ----------- | -------- | ---- | ------- | ------- |
 | `required` | Prevents form submission until element is completed. Only for public repositories. | {% octicon "x" aria-label="Optional" %} | Boolean | false | {% octicon "dash" aria-label="Not applicable" %} |
 
+| `min_length` | Prevents form submission until the response contains at least the specified number of characters. | {% octicon "x" aria-label="Optional" %} | Integer | {% octicon "dash" aria-label="Not applicable" %} | A non-negative integer |
+
 
 #### Example of `input`
 
@@ -184,6 +189,7 @@ body:
     placeholder: "Example: Whenever I visit the personal account page (1-2 times a week)"
   validations:
     required: true
+    min_length: 20
 ```
 
 ### `dropdown`

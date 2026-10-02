@@ -16,7 +16,7 @@ You can disable Copilot Free in your GitHub account settings. This will disable 
 
 You can partially or fully disable Copilot Free in JetBrains IDEs, VS Code, Visual Studio, and XCode:
 
-1. Navigate to [Configure In Ide](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide).
+1. Navigate to [Configure In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide).
 1. At the top of the page, select your IDE.
 1. At the top right of the page, under "In this article," select **Enabling or disabling Copilot**.
 1. Follow the instructions to disable Copilot Free in your IDE.

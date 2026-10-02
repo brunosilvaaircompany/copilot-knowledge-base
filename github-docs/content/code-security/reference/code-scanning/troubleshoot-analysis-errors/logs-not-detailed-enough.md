@@ -29,11 +29,7 @@ These artifacts will help you debug problems with CodeQL code scanning. If you c
 
 You can create CodeQL debugging artifacts by enabling step debug logging (see [Enabling step debug logging](#enabling-step-debug-logging)) and triggering a new CodeQL analysis, for example, by pushing a new commit to a pull request branch.
 
-
-
 If you have given CodeQL access to private registries, additional artifacts whose names start with `proxy-log-file` will be available. These contain logs of the authentication proxy that is used by CodeQL default setup to authenticate requests to private registries and may be used to troubleshoot private registry configurations. To learn more, see [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
-
-
 
 ### Creating CodeQL debugging artifacts for CodeQL advanced setup
 

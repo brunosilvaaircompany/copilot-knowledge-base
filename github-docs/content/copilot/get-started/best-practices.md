@@ -31,7 +31,7 @@ While Copilot inline suggestions and Copilot Chat share some functionality, the 
 
 * Answering questions about code in natural language
 * Generating large sections of code, then iterating on that code to meet your needs
-* Accomplishing specific tasks with keywords and skills. Copilot Chat has built-in keywords and skills designed to provide important context for prompts and accomplish common tasks quickly. Different types of keywords and skills are available in different Copilot Chat platforms. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-keywords-in-your-prompt).
+* Accomplishing specific tasks with keywords and skills. Copilot Chat has built-in keywords and skills designed to provide important context for prompts and accomplish common tasks quickly. Different types of keywords and skills are available in different Copilot Chat platforms. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide#using-keywords-in-your-prompt).
 * Completing a task as a specific persona. For example, you can tell Copilot Chat that it is a Senior C++ Developer who cares greatly about code quality, readability, and efficiency, then ask it to review your code.
 
 ## Create thoughtful prompts
@@ -63,13 +63,13 @@ There are several adjustments you can make to steer Copilot towards more valuabl
   * If you are using Copilot in your IDE, open relevant files and close irrelevant files.
   * In Copilot Chat, if a particular request is no longer helpful context, delete that request from the conversation. Alternatively, if none of the context of a particular conversation is helpful, start a new conversation.
   * If you are using Copilot Chat in GitHub, provide specific repositories, files, symbols, and more as context. See [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github).
-  * If you are using Copilot Chat in your IDE, use keywords to focus Copilot on a specific task or piece of context. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-keywords-in-your-prompt).
+  * If you are using Copilot Chat in your IDE, use keywords to focus Copilot on a specific task or piece of context. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide#using-keywords-in-your-prompt).
 * **Rewrite your prompts to generate different responses.** If Copilot is not providing a helpful response, try rephrasing your prompt, or even breaking your request down into multiple smaller prompts.
 * **Pick the best available suggestion.** When you are using inline suggestions, Copilot might offer more than one suggestion. You can use keyboard shortcuts to quickly look through all available suggestions. For the default keyboard shortcuts for your operating system, see [Keyboard Shortcuts](https://docs.github.com/en/copilot/reference/keyboard-shortcuts).
 * **Provide feedback to improve future suggestions.** You can provide feedback in many ways:
   * For inline suggestions, accept or reject Copilot's suggestion.
   * For individual responses in Copilot Chat, click the thumbs up or thumbs down icons next to the response.
-  * For Copilot Chat in your IDE, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#sharing-feedback) for instructions specific to your environment.
+  * For Copilot Chat in your IDE, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide#sharing-feedback) for instructions specific to your environment.
   * For Copilot Chat in GitHub, leave a comment on the [feedback discussion](https://github.com/orgs/community/discussions/110314).
 
 ## Stay up-to-date on Copilot's features

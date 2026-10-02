@@ -34,7 +34,7 @@ You can choose the Copilot review effort that Copilot code review uses for the r
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
    * **Max**: Most thorough review. This option appears with a **Coming soon** label and is not available yet.
 
-To return to the built-in default, select the **Default** option at the top of the menu. Until you choose a specific level, the control shows the built-in default that applies to you, either **Default (Lite)** or **Default (Balanced)**.
+To return to the built-in default, select the **Default** option at the top of the menu. Until you choose a specific level, the control shows the built-in default, **Default (Balanced)**.
 
 Your Copilot review effort is independent of **Automatic Copilot code review**. Turning automatic review off does not clear your Copilot review effort or stop it from applying to reviews you request manually.
 
@@ -50,7 +50,7 @@ You can enable automatic code reviews for a repository and customize how code re
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. Click **New ruleset**.
 1. Click **New branch ruleset**.

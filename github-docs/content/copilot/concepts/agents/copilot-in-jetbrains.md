@@ -24,7 +24,7 @@ There are three ways to use GitHub Copilot in JetBrains IDEs: the GitHub Copilot
 
 The GitHub Copilot plugin for JetBrains IDEs is the most comprehensive way to use Copilot and is the recommended choice. 
 
-The plugin is transitioning from its local agent harness to Copilot agent as the default agent harness, which brings faster feature parity and higher-quality results. For installation instructions, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
+The plugin is transitioning from its local agent harness to Copilot agent as the default agent harness, which brings faster feature parity and higher-quality results. For installation instructions, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension).
 
 The GitHub Copilot plugin provides the following capabilities.
 
@@ -69,6 +69,6 @@ GitHub Copilot CLI brings Copilot's capabilities directly to the terminal. It is
 
 ## Further reading
 
-* [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide)
-* [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension)
-* [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model)
+* [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide)
+* [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension)
+* [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model)

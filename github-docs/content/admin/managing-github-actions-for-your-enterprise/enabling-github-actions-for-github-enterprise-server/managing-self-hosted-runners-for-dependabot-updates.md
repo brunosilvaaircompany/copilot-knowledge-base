@@ -37,11 +37,8 @@ If you specify more than 14 concurrent runners on a VM, you must also update the
 
 
 
-
 >[!NOTE]
 > Private networking is supported with either an Azure Virtual Network (VNET) or the Actions Runner Controller (ARC) for Dependabot on GitHub Actions. See [Setting Dependabot To Run On Self Hosted Runners Using Arc](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/setting-dependabot-to-run-on-self-hosted-runners-using-arc) and [Setting Dependabot To Run On GitHub Hosted Runners Using Vnet](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/configure-specific-tools/setting-dependabot-to-run-on-github-hosted-runners-using-vnet).
-
-
 
 
 ### Network requirements for Dependabot runners

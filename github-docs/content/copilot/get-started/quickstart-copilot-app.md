@@ -26,7 +26,9 @@ In this quickstart, you will:
 ## Opening the GitHub Copilot app for the first time
 
 1. Open the GitHub Copilot app.
-1. Click **Sign in to GitHub** and follow the prompts to authenticate. If you use GitHub Enterprise Server, choose **Use GitHub Enterprise** and enter your server address when prompted.
+1. Click **Sign in to GitHub** and follow the prompts to authenticate. 
+
+   If you use GitHub Enterprise Cloud with data residency, choose **Use GitHub Enterprise** and enter your `*.ghe.com` hostname when prompted. GitHub Enterprise Server is not supported by the GitHub Copilot app.
 1. If you do not have a Copilot plan, choose whether to sign up for a plan or continue with your own model provider.
     * If you choose to use your own model provider, select a provider, enter any required credentials, then click **Save and continue**.
 1. When prompted, select one or more repositories based on your recent GitHub activity. You can also add a local folder or repository, or skip this step and add projects later.

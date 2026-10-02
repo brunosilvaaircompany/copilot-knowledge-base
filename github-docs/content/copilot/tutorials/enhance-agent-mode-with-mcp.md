@@ -39,7 +39,7 @@ Follow these best practices to get the most out of combining MCP servers with ag
 
 ### Security considerations
 
-* **Use OAuth when available**: For MCP servers like GitHub MCP, prefer OAuth authentication over personal access tokens. See [Set Up The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server#remote-mcp-server-configuration-with-oauth).
+* **Use OAuth when available**: For MCP servers like GitHub MCP, prefer OAuth authentication over personal access tokens. See [Set Up The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/set-up-the-github-mcp-server#remote-mcp-server-configuration-with-oauth).
 * **Limit permissions**: Only grant MCP servers the minimum permissions necessary for your tasks.
 * **Review connections**: Regularly audit which MCP servers have access to your development environment.
 * **Monitor activity**: Keep track of what actions Copilot performs through MCP servers.
@@ -79,7 +79,7 @@ Before using agent mode with MCP, ensure you have:
 
 First, you need to configure the MCP servers that you anticipate Copilot will need. For this example scenario, we'll use:
 
-* **GitHub MCP server**: Configure the GitHub MCP server to enable Copilot to access your repository, examine your codebase, research existing issues, create branches, and manage pull requests. See [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server).
+* **GitHub MCP server**: Configure the GitHub MCP server to enable Copilot to access your repository, examine your codebase, research existing issues, create branches, and manage pull requests. See [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/use-the-github-mcp-server).
 
 * **Figma MCP server**: Configure the Figma MCP server to allow Copilot to access design files that include accessibility specifications, such as color contrast requirements, focus states, and interaction patterns. See [Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) or try out the [Dev Mode MCP server](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server).
 
@@ -213,5 +213,5 @@ In this exercise, you will learn how to:
 
 ## Further reading
 
-* **MCP fundamentals**: For more information about setting up and configuring MCP servers, see [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp).
+* **MCP fundamentals**: For more information about setting up and configuring MCP servers, see [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/extend-copilot-chat-with-mcp).
 * **Using MCP servers**: For additional ideas on integrating MCP with GitHub Copilot, see [5 ways to transform your workflow using GitHub Copilot and MCP](https://github.blog/ai-and-ml/github-copilot/5-ways-to-transform-your-workflow-using-github-copilot-and-mcp/) on the the GitHub Blog.

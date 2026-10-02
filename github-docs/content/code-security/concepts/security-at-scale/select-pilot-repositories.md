@@ -20,11 +20,7 @@ Your pilot needs repositories that generate timely feedback on how Secret Protec
 
 ### Known secret exposure
 
-
-
 Choose repositories flagged in your secret risk assessment. These repositories are ideal pilot candidates because they demonstrate immediate value by showing secrets that need remediation.
-
-
 
 Prioritize repositories with production credentials, infrastructure configurations, or integrations with critical services. These high-value targets demonstrate the security value of Secret Protection.
 
@@ -72,8 +68,6 @@ Take these steps to set your pilot up for success.
 ## Further reading
 
 * [Identify repositories for secret protection](https://support.github.com/product-guides/github-advanced-security-secret-protection/get-started/identify-repositories-for-secret-protection) in the GitHub Advanced Security product guides
-
-
 
 ## Next steps
 

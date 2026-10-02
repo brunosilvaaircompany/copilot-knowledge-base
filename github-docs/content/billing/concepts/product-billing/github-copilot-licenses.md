@@ -37,7 +37,7 @@ Usage of Copilot licenses is measured by the number of seats used.
 
 ### Personal accounts
 
-* Upgrades take effect immediately, with proration applied for the remainder of the current billing cycle.
+* Upgrades take effect immediately. You are charged the full price of the new plan, minus the amount you already paid for your current plan.
 * Downgrades take effect at the start of the next billing cycle and are generally not prorated.
 * Canceling a monthly plan keeps access until the end of the current billing cycle, with no proration.
 

@@ -57,8 +57,10 @@ Users will be able to see available models for your region in the model selector
 * GPT-5.3-Codex
 * Claude Haiku 4.5
 * Claude Sonnet 5
+* Claude Sonnet 5.5
 * Claude Opus 4.8
 * Claude Opus 5
+* Claude Opus 5.5
 
 
 ### European Union
@@ -77,11 +79,11 @@ Users will be able to see available models for your region in the model selector
 * GPT-5.6 Terra
 * GPT-6 Astra
 * Claude Haiku 4.5
-* Claude Opus 4.7
 * Claude Opus 4.8
 * Claude Opus 5
+* Claude Opus 5.5
 * Claude Sonnet 5
-* Gemini 3.5 Flash
+* Claude Sonnet 5.5
 
 ## Pricing changes
 

@@ -21,7 +21,7 @@ When configuring MCP servers for use by Copilot cloud agent and Copilot code rev
 
 The following MCP servers are configured automatically for Copilot cloud agent:
 
-* **GitHub**: The GitHub MCP server gives Copilot access to GitHub data like issues and pull requests. To learn more, see [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server).
+* **GitHub**: The GitHub MCP server gives Copilot access to GitHub data like issues and pull requests. To learn more, see [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/use-the-github-mcp-server).
   * By default, the GitHub MCP server connects to GitHub using a specially scoped token that only has read-only access to the current repository. You can customize it to use a different token with broader access. For more details, see [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers#customizing-the-built-in-github-mcp-server).
 
 * **Playwright**: The [Playwright MCP server](https://github.com/microsoft/playwright-mcp) gives Copilot access to web pages, including the ability to read, interact and take screenshots.

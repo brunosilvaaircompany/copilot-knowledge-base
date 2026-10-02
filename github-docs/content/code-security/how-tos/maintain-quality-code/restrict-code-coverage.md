@@ -3,13 +3,18 @@
 > [!NOTE]
 > This feature is in public preview and subject to change.
 
+## How the code coverage rule works
+
+The **Restrict code coverage** rule evaluates uploaded line coverage data against the configured thresholds. It does not wait for coverage uploads to complete.
+
+To prevent a pull request from being merged before all expected coverage results are available, make each status check associated with an expected coverage upload a required status check. This includes coverage uploaded from separate jobs or workflows.
+
+For more information about line coverage, see [Code Coverage](https://docs.github.com/en/code-security/reference/code-quality/code-coverage).
+
 ## Prerequisites
 
 * GitHub Code Quality is enabled on the repository.
 * Code coverage data is uploaded to GitHub for the pull request branch. See [Set Up Code Coverage](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/set-up-code-coverage).
-
-> [!NOTE]
-> Coverage thresholds are evaluated against **line coverage**. See [Code Coverage](https://docs.github.com/en/code-security/reference/code-quality/code-coverage).
 
 ## Creating a coverage threshold rule
 
@@ -19,7 +24,7 @@
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. Create a new branch ruleset or click an existing one to edit it.
 1. Under "Branch rules", select **Restrict code coverage**.

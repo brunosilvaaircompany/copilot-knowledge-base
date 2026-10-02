@@ -193,22 +193,3 @@ You can close a discussion when the discussion has been resolved, is no longer r
 
 1. At the bottom of the discussion, below the comment box, click **Close discussion**.
 1. Optionally, to change the reason for closing the discussion, select the {% octicon "triangle-down" aria-label="The down triangle octicon" %} dropdown next to "Close discussion" and click a reason.
-
-
-
-## Converting issues based on labels
-
-You can convert all issues with the same label to discussions in bulk. Future issues with this label will also automatically convert to the discussion and category you configure.
-
-1. Navigate to the main page of the repository or, for organization discussions, the source repository.
-1. Under your repository name, click **{% octicon "issue-opened" aria-hidden="true" aria-label="issue-opened" %} Issues**.
-
-   ![Screenshot of the main page of a repository. In the horizontal navigation bar, a tab, labeled "Issues," is outlined in dark orange.](/assets/images/help/repository/repo-tabs-issues-global-nav-update.png)
-
-1. Above the list of issues or pull requests, click **Labels**.
-
-   ![Screenshot of the list of issues for a repository. Above the list, a button, labeled with a label icon and "Labels", is outlined in dark orange.](/assets/images/help/issues/issues-labels-button.png)
-
-1. Next to the label you want to convert to issues, click **Convert issues**.
-1. Select the **Choose a category** drop-down menu, and click a category for your discussion.
-1. Click **I understand, convert this issue to a discussion**.

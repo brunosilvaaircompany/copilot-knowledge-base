@@ -69,8 +69,6 @@ There are two forms of secret scanning available: **Secret scanning alerts for p
   * Private and internal repositories when you have a license for GitHub Code Security
 {% endif %}
 
-
-
 > [!TIP]
 > Regardless of the enablement status of secret scanning and push protection, organizations on GitHub Team and GitHub Enterprise can run a free report to scan the code in the organization for leaked secrets. See [Secret Security With GitHub](https://docs.github.com/en/code-security/concepts/secret-security/secret-security-with-github).
 

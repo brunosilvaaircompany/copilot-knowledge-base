@@ -1,6 +1,7 @@
 # Merging stacked pull requests
 
-> [!NOTE] This feature is in public preview and subject to change.
+> [!NOTE] This feature is in public preview and is subject to change.
+
 
 Stacked pull requests merge from the bottom (closest to the trunk) up. 
 

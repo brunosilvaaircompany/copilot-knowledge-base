@@ -4,7 +4,7 @@
 
 With GitHub Enterprise Importer, you can migrate to GitHub Enterprise Cloud. For more information, see [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer).
 
-If you're migrating between GitHub products, such as from GitHub Enterprise Server to GitHub Enterprise Cloud, you can use this guide to plan and implement your migration and complete follow-up tasks. For a full list of supported migration paths, see [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer#supported-migration-paths).
+If you're migrating between GitHub products, such as from GitHub Enterprise Server to GitHub Enterprise Cloud or between two enterprises on GHE.com, you can use this guide to plan and implement your migration and complete follow-up tasks. For a full list of supported migration paths, see [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer#supported-migration-paths).
 
 ## Planning your migration
 
@@ -22,7 +22,7 @@ To plan your migration, ask yourself the following questions.
 First, if your migration source is GitHub.com, decide whether you want to migrate on an organization-by-organization basis or on a repository-by-repository basis.
 
 > [!NOTE]
-> If you're migrating from GitHub Enterprise Server, you can only migrate repositories.
+> If you're migrating from GitHub Enterprise Server or GHE.com, you can only migrate repositories.
 
 If you choose repository-by-repository migrations, only repository-level data is migrated. If you pick the organization-by-organization migration strategy, selected organization-level data is also migrated, including teams and their access to repositories.
 
@@ -144,7 +144,7 @@ For repository migrations, we recommend creating a test organization to use as a
 1. If your destination uses IP allow lists, configure the list to allow access by GitHub Enterprise Importer.
  For more information, see [Managing Access For A Migration Between GitHub Products](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/managing-access-for-a-migration-between-github-products#configuring-ip-allow-lists-for-migrations).
 1. If you're running a repository migration and you want to migrate settings for GitHub Advanced Security products, enable GitHub Advanced Security products for the destination organization. For more information, see [Managing Security And Analysis Settings For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization).
-1. Run your production migrations. For more information, see [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer) or [Migrating Organizations From Githubcom To GitHub Enterprise Cloud](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/migrating-organizations-from-githubcom-to-github-enterprise-cloud).
+1. Run your production migrations. To migrate repositories between two enterprises on GHE.com, see [Migrating Repositories Between Two Data Resident Enterprises](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/migrating-repositories-between-two-data-resident-enterprises). For other migration paths, see [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer) or [Migrating Organizations From Githubcom To GitHub Enterprise Cloud](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/migrating-organizations-from-githubcom-to-github-enterprise-cloud).
 1. Optionally, delete the test organization.
 
 

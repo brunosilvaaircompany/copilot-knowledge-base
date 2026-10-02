@@ -128,11 +128,4 @@ If the number of AJAX requests to your GitHub Enterprise Server instance causes 
 
 With primary rate limits enabled, the default limit is 100 requests per minute per IP address. Use the [ghe-config](/admin/administering-your-instance/administering-your-instance-from-the-command-line/command-line-utilities#ghe-config) utility in the administrative shell to set `app.github.web-sockets-rate-limit` to the number of requests allowed per minute per IP address, or to disable this rate limit. Setting the limit to any non-positive-integer value (for example, `0`, `-1`, `disabled`) disables rate limiting on the WebSockets controller.
 
-
-
-The `app.github.web-sockets-rate-limit` configuration setting was introduced in **3.17.1**.
-
-
-
-
 After you change these settings, run [ghe-config-apply](/admin/administering-your-instance/administering-your-instance-from-the-command-line/command-line-utilities#ghe-config-apply) to apply them.

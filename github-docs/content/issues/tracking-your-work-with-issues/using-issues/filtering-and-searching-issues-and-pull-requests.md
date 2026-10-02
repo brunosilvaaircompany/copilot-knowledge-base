@@ -28,13 +28,11 @@ You can filter issues and pull requests to find:
 
    ![Screenshot of the list of issues for a repository. Above the list, a dropdown menu, labeled "Filters", is outlined in dark orange.](/assets/images/help/issues/issues-filter-dropdown.png)
 
-
-
 {% webui %}
 
 ## Building advanced filters for issues
 
-You can build advanced filters using boolean and nested queries on your repository's issues page{% ifversion issues-dashboard %} and the issues dashboard. As you type your filter, GitHub will show available qualifiers, suggest values, and warn when there is a problem with your filter.
+You can build advanced filters using boolean and nested queries on your repository's issues page and the issues dashboard. As you type your filter, GitHub will show available qualifiers, suggest values, and warn when there is a problem with your filter.
 
 ### Using boolean operators
 
@@ -52,7 +50,7 @@ To return results where either statement is true, use `OR`. In the example below
 assignee:octocat OR assignee:hubot
 ```
 
-If you choose not to use `AND` and `OR` operators, GitHub will treat a space between statements as an `AND` operator unless you are using an `org`, `repo`, or `user` field to filter by ownership, in which case any spaces will be treated as an `OR` operator.
+If you choose not to use `AND` and `OR` operators, GitHub will treat a space between statements as an `AND` operator.
 
 ### Using parentheses for more complicated filters
 
@@ -62,11 +60,9 @@ You can also use parentheses to nest filters and group qualifiers. In the exampl
 (type:"Bug" AND assignee:octocat) OR (type:"Feature" AND assignee:hubot)
 ```
 
-You can nest filters using parentheses up to five levels deep. It's not currently possible to include the `repo`, `org`, or `user` qualifiers within parentheses.
+You can nest filters using parentheses up to five levels deep.
 
 {% endwebui %}
-
-{% endif %}
 
 ## Filtering issues and pull requests by assignees
 
@@ -105,8 +101,6 @@ Once you've [applied labels to an issue or pull request](/issues/using-labels-an
 > [!TIP]
 > To clear your filter selection, click **Clear current search query, filters, and sorts**.
 
-
-
 ## Filtering by issue type
 
 If your organization uses issue types, you can filter issues for a particular type. You can also type the `type:` qualifier directly into your filter.
@@ -122,8 +116,6 @@ If your organization uses issue types, you can filter issues for a particular ty
    ![Screenshot of a list of issues. In the list header, the "Types" filter is outlined in orange and expanded.](/assets/images/help/issues/issue-type-dropdown.png)
 
 1. In the list of type, click an issue type.
-
-
 
 
 

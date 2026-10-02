@@ -28,7 +28,7 @@ If your corporate network restricts users' traffic, add the required URLs to the
 
 If you route traffic via a proxy server, you may need to ask users to configure proxy settings in their environment. You may also need to install custom certificates on your users' machines. For more information, see [Network Settings](https://docs.github.com/en/copilot/concepts/network-settings).
 
-If your enterprise is on GHE.com, users will also need to configure their environment to authenticate from their development environment. See [Authenticate To Ghecom](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/authenticate-to-ghecom).
+If your enterprise is on GHE.com, users will also need to configure their environment to authenticate from their development environment. See [Authenticate To Ghecom](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/authenticate-to-ghecom).
 
 ## Assign licenses
 

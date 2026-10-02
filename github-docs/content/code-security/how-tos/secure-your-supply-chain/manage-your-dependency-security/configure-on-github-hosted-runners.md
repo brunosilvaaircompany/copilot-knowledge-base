@@ -20,7 +20,11 @@ If you restrict access to your organization's or repository's private resources,
 
 1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
-1. Under "Dependabot", to the right of "Dependabot on Actions runners", click **Enable** to enable the feature or **Disable** to disable it.
+
+1. Under "Dependency scanning", in the "Dependabot version updates" section, next to "Runner type", click {% octicon "pencil" aria-label="Edit runner type" %}.
+1. From the "Runner type" dropdown menu, select **Standard GitHub runner**.
+1. Click **Save runner selection**.
+
 
     > [!NOTE]
 > Dependabot on GitHub Actions relies on the `ubuntu-latest` label to select the appropriate runner. To ensure Dependabot runs on GitHub-hosted runners, you should not use the label `ubuntu-latest` for self-hosted runners.

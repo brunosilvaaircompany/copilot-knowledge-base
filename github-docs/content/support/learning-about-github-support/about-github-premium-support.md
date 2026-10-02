@@ -33,7 +33,7 @@ There are two GitHub Premium Support plans: Premium and Premium Plus plan / Miss
 |---|---|------|
 | Hours of operation | 24 x 7 | 24 x 7 |
 | Initial response time | <ul><li>30 minutes for Urgent (including initial troubleshooting)</li><li>4 hours for High</li><li>48 hours for Normal</li><li>48 hours for Low</li></ul> | <ul><li>30 minutes for Urgent (including initial troubleshooting)</li><li>4 hours for High</li><li>24 hours for Normal</li><li>48 hours for Low</li></ul> |
-| Support channels | <ul><li>Online ticket submission</li><li>Phone support in English via callback request (when required for ticket resolution)</li><li>Screen share request for critical issues</li></ul> | <ul><li>Online ticket submission</li><li>Phone support in English via callback request (when required for ticket resolution)</li><li>Screen share request for critical issues</li></ul> |
+| Support channels | <ul><li>Online ticket submission</li><li>Phone support in English via callback request (when required for ticket resolution)</li></ul> | <ul><li>Online ticket submission</li><li>Phone support in English via callback request (when required for ticket resolution)</li></ul> |
 | Training | Access to premium content  | <ul><li>Access to premium content</li><li>1 virtual training class per year</li></ul> |
 | Members with support entitlements | 20 | 40 |
 | Resources | Priority ticket handling | <ul><li>Priority ticket handling</li><li>Named Customer Reliability Engineer</li></ul>   |

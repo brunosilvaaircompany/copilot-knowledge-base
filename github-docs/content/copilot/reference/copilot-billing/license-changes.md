@@ -17,7 +17,7 @@ This article focuses on how those rules apply specifically to Copilot, including
 
 What you need to know about the following actions:
 
-* **Upgrading:** If you upgrade your plan (for example, from Copilot Pro to Copilot Pro+), the change is **immediate**. You are charged a prorated amount for the new plan.
+* **Upgrading:** If you upgrade your plan (for example, from Copilot Pro to Copilot Pro+), the change is **immediate**. You are charged the full price of the new plan, minus the amount you already paid for your current plan.
 * **Downgrading/canceling:** Access remains until the end of the current billing cycle. **No refund for unused time**.
 
 ### Included monthly allowance reset
@@ -78,7 +78,8 @@ Additionally:
 
 ## In summary
 
-* **Proration:** Applies when adding seats/licenses or upgrading plans. You pay only for the portion of the billing cycle remaining. Included AI credits may also be prorated.
+* **Proration:** Applies when adding seats/licenses. You pay only for the portion of the billing cycle remaining. Included AI credits may also be prorated.
+* **Upgrading a personal plan:** You are charged the full price of the new plan, minus the amount you already paid for your current plan.
 * **Access:** Assignments and upgrades are effective immediately for affected users. Downgrades take effect at the end of the billing cycle.
 * **Removing or canceling:** No refunds are issued for unused time; access continues until the end of the cycle paid for, unless a seat/license is revoked.
 
@@ -87,5 +88,5 @@ Additionally:
 | Add seat/license                 | Copilot Business, Copilot Enterprise| Immediately             | Yes                  | Immediately              | N/A                     |
 | Remove seat/license              | Copilot Business, Copilot Enterprise| End of cycle             | N/A                  | End of cycle (immediately if revoked) | No                      |
 | Cancel subscription              | All plans           | End of cycle            | N/A                  | End of cycle            | No                      |
-| Upgrade plan    | All plans           | Immediate                | Yes                  | Immediately              | N/A (proration instead) |
+| Upgrade plan    | Copilot Pro, Copilot Pro+, and Copilot Max           | Immediate                | No                  | Immediately              | N/A |
 | Downgrade plan  | All plans           | End of cycle                | No                  | End of cycle              | No |

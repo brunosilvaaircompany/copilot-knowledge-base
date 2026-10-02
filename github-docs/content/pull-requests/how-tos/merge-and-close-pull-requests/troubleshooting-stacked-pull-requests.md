@@ -1,6 +1,7 @@
 # Troubleshooting stacked pull requests
 
-> [!NOTE] This feature is in public preview and subject to change.
+> [!NOTE] This feature is in public preview and is subject to change.
+
 
 This article covers common issues you may encounter when working with stacked pull requests and how to resolve them. 
 

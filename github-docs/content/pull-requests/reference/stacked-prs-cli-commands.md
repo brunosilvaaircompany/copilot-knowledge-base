@@ -1,6 +1,7 @@
 # Stacked pull requests CLI commands
 
-> [!NOTE] This feature is in public preview and subject to change.
+> [!NOTE] This feature is in public preview and is subject to change.
+
 
 The `gh stack` extension for GitHub CLI creates and manages stacks of pull requests from your local repository. For an introduction to stacks, see [Stacked Pull Requests](https://docs.github.com/en/pull-requests/reference/stacked-pull-requests).
 

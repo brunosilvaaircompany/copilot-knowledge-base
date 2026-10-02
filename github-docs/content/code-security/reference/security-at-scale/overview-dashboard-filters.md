@@ -181,9 +181,7 @@ For more information about production context, see [Prioritize Alerts In Product
 |`is`|Display Dependabot alerts that are open (`open`) or closed (`closed`).|
 |`package`|Display Dependabot alerts detected in the specified package, for example: `package:semver`.|
 |`props`|Display Dependabot alerts for repositories with a specific custom property set. For example, `props.data_sensitivity:high` displays results for repositories with the `data_sensitivity` property set to the value `high`.|
-||
 |`relationship`|Display Dependabot alerts detected in direct (`relationship:direct`) or indirect dependencies (`relationship:transitive`).|
-||
 |`repo`|Display Dependabot alerts detected in a specified repository, for example: `repo:octo-repository`.|
 |`resolution`|Display Dependabot alerts closed as "auto-dismissed" (`auto-dismissed`), "a fix has already been started" (`fix-started`), "fixed" (`fixed`), "this alert is inaccurate or incorrect" (`inaccurate`), "no bandwidth to fix this" (`no-bandwidth`), "vulnerable code is not actually used" (`not-used`), or "risk is tolerable to this project" (`tolerable-risk`).|
 |`scope`|Display Dependabot alerts from the development dependency (`development`) or from the runtime dependency (`runtime`).|

@@ -44,10 +44,7 @@ Your repository is eligible for default setup for code scanning if:
    > [!NOTE]
    > If you are switching to default setup from advanced setup, you will see a warning informing you that default setup will override existing code scanning configurations. This warning means default setup will disable the existing workflow file and block any CodeQL analysis API uploads.
 
-
-
 1. If projects in your repository depend on dependencies in private package registries, you can grant code scanning access to them. This can improve the outcomes and quality of analyses. See [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
-
 
 
 

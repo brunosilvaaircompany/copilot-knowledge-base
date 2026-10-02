@@ -52,4 +52,4 @@ This Mermaid code would generate the following diagram:
 ## Further reading
 
 * [Mermaid documentation](https://mermaid-js.github.io/mermaid/#/)
-* [GitHub Copilot Chat documentation](/copilot/how-tos/chat-with-copilot)
+* [Chat With Copilot](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot)

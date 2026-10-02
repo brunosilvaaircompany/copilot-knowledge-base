@@ -114,6 +114,6 @@ References to matching code are currently available in JetBrains IDEs, Visual St
 
 ## Further reading
 
-* [Find Matching Code](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code)
+* [Find Matching Code](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code)
 * [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies)
 * [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies)

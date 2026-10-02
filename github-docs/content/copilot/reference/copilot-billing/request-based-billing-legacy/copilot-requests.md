@@ -22,7 +22,7 @@ The following Copilot features can use premium requests.
 
 | Feature | Premium request consumption | SKU Attribution |
 | ------- | ----------- | ----------- |
-| [Copilot Chat](/copilot/how-tos/chat-with-copilot) | Copilot Chat uses **one premium request** per user prompt, multiplied by the model's rate. This includes ask, edit, agent, and plan modes in Copilot Chat in an IDE. | Copilot premium requests |
+| [Copilot Chat](/copilot/how-tos/copilot-in-your-ide/chat-with-copilot) | Copilot Chat uses **one premium request** per user prompt, multiplied by the model's rate. This includes ask, edit, agent, and plan modes in Copilot Chat in an IDE. | Copilot premium requests |
 | [Copilot CLI](/copilot/concepts/agents/copilot-cli/about-copilot-cli) | Each prompt to Copilot CLI uses **one premium request** with the default model. For other models, this is multiplied by the model's rate. | Copilot premium requests |
 | [Copilot code review](/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review) | Each time Copilot reviews a pull request (when assigned as a reviewer) or reviews code in your IDE, **13 premium requests** are consumed. | Copilot premium requests |
 | [Copilot cloud agent](/copilot/concepts/agents/cloud-agent/about-cloud-agent) | Copilot cloud agent uses **one premium request** per session, multiplied by the model's rate. A session begins when you prompt Copilot to undertake a task. In addition, each real-time steering comment made during an active session uses **one premium request** per session, multiplied by the model's rate. | Copilot cloud agent premium requests |

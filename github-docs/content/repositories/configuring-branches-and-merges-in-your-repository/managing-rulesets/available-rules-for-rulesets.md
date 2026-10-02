@@ -125,9 +125,7 @@ For complex pull requests that require many reviews, requiring an approval from 
 
 Optionally, you can require all comments on the pull request to be resolved before it can be merged to a branch. This ensures that all comments are addressed or acknowledged before merge.
 
-
 Optionally, you can require a merge type of merge, squash, or rebase. This means the targeted branches may only be merged based on the allowed type. Additionally if the repository has disabled a merge method and the ruleset required a different method, the merge will be blocked. See [About Merge Methods On GitHub](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github).
-
 
 
 
@@ -258,6 +256,8 @@ For more information, see [Code Quality](https://docs.github.com/en/code-securit
 > This feature is in public preview and subject to change.
 
 If your repository has GitHub Code Quality enabled and code coverage data is being uploaded, you can use rulesets to prevent pull requests from being merged based on code coverage thresholds. For more information about uploading coverage data, see [Set Up Code Coverage](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/set-up-code-coverage).
+
+The rule evaluates only coverage data that has already been uploaded and does not wait for coverage uploads to complete. To ensure that all expected coverage results are evaluated before a pull request can be merged, make each status check associated with an expected coverage upload a required status check.
 
 This rule blocks a pull request from being merged when either of two code coverage thresholds is not met:
 

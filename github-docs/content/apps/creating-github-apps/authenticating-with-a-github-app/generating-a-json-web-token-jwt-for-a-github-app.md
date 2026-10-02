@@ -54,7 +54,6 @@ payload = {
   iat: Time.now.to_i - 60,
   # JWT expiration time (10 minute maximum)
   exp: Time.now.to_i + (10 * 60),
-  
 # GitHub App's client ID
   iss: "YOUR_CLIENT_ID"
 }
@@ -82,13 +81,11 @@ if len(sys.argv) > 1:
 else:
     pem = input("Enter path of private PEM file: ")
 
-
 # Get the Client ID
 if len(sys.argv) > 2:
     client_id = sys.argv[2]
 else:
     client_id = input("Enter your Client ID: ")
-
 
 # Open PEM
 with open(pem, 'rb') as pem_file:
@@ -99,7 +96,6 @@ payload = {
     'iat': int(time.time()),
     # JWT expiration time (10 minutes maximum)
     'exp': int(time.time()) + 600,
-    
     # GitHub App's client ID
     'iss': client_id
 
@@ -121,9 +117,7 @@ This script will prompt you for the file path where your private key is stored a
 ```bash copy
 #!/usr/bin/env bash
 
-
 client_id=$1 # Client ID as first argument
-
 pem=$( cat $2 ) # file path of the private key as second argument
 
 now=$(date +%s)
@@ -166,9 +160,7 @@ In the following example, replace `YOUR_PATH_TO_PEM` with the file path where yo
 ```powershell copy
 #!/usr/bin/env pwsh
 
-
 $client_id = YOUR_CLIENT_ID
-
 $private_key_path = "YOUR_PATH_TO_PEM"
 
 $header = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes((ConvertTo-Json -InputObject @{

@@ -182,7 +182,7 @@ Users should exercise caution when designing and/or deploying agentic AI applica
 
 For additional guidance on the responsible use of Copilot inline suggestions, we recommend reviewing the following documentation:
 
-* [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions)
+* [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/get-ide-code-suggestions)
 * [GitHub Terms For Additional Products And Features](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot)
 * [Copilot Trust Center](https://copilot.github.trust.page/)
 

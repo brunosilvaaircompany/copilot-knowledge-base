@@ -224,8 +224,6 @@ You can also use a <code>&ast;</code> as a wildcard.
 
 
 
-
-
 ## Filtering by issue type
 
 If your organization uses issue types, you can filter for particular types.
@@ -233,10 +231,6 @@ If your organization uses issue types, you can filter for particular types.
 | Qualifier  | Example
 | ---------- | -------------
 | <code>type:&quot;<em>ISSUE TYPE</em>&quot;    | **type:&quot;bug&quot;** will show issues with the "bug" type.
-
-
-
-
 
 ## Filtering by parent issue
 

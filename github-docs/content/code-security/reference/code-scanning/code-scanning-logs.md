@@ -28,8 +28,6 @@ Extractor diagnostics only cover files that were seen during the analysis, metri
 
 You can see more detailed information about CodeQL extractor errors and warnings that occurred during database creation by enabling debug logging. See [Logs Not Detailed Enough](https://docs.github.com/en/code-security/reference/code-scanning/troubleshoot-analysis-errors/logs-not-detailed-enough#re-running-jobs-with-debug-logging-enabled).
 
-
-
 ### Diagnostic information for private package registries
 
 Code scanning default setup workflows include a `Setup proxy for registries` step. When you are looking at a workflow run for default setup, you can expand this step to view the corresponding log. This contains information about which private package registry configurations were available to the analysis. Additionally, the log contains some diagnostic information which may help with troubleshooting if the private package registries are not successfully used by code scanning default setup. Look for the following messages:
@@ -48,8 +46,6 @@ Code scanning default setup workflows include a `Setup proxy for registries` ste
 If the output from the `Setup proxy for registries` step is as expected, but code scanning default setup is unable to successfully access dependencies in the private registries, you can obtain additional troubleshooting information. See [Logs Not Detailed Enough](https://docs.github.com/en/code-security/reference/code-scanning/troubleshoot-analysis-errors/logs-not-detailed-enough#creating-codeql-debugging-artifacts-for-codeql-default-setup).
 
 For more information about giving code scanning default setup access to private registries, see [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
-
-
 
 ## Logs for the CodeQL CLI
 

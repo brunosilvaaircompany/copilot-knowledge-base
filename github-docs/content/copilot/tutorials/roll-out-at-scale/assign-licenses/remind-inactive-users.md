@@ -22,7 +22,7 @@ In the next section, we'll use this message in an automation that creates an iss
 
 > We noticed you haven't used your assigned license for GitHub Copilot in 30 days. Here are some resources that might help you get started:
 >
-> * If you haven't yet set up Copilot in your environment, see [Set Up For Self](https://docs.github.com/en/copilot/how-tos/set-up/set-up-for-self) or [Troubleshoot Common Issues](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues).
+> * If you haven't yet set up Copilot in your environment, see [Where To Use GitHub Copilot](https://docs.github.com/en/copilot/get-started/where-to-use-github-copilot) or [Troubleshoot Common Issues](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues).
 > * For best practices and advice on getting started, see [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices) or [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering).
 > * For examples related to specific tasks, see [Copilot Cookbook](https://docs.github.com/en/copilot/tutorials/copilot-cookbook).
 >
@@ -35,7 +35,7 @@ In the next section, we'll use this message in an automation that creates an iss
 ``` markdown copy
 We noticed you haven't used your assigned license for GitHub Copilot in 30 days. Here are some resources that might help you get started:
 
-* If you haven't yet set up Copilot in your environment, see [Setting up GitHub Copilot for yourself](https://docs.github.com/en/copilot/setting-up-github-copilot/setting-up-github-copilot-for-yourself) or [Troubleshooting common issues with GitHub Copilot](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-common-issues-with-github-copilot).
+* If you haven't yet set up Copilot in your environment, see [Where to use GitHub Copilot](https://docs.github.com/en/copilot/get-started/where-to-use-github-copilot) or [Troubleshooting common issues with GitHub Copilot](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-common-issues-with-github-copilot).
 * For best practices and advice on getting started, see [Best practices for using GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot) or [Prompt engineering for GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot).
 * For examples related to specific tasks, see [Copilot Chat Cookbook](https://docs.github.com/en/copilot/example-prompts-for-github-copilot-chat).
 

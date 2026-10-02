@@ -2,11 +2,23 @@
 
 ## About default setup
 
-Default setup for code scanning is the quickest, easiest, most low-maintenance way to enable code scanning for your repository. Based on the code in your repository, default setup will automatically create a custom code scanning configuration. You can also customize this configuration, including at scale across your organization, without creating or maintaining a workflow file. See [Customization of default setup](#customization-of-default-setup). After enabling default setup, the code written in CodeQL-supported languages in your repository will be scanned using CodeQL:
+Default setup for code scanning is the quickest, easiest, most low-maintenance way to enable code scanning for your repository. Based on the code in your repository, default setup will automatically create a custom code scanning configuration. You can also customize this configuration, including at scale across your organization, without creating or maintaining a workflow file. See [Customization of default setup](#customization-of-default-setup).
 
+With default setup, the code written in CodeQL-supported languages in your repository will be scanned using CodeQL:
+
+* When you enable it.
 * On each push to the repository's default branch, or any protected branch. For more information on protected branches, see [About Protected Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
 * When creating or committing to a pull request based against the repository's default branch, or any protected branch, excluding pull requests from forks.
-* On a weekly schedule.
+* On a weekly schedule, if a push or pull request has triggered a scan in the last 180 days.
+
+* Every 30 days for inactive repositories, when enabled by an organization owner. See [Configure Global Settings](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/configure-global-settings#continuing-scans-on-inactive-repositories).
+
+
+
+
+Weekly scheduled scans start only after a push or pull request triggers a scan with default setup enabled. The initial scan and scans triggered by configuration or language changes do not start or extend the weekly schedule. Pushes and pull requests from before default setup was enabled do not count.
+
+
 
 ### Supported languages
 

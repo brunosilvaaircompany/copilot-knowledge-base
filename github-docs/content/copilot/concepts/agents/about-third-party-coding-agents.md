@@ -53,8 +53,12 @@ The following models are available for each agent:
 ### Anthropic Claude
 
 * Auto
-* Claude Opus 4.7
 * Claude Sonnet 4.6
+* Claude Sonnet 5
+* Claude Opus 4.8
+* Claude Opus 4.8 (fast mode) (preview)
+* Claude Opus 5
+* Claude Fable 5.1
 
 
 ## Security validation

@@ -32,7 +32,21 @@ Custom property names and values may only contain certain characters:
 * Values: All printable ASCII characters except `"`
 
 
-## Adding custom properties
+
+
+## Syncing custom properties with an external system
+
+> [!NOTE] External custom properties are in public preview and subject to change.
+
+
+You can automatically write metadata from an external system, such as a software catalog or internal developer portal, to repository custom properties on GitHub. This makes the external system the source of truth for these properties, and helps you keep business context such as ownership, service tier, or compliance status up to date in your repositories. External properties can be used in the same places as custom properties that are managed on GitHub.
+
+
+For setup instructions, see [Sync External Custom Properties](https://docs.github.com/en/organizations/managing-organization-settings/sync-external-custom-properties).
+
+
+
+## Adding custom properties on GitHub
 
 You can add custom properties to your organization and set values for those properties for repositories in your organization.
 

@@ -103,6 +103,10 @@ The following sections provide examples of tasks you can complete with GitHub Co
 
   `You said: "The application is now running on http://localhost:3002 and is fully functional!" but when I browse to that URL I get "This site can't be reached"`
 
+### Computer use
+
+In local sessions on macOS and Windows, you can enable computer use to let Copilot interact with desktop applications. This capability is useful for workflows in legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. For more information, see [Computer Use](https://docs.github.com/en/copilot/concepts/agents/computer-use).
+
 ### Tasks involving GitHub.com
 
 * Fetch and display details about your work from GitHub.com.

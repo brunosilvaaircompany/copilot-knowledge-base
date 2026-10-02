@@ -99,7 +99,7 @@ try {
 
 By adopting the in-the-moment fix approach, you help to ensure that substandard code does not get added to your codebase, and you avoid the creation of a backlog issue that may never be addressed.
 
-For more details on using Copilot in your IDE, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+For more details on using Copilot in your IDE, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 ## Using Copilot cloud agent for large-scale refactoring
 

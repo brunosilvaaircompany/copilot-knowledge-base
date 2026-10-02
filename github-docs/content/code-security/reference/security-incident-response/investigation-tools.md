@@ -47,6 +47,7 @@ Read access to the repository.
 
 * [Audit Log Events For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/audit-log-events-for-your-enterprise)
 * [Audit Log Events For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization)
+* [Reviewing Your Security Log](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-security-log)
 * [Security Log Events](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/security-log-events)
 * [Identifying Audit Log Events Performed By An Access Token](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/identifying-audit-log-events-performed-by-an-access-token)
 
@@ -137,6 +138,7 @@ Read access to the repository.
 
 * [Security Overview](https://docs.github.com/en/code-security/concepts/security-at-scale/security-overview)
 * [Viewing Security Insights](https://docs.github.com/en/code-security/how-tos/view-and-interpret-data/analyze-organization-data/viewing-security-insights)
+* [Find Insecure Repositories](https://docs.github.com/en/code-security/how-tos/view-and-interpret-data/analyze-organization-data/find-insecure-repositories)
 
 ### Notes and limitations
 

@@ -1457,8 +1457,6 @@ Flag | Description
 
 ## High availability
 
-
-
 ### ghe-repl-decommission
 
 This command decommissions the database entries for the node with the specified UUID. You run this command on the new primary after performing a failover to a replica node, to remove the decommissioned node's database entries. For more information, see [Initiating A Failover To Your Replica Appliance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-high-availability/initiating-a-failover-to-your-replica-appliance).
@@ -1466,8 +1464,6 @@ This command decommissions the database entries for the node with the specified 
 ```shell
 ghe-repl-decommission <UUID>
 ```
-
-
 
 ### ghe-repl-promote
 
@@ -2057,8 +2053,6 @@ We recommend writing to a file in `/data/user/tmp`.
 
 ## Database and storage
 
-
-
 ### ghe-elasticsearch-watermarks
 
 This utility configures Elasticsearch disk watermark settings via API. This is an emergency break-glass solution that allows modification of watermark settings without requiring a configuration run.
@@ -2084,8 +2078,6 @@ To show current watermark settings:
 ```shell
 ghe-elasticsearch-watermarks status
 ```
-
-
 
 
 
@@ -2169,14 +2161,10 @@ ghe-dep-graph-enable
 
 ## Monitoring
 
-
-
 ### ghe-otelcol-validate
 
-This utility validates the OpenTelemetry Collector configuration file on {% ifversion ghes %}your GitHub Enterprise Server instance.
+This utility validates the OpenTelemetry Collector configuration file on your GitHub Enterprise Server instance.
 
 ```shell
 ghe-otelcol-validate
 ```
-
-{% endif %}

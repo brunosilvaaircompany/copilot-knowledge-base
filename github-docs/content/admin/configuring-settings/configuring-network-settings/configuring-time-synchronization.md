@@ -4,13 +4,11 @@
 
 We recommend configuring your own preferred NTP servers. The default NTP server values on GitHub Enterprise Server are the following:
 
-
 AWS
 * Primary Server: 169.254.169.123 prefer iburst minpoll 4 maxpoll 4
 * NTP Pool: time.aws.com iburst
 
 Other (non-AWS)
-
 * Primary Server: 0.github.pool.ntp.org
 * Secondary Server: 1.github.pool.ntp.org
 

@@ -47,6 +47,9 @@ You can create defaults in your organization or personal account for the followi
 
 | Community health file | Description |
 | --- | --- |
+|  |
+| _ACCESSIBILITY.md_ | An ACCESSIBILITY file describes a project's accessibility goals, known barriers, and reporting process. For more information, see [Adding An Accessibility Page To Your Repository](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository). |
+|  |
 | _CODE_OF_CONDUCT.md_ | A CODE_OF_CONDUCT file defines standards for how to engage in a community. For more information, see [Adding A Code Of Conduct To Your Project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project). |
 | _CONTRIBUTING.md_ | A CONTRIBUTING file communicates how people should contribute to your project. For more information, see [Setting Guidelines For Repository Contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors). |
 | Discussion category forms | Discussion category forms customize the templates that are available for community members to use when they open new discussions in your repository. For more information, see [Creating Discussion Category Forms](https://docs.github.com/en/discussions/managing-discussions-for-your-community/creating-discussion-category-forms). |
@@ -55,6 +58,9 @@ You can create defaults in your organization or personal account for the followi
 |   |
 | Issue and pull request templates and _config.yml_ | Issue and pull request templates customize and standardize the information you'd like contributors to include when they open issues and pull requests in your repository. For more information, see [About Issue And Pull Request Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates).<br /><br />If an issue template sets a label, that label must be created in your `.github` repository and any repositories where the template will be used. |
 | _SECURITY.md_ | A SECURITY file gives instructions on how to report a security vulnerability in your project and description that hyperlinks the file. For more information, see [Add Security Policy](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy). |
+|   |
+| _VULNERABILITY_REPORT.yml_ or _VULNERABILITY_REPORT.yaml_ | A vulnerability report form customizes the information that reporters must provide when they privately report a vulnerability. For more information, see [Configure For A Repository](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository#customizing-the-vulnerability-reporting-form). |
+|   |
 | _SUPPORT.md_ | A SUPPORT file lets people know about ways to get help with your project. For more information, see [Adding Support Resources To Your Project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-support-resources-to-your-project). |
 
 You cannot create a default license file. License files must be added to individual repositories so the file will be included when a project is cloned, packaged, or downloaded.
@@ -74,4 +80,10 @@ You cannot create a default license file. License files must be added to individ
 
 1. Click **Create repository**.
 
-1. In the repository, create one of the supported community health files. Discussion category forms must be in a folder called `.github/DISCUSSION_TEMPLATE`. Issue templates and their configuration file must be in a folder called `.github/ISSUE_TEMPLATE`. A `FUNDING.yml` file must be in the `.github` folder. All other supported files may be in the root of the repository, the `.github` folder, or the `docs` folder. For more information, see [Creating New Files](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files).
+1. In the repository, create one of the supported community health files. Store the file in the required location:
+   * Store discussion category forms in `.github/DISCUSSION_TEMPLATE`.
+   * Store issue templates and their configuration file in `.github/ISSUE_TEMPLATE`.
+   * Store `FUNDING.yml`, `VULNERABILITY_REPORT.yml`, and `VULNERABILITY_REPORT.yaml` in the `.github` folder.
+   * Store all other supported files in the root of the repository, the `.github` folder, or the `docs` folder.
+
+   For more information, see [Creating New Files](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files).

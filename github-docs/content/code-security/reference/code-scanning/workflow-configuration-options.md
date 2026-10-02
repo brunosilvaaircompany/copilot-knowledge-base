@@ -173,9 +173,7 @@ CodeQL uses the following language identifiers:
 |------------------|------------------- | ---------------
 | C/C++ | `c-cpp` | `c` or `cpp` |
 | C# | `csharp` |
-|  |
-GitHub Actions workflows | `actions`
-| 
+| GitHub Actions workflows | `actions` |
 | Go | `go` |
 | Java/Kotlin | `java-kotlin` | `java` or `kotlin` |
 | JavaScript/TypeScript | `javascript-typescript` | `javascript` or `typescript` |

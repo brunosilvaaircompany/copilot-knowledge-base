@@ -72,7 +72,8 @@ Also look for the following indicators, which may require broader intervention b
 * **Many repositories affected by the same rule**: Suggests a systemic pattern that may require team training or updated coding standards
 * **High vulnerability counts in a specific language**: May point to framework-level issues or missing scanning tooling for that language
 
-Remediating the vulnerabilities or leaks identified by the risk assessment is easier with  GitHub Advanced Security. Eligible enterprise administrators can start a trial for their entire enterprise straight from the results page.
+Remediating the vulnerabilities or leaks identified by the risk assessment is easier with GitHub Advanced Security. Owners of eligible organizations on GitHub Team can start a trial from a completed code security risk assessment.
+
 
 To start remediating vulnerabilities with Copilot Autofix, enable GitHub Code Security for your organization. You have two options:
 

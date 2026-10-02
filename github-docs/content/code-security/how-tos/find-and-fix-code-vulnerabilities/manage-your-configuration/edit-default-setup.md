@@ -107,7 +107,7 @@ The recommended way to customize default setup at scale is to set an organizatio
 
    We recommend testing the configuration file on a single repository before setting the organization-wide default. See [Repository Properties](https://docs.github.com/en/code-security/concepts/code-scanning/repository-properties#testing-changes-before-applying-them).
 
-1. The configuration file will be automatically detected and merged with the configuration default setup generates the next time code scanning runs on each repository in the organization. Repositories that already have an explicit value set for the `github-codeql-config-file` property continue to use that value instead of the organization-wide default. For more information about how default and explicit repository property values interact, see [Managing Custom Properties For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#adding-custom-properties).
+1. The configuration file will be automatically detected and merged with the configuration default setup generates the next time code scanning runs on each repository in the organization. Repositories that already have an explicit value set for the `github-codeql-config-file` property continue to use that value instead of the organization-wide default. For more information about how default and explicit repository property values interact, see [Managing Custom Properties For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#adding-custom-properties-on-github).
 
 ### Applying a configuration file to a repository
 
@@ -127,7 +127,13 @@ If you only need to customize default setup for a single repository, or to test 
 
 ## Continuing scans on inactive repositories
 
-By default, code scanning default setup pauses weekly scheduled scans on repositories that have had no commits pushed or pull requests opened for 180 days.
+
+
+By default, code scanning default setup runs weekly scheduled scans only on active repositories. A repository is active if a push or pull request has triggered a default setup scan in the last 180 days. Initial scans, scans triggered by configuration or language changes, and scheduled scans do not count as activity.
+
+When you enable default setup, an initial scan runs, but weekly scheduled scans do not start until a push or pull request triggers a scan. Pushes and pull requests from before default setup was enabled do not count as activity.
+
+
  You can override this behavior in an organization, though the scan period is not configurable.
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.

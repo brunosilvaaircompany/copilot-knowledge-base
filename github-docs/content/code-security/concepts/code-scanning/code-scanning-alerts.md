@@ -38,15 +38,11 @@ Each alert highlights a problem with the code and the name of the tool that iden
 The status and details on the alert page only reflect the state of the alert on the default branch of the repository, even if the alert exists in other branches. You can see the status of the alert on non-default branches in the **Affected branches** section on the right-hand side of the alert page. If an alert doesn't exist in the default branch, the status of the alert will display as "in pull request" or "in branch" and will be colored grey. The **Development** section shows linked branches and pull requests that will fix the alert.
 
 
-
-
 ![Screenshot of a code scanning alert, includes the alert title, relevant lines of code at the left, metadata at the right.](/assets/images/help/repository/code-scanning-alert.png)
 
 You can also view affected branches, as well as fixes and associated pull requests for an alert. This helps you and your team stay informed about the progress of fixing alerts.
 
 ![Screenshot of the "Development" section of a code scanning alert, includes a title of a pull request that could fix the alert.](/assets/images/help/repository/code-scanning-alert-development-section.png)
-
-
 
 If you configure code scanning using CodeQL, you can also find data-flow problems in your code. Data-flow analysis finds potential security issues in code, such as: using data insecurely, passing dangerous arguments to functions, and leaking sensitive information.
 

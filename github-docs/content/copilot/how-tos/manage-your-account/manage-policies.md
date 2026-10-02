@@ -12,7 +12,7 @@ Your personal settings for GitHub Copilot include an option to either allow or b
 
 If you choose to block suggestions matching public code, in most GitHub Copilot products, GitHub Copilot checks code suggestions with their surrounding code of about 150 characters against public code on GitHub. If there is a match, or a near match, the suggestion is not shown to you.
 
-If you choose to allow suggestions matching public code or use a product that does not support "Block" mode, when Copilot suggests matching code you can display details of the matches and click through to the relevant repositories on GitHub. For more information, see [Find Matching Code](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code).
+If you choose to allow suggestions matching public code or use a product that does not support "Block" mode, when Copilot suggests matching code you can display details of the matches and click through to the relevant repositories on GitHub. For more information, see [Find Matching Code](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code).
 
 1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot settings**.
 

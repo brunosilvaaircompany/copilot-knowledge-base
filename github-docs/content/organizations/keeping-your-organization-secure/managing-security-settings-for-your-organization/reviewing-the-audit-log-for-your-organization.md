@@ -1,6 +1,38 @@
 # Reviewing the audit log for your organization
 
-## Accessing the audit log
+There are several ways to access and retain audit log data for your organization:
+
+* **Web interface**: View recent activity in your organization settings. See [Accessing the organization's audit log via the web interface](#accessing-the-organizations-audit-log-via-the-web-interface).
+* **JSON/CSV exports**: Download a file of audit log activity. See [Exporting the audit log](#exporting-the-audit-log).
+* **REST API endpoint**: Query audit log events programmatically. See [Using the audit log API](#using-the-audit-log-api).
+
+Each method exposes a different subset of your audit log data. For the full list of events, see [Audit Log Events For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization).
+
+If your organization belongs to an enterprise, work with an enterprise owner to enable enterprise audit log streaming, API request event streaming, and source IP address disclosure. Without all three features enabled at the enterprise level, responders will have critical visibility gaps when investigating incidents affecting your organization. The enterprise owner should also set an appropriate retention period for the streamed logs and ensure incident responders can access them.
+
+For setup instructions, see [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise), [Enabling audit log streaming of API requests](/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#enabling-audit-log-streaming-of-api-requests), and [Displaying Ip Addresses In The Audit Log For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/displaying-ip-addresses-in-the-audit-log-for-your-enterprise).
+
+## Audit log data available by access method
+
+{% rowheaders %}
+
+| Data available | Web interface | JSON/CSV exports | REST API endpoint | Streaming to an external system |
+| :- | :-: | :-: | :-: | :-: |
+| Range of web events | 180 days | 180 days | 180 days | Determined by the retention policy of your external system |
+| [Git events](/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#git) | {% octicon "x" aria-label="Not available" %} | {% octicon "check" aria-label="Available" %} (JSON only). The audit log retains Git events for seven days.
+ | {% octicon "check" aria-label="Available" %}. The audit log retains Git events for seven days.
+ | {% octicon "check" aria-label="Available" %} |
+| Single sign-on responses | {% octicon "x" aria-label="Not available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} |
+| [Created and completed workflow runs](/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#workflows) | {% octicon "x" aria-label="Not available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} |
+| [Started workflow jobs, including the secrets provided to each job](/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#workflows) | {% octicon "x" aria-label="Not available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} |
+| Online and offline self-hosted runners | {% octicon "x" aria-label="Not available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} | {% octicon "check" aria-label="Available" %} |
+
+{% endrowheaders %}
+
+
+
+
+## Accessing the organization's audit log via the web interface
 
 > [!NOTE]
 > Webhooks might be a good alternative to the audit log or API polling for certain use cases. Webhooks are a way for GitHub to notify your server when specific events occur for a repository, organization, or enterprise. Compared to the API or searching the audit log, webhooks can be more efficient if you just want to learn and possibly log when certain events occur on your enterprise, organization, or repository. See [Webhooks](https://docs.github.com/en/webhooks).
@@ -98,7 +130,7 @@ Note that you can only use a GitHub username, not an individual's real name.
 To search for specific events, use the `action` qualifier in your query. Actions listed in the audit log are grouped in different categories. For the full list of events in each category, see [Audit Log Events For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization).
 
 | Category name | Description
-|------------------|-------------------
+| ------------------ | -------------------
 |  |
 | `account` | Contains all activities related to your organization account.
 | `advisory_credit` | Contains all activities related to crediting a contributor for a security advisory in the GitHub Advisory Database. For more information, see [Repository Security Advisories](https://docs.github.com/en/code-security/concepts/vulnerability-reporting-and-management/repository-security-advisories).
@@ -150,7 +182,7 @@ To search for specific events, use the `action` qualifier in your query. Actions
 | `payment_method` | Contains all activities related to how your organization pays for GitHub.
 |  |
 | `personal_access_token` | Contains activities related to fine-grained personal access tokens in your organization. For more information, see [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
-| `profile_picture`| Contains all activities related to your organization's profile picture.
+| `profile_picture` | Contains all activities related to your organization's profile picture.
 | `project` | Contains all activities related to projects.
 | `protected_branch` | Contains all activities related to protected branches.
 | `repo` | Contains activities related to the repositories owned by your organization.
@@ -164,7 +196,7 @@ To search for specific events, use the `action` qualifier in your query. Actions
 |  |
 | `repository_secret_scanning_automatic_validity_checks` | Contains repository-level activities related to enabling and disabling automatic validity checks for secret scanning. For more information, see [Enable Secret Scanning](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/detect-secret-leaks/enable-secret-scanning).
 | `repository_secret_scanning_custom_pattern` | Contains repository-level activities related to secret scanning custom patterns. For more information, see [Define Custom Patterns](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns). |
-| `repository_secret_scanning_custom_pattern_push_protection`| Contains repository-level activities related to push protection of a custom pattern for secret scanning. For more information, see [Define Custom Patterns](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-a-repository).
+| `repository_secret_scanning_custom_pattern_push_protection` | Contains repository-level activities related to push protection of a custom pattern for secret scanning. For more information, see [Define Custom Patterns](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-a-repository).
 | `repository_secret_scanning_push_protection` | Contains repository-level activities related to secret scanning push protection. For more information, see [Push Protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection).
 | `repository_vulnerability_alert` | Contains all activities related to [Dependabot alerts](/code-security/concepts/supply-chain-security/dependabot-alerts).
 |  |
@@ -178,8 +210,8 @@ To search for specific events, use the `action` qualifier in your query. Actions
 | `secret_scanning_new_repos` | Contains organization-level configuration activities for secret scanning for new repositories created in the organization.
 |  |
 |  |
-| `restore_member` | Triggered when an organization owner reinstates a member. For more information, see [Reinstating A Former Member Of Your Organization](https://docs.github.com/en/organizations/managing-membership-in-your-organization/reinstating-a-former-member-of-your-organization).|
-| `sponsors`| Contains all events related to sponsor buttons (see [Displaying A Sponsor Button In Your Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository))
+| `restore_member` | Triggered when an organization owner reinstates a member. For more information, see [Reinstating A Former Member Of Your Organization](https://docs.github.com/en/organizations/managing-membership-in-your-organization/reinstating-a-former-member-of-your-organization). |
+| `sponsors` | Contains all events related to sponsor buttons (see [Displaying A Sponsor Button In Your Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository))
 |  |
 | `team` | Contains all activities related to teams in your organization.
 | `workflows` | Contains activities related to GitHub Actions workflows.

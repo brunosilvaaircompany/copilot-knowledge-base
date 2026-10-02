@@ -65,7 +65,7 @@ If you create an invalid URL using query parameters, or if you don’t have the 
 
 ## Creating a new repository from Copilot Chat
 
-You can create a new repository from Copilot Chat in Visual Studio Code with the Model Context Protocol (MCP). For more information, see [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp).
+You can create a new repository from Copilot Chat in Visual Studio Code with the Model Context Protocol (MCP). For more information, see [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/extend-copilot-chat-with-mcp).
 
 
 ## Further reading

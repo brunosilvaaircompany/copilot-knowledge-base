@@ -8,7 +8,7 @@ Copilot in Visual Studio Code provides two kinds of code suggestions:
 
 * **Next edit suggestions**
 
-  Based on the edits you are making, Copilot both predicts the location of the next edit you'll want to make and what that edit should be. To enable next edit suggestions, see [Configure In Ide](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide#enabling-next-edit-suggestions).
+  Based on the edits you are making, Copilot both predicts the location of the next edit you'll want to make and what that edit should be. To enable next edit suggestions, see [Configure In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide#enabling-next-edit-suggestions).
 
 * **Ghost text suggestions**
 
@@ -42,7 +42,7 @@ Copilot in Visual Studio provides two kinds of code suggestions:
 
 * **Next edit suggestions (public preview)**
 
-  Based on the edits you are making, Copilot will predict the location of the next edit you are likely to make and suggest a completion for it. Suggestions may span a single symbol, an entire line, or multiple lines, depending on the scope of the potential change. To enable next edit suggestions, see [Configure In Ide](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide#enabling-next-edit-suggestions).
+  Based on the edits you are making, Copilot will predict the location of the next edit you are likely to make and suggest a completion for it. Suggestions may span a single symbol, an entire line, or multiple lines, depending on the scope of the potential change. To enable next edit suggestions, see [Configure In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide#enabling-next-edit-suggestions).
 
 GitHub Copilot provides suggestions for numerous languages and a wide variety of frameworks, but works especially well for Python, JavaScript, TypeScript, Ruby, Go, C# and C++. GitHub Copilot can also assist in query generation for databases, generating suggestions for APIs and frameworks, and can help with infrastructure as code development.
 
@@ -74,7 +74,7 @@ GitHub Copilot in Xcode provides two kinds of code suggestions:
 * **Ghost text suggestions**
    * Copilot offers coding suggestions as you type. You can also describe something you want to do using natural language within a comment, and Copilot will suggest the code to accomplish your goal.
 * **Next edit suggestions (public preview)**
-   * Based on the edits you are making, Copilot will predict the location of the next edit you are likely to make and suggest a completion for it. Suggestions may span an entire line, or multiple lines, depending on the scope of the potential change. Next edit suggestions are enabled by default. To disable, see [Configure In Ide?Tool=Xcode](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide?tool=xcode#enabling-next-edit-suggestions-2).
+   * Based on the edits you are making, Copilot will predict the location of the next edit you are likely to make and suggest a completion for it. Suggestions may span an entire line, or multiple lines, depending on the scope of the potential change. Next edit suggestions are enabled by default. To disable, see [Configure In Ide?Tool=Xcode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide?tool=xcode#enabling-next-edit-suggestions-2).
 
 {% endxcode %}
 
@@ -87,7 +87,7 @@ GitHub Copilot in Eclipse provides two kinds of code suggestions:
 * **Ghost text suggestions**
    * Copilot offers coding suggestions as you type. You can also describe something you want to do using natural language within a comment, and Copilot will suggest the code to accomplish your goal.
 * **Next edit suggestions (public preview)**
-   * Based on the edits you are making, Copilot will predict the location of the next edit you are likely to make and suggest a completion for it. Suggestions may span a single symbol, an entire line, or multiple lines, depending on the scope of the potential change. To enable next edit suggestions, see [Configure In Ide?Tool=Eclipse](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide?tool=eclipse#enabling-next-edit-suggestions-2).
+   * Based on the edits you are making, Copilot will predict the location of the next edit you are likely to make and suggest a completion for it. Suggestions may span a single symbol, an entire line, or multiple lines, depending on the scope of the potential change. To enable next edit suggestions, see [Configure In Ide?Tool=Eclipse](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide?tool=eclipse#enabling-next-edit-suggestions-2).
 
 GitHub Copilot provides suggestions for numerous languages and a wide variety of frameworks, but works especially well for Python, JavaScript, TypeScript, Ruby, Go, C# and C++. GitHub Copilot can also assist in query generation for databases, generating suggestions for APIs and frameworks, and can help with infrastructure as code development.
 
@@ -112,17 +112,17 @@ Changing the model only affects Copilot ghost text suggestions. It does not affe
 
 > [!NOTE] The list of available models will change over time. When only one model is available for inline suggestions, the model picker will only show that model. Preview models and additional models will be added to the picker as they become available.
 
-For details of how to switch the model for Copilot inline suggestions, see [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model).
+For details of how to switch the model for Copilot inline suggestions, see [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/change-the-completion-model).
 
 ## Effects of switching the AI model
 
-Changing the model that's used for Copilot inline suggestions does not affect the model that's used by Copilot next edit suggestions or Copilot Chat. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model).
+Changing the model that's used for Copilot inline suggestions does not affect the model that's used by Copilot next edit suggestions or Copilot Chat. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model).
 
 There are no changes to the data collection and usage policy if you change the AI model.
 
 If you are on a Copilot Free plan, all completions count against your completions quota regardless of the model used. See [Plans](https://docs.github.com/en/copilot/get-started/plans#comparing-copilot-plans).
 
-The setting to enable or disable suggestions that match public code is applied irrespective of which model you choose. See [Find Matching Code](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code).
+The setting to enable or disable suggestions that match public code is applied irrespective of which model you choose. See [Find Matching Code](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code).
 
 ## Enabling the model switcher
 
@@ -146,17 +146,17 @@ You can switch the AI model that's used for Copilot inline suggestions if:
 
 > [!NOTE] The list of available models will change over time. When only one model is available for inline suggestions, the model picker will only show that model. Preview models and additional models will be added to the picker as they become available.
 
-For details of how to switch the model for Copilot inline suggestions, see [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model).
+For details of how to switch the model for Copilot inline suggestions, see [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/change-the-completion-model).
 
 ## Effects of switching the AI model
 
-Changing the model that's used for Copilot inline suggestions does not affect the model that's used by Copilot next edit suggestions or Copilot Chat. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model).
+Changing the model that's used for Copilot inline suggestions does not affect the model that's used by Copilot next edit suggestions or Copilot Chat. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model).
 
 There are no changes to the data collection and usage policy if you change the AI model.
 
 If you are on a Copilot Free plan, all completions count against your completions quota regardless of the model used. See [Plans](https://docs.github.com/en/copilot/get-started/plans#comparing-copilot-plans).
 
-The setting to enable or disable suggestions that match public code is applied irrespective of which model you choose. See [Find Matching Code](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code).
+The setting to enable or disable suggestions that match public code is applied irrespective of which model you choose. See [Find Matching Code](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code).
 
 ## Enabling the model switcher
 
@@ -180,17 +180,17 @@ You can switch the AI model that's used for Copilot inline suggestions if:
 
 > [!NOTE] The list of available models will change over time. When only one model is available for inline suggestions, the model picker will only show that model. Preview models and additional models will be added to the picker as they become available.
 
-For details of how to switch the model for Copilot inline suggestions, see [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model).
+For details of how to switch the model for Copilot inline suggestions, see [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/change-the-completion-model).
 
 ## Effects of switching the AI model
 
-Changing the model that's used for Copilot inline suggestions does not affect the model that's used by Copilot next edit suggestions or Copilot Chat. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model).
+Changing the model that's used for Copilot inline suggestions does not affect the model that's used by Copilot next edit suggestions or Copilot Chat. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model).
 
 There are no changes to the data collection and usage policy if you change the AI model.
 
 If you are on a Copilot Free plan, all completions count against your completions quota regardless of the model used. See [Plans](https://docs.github.com/en/copilot/get-started/plans#comparing-copilot-plans).
 
-The setting to enable or disable suggestions that match public code is applied irrespective of which model you choose. See [Find Matching Code](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code).
+The setting to enable or disable suggestions that match public code is applied irrespective of which model you choose. See [Find Matching Code](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code).
 
 ## Enabling the model switcher
 
@@ -242,4 +242,4 @@ The following programming languages and technologies are included in the trainin
 
 ## Next steps
 
-* [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions)
+* [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/get-ide-code-suggestions)

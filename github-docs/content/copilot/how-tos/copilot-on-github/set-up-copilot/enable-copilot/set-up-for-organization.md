@@ -15,13 +15,13 @@ Control which Copilot features are available in your organization. See [Manage P
 
 If your organization members connect through an HTTP proxy server or firewall, add the required URLs to the allowlist. See [Copilot Allowlist Reference](https://docs.github.com/en/copilot/reference/copilot-allowlist-reference).
 
-If your environment uses custom SSL certificates, install them on your members' machines. See [Configure Network Settings](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-network-settings#installing-custom-certificates).
+If your environment uses custom SSL certificates, install them on your members' machines. See [Configure Network Settings](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-network-settings#installing-custom-certificates).
 
 ## Grant access to members
 
 Enable Copilot for some or all members of your organization. Consider starting with teams most likely to benefit, to discover potential blockers and demonstrate early success. See [Grant Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/grant-access).
 
-> [!TIP] If your organization belongs to an enterprise on GHE.com, users need additional setup to authenticate from their development environment. See [Authenticate To Ghecom](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/authenticate-to-ghecom).
+> [!TIP] If your organization belongs to an enterprise on GHE.com, users need additional setup to authenticate from their development environment. See [Authenticate To Ghecom](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/authenticate-to-ghecom).
 
 ## Next steps
 

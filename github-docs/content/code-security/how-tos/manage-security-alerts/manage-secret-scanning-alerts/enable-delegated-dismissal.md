@@ -36,8 +36,6 @@ To learn more about security configurations, see [Organization Security](https:/
 > You can use GitHub Apps with fine-grained permissions to programmatically review and approve delegated dismissal requests. This enables your organization to streamline security request reviews and enforce policies, or integrate with external security tools, ensuring that all reviews meet established standards. _For GitHub Enterprise Server, the use of GitHub Apps to review requests for delegated dismissals is available from version 3.19._
 > For more information about permissions, see [Organization permissions for "Organization bypass requests for secret scanning"](/enterprise-cloud@latest/rest/authentication/permissions-required-for-github-apps?apiVersion=2022-11-28#organization-permissions-for-organization-bypass-requests-for-secret-scanning).
 
-
-
 ## Configuring delegated dismissal for an enterprise
 
 1. Create a new custom security configuration, or edit an existing one. See [Create Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/establish-complete-coverage/create-custom-configuration).
@@ -45,8 +43,6 @@ To learn more about security configurations, see [Organization Security](https:/
 1. When defining the custom security configuration, under "Secret Protection", ensure that the dropdown menu for "Prevent direct alert dismissals" is set to **Enabled**.
 1. Click **Save configuration**.
 1. Apply the security configuration to all (or selected) repositories in your enterprise. See [Apply Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/establish-complete-coverage/apply-custom-configuration).
-
-
 
 ## Next steps
 

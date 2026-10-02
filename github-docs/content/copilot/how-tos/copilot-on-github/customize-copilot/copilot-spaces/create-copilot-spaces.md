@@ -50,6 +50,6 @@ You can add files to a space directly from the code view on GitHub, so you don't
 ## Next steps
 
 * For an overview of Copilot Spaces, see [Spaces](https://docs.github.com/en/copilot/concepts/context/spaces).
-* To use Spaces in GitHub and your IDE, see [Use Copilot Spaces](https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/use-copilot-spaces).
+* To use Spaces in your IDE, see [Use Copilot Spaces](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/use-copilot-spaces).
 * To speed up development work with Spaces, see [Speed Up Development Work](https://docs.github.com/en/copilot/tutorials/speed-up-development-work).
 * To share your space with your team, see [Collaborate With Others](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/copilot-spaces/collaborate-with-others).

@@ -58,11 +58,11 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | Model | 1 million token context window | Configurable reasoning |
 | --- | --- | --- |
 | Claude Sonnet 4.6 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| Claude Opus 4.7 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Sonnet 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Claude Sonnet 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 (fast mode) (preview) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5.1 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -75,6 +75,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | GPT-6 Astra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| GPT-6.1 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Kimi K3 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 {% endrowheaders %}
@@ -94,7 +95,7 @@ The following table shows which models are available in each client.
 {% endrowheaders %}
 
 > [!NOTE]
-> In Visual Studio Code you can add more models than those that are available by default with your Copilot subscription. See [Change The Chat Model?Tool=Vscode](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model?tool=vscode#adding-more-models).
+> In Visual Studio Code you can add more models than those that are available by default with your Copilot subscription. See [Change The Chat Model?Tool=Vscode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model?tool=vscode#adding-more-models).
 
 ## Minimum IDE versions for recent models
 
@@ -104,8 +105,6 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 
 | Model                                                    | Visual Studio Code | Visual Studio | JetBrains IDEs | Xcode | Eclipse |
 |----------------------------------------------------------|----------------------------------------------|------------------------------------------|----------------|-------|---------|
-| Gemini 3.5 Flash     | `v1.115.0` | `17.14.22` or `18.1.0`         | `1.5.62` | `0.46.0` | `0.14.0` |
-| Gemini 3.6 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.7 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.8 Flash     | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
@@ -118,13 +117,14 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | GPT-6 Astra         | `1.136.1` | `17.14.19` | TBD | TBD | TBD |
 | GPT-6 Luna          | TBD | `17.14.19` | TBD | TBD | TBD |
 | GPT-6 Sol           | TBD | `17.14.19` | TBD | TBD | TBD |
+| GPT-6.1 Sol          | TBD | `17.14.19` | TBD | TBD | TBD |
 | Claude Opus 4.8      | `v1.118` | `17.14.6`                     | TBD | TBD | TBD |
 | Claude Opus 5       | `v1.128.0` | `17.14.22` | TBD | TBD | TBD |
 | Claude Opus 5.5      | TBD | `17.14.6` | TBD | TBD | TBD |
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
+| Claude Sonnet 5.5 | TBD | `17.14.6` | TBD | TBD | TBD |
 | Claude Fable 5      | `v1.124` | `17.14.6`                    | TBD | TBD | TBD |
 | Claude Fable 5.1    | TBD | TBD                    | TBD | TBD | TBD |
-| Kimi K2.7 Code     | `v1.127` | `17.14.6`            | `1.9.1-251` | TBD | TBD |
 | Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |
 | MAI-Code-1.1-Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
@@ -211,7 +211,7 @@ The default policy applies to models that you have not explicitly configured. Th
 The following models are **not** in scope. They are disabled by default, regardless of your "Default availability" policy setting.
 
 * Pre-GA models
-* Open weight models (DeepSeek, Kimi K2.7 Code, Kimi K3)
+* Open weight models (DeepSeek, Kimi K3)
 * Models that are not covered by GitHub's data retention agreement (Claude Fable 5, Claude Fable 5.1)
 * For enterprises that have restricted models to data-resident or FedRAMP-compliant models, any models that do not respect these policies
 

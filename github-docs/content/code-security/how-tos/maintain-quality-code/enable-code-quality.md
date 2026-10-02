@@ -49,3 +49,9 @@ For the available access options, and how filtering and enforcement work, see [E
 Your changes are saved automatically and begin to propagate immediately. In large organizations, it can take several minutes for the changes to apply across all repositories.
 
 If you're rolling out the feature across many teams, we recommend you pilot on a small group and tune your quality thresholds before you enable everywhere. See [Roll Out At Scale](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/roll-out-at-scale).
+
+## Scan frequency after enablement
+
+When you enable Code Quality, an initial CodeQL scan runs on the default branch. Weekly scheduled CodeQL scans start only after a push or pull request triggers a scan. Pushes and pull requests from before enablement do not count as activity.
+
+Weekly scheduled scans pause if no push or pull request has triggered a scan in the last 180 days. Initial scans, scans triggered by configuration or language changes, and scheduled scans do not count as activity. A new push- or pull-request-triggered scan resumes the weekly schedule.

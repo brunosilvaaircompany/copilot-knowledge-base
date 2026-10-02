@@ -25,8 +25,6 @@ You can also make changes to the issue description. The edit history is availabl
 1. Type your changes to the issue description.
 1. Click **Save**.
 
-
-
 ## Adding or changing the issue type
 
 You can add an issue type or make changes to an existing issue type.
@@ -38,8 +36,6 @@ You can add an issue type or make changes to an existing issue type.
 
 1. In the list, select a new issue type.
 1. Click **Save**.
-
-
 
 ## Editing an issue with GitHub CLI
 
@@ -62,8 +58,6 @@ You can pass multiple issue numbers to apply the same change to several issues a
 gh issue edit ISSUE-NUMBER-1 ISSUE-NUMBER-2 --add-label "LABEL"
 ```
 
-
-
 ### Editing the issue type
 
 To set or remove the issue type, use the `--type` or `--remove-type` flag.
@@ -72,10 +66,6 @@ To set or remove the issue type, use the `--type` or `--remove-type` flag.
 gh issue edit ISSUE-NUMBER --type "ISSUE-TYPE"
 gh issue edit ISSUE-NUMBER --remove-type
 ```
-
-
-
-
 
 ### Editing the parent issue
 
@@ -94,8 +84,6 @@ To add or remove sub-issues, use the `--add-sub-issue` or `--remove-sub-issue` f
 gh issue edit PARENT-ISSUE-NUMBER --add-sub-issue SUB-ISSUE-NUMBER
 gh issue edit PARENT-ISSUE-NUMBER --remove-sub-issue SUB-ISSUE-NUMBER
 ```
-
-
 
 
 

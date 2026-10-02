@@ -97,4 +97,4 @@ If you are building an agent or tool that needs to access GitHub Docs, `llms.txt
 
 ## Further reading
 
-* [Set Up The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server)
+* [Set Up The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/set-up-the-github-mcp-server)

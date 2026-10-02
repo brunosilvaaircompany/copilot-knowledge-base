@@ -11,7 +11,7 @@ This works with any MCP-compatible agent or IDE, including Visual Studio Code, J
 ## Prerequisites
 
 * **GitHub Secret Protection** is enabled for the repository.
-* **GitHub MCP server** is connected in your IDE or agent. See [Set Up The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server).
+* **GitHub MCP server** is connected in your IDE or agent. See [Set Up The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/set-up-the-github-mcp-server).
 * Your organization's **security configuration** determines which secret types are detected and whether push protection is enforced. The MCP tools respect your organization's push protection configuration (repository-level push protection settings are not used).
 
 ## Step 1:  Install and configure tools

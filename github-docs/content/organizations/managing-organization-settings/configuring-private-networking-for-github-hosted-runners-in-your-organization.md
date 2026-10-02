@@ -38,7 +38,7 @@ You will use a script to automate configuring your Azure resources.
 
 #### DNS/domain control (recommended)
 
-If you control the outbound access of your GitHub-hosted runners with Azure VNET using DNS or domains, you allow-list a set of domains for GitHub Actions functionality. This is the recommended approach because the domains are published on the GitHub meta endpoint, which GitHub keeps up to date as network requirements change. For a breakdown of the domains by function, see the "Communication" section in [Self Hosted Runners](https://docs.github.com/en/actions/reference/runners/self-hosted-runners#communication).
+If you control the outbound access of your GitHub-hosted runners with Azure VNET using DNS or domains, you allow-list a set of domains for GitHub Actions functionality. This is the recommended approach because the domains are published on the GitHub meta endpoint, which GitHub keeps up to date as network requirements change. For a breakdown of the domains by function, see [Communication requirements for larger runners](/actions/reference/runners/larger-runners#communication-requirements-for-larger-runners).
 
 You can find the domains to allow-list on the GitHub meta endpoint at [https://api.github.com/meta](https://api.github.com/meta). For more information on the meta endpoint, see [Meta](https://docs.github.com/en/rest/meta/meta#get-github-meta-information).
 

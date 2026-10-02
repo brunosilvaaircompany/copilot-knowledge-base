@@ -2,15 +2,11 @@
 
 When credentials like API keys and passwords are committed to repositories as hardcoded secrets, they become targets for unauthorized access. Secret scanning automatically detects credential leaks so you can secure them before they're exploited.
 
-
-
 > [!TIP]
 > At any time, you can run a free assessment of your organization's code for leaked secrets. 
 >
 > To generate a report, open the **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality** tab for your organization, display the **{% octicon "key" aria-hidden="true" aria-label="key" %} Assessments** page, then click **Scan your organization**
 .
-
-
 
 ## How secret scanning protects your code
 

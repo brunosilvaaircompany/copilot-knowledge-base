@@ -51,23 +51,15 @@ If you're using a dedicated block device as your backup target, you need to init
 
     >[!WARNING] This command will permanently erase all data on the specified device. Double-check the device name and back up any important data before proceeding.
 
-    
-
     ```shell
     ghe-storage-init-backup /dev/YOUR_DEVICE_NAME
     ```
-
-    
 
     This command:
     * Formats the device (erases all data).
     * Prepares it for use by the backup service.
     * Sets it to mount automatically at `/data/backup` on boot.
     * If in a clustered environment, configures the node in `cluster.conf` with the `backup-server` role.
-
-    
-    From GitHub Enterprise Server 3.17.4 onward, the script is installed in PATH so you can run it directly using: `ghe-storage-init-backup /dev/YOUR_DEVICE_NAME`.
-    
 
 #### Detach a backup disk
 

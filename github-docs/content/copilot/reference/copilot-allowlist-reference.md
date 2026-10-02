@@ -2,7 +2,7 @@
 
 If your company employs security measures like a firewall or proxy server, you should add the URLs in this article to an allowlist to ensure Copilot works as expected. Users must be able to authenticate to GitHub and access the Copilot service on GitHub.com or GHE.com.
 
-Every user of the proxy server or firewall also needs to configure their own environment to connect to Copilot. See [Configure Network Settings](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-network-settings).
+Every user of the proxy server or firewall also needs to configure their own environment to connect to Copilot. See [Configure Network Settings](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-network-settings).
 
 ## Copilot on GitHub.com
 

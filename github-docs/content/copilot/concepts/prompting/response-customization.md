@@ -270,7 +270,7 @@ The following examples demonstrate how to use prompt files.
   …
   ```
 
-For information on how to enable, create, and use prompt files, see [Add Repository Instructions In Your Ide?Tool=Vscode](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide?tool=vscode#enabling-and-using-prompt-files).
+For information on how to enable, create, and use prompt files, see [Add Repository Instructions In Your Ide?Tool=Vscode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/configure-custom-instructions/add-repository-instructions-in-your-ide?tool=vscode#enabling-and-using-prompt-files).
 
 ## Writing effective custom instructions
 
@@ -424,7 +424,7 @@ The following examples demonstrate how to use prompt files.
   …
   ```
 
-For information on how to create and use prompt files, see [Add Repository Instructions In Your Ide?Tool=Visualstudio](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide?tool=visualstudio#using-prompt-files).
+For information on how to create and use prompt files, see [Add Repository Instructions In Your Ide?Tool=Visualstudio](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/configure-custom-instructions/add-repository-instructions-in-your-ide?tool=visualstudio#using-prompt-files).
 
 ## Writing effective custom instructions
 

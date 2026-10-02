@@ -40,7 +40,7 @@ You can also ask Copilot Chat in your editor to review the same changes and offe
 > [!TIP]
 > If you enjoyed using Copilot to review your own code, you can [sign up for a paid plan](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro) to get additional AI credits and Copilot code review, which can review your pull requests automatically when you add Copilot as a reviewer.
 >
-> For more information, see [Set Up For Self](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/set-up/set-up-for-self) and [Code Review](https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/agents/code-review) in the GitHub Enterprise Cloud documentation.
+> For more information, see [Plans](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/plans) and [Code Review](https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/agents/code-review) in the GitHub Enterprise Cloud documentation.
 
 ## Applying feedback
 

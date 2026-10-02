@@ -52,7 +52,7 @@ WRITING NOTE: The following tables have been written using HTML rather than Mark
 
           <li style="text-indent: -1.6em;"><span aria-hidden="true">📂</span> &nbsp;<strong>Path-specific</strong> instructions (using <code>.github/instructions/**/*.instructions.md</code> files).</li>
 
-          <li style="text-indent: -1.6em;"><span aria-hidden="true">🤖</span> &nbsp;<strong>Agent</strong> instructions (using an <code>AGENTS.md</code> file).</li>
+          <li style="text-indent: -1.6em;"><span aria-hidden="true">🤖</span> &nbsp;<strong>Agent</strong> instructions (using <code>AGENTS.md</code>, <code>CLAUDE.md</code>, <code>GEMINI.md</code> or <code>REVIEW.md</code> files).</li>
 
           <li style="text-indent: -1.6em;"><span aria-hidden="true">🏢</span> &nbsp;<strong>Organization</strong> instructions.</li>
 
@@ -149,7 +149,7 @@ WRITING NOTE: The following tables have been written using HTML rather than Mark
 
 In JetBrains IDEs, you can manage supported customizations from the Agent Customizations editor. In the GitHub Copilot Chat panel, click the settings icon in the top-right, then click **Customizations**.
 
-The editor lets you work with workspace customizations for the current project or personal customizations that follow you across projects. You can use it to view and edit custom agents, manage reusable skills and prompt files, and configure instructions. For more information, see [Add Repository Instructions In Your Ide](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide) and [Create Custom Agents In Your Ide](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide).
+The editor lets you work with workspace customizations for the current project or personal customizations that follow you across projects. You can use it to view and edit custom agents, manage reusable skills and prompt files, and configure instructions. For more information, see [Add Repository Instructions In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/configure-custom-instructions/add-repository-instructions-in-your-ide) and [Use Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-custom-agents).
 
 <table>
   <thead>

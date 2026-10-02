@@ -95,7 +95,7 @@ Rate limits apply for requests to the REST API. See [Rate Limits For The Rest AP
 
 Your developers can access GitHub Copilot if you grant them access to a Copilot Business or Copilot Enterprise subscription. Managed user accounts cannot sign up for Copilot Individual.
 
-* Users must perform some additional setup to authenticate to their account from their development environment. See [Authenticate To Ghecom](https://docs.github.com/en/copilot/how-tos/configure-personal-settings/authenticate-to-ghecom).
+* Users must perform some additional setup to authenticate to their account from their development environment. See [Authenticate To Ghecom](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/authenticate-to-ghecom).
 * Certain GitHub Copilot features are currently unavailable on GHE.com. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
 
 ### Documentation

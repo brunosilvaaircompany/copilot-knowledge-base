@@ -33,8 +33,6 @@ You can use markdown to add formatting, links, emojis, and more. For more inform
 
 ![Screenshot of the new issue form, with a title and body filled in.](/assets/images/help/issues/issue-title-body.png)
 
-
-
 ## Adding a task list
 
 You can also use plain text to track tasks that don't have a corresponding issue and convert them to issues later. For more information, see [About Tasklists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists).
@@ -55,15 +53,11 @@ You can use the default labels, or you can create a new label. For more informat
 
 ![Screenshot of the new issue form. In the right sidebar, the "Labels" section is outlined in dark orange.](/assets/images/help/issues/issue-with-label.png)
 
-{% ifversion issue-types %}
-
 ## Adding issue types
 
 You can add an issue type to classify work across the organization. See [Managing Issue Types In An Organization](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/managing-issue-types-in-an-organization).
 
 ![Screenshot of the new issue form. In the right sidebar, the "Type" section is outlined in dark orange.](/assets/images/help/issues/issue-type.png)
-
-
 
 ## Adding the issue to a project
 
@@ -88,8 +82,6 @@ You can add sub-issues to an issue to quickly break down larger pieces of work i
 
    ![Screenshot of the sub-issues section below the issue description. The "View more sub-issue options" button is highlighted with an orange rectangle.](/assets/images/help/issues/sub-issue-drop-down.png)
 
-{% endif %}
-
 ## Adding issue dependencies
 
 You can define blocking relationships between issues using issue dependencies. Issue dependencies let you identify issues that are blocked by, or blocking, other work. See [Creating Issue Dependencies](https://docs.github.com/en/free-pro-team@latest/issues/tracking-your-work-with-issues/using-issues/creating-issue-dependencies).
@@ -109,11 +101,7 @@ You can use issues for a wide range of purposes. For example:
 * Planning tasks
 * Reporting bugs
 
-
-
 To break your issue down into more manageable tasks, you can add multiple levels of sub-issues. See [Adding Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-sub-issues).
-
-
 
 Here are some helpful resources for taking your next steps with GitHub Issues:
 

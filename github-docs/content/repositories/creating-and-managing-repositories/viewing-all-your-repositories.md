@@ -8,8 +8,6 @@ Your repository dashboard is available at the top of any page. On the dashboard,
 
 1. Optionally, choose a filter or use the search bar to filter for more specific results. Refine your search using filters like `visibility`, `language`, `organization`, and more. Sort by relevance to intelligently surface the repositories you're most active in.
 
-
-
 ## Tracking repositories with saved views
 
 To help you better monitor and find repositories across multiple organizations, you can create saved views on the repository dashboard.

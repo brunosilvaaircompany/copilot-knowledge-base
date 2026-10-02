@@ -240,9 +240,17 @@ You can make any changes to a fork, including:
 ## Find another repository to fork
 
 Fork a repository to start contributing to a project. 
+Generally, you can fork any public repository to your personal account or to an organization where you have permission to create repositories, unless you're a member of an enterprise with managed users.
+
+Forking of private and internal repositories is governed by repository, organization, and enterprise policies. With the most permissive policies:
+
+* You can fork a private repository to your personal account or to an organization where you have permission to create repositories, including an organization in another enterprise.
+* You can fork an internal repository to your personal account or to an organization in the same enterprise as the upstream repository. You can never fork an internal repository to an organization in another enterprise.
+
+{% elsif ghes %}
 You can fork a private or internal repository to your personal account or to an organization on GitHub where you have permission to create repositories, provided that the settings for the repository and your enterprise policies allow forking.
 
-Generally, you can fork any public repository to your personal account or to an organization where you have permission to create repositories, unless you're a member of an enterprise with managed users.
+Generally, you can fork any public repository to your personal account or to an organization where you have permission to create repositories.
 
 {% elsif fpt %}
 You can fork any public repository:

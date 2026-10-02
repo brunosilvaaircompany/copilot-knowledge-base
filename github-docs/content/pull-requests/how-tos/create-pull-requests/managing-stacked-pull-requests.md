@@ -1,6 +1,7 @@
 # Managing stacked pull requests
 
-> [!NOTE] This feature is in public preview and subject to change.
+> [!NOTE] This feature is in public preview and is subject to change.
+
 
 As you iterate on a stack, you often need to make changes in a lower layer, rebase to keep a linear history, or restructure its branches. The `gh stack` extension in GitHub CLI handles these tasks with cascading operations that update every affected branch. See [Stacked Prs CLI Commands](https://docs.github.com/en/pull-requests/reference/stacked-prs-cli-commands).
 

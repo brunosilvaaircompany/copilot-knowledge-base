@@ -4,9 +4,7 @@
 
 For each language, the following articles list which queries are included in the `default` and the `security-extended` suites. Where Copilot Autofix is available for a language, details of which queries are supported are also included.
 
-
 * [Actions Built In Queries](https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-queries/actions-built-in-queries)
-
 * [C Cpp Built In Queries](https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-queries/c-cpp-built-in-queries)
 * [Csharp Built In Queries](https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-queries/csharp-built-in-queries)
 * [Go Built In Queries](https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-queries/go-built-in-queries)

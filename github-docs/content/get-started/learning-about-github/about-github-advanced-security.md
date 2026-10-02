@@ -102,9 +102,7 @@ For more information about individual features, see [GitHub Security Features](h
 
 Organizations on GitHub Team and GitHub Enterprise can run free security risk assessments to understand their exposure to security vulnerabilities:
 
-
 * **Secret leaks**: Scan your organization for leaked secrets and see how many could have been prevented by GitHub Secret Protection. See [Secret Security With GitHub](https://docs.github.com/en/code-security/concepts/secret-security/secret-security-with-github#secret-risk-assessment).
-
 
 * **Code vulnerabilities**: Scan up to 20 of your most active repositories and see how many vulnerabilities could be automatically fixed with Copilot Autofix if you enable GitHub Code Security. See [Risk Assessment](https://docs.github.com/en/code-security/concepts/code-scanning/risk-assessment).
 

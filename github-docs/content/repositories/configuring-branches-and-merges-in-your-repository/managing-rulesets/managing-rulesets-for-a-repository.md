@@ -52,7 +52,7 @@ You can edit a ruleset to change parts of the ruleset, such as the name, bypass 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. On the "Rulesets" page, click the name of the ruleset you want to edit.
 1. Change the ruleset as required. For information on the available rules, see [Available Rules For Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets).
@@ -71,7 +71,7 @@ You can edit a ruleset to change parts of the ruleset, such as the name, bypass 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. Click the name of the ruleset you want to delete.
 1. To the right of the ruleset's name, select {% octicon "kebab-horizontal" aria-label="Open additional options" %}, then click **{% octicon "trash" aria-hidden="true" aria-label="trash" %} Delete ruleset**.
@@ -98,7 +98,7 @@ You can view all the changes to a ruleset and revert back to a specific iteratio
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. To view the history of changes to the ruleset, select {% octicon "kebab-horizontal" aria-label="Open additional options" %} to the right of the ruleset's name, then click **{% octicon "history" aria-hidden="true" aria-label="history" %} History**.
 
@@ -124,7 +124,7 @@ You can import an existing ruleset using a JSON file. This can be useful if you 
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. Select the **New ruleset** dropdown, then click **Import a ruleset**.
 

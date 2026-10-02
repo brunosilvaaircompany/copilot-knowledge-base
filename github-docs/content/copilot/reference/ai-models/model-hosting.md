@@ -18,6 +18,7 @@ Used for:
 * GPT-6 Astra
 * GPT-6 Luna
 * GPT-6 Sol
+* GPT-6.1 Sol
 
 These models are hosted by OpenAI and GitHub's Azure infrastructure.
 
@@ -34,7 +35,7 @@ Used for:
 * Claude Haiku 4.5
 * Claude Sonnet 4.6
 * Claude Sonnet 5
-* Claude Opus 4.7
+* Claude Sonnet 5.5
 * Claude Opus 4.8
 * Claude Opus 4.8 (fast mode) (preview)
 * Claude Opus 5
@@ -69,8 +70,6 @@ When using Claude, input prompts and output completions continue to run through 
 
 Used for:
 
-* Gemini 3.5 Flash
-* Gemini 3.6 Flash
 * Gemini 3.7 Flash
 * Gemini 3.8 Flash
 
@@ -125,20 +124,17 @@ Open-weight models have publicly available weights. Hosting differs by model and
 
 Used for:
 
-* Kimi K2.7 Code
 * Kimi K3
 
-Kimi K2.7 Code and Kimi K3 were developed by Moonshot AI. They are open-weight models that may be less aligned than other Copilot models, with an elevated risk of geographic bias. Before you enable either model, review the [Kimi K2.7 Code model card](https://huggingface.co/moonshotai/Kimi-K2.7-Code) or the [Kimi K3 model card](https://huggingface.co/moonshotai/Kimi-K3) and run your own evaluations before enabling.
-
-Kimi K2.7 Code is hosted on Azure AI Foundry infrastructure managed by GitHub and Microsoft.
+Kimi K3 was developed by Moonshot AI. It is an open-weight model that may be less aligned than other Copilot models, with an elevated risk of geographic bias. Before you enable the model, review the [Kimi K3 model card](https://huggingface.co/moonshotai/Kimi-K3) and run your own evaluations.
 
 Kimi K3 is hosted by GitHub on Fireworks AI.
 
-Both models are covered by zero data retention agreements with the hosting providers. Fireworks AI and Azure AI Foundry do not use prompts or completions to train models, and prompts and completions are not sent to Moonshot AI.
+Kimi K3 is covered by a zero data retention agreement with the hosting provider. Fireworks AI does not use prompts or completions to train models, and prompts and completions are not sent to Moonshot AI.
 
 GitHub does not use Copilot Business or Copilot Enterprise customer data to train AI models. For individual subscribers—Copilot Free, Copilot Pro, Copilot Pro+, and Copilot Max users—GitHub may use Copilot interaction data, including prompts (inputs), suggestions (outputs), and code snippets generated during Copilot sessions to train and improve AI models, in accordance with our [GitHub General Privacy Statement](https://docs.github.com/en/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement) and applicable user settings. Individual subscribers can opt out of having their data used for AI model training. To manage this setting, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements).
 
-When using Kimi K2.7 Code or Kimi K3, input prompts and output completions continue to run through GitHub Copilot's content filters.
+When using Kimi K3, input prompts and output completions continue to run through GitHub Copilot's content filters.
 
 ## Inline suggestions
 

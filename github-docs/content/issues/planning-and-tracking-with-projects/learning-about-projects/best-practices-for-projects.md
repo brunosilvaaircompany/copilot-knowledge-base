@@ -10,18 +10,10 @@ Issues and pull requests include built-in features to let you easily communicate
 
 Breaking a large issue into smaller issues makes the work more manageable and enables team members to work in parallel. It also leads to smaller pull requests, which are easier to review.
 
-
-
 You can add sub-issues to an issue to quickly break down larger pieces of work into smaller issues. Sub-issues add support for hierarchies of issues on GitHub by creating relationships between your issues. You can create multiple levels of sub-issues that accurately represent your project by breaking down tasks into exactly the amount of detail that you and your team require.
  See [Adding Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-sub-issues) and [Browsing Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/browsing-sub-issues).
 
-{% ifversion issue-types %}
-
 You can also use issue types to classify work in repositories across the organization alongside sub-issues. For more information, see [Managing Issue Types In An Organization](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/managing-issue-types-in-an-organization).
-
-
-
-{% endif %}
 
 To ensure efficient progress, clearly define which issues are blocked by, or blocking, other issues. See [Creating Issue Dependencies](https://docs.github.com/en/free-pro-team@latest/issues/tracking-your-work-with-issues/using-issues/creating-issue-dependencies).
 

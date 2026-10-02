@@ -204,14 +204,10 @@ You can choose to allow or prevent GitHub Actions workflows from creating or app
 
 For more information on how to configure this setting, see [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#preventing-github-actions-from-creating-or-approving-pull-requests), [Disabling or limiting GitHub Actions for your organization](/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#preventing-github-actions-from-creating-or-approving-pull-requests), and [Managing GitHub Actions Settings For A Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#preventing-github-actions-from-creating-or-approving-pull-requests).
 
-
-
 ### Using code scanning to secure workflows
 
 Code scanning can automatically detect and suggest improvements for common vulnerable patterns used in GitHub Actions workflows.
 For more information on how to enable code scanning, see [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning).
-
-
 
 ### Using OpenSSF Scorecards to secure workflow dependencies
 

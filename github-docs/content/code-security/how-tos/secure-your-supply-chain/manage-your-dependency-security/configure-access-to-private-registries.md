@@ -6,6 +6,9 @@ Dependabot version updates keeps your dependencies up-to-date and Dependabot sec
 
 In most ecosystems, private dependencies are usually published to private package registries. These private registries are similar to their public equivalents, but they require authentication.
 
+Configuring a registry in `dependabot.yml` also allows Dependabot to reach it over the network. Update jobs can connect only to hosts on an egress allowlist. Declare a registry under the top-level `registries` key even if it allows anonymous access, because defining it only in an ecosystem-native configuration file, such as `.npmrc` or `nuget.config`, does not allow its host. Add private registries to `dependabot.yml`, not to the shared defaults. See [Resolve A Blocked Host](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/resolve-a-blocked-host).
+
+
 For specific ecosystems, you can configure Dependabot to access _only_ private registries by removing calls to public registries. For more information, see [Remove Access To Public Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/remove-access-to-public-registries).
 
 To allow Dependabot access to registries hosted privately or restricted to internal networks, configure Dependabot to run on GitHub Actions self-hosted runners. For more information, see [Configure On Self Hosted Runners](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-on-self-hosted-runners).
@@ -55,15 +58,11 @@ For more information about how automatic access works, see [Automatic Dependabot
 
 
 
-
-
 You can configure Dependabot's access to private registries at the org-level.
-{% ifversion org-private-registry-oidc %}
+
 Organization-level registries support **Token**, **Username and password**, and **OIDC** authentication.
 
 For more information about configuration, see [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
-
-{% endif %}
 
 You can also configure Dependabot's access to private registries in the `dependabot.yml` file.
 The top-level `registries` key is optional and specifies authentication details.
@@ -478,8 +477,6 @@ registries:
 
 {% endraw %}
 
-
-
 ### `helm-registry`
 
 The `helm-registry` type only supports HTTP Basic Auth and does not support OCI-compliant registries. If you need to access an OCI-compliant registry for Helm charts, configure a [`docker-registry`](#docker-registry) instead.
@@ -502,8 +499,6 @@ registries:
 ```
 
 {% endraw %}
-
-
 
 ### `hex-organization`
 

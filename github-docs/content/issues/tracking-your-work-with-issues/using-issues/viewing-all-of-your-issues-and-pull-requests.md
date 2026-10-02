@@ -10,8 +10,6 @@ Your issue and pull request dashboards are available at the top of any page. On 
 
 1. Optionally, choose a filter or use the search bar to filter for more specific results. For more information, see [Filtering And Searching Issues And Pull Requests](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/filtering-and-searching-issues-and-pull-requests).
 
-
-
 ## Tracking issues and pull requests with saved views
 
 To help you better monitor and find issues and pull requests across multiple repositories, you can create saved views on the issues dashboard.
@@ -33,8 +31,6 @@ You can create up to 25 saved views.
 1. On the left sidebar, under "Views", click the saved view you want to edit, duplicate or delete.
 1. To the right of the name of the saved view, click **{% octicon "kebab-horizontal" aria-label="The horizontal kebab icon" %}.**.
 1. Click **{% octicon "pencil" aria-hidden="true" aria-label="pencil" %} Edit** to modify the view, **{% octicon "duplicate" aria-hidden="true" aria-label="duplicate" %} Duplicate** to create a copy of the view, or **{% octicon "trash" aria-hidden="true" aria-label="trash" %} Delete** to remove the view.
-
-
 
 ## Further reading
 

@@ -64,22 +64,14 @@ Here is an example of an issue created for a large initiative, front-end work, i
 
 ![Screenshot of an issue called "Front-end work for Project Octocat." The issue body includes a list of tasks to complete.](/assets/images/help/issues/quickstart-create-large-initiative-issue.png)
 
-
-
 ### Sub-issues example
 
 You can add sub-issues to an issue to quickly break down larger pieces of work into smaller issues. Sub-issues add support for hierarchies of issues on GitHub by creating relationships between your issues. You can create multiple levels of sub-issues that accurately represent your project by breaking down tasks into exactly the amount of detail that you and your team require.
  See [Adding Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-sub-issues) and [Browsing Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/browsing-sub-issues).
 
-{% ifversion issue-types %}
-
 You can use issue types to classify work in repositories across the organization, such as tasks, bugs, and features. See [Managing Issue Types In An Organization](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/managing-issue-types-in-an-organization).
 
-
-
    ![Screenshot of the sub-issues section below the issue description.](/assets/images/help/issues/sub-issue.png)
-
-{% endif %}
 
 ### Task list example
 

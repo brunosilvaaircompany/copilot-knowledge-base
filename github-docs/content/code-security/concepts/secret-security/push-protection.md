@@ -31,12 +31,8 @@ You can enable push protection for repositories at the repository, organization,
 * Blocks pushes containing secrets from reaching specific protected repositories
 * Generates alerts for push protection bypasses in the **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality** tab of the repository, organization, and enterprise
 
-
-
 > [!TIP]
 > Regardless of the enablement status of push protection, organizations on GitHub Team and GitHub Enterprise can run a free report to scan their code for leaked secrets. The report also shows how many secret leaks could have been prevented by push protection. See [Secret Security With GitHub](https://docs.github.com/en/code-security/concepts/secret-security/secret-security-with-github#secret-risk-assessment).
-
-
 
 ### Push protection for users
 

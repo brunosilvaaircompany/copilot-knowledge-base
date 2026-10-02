@@ -11,6 +11,9 @@ Only running codespaces incur CPU charges. A stopped codespace incurs only stora
 You may want to stop and restart a codespace to apply changes to it. For example, if you change the machine type used for your codespace, you will need to stop and restart it for the change to take effect. You can also stop your codespace and choose to restart or delete it if you encounter an error or something unexpected.
 
 
+> [!NOTE]
+> A codespace also has a maximum lifetime of 12 hours, regardless of its idle timeout setting. For more information, see [Understanding The Codespace Lifecycle](https://docs.github.com/en/codespaces/about-codespaces/understanding-the-codespace-lifecycle#maximum-lifetime-of-a-codespace).
+
 Regardless of where you created or access your codespaces, you can view and manage them in your browser at https://github.com/codespaces.
 
 ## Stopping a codespace
@@ -87,7 +90,3 @@ When you restart a codespace you can choose to open it in Visual Studio Code or 
 1. In the list of codespaces, select the codespace you want to restart.
 
 {% endvscode %}
-
-## Further reading
-
-* [Understanding The Codespace Lifecycle](https://docs.github.com/en/codespaces/about-codespaces/understanding-the-codespace-lifecycle)

@@ -4,14 +4,10 @@ You can create issues in your repository to plan, discuss, and track work. Issue
 
 Issues can be created in a variety of ways, so you can choose the most convenient method for your workflow. For example, you can create an issue from a repository, while adding sub-issues, convert a comment in an issue or pull request, create an issue from a specific line of code, or via a URL query. You can also create an issue from your platform of choice: through the web UI, GitHub Desktop, GitHub CLI, GraphQL and REST APIs, or GitHub Mobile. See [Creating An Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue).
 
-
-
 ## About sub-issues
 
 You can add sub-issues to an issue to quickly break down larger pieces of work into smaller issues. Sub-issues add support for hierarchies of issues on GitHub by creating relationships between your issues. You can create multiple levels of sub-issues that accurately represent your project by breaking down tasks into exactly the amount of detail that you and your team require.
  See [Adding Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-sub-issues) and [Browsing Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/browsing-sub-issues).
-
-
 
 ## About issue dependencies
 

@@ -1,6 +1,7 @@
 # Configuring Proof of Presence
 
-> [!NOTE] This feature is in public preview and subject to change.
+> [!NOTE] This feature is in public preview and is subject to change.
+
 
 ## About Proof of Presence
 

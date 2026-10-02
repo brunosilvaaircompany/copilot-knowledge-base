@@ -8,7 +8,7 @@
 
    ![Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.](/assets/images/help/repository/repo-actions-settings.png)
 
-1. In the left sidebar, under "Code and automation," click **Rulesets**, then click **Rulesets**.
+1. In the left sidebar, under "Code, planning, and automation"{% elsif ghes %} "Code and automation", click **Rulesets**, then click **Rulesets**.
 
 1. Click **New ruleset**.
 1. To create a ruleset targeting branches, click **New branch ruleset**.

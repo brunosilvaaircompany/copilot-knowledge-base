@@ -14,7 +14,9 @@ For instructions on creating the file, see [Get Started](https://docs.github.com
 | `permissions.deny` | Blocks specific operations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `permissions.ask` | Requires a fresh human approval before specific operations can proceed | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `permissions.allow` | Permits specific operations to proceed without a prompt | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `features.computerUse` | Controls whether users can enable computer use | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `model` | Sets your preferred model as the default for new conversations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `autoTier` | Sets the default Auto routing tier for new conversations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `enabledPlugins` | Enables or disables specific plugins by key | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `extraKnownMarketplaces` | Adds plugin marketplaces that users can access | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `strictKnownMarketplaces` | Restricts plugin installation to explicitly listed marketplaces | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -33,7 +35,11 @@ The following example shows these keys in one managed settings file.
 
 ```json
 {
+  "features": {
+    "computerUse": false
+  },
   "model": "auto",
+  "autoTier": "intelligence",
   "permissions": {
     "disableBypassPermissionsMode": "disable",
     "deny": [
@@ -114,6 +120,10 @@ The following example shows these keys in one managed settings file.
 }
 ```
 
+## features.computerUse
+
+Controls whether users can enable computer use in GitHub Copilot CLI and GitHub Copilot app. Set `features.computerUse` to `false` to prevent users from enabling computer use. A local setting cannot override this restriction. Set the value to `true`, or omit the key, to allow users to control computer use through their local settings.
+
 ## enabledPlugins
 
 Defines plugins that are automatically installed or blocked for all enterprise users. Each entry uses the format `PLUGIN-NAME@MARKETPLACE-NAME` as the key, with a boolean value: `true` to require the plugin to be enabled, or `false` to require it to be disabled. See [Plugin Standards](https://docs.github.com/en/copilot/concepts/enterprise/plugin-standards).
@@ -190,6 +200,23 @@ This key is overridable by enterprise team mapping. In your `managed-settings.js
 
 > [!NOTE]
 > `model` was originally documented as `permissions.model`. Clients still read the nested `permissions.model` value when the top-level `model` key is absent, but you should use the top-level `model` key in new configurations.
+
+## autoTier
+
+Sets the default routing tier for new conversations when the selected model is `"auto"`. Accepted values, from most restrictive to least restrictive, are `"efficiency"`, `"balance"`, `"intelligence"`, and `"unmanaged"`. This setting does not select the model itself.
+
+In Copilot CLI, this setting requires version 1.0.87-0 or later. In VS Code, it requires version 1.140.0 or later.
+
+Set `autoTier` to a string other than `"unmanaged"` to lock the tier against user and repository overrides. To provide a default that users, repositories, and enterprise teams can override, use `overridable`:
+
+```json
+{
+  "model": "auto",
+  "autoTier": { "overridable": "balance" }
+}
+```
+
+For example, a team settings file can set `"autoTier": "intelligence"`. If the team does not set `autoTier`, the enterprise default applies.
 
 ## permissions
 

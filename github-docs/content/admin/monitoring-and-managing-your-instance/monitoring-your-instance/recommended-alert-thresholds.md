@@ -4,9 +4,7 @@
 
 You can configure external monitoring systems to alert you to storage, CPU, and memory usage that may cause problems with your GitHub Enterprise Server instance.
 
-
 For more information about OpenTelemetry metrics, see [About Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/about-opentelemetry-metrics).
-
 
 For more information about collectd metrics, see [About Collectd Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/collectd-metrics/about-collectd-metrics).
 

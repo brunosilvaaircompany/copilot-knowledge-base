@@ -2,9 +2,9 @@
 
 ## About migrations between GitHub products
 
-With GitHub Enterprise Importer, you can migrate data from GitHub Enterprise Server to GitHub Enterprise Cloud, or migrate data from GitHub.com to another account on GitHub Enterprise Cloud.
+With GitHub Enterprise Importer, you can migrate data from GitHub Enterprise Server to GitHub Enterprise Cloud, migrate data from GitHub.com to another account on GitHub Enterprise Cloud, or migrate repositories between two enterprises on GHE.com.
 
-If your migration source is an account on GitHub.com, you can migrate individual repositories between organizations, or migrate entire organizations between enterprises. If your migration source is GitHub Enterprise Server, you can migrate individual repositories.
+If your migration source is an account on GitHub.com, you can migrate individual repositories between organizations, or migrate entire organizations between enterprises. If your migration source is GitHub Enterprise Server or GHE.com, you can migrate individual repositories.
 
 The data that GitHub Enterprise Importer migrates depends on the source of the migration and whether you are migrating a repository or organization.
 

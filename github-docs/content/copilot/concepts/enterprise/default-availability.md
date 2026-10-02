@@ -54,7 +54,7 @@ The default policy applies to models that you have not explicitly configured. Th
 The following models are **not** in scope. They are disabled by default, regardless of your "Default availability" policy setting.
 
 * Pre-GA models
-* Open weight models (DeepSeek, Kimi K2.7 Code, Kimi K3)
+* Open weight models (DeepSeek, Kimi K3)
 * Models that are not covered by GitHub's data retention agreement (Claude Fable 5, Claude Fable 5.1)
 * For enterprises that have restricted models to data-resident or FedRAMP-compliant models, any models that do not respect these policies
 

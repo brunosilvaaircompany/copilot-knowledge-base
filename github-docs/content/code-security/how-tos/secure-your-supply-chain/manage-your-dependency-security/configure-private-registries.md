@@ -167,8 +167,6 @@ Dependabot supports authentication to private registries via a central token ser
 
 Docker Compose adheres to the same configuration guidelines as Docker. For more information, see [Docker](#docker).
 
-
-
 ### Helm Charts
 
 Helm supports using a username and password for registries. For more information, see [Configure Access To Private Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#helm-registry).
@@ -202,8 +200,6 @@ When configuring Dependabot for Helm charts, it will also automatically update t
 * Images that have an array of versions in the YAML cannot be updated.
 * Image names may not always be detected in Helm files or YAML files.
 * For Helm v2 updates, use the [Docker ecosystem](#docker).
-
-
 
 ### Gradle
 

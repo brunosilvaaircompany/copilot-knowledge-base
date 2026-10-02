@@ -1,6 +1,7 @@
 # Quickstart for stacked pull requests
 
-> [!NOTE] This feature is in public preview and subject to change.
+> [!NOTE] This feature is in public preview and is subject to change.
+
 
 Use stacked pull requests to break large code changes into a chain of smaller, dependent pull requests that you can review and merge independently.
 

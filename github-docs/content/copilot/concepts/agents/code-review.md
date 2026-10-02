@@ -153,8 +153,8 @@ For full instructions, see [Configure Code Review](https://docs.github.com/en/co
 
 Copilot code review supports multiple Copilot review effort levels, so you can choose the level of thoroughness that matches the criticality of your code.
 
-* **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies (default).
-* **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes. Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes, than Lite reviews.
+* **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies.
+* **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes (default). Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes, than Lite reviews.
 
 Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
 
@@ -167,7 +167,7 @@ When Copilot determines which review effort to use, it checks the following opti
 1. The requestor's Copilot review effort. For a new pull request, the requestor is the author. When someone marks a draft ready for review, that person is the requestor.
 1. A Copilot review effort set for the repository
 1. A Copilot review effort set for the organization, or the repository owner's Copilot review effort on a user-owned repository
-1. GitHub's built-in default, which is Lite. Some owners have Balanced as the built-in default.
+1. GitHub's built-in default, which is Balanced.
 
 After Copilot code review reviews a pull request, the pull request overview comment shows the effort level used for each review run.
 

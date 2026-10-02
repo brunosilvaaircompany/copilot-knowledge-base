@@ -176,25 +176,17 @@ You can also specify assignees, labels, milestones, and projects.
 gh issue create --title "TITLE" --body "ISSUE-DESCRIPTION" --assignee @me,USERNAME --label "LABEL-1,LABEL-2" --project PROJECT-NAME --milestone "MILESTONE-NAME"
 ```
 
-
-
 To set the issue type, use the `--type` flag.
 
 ```shell
 gh issue create --title "TITLE" --body "ISSUE-DESCRIPTION" --type "ISSUE-TYPE"
 ```
 
-
-
-
-
 To create the issue as a sub-issue of an existing parent, use the `--parent` flag with an issue number or URL.
 
 ```shell
 gh issue create --title "TITLE" --body "ISSUE-DESCRIPTION" --parent PARENT-ISSUE-NUMBER
 ```
-
-
 
 
 
@@ -217,7 +209,7 @@ Creating issues manually can be repetitive and time-consuming. With Copilot, you
 
 ## Creating an issue from Copilot Chat in VS Code
 
-You can also create an issue directly from Copilot Chat in VS Code, using the Model Context Protocol (MCP). See [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp).
+You can also create an issue directly from Copilot Chat in VS Code, using the Model Context Protocol (MCP). See [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/extend-copilot-chat-with-mcp).
 
 
 

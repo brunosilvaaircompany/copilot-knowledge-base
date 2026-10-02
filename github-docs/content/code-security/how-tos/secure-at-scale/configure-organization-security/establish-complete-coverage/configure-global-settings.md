@@ -48,7 +48,7 @@ For more information, see [Dependabot On Actions](https://docs.github.com/en/cod
 
 ### Configuring the runner type for Dependabot
 
-You can configure which type of runner Dependabot uses to scan for version and security updates. By default, Dependabot uses standard **GitHub-hosted runners**. You can configure Dependabot to use **self-hosted runners** with custom labels, which allows you to integrate with existing runner infrastructure such as Actions Runner Controller (ARC).
+You can configure which type of runner Dependabot uses to scan for version and security updates. By default, Dependabot uses standard **GitHub-hosted runners**. You can configure Dependabot to use **labeled runners**, which allows you to integrate with existing runner infrastructure such as Actions Runner Controller (ARC).
 
 > [!NOTE]
 > * For security reasons, Dependabot uses GitHub-hosted runners for public repositories, even when you configure labeled runners.
@@ -59,13 +59,13 @@ To configure the runner type:
 1. Under "Dependabot", next to "Runner type", select {% octicon "pencil" aria-label="Edit runner type" %}.
 1. In the "Edit runner type for Dependabot" dialog, select the runner type you want Dependabot to use:
    * **Standard GitHub runner**.
-   * **Labeled runner**: If you select this option, Dependabot will use self-hosted runners that match the label you specify.
+   * **Labeled runner**: If you select this option, Dependabot will use {% ifversion fpt or ghec %}self-hosted or larger runners that match the label you specify.
 1. If you selected **Labeled runner**:
-   * In "Runner label", enter the label assigned to your self-hosted runners. Dependabot will use runners with this label. By default, the `dependabot` label is used, but you can specify a custom label to match your existing runner infrastructure.
+   * In "Runner label", enter the label assigned to your runners. Dependabot will use runners with this label. By default, the `dependabot` label is used, but you can specify a custom label to match your existing runner infrastructure.
    * Optionally, in "Runner group name", enter the name of a runner group if you want to target a specific group of runners.
 1. Click **Save runner selection**.
 
-
+{% endif %}
 
 
 
@@ -126,7 +126,13 @@ You can expand CodeQL analysis coverage for all repositories in your organizatio
 
 ### Continuing scans on inactive repositories
 
-By default, code scanning default setup pauses weekly scheduled scans on repositories that have had no commits pushed or pull requests opened for 180 days.
+
+
+By default, code scanning default setup runs weekly scheduled scans only on active repositories. A repository is active if a push or pull request has triggered a default setup scan in the last 180 days. Initial scans, scans triggered by configuration or language changes, and scheduled scans do not count as activity.
+
+When you enable default setup, an initial scan runs, but weekly scheduled scans do not start until a push or pull request triggers a scan. Pushes and pull requests from before default setup was enabled do not count as activity.
+
+
  You can select **Keep scheduled scans running every 30 days for inactive repositories** to override this behavior in an organization. The scan period is not configurable.
 
 

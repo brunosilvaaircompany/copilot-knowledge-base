@@ -24,6 +24,8 @@ Add and remove credits for a security advisory (see [Edit Repository Advisories]
 Close the draft security advisory | {% octicon "x" aria-label="No" %} | {% octicon "check" aria-label="Yes" %}  |
 Publish the security advisory (see [Publish Repository Advisory](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/publish-repository-advisory)) | {% octicon "x" aria-label="No" %} | {% octicon "check" aria-label="Yes" %}  |
 
+Repository security advisory collaborators without write access to the repository cannot create or view confidential comments. This restriction includes the reporter of a privately reported vulnerability unless they also have write access. See [Manage Vulnerability Reports](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/manage-vulnerability-reports#discussing-a-report-with-people-who-have-write-access).
+
 ### Permission differences for global security advisories
 
 Unlike repository security advisories, anyone can contribute to **global security advisories** in the GitHub Advisory Database at [github.com/advisories](https://github.com/advisories). Edits to global advisories will not change or affect how the advisory appears on the repository. See [Edit Advisory Database](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/edit-advisory-database).

@@ -17,8 +17,12 @@ To learn more about using third-party coding agents, see [About Third Party Codi
 When starting a task with the Anthropic Claude coding agent, you can select the AI model used by the agent. The following models are available:
 
 * Auto
-* Claude Opus 4.7
 * Claude Sonnet 4.6
+* Claude Sonnet 5
+* Claude Opus 4.8
+* Claude Opus 4.8 (fast mode) (preview)
+* Claude Opus 5
+* Claude Fable 5.1
 
 
 If you select **Auto**, it will choose one of the available models listed above. **Auto** in Anthropic Claude coding agent does **not** leverage Copilot auto model selection.

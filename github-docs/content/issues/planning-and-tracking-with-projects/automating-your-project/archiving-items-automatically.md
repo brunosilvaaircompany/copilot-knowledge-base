@@ -8,9 +8,7 @@
 
 ## About automatically archiving items
 
-
 You can configure your project's built-in workflows to automatically archive items. Archiving items helps you improve focus by removing old items from your project views. An archived item retains all of its custom field data and can be viewed or restored from the archive page.
-
 
 The auto-archive workflow supports a subset of filters. You can use the following filters when configuring your workflow.
 

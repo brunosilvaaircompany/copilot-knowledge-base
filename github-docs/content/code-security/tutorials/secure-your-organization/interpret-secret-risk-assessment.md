@@ -78,4 +78,4 @@ Finally, look for the following indicators, which may require additional prevent
 * **Repeated secret types**: Suggests specific workflows or teams need targeted intervention
 * **Common secret categories**: May point to particular CI/CD processes requiring security improvements
 
-Remediating the vulnerabilities or leaks identified by the risk assessment is easier with  GitHub Advanced Security. Eligible enterprise administrators can start a trial for their entire enterprise straight from the results page.
+Remediating the vulnerabilities or leaks identified by the risk assessment is easier with GitHub Advanced Security. Owners of eligible organizations on GitHub Team can start a trial from a completed code security risk assessment.

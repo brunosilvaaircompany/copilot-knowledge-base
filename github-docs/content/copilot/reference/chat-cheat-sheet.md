@@ -49,7 +49,7 @@ Below is a list of the MCP skills that are currently available in Copilot Chat i
 | `get_me`                    | Tell me about myself.                                                                                                                                 |
 | `search_users`              | Search for users with the name "Mona Octocat"                                                                                       |
 
-For more information about using MCP skills in Copilot Chat, see [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server).
+For more information about using MCP skills in Copilot Chat, see [Use The GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/use-the-github-mcp-server).
 
 {% endwebui %}
 
@@ -62,7 +62,7 @@ This version of this article is for Copilot in Visual Studio Code. For other ver
 You can enhance your experience of Copilot Chat with a variety of commands and options. Finding the right command or option for the task you are working on can help you achieve your goals more efficiently. This cheat sheet provides a quick reference to the most common commands and options for using Copilot Chat.
 
 
-For information about how to get started with Copilot Chat in Visual Studio Code, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+For information about how to get started with Copilot Chat in Visual Studio Code, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 ## Slash commands
 
@@ -106,7 +106,7 @@ Below is a list of some of the most common chat participants for using Copilot C
 | Variable    | Description |
 |--------------|----------------------------------------------------------------------------------------------|
 | `@azure`     | Has context about Azure services and how to use, deploy and manage them. Use `@azure` when you want help with Azure. The `@azure` chat participant is currently in public preview and is subject to change. |
-| `@github`    | Allows you to use GitHub-specific Copilot skills. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-github-skills-for-copilot). |
+| `@github`    | Allows you to use GitHub-specific Copilot skills. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide#using-github-skills-for-copilot). |
 | `@terminal`  | Has context about the Visual Studio Code terminal shell and its contents. Use `@terminal` when you want help creating or debugging terminal commands. |
 | `@vscode`    | Has context about Visual Studio Code commands and features. Use `@vscode` when you want help with Visual Studio Code. |
 
@@ -121,7 +121,7 @@ This version of this article is for Copilot in Visual Studio. For other versions
 You can enhance your experience of Copilot Chat with a variety of commands and options. Finding the right command or option for the task you are working on can help you achieve your goals more efficiently. This cheat sheet provides a quick reference to the most common commands and options for using Copilot Chat.
 
 
-For information about how to get started with Copilot Chat in Visual Studio, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+For information about how to get started with Copilot Chat in Visual Studio, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 ## Slash commands
 
@@ -160,7 +160,7 @@ This version of this article is for Copilot in JetBrains. For other versions of 
 You can enhance your experience of Copilot Chat with a variety of commands and options. Finding the right command or option for the task you are working on can help you achieve your goals more efficiently. This cheat sheet provides a quick reference to the most common commands and options for using Copilot Chat.
 
 
-For information about how to get started with Copilot Chat in JetBrains, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+For information about how to get started with Copilot Chat in JetBrains, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 ## Slash commands
 
@@ -191,7 +191,7 @@ This version of this article is for Copilot in Xcode. For other versions of this
 You can enhance your experience of Copilot Chat with a variety of commands and options. Finding the right command or option for the task you are working on can help you achieve your goals more efficiently. This cheat sheet provides a quick reference to the most common commands and options for using Copilot Chat.
 
 
-For information about how to get started with Copilot Chat in Xcode, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+For information about how to get started with Copilot Chat in Xcode, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 ## Slash commands
 

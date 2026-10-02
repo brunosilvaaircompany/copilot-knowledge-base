@@ -44,6 +44,15 @@ After you create your ticket, you can view your ticket and the responses from Gi
 
 
 
+## Security incidents
+
+**During a security incident**, GitHub Support can answer questions about features and available data, but does not investigate on your behalf or preserve logs for your investigation. For more information, see [Understanding How GitHub Support Can Help During A Security Incident](https://docs.github.com/en/support/learning-about-github-support/understanding-how-github-support-can-help-during-a-security-incident).
+
+
+
+
+
+
 ## Prerequisites
 
 {% ifversion ghec %}If you use an enterprise account, there are some steps you should follow before you start using the GitHub Support portal. For more information, see [Getting Your Enterprise Started With The GitHub Support Portal](https://docs.github.com/en/support/contacting-github-support/getting-your-enterprise-started-with-the-github-support-portal).

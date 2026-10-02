@@ -71,6 +71,13 @@ Any private registries used by the build must also be accessible to the workflow
 
 Dependabot can use any of the org-level private registries, as well as uses any private registries defined in the `dependabot.yml` file in the repo.
 
+For each update job, Dependabot supplies credentials only for organization-level private registry types that apply to the job's package ecosystem. Depending on the ecosystem, the applicable registry types can include Git source credentials in addition to credentials for the ecosystem's package registry.
+
+> [!NOTE]
+> The number of applicable organization-level private registry credentials provided to any single update job is capped at 100 for performance reasons.
+
+For a multi-ecosystem group, Dependabot runs a separate update job for each ecosystem and combines the results into one pull request. Each ecosystem's update job has its own 100-registry limit, just as it would if the ecosystems were configured as separate updates.
+
 Dependabot cannot check for security or version updates for code stored in a private registry unless it can access the registry. If you do not configure access to the private registry, then Dependabot cannot raise pull requests to update any of the dependencies stored in the registry.
 
 When you configure access to one or more private registries, Dependabot can propose pull requests to upgrade a vulnerable dependency or to maintain a dependency, see [Configure Access To Private Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries) and [Configure Private Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-private-registries).
@@ -93,9 +100,6 @@ See [Configure Access To Private Registries](https://docs.github.com/en/code-sec
 ### Configuring OIDC authentication for a private registry
 
 OIDC (OpenID Connect) authentication allows Dependabot to use short-lived credentials from your cloud identity provider to access private registries, eliminating the need to store long-lived secrets. With OIDC, credentials are generated dynamically for each Dependabot update job. You must configure a trust relationship between your cloud provider and GitHub before Dependabot can authenticate.
-
-> [!NOTE]
-> OIDC authentication for organization-level private registries is currently supported by Dependabot. It is not supported by code scanning default setup.
 
 When you select **OIDC** as the authentication method for a private registry, choose one of the supported providers and fill in the required fields:
 

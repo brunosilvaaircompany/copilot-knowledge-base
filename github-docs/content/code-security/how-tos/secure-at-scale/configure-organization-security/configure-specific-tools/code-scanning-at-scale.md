@@ -32,13 +32,9 @@ You can also apply a custom CodeQL configuration file across your organization b
 
 You can filter for specific repositories you would like to configure default setup for. For more information, see [Apply Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/apply-custom-configuration).
 
-
-
 ## Providing default setup access to private registries
 
 When a repository uses code stored in a private registry, default setup needs access to the registry to work effectively. For more information, see [Giving Org Access Private Registries](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries).
-
-
 
 
 

@@ -9,11 +9,9 @@ For more information about GitHub App manager permissions, see [Roles In An Orga
 
 ## Granting the ability to manage all GitHub Apps owned by the organization
 
-
 To assign the App Manager organization role to a user or team, see [Using Organization Roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles#assigning-an-organization-role).
 
 Use the role assignments page to see who has been granted this and any other organization role. Organization owners can always manage GitHub Apps and are not shown in this view.
-
 
 ## Granting the ability to manage an individual GitHub App
 
@@ -34,9 +32,7 @@ Use the role assignments page to see who has been granted this and any other org
 
 ## Removing a GitHub App manager's permissions for the entire organization
 
-
 See [Using Organization Roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles#deleting-an-organization-role-assignment) for directions on removing the App Manager role from a user or team.
-
 
 ## Removing managers from an individual GitHub App
 

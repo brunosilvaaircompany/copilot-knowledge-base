@@ -7,7 +7,7 @@ This quickstart shows you how to use these capabilities. It takes about ten minu
 ## Prerequisites
 
 * **An active Copilot plan.** See [About GitHub Copilot](https://docs.github.com/en/copilot/get-started/about-github-copilot#get-access).
-* **The Copilot extension for your IDE.** See [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
+* **The Copilot extension for your IDE.** See [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension).
 * **Signed in to GitHub in your IDE.** If you have authentication problems, see [Troubleshoot Common Issues](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues).
 
 ## Ask a question about your code
@@ -17,7 +17,7 @@ This quickstart shows you how to use these capabilities. It takes about ten minu
 
    The way you do this depends on your IDE.
    * In Visual Studio Code, press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>I</kbd> (Windows/Linux) or <kbd>Control</kbd>+<kbd>Command</kbd>+<kbd>I</kbd> (macOS).
-   * In other IDEs, look for Copilot Chat in the menu bar or sidebar. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+   * In other IDEs, look for Copilot Chat in the menu bar or sidebar. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 1. Type `what does this file do`, then press <kbd>Enter</kbd>.
 
@@ -61,5 +61,5 @@ When you're ready, save your changes, and commit when everything looks good.
 
 ## Next steps
 
-* Customize Copilot in your IDE with custom instructions. See [Add Repository Instructions In Your Ide](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide#further-reading).
+* Customize Copilot in your IDE with custom instructions. See [Add Repository Instructions In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/configure-custom-instructions/add-repository-instructions-in-your-ide#further-reading).
 * Try the GitHub Copilot app. See [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app).

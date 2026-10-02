@@ -60,11 +60,9 @@ The following regions are supported on GitHub.com.
 <li><code>EastUs</code></li>
 <li><code>EastUs2</code></li>
 <li><code>FranceCentral</code></li>
-<li><code>GermanyWestCentral</code></li>
 <li><code>JapanWest</code></li>
 <li><code>KoreaCentral</code></li>
 <li><code>NorthCentralUs</code></li>
-<li><code>NorthEurope</code></li>
 <li><code>NorwayEast</code></li>
 <li><code>SouthCentralUs</code></li>
 <li><code>SoutheastAsia</code></li>

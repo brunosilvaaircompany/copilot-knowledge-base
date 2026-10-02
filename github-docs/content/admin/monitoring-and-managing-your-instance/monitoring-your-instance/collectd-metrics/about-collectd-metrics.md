@@ -57,8 +57,6 @@ GitHub Enterprise Server collects various metrics through collectd, covering sys
 
 For a comprehensive list of available metrics, see [Collectd Metrics For GitHub Enterprise Server](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/collectd-metrics/collectd-metrics-for-github-enterprise-server).
 
-
-
 ## Migration considerations
 
 As GitHub Enterprise Server transitions to OpenTelemetry metrics, consider the following:
@@ -67,8 +65,6 @@ As GitHub Enterprise Server transitions to OpenTelemetry metrics, consider the f
 * **Feature parity**: OpenTelemetry metrics provide equivalent and enhanced monitoring capabilities
 * **Planning**: Begin evaluating OpenTelemetry metrics for your monitoring workflows
 * **Timeline**: Plan for the eventual closing down and then retired of collectd metrics in future releases
-
-
 
 ## Next steps
 

@@ -278,6 +278,21 @@ Dependabot may generate one of the following errors when it can't access a priva
 **Version updates only:** When running security or version updates, some ecosystems must be able to resolve all dependencies from their source to verify that updates have been successful. If your manifest or lock files contain any private dependencies, Dependabot must be able to access the location at which those dependencies are hosted. Organization owners can grant Dependabot access to private repositories containing dependencies for a project within the same organization. For more information, see [Managing Security And Analysis Settings For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization#allowing-dependabot-to-access-private-or-internal-dependencies). You can configure access to private registries in a repository's `dependabot.yml` configuration file. For more information, see [Configure Access To Private Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries).
  Additionally, Dependabot doesn't support private GitHub dependencies for all package managers. See [Supported Ecosystems And Repositories](https://docs.github.com/en/code-security/reference/supply-chain-security/supported-ecosystems-and-repositories).
 
+
+
+### Request blocked by the network egress allowlist
+
+Update jobs can only reach hosts on Dependabot's network egress allowlist. When a request is blocked, the proxy returns `403 Forbidden` and the job log contains a line naming the host, for example `* egress not allowlisted packages.example.com`.
+
+**Resolution:** Choose the option that matches the blocked host:
+
+* For a private or organization-specific registry, define it under the top-level `registries` key in your `dependabot.yml` file. Reference it from the relevant `updates` entry to allow it for that job. Do this even if the registry allows anonymous access, and note that defining it only in a file such as `.npmrc` or `nuget.config` does not allow its host.
+* For a public registry or download host, propose adding it to the default allowlist.
+
+For more information, see [Resolve A Blocked Host](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/resolve-a-blocked-host).
+
+
+
 ## Triggering a Dependabot pull request manually
 
 If you unblock Dependabot, you can manually trigger a fresh attempt to create a pull request.

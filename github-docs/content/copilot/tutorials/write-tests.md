@@ -9,7 +9,7 @@ GitHub Copilot can assist you in developing tests quickly and improving producti
 Before getting started you must have the following:
 * A [GitHub Copilot subscription plan](/copilot/get-started/plans).
 * Visual Studio, Visual Studio Code, or any JetBrains IDE.
-* The [GitHub Copilot extension](/copilot/how-tos/set-up/install-copilot-extension) installed in your IDE.
+* The [GitHub Copilot extension](/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension) installed in your IDE.
 
 ## Writing unit tests with Copilot Chat
 

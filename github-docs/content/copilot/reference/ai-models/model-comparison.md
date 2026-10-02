@@ -78,7 +78,6 @@ These models are designed for tasks that require step-by-step reasoning, complex
 | GPT-5.5           | Great at complex reasoning, code analysis, and technical decision-making.                                                                                       |
 | GPT-5.6 Sol       | The highest reasoning ceiling in the GPT-5.6 family. Best for complex reasoning over large codebases and demanding, long-running agentic work. |
 | Claude Sonnet 4.6 | Reliable completions and smarter reasoning under pressure.                                                                     |
-| Claude Opus 4.7   | Anthropic’s most powerful model. Strong at deep reasoning over large, complex codebases.                                                               |
 
 ### When to use these models
 
@@ -113,7 +112,7 @@ Use one of these models if you want to:
 * Understand front-end behavior from visual context.
 
 > [!TIP]
-> If you're using a model in a context that doesn’t support image input (like a code editor), you won’t see visual reasoning benefits. You may be able to use an MCP server to get access to visual input indirectly. See [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp).
+> If you're using a model in a context that doesn’t support image input (like a code editor), you won’t see visual reasoning benefits. You may be able to use an MCP server to get access to visual input indirectly. See [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/extend-copilot-chat-with-mcp).
 
 ### When to use a different model
 
@@ -136,5 +135,5 @@ Kimi K3 is designed for long-context, multi-step coding and agentic workflows. F
 Choosing the right model helps you get the most out of Copilot. If you're not sure which model to use, start with a general-purpose option like GPT-5 mini, then adjust based on your needs.
 
 * For detailed model specs and pricing, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
-* To switch between models, refer to [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model) or [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model).
+* To switch between models, refer to [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model) or [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/change-the-completion-model).
 * To learn how Copilot Chat serves different AI models, see [Model Hosting](https://docs.github.com/en/copilot/reference/ai-models/model-hosting).

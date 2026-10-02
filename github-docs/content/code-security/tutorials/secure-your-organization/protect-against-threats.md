@@ -76,15 +76,11 @@ For organizations on GitHub Enterprise Cloud, if your organization operates from
 
 See [Managing Allowed Ip Addresses For Your Organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-allowed-ip-addresses-for-your-organization) and [Restricting Network Traffic To Your Enterprise With An Ip Allow List](https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-network-traffic-to-your-enterprise-with-an-ip-allow-list).
 
-
-
 ### Run a secret risk assessment
 
 Run a free, on-demand scan for an organization's repositories that gives you a point-in-time view of the total number of currently exposed secrets across your organization.
 
 See [Assess Your Secret Risk](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/configure-specific-tools/assess-your-secret-risk).
-
-
 
 ## Near-term actions
 

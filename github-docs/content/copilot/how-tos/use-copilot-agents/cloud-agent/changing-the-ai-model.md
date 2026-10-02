@@ -17,12 +17,10 @@ You may find that different models perform better, or provide more useful respon
 The following options are currently available:
 
 * Auto 
-* Claude Opus 4.7
 * Claude Opus 5
 * Claude Opus 5.5
+* Claude Sonnet 5.5
 * Claude Haiku 4.5
-* Gemini 3.5 Flash
-* Gemini 3.6 Flash
 * Gemini 3.7 Flash
 * Gemini 3.8 Flash
 * GPT-5.4 mini
@@ -32,6 +30,7 @@ The following options are currently available:
 * GPT-6 Astra
 * GPT-6 Luna
 * GPT-6 Sol
+* GPT-6.1 Sol
 * Grok 4.5
 * Grok 4.6
 * Grok 4.7

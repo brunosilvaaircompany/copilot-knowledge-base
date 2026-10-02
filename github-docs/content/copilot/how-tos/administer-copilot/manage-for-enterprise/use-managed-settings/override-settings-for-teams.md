@@ -2,11 +2,11 @@
 
 With a server-managed deployment, you can configure your enterprise's `managed-settings.json` file to apply different governance settings to groups of users based on their enterprise team membership. The enterprise defines all settings in a central place, and team membership determines which users receive a given set of values. **If you haven't created the `managed-settings.json` file yet, see [Get Started](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started).**
 
-To make a key eligible for team overrides, you will mark it as `overridable` in `managed-settings.json`. An overridable key uses the team's value when set, or falls back to your enterprise default when the team leaves it unset.
+To let teams replace an enterprise default, mark the key as `overridable` in `managed-settings.json`. An overridable key uses the team's value when set, or falls back to your enterprise default when the team leaves it unset.
 
 ## Supported keys
 
-The `{ "overridable": <VALUE> }` syntax applies to the `model`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, `deniedMcpServers`, `extraKnownMarketplaces`, `strictKnownMarketplaces`, and `sandbox` keys.
+The `{ "overridable": <VALUE> }` syntax applies to the `model`, `autoTier`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, `deniedMcpServers`, `extraKnownMarketplaces`, `strictKnownMarketplaces`, and `sandbox` keys.
 
 `enabledPlugins` works additively. The enterprise `managed-settings.json` sets a baseline, and an enterprise team file can add more plugins on top of it.
 
@@ -60,7 +60,7 @@ After you complete this section, your `.github-private` repository will have the
     }
     ```
 
-1. Create the team settings file under `copilot/teams/`. You can include any keys you marked as overridable, plus the additive key `enabledPlugins`. Every other key stays governed by your enterprise default.
+1. Create the team settings file under `copilot/teams/`. You can include any keys you marked as overridable, more restrictive values for `autoTier`, plus the additive key `enabledPlugins`. Every other key stays governed by your enterprise default.
 
    ```json
    {
