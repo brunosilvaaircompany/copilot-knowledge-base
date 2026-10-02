@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-04 02:10 UTC  
+> Atualizado em: 2026-10-02 21:13 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Reference same-repository actions with self-repository syntax](https://github.blog/changelog/2026-07-30-reference-same-repository-actions-with-self-repository-syntax)
+## [GitHub Actions: macOS 14 runner image retirement](https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement)
 
-**Data:** 2026-07-30  **Categorias:** `Release`, `actions`
+**Data:** 2026-10-01  **Categorias:** `Retired`, `actions`
 
-You can now reference an action or reusable workflow that lives in the same repository using the new self-repository syntax. A uses: value that starts with $/ resolves to your&#8230;
+The macOS 14 runner image will be retired on November 2, 2026. To raise awareness of the upcoming removal, jobs using macOS 14 will temporarily fail during the following scheduled&#8230;
 
-The post [Reference same-repository actions with self-repository syntax](https://github.blog/changelog/2026-07-30-reference-same-repository-actions-with-self-repository-syntax) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Actions: macOS 14 runner image retirement](https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

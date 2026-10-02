@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-07 08:09 UTC  
+> Atualizado em: 2026-10-02 21:13 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Enterprise team specialization for managed settings](https://github.blog/changelog/2026-08-03-enterprise-team-specialization-for-managed-settings)
+## [GitHub Copilot can now interact with desktop apps with computer use](https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps)
 
-**Data:** 2026-08-03  **Categorias:** `Release`, `client apps`, `copilot`, `enterprise management tools`
+**Data:** 2026-10-01  **Categorias:** `Release`, `client apps`, `copilot`
 
-Enterprise administrators can now customize managed settings by targeting enterprise teams with itemized configuration files. Large enterprises can scale governance without bottlenecking every configuration change through central administrators or one-size-fits-all&#8230;
+Computer use is now available in public preview in GitHub Copilot CLI and the GitHub Copilot app on macOS and Windows. Copilot can interact with desktop applications on your behalf&#8230;
 
-The post [Enterprise team specialization for managed settings](https://github.blog/changelog/2026-08-03-enterprise-team-specialization-for-managed-settings) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Copilot can now interact with desktop apps with computer use](https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
