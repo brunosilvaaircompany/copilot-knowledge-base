@@ -2,8 +2,8 @@
 
 ## Indice
 
-- [actions](actions.md): 1 entrada
+- [actions](actions.md): 2 entradas
 - [client-apps](client-apps.md): 1 entrada
 - [copilot](copilot.md): 2 entradas
-- [ecosystem-andamp-accessibility](ecosystem-andamp-accessibility.md): 3 entradas
+- [ecosystem-andamp-accessibility](ecosystem-andamp-accessibility.md): 2 entradas
 - [supply-chain-security](supply-chain-security.md): 3 entradas
