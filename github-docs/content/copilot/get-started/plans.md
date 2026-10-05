@@ -26,7 +26,7 @@ GitHub offers a variety of plans for Copilot. Choose between them depending on y
 
 **GitHub Copilot Business**: [Subscribe to Copilot Business](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=business).
 
-* Made for organizations an enterprises, this plan offers centralized management and Copilot policy control for organization members.
+* Made for organizations and enterprises, this plan offers centralized management and Copilot policy control for organization members.
 
 **GitHub Copilot Enterprise**: [Subscribe to Copilot Enterprise](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=enterprise).
 
