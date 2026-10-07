@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-06 14:04 UTC  
+> Atualizado em: 2026-10-07 14:21 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -22,5 +22,15 @@ The post [Copilot code review: API support and new default effort level](https:/
 As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model&#8230;
 
 The post [Selected models in GitHub Copilot deprecated](https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [GitHub Copilot weekly releases — September 28](https://github.blog/changelog/2026-10-02-github-copilot-weekly-releases-september-28)
+
+**Data:** 2026-10-02  **Categorias:** `Release`, `copilot`
+
+This week, put Copilot to work with new models, reusable workflows and desktop app automation, plus Azure canvases and VS Code improvements. GitHub Copilot Claude Sonnet 5.5 is available to&#8230;
+
+The post [GitHub Copilot weekly releases — September 28](https://github.blog/changelog/2026-10-02-github-copilot-weekly-releases-september-28) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
