@@ -11,6 +11,25 @@ Once a secret has been committed to a repository, you should consider the secret
 
 
 
+### Fixing alerts for secrets in GitHub Actions workflow logs
+
+> [!NOTE]
+> Detection of secrets in GitHub Actions workflow logs is in public preview and is subject to change.
+
+When a secret is detected in a GitHub Actions workflow log, follow these steps in order.
+
+1. Review the alert and linked job log to identify the credential and the source of the exposure. The secret may have been printed by the workflow, an action, or another dependency.
+1. Check whether the credential is still valid. {% ifversion fpt or ghec %}See [Checking a secret's validity](/code-security/tutorials/remediate-leaked-secrets/evaluating-alerts#checking-a-secrets-validity). If the credential is active or you cannot confirm its status, rotate or revoke it immediately using the secret provider's dashboard.
+1. Fix the source of the exposure. For example, update the workflow or dependency, remove hardcoded secrets, or store credentials as encrypted secrets. See [Using Secrets In GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
+1. If necessary, add `::add-mask::<value>` to redact the value from future log output.
+
+> [!WARNING]
+> Do not rerun the workflow until you have fixed the exposure source. Rerunning the workflow without addressing the root cause may re-expose the secret.
+
+{% endif %}
+
+
+
 ### Reporting a leaked secret in a private repository
 
 > [!NOTE]

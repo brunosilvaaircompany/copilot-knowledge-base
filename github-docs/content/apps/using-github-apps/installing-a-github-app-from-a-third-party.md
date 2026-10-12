@@ -51,7 +51,15 @@ Organization owners can install GitHub Apps on their organization.
 Enterprise owners can install GitHub Apps on their enterprise accounts, if the application requests enterprise permissions. The app can be owned by the enterprise{% ifversion ghes %} or organization.
 {% endif %}
 
-Repository admins can install GitHub Apps in the organization that owns the repository if the app does not request any organization permissions nor the "repository administration" permission. When doing so, they can only install the app with access to the repositories that they admin. Organization owners can restrict GitHub App installation by repository admins. When this restriction is enabled, repository admins cannot install GitHub Apps and must instead request that organization owners install the desired app. For more information, see [Limiting OAUTH App And GitHub App Access Requests And Installations](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/limiting-oauth-app-and-github-app-access-requests-and-installations).
+Repository admins can install GitHub Apps in the organization that owns the repository if the app does not request any organization permissions or the "Repository administration" permission. When doing so, they can only install the app with access to the repositories that they administer.
+
+
+
+If an organization owner has already installed an app, repository administrators can update the existing installation to give the app access to repositories that they administer. They can make this update regardless of the app's permissions because the organization owner approved those permissions when they installed the app.
+
+
+
+Organization owners can restrict GitHub App installation by repository admins. When this restriction is enabled, repository admins cannot install or add GitHub Apps for their repository and must instead request that organization owners install the desired app. For more information, see [Limiting OAUTH App And GitHub App Access Requests And Installations](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/limiting-oauth-app-and-github-app-access-requests-and-installations).
 
 
 Organization members and outside collaborators that cannot install an app on the organization can still select the organization during the install process. Instead of installing the app, GitHub will send a notification to the organization owner to request the organization owner to install the app. The ability to make these requests can be controlled using app access request policies. See [Limiting OAUTH App And GitHub App Access Requests And Installations](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/limiting-oauth-app-and-github-app-access-requests-and-installations).

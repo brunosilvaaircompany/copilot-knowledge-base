@@ -1,8 +1,5 @@
 # Quickstart for stacked pull requests
 
-> [!NOTE] This feature is in public preview and is subject to change.
-
-
 Use stacked pull requests to break large code changes into a chain of smaller, dependent pull requests that you can review and merge independently.
 
 A stack is a series of pull requests in the same repository where each pull request targets the branch of the pull request below it, forming an ordered chain that lands on a single branch, typically your main branch. Instead of one large pull request, you get a set of smaller pull requests. Since each pull request has its own focused diff, teammates can review and approve each layer independently.

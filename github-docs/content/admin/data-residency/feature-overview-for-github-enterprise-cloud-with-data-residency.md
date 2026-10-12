@@ -41,6 +41,7 @@ The following features are either specific to GHE.com or work differently compar
 * [Retirement of namespaces for actions accessed on GitHub.com](#retirement-of-namespaces-for-actions-accessed-on-githubcom)
 * [GitHub Connect](#github-connect)
 * [GitHub Codespaces](#github-codespaces)
+* [Commit signature verification](#commit-signature-verification)
 
 ### API access
 
@@ -100,3 +101,9 @@ To enable GitHub Connect, you must configure your GitHub Enterprise Server insta
 GitHub Codespaces on GHE.com is available in all GitHub Enterprise Cloud with data residency regions.
 
 To use GitHub Codespaces from VS Code desktop with an enterprise on GHE.com, you must configure the `Github-enterprise: Uri` and `Github > Codespaces: Auth Provider` settings. For more information, see [Using GitHub Codespaces In Visual Studio Code](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code#connecting-to-an-enterprise-on-ghecom).
+
+### Commit signature verification
+
+Commits created through the web interface are signed with a web commit signing key for GHE.com. It is not the key used by GitHub.com, so web commits migrated from GitHub.com may show as "Unverified".
+
+Users must add their GPG or SSH signing keys to their account on GHE.com. They must also verify the committer email address on their commits with that account. After users complete both steps, their signed commits show as "Verified". See [About Migrations Between GitHub Products](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/about-migrations-between-github-products#commit-signature-verification).

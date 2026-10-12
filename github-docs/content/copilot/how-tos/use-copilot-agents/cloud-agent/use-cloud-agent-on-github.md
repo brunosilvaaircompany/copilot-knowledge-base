@@ -4,7 +4,7 @@
 
 You can start Copilot cloud agent sessions from several places on GitHub. Once a session is running, you can monitor its progress, steer it with follow-up prompts, and iterate on the resulting pull request—all without leaving the browser.
 
-For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+For more information about Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
 You can also start partner-built agents from these same entry points using agent apps. For more information, see [Use Agent Apps](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-agent-apps).
 
@@ -180,7 +180,7 @@ You can delegate review comments to have Copilot implement feedback from human r
 1. Navigate to the first review comment you want Copilot to implement.
    * To delegate one comment, click **Fix with Copilot**.
    * To delegate multiple comments, click **Add to batch**. Continue to add the comments you want Copilot to work on.
-1. In the **Manage batch** panel, add any additional instructions, and optionally select a model with the model picker. 
+1. In the **Manage batch** panel, add any additional instructions, and optionally select a model with the model picker.
 1. Choose how you want Copilot to apply the changes:
    * To commit the changes directly to the branch, click **{% octicon "agent" aria-label="The Agents icon" %} Fix and commit**.
    * To have Copilot create a new pull request with the changes, click **Fix and open pull request** from the dropdown menu.
@@ -231,6 +231,6 @@ Use the feedback buttons on Copilot's pull requests and comments to rate the out
 
 ## Further reading
 
-* [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)
 * [Get The Best Results](https://docs.github.com/en/copilot/tutorials/cloud-agent/get-the-best-results)
 * [Troubleshoot Cloud Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/troubleshoot-cloud-agent)

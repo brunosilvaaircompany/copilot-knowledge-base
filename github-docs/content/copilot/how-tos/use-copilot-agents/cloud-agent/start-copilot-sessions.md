@@ -19,4 +19,4 @@ You can also start sessions automatically, on a schedule or in response to event
 
 Copilot will start working on the task in the background. Some entry points open a pull request automatically. In other cases, you can prompt Copilot to open a pull request, or create a pull request when Copilot finishes work, from the session logs.
 
-For more information, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+For more information, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).

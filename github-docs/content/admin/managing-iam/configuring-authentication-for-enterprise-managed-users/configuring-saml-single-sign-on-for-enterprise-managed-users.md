@@ -90,7 +90,6 @@ After the initial configuration of SAML SSO, the only setting you can update on 
    > If you need to reset the password for your setup user, contact GitHub Support through the [GitHub Support portal](https://support.github.com). The usual password reset option by providing your email address will not work.
 
 
-1. If you're using a **non-partner IdP** (an IdP other than Okta, PingFederate or Entra ID), before enabling SAML, you must update a setting so that you will be able to set up SCIM using the REST API. See [Configuring Scim Provisioning For Users](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users#configuring-provisioning-for-other-identity-management-systems).
 
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
 
@@ -117,6 +116,7 @@ After the initial configuration of SAML SSO, the only setting you can update on 
 
 1. To ensure you can still access your enterprise on GitHub if your IdP is unavailable in the future, click **Download**, **Print**, or **Copy** to save your recovery codes. For more information, see [Downloading Your Enterprise Accounts Single Sign On Recovery Codes](https://docs.github.com/en/admin/managing-iam/managing-recovery-codes-for-your-enterprise/downloading-your-enterprise-accounts-single-sign-on-recovery-codes).
 
+1. If you're using a **non-partner IdP** (an IdP other than Okta, PingFederate or Entra ID), after enabling SAML, you must update a setting so that you will be able to set up SCIM using the REST API. See [Configuring Scim Provisioning For Users](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users#configuring-provisioning-for-other-identity-management-systems).
 
 ### Enable provisioning
 

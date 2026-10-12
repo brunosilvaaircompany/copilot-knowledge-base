@@ -48,6 +48,8 @@ In addition to reviewing GitHub Apps that you have installed, you can review Git
 
 ## Modifying repository access
 
+Organization owners can change the repository access for an app installed on their organization. Repository administrators can also add their repositories to an existing installation regardless of the app's permissions. The organization owner approved these permissions when they installed the app.
+
 1. Navigate to the GitHub App you want to modify. For more information, see [Navigating to the GitHub App you want to review or modify](#navigating-to-the-github-app-you-want-to-review-or-modify).
 1. Under "Repository access," select **All repositories** or **Only select repositories**.
 1. If you selected **Only select repositories** in the previous step, under the **Select repositories** dropdown, select the repositories that you want the GitHub App to access.

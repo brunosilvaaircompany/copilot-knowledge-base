@@ -119,5 +119,5 @@ You can view and share feedback in our [discussion forum](https://github.com/org
 
 ## Further reading
 
-* [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)
 * [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access)

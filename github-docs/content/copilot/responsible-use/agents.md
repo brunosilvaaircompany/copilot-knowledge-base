@@ -204,7 +204,7 @@ Copilot agentic features have been subject to RAI red teaming to identify and ad
 * **Permission prompts for file modifications**: Copilot CLI asks for permission before modifying files. You should ensure it is modifying the correct files before granting permission.
 * **Permission prompts for command execution**: Copilot CLI asks for permission before executing commands that may be dangerous. You should review these commands carefully before giving permission to run.
 * **Configurable permissions**: You can grant Copilot CLI specific permissions, or all permissions, by using the various command line options: for example, `--allow-tool=[TOOLS...]`, `--allow-all-tools`, `--allow-all` (or its slash command equivalent `/allow-all` for use in an interactive session). For more information, see [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#command-line-options). Typically, when you use Copilot CLI in autopilot mode, you will grant it full permissions to allow it to complete a task autonomously, without requiring you to approve activity as it works on the task. For more information, see [Autopilot](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot).
-* **Security considerations**: For more information about security practices while using Copilot CLI, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli#security-considerations).
+* **Security considerations**: For more information about security practices while using Copilot CLI, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli#security-considerations).
 
 ### Computer use in GitHub Copilot CLI and GitHub Copilot app
 
@@ -306,8 +306,8 @@ For additional guidance on the responsible use of Copilot agentic features, we r
 * [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall)
 * [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart)
 * [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers)
-* [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli)
-* [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)
+* [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli)
+* [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app)
 * [Computer Use](https://docs.github.com/en/copilot/concepts/agents/computer-use)
 * [GitHub Terms For Additional Products And Features](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot)
 * [Copilot Trust Center](https://copilot.github.trust.page/)

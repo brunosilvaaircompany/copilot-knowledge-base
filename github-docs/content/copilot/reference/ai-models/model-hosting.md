@@ -33,6 +33,7 @@ All input requests and output responses processed by GitHub Copilot's models con
 Used for:
 
 * Claude Haiku 4.5
+* Claude Haiku 5.5
 * Claude Sonnet 4.6
 * Claude Sonnet 5
 * Claude Sonnet 5.5

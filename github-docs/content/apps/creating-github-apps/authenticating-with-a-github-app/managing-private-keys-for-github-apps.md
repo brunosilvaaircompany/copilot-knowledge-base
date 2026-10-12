@@ -36,7 +36,8 @@ To generate a private key:
      1. In the left sidebar, under "Settings",{% elsif ghes %} click **Settings**, then click **GitHub Apps**.
 
 1. Next to the GitHub App that you want to generate a private key for, click **Edit**.
-1. Under "Private keys", click **Generate a private key**.
+1. In the left sidebar, click **{% octicon "key" aria-hidden="true" aria-label="code" %} Credentials**, then click **{% octicon "key" aria-hidden="true" aria-label="code" %} Key pairs**.
+1. Click **New key**.
 1. You will see a private key in PEM format downloaded to your computer. Make sure to store this file because GitHub only stores the public portion of the key. For more information about securely storing your key, see [Storing private keys](#storing-private-keys).
 
 > [!NOTE]
@@ -48,9 +49,9 @@ GitHub generates a fingerprint for each private and public key pair using the SH
 
 To verify a private key:
 
-1. Find the fingerprint for the private and public key pair you want to verify in the "Private keys" section of the settings page for your GitHub App. For more information, see [Generating private keys](#generating-private-keys).
+1. Find the fingerprint for the private and public key pair you want to verify in the "Credentials" section of the settings for your GitHub App. For more information, see [Generating private keys](#generating-private-keys).
 
-   ![Screenshot of a private key in a GitHub App settings page. The fingerprint, the part of the private key after the colon, is outlined in dark orange.](/assets/images/github-apps/github-apps-private-key-fingerprint.png)
+   ![Screenshot of a private key in a GitHub App settings page.](/assets/images/github-apps/github-apps-private-key-fingerprint-new.png)
 1. Generate the fingerprint of your private key (PEM) locally by using the following command:
 
     ```shell
@@ -80,7 +81,8 @@ You can remove a lost or compromised private key by deleting it, but you must re
 1. In the left sidebar, click **GitHub Apps**.
 
 1. Next to the GitHub App that you want to delete a private key for, click **Edit**.
-1. Under "Private keys", to the right of the private key you want to delete, click **Delete**.
+1. In the left sidebar, click **{% octicon "key" aria-hidden="true" aria-label="code" %} Credentials**, then click **{% octicon "key" aria-hidden="true" aria-label="code" %} Key pairs**.
+1. Under "Key pairs", to the right of the private key you want to delete, click **Delete**.
 1. When prompted, confirm you want to delete the private key by clicking **Delete**. If your GitHub App has only one key, you will need to generate a new key before deleting the old key. For more information, see [Generating private keys](#generating-private-keys).
 
 ## Storing private keys

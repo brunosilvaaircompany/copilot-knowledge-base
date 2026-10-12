@@ -1,7 +1,7 @@
 # Billing for cloud and local sandboxes for GitHub Copilot
 
 > [!NOTE]
-> Cloud and local sandboxes for GitHub Copilot are in public preview and subject to change.
+> Cloud sandboxes for GitHub Copilot are in public preview and subject to change.
 
 
 ## How sandbox usage is measured

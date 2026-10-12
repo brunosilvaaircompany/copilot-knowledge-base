@@ -17,6 +17,8 @@ You can pay for metered usage of GitHub features through Azure by connecting an 
 
 * You must be logged into Azure as a user who is able to provide tenant-wide admin consent or arrange to work with a Microsoft Entra Global Administrator to configure an admin consent workflow. See [Azure Subscriptions](https://docs.github.com/en/billing/concepts/azure-subscriptions).
 
+>[!NOTE] If your organization or enterprise has recently signed up for GitHub Copilot with a credit card or PayPal, you may not be able to change your payment method to an Azure subscription. Please [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
+
 ## Connecting your Azure subscription to an organization or enterprise account
 
 1. Navigate to your organization or enterprise. For example, from the [Organizations](https://github.com/settings/organizations?ref_product=github&ref_type=engagement&ref_style=text) or [Enterprises](https://github.com/settings/enterprises?ref_product=ghec&ref_type=engagement&ref_style=text) pages on GitHub.com.

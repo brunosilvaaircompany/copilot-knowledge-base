@@ -50,7 +50,7 @@ Use **Manage sessions** to view, search, and filter sessions and chats, includin
 ## Using cloud and local sandboxes
 
 > [!NOTE]
-> Cloud and local sandboxes for GitHub Copilot are in public preview and subject to change.
+> Cloud sandboxes for GitHub Copilot are in public preview and subject to change.
 
 
 Cloud and local sandboxes protect sessions in different ways:
@@ -58,7 +58,7 @@ Cloud and local sandboxes protect sessions in different ways:
 * **Cloud sandbox**: Runs the entire session in an isolated environment hosted by GitHub. Use a cloud sandbox when you want to keep the session off your machine or run several resource-intensive tasks in parallel. Choose the cloud sandbox execution location when starting a session.
 * **Local sandbox**: Runs the session on your machine, but restricts the filesystem, network, and credential access available to agent-run tools. Use local sandboxing when the agent needs your local tools or development services, but you want to limit its access to the rest of your machine. Configure the default for new local repository and working tree sessions in the project settings, or use `/sandbox on` or `/sandbox off` to change an active local session.
 
-Local sandboxing does not apply to cloud sandbox sessions or sessions that run on a remote host. For more information about how both types of sandbox work, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes). To enable and configure local sandboxing, see [Configure Local Sandboxing](https://docs.github.com/en/copilot/how-tos/github-copilot-app/configure-local-sandboxing).
+Local sandboxing does not apply to cloud sandbox sessions or sessions that run on a remote host. For more information about how both types of sandbox work, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes). To enable local sandboxing, see [Using Local Sandboxing](https://docs.github.com/en/copilot/how-tos/cloud-and-local-sandboxes/using-local-sandboxing).
 
 ## Using `/security-review` in app sessions
 

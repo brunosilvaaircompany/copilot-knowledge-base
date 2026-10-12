@@ -95,7 +95,7 @@ When you start a session from Copilot Chat, it incorporates the context of your 
 
 When a session is complete, or when you are viewing a pull request Copilot created, you can ask what changed, what was validated, and why, and Copilot will answer by drawing on the session logs. You can also start another session directly from Copilot Chat.
 
-For more information, see [Chat](https://docs.github.com/en/copilot/concepts/chat) and [Explore Pull Requests](https://docs.github.com/en/copilot/tutorials/explore-pull-requests).
+For more information, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github) and [Explore Pull Requests](https://docs.github.com/en/copilot/tutorials/explore-pull-requests).
 
 ## Further reading
 

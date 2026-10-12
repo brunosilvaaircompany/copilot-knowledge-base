@@ -1,6 +1,6 @@
 # Getting started with the GitHub Copilot app
 
-For a conceptual overview of the GitHub Copilot app, see [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app).
+For a conceptual overview of the GitHub Copilot app, see [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app).
 
 In this quickstart, you will:
 

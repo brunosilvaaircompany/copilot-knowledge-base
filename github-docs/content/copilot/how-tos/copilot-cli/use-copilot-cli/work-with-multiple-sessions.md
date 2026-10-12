@@ -30,7 +30,7 @@ The sidebar is a panel that opens alongside your current chat. Because it sits b
 
 ### Opening and closing the sidebar
 
-From your conversation, while there is nothing in the prompt input field, press <kbd>←</kbd> to open the sidebar and move focus into it. Press <kbd>→</kbd> to move focus back to the conversation, and again to close the sidebar. If you prefer Vim-style keys, <kbd>h</kbd> and <kbd>l</kbd> work the same way while the sidebar has focus.
+From your conversation, while there is nothing in the prompt input field, press <kbd>←</kbd> to open the sidebar, then press <kbd>←</kbd> again to move focus into it. Press <kbd>→</kbd> to move focus back to the conversation, and again to close the sidebar. If you prefer Vim-style keys, <kbd>l</kbd> works the same as <kbd>→</kbd> while the sidebar has focus.
 
 ### Moving between sessions
 
@@ -48,7 +48,7 @@ You can manage your sessions right from the sidebar:
 * Press <kbd>x</kbd> twice to **close** the highlighted session.
 
   > [!NOTE]
-  > Sessions that are running are ended, saved, and removed from the sidebar. Sessions that are not running are simply removed from the sidebar. Sessions you remove in this way are not displayed in the sidebar in future sessions unless you resume the session—for example, from the <code>>/resume</code> session picker.
+  > The session is permanently deleted, whether or not it was still running. You won't be able to resume a session that's been removed this way.
 
 
 At the top of the sidebar are two header buttons: **←** (to close the sidebar) and **+** (to start a new session). Press <kbd>↑</kbd> past the top of the list to move onto this button row, then <kbd>Tab</kbd> to switch between the buttons and <kbd>Enter</kbd> to activate one. You can also click a button directly.
@@ -155,9 +155,10 @@ Sessions can also run **remotely**. When you delegate a task with [`/delegate`](
 
 ### Stopping a session
 
-To stop the session you are currently working in, use the `/exit` slash command. Alternatively, you can stop a session from the sidebar by highlighting it and pressing <kbd>x</kbd>. This stops the session and removes it from the sidebar until you resume it.
+To stop the session you are currently working in without deleting it, use the `/exit` slash command. The session is saved and you can resume it later.
 
-Stopping a session doesn't delete it. The session is saved and you can resume it later.
+Alternatively, you can permanently delete a session from the sidebar by highlighting it and pressing <kbd>x</kbd> twice. The session is permanently deleted, whether or not it was still running. You won't be able to resume a session that's been removed this way.
+
 
 You don't have to stop sessions. Leaving them running lets you switch back instantly with their full context. But you might stop one to halt work you no longer want: for example, a session running in autopilot mode, or a session running a prompt that you scheduled with `/every` or `/after`. You might also choose to stop a session to free up memory, or just to reduce clutter in the sidebar.
 
@@ -178,7 +179,7 @@ You can manage sessions with slash commands from inside any session:
 | `/session checkpoints [N]` | Show the session's checkpoints. |
 | `/session cleanup`, `/session prune` | Housekeeping for old or stale session data. |
 | `/session delete [ID]`, `/session delete-all` | Delete a session, or all of them. |
-| `/exit`, `/quit` | Close the current session. If others are open, the newest remaining one comes to the foreground. The CLI quits only when you close the last session. |
+| `/exit`, `/quit` | Close the current session. If others are open, the nearest remaining one in the sidebar order comes to the foreground. The CLI quits only when you close the last session. |
 
 ## Customizing the sidebar
 

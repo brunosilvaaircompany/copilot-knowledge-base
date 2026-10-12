@@ -1,8 +1,5 @@
 # About stacked pull requests
 
-> [!NOTE] This feature is in public preview and is subject to change.
-
-
 ## About stacked pull requests
 
 Stacked pull requests are two or more pull requests in the same repository, where:

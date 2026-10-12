@@ -1,7 +1,7 @@
 # Enabling or disabling cloud sandboxes for your organization or enterprise
 
 > [!NOTE]
-> Cloud and local sandboxes for GitHub Copilot are in public preview and subject to change.
+> Cloud sandboxes for GitHub Copilot are in public preview and subject to change.
 
 
 ## About enabling and disabling cloud sandboxes

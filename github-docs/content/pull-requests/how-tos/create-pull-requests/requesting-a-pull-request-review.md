@@ -6,6 +6,10 @@ To request a review, you need write access to the repository. You can request a 
 
 Suggested reviewers are based on [git blame data](/repositories/working-with-files/using-files/viewing-and-understanding-files). After someone reviews your pull request and you make changes, you can request another review from the same reviewer.
 
+> [!WARNING]
+> Requesting a review from a large team can notify every team member. You can reduce notifications by enabling auto assignment, or by enabling **Only notify requested team members** and also requesting a specific team member. See [Managing Code Review Settings For Your Team](https://docs.github.com/en/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team).
+
+
 1. Under your repository name, click **{% octicon "git-pull-request" aria-hidden="true" aria-label="git-pull-request" %} Pull requests**.
 
 1. In the list of pull requests, click the pull request that you want a specific person or team to review.

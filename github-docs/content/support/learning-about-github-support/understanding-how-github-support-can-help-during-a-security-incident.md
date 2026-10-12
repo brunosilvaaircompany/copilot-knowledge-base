@@ -32,6 +32,12 @@ GitHub Support handles all security-related matters in writing through support t
 
 GitHub Support does not join or lead your incident response process. To investigate and contain a threat, use GitHub's audit log, security, and access-management tools.
 
+### No revert or point-in-time restore
+
+GitHub Support cannot revert changes, restore deleted data, or roll a branch or repository back to a point in time before an incident. Recovering your data is [outside the scope of Support](/support/learning-about-github-support/about-github-support#scope-of-support). 
+
+To review changes made to a repository, use the activity view. You can see a detailed history of changes, such as pushes, merges, force pushes, and branch changes, and associates these changes with commits and authenticated users. See [Using The Activity View To See Changes To A Repository](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/using-the-activity-view-to-see-changes-to-a-repository).
+
 ### No log preservation
 
 GitHub Support cannot fulfill requests to preserve logs or audit data, extend their retention periods, or place them on hold for your investigation. Opening a support ticket does not change how long data remains available. To retain data for an investigation, export it while it is available or configure audit log streaming in advance to storage you control.

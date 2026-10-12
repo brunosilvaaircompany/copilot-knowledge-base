@@ -164,6 +164,7 @@ After each migration has finished, you will need to complete some additional tas
 * [Reinstalling GitHub Apps](#reinstalling-github-apps)
 * [Recreating teams](#recreating-teams)
 * [Reclaiming mannequins](#reclaiming-mannequins)
+* [Restoring commit signature verification](#restoring-commit-signature-verification)
 
 ### Checking the migration status
 
@@ -322,3 +323,26 @@ After you run a migration with GitHub Enterprise Importer or Enterprise Live Mig
 1. Reclaim mannequins. You can reattribute the history for each mannequin to an organization member with the GitHub CLI or in your browser. If you use the GitHub CLI, you can reclaim mannequins in bulk.
  For more information, see [Reclaiming Mannequins For GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/completing-your-migration-with-github-enterprise-importer/reclaiming-mannequins-for-github-enterprise-importer).
 1. If any of the members do not already have appropriate access to the repository via team membership, give the members access to the repository. For more information, see [Managing An Individuals Access To An Organization Repository](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-an-individuals-access-to-an-organization-repository).
+
+
+### Restoring commit signature verification
+
+Commit signatures are verified against the signing keys known to the destination, so verification does not always carry over when you migrate.
+
+* **Commits signed by GitHub.** Commits created through the web interface are signed with a web commit signing key for the deployment where the commit was made. GitHub.com, each GitHub Enterprise Server instance, and GHE.com use different keys. Keys can also differ between GHE.com regions.
+
+  As a result, migrated web commits may show as "Unverified" at the destination.
+
+  * On GitHub Enterprise Server, web commit signing is optional. A site administrator configures the key and the account that holds it, so an administrator can add a key.
+  * On GitHub.com and GHE.com, the account is owned by GitHub. If your destination is one of these platforms and your commits are affected, contact [GitHub Support](https://support.github.com).
+
+* **Commits signed by users.** Users' GPG and SSH signing keys are not migrated. For their migrated commits to show as "Verified", users must:
+
+  * Add their signing key to their account at the destination
+  * Verify the commit's committer email address on that account
+
+  After users complete both steps, the "Verified" status is restored on commits that have already been migrated. You do not need to migrate again. See [Adding A Gpg Key To Your GitHub Account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account), [Adding A New SSH Key To Your GitHub Account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and [Associating An Email With Your Gpg Key](https://docs.github.com/en/authentication/managing-commit-signature-verification/associating-an-email-with-your-gpg-key). 
+
+Migrations between organizations within GitHub.com are not affected, because the source and the destination use the same web commit signing key, and users' own signing keys remain on their accounts.
+
+For more information about how verification works, see [About Commit Signature Verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).

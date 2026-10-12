@@ -51,4 +51,4 @@ Cloud agent processes images—such as screenshots, sketches, or designs—as pa
 
 ## Further reading
 
-* [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)

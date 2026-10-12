@@ -81,5 +81,5 @@ After you trigger Copilot cloud agent from a Linear issue, you can continue to d
 
 ## Further reading
 
-* [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)
 * [Cloud Agent Access](https://docs.github.com/en/copilot/concepts/enterprise/cloud-agent-access)

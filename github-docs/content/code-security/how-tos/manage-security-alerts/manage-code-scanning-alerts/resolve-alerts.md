@@ -16,7 +16,7 @@ With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to b
 
 You can assign a code scanning alert to Copilot to have it fix the alert for you. Assigning the alert starts an agent session: Copilot cloud agent explores your codebase, generates a fix, validates it, and opens a pull request.
 
-Each agentic autofix session is billed as a Copilot cloud agent session and consumes AI credits. See [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#copilot-cloud-agent-usage-costs).
+Each agentic autofix session is billed as a Copilot cloud agent session and consumes AI credits. See [Billing And Usage](https://docs.github.com/en/copilot/concepts/billing-and-usage).
 
 To assign an individual alert to Copilot:
 

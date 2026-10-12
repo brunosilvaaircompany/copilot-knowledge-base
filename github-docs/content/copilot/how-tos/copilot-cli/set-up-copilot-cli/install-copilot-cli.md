@@ -1,4 +1,4 @@
-To find out about Copilot CLI before you install it, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli).
+To find out about Copilot CLI before you install it, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli).
 
 ## Prerequisites
 

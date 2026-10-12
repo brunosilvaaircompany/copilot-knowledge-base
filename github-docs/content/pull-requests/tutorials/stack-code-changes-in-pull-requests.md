@@ -1,8 +1,5 @@
 # Stack code changes in pull requests
 
-> [!NOTE] This feature is in public preview and is subject to change.
-
-
 Large pull requests are difficult to review and create bottlenecks, especially when you generate a high volume of code in a short time. Review quality also degrades as pull request size increases. Reviewers may skim the result, miss issues, or procrastinate and leave the pull request until it grows stale and develops merge conflicts.
 
 Stacked pull requests keep large code changes reviewable. 

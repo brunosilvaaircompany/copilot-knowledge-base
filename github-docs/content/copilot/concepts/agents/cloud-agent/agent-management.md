@@ -14,7 +14,7 @@ Utilizing custom agents you can build out a team of task-specific agents with cu
 
 Model choice allows you to choose from a selection of AI models to use with your agents, each with its own particular strengths. See [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
 
-To learn more about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+To learn more about Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
 ## Managing agents
 

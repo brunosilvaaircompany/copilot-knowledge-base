@@ -6,6 +6,10 @@ As a GitHub Enterprise Cloud organization owner, you and your designated users c
 
 > [!NOTE] Currently, this feature supports only the `core` category of REST API endpoints and primary rate limits. API activity for search, GitHub Actions (using the [`GITHUB_TOKEN`](/actions/tutorials/authenticate-with-github_token) secret), and secondary rate-limiting are not supported. For information about API categories, see [Rate Limit](https://docs.github.com/en/rest/rate-limit/rate-limit). To learn more about primary and secondary rate limits, see [Rate Limits For The Rest API](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api).
 
+API insights only includes REST API requests sent to an API hostname, such as `api.github.com` or `api.SUBDOMAIN.ghe.com` for GitHub Enterprise Cloud with data residency. It does not include API routes served through a web hostname, such as `github.com` or `SUBDOMAIN.ghe.com`. For example, a `GET /user/repos` request sent to `SUBDOMAIN.ghe.com` is excluded from API insights.
+
+Requests to API routes through a web hostname can consume the same primary rate limit as requests through an API hostname. As a result, the totals shown in API insights can be lower than the usage reported by `GET /rate_limit` or the `x-ratelimit-*` response headers. Ordinary web page loads, Git operations, and raw-content requests are also outside the scope of API insights.
+
 ## Enabling access to API insights
   
 Organization owners can create custom organization roles to allow people to view API insights for their organization. To provide users with access, select the **View organization API insights** permission when creating a custom organization role. Then assign the custom role to an organization member or team. For more information, see [Permissions Of Custom Organization Roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/permissions-of-custom-organization-roles).

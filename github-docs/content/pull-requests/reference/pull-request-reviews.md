@@ -21,6 +21,11 @@ Reviewers can also comment on specific lines, suggest exact changes, and discuss
 Reviews can be requested from specific people or teams when they need feedback from the right experts.
 
 To request a review, you need write access to the repository. You can request a review from a person or team with read access to the repository, and they receive a notification.
+
+> [!WARNING]
+> Requesting a review from a large team can notify every team member. You can reduce notifications by enabling auto assignment, or by enabling **Only notify requested team members** and also requesting a specific team member. See [Managing Code Review Settings For Your Team](https://docs.github.com/en/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team).
+
+
 * Pull request authors can request reviews only if they are repository owners or collaborators with write access. 
 * Organization members with write access or triage permissions can also assign a reviewer for a pull request.
 * If you request a review from a team and code review assignment is enabled, specific members will be requested and the team will be removed as a reviewer.

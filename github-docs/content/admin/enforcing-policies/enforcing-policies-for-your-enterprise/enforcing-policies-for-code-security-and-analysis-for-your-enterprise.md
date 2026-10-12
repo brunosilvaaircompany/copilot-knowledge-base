@@ -123,6 +123,26 @@ Across all of your enterprise's organizations, you can allow or disallow people 
 
 
 
+## Enforcing a policy for secret scanning in GitHub Actions workflow logs
+
+As an enterprise owner, you can choose whether GitHub scans GitHub Actions workflow logs for secrets. This policy is disabled by default.
+
+When you enable the policy, GitHub scans the logs of new workflow runs in all repositories in your enterprise where secret scanning is enabled.
+
+
+1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
+
+
+1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
+
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+
+1. Under "Secret scanning for Actions workflow logs", select the **All repositories** dropdown menu, then click **Enabled** or **Disabled**.
+
+
+
+
+
 ## Enforcing a policy to manage the use of Copilot Autofix in your enterprise's repositories
 
 Across all of your enterprise's organizations, you can allow or disallow people with admin access to repositories to manage where Copilot Autofix is enabled for Code Security results. GitHub Code Security must be enabled for the organization for this policy to take effect.

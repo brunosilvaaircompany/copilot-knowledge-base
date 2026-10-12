@@ -19,6 +19,7 @@ Enabling the FedRAMP policy restricts users to the following models:
 * GPT-5.2
 * GPT-5.3-Codex
 * Claude Haiku 4.5
+* Claude Haiku 5.5
 * Claude Sonnet 5
 * Claude Sonnet 5.5
 * Claude Opus 4.8

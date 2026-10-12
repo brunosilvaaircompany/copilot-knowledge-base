@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide describes how to use Copilot Chat and agents to automate coding tasks by breaking them into steps, using tools to read files, edit code, and run commands, and self-correcting when something goes wrong. You can also ask general questions about software development, or specific questions about the code in your project. For more information, see [Chat](https://docs.github.com/en/copilot/concepts/chat).
+This guide describes how to use Copilot Chat and agents to automate coding tasks by breaking them into steps, using tools to read files, edit code, and run commands, and self-correcting when something goes wrong. You can also ask general questions about software development, or specific questions about the code in your project. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides).
 
 To learn how to use Copilot for agent-driven workflows in a desktop app, see [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app).
 
@@ -375,13 +375,13 @@ The following agents are available:
 * **Ask mode**: Get quick answers and assistance without making code changes.
 * **Plan mode**: Collaborate on planning before implementation—Copilot analyzes your request and builds a structured plan for your review. See [Use Plan Mode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-plan-mode).
 * **Edit mode**: Make controlled edits across multiple files that you review and accept individually.
-* **Copilot CLI**: Runs Copilot through Copilot CLI, providing a terminal-first agentic experience with support for multiple isolation modes, live session progress, and tool call visibility. For more information, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli).
+* **Copilot CLI**: Runs Copilot through Copilot CLI, providing a terminal-first agentic experience with support for multiple isolation modes, live session progress, and tool call visibility. For more information, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli).
 * **Custom agents**: Use personalized agents tailored to your specific needs. See [Use Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-custom-agents).
 
 Copilot Edits lets you make changes across multiple files directly from a single Copilot Chat prompt, using edit mode and agent mode.
 
 > [!TIP]
-> You can also access Copilot from JetBrains AI Assistant without installing the Copilot plugin. For more information, see [Copilot In Jetbrains](https://docs.github.com/en/copilot/concepts/agents/copilot-in-jetbrains).
+> You can also access Copilot from JetBrains AI Assistant without installing the Copilot plugin. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides).
 
 ### Using edit mode
 

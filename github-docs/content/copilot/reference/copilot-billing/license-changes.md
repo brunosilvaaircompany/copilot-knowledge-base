@@ -85,7 +85,7 @@ Additionally:
 
 | Scenario                        | Plan                | When is billing affected? | Is proration applied? | When does access change? | Refund for unused time? |
 |----------------------------------|---------------------|--------------------------|----------------------|--------------------------|-------------------------|
-| Add seat/license                 | Copilot Business, Copilot Enterprise| Immediately             | Yes                  | Immediately              | N/A                     |
+| Add seat/license                 | Copilot Business, Copilot Enterprise| Immediately (upfront payment for credit card or PayPal)             | Yes                  | Immediately  (AI credits may be prorated)            | N/A                     |
 | Remove seat/license              | Copilot Business, Copilot Enterprise| End of cycle             | N/A                  | End of cycle (immediately if revoked) | No                      |
 | Cancel subscription              | All plans           | End of cycle            | N/A                  | End of cycle            | No                      |
 | Upgrade plan    | Copilot Pro, Copilot Pro+, and Copilot Max           | Immediate                | No                  | Immediately              | N/A |

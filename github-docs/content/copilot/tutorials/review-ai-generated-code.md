@@ -60,7 +60,7 @@ Be vigilant with new packages and libraries.
 * Review licensing. Avoid introducing code or dependencies that are incompatible with your project’s license (for example, AGPL-3.0 in a MIT licensed project, or dependencies with no declared license).
 * Watch out for hallucinated or suspicious packages (such as packages that don't actually exist), or slopsquatting (a theoretical attack on LLMs using fake or malicious packages).
 * [Creating Templates](https://docs.github.com/en/copilot/tutorials/copilot-cookbook/communicate-effectively/creating-templates) demonstrates how Copilot can assist with dependency setup, however it is good practice to always verify suggested packages yourself.
-* Use [Code Referencing](https://docs.github.com/en/copilot/concepts/completions/code-referencing) to review matches with publicly available code.
+* Use [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#references-to-matching-public-code) to review matches with publicly available code.
 
 ### Example prompts
 

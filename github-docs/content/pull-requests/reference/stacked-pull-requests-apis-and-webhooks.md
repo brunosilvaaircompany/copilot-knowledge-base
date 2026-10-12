@@ -1,8 +1,5 @@
 # Stacked pull requests APIs and webhooks
 
-> [!NOTE] This feature is in public preview and is subject to change.
-
-
 The GitHub REST and GraphQL APIs both expose stacked pull requests. The REST API supports reading and managing stacks, while the GraphQL API supports read-only queries.
 
 Use the API to read a pull request's stack membership or to build your own automation and integrations for stacked pull requests.

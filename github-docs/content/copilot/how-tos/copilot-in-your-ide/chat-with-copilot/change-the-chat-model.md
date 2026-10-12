@@ -123,7 +123,7 @@ For reasoning models that support configurable thinking effort, you can control 
 
 
 > [!TIP]
-> Model selection is also available when using Copilot through JetBrains AI Assistant. For more information, see [Copilot In Jetbrains](https://docs.github.com/en/copilot/concepts/agents/copilot-in-jetbrains).
+> Model selection is also available when using Copilot through JetBrains AI Assistant. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides).
 
 {% endjetbrains %}
 

@@ -85,5 +85,5 @@ You can choose whether the models you have added are available to organizations 
 ## Further reading
 
 * [Enable Custom Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models) in our documentation for organizations.
-* [Chat](https://docs.github.com/en/copilot/concepts/chat)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)
 * [Supported Surfaces For Policies](https://docs.github.com/en/copilot/reference/supported-surfaces-for-policies)

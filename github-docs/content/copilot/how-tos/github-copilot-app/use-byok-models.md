@@ -1,9 +1,9 @@
-# Using your own LLM models in the GitHub Copilot app
+# Adding LLM models to the GitHub Copilot app
 
 > [!NOTE]
 > Support to use your own model provider in the GitHub Copilot app is in public preview and subject to change.
 
-You can configure the GitHub Copilot app to use your own LLM provider, also called BYOK (Bring Your Own Key), instead of GitHub-hosted models. You can set up your model provider when you first open the app or later in app settings.
+You can configure the GitHub Copilot app to include models from an LLM provider of your choice—using BYOK (Bring Your Own Key)—in addition to the GitHub-hosted models. You can set up your model provider when you first open the app or later in app settings.
 
 You must sign in with a GitHub account to use the app, but you do not need a Copilot plan if you use your own model provider. If you do have a Copilot plan, you can use both your own model provider and GitHub-hosted models in the same app.
 

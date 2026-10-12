@@ -95,6 +95,15 @@ If the plan does not appear after following the checkout steps [when subscribing
 1. If payment method verification failed or you did not complete the activation step, retry the checkout flow.
 1. If you completed activation and the plan still does not appear, contact [GitHub Support](https://support.github.com).
 
+### Plan canceled after a failed renewal
+
+If your personal Copilot Pro or Copilot Pro+ subscription was canceled after failed renewal attempts, **Billing & licensing** may show Copilot Free. You may not see **Pay now**, **Upgrade**, or **Reactivate**, even after updating your payment method. This is different from an incomplete checkout: updating your payment method alone does not restore a canceled plan.
+
+1. Confirm your current plan in your personal account settings under **Billing & licensing**.
+1. When individual sign-up is available, start a new subscription by following the steps in [Subscribing to a paid plan](#subscribing-to-copilot-pro-copilot-pro-or-copilot-max).
+
+Restoring a canceled plan is treated as a new individual subscription. If individual sign-up is temporarily unavailable, there is no self-service way to restore paid access until sign-up becomes available again.
+
 ### Blocked plan setup on a personal account
 
 Your personal account may have a Copilot access restriction if you see:

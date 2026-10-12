@@ -56,6 +56,10 @@ To see what dynamic workflows are available, just ask Copilot:
 What dynamic workflows are available?
 ```
 
+## Availability of dynamic workflows
+
+Dynamic workflows are available in the Copilot app, Copilot CLI, and Copilot SDK. They are available to users on all Copilot plans except Copilot Pro and Copilot Pro+ subscribers on existing annual plans who remain on legacy premium request-based billing. For more information about this billing model, see [Request Based Billing Legacy](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy).
+
 ## How dynamic workflows differ from autopilot and fleet
 
 If you already use autopilot mode and the `/fleet` command, a dynamic workflow might seem to be the same sort of thing. The main difference is how work is planned and controlled, not simply how many agents are used.

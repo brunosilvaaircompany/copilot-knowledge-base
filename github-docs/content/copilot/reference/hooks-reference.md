@@ -20,7 +20,7 @@ The locations where hooks run, and where you can store hook configuration files,
   * **Repository-level hook files** — `.github/hooks/*.json` in the repository root.
   * **User-level hook files** — `*.json` files in the user-level hooks directory. By default this is `~/.copilot/hooks/` on macOS and Linux, or `%USERPROFILE%\.copilot\hooks\` on Windows. If `COPILOT_HOME` is set, it is `$COPILOT_HOME/hooks/`.
   * **Inline `hooks` block in repository settings** — the `hooks` field at the top level of `.github/copilot/settings.json` (Git committed) or `.github/copilot/settings.local.json` (typically gitignored and user specific) in the repository. Cross-tool `.claude/settings.json` and `.claude/settings.local.json` files in the repository are also read.
-  * **Inline `hooks` block in user-level config** — the `hooks` field at the top level of `~/.copilot/settings.json`.
+  * **Inline `hooks` block in user-level config** — the `hooks` field at the top level of `~/.copilot/settings.json`. The CLI no longer reads `~/.copilot/config.json` for hooks.
   * **Hooks contributed by installed plugins** — declared by each plugin in its own `hooks.json` (or under `hooks/hooks.json`) inside the plugin's installation directory.
 
 * **Copilot cloud agent** — hooks run inside the ephemeral Linux sandbox that cloud agent provisions for each job. The sandbox is non-interactive, has a constrained network, and is destroyed when the job ends. A subset of events fires, and only `bash` (or `command`) entries are honored.
@@ -702,6 +702,8 @@ When Copilot CLI can show the hook-permission prompt, the user can type optional
 * A valid `block` decision wins over `modifiedResponse`: if a hook returns both, the subagent continues and the rewrite is discarded.
 * Rewrites do not compose across multiple matching hooks. Every hook receives the same original `response`, and the last hook to return `modifiedResponse` wins—chaining a redactor and a formatter does not feed the redacted text into the formatter.
 * The output field names (`decision`, `reason`, `modifiedResponse`) are the same for both the camelCase and VS Code compatible configs.
+* Command and HTTP hooks keep the permissive behavior of other hook events: unsupported verdict fields and non-object JSON outputs are ignored, and `reason` only takes effect alongside a `block` decision with a nonempty string.
+* SDK callback outputs are validated before merging: an invalid `decision`, a `reason` without `block`, a `block` without a nonempty `reason`, or a non-object output fails the subagent hook. An explicit `null` in an optional field is treated as absent.
 
 > [!NOTE]
 > **Runaway guard.** After 8 consecutive `block` continuations, the CLI overrides the hook and ends the turn anyway, to prevent an unbounded loop. Use the `stop_hook_active` input field on `agentStop` to detect that this turn was already forced to continue, and self-limit before hitting the cap.

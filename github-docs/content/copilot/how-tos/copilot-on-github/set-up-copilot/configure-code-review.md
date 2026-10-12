@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can configure Copilot code review to review pull requests automatically, and you can set your Copilot review effort. For an overview, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
+You can configure Copilot code review to review pull requests automatically, set your Copilot review effort, and control who can request reviews. For an overview, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
 
 ## Configuring automatic code review for your own pull requests
 
@@ -98,6 +98,8 @@ You can configure how Copilot code review completes code reviews in your reposit
    > Copilot approvals are in public preview and subject to change.
 
 
+1. To prevent people from using an external Copilot license to request reviews in this repository, enable **Only allow Copilot code review to be triggered by authorized users**. If this setting is enabled for your organization, you cannot turn it off for the repository. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#reviews-requested-with-an-external-copilot-license).
+
 ## Configuring automatic code review for repositories in an organization
 
 You can enable automatic code reviews for repositories in your organization and customize how code reviews are performed.
@@ -164,6 +166,11 @@ You can configure how Copilot code review completes code reviews in repositories
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
 
     Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#estimated-consumption).
+1. To choose how AI credits usage associated with members who have paid Copilot licenses is billed, next to **Choose how members with a Copilot license are billed**, select an option.
+   * **Member**: Use the member's Copilot entitlement. If the member's quota is exhausted, the code review fails. This is the default.
+   * **Organization**: Bill the organization.
+
+   This choice applies to both manually requested and automatic code reviews, and changes billing only. It does not grant access to Copilot code review. To use **Organization**, AI credits paid usage must be enabled for the organization. Setting a budget is optional. See [Usage Based Billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/usage-based-billing#what-happens-if-i-exceed-my-included-ai-credits).
 1. To choose whether Copilot can approve pull requests in your repositories, select an option under "Approvals," next to "Count Copilot approvals toward merge requirements."
    * **Enabled everywhere**: Copilot approvals can count toward merge requirements in every repository in the organization.
    * **Let repositories decide**: Repository admins can decide this in repository settings.
@@ -173,6 +180,8 @@ You can configure how Copilot code review completes code reviews in repositories
    > [!NOTE]
    > Copilot approvals are in public preview and subject to change.
 
+
+1. To prevent people from using an external Copilot license to request reviews in your organization's repositories, enable **Only allow Copilot code review to be triggered by authorized users**. This setting applies to every repository in the organization, and repository administrators cannot turn it off.
 
 ## Configuring automatic code review for an enterprise
 
@@ -199,6 +208,12 @@ You can configure how Copilot code review completes code reviews for your enterp
 1. Scroll down to "Available Agents", then click **Copilot code review**.
 1. Next to "Copilot code review", select a policy.
 1. Then choose which Copilot code review features to enable for your enterprise.
+1. To choose who is billed for Copilot code review usage by members with a paid Copilot license, next to "Choose how members with a Copilot license are billed," select a policy.
+   * **Member**: Use the member's Copilot entitlement for organizations in the enterprise.
+   * **Organization**: Bill the organization that owns the repository.
+   * **Let organizations decide**: Organization owners can choose how to bill usage associated with members who have paid Copilot licenses.
+
+   Organizations billed must have AI credits paid usage enabled. Setting a budget is optional.
 1. To choose whether Copilot can approve pull requests in your organizations, next to "Allow Copilot to approve pull requests," select a policy.
    * **Let organizations decide**: Organization owners can choose whether to enable Copilot approvals.
    * **Enable for selected organizations**: Copilot approvals are enabled only for the organizations you select.

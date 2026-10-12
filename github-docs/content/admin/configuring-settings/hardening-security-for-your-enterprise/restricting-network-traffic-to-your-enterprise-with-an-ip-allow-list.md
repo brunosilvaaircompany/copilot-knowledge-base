@@ -48,6 +48,7 @@ IP allow lists do **not** restrict access to:
 * A GitHub App (server-to-server) installation token when the GitHub App is installed on a user account.
 * GitHub Copilot features that do not require directly fetching private or organizational data from GitHub
 * Anonymized URLs for images and videos uploaded to issues or pull requests, such as `https://private-user-images.githubusercontent.com/10001/20002.png?jwt=ABC10001`, unless you use GitHub Enterprise Cloud with data residency
+* Repository forks owned by personal accounts (not managed user accounts)
 
 
 ## About GitHub's IP allow list

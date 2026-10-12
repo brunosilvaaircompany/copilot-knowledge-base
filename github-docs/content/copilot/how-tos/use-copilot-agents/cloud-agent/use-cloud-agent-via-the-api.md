@@ -387,5 +387,5 @@ gh api \
 ## Further reading
 
 * [Agent Tasks](https://docs.github.com/en/rest/agent-tasks/agent-tasks)
-* [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)
 * [Start Copilot Sessions](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/start-copilot-sessions)

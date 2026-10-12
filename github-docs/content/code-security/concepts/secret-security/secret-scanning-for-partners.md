@@ -2,7 +2,7 @@
 
 ## About secret scanning alerts for partners
 
-GitHub scans public repositories and public npm packages for secrets issued by specific service providers who joined our partnership program, and alerts the relevant service provider whenever a secret is detected in a commit. The service provider validates the string and then decides whether they should revoke the secret, issue a new secret, or contact you directly. Their action will depend on the associated risks to you or them. 
+GitHub scans public repositories and public npm packages for secrets issued by specific service providers who joined our partnership program, and alerts the relevant service provider whenever a secret is detected in a supported location. The service provider validates the string and then decides whether they should revoke the secret, issue a new secret, or contact you directly. Their action will depend on the associated risks to you or them. 
 To find out about our partner program, see [Secret Scanning Partner Program](https://docs.github.com/en/code-security/tutorials/secret-scanning-partner-program).
 
 

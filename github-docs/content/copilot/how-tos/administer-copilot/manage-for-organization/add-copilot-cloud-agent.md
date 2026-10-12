@@ -1,7 +1,7 @@
 # Adding GitHub Copilot cloud agent to your organization
 
 > [!NOTE]
-> For an introduction to Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+> For an introduction to Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
 ## Enabling Copilot cloud agent for your members
 

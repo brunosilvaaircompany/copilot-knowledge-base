@@ -26,7 +26,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in a J
 
 The examples in this guide use Java, however other languages will work similarly.
 
-For more information, see [Code Suggestions?Tool=Jetbrains](https://docs.github.com/en/copilot/concepts/completions/code-suggestions?tool=jetbrains).
+For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions).
 
 ## Prerequisites
 
@@ -155,7 +155,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in Vis
 
 The examples in this guide use C#, however other languages will work similarly.
 
-For more information, see [Code Suggestions?Tool=Visualstudio](https://docs.github.com/en/copilot/concepts/completions/code-suggestions?tool=visualstudio).
+For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions).
 
 ## Prerequisites
 
@@ -278,7 +278,7 @@ This guide demonstrates how to get coding suggestions from GitHub Copilot in Vis
 
 The examples in this guide use JavaScript, however other languages will work similarly.
 
-For more information, see [Code Suggestions?Tool=Vscode](https://docs.github.com/en/copilot/concepts/completions/code-suggestions?tool=vscode).
+For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions).
 
 ## Prerequisites
 
@@ -646,4 +646,4 @@ An arrow in the gutter indicates an available edit suggestion. Hover over the ar
 
 ## Further reading
 
-* [Code Suggestions](https://docs.github.com/en/copilot/concepts/completions/code-suggestions)
+* [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions)

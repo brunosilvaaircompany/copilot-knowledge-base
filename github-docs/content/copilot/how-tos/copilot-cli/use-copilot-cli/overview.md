@@ -1,4 +1,4 @@
-The command-line interface (CLI) for GitHub Copilot allows you to use Copilot directly from your terminal. For more information, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli).
+The command-line interface (CLI) for GitHub Copilot allows you to use Copilot directly from your terminal. For more information, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli).
 
 ## Prerequisite
 
@@ -12,7 +12,7 @@ Install Copilot CLI. See [Install Copilot CLI](https://docs.github.com/en/copilo
    Copilot will ask you to confirm that you trust the files in this folder.
 
    > [!IMPORTANT]
-   > During this GitHub Copilot CLI session, Copilot may attempt to read, modify, and execute files in and below this folder. You should only proceed if you trust the files in this location. For more information about trusted directories, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli#trusted-directories).
+   > During this GitHub Copilot CLI session, Copilot may attempt to read, modify, and execute files in and below this folder. You should only proceed if you trust the files in this location. For more information about trusted directories, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli#trusted-directories).
 
 1. Choose one of the options:
 
@@ -35,7 +35,7 @@ Install Copilot CLI. See [Install Copilot CLI](https://docs.github.com/en/copilo
 
    As an alternative to typing, you can speak your prompt. See [Voice Input](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/voice-input).
 
-   For some examples of prompts, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli).
+   For some examples of prompts, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli).
 
 1. When Copilot wants to use a tool that could modify or execute files—for example, `touch`, `chmod`, `node`, or `sed`
 —it will ask you to approve the use of the tool.

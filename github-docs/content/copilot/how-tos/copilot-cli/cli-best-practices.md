@@ -100,7 +100,7 @@ You can configure Copilot CLI to use your own model provider instead of GitHub-h
 * Cost estimates are hidden when using your own provider. Token usage (input, output, and cache counts) is still displayed.
 * `/delegate` only works if you are also signed in to GitHub. It transfers the session to GitHub's server-side Copilot, not your provider.
 
-See [Using your own model provider](/copilot/concepts/agents/copilot-cli/about-copilot-cli#using-your-own-model-provider).
+See [Using your own model provider](/copilot/concepts/copilot-surfaces/copilot-cli#using-your-own-model-provider).
 
 ### Set AI credit session limits
 
@@ -500,7 +500,7 @@ Here is what you will learn:
 
 ## Further reading
 
-* [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli)
+* [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli)
 * [Overview](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview)
 * [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference)
 * [Copilot plans and pricing](https://github.com/features/copilot/plans)

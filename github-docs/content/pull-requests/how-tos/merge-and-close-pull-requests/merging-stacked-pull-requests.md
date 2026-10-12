@@ -1,8 +1,5 @@
 # Merging stacked pull requests
 
-> [!NOTE] This feature is in public preview and is subject to change.
-
-
 Stacked pull requests merge from the bottom (closest to the trunk) up. 
 
 * You can merge any number of pull requests at once, as long as they form a contiguous group starting from the lowest unmerged pull request. 
@@ -16,7 +13,7 @@ The merge box for a stacked pull request shows the status of the entire stack, n
 * The stack has a linear history.
 * The current pull request meets all branch protection requirements for the stack base, such as `main`.
 
-If the stack is not linear, for example, after changes were pushed to a lower branch or after the trunk moved ahead, a **Rebase stack** button will appear in the merge box and you'll need to rebase the stack before you can merge.
+If the stack is not linear, for example, after changes were pushed to a lower branch or after the trunk moved ahead, a **Rebase stack** button will appear in the merge box and you'll need to rebase the stack before you can merge. Rebasing the stack will generate signed commits, and retain approvals if a diff has not changed, even if you have the **dismiss stale approvals** rule enabled. 
 
 > [!NOTE]
 > * If you merge via the API and want to use stacked pull requests, you'll need use the asynchronous merge API for stacks. See [Pulls?Apiversion=2026 03 10](https://docs.github.com/en/rest/pulls/pulls?apiVersion=2026-03-10#merge-a-pull-request-asynchronously).
@@ -27,7 +24,7 @@ If the stack is not linear, for example, after changes were pushed to a lower br
 Stacks fully support merge queues. All pull requests in the stack are added to the queue in the correct order. If a pull request is removed or ejected from the queue, all pull requests above it in the stack are also removed. 
 
 > [!NOTE]
-> To keep a stack together, the merge queue allows the merge group to exceed its configured maximum size by up to 50 percent. If the stack is too large to fit within that buffer, it will automatically be split across consecutive merge groups.
+> To keep a stack together, the merge queue allows the merge group to exceed its configured maximum size by up to 50 percent. If the stack is too large to fit within that buffer, it will automatically be put into the next merge group as a single unit.
 
 ## Merging from the bottom up
 

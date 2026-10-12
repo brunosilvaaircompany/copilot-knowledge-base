@@ -169,7 +169,7 @@ You can grant certain roles, teams, or apps bypass permissions  as well as the a
 * GitHub Apps
 * Dependabot. For more information about Dependabot, see [Dependabot Quickstart](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart).
 
-* Copilot cloud agent. For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#limitations-in-copilot-cloud-agents-compatibility-with-other-features).
+* Copilot cloud agent. For more information about Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github#repository-compatibility).
 
 
 1. To grant bypass permissions for the ruleset, in the "Bypass list" section, click **{% octicon "plus" aria-hidden="true" aria-label="plus" %} Add bypass**.
@@ -270,7 +270,7 @@ You can grant certain roles, teams, or apps bypass permissions  as well as the a
 * GitHub Apps
 * Dependabot. For more information about Dependabot, see [Dependabot Quickstart](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart).
 
-* Copilot cloud agent. For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#limitations-in-copilot-cloud-agents-compatibility-with-other-features).
+* Copilot cloud agent. For more information about Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github#repository-compatibility).
 
 
 1. To grant bypass permissions for the ruleset, in the "Bypass list" section, click **{% octicon "plus" aria-hidden="true" aria-label="plus" %} Add bypass**.

@@ -63,6 +63,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | Claude Opus 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Sonnet 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Sonnet 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Claude Haiku 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 (fast mode) (preview) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5.1 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -123,6 +124,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Claude Opus 5.5      | TBD | `17.14.6` | TBD | TBD | TBD |
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
 | Claude Sonnet 5.5 | TBD | `17.14.6` | TBD | TBD | TBD |
+| Claude Haiku 5.5  | TBD | TBD | TBD | TBD | TBD |
 | Claude Fable 5      | `v1.124` | `17.14.6`                    | TBD | TBD | TBD |
 | Claude Fable 5.1    | TBD | TBD                    | TBD | TBD | TBD |
 | Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |

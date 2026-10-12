@@ -40,6 +40,17 @@ When you remove seats, billing for those seats continues until the end of the cu
 
 For more information, see [License Changes](https://docs.github.com/en/copilot/reference/copilot-billing/license-changes).
 
+## Payment dates for credit card or PayPal
+
+If you pay by credit card or PayPal, you will be charged at the following times:
+
+* At the beginning of the calendar month, for all assigned GitHub Copilot licenses
+* At the beginning of the billing cycle, for any usage from the previous cycle outside your plan's allowance
+* Whenever you need to pay to continue using AI credits
+* Whenever you purchase additional licenses during the billing cycle
+
+You will receive a receipt and invoice at each point, which you can view on your "Payment history" page.
+
 ## Managing costs
 
 You can control AI credits spend using budget controls at the user, cost center, and enterprise level. For an overview of how budget controls work, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets). For guidance on choosing a configuration, see [Optimizing Your Budget Configuration](https://docs.github.com/en/copilot/tutorials/budgets/optimizing-your-budget-configuration).

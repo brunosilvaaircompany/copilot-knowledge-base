@@ -75,7 +75,7 @@ The following are eligible for bypass access:
 * Repository admins, organization owners, and enterprise owners
 * The maintain or write role, or deploy keys.
 
-* Copilot cloud agent. For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#limitations-in-copilot-cloud-agents-compatibility-with-other-features).
+* Copilot cloud agent. For more information about Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github#repository-compatibility).
 
 
 1. In the "Bypass list" section, click **Add bypass**, then search for and select the role, team, or app you want to grant bypass permissions, and click **Add Selected**.
@@ -174,7 +174,7 @@ You can grant certain roles, teams, or apps bypass permissions as well as the ab
 * Repository admins, organization owners, and enterprise owners
 * The maintain or write role, or deploy keys
 
-* Copilot cloud agent. For more information about Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#limitations-in-copilot-cloud-agents-compatibility-with-other-features).
+* Copilot cloud agent. For more information about Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github#repository-compatibility).
 
 
 1. In the "Bypass list" section, click **Add bypass**, then search for and select the role, team, or app you want to grant bypass permissions, and click **Add Selected**.

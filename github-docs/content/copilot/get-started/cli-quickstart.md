@@ -108,7 +108,7 @@ where TOPIC is one of the topics listed in the help output.
 
 Find out more about Copilot CLI:
 
-* [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli)
+* [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli)
 * [Overview](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview)
 * [CLI Best Practices](https://docs.github.com/en/copilot/how-tos/copilot-cli/cli-best-practices)
 * [Get started with GitHub Copilot CLI: A free hands-on course](https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course)

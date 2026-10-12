@@ -53,7 +53,7 @@ If you use GitHub Enterprise Cloud with data residency, your enterprise and GitH
 
    Replace SUBDOMAIN with your enterprise slug.
 
-1. If you plan to use public code detection, allow access to `https://origin-tracker.githubusercontent.com`. This is required to check generated code against public code hosted on GitHub.com. For more information, see [Code Referencing](https://docs.github.com/en/copilot/concepts/completions/code-referencing).
+1. If you plan to use public code detection, allow access to `https://origin-tracker.githubusercontent.com`. This is required to check generated code against public code hosted on GitHub.com. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#references-to-matching-public-code).
 
 All other domains that are required on GitHub.com are **not** required on GHE.com. For example:
 
@@ -290,6 +290,7 @@ The allowlist allows access to the following hosts:
 * `deno.land`
 * `registry.bower.io`
 * `binaries.prisma.sh`
+* `aspire.dev`
 
 ### Programming Languages & Package Managers: Perl
 

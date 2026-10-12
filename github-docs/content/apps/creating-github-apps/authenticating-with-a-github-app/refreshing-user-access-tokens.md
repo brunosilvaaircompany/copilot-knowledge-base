@@ -11,6 +11,14 @@ You can use the refresh token to generate a new user access token and a new refr
 
 If your refresh token expires before you use it, you can regenerate a user access token and refresh token by sending users through the web application flow or device flow. For more information, see [Generating A User Access Token For A GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app).
 
+
+
+To test and gradually roll out support for expiring tokens, you can opt in for an individual user authorization by requesting the `offline_access` scope. When you request `offline_access`, you will receive an expiring user access token and a refresh token even if your app is configured not to use expiring user access tokens.
+
+The `scope` parameter does not grant permissions to a GitHub App. The only supported value is `offline_access`, which forces the user access token to expire.
+
+
+
 ## Configuring your app to use user access tokens that expire
 
 When you create your app, expiration of user access tokens is enabled unless you opt out. For more information, see [Registering A GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app). You can also configure this setting after your app has been created.
@@ -40,7 +48,7 @@ When you create your app, expiration of user access tokens is enabled unless you
 
    GitHub recommends that you opt in to this feature for improved security.
 
-If you opt into user access tokens that expire after you have already generated user access tokens, the previously generated user access tokens will not expire. You can delete these tokens by using the `DELETE /applications/CLIENT_ID/token` endpoint. For more information, see [OAUTH Applications](https://docs.github.com/en/rest/apps/oauth-applications#delete-an-app-token).
+If you re-enable expiring user access tokens after you've already signed in users and gotten their access token, those pre-existing user access tokens will not expire. You should delete these tokens by using the `DELETE /applications/CLIENT_ID/token` endpoint or have the users reauthenticate so that they get an expiring token. For more information, see [OAUTH Applications](https://docs.github.com/en/rest/apps/oauth-applications#delete-an-app-token).
 
 ## Refreshing a user access token with a refresh token
 
@@ -58,8 +66,8 @@ If you opt into user access tokens that expire after you have already generated 
    Response parameter | Type | Description
 --- | --- | ---
 `access_token` | `string` | The user access token. The token starts with `ghu_`.
-`expires_in` | `integer` | The number of seconds until `access_token` expires. If you disabled expiration of user access tokens, this parameter will be omitted. The value will always be `28800` (8 hours).
-`refresh_token` | `string` | The refresh token. If you disabled expiration of user access tokens, this parameter will be omitted. The token starts with `ghr_`.
-`refresh_token_expires_in` | `integer` | The number of seconds until `refresh_token` expires. If you disabled expiration of user access tokens, this parameter will be omitted. The value will always be `15897600` (6 months).
+`expires_in` | `integer` | The number of seconds until `access_token` expires. If the token doesn't expire, this parameter will be omitted. The value will always be `28800` (8 hours).
+`refresh_token` | `string` | The refresh token. If the access token doesn't expire, this parameter will be omitted. The token starts with `ghr_`.
+`refresh_token_expires_in` | `integer` | The number of seconds until `refresh_token` expires. If the access token doesn't expire, this parameter will be omitted. The value will always be `15897600` (6 months).
 `scope` | `string` | The scopes that the token has. This value will always be an empty string. Unlike a traditional OAuth token, the user access token is limited to the permissions that both your app and the user have.
 `token_type` | `string` | The type of token. The value will always be `bearer`.

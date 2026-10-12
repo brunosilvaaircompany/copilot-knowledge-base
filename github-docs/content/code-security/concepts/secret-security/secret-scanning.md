@@ -23,6 +23,25 @@ GitHub also automatically scans:
 
 
 
+
+
+### Secrets detected in GitHub Actions workflow logs
+
+> [!NOTE] 
+> Detection of secrets in GitHub Actions workflow logs is in public preview and is subject to change.
+
+GitHub Actions workflow log scanning is disabled by default. Enterprise owners can enable it for all repositories in their enterprise. For more information, see [Enforcing Policies For Code Security And Analysis For Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-code-security-and-analysis-for-your-enterprise#enforcing-a-policy-for-secret-scanning-in-github-actions-workflow-logs).
+
+Once enabled, GitHub scans the logs of each new workflow run after the run completes, for repositories where secret scanning is enabled. Logs from past workflow runs aren't scanned.
+
+For GitHub Actions workflow logs, secret scanning only detects provider patterns. It doesn't detect generic patterns, custom patterns, AI-detected secrets, or values that GitHub Actions masks in the log.
+
+Alerts for secrets in GitHub Actions workflow logs don't generate notifications during the public preview. To review these alerts, check the repository's secret scanning alerts.
+
+A single alert may reference multiple locations if the same secret appeared across several workflow runs or jobs. For each location, the alert links to the workflow file where the secret originated and the log line where the secret was printed. The alert does not include an inline preview of the log content.
+
+
+
 ### Secret scanning alerts and remediation
 
 When secret scanning detects a credential leak, GitHub generates an alert on your repository's **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality** tab with details about the exposed credential.
@@ -57,9 +76,7 @@ Beyond the default detection of partner and provider secrets, you can expand and
 
 ### About validity checks
 
-Validity checks help you prioritize which secrets to remediate first by verifying whether a detected secret is still active. When you enable validity checks, secret scanning may contact the secret's issuing service to determine if the credential has been revoked.
-
-Validity checks are separate from secret scanning's partner program. While partner secrets are automatically reported to service providers for revocation, validity checks verify the status of secrets you manage in your own alerts. For more information, see [Validity Checks](https://docs.github.com/en/code-security/concepts/secret-security/validity-checks).
+Validity checks help you prioritize which secrets to remediate first by verifying whether a detected secret is still active. When you enable validity checks, secret scanning may contact the secret's issuing service to determine if the credential has been revoked. For more information, see [Validity Checks](https://docs.github.com/en/code-security/concepts/secret-security/validity-checks).
 
 
 

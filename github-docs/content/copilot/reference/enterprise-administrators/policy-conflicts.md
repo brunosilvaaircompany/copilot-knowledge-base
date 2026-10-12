@@ -22,7 +22,7 @@ Feature, model, and privacy settings for users are set according to the **least 
 | :---- | :---- | :---- |
 | Copilot Metrics API | Most restrictive organization | [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics) |
 | Semantic indexing for non-GitHub repositories | Most restrictive organization (only available when all organizations explicitly set **Enabled**; **Unconfigured** behaves as disabled) | [Repository Indexing](https://docs.github.com/en/copilot/concepts/context/repository-indexing) |
-| Suggestions matching public code (privacy policy) | Most restrictive organization | [Code Suggestions](https://docs.github.com/en/copilot/concepts/completions/code-suggestions) |
+| Suggestions matching public code (privacy policy) | Most restrictive organization | [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions) |
 | Allow members without a Copilot license to use Copilot code review in GitHub.com | Most restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | Copilot can search the web | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot Chat in GitHub Mobile | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
@@ -34,7 +34,7 @@ Feature, model, and privacy settings for users are set according to the **least 
 | Copilot in GitHub.com | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot in GitHub Desktop | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot CLI | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
-| GitHub Copilot app | Least restrictive organization | [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app) |
+| GitHub Copilot app | Least restrictive organization | [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app) |
 | Editor preview features | Least restrictive organization | [GitHub Pre Release License Terms](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-pre-release-license-terms) |
 | MCP servers in Copilot | Least restrictive organization | [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers) |
 | Copilot-generated commit messages | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |

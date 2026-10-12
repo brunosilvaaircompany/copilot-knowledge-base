@@ -133,7 +133,7 @@ Developers **should not**:
 * [Copilot Chat in GitHub](/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github)
 * [Copilot inline suggestions](/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/get-ide-code-suggestions)
 * [Copilot Chat in the IDE](/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide)
-* [Copilot cloud agent](/copilot/concepts/agents/cloud-agent/about-cloud-agent)
+* [Copilot cloud agent](/copilot/concepts/copilot-surfaces/copilot-on-github)
 
 ## Metrics to watch
 

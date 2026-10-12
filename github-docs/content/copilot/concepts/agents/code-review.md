@@ -82,21 +82,31 @@ Consumption generally increases with pull request size and repository custom ins
 
 Repository and organization administrators can set the default review effort level for automatic code reviews. For configuration steps, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review#customizing-copilot-code-review-1).
 
-## Code review usage
+## Code review usage and billing
 
 Each time Copilot reviews a pull request or reviews code in your IDE, the interaction consumes AI credits. The amount depends on the model used and the number of tokens processed.
 
 Code reviews have two cost components: AI credits for the model interaction (the review itself), and GitHub Actions minutes for the agentic capabilities (context gathering and tool use). For more information on GitHub Actions usage, see [Usage of GitHub Actions runners for agentic capabilities in code review](#usage-of-github-actions-runners-for-agentic-capabilities-in-code-review).
 
-If a repository is configured to automatically request a code review from Copilot for all new pull requests, the AI credits consumption is attributed to the pull request author. If a review is manually requested by another user, the consumption is attributed to that user instead.
+By default, when a repository automatically requests a code review, AI credits consumption is attributed to the pull request author. If another user manually requests a review, consumption is attributed to that user instead.
 
 For pull requests authored by Copilot cloud agent, usage is attributed first to the human co-author associated with the change. If the co-author cannot be billed, usage is billed directly to the organization.
 
 For pull requests authored by other bots, or when a bot requests the review, usage is billed directly to the organization. These pull requests are eligible for agentic review.
 
-### What happens when a budget is reached
+For requests associated with organization members who have paid Copilot licenses, the member's entitlement is billed by default. An enterprise or organization owner can instead choose to bill the organization. Billing the organization requires AI credits paid usage, but a budget is optional. This choice applies to both manually requested and automatic code reviews, and changes billing only. On its own, it does not grant access to Copilot code review.
 
-For Copilot Business and Copilot Enterprise, code review access is governed by budget controls. If a user reaches their user-level budget, or if the enterprise or cost center spending limit is exhausted, code reviews are blocked along with other AI credits-consuming features. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#what-happens-when-a-user-is-blocked).
+### Reviews requested with an external Copilot license
+
+An external Copilot license is one that is not provided by the organization or enterprise that owns the repository, such as a personal license or a license from another organization. By default, people can use an external license to request a review from Copilot.
+
+To prevent this, organization owners and repository administrators can enable the **Only allow Copilot code review to be triggered by authorized users** setting for an organization or a single repository. When the setting is enabled:
+
+* Copilot is not offered as a reviewer to people who are not authorized, and API review requests from those people do not start a review.
+* In personal repositories, only the repository owner or a direct collaborator can request a review.
+* Automatic reviews from personal settings do not run for people who are not authorized. Automatic reviews configured by repository or organization rulesets still run.
+
+For configuration steps, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review#customizing-copilot-code-review).
 
 ### Users without a Copilot license or plan that includes Copilot code review
 
@@ -104,7 +114,11 @@ Users without access to Copilot code review do not have a monthly allowance of A
 
 When Copilot code review is enabled for these users, any AI credits they consume are billed directly to the organization or enterprise as paid additional usage. This applies to both manually requested reviews and automatic code reviews.
 
-AI credits consumed by these users are not attributed to any individual user's budget. They appear as additional usage in billing reports. Users with a Copilot license that includes code review consume AI credits from the shared pool, subject to any user-level budgets configured by their administrator.
+AI credits consumed by these users are not attributed to any individual user's budget. They appear as additional usage in billing reports.
+
+### What happens when a budget is reached
+
+For Copilot Business and Copilot Enterprise, code review access is governed by the budgets that apply to the selected billing source. If usage is billed to a user, code reviews are blocked when the user reaches their budget. If usage is billed to an organization, code reviews are blocked when the applicable organization budget, cost center budget, or enterprise spending limit is exhausted. Code reviews are blocked along with other AI credits-consuming features. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#what-happens-when-a-user-is-blocked).
 
 ## Model usage
 

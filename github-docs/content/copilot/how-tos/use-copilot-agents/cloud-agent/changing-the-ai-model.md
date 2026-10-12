@@ -1,7 +1,7 @@
 # Changing the AI model for GitHub Copilot cloud agent
 
 > [!NOTE]
-> For an overview of Copilot cloud agent, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+> For an overview of Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
 ## Introduction
 
@@ -21,6 +21,7 @@ The following options are currently available:
 * Claude Opus 5.5
 * Claude Sonnet 5.5
 * Claude Haiku 4.5
+* Claude Haiku 5.5
 * Gemini 3.7 Flash
 * Gemini 3.8 Flash
 * GPT-5.4 mini

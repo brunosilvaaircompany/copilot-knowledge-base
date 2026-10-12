@@ -36,7 +36,7 @@ For more information about `GITHUB_TOKEN` used in GitHub Actions workflows, see 
 You must use a personal access token (classic) with the appropriate scopes to publish and install packages in GitHub Packages. For more information, see [Introduction To GitHub Packages](https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages#authenticating-to-github-packages).
 
 
-You can authenticate to GitHub Packages with Gradle using either Gradle Groovy or Kotlin DSL by editing your _build.gradle_ file (Gradle Groovy) or _build.gradle.kts_ file (Kotlin DSL) file to include your personal access token (classic). You can also configure Gradle Groovy and Kotlin DSL to recognize a single package or multiple packages in a repository.
+You can authenticate to GitHub Packages with Gradle using either Gradle Groovy or Kotlin DSL by editing your `build.gradle` file (Gradle Groovy) or `build.gradle.kts` file (Kotlin DSL) (`settings.gradle` or `settings.gradle.kts` if you centralize repository declarations in the settings script to use published packages) to include your personal access token (classic). You can also configure Gradle Groovy and Kotlin DSL to recognize a single package or multiple packages in a repository.
 
 
 Replace REGISTRY_URL with the URL for your instance's Maven registry. If your instance has subdomain isolation enabled, use `maven.HOSTNAME`. If your instance has subdomain isolation disabled, use `HOSTNAME/_registry/maven`. In either case, replace HOSTNAME with the host name of your GitHub Enterprise Server instance.
@@ -60,8 +60,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                username = providers.gradleProperty("gpr.user").getOrNull() ?: System.getenv("USERNAME")
+                password = providers.gradleProperty("gpr.key").getOrNull() ?: System.getenv("TOKEN")
             }
         }
     }
@@ -87,8 +87,8 @@ subprojects {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
                 credentials {
-                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                    username = providers.gradleProperty("gpr.user").getOrNull() ?: System.getenv("USERNAME")
+                    password = providers.gradleProperty("gpr.key").getOrNull() ?: System.getenv("TOKEN")
                 }
             }
         }
@@ -113,8 +113,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                username = providers.gradleProperty("gpr.user").getOrNull() ?: System.getenv("USERNAME")
+                password = providers.gradleProperty("gpr.key").getOrNull() ?: System.getenv("TOKEN")
             }
         }
     }
@@ -140,8 +140,8 @@ subprojects {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
                 credentials {
-                    username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                    username = providers.gradleProperty("gpr.user").getOrNull() ?: System.getenv("USERNAME")
+                    password = providers.gradleProperty("gpr.key").getOrNull() ?: System.getenv("TOKEN")
                 }
             }
         }
@@ -176,7 +176,7 @@ To use a published package from GitHub Packages, add the package as a dependency
 
 1. Authenticate to GitHub Packages. For more information, see [Authenticating to GitHub Packages](#authenticating-to-github-packages).
 
-1. Add the package dependencies to your _build.gradle_ file (Gradle Groovy) or _build.gradle.kts_ file (Kotlin DSL) file.
+1. Add the package dependencies to your `build.gradle` file (Gradle Groovy) or `build.gradle.kts` file (Kotlin DSL).
 
    Example using Gradle Groovy:
 
@@ -194,7 +194,7 @@ To use a published package from GitHub Packages, add the package as a dependency
    }
    ```
 
-1. Add the repository to your _build.gradle_ file (Gradle Groovy) or _build.gradle.kts_ file (Kotlin DSL) file.
+1. Add the repository to your `build.gradle` file (Gradle Groovy) or `build.gradle.kts` file (Kotlin DSL), or to your `settings.gradle` file (Gradle Groovy) or `settings.gradle.kts` file (Kotlin DSL) in the `dependencyResolutionManagement` block if you centralize repository declarations in the settings script. For more information, see [Centralizing Repository Declarations](https://docs.gradle.org/current/userguide/centralizing_repositories.html) in the Gradle documentation.
 
    Example using Gradle Groovy:
 
@@ -203,10 +203,10 @@ To use a published package from GitHub Packages, add the package as a dependency
        maven {
            url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
            credentials {
-               username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-               password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+               username = providers.gradleProperty("gpr.user").getOrNull() ?: System.getenv("USERNAME")
+               password = providers.gradleProperty("gpr.key").getOrNull() ?: System.getenv("TOKEN")
            }
-      }
+       }
    }
    ```
 
@@ -217,8 +217,8 @@ To use a published package from GitHub Packages, add the package as a dependency
        maven {
            url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
            credentials {
-               username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-               password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+               username = providers.gradleProperty("gpr.user").getOrNull() ?: System.getenv("USERNAME")
+               password = providers.gradleProperty("gpr.key").getOrNull() ?: System.getenv("TOKEN")
            }
        }
    }

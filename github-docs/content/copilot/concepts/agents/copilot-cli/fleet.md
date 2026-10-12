@@ -53,7 +53,7 @@ A typical workflow for using `/fleet` in autopilot mode might look like this:
 
 1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to switch into plan mode and work with Copilot CLI to create an implementation plan.
 1. Recognize that the completed plan contains multiple elements and looks like a good candidate for `/fleet`.
-1. Select the **Accept plan and build on autopilot + /fleet** option that's displayed when the plan is complete.
+1. Select the **Accept plan and continue in Autopilot execution mode + /fleet** option that's displayed when the plan is complete.
 
 For more information about autopilot mode, see [Autopilot](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot).
 

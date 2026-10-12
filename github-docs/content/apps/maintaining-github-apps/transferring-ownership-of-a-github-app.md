@@ -34,8 +34,6 @@ For more information about app visibility, see [Making A GitHub App Public Or Pr
 
 1. Click **Transfer ownership**.
 1. Under "New owner's GitHub username, organization, or enterprise name", type the name of the account you want to transfer the GitHub App to.
-
 1. Select the account from the dropdown that you wish to transfer to. Be aware that enterprises and organizations can have the same name, so check that you are transferring to the correct account type.
 1. If transferring the app would uninstall it from your account, a warning will appear.
-
 1. Click **Transfer this GitHub App**.

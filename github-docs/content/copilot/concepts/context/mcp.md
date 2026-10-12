@@ -25,6 +25,7 @@ MCP is supported across the following clients:
 * **IDEs**: There is broad support for local MCP servers in clients such as Visual Studio Code, JetBrains IDEs, Xcode, and others. Support for remote MCP servers is growing, with editors like Visual Studio Code, Visual Studio, JetBrains IDEs, Xcode, Eclipse, Cursor, and Windsurf providing this functionality with OAuth or PAT. To find out if your preferred editor supports remote MCP servers, check the documentation for your specific editor.
 * **Copilot CLI**: GitHub Copilot CLI supports both local and remote MCP servers. The GitHub MCP server is built in and available without additional configuration.
 * **GitHub Copilot app**: The GitHub Copilot app supports MCP servers configured in your repository or Copilot CLI and lets you add additional MCP servers in app settings.
+* **Chat on GitHub.com**: Chat is preconfigured with tools for tasks such as creating branches, updating files, and semantic code search. See [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 * **Copilot cloud agent and Copilot code review**: GitHub.com supports MCP servers configured at the repository level. The configuration applies to both Copilot cloud agent and Copilot code review. The GitHub MCP server and Playwright MCP server are configured by default.
 
 ## About the GitHub MCP server

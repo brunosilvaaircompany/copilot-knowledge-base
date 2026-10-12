@@ -14,7 +14,7 @@ Copilot cloud agent:
 
 Before enabling Copilot cloud agent for members, understand how Copilot cloud agent will fit into your organization. This will help you evaluate whether Copilot cloud agent is suitable for your needs and plan communications and training sessions for developers.
 
-1. Learn about Copilot cloud agent, including the costs and how it differs from other AI tools your developers may be used to. See [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+1. Learn about Copilot cloud agent, including the costs and how it differs from other AI tools your developers may be used to. See [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 1. Learn about the tasks that Copilot cloud agent is best suited for. These are generally well-defined and scoped issues, such as increasing test coverage, fixing bugs or flaky tests, or updating config files or documentation. See [Get The Best Results](https://docs.github.com/en/copilot/tutorials/cloud-agent/get-the-best-results).
 1. Consider how Copilot cloud agent fits alongside other tools in your organization's workflows. For an example scenario that walks through how to use Copilot cloud agent alongside other AI features on GitHub, see [Integrate Ai Agents](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/enable-developers/integrate-ai-agents).
 

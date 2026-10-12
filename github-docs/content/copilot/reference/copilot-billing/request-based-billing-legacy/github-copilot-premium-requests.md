@@ -62,7 +62,7 @@ If you run out of free minutes or premium requests, and you have _not_ set up bi
 
 Copilot cloud agent uses a dedicated Copilot cloud agent premium request SKU. This SKU still pulls from your monthly allowance of premium requests, but allows for more granular budget control and monitoring.
 
-For more information about Copilot cloud agent and Copilot custom agents, see [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) and [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
+For more information about Copilot cloud agent and Copilot custom agents, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github) and [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
 
 ## Using more than your included premium requests
 

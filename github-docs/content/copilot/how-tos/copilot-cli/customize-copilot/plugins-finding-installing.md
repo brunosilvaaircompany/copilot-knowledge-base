@@ -12,7 +12,7 @@ For more information, see [About Plugins](https://docs.github.com/en/copilot/con
 
 ## Finding plugins
 
-Plugins are collected together in marketplaces. A marketplace is a registry of plugins that you can browse and install from. You can add a marketplace to your CLI configuration, which allows you to use the CLI to browse and install plugins from that marketplace—see [Adding plugin marketplaces](#adding-plugin-marketplaces). Copilot comes with two marketplaces already registered by default: `copilot-plugins` and `awesome-copilot`.
+Plugins are collected together in marketplaces. A marketplace is a registry of plugins that you can browse and install from. You can add a marketplace to your CLI configuration, which allows you to use the CLI to browse and install plugins from that marketplace—see [Adding plugin marketplaces](#adding-plugin-marketplaces). Copilot comes with one marketplace already registered by default: `awesome-copilot`.
 
 To use the CLI to browse the plugins in one of your registered marketplaces:
 

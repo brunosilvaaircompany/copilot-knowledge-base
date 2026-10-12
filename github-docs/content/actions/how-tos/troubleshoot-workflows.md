@@ -77,6 +77,12 @@ Scheduled events can be delayed during periods of high loads of GitHub Actions w
 
 High load times include the start of every hour. If the load is sufficiently high enough, some queued jobs may be dropped. To decrease the chance of delay, schedule your workflow to run at a different time of the hour. For more information, see [Events That Trigger Workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
+### Scheduled workflow stopped running
+
+A scheduled (`cron`) workflow can stop running even though it is still enabled and manual or `workflow_dispatch` runs still work.
+
+This can happen when the workflow's associated `actor` account is suspended, deleted, or deprovisioned. To restart it, a user with `write` access to the repository can commit a change to the `cron` schedule. See [Events That Trigger Workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#actor-for-scheduled-workflows).
+
 ### Filtering and diff limits
 
 Specific events allow for filtering by branch, tag, and/or paths you can customize. Workflow run creation will be skipped if the filter conditions apply to filter out the workflow.

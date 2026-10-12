@@ -125,4 +125,4 @@ When you do not specify a repository or branch, Copilot uses the channel's defau
 
 ## Further reading
 
-* [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) - Learn more about Copilot cloud agent and how it can support you.
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github) - Learn more about Copilot cloud agent and how it can support you.

@@ -1,8 +1,5 @@
 # Use other tools with stacked pull requests
 
-> [!NOTE] This feature is in public preview and is subject to change.
-
-
 Stacked pull requests are built on standard Git branches and regular pull requests, so you can choose to use tools other than the `gh stack` CLI for your local workflow. If you manage branch chains with another tool, such as Jujutsu (jj), Sapling, or git-town, you can use the `gh stack link` command to open those branches as a stack on GitHub. 
 
 The `gh stack link` command only calls the GitHub API to create the stacked pull requests — it does not create any local tracking. If a branch already has an open pull request, `link` uses it; otherwise it creates a draft pull request with the correct base branch.
