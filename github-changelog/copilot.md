@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-12 16:38 UTC  
+> Atualizado em: 2026-10-13 14:55 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -32,15 +32,5 @@ The post [GitHub Copilot weekly releases — October 5](https://github.blog/chan
 This release adds new billing and license controls for Copilot code review admins: Billing: Organization owners can bill Copilot code reviews from members with a Copilot license to the organization&#8217;s&#8230;
 
 The post [Copilot code review: New organization billing options and controls](https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Claude Haiku 5.5 in GitHub Copilot](https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot)
-
-**Data:** 2026-10-07  **Categorias:** `Release`, `copilot`
-
-Claude Haiku 5.5, Anthropic&#8217;s newest lightweight model, is now generally available in GitHub Copilot. It is designed for fast, high-volume work like subagents, quick edits, and terminal tasks. In early&#8230;
-
-The post [Claude Haiku 5.5 in GitHub Copilot](https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

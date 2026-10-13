@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-09 14:16 UTC  
+> Atualizado em: 2026-10-13 14:55 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Update your IDE to restore agent activity in Copilot usage metrics](https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics)
+## [Search and filter for budgets now available](https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available)
 
-**Data:** 2026-10-06  **Categorias:** `Improvement`, `account management`, `copilot`, `enterprise management tools`
+**Data:** 2026-10-13  **Categorias:** `Improvement`, `account management`, `enterprise management tools`
 
-If your Copilot usage metrics have shown agent activity or agent lines of code falling while Copilot usage kept growing, we&#8217;ve found the cause, and a fix is rolling out&#8230;
+The &#8220;Budgets and alerts&#8221; page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for&#8230;
 
-The post [Update your IDE to restore agent activity in Copilot usage metrics](https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics) appeared first on [The GitHub Blog](https://github.blog).
+The post [Search and filter for budgets now available](https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

@@ -1,26 +1,26 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-07 14:21 UTC  
+> Atualizado em: 2026-10-13 14:55 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Unvalidated npm trusted publishing configurations now expire](https://github.blog/changelog/2026-10-02-unvalidated-npm-trusted-publishing-configurations-now-expire)
+## [Improved detection for withdrawn Dependabot alerts](https://github.blog/changelog/2026-10-13-improved-detection-for-withdrawn-dependabot-alerts)
 
-**Data:** 2026-10-02  **Categorias:** `Retired`, `supply chain security`
+**Data:** 2026-10-13  **Categorias:** `Improvement`, `supply chain security`
 
-Unvalidated npm trusted publishing configurations now expire 48 hours after creation and can no longer authorize publishing. This limits the risk of trusting a repository or project name that changes&#8230;
+You can now more easily detect withdrawn Dependabot alerts. Dependabot withdraws and removes an alert when the advisory or vulnerability that produced it is no longer valid. Two changes help&#8230;
 
-The post [Unvalidated npm trusted publishing configurations now expire](https://github.blog/changelog/2026-10-02-unvalidated-npm-trusted-publishing-configurations-now-expire) appeared first on [The GitHub Blog](https://github.blog).
+The post [Improved detection for withdrawn Dependabot alerts](https://github.blog/changelog/2026-10-13-improved-detection-for-withdrawn-dependabot-alerts) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [npm staged publishing now supports creating new packages](https://github.blog/changelog/2026-10-02-npm-staged-publishing-now-supports-creating-new-packages)
+## [Anonymous organization-level registries for Dependabot](https://github.blog/changelog/2026-10-12-anonymous-organization-level-registries-for-dependabot)
 
-**Data:** 2026-10-02  **Categorias:** `Improvement`, `supply chain security`
+**Data:** 2026-10-12  **Categorias:** `Improvement`, `supply chain security`
 
-You can now create a new npm package with npm stage publish, using a local session or a granular access token, including a stage-only token. This lets you create packages&#8230;
+You can now select Anonymous as the authentication method for an organization-level private registry. Use it for registries that Dependabot can reach without credentials, such as an internal package mirror&#8230;
 
-The post [npm staged publishing now supports creating new packages](https://github.blog/changelog/2026-10-02-npm-staged-publishing-now-supports-creating-new-packages) appeared first on [The GitHub Blog](https://github.blog).
+The post [Anonymous organization-level registries for Dependabot](https://github.blog/changelog/2026-10-12-anonymous-organization-level-registries-for-dependabot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
