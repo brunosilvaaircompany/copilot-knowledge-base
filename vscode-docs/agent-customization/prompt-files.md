@@ -1,21 +1,21 @@
 # Use prompt files in {% data variables.product.prodname_vscode_shortname %}
 
-Prompt files, also known as slash commands, let you simplify prompting for common tasks by encoding them as standalone Markdown files that you can invoke directly in chat. Each prompt file includes task-specific context and guidelines about how the task should be performed.
+Prompt files, also known as slash commands, are supported only in Local harness sessions. They simplify prompting for common tasks by encoding them as standalone Markdown files that you invoke directly in chat. Each prompt file includes task-specific context and guidelines about how the task should be performed.
 
 Unlike [custom instructions](custom-instructions.md) that are applied automatically, you invoke prompt files manually in chat. See the [decision matrix](../agents/concepts/customization.md#customization-options-at-a-glance) to compare prompt files with custom agents, agent skills, and the other options.
+
+For reusable workflows in sessions that use another harness, create an [agent skill](agent-skills.md). You can also [convert existing prompt files to skills](migrate-customizations.md#convert-prompt-files-to-skills).
 
 Use prompt files to:
 
 * Simplify prompting for common tasks, such as scaffolding a new component, running and fixing tests, or preparing a pull request
 * Override default behavior of a custom agent, such as creating a minimal implementation plan or generating mockups for API calls
 
-You can use the [Agent Customizations editor](overview.md#agent-customizations-editor) (Preview) to discover, create, and manage all your agent customizations in one place. Run **Chat: Open Customizations** from the Command Palette.
-
-**IMPORTANT:** Prompt files are deprecated for [Agent Host](../agents/concepts/agent-host.md) sessions and aren't loaded by Agent Host. They continue to work with the Local agent for now, but the Local agent will be removed in a future release. Use [prompt file migration](overview.md#migrate-prompt-files-to-skills) to convert existing prompts to agent skills. This experimental migration is enabled by default.
+With **Local** selected, use the [Agent Customizations editor](overview.md#agent-customizations-editor) (Preview) to discover, create, and manage prompt files. Run **Chat: Open Customizations** from the Command Palette.
 
 ## Prompt file locations
 
-You can define prompt files for a specific workspace or at the user level, where they are available across all your workspaces. The following table lists the default file locations that the Local agent uses for prompt files.
+You can define prompt files for a specific workspace or at the user level, where they are available across all your workspaces. The following table lists the default file locations that the Local harness uses for prompt files.
 
 | Scope | Default file location |
 |-------|-----------------------|

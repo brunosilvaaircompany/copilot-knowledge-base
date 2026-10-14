@@ -65,7 +65,7 @@ Configure exclusion settings to keep agent searches focused on source code you c
 * **`setting(files.exclude)`**: hides files from the Explorer and excludes them from text search, grep, and the semantic index.
 * **`setting(search.exclude)`**: excludes files from text search and grep while keeping them visible in the Explorer.
 
-Strict exclusions improve search relevance, speed up searches over large workspaces, and reduce the tokens consumed by search results. This also helps [manage AI credit usage](../guides/optimize-usage.md#exclude-files-from-copilot-context).
+Strict exclusions improve search relevance, speed up searches over large workspaces, and reduce the tokens consumed by search results. This also helps [manage AI credit usage](../guides/optimize-usage.md#exclude-files-from-chat-context).
 
 Add exclusion patterns to your [workspace settings](https://code.visualstudio.com/docs/configure/settings). Patterns use [glob syntax](https://code.visualstudio.com/docs/editor/glob-patterns).
 

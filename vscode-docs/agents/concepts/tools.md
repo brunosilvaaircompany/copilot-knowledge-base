@@ -38,7 +38,9 @@ An available tool comes from {% data variables.product.prodname_vscode_shortname
 
 Limit enabled tools to the capabilities that are relevant to your task. A focused set helps the agent choose appropriate tools, reduces the chance of unnecessary actions, and limits the tool output added to the [context window](language-models.md#context-window).
 
-The scope of a tool selection depends on where the agent session runs. For the Local harness on the extension host, the selection applies to one chat request. For the Copilot harness on the Agent Host, the selection persists in your [user profile](https://code.visualstudio.com/docs/configure/profiles). Tools can also be fixed for a reusable [custom agent](../../agent-customization/custom-agents.md).
+For Copilot harness sessions, your tool selection persists in the active [user profile](https://code.visualstudio.com/docs/configure/profiles). Tools can also be fixed for a reusable [custom agent](../../agent-customization/custom-agents.md). Learn how to [manage available tools](../run/tools.md#manage-available-tools).
+
+**NOTE:** **For Local harness sessions:** The tool selection applies to one chat request rather than persisting across requests.
 
 ## Tool approval and trust
 

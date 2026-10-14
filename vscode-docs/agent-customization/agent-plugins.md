@@ -310,7 +310,7 @@ Plugins can include [hooks](hooks.md) that run shell commands at agent lifecycle
 
 Organizations can distribute approved hooks through plugins. When managed settings specify `allowManagedHooksOnly: true`, plugin hooks run only when the plugin is force-enabled by a managed `enabledPlugins["plugin@marketplace"]: true` entry. User enablement alone is not sufficient, and `allowManagedHooksOnly` does not itself enable the plugin. See [Deploy hooks through managed plugins](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#deploy-hooks-through-managed-plugins).
 
-Hook configuration and payloads depend on the session's harness. The event and matcher behavior described below applies to the Local harness. Start with [choosing a hook implementation](hooks.md#choose-the-hook-implementation-for-your-session) for Copilot, Claude, and Codex sessions.
+Hook configuration and payloads depend on the session's harness. Start with [choosing a hook implementation](hooks.md#choose-the-hook-implementation-for-your-session) to find its supported events and configuration. For Local harness sessions, expand **Configure plugin hooks for Local harness sessions** below.
 
 ### Hook file location
 
@@ -334,9 +334,14 @@ my-plugin/
     format.sh            # Hook script referenced by hooks.json
 ```
 
+<details>
+<summary>Configure plugin hooks for Local harness sessions</summary>
+
+The following configuration, event, and matcher behavior applies to the Local harness.
+
 ### Hook configuration format
 
-For the Local harness, plugin hooks use the same base format as [workspace hooks](hooks.md#local-hook-configuration-formats). The Local parser accepts Claude hook configuration, including matcher syntax, but ignores matcher values. As a result, all nested commands for the event run in Local sessions.
+For the Local harness, plugin hooks use the same base format as [workspace hooks](hooks.md#local-hook-configuration-formats). The Local parser accepts Claude hook configuration, including matcher syntax, but ignores matcher values. As a result, all nested commands for the event run in Local harness sessions.
 
 **Flat format** (same as workspace hooks):
 
@@ -418,7 +423,7 @@ Review code for correctness and maintainability.
 
 For legacy OpenPlugin plugins, use `${PLUGIN_ROOT}` in place of `${CLAUDE_PLUGIN_ROOT}`.
 
-These [agent-scoped hooks](hooks.md#agent-scoped-hooks-for-local) are in Preview and require the Local harness, `setting(chat.useHooks)`, and a trusted workspace. They run only while the contributing custom agent is active, including when it runs as a subagent.
+These [agent-scoped hooks](hooks.md#agent-scoped-hooks-for-the-local-harness) are in Preview and require the Local harness, `setting(chat.useHooks)`, and a trusted workspace. They run only while the contributing custom agent is active, including when it runs as a subagent.
 
 ### Supported hook events
 
@@ -430,13 +435,15 @@ Plugin-wide hooks run alongside workspace-level and user-level hooks. When multi
 
 Disabling a plugin also disables its hooks. Unless enterprise policy controls the plugin's enablement, you can enable or disable plugins globally or for a specific workspace from the Extensions view.
 
+</details>
+
 ## Discover and install plugins
 
 You can browse and install plugins from marketplaces or directly from a Git repository.
 
 ### Manage plugins with slash commands
 
-In a Copilot session that runs on the Agent Host, enter `/plugin ` in the chat input to view completions for plugin and marketplace operations.
+In a Copilot harness session, enter `/plugin ` in the chat input to view completions for plugin and marketplace operations.
 
 | Command | Purpose |
 |---------|---------|

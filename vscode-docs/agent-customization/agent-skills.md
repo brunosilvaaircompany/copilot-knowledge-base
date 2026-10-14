@@ -1,6 +1,6 @@
 # Use Agent Skills in {% data variables.product.prodname_vscode_shortname %}
 
-Agent Skills are folders of instructions, scripts, and resources that AI agents can load when relevant to perform specialized tasks. Agent Skills is an [open standard](https://agentskills.io) that works across multiple AI agents, including {% data variables.product.prodname_copilot %} in {% data variables.product.prodname_vscode_shortname %}, {% data variables.copilot.copilot_cli %}, the {% data variables.copilot.github_copilot_app %}, {% data variables.copilot.copilot_cloud_agent %}, and {% data variables.product.prodname_openai_codex %} [through Agent Host](../agents/run/agent-harnesses.md#codex) (Experimental).
+Agent Skills are folders of instructions, scripts, and resources that AI agents can load when relevant to perform specialized tasks. Agent Skills is an [open standard](https://agentskills.io) that works across multiple AI agents, including {% data variables.product.prodname_copilot %} in {% data variables.product.prodname_vscode_shortname %}, {% data variables.copilot.copilot_cli %}, the {% data variables.copilot.github_copilot_app %}, {% data variables.copilot.copilot_cloud_agent %}, and the [experimental {% data variables.product.prodname_openai_codex %} integration](../agents/run/agent-harnesses.md#codex).
 
 Unlike [custom instructions](custom-instructions.md) that primarily define coding guidelines, skills enable specialized capabilities and workflows that can include scripts, examples, and other resources. Skills you create are portable across skills-compatible agents, but supported locations and optional features vary by agent. Unless otherwise noted, the configuration options and controls on this page apply to {% data variables.product.prodname_copilot_short %}.
 
@@ -22,7 +22,7 @@ While both Agent Skills and custom instructions help customize Copilot's behavio
 | Feature | Agent Skills | Custom Instructions |
 | ------- | ------------ | ------------------- |
 | **Purpose** | Teach specialized capabilities and workflows | Define coding standards and guidelines |
-| **Portability** | Works across {% data variables.product.prodname_vscode_shortname %}, {% data variables.copilot.copilot_cli_short %}, the {% data variables.copilot.github_copilot_app %}, {% data variables.copilot.copilot_cloud_agent %}, and {% data variables.product.prodname_openai_codex %} through Agent Host (Experimental) | Reusable across experiences that support the selected [instruction format](custom-instructions.md#choose-a-format) |
+| **Portability** | Reusable across [skills-compatible coding agents](#agent-skills-standard), subject to each agent's supported locations and features | Reusable across experiences that support the selected [instruction format](custom-instructions.md#choose-a-format) |
 | **Content** | Instructions, scripts, examples, and resources | Instructions only |
 | **Scope** | Task-specific, loaded on-demand | Always applied (or via glob patterns) |
 | **Standard** | Open standard ([agentskills.io](https://agentskills.io)) | Multiple formats, such as `AGENTS.md` and `.github/copilot-instructions.md` |
@@ -52,12 +52,12 @@ Skills are stored in directories with a `SKILL.md` file that defines the skill's
 | Skill type | Location |
 | ---------- | -------- |
 | Project skills, stored in your repository | `.github/skills/`, `.claude/skills/`, `.agents/skills/` |
-| Personal skills, stored in your user profile | `~/.copilot/skills/`, `~/.claude/skills/`, `~/.agents/skills/` |
+| Personal skills, stored in your home directory | `~/.copilot/skills/`, `~/.claude/skills/`, `~/.agents/skills/` |
 
-**NOTE:** To reuse repository skills with {% data variables.product.prodname_openai_codex %}, [set up Codex on Agent Host](../agents/run/agent-harnesses.md#codex) (Experimental). This integration discovers workspace skills in `.github/skills/` before your first prompt, without additional skill-location configuration. Codex also discovers `.agents/skills/` natively.
+**NOTE:** To reuse repository skills with {% data variables.product.prodname_openai_codex %}, [configure the experimental Codex integration](../agents/run/agent-harnesses.md#codex). This integration discovers workspace skills in `.github/skills/` before your first prompt, without additional skill-location configuration. Codex also discovers `.agents/skills/` natively.
 If skills in `.github/skills/` have duplicate names across workspace roots, the primary root takes precedence. Discovery makes skills available to the model but does not guarantee that it invokes a skill for every relevant prompt.
 
-**NOTE:** The `setting(chat.agentSkillsLocations)` setting is deprecated and only used by the Local agent. If you configured other skill locations with this setting, [migrate the skills to supported locations](overview.md#migrate-customizations-from-configured-locations).
+**NOTE:** **For Local harness sessions:** The `setting(chat.agentSkillsLocations)` setting adds other skill locations. This setting is deprecated and isn't read by Copilot harness sessions. To reuse those skills with the Copilot harness, [move them to supported locations](migrate-customizations.md#move-customizations-from-configured-locations).
 
 **TIP:** In a monorepo, enable `setting(chat.useCustomizationsInParentRepositories)` to discover skills from the parent repository root. Learn more about [parent repository discovery](overview.md#use-customizations-in-a-monorepo).
 
@@ -363,7 +363,7 @@ Agent Skills is an open standard that enables portability across different AI ag
 * **{% data variables.copilot.copilot_cli %}**: Accessible when working in the terminal
 * **{% data variables.copilot.github_copilot_app %}**: Available in the dedicated desktop experience.
 * **{% data variables.copilot.copilot_cloud_agent %}**: Used during automated coding tasks
-* **{% data variables.product.prodname_openai_codex %} through Agent Host (Experimental)**: Discovers workspace skills in `.github/skills/` after you [set up the integration](../agents/run/agent-harnesses.md#codex).
+* **{% data variables.product.prodname_openai_codex %} integration (Experimental)**: Discovers workspace skills in `.github/skills/` after you [set up the integration](../agents/run/agent-harnesses.md#codex).
 
 Learn more about the Agent Skills standard at [agentskills.io](https://agentskills.io).
 

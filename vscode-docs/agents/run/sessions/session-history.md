@@ -1,6 +1,6 @@
 # Sync and query session history
 
-{% data variables.product.prodname_vscode_shortname %} maintains a searchable history of your Copilot sessions. By default, it syncs local agent sessions to your GitHub account so you can access them across devices, share selected sessions, and query work from {% data variables.product.prodname_vscode_shortname %}, {% data variables.copilot.copilot_cli_short %}, {% data variables.copilot.copilot_cloud_agent_short %}, code review, and the GitHub Copilot Desktop app.
+{% data variables.product.prodname_vscode_shortname %} maintains a searchable history of your Copilot harness sessions. By default, it syncs local agent sessions to your GitHub account so you can access them across devices, share selected sessions, and query work from {% data variables.product.prodname_vscode_shortname %}, {% data variables.copilot.copilot_cli_short %}, {% data variables.copilot.copilot_cloud_agent_short %}, code review, and the GitHub Copilot Desktop app.
 
 Synced sessions are private unless you explicitly share them.
 
