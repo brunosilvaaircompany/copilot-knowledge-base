@@ -1,36 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-13 14:55 UTC  
+> Atualizado em: 2026-10-14 12:47 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [New controls and chat improvements in Copilot for JetBrains](https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains)
+## [Gemini 4 Argon in GitHub Copilot](https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot)
 
-**Data:** 2026-10-10  **Categorias:** `Release`, `copilot`, `enterprise management tools`
+**Data:** 2026-10-13  **Categorias:** `Release`, `copilot`
 
-This update brings more control over default models and MCP server in GitHub Copilot for JetBrains. It also makes diagnostics easier to address, improves chat navigation and account controls, and&#8230;
+Gemini 4 Argon, Google&#8217;s newest frontier model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks. In early testing, Gemini 4 Argon&#8230;
 
-The post [New controls and chat improvements in Copilot for JetBrains](https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [GitHub Copilot weekly releases — October 5](https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5)
-
-**Data:** 2026-10-09  **Categorias:** `Release`, `copilot`
-
-This week&#8217;s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work. GitHub Copilot Claude Haiku&#8230;
-
-The post [GitHub Copilot weekly releases — October 5](https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Copilot code review: New organization billing options and controls](https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls)
-
-**Data:** 2026-10-08  **Categorias:** `Improvement`, `copilot`
-
-This release adds new billing and license controls for Copilot code review admins: Billing: Organization owners can bill Copilot code reviews from members with a Copilot license to the organization&#8217;s&#8230;
-
-The post [Copilot code review: New organization billing options and controls](https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls) appeared first on [The GitHub Blog](https://github.blog).
+The post [Gemini 4 Argon in GitHub Copilot](https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

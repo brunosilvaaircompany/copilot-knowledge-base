@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-04 09:35 UTC  
+> Atualizado em: 2026-10-14 12:47 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Migrate from GitLab to GitHub with GitHub Enterprise Importer](https://github.blog/changelog/2026-08-03-migrate-from-gitlab-to-github-with-github-enterprise-importer)
+## [GitHub App improvements for least privilege and management](https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management)
 
-**Data:** 2026-08-03  **Categorias:** `Release`, `enterprise management tools`
+**Data:** 2026-10-13  **Categorias:** `Improvement`, `enterprise management tools`, `platform governance`
 
-Migrations from gitlab.com and GitLab Self-Managed to GitHub Enterprise Cloud with GitHub Enterprise Importer (GEI) are now generally available. You can now self-serve these migrations using GEI and the gh&#8230;
+We&#8217;re releasing several GitHub Apps improvements today that help developers move off of classic PATs, improve GitHub App management, and request fewer sensitive permissions. We&#8217;ve also made it easier for&#8230;
 
-The post [Migrate from GitLab to GitHub with GitHub Enterprise Importer](https://github.blog/changelog/2026-08-03-migrate-from-gitlab-to-github-with-github-enterprise-importer) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub App improvements for least privilege and management](https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
