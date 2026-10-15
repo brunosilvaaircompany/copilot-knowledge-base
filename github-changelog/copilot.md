@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-14 12:47 UTC  
+> Atualizado em: 2026-10-15 12:33 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [HydraFusion updates and new Max option](https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option)
+
+**Data:** 2026-10-14  **Categorias:** `Release`, `copilot`
+
+HydraFusion has an updated model pool, improved orchestration workflows, and introduces HydraFusion Max. Both HydraFusion and HydraFusion Max are available across VS Code, the GitHub Copilot app, and GitHub Copilot&#8230;
+
+The post [HydraFusion updates and new Max option](https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 

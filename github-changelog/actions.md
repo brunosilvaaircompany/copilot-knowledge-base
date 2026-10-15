@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-08 14:29 UTC  
+> Atualizado em: 2026-10-15 12:33 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Stateless GitHub App installation tokens rolled out](https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out)
+## [GitHub Actions workflow lockfiles in public preview](https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview)
 
-**Data:** 2026-10-02  **Categorias:** `Improvement`, `actions`, `ecosystem &amp; accessibility`
+**Data:** 2026-10-14  **Categorias:** `Release`, `actions`
 
-The staged rollout of the stateless GitHub App installation token format, which began on April 27, 2026, is complete. By default, all newly minted GitHub App installation tokens will be&#8230;
+GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after&#8230;
 
-The post [Stateless GitHub App installation tokens rolled out](https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Actions workflow lockfiles in public preview](https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

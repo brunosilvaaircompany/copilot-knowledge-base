@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-14 12:47 UTC  
+> Atualizado em: 2026-10-15 12:33 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -32,15 +32,5 @@ The post [Secret scanning blocks Anthropic keys by default, adds Salesforce](htt
 Organization and enterprise administrators can now observe the impact of AI Scan for pull requests in security overview. New metrics show how many AI Scan findings were generated, resolved, the&#8230;
 
 The post [Code scanning AI Scan metrics in security overview](https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Push attribution for commits in limited public preview](https://github.blog/changelog/2026-10-12-push-attribution-public-preview)
-
-**Data:** 2026-10-12  **Categorias:** `Release`, `application security`, `platform governance`
-
-GitHub now durably records the authenticated user who pushed each commit and surfaces that pusher identity in the UI and API alongside the existing author and committer fields. Commit author&#8230;
-
-The post [Push attribution for commits in limited public preview](https://github.blog/changelog/2026-10-12-push-attribution-public-preview) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
