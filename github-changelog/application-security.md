@@ -1,36 +1,26 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-15 12:33 UTC  
+> Atualizado em: 2026-10-16 12:13 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Audit GitHub Code Quality finding dismissals and reopenings](https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings)
+## [AI Scan for pull requests generally available](https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available)
 
-**Data:** 2026-10-13  **Categorias:** `Improvement`, `application security`, `platform governance`
+**Data:** 2026-10-15  **Categorias:** `Release`, `application security`
 
-You can now review manual dismissals and reopenings of GitHub Code Quality findings in your organization or enterprise audit log. Findings may appear in either your repository&#8217;s default-branch backlog or&#8230;
+Code scanning AI Scan for pull requests is now generally available. It complements CodeQL by finding vulnerabilities in pull request changes for languages and frameworks that CodeQL does not currently&#8230;
 
-The post [Audit GitHub Code Quality finding dismissals and reopenings](https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Secret scanning blocks Anthropic keys by default, adds Salesforce](https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce)
-
-**Data:** 2026-10-13  **Categorias:** `Improvement`, `application security`
-
-Secret scanning now detects new secret types from Salesforce, Anthropic, and Cloudsmith, with the new Anthropic secret types blocked with push protection by default. New secret scanning partner Salesforce is&#8230;
-
-The post [Secret scanning blocks Anthropic keys by default, adds Salesforce](https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce) appeared first on [The GitHub Blog](https://github.blog).
+The post [AI Scan for pull requests generally available](https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [Code scanning AI Scan metrics in security overview](https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview)
+## [Agentic autofix for code scanning alerts general availability](https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability)
 
-**Data:** 2026-10-13  **Categorias:** `Improvement`, `application security`
+**Data:** 2026-10-15  **Categorias:** `Release`, `application security`, `copilot`
 
-Organization and enterprise administrators can now observe the impact of AI Scan for pull requests in security overview. New metrics show how many AI Scan findings were generated, resolved, the&#8230;
+Agentic autofix for code scanning alerts is now generally available. It remediates alerts by working across your codebase the way a developer would: it explores relevant files, proposes a fix,&#8230;
 
-The post [Code scanning AI Scan metrics in security overview](https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview) appeared first on [The GitHub Blog](https://github.blog).
+The post [Agentic autofix for code scanning alerts general availability](https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

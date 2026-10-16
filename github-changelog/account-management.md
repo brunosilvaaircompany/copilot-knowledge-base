@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-15 12:33 UTC  
+> Atualizado em: 2026-10-16 12:13 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Search and filter for budgets now available](https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available)
+## [Download GitHub Code Quality license usage as a CSV](https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv)
 
-**Data:** 2026-10-13  **Categorias:** `Improvement`, `account management`, `enterprise management tools`
+**Data:** 2026-10-15  **Categorias:** `Improvement`, `account management`, `application security`
 
-The &#8220;Budgets and alerts&#8221; page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for&#8230;
+You can now download a CSV report of your GitHub Code Quality license usage to reconcile your license count with your own records. The report includes: Each active committer who&#8230;
 
-The post [Search and filter for budgets now available](https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available) appeared first on [The GitHub Blog](https://github.blog).
+The post [Download GitHub Code Quality license usage as a CSV](https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
