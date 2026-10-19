@@ -6,7 +6,7 @@ GitHub Code Quality analyzes your code for quality and coverage issues and deliv
 * **On the default branch**, rules-based scans identify existing quality debt across your codebase, with autofixes you can apply directly or assign to Copilot cloud agent to resolve on your behalf. AI-powered analysis also runs on recently changed files, flagging issues that fall outside existing rule sets, including languages not yet covered by CodeQL queries.
 
 > [!NOTE]
-> On pull requests, Code Quality posts rules-based CodeQL findings only. If you also want AI-powered reviews of your pull requests, you can enable GitHub Copilot code review separately. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review).
+> On pull requests, Code Quality posts rules-based CodeQL findings only. If you also want AI-powered reviews of your pull requests, you can enable GitHub Copilot code review separately. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review).
 
 ## Use cases
 

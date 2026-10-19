@@ -38,7 +38,7 @@ Auto model selection also **protects your cache**. It changes models at natural 
 
 Auto model selection also routes around degraded or busy models, so you hit fewer rate limits and errors.
 
-If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, GitHub Copilot app, or Copilot cloud agent.
+If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent.
 
 
 For information on the feature and its availability, see [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection#copilot-chat-in-ides).

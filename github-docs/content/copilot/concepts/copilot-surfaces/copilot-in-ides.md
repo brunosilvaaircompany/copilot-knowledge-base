@@ -1,66 +1,42 @@
 # GitHub Copilot in IDEs
 
-GitHub Copilot integrates with supported IDEs to help you throughout the development process. Copilot can explain concepts, complete code, propose edits, and validate files with agent mode.
+GitHub Copilot integrates with supported IDEs to help you throughout the development process. You can work alongside Copilot in your editor, or delegate tasks to agents and review their results.
 
 The available features and entry points vary by IDE. For a detailed comparison, see [Copilot Feature Matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix).
 
-## How Copilot helps in your IDE
+## Copilot in VS Code
 
-You can work with Copilot in three main ways:
+Copilot in VS Code brings AI assistance and agent-driven development into the environment where you write, run, debug, and review code.
 
-* **Code suggestions** help you write and edit code without leaving the editor.
-* **Chat** lets you ask questions, explain or refactor code, generate tests, and explore possible solutions.
-* **Agentic experiences** can plan and complete multi-step tasks by reading files, editing code, and running commands in your local development environment.
+### Benefits of using Copilot in VS Code
 
-These experiences complement each other. For example, you might use chat to understand an unfamiliar codebase, ask an agent to implement a change across several files, and use inline suggestions to refine the result.
+* **Stay in your development environment.** Work with agents alongside your editor, terminal, tests, source control, and debugger, so you can inspect and validate results with the tools you already use.
+* **Choose how much work to delegate.** Move between code suggestions, focused edits, interactive chat, planning, and autonomous agent work as your task evolves.
+* **Work on multiple tasks.** Run isolated agent sessions in parallel and use the Agents window to follow progress across projects.
+* **Use the environment your project needs.** Run agents where your code and tools live, whether on your machine or in a connected remote environment, so they work with the right operating system, runtimes, and dependencies.
+* **Choose your models and tools.** Use models provided with Copilot, bring your own API key, or add models and tools through VS Code extensions.
 
-## Code suggestions
+### What you can do with Copilot in VS Code
 
-Copilot can suggest code directly in the editor as you work. Depending on your IDE, these suggestions can include inline suggestions and next edit suggestions.
+Choose the most appropriate workflow for your task, from getting focused assistance in the editor to delegating work to agents.
 
-### Inline suggestions
+* **Code suggestions:** Get suggestions directly in the editor as you work. See [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions).
+* **Chat:** Ask questions about your codebase, compare approaches, and plan complex changes using context from your open files and workspace. Use inline chat for quick help within your code. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+* **Agent mode:** Ask an agent to find relevant code, edit files, run commands, and validate its work, while you review changes and redirect it as it works. See [Use Agent Mode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-agent-mode).
+* **Parallel agent sessions:** Start, monitor, and review multiple agent sessions across projects from the Agents window. See [Agents window](https://code.visualstudio.com/docs/agents/run/agents-window) in the VS Code documentation.
+* **Cloud agent sessions:** Manage Copilot cloud agent sessions directly from your IDE. See [Use Cloud Agent In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-cloud-agent-in-your-ide).
+* **Models and agent harnesses:** Choose a model based on the speed, reasoning, and cost your task needs. Use models included with Copilot, bring your own key (BYOK), or install an extension that provides more models. You can also choose an agent harness. See [Bring Your Own Key](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key) and [Agent harnesses](https://code.visualstudio.com/docs/agents/run/agent-harnesses) in the VS Code documentation.
+* **Local, remote, and containerized environments:** Run agents on your machine, in a Dev Container (Experimental), or on a remote machine over SSH or a dev tunnel. You can check progress from the Agents window, including in a browser on another device.
+* **Customizations:** Add project-specific context and capabilities with custom instructions, agent skills, hooks, Model Context Protocol (MCP) servers, and extensions.
+* **Terminal:** Run GitHub Copilot CLI in the integrated terminal for a terminal-first agent experience.
 
-Inline suggestions appear as dimmed text at your cursor position. Copilot uses the code around your cursor and other available context to predict what you are likely to write next.
+For a full overview, see [Build with AI in VS Code](https://code.visualstudio.com/docs/agents/overview) in the VS Code documentation.
 
-Suggestions can complete part of a line, an entire line, or a larger block of code. You can also write a natural-language comment describing the code you want, then let Copilot suggest an implementation.
+## Using Copilot in other IDEs
 
-You remain responsible for reviewing and testing suggested code before using it.
+For most supported IDEs, the **GitHub Copilot extension or plugin** is the primary entry point. It connects Copilot to your editor and provides the features supported by that IDE. To install the appropriate integration, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
 
-### Next edit suggestions
-
-Next edit suggestions predict both where you are likely to make your next change and what that change could be. They are based on the edits you are currently making and can help you apply related changes elsewhere in a file.
-
-For example, after you rename a method or change a data structure, Copilot might suggest updating another location affected by that change.
-
-Availability and configuration vary by IDE. For instructions on using inline and next edit suggestions, see [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions).
-
-GitHub Copilot provides suggestions for numerous languages and a wide variety of frameworks, but works especially well for Python, JavaScript, TypeScript, Ruby, Go, C# and C++. GitHub Copilot can also assist in query generation for databases, generating suggestions for APIs and frameworks, and can help with infrastructure as code development.
-
-
-## Chat and agentic experiences
-
-GitHub Copilot Chat provides a conversational interface in your IDE. Because chat can use context from your project, you can ask questions about selected code, open files, or your wider codebase.
-
-You can use chat to:
-
-* Explain unfamiliar code.
-* Suggest fixes for bugs.
-* Refactor or document code.
-* Generate tests.
-* Compare implementation approaches.
-* Answer questions about programming languages and development tools.
-
-For larger tasks, an agentic experience can break your request into steps and use tools to complete the work. Depending on your IDE and configuration, an agent can inspect your project, edit multiple files, run terminal commands, and respond to errors encountered while working.
-
-Agentic changes are made in your local development environment. Review the proposed changes and the output of any commands before accepting the result.
-
-For instructions on using chat and agents, see [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
-
-## Choosing an entry point
-
-For most IDEs, the **GitHub Copilot extension or plugin** is the primary entry point. It connects Copilot directly to your editor and provides the features supported by that IDE. You can install the appropriate integration by following [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
-
-You can also run **GitHub Copilot CLI** in an IDE's integrated terminal if the terminal environment meets the requirements for Copilot CLI. Integration between CLI sessions and the IDE varies.
+You can also run GitHub Copilot CLI in an IDE's integrated terminal if the terminal environment meets the requirements for Copilot CLI. Integration between CLI sessions and the IDE varies.
 
 ### Entry points in JetBrains IDEs
 

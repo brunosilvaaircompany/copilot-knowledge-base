@@ -59,10 +59,6 @@ Once you've picked a rule, decide how to handle each finding:
 | Multiple findings for the same rule are legitimate. | Select up to 25 findings on a page, then click **Assign to Copilot**. | Copilot opens a pull request containing fixes for the selected findings. Assigning to Copilot consumes AI credits|
 | A finding doesn't apply. For example, it's in legacy code, an intentional pattern, or a false positive. | Click **Dismiss**. | The finding is considered resolved and removed from the list of open findings. |
 
-> [!NOTE]
-> Agentic Autofix for GitHub Code Quality backlog findings is currently in public preview and subject to change.
-
-
 In our example, we assign the 40 "Overwritten property" findings to Copilot in batches of up to 25. We review the resulting pull requests and merge them once the CI checks pass.
 
 ## Step 4: Communicate impact

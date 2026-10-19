@@ -66,6 +66,18 @@ There are many further steps you can take to additionally secure GitHub Actions.
 
 For more information, see [Secure Use](https://docs.github.com/en/actions/reference/security/secure-use#writing-workflows) and [Secure Use](https://docs.github.com/en/actions/reference/security/secure-use).
 
+
+
+## Lock the dependencies your build systems run
+
+When a workflow references an action by a tag or branch, the code that runs is whatever that reference points to at the time of the build, which may not be the code you reviewed.
+
+A workflow dependency lockfile pins every action your workflows use, including transitive dependencies, to a verified commit. For more information, see [Workflow Dependency Lockfiles](https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles).
+
+If you are responsible for multiple repositories, you can require lockfiles with an GitHub Actions policy at the enterprise, organization, or repository level. See [Enforce Workflow Lockfiles](https://docs.github.com/en/actions/how-tos/administer/enforce-workflow-lockfiles).
+
+
+
 ## Next steps
 
 * [End To End Supply Chain Overview](https://docs.github.com/en/code-security/tutorials/implement-supply-chain-best-practices/end-to-end-supply-chain-overview)

@@ -77,7 +77,7 @@ For more information about CodeQL model packs and writing your own, see [Use The
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
+1. In the "{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
 
 
 1. Find the "Code scanning" section.
@@ -142,7 +142,7 @@ When you enable default setup, an initial scan runs, but weekly scheduled scans 
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
+1. In the "{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
 
 1. In the "Code scanning" section, enable the **Keep scheduled scans running every 30 days for inactive repositories** setting.
 

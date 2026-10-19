@@ -24,7 +24,7 @@ Copilot's capabilities and supporting features fall into four categories:
 | Assistive | Respond to prompts and provide suggestions, but require human review before changes are made. | Inline suggestions, Copilot Chat, Copilot pull request summaries. | All changes require user approval. |
 | Agentic | Autonomously research, plan, and make changes on behalf of users. | Copilot cloud agent, third-party agents. | Can work autonomously, but with built-in protections. |
 | Customizations | Add context, instructions, tools, skills, and agents to tailor how Copilot responds and works. | Custom instructions, prompt files, Copilot Spaces, MCP servers, agent skills, custom agents. | Support and configuration vary by feature and surface. Organization and enterprise policies can control access to some customizations. |
-| External AI agents, models, and tools | External coding agents, models, and tools, including MCP servers from other providers, that work alongside Copilot cloud agent to complete tasks asynchronously. | Anthropic Claude, OpenAI Codex. | Same as agentic. Review provider documentation and enable via policies. See [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents). |
+| External AI agents, models, and tools | External coding agents, models, and tools, including MCP servers from other providers, that work alongside Copilot cloud agent to complete tasks asynchronously. | Anthropic Claude, OpenAI Codex. | Same as agentic. Review provider documentation and enable via policies. See [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents). |
 
 {% endrowheaders %}
 

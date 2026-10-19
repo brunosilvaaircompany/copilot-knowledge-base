@@ -123,7 +123,7 @@ Per-user reports contain one record per user for the reporting period. The 28-da
 | `totals_by_slash_cmd` | `array` | Yes | Top slash commands used in Copilot CLI, ordered by interaction count. See [Copilot CLI customization fields](#copilot-cli-customization-fields-api-only). |
 | `totals_by_plugin` | `array` | Yes | Top plugins used in Copilot CLI, ordered by interaction count. See [Copilot CLI customization fields](#copilot-cli-customization-fields-api-only). |
 | `totals_by_cli` | `object` | Yes | CLI-specific metrics for the user. Omitted when the user had no Copilot CLI usage that day. See [Copilot CLI metrics fields](#copilot-cli-metrics-fields). |
-| `totals_by_copilot_app` | `object` | Yes | Copilot app metrics for the user. Omitted when the user had no Copilot app usage that day. See [Copilot app metrics fields](#copilot-app-metrics-fields). |
+| `totals_by_copilot_app` | `object` | Yes | The Copilot app metrics for the user. Omitted when the user did not use the Copilot app that day. See [Metrics fields for the Copilot app](#copilot-app-metrics-fields). |
 | `totals_by_3rd_party_agent` | `array` | Yes | Per-agent usage metrics for recognized agent apps. Omitted when the user had no recognized agent app activity during the reporting period. See [Agent apps metrics fields](#agent-apps-metrics-fields). |
 | `totals_by_vscode_agent` | `object` | Yes | Dedicated VS Code Agents-window metrics for the user. Omitted when both required counts are not available. See [VS Code Agents-window metrics fields](#vs-code-agents-window-metrics-fields). |
 | `totals_by_ide` | `array` | No | Per-IDE breakdown of the user's activity. See [Activity breakdown objects](#activity-breakdown-objects). |
@@ -157,7 +157,7 @@ Active-user counts:
 | `weekly_passive_copilot_code_review_users` | `integer` | No | Number of unique users who had Copilot code review automatically assigned to review their pull request during a trailing seven-day window, with no active engagement. |
 | `monthly_passive_copilot_code_review_users` | `integer` | No | Number of unique users who had Copilot code review automatically assigned to review their pull request during a trailing 28-day window, with no active engagement. |
 | `daily_active_cli_users` | `integer` | Yes | Number of unique users who used Copilot CLI on a given day. This count is **independent** of IDE active-user counts and is **not** included in IDE-based active-user definitions. Omitted for enterprises or organizations with no CLI usage that day. |
-| `daily_active_copilot_app_users` | `integer` | Yes | Number of unique users who used the Copilot app on a given day. Null when the enterprise or organization has no Copilot app activity that day. |
+| `daily_active_copilot_app_users` | `integer` | Yes | Number of unique users who used the Copilot app on a given day. Null when the enterprise or organization has no activity in the Copilot app that day. |
 | `daily_active_vscode_agent_users` | `integer` | Yes | Number of unique users who used the dedicated VS Code Agents window on a given day. Omitted when no dedicated Agents-window data is available for the enterprise or organization. |
 
 Activity totals and breakdowns:
@@ -187,7 +187,7 @@ Activity totals and breakdowns:
 | `totals_by_language_model` | `array` | No | Aggregated language-and-model activity breakdown. See [Activity breakdown objects](#activity-breakdown-objects). |
 | `totals_by_model_feature` | `array` | No | Aggregated model-and-feature activity breakdown. See [Activity breakdown objects](#activity-breakdown-objects). |
 | `totals_by_cli` | `object` | Yes | Aggregated Copilot CLI metrics for the day. Omitted when there is no CLI usage that day. Unlike the per-user form, it does not include `last_known_cli_version`. See [Copilot CLI metrics fields](#copilot-cli-metrics-fields). |
-| `totals_by_copilot_app` | `object` | Yes | Aggregated Copilot app metrics for the day. Null when the enterprise or organization has no Copilot app activity that day. See [Copilot app metrics fields](#copilot-app-metrics-fields). |
+| `totals_by_copilot_app` | `object` | Yes | Aggregated daily metrics for the Copilot app. Null when the enterprise or organization has no activity in the Copilot app that day. See [Metrics fields for the Copilot app](#copilot-app-metrics-fields). |
 | `totals_by_3rd_party_agent` | `array` | Yes | Aggregated per-agent usage metrics for recognized agent apps. Omitted when the enterprise or organization had no recognized agent app activity that day. See [Agent apps metrics fields](#agent-apps-metrics-fields). |
 | `totals_by_vscode_agent` | `object` | Yes | Aggregated dedicated VS Code Agents-window metrics for the day. Omitted when both required counts are not available. See [VS Code Agents-window metrics fields](#vs-code-agents-window-metrics-fields). |
 | `totals_by_ai_adoption_phase` | `array` | Yes | Per-phase aggregates of users and their average activity. Omitted when no adoption-phase data is available. See [AI adoption phase fields](#ai-adoption-phase-fields). |
@@ -331,18 +331,21 @@ Distinct counts retain the full identifier cardinality, including items outside 
 
 When these fields are present, empty arrays and distinct counts of `0` mean that no matching activity was recorded. The fields can be null or absent when Copilot CLI customization data isn't available during rollout.
 
-### Copilot app metrics fields
 
-The `totals_by_copilot_app` object contains the following nested fields when Copilot app usage is present. It appears in per-user reports and in aggregated enterprise reports; it is omitted or null when the user or enterprise had no Copilot app activity that day. Unlike `totals_by_cli`, Copilot app coding activity is also reflected in `totals_by_feature`, `totals_by_model_feature`, `totals_by_language_feature`, and `totals_by_language_model` under the `copilot_app` feature value, and in the top-level code activity and lines-of-code metrics. There is no `last_known_app_version` field.
+<a name="copilot-app-metrics-fields"></a>
+
+### Metrics fields for the Copilot app
+
+The `totals_by_copilot_app` object contains the following nested fields when usage of the Copilot app is present. It appears in per-user reports and in aggregated enterprise reports; it is omitted or null when the user or enterprise had no activity in the Copilot app that day. Unlike `totals_by_cli`, coding activity in the Copilot app is also reflected in `totals_by_feature`, `totals_by_model_feature`, `totals_by_language_feature`, and `totals_by_language_model` under the `copilot_app` feature value, and in the top-level code activity and lines-of-code metrics. There is no `last_known_app_version` field.
 
 | Field | Type | Nullable | Description |
 |:--|:--|:--|:--|
-| `totals_by_copilot_app.session_count` | `integer` | No | Number of distinct Copilot app sessions initiated on this day. |
+| `totals_by_copilot_app.session_count` | `integer` | No | Number of distinct sessions initiated in the Copilot app on this day. |
 | `totals_by_copilot_app.request_count` | `integer` | No | Total number of requests made to Copilot via the Copilot app on this day, including both user-initiated prompts and automated agentic follow-up calls. |
 | `totals_by_copilot_app.prompt_count` | `integer` | No | Total number of user prompts, commands, or queries executed within a session. |
-| `totals_by_copilot_app.token_usage.output_tokens_sum` | `integer` | No | Total output tokens generated across all Copilot app requests on this day. |
-| `totals_by_copilot_app.token_usage.prompt_tokens_sum` | `integer` | No | Total prompt tokens sent across all Copilot app requests on this day. |
-| `totals_by_copilot_app.token_usage.avg_tokens_per_request` | `number` | Yes | Average of output and prompt tokens per Copilot app request, computed as `(output_tokens_sum + prompt_tokens_sum) ÷ request_count`. Null when there were no requests that day. |
+| `totals_by_copilot_app.token_usage.output_tokens_sum` | `integer` | No | Total output tokens generated across all requests in the Copilot app on this day. |
+| `totals_by_copilot_app.token_usage.prompt_tokens_sum` | `integer` | No | Total prompt tokens sent across all requests in the Copilot app on this day. |
+| `totals_by_copilot_app.token_usage.avg_tokens_per_request` | `number` | Yes | Average of output and prompt tokens per request in the Copilot app, computed as `(output_tokens_sum + prompt_tokens_sum) ÷ request_count`. Null when there were no requests that day. |
 
 ### VS Code Agents-window metrics fields
 

@@ -90,6 +90,9 @@ Deleting keys and tokens removes credentials that have access to your enterprise
 
 For example, you can delete all personal access tokens for an individual member without affecting that member's SSH keys. To restore programmatic access, users must create new credentials, authorize them with organizations if required, and update affected processes to use the new credentials.
 
+> [!WARNING]
+> The "Delete keys and tokens" action is not a point-in-time operation. Credential deletion runs asynchronously and processes enterprise members in batches. Credentials created after the action starts may also be deleted if processing is still underway. To avoid deleting replacement credentials, create them only after the operation has finished.
+
 ### Included credentials
 
 Both actions include the following credential types:

@@ -19,6 +19,6 @@ Before enabling public monitoring, ensure your enterprise has:
 
 1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
 
-1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security Code security**.
+1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. Under "Additional Settings," toggle **Public monitoring**.

@@ -24,6 +24,14 @@ Before you delete your personal account, make a copy of all repositories, privat
 > [!WARNING]
 > Once your personal account has been deleted, GitHub{% elsif ghes %}an enterprise owner cannot restore your content.
 
+
+
+If your account is flagged, suspended, or otherwise restricted, **Delete your account** may be unavailable, disabled, or direct you to GitHub Support instead of completing deletion. Contact [GitHub Support](https://support.github.com) to request access to the normal self-service deletion flow.
+
+GitHub Support does not delete your personal account on your behalf. Once access is restored, you must complete the steps below to delete your account.
+
+
+
 1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**.
 
 1. In the left sidebar, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Account**.

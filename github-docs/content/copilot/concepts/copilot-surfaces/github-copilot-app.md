@@ -8,7 +8,7 @@ The app is built on GitHub Copilot CLI and integrates natively with GitHub, so y
 
 ## Availability
 
-GitHub Copilot app is available for all Copilot plans.
+The GitHub Copilot app is available for all Copilot plans.
  For Copilot Business and Copilot Enterprise users, the GitHub Copilot app policy must remain enabled. This policy is enabled by default and is separate from the Copilot CLI policy.
 
 ## Supported operating systems
@@ -38,9 +38,9 @@ The GitHub Copilot app supports the following operating systems:
 * **Chats:** Brainstorm in a conversation mode without creating a dedicated branch or workspace.
 * **Session history:** Use `/chronicle` to get insights from previous sessions, including work you started in the app.
 * **Canvases:** Open custom, agent-driven artifacts and interfaces where people and agents can collaborate.
-* **Computer use:** Allow local sessions on macOS and Windows to interact with desktop applications, including legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. For more information, see [Computer Use](https://docs.github.com/en/copilot/concepts/agents/computer-use).
+* **Computer use:** Allow local sessions on macOS and Windows to interact with desktop applications, including legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. For more information, see [Computer Use](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/computer-use).
 
-## GitHub Copilot app workflow
+## The GitHub Copilot app workflow
 
 A typical workflow in the GitHub Copilot app looks like this:
 
@@ -74,7 +74,7 @@ For Copilot Business and Copilot Enterprise users, the GitHub Copilot app respec
 
 ## Public code
 
-GitHub Copilot app may generate code that is a match or near match of publicly available code, even if the "Suggestions matching public code" policy is set to "Block." See [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#enabling-or-disabling-suggestions-matching-public-code).
+The GitHub Copilot app may generate code that is a match or near match of publicly available code, even if the "Suggestions matching public code" policy is set to "Block." See [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#enabling-or-disabling-suggestions-matching-public-code).
 
 ## Further reading
 

@@ -24,7 +24,7 @@ The following table shows the model multipliers per supported model.
 > * Claude Sonnet 4.6
 > * GPT-5.4 mini
 > 
-> If you use auto model selection in Copilot Chat, Copilot CLI, GitHub Copilot app, or Copilot cloud agent, you qualify for a 10% discount. For example, if a model has a multiplier of 1x you'll be billed at 0.9x instead.
+> If you use auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent, you qualify for a 10% discount. For example, if a model has a multiplier of 1x you'll be billed at 0.9x instead.
 
 | Model | Multiplier |
 | --- | ---: |

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can configure Copilot code review to review pull requests automatically, set your Copilot review effort, and control who can request reviews. For an overview, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
+You can configure Copilot code review to review pull requests automatically, set your Copilot review effort, and control who can request reviews. For an overview, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#automatic-pull-request-reviews).
 
 ## Configuring automatic code review for your own pull requests
 
@@ -19,11 +19,11 @@ You can set Copilot code review to review the pull requests you create, in any r
 1. Optionally, to review each new push to a pull request that Copilot is already reviewing, enable **Review new pushes**.
 1. Optionally, to review pull requests while they are still marked as drafts, enable **Review draft pull requests**.
 
-A pull request can qualify for automatic review from several independent sources: your user settings, repository rulesets, or organization rulesets. These sources are evaluated separately. If more than one source applies, Copilot still posts a single review. Your user settings cannot disable push or draft reviews that a ruleset has enabled. For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#automatic-pull-request-reviews).
+A pull request can qualify for automatic review from several independent sources: your user settings, repository rulesets, or organization rulesets. These sources are evaluated separately. If more than one source applies, Copilot still posts a single review. Your user settings cannot disable push or draft reviews that a ruleset has enabled. For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#automatic-pull-request-reviews).
 
 ## Configuring your Copilot review effort
 
-You can choose the Copilot review effort that Copilot code review uses for the reviews you request. Your choice applies to automatic reviews and to reviews you request manually. For an overview of the levels and how Copilot decides which to use, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
+You can choose the Copilot review effort that Copilot code review uses for the reviews you request. Your choice applies to automatic reviews and to reviews you request manually. For an overview of the levels and how Copilot decides which to use, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#review-effort-level).
 
 1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot settings**.
 
@@ -88,7 +88,7 @@ You can configure how Copilot code review completes code reviews in your reposit
    * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
 
-   Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#estimated-consumption).
+   Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
 1. To choose whether Copilot can approve pull requests in your repository, configure the settings under "Auto-approval."
    * **Allow Copilot to approve pull requests**: Toggle on to let Copilot submit approving reviews.
    * **Allow Copilot approvals to count toward merge requirements**: Toggle on so Copilot approvals can satisfy pull request approval requirements.
@@ -98,7 +98,7 @@ You can configure how Copilot code review completes code reviews in your reposit
    > Copilot approvals are in public preview and subject to change.
 
 
-1. To prevent people from using an external Copilot license to request reviews in this repository, enable **Only allow Copilot code review to be triggered by authorized users**. If this setting is enabled for your organization, you cannot turn it off for the repository. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#reviews-requested-with-an-external-copilot-license).
+1. To prevent people from using an external Copilot license to request reviews in this repository, enable **Only allow Copilot code review to be triggered by authorized users**. If this setting is enabled for your organization, you cannot turn it off for the repository. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#reviews-requested-with-an-external-copilot-license).
 
 ## Configuring automatic code review for repositories in an organization
 
@@ -165,7 +165,7 @@ You can configure how Copilot code review completes code reviews in repositories
    * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
 
-    Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#estimated-consumption).
+    Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
 1. To choose how AI credits usage associated with members who have paid Copilot licenses is billed, next to **Choose how members with a Copilot license are billed**, select an option.
    * **Member**: Use the member's Copilot entitlement. If the member's quota is exhausted, the code review fails. This is the default.
    * **Organization**: Bill the organization.
@@ -176,7 +176,7 @@ You can configure how Copilot code review completes code reviews in repositories
    * **Let repositories decide**: Repository admins can decide this in repository settings.
    * **Enable for selected repositories**: Copilot approvals can count toward merge requirements only in the repositories you select. If you choose this option, also assign the repositories you want to enable this for.
    * **Disabled everywhere**: Copilot approvals cannot count toward merge requirements in any repository in the organization.
-   
+
    > [!NOTE]
    > Copilot approvals are in public preview and subject to change.
 

@@ -43,6 +43,9 @@ You need to be an **organization owner** to set up access to private registries 
    
    * **OIDC (OpenID Connect)**: Use short-lived credentials from a cloud identity provider instead of storing long-lived secrets. When you select this option, choose a provider and fill in the provider-specific fields. For more information, see [Configuring OIDC authentication for a private registry](#configuring-oidc-authentication-for-a-private-registry).
    
+   
+   * **Anonymous**: Use this option for a registry that doesn't require authentication. No credentials are stored or sent to the registry. For more information, see [Configuring an anonymous private registry](#configuring-an-anonymous-private-registry).
+   
 1. Define which repositories in the organization can access the private registry using these details: all, private and internal, or selected repositories only.
 1. When you have finished defining the private registry, select **Add Registry** to save the registry information.
 
@@ -114,6 +117,23 @@ The authentication type of a private registry cannot be changed after creation. 
 For more information about how OIDC works, see [Openid Connect](https://docs.github.com/en/actions/concepts/security/openid-connect).
 
 
+
+
+
+### Configuring an anonymous private registry
+
+Some registries, such as internal mirrors, don't require authentication. You can add these registries at the organization level with the **Anonymous** authentication method so that Dependabot can use them without a token, password, or OIDC configuration.
+
+{% ifversion dependabot-egress-allowlist %}
+Dependabot update jobs can only connect to hosts on an egress allowlist. Adding an anonymous registry allows Dependabot to reach the registry's host for jobs in repositories that have access to the registry, without storing a secret or sending credentials. For more information, see [Resolve A Blocked Host](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/resolve-a-blocked-host).
+
+
+When you select **Anonymous**, the credential fields are removed from the form. You still define the registry's **URL** and **Type**. You also choose which repositories can access the registry.
+
+
+After you create an anonymous registry, you can only update its URL and whether it replaces the default registry for the ecosystem. You can't change the authentication method of an existing registry. To switch to or from **Anonymous**, delete the registry and create a new one.
+
+{% endif %}
 
 
 

@@ -10,11 +10,11 @@ Copilot can interact with desktop applications on your behalf by reading accessi
 
 This capability is useful for workflows in legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. It is available for local sessions on macOS and Windows.
 
-For information about its capabilities, controls, and limitations, see [Computer Use](https://docs.github.com/en/copilot/concepts/agents/computer-use).
+For information about its capabilities, controls, and limitations, see [Computer Use](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/computer-use).
 
 ## Enabling computer use
 
-1. Open the settings for GitHub Copilot app.
+1. Open the settings for the GitHub Copilot app.
 1. In the sidebar, select **Computer Use**.
 1. Under **Enable Computer Use**, turn on **Enable Computer Use**.
 1. On macOS, under **Prerequisites**, grant both required permissions:
@@ -43,9 +43,9 @@ To interrupt an active operation, click **Stop** or press <kbd>Esc</kbd>.
 
 ## Reviewing always allowed applications
 
-If you choose **Always allow** in GitHub Copilot app or GitHub Copilot CLI, the approval is saved and applies to both surfaces on the same computer.
+If you choose **Always allow** in the GitHub Copilot app or GitHub Copilot CLI, the approval is saved and applies to both surfaces on the same computer.
 
-1. Open the settings for GitHub Copilot app.
+1. Open the settings for the GitHub Copilot app.
 1. In the sidebar, select **Computer Use**.
 1. Under **Always allowed apps**, click the delete icon next to the application.
 
@@ -53,7 +53,7 @@ Removing an application deletes its saved approval for future sessions in both t
 
 ## Disabling computer use
 
-Open the settings for GitHub Copilot app. In the sidebar, select **Computer Use**, then turn off **Enable Computer Use**.
+Open the settings for the GitHub Copilot app. In the sidebar, select **Computer Use**, then turn off **Enable Computer Use**.
 
 You can also use `/computer off` in a session.
 

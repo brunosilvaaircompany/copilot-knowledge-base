@@ -72,7 +72,7 @@ To export the session as an interactive HTML file, type:
 
 As with Markdown export, if you don't specify a file path the file is saved in the current working directory, with the name `copilot-session-SESSIONID.html`.
 
-If you have used the `/research` slash command in the current session, you can also use the `/share` command to share a research report. For more information, see [Research](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/research#viewing-and-sharing-a-research-report).
+If you have used the `/research` slash command in the current session, you can also use the `/share` command to share a research report. For more information, see [Research With Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/research-with-copilot-cli#viewing-and-sharing-a-research-report).
 
 ## Using the `/chronicle` slash command
 
@@ -233,7 +233,7 @@ For the full list of `/session` subcommands, see [CLI Command Reference](https:/
 ### Deleting session data manually
 
 * **Local data**: To remove data for a particular CLI session locally, delete the relevant session directory from `~/.copilot/session-state/`. To clear all local session data, delete everything under `~/.copilot/session-state/`. After doing this you must manually reindex the session store. See [Reindexing the session store](#reindexing-the-session-store) later in this article. Deleting local files does not affect session data that has been synced to your account. You cannot delete synced data locally.
-* **Synced data**: You can delete or hide synced CLI sessions from GitHub.com. Hiding a session removes it from your session index so it no longer appears in query results. Deleting a session removes it from your session list on GitHub.com. Deletion applies to CLI, VS Code, and GitHub Copilot app sessions.
+* **Synced data**: You can delete or hide synced CLI sessions from GitHub.com. Hiding a session removes it from your session index so it no longer appears in query results. Deleting a session removes it from your session list on GitHub.com. Deletion applies to sessions from Copilot CLI, VS Code, and the GitHub Copilot app.
 
 ## Reindexing the session store
 

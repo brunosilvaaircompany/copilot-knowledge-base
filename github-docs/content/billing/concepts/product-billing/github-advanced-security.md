@@ -37,6 +37,28 @@ For full details of available features, see [About GitHub Advanced Security](htt
 
 You need to **pay** to use Advanced Security features in **private repositories** on GitHub.com, and in all repositories hosted by GHE.com and GitHub Enterprise Server.
 
+
+
+## How AI feature usage is billed
+
+Some Advanced Security features consume AI credits in addition to the active-committer licenses described in this article. AI Scan and agentic autofix consume the **Code Security AI Credits** SKU.
+
+These features consume Code Security AI Credits even when the repository is public and does not require active-committer licenses.
+
+If the account being billed has included AI credits from a GitHub Copilot entitlement, eligible usage draws from that allowance first. After the included allowance is exhausted, further usage is metered. If the account doesn't have included AI credits, all usage is metered.
+
+For an organization-owned repository, usage is attributed to the account that pays for the organization's usage. This is the standalone organization account or its enterprise account. The included AI credits and budgets for that account apply, including for public repositories.
+
+Repositories in the personal namespace of a managed user account are not treated as ordinary personal-account repositories for Code Security AI Credits. AI Scan and agentic autofix are not currently available for these repositories and do not consume Code Security AI Credits there. Purchasing Code Security, having included AI credits, or configuring a Code Security AI Credits budget does not make these features available.
+
+This limitation does not affect classic Copilot Autofix, which is distinct from agentic autofix and does not consume AI credits.
+
+Before security administrators enable AI Scan or agentic autofix broadly, billing administrators should review the account's included AI credits and set budgets for metered usage. After the included allowance is exhausted, a hard budget can prevent further metered usage. For more information, see [Budgets And Alerts](https://docs.github.com/en/billing/concepts/budgets-and-alerts).
+
+For information about features that consume Code Security AI Credits, see [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections) and [Autofix For Code Scanning](https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning).
+
+
+
 ## Using more than your planned licenses
 
 Your account may have a limit on the number of licenses you can use. For example, volume billing specifies a set number of licenses.

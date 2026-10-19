@@ -20,8 +20,10 @@ In this quickstart, you will:
 
 ## Installing the GitHub Copilot app
 
-1. Visit the [download page for GitHub Copilot app](https://github.com/features/ai/github-app).
-1. Download the app for your platform.
+Download and install the GitHub Copilot app for your operating system. For other operating systems and architectures, see the [download page](https://github.com/features/ai/github-app).
+
+<a href="https://github.com/features/ai/github-app" target="_blank" class="btn btn-primary mt-3 mr-3 no-underline js-os-download" data-os-download-mac="https://gh.io/copilot-app-mac" data-os-download-mac-intel="https://gh.io/copilot-app-mac-intel" data-os-download-windows="https://gh.io/copilot-app-win64" data-os-download-windows-arm="https://gh.io/copilot-app-win-arm" data-os-download-linux="https://gh.io/copilot-app-linux">{% octicon "desktop-download" aria-hidden="true" %} <span class="js-os-download-label">Download the GitHub Copilot app</span></a>
+
 
 ## Opening the GitHub Copilot app for the first time
 

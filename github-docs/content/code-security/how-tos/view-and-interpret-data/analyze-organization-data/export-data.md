@@ -8,6 +8,8 @@ The CSV file you download will contain data corresponding to the filters you hav
 
 CSV files exported from the "Coverage" view include a `Code Scanning AI Scan for pull requests` column. The value for each repository is `enabled` or `not-enabled`.
 
+In the "Code scanning on pull requests" report, CSV export is available on the **CodeQL** tab. CSV export is not yet available on the **AI Scan** tab.
+
 
 > [!NOTE]
 > In the "Teams" column of the CSV file, each repository will list a maximum of 20 teams with write access to that repository. If more than 20 teams have write access to a repository, the data will be truncated.
@@ -19,7 +21,7 @@ CSV files exported from the "Coverage" view include a `Code Scanning AI Scan for
 1. In the "Organizations" section, select the organization for which you would like to download security overview data.
 1. Under your organization name, click the **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality** tab.
 
-1. In the sidebar, click **{% octicon "graph" aria-hidden="true" aria-label="graph" %} Overview**, **{% octicon "meter" aria-hidden="true" aria-label="meter" %} Coverage**, **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Risk**, or **{% octicon "graph" aria-hidden="true" aria-label="graph" %} CodeQL pull requests**.
+1. In the sidebar, click **{% octicon "graph" aria-hidden="true" aria-label="graph" %} Overview**, **{% octicon "meter" aria-hidden="true" aria-label="meter" %} Coverage**, **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Risk**, or **{% octicon "graph" aria-hidden="true" aria-label="graph" %} Code scanning on pull requests**.
 1. Next to the search bar, click **{% octicon "download" aria-hidden="true" aria-label="download" %} Export CSV**.
 
     It may take a moment for GitHub to generate the CSV file of your data. Once the CSV file generates, the file will automatically start downloading, and a banner will appear confirming your report is ready. If you are downloading the CSV from the overview page, you will also receive an email when your report is ready, containing a link to download the CSV.

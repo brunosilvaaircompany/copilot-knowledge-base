@@ -26,7 +26,7 @@ With a GitHub Copilot Enterprise license, you can also ask GitHub Copilot Chat f
 
 
 
-For code scanning alerts from CodeQL analysis, you can use security overview to see how CodeQL is performing in pull requests in repositories across your organization, and to identify repositories where you may need to take action. For more information, see [Pull Request Alert Metrics](https://docs.github.com/en/code-security/concepts/code-scanning/pull-request-alert-metrics).
+For code scanning alerts from CodeQL analysis, you can use security overview to see how CodeQL is performing in pull requests in repositories across your organization, and to identify repositories where you may need to take action. For more information, see [Code Scanning On Pull Requests](https://docs.github.com/en/code-security/concepts/code-scanning/code-scanning-on-pull-requests).
 
 You can audit the actions taken in response to code scanning alerts using GitHub tools. For more information, see [Audit Security Alerts](https://docs.github.com/en/code-security/concepts/security-at-scale/audit-security-alerts).
 

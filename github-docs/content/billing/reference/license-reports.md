@@ -1,20 +1,39 @@
 # License reports reference
 
-Each license report shows information about license users in your enterprise account, for Copilot, or for Advanced Security.
+Each license report shows information about license users in your enterprise account, for Copilot, for Code Quality, or for Advanced Security.
 
-**Cloud users** can download license reports from the {% octicon "law" aria-hidden="true" aria-label="law" %} **Licensing** page under {% octicon "credit-card" aria-hidden="true" aria-label="credit-card" %} **Billing & licensing** or using the REST API.
+**Cloud users** can download license reports from the {% octicon "law" aria-hidden="true" aria-label="law" %} **Licensing** page under {% octicon "credit-card" aria-hidden="true" aria-label="credit-card" %} **Billing & licensing** or, for supported products, using the REST API.
 
 
 
-* Enterprise and Advanced Security license users, see [Download License Use](https://docs.github.com/en/billing/how-tos/products/download-license-use)
+* Enterprise{% ifversion code-quality %}, Code Quality, and Advanced Security license users, see [Download License Use](https://docs.github.com/en/billing/how-tos/products/download-license-use)
 * GitHub Copilot license users, see [Download Activity Report](https://docs.github.com/en/copilot/how-tos/administer-copilot/download-activity-report)
 * Report using the REST API, see [Automate Usage Reporting](https://docs.github.com/en/billing/tutorials/automate-usage-reporting)
 
 If you want to generate a more detailed usage report, see [Gather Insights](https://docs.github.com/en/billing/tutorials/gather-insights).
 
-
+{% endif %}
 
 **GitHub Enterprise Server users** can download license reports for Advanced Security from the **License** page under enterprise settings, see [Download License Use](https://docs.github.com/en/billing/how-tos/products/download-license-use).
+
+
+
+## Code Quality license report
+
+The CSV file lists active committers consuming Code Quality licenses and the repositories contributing to that usage.
+
+| Field | Description |
+|-------|-------------|
+| User login | The GitHub username of the user. |
+| Organization / repository | The owner and name of a repository contributing to the user's Code Quality license usage. |
+| Last pushed date | The push date recorded for the user's license usage in the repository, in `YYYY-MM-DD` format. A hyphen (`-`) indicates that the date is unknown. |
+| Last pushed email | The user's Git author email address. |
+
+A user can appear in multiple rows if they contributed to multiple repositories. Each user consumes one Code Quality license across the organization or enterprise, regardless of how many repositories they contribute to. Do not use the number of rows as the license count.
+
+The report shows current active committers, not all licenses billed during a billing period. For details of how license usage affects your bill, see [GitHub Code Quality](https://docs.github.com/en/billing/concepts/product-billing/github-code-quality).
+
+
 
 ## Advanced Security license report
 

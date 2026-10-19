@@ -31,7 +31,7 @@ When creating a security configuration, keep in mind that:
 
 1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
 
-1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security Code security**.
+1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the "Security configurations" section, click **New configuration**.
 1. To help identify your custom security configuration and clarify its purpose on the "Security configurations" page, name your configuration and create a description.
@@ -87,7 +87,7 @@ When creating a security configuration, keep in mind that:
 
 1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
 
-1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security Code security**.
+1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the top section, click **New configuration**.
 1. To help identify your custom security configuration and clarify its purpose on the "New configuration" page, name your configuration and create a description.

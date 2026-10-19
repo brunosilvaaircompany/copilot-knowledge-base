@@ -434,7 +434,7 @@ Specify your own labels for all pull requests raised for a package manager.  For
 Dependabot default behavior:
 
 * All pull requests have a `dependencies` label.
-* If you define more than one package manager, an additional label for the ecosystem or language is added to each pull request. For example: `java` for Gradle updates and `submodules` for git submodule updates.
+* An additional label for the ecosystem or language is added to each pull request, including when you define only one package manager. For example: `java` for Gradle updates and `submodules` for git submodule updates.
 * If semantic version (SemVer) labels are present in the repository, they will be applied automatically to indicate the type of version update (`major`, `minor`, or `patch`).
 * Dependabot creates these default labels automatically, as necessary in your repository.
 
@@ -515,12 +515,14 @@ Dependabot default behavior:
 * If five pull requests with version updates are open, no further pull requests are raised until some of those open requests are merged or closed.
 
 > [!NOTE]
-> _Security update_ pull requests are not subject to this limit and do not count toward it. There is no limit on the number of open pull requests for security updates.
+> _Security update_ pull requests are subject to a separate, fixed limit of 10 open pull requests, which cannot be configured using `open-pull-requests-limit`.
 
 When `open-pull-requests-limit` is defined:
 
 * Dependabot opens pull requests up to the defined integer value. A large value can be set to effectively remove the open pull request limit.
 * You can temporarily disable version updates for a package manager by setting this option to zero, see [Disabling Dependabot version updates](/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates#disabling-dependabot-version-updates).
+
+When either limit is reached, Dependabot reports an error and stops opening additional pull requests until some of the open pull requests are merged or closed. For more information, see [Dependabot Errors](https://docs.github.com/en/code-security/reference/supply-chain-security/troubleshoot-dependabot/dependabot-errors#pull-request-limit-reached).
 
 ## `package-ecosystem` {% octicon "versions" aria-label="Version updates only" height="24" %}
 

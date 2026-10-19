@@ -47,7 +47,7 @@ If a repository in your organization has Dependabot enabled but GitHub Actions d
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
 
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
+1. In the "{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
 
 1. In the "Dependabot" section, next to "Runner type", confirm that you have selected "Standard GitHub runner". If not, click {% octicon "pencil" aria-label="Edit runner type" %} and update your configuration.
 

@@ -12,7 +12,7 @@ You must sign in with a GitHub account to use the app, but you do not need a Cop
 
 ## Supported providers
 
-GitHub Copilot app supports these model providers:
+The GitHub Copilot app supports these model providers:
 
 * OpenAI
 * Azure OpenAI

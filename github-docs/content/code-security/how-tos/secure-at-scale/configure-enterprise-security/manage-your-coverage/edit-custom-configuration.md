@@ -12,7 +12,7 @@ After creating and applying a custom security configuration, you may need to edi
 
 1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
 
-1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security Code security**.
+1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the "Configurations" section, click the name of the custom security configuration you want to edit.
 1. Edit the name and description of your custom security configuration as desired.

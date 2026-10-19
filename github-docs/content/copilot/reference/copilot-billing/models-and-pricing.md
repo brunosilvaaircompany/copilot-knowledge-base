@@ -113,3 +113,7 @@ You can view your current GitHub Actions usage for Copilot code review in the fo
 Copilot Pro and Copilot Pro+ subscribers on **existing annual billing plans** using the **request-based billing** model have different model multipliers. See [Model Multipliers For Annual Plans](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/model-multipliers-for-annual-plans).
 
 [^gemini-flash-promo]: Gemini 3.7 Flash and Gemini 3.8 Flash are available at the promotional pricing of $0.75 per 1M input tokens, $0.075 per 1M cached input tokens, and $3.75 per 1M output tokens through December 31, 2026.
+
+
+
+[^gemini-4-argon-promo]: Gemini 4 Argon is available at the promotional pricing of $2.00 per 1M input tokens, $0.10 per 1M cached input tokens, and $10.00 per 1M output tokens until December 1, 2026.

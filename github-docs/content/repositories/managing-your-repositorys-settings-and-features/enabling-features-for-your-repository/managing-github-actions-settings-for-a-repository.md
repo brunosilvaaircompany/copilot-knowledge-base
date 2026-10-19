@@ -87,6 +87,21 @@ When you choose **Allow enterprise, and select non-enterprise, actions and reusa
   Use the `!` prefix to block patterns. For example, to allow all actions and reusable workflows from the `space-org` organization, but block a specific action like `space-org/action`, you can specify `space-org/*, !space-org/action@*`. By default, only actions and reusable workflows specified in the list will be allowed. To allow all actions and reusable workflows while also blocking specific actions, you can specify `*, !space-org/action@*`.
   
 
+
+
+> [!NOTE]
+> For workflows covered by a dependency lockfile, this policy checks each locked dependency by its commit SHA instead of the tag or branch in the workflow file. Tags and branches are mutable, so they can't identify the code that runs. The locked SHA can. This has two effects:
+>
+> * Allowlist entries pinned to a tag or branch, such as `actions/checkout@v6
+`, don't match, even when the workflow uses `actions/checkout@v6
+`. A locked SHA can't be reliably matched back to a tag, because the tag may have moved since you locked it, and a tag's history includes every earlier release. To allow a locked dependency, use a wildcard such as `actions/checkout@*` or `actions/*`, or the full commit SHA.
+> * Locked dependencies satisfy **Require actions to be pinned to a full-length commit SHA** without changes to the workflow file. Dependencies that aren't in the lockfile still need a full-length SHA.
+>
+> For more information, see [Workflow Dependency Lockfiles](https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles).
+
+
+
+
 This procedure demonstrates how to add specific actions and reusable workflows to the list.
 
 

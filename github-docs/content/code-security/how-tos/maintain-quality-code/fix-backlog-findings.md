@@ -21,10 +21,6 @@ For information on resolving AI findings, see [Fix Findings In Recent Merges](ht
 
 You can resolve findings individually or assign multiple findings to Copilot.
 
-> [!NOTE]
-> Agentic Autofix for GitHub Code Quality backlog findings is currently in public preview and subject to change.
-
-
 ### Resolving a single finding
 
 1. Navigate to the **{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality** tab of your repository.

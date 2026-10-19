@@ -45,7 +45,8 @@ Focus on the following instructions:
 
 You can define agent profiles at different levels:
 
-* **Repository level**: Create `.github/agents/CUSTOM-AGENT-NAME.md` in your repository for project-specific agents.
+* **User level**: Create `$HOME/.copilot/agents/CUSTOM-AGENT-NAME.md` to define a custom agent that is available to you across repositories.
+* **Repository level**: Create `.github/agents/CUSTOM-AGENT-NAME.md` in your repository to define a project-specific agent.
 * **Organization level**: Create `/agents/CUSTOM-AGENT-NAME.md` in the organization's `.github` or `.github-private` repository for broader availability within the organization.
 * **Enterprise level**: Create `/agents/CUSTOM-AGENT-NAME.md` in the `.github-private` repository of an organization that an enterprise owner has designated in enterprise settings for availability across all repositories in the enterprise.
 
@@ -62,7 +63,7 @@ Once you create custom agents, they become available to:
 
 * **Copilot cloud agent on GitHub.com**: The agents tab and panel, issue assignment, and pull requests
 * **Copilot cloud agent in IDEs**: Visual Studio Code, JetBrains IDEs, Eclipse, and Xcode
-* **GitHub Copilot app**
+* **The GitHub Copilot app**
 * **GitHub Copilot CLI**
 
 You can use agent profiles directly in Visual Studio Code, JetBrains IDEs, Eclipse, and Xcode. Some properties may function differently or be ignored between environments.

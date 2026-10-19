@@ -10,7 +10,7 @@ For workflows initiated by Dependabot (`github.actor == 'dependabot[bot]'`) usin
 * `GITHUB_TOKEN` has read-only permissions by default.
 * Secrets are populated from Dependabot secrets. GitHub Actions secrets are not available.
 
-For workflows initiated by Dependabot (`github.actor == 'dependabot[bot]'`) using the `pull_request_target` event, if the base ref of the pull request was created by Dependabot (`github.event.pull_request.user.login == 'dependabot[bot]'`), the `GITHUB_TOKEN` will be read-only and secrets are not available.
+For workflows initiated by Dependabot (`github.actor == 'dependabot[bot]'`) using the `pull_request_target` event, if the base ref of the pull request was created by Dependabot, the `GITHUB_TOKEN` will be read-only and secrets are not available.
 
 These restrictions apply even if the workflow is re-run by a different actor.
 

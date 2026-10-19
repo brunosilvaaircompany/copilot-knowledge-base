@@ -67,7 +67,7 @@ Additional default filters for code scanning alerts:
 * `autofilter:true` includes only alerts that appear to be in application code. 
 
 > [!NOTE]
-> When agentic autofix is enabled for your organization or enterprise, the `autofix` filter is unavailable, and adding `autofix:supported` does not change the results. For alerts in repositories where Copilot cloud agent and Copilot Autofix are available, you can use **Assign to Copilot** for any code scanning alert in a campaign.
+> When agentic autofix is enabled for your organization, the `autofix` filter is unavailable. Adding `autofix:supported` does not change the results. For alerts in repositories where agentic autofix is enabled, you can use **Assign to Copilot** for any code scanning alert in a campaign.
 
 
 
@@ -116,7 +116,7 @@ The new campaign is shown in the sidebar of the **{% octicon "shield" aria-hidde
 
 
 > [!TIP]
-> You can assign a campaign alert to anyone with **write** access to the repository, see [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts-to-users-and-copilot-cloud-agent).
+> You can assign a campaign alert to anyone with **write** access to the repository. See [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts).
 
 
 {% else %}

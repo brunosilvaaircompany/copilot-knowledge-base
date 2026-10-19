@@ -108,6 +108,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 |----------------------------------------------------------|----------------------------------------------|------------------------------------------|----------------|-------|---------|
 | Gemini 3.7 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.8 Flash     | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
+| Gemini 4 Argon      | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.4              | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
 | GPT-5.4 mini         | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
@@ -194,14 +195,6 @@ Access to evaluation models in auto model selection  for users Copilot plans for
 ## Utility models
 
 Utility models power background features across surfaces, and cannot be disabled or selected in the model picker. See [Utility Models](https://docs.github.com/en/copilot/concepts/models/utility-models).
-
-The following models are currently used as utility models:
-
-* GPT-4o mini
-* GPT-4o
-* GPT-4.1
-* GPT-5.4 nano
-
 
 ## Models eligible for default enablement
 

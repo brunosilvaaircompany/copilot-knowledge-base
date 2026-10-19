@@ -21,7 +21,7 @@ A security campaign has many benefits over other ways of encouraging developers 
 * Each campaign has a named point of contact for questions, reviews, and collaboration.  
 * For code scanning alerts, GitHub Copilot Autofix is automatically triggered to suggest a resolution. 
 
-* For both code scanning and secret scanning, you can assign alerts in a campaign to users with write access{% ifversion copilot %} or to Copilot cloud agent to automatically generate pull requests with fixes.
+* You can assign both code scanning and secret scanning alerts in a campaign to users with write access.{% ifversion copilot %} If agentic autofix is enabled, you can also assign code scanning alerts to Copilot to automatically generate a pull request with fixes.
 {%- endif %}
 
 You can use one of the templates to select a group of closely related alerts for a campaign. This allows developers to build on the knowledge gained by resolving one alert and use it to fix several more, providing them with an incentive to fix multiple alerts.
@@ -61,9 +61,9 @@ The creation workflow is the same for all campaigns, but you will notice a few d
 
 
 
-## About assigning alerts{% ifversion security-campaigns-assign-to-cca %} to users and Copilot cloud agent
+## About assigning alerts
 
-{% elsif ghes = 3.20 %}
+{% ifversion code-secret-alert-assignees-ga %}{% elsif ghes = 3.20 %}
 
 >[!NOTE]
 > The option to assign code scanning and secret scanning alerts is currently in public preview and is subject to change.
@@ -87,7 +87,7 @@ For code scanning, you can also perform some of these operations programmaticall
 
 
 
-If an autofix has been generated for alerts in a security campaign, you can select those alerts and assign them to Copilot cloud agent. Copilot will create a pull request and add you as a requested reviewer. See [Fixing Alerts In Security Campaign](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/fixing-alerts-in-security-campaign#assigning-alerts-to-copilot-cloud-agent).
+If agentic autofix is enabled for a repository, you can select up to 25 code scanning alerts in a security campaign and assign them to Copilot. One assignment starts one agent session and creates one pull request for the selected alerts. See [Fixing Alerts In Security Campaign](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/fixing-alerts-in-security-campaign#assigning-alerts-to-copilot).
 
 
 

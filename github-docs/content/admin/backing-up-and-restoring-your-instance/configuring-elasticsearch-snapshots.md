@@ -23,7 +23,7 @@ This feature is opt-in. If you don't configure a snapshot repository, your GitHu
 
 Configure the following settings using `ghe-config` over SSH. For more information, see [Accessing The Administrative Shell SSH](https://docs.github.com/en/admin/administering-your-instance/administering-your-instance-from-the-command-line/accessing-the-administrative-shell-ssh).
 
-You'll apply the configuration to register the snapshot repository with Elasticsearch. The repository is named `search_index_snapshots-VERSION`, where `VERSION` is the current GitHub Enterprise Server release version.
+You'll apply the configuration to register the snapshot repository with Elasticsearch. The repository is named `search_index_snapshots-vVERSION`, where `VERSION` is the current GitHub Enterprise Server release version.
 
 ### Azure Blob storage
 
@@ -96,7 +96,7 @@ You'll apply the configuration to register the snapshot repository with Elastics
 After configuration apply completes, confirm the snapshot repository was registered.
 
 ```shell
-curl -k "http://127.0.0.1:9200/_snapshot/search_index_snapshots-$(ghe-version -v)/_status"
+curl -k "http://127.0.0.1:9200/_snapshot/search_index_snapshots-v$(ghe-version -v)/_status"
 ```
 
 If a required secret is missing, configuration apply fails while registering the repository. Update the secrets and rerun `ghe-config-apply` to retry.
@@ -127,9 +127,9 @@ You can manage Elasticsearch snapshots directly using the following commands. Ru
 
 | Command | Description |
 | --- | --- |
-| `ghe-es-create-snapshot` | Creates a new snapshot in the configured repository. |
-| `ghe-es-list-snapshots` | Lists snapshot repositories, or snapshots within a repository. |
-| `ghe-es-restore-snapshot` | Restores search indices from a snapshot. |
+| `/usr/local/share/enterprise/ghe-es-create-snapshot` | Creates a new snapshot in the configured repository. |
+| `/usr/local/share/enterprise/ghe-es-list-snapshots` | Lists snapshot repositories, or snapshots within a repository. |
+| `/usr/local/share/enterprise/ghe-es-restore-snapshot` | Restores search indices from a snapshot. |
 
 > [!TIP]
 > For routine backups and restores, use GitHub Enterprise Server Backup Utilities or GitHub Enterprise Server Backup Service instead of these commands directly. The backup tooling coordinates Elasticsearch snapshots with the rest of your instance's data to ensure a consistent backup or restore. Use the manual commands only when you need to manage search index snapshots independently of a full instance backup or restore.
@@ -141,13 +141,13 @@ You can restore a snapshot created by an earlier GitHub Enterprise Server versio
 1. List available snapshots for the earlier version.
 
    ```shell
-   ghe-es-list-snapshots -v 3.14.0
+   /usr/local/share/enterprise/ghe-es-list-snapshots -v 3.14.0
    ```
 
 1. Restore the snapshot you want.
 
    ```shell
-   ghe-es-restore-snapshot -v 3.14.0 -s SNAPSHOT-NAME
+   /usr/local/share/enterprise/ghe-es-restore-snapshot -v 3.14.0 -s SNAPSHOT-NAME
    ```
 
 Elasticsearch automatically upgrades the restored indices to the current version's format.

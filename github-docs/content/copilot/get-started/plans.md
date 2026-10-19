@@ -37,7 +37,7 @@ GitHub offers a variety of plans for Copilot. Choose between them depending on y
 
 ## Copilot plans overview
 
-The table below provides an overview of differences between plans. All plans include Copilot CLI and Copilot app. 
+The table below provides an overview of differences between plans. All plans include Copilot CLI and the Copilot app.
 
 {% rowheaders %}
 
@@ -154,7 +154,7 @@ On Copilot Free and Copilot Student plans, access to models is available through
 | Audit logs                                                                                       | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 | Content exclusion                                                                                | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "x" aria-label="Not included" %}         | {% octicon "x" aria-label="Not included" %}    |
 | Copilot CLI                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
-| Copilot app                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| The Copilot app                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 | GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "x" aria-label="Not included" %}    |
 
 {% endrowheaders %}
@@ -251,7 +251,7 @@ For a full explanation of how AI credits work, including pooling, additional usa
 | Audit logs                                                                                       | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Content exclusion                                                                                | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Copilot CLI                                                   | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
-| Copilot app                                                  | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| The Copilot app                                                  | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %}         | {% octicon "check" aria-label="Included" %}           |
 
 {% endrowheaders %}

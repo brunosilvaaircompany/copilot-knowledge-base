@@ -87,7 +87,7 @@ Before you can enable Dependabot alerts, you must first set up Dependabot for yo
     > [!TIP]
    > We recommend configuring Dependabot alerts without notifications for the first few days to avoid an overload of realtime notifications. After a few days, you can enable notifications to receive Dependabot alerts as usual.
 
-You can now enable Dependabot alerts for all existing or new private and internal repositories in the enterprise settings page for "Advanced Security Code security." Alternatively, repository administrators and organization owners can enable Dependabot alerts for each repository and organization. Public repositories are always enabled by default. For more information, see [Configure Dependabot Alerts](https://docs.github.com/en/enterprise-server@latest/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-dependabot-alerts).
+You can now enable Dependabot alerts for all existing or new private and internal repositories in the enterprise settings page for "Advanced Security." Alternatively, repository administrators and organization owners can enable Dependabot alerts for each repository and organization. Public repositories are always enabled by default. For more information, see [Configure Dependabot Alerts](https://docs.github.com/en/enterprise-server@latest/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-dependabot-alerts).
 
 ## Enabling Dependabot updates
 

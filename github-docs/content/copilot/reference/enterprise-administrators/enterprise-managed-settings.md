@@ -8,7 +8,7 @@ For instructions on creating the file, see [Get Started](https://docs.github.com
 
 {% rowheaders %}
 
-| Key | Purpose | Copilot CLI | VS Code | GitHub Copilot app | Copilot cloud agent | JetBrains IDEs |
+| Key | Purpose | Copilot CLI | VS Code | The GitHub Copilot app | Copilot cloud agent | JetBrains IDEs |
 | --- | --- | --- | --- | --- | --- | --- |
 | `permissions.disableBypassPermissionsMode` | Disables bypass or YOLO-style allow-all behavior | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `permissions.deny` | Blocks specific operations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
@@ -20,13 +20,16 @@ For instructions on creating the file, see [Get Started](https://docs.github.com
 | `enabledPlugins` | Enables or disables specific plugins by key | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `extraKnownMarketplaces` | Adds plugin marketplaces that users can access | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `strictKnownMarketplaces` | Restricts plugin installation to explicitly listed marketplaces | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `telemetry` | Configures OpenTelemetry export, routing Copilot usage data to a collector of your choice | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `telemetry` | Configures OpenTelemetry export, routing Copilot usage data to a collector of your choice | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `remoteControl` | Restricts whether sessions hosted on this device can be remotely controlled, based on the controlling client's SSO authorization status for the listed organizations. Doesn't affect the user's ability to remotely control sessions hosted on other devices | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `forceRemoteSettingsRefresh` | Requires a fresh server-managed settings fetch on client startup | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | `allowedMcpServers` | Defines an allowlist of MCP servers permitted to run. Any server not matched is blocked. Omit to allow all servers, subject to any deny rules | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 | `deniedMcpServers` | Defines MCP servers that are unconditionally blocked, even if they also match an entry in `allowedMcpServers` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `sandbox` | Enforces minimum local sandbox restrictions for command execution, filesystem and network access, credentials, and local MCP and LSP servers | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} (Agent Host, 1.138.0+) | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `sandbox` | Enforces minimum local sandbox restrictions for command execution, filesystem and network access, credentials, and local MCP and LSP servers. Subject to minimum client version requirements. | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} (Agent Host, 1.138.0+) | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 
 {% endrowheaders %}
+
+Support for `telemetry` varies by sub-property and harness. See [Capture controls](#capture-controls) for the clients that support fine-grained capture.
 
 ## Example configuration
 
@@ -80,6 +83,14 @@ The following example shows these keys in one managed settings file.
     "enabled": true,
     "endpoint": "https://otel-collector.example.com",
     "protocol": "http/protobuf",
+    "capture": {
+      "identity": true,
+      "prompts": false,
+      "responses": false,
+      "toolArguments": false,
+      "toolOutput": false,
+      "policyDetail": false
+    },
     "captureContent": false,
     "lockCaptureContent": true,
     "serviceName": "copilot",
@@ -121,7 +132,7 @@ The following example shows these keys in one managed settings file.
 
 ## features.computerUse
 
-Controls whether users can enable computer use in GitHub Copilot CLI and GitHub Copilot app. Set `features.computerUse` to `false` to prevent users from enabling computer use. A local setting cannot override this restriction. Set the value to `true`, or omit the key, to allow users to control computer use through their local settings.
+Controls whether users can enable computer use in GitHub Copilot CLI and the GitHub Copilot app. Set `features.computerUse` to `false` to prevent users from enabling computer use. A local setting cannot override this restriction. Set the value to `true`, or omit the key, to allow users to control computer use through their local settings.
 
 ## enabledPlugins
 
@@ -219,11 +230,11 @@ For example, a team settings file can set `"autoTier": "intelligence"`. If the t
 
 ## forceRemoteSettingsRefresh
 
-Requires a fresh download of server-managed settings at startup in Copilot CLI and VS Code. Set `forceRemoteSettingsRefresh` to `true` to enable this requirement.
+Requires a fresh download of server-managed settings at startup in Copilot CLI, VS Code, and the GitHub Copilot app. Set `forceRemoteSettingsRefresh` to `true` to enable this requirement.
 
-In Copilot CLI, this skips the normal one-hour cache and prevents fallback to an older cached policy if the download fails. An unsuccessful refresh leaves the policy unconfirmed, so affected operations are restricted. In VS Code, Copilot features are blocked until the required refresh succeeds. Users therefore need a network connection when starting the client.
+In Copilot CLI and the GitHub Copilot app, this skips the normal one-hour cache and prevents fallback to an older cached policy if the download fails. An unsuccessful refresh leaves the policy unconfirmed, so affected operations are restricted. In VS Code, Copilot features are blocked until the required refresh succeeds. Users therefore need a network connection when starting the client.
 
-For the requirement to apply from a device's first startup, deliver it through device management or `managed-settings.json`. A server-delivered value can require refreshes on subsequent startups after the client has received it. Policy helper scripts cannot set this key.
+For the requirement to apply from a device's first startup, deliver it through MDM-managed or file-based settings. A server-managed value can require refreshes on subsequent startups after the client has received it. Policy helper scripts cannot set this key.
 
 In `managed-settings.json`, use a JSON Boolean, for example `"forceRemoteSettingsRefresh": true`. When configuring Copilot CLI through the Windows registry or macOS managed preferences, store this value as a string containing `true` or `false`. Do not use a DWORD or native Boolean.
 
@@ -265,18 +276,55 @@ When you set `disableBypassPermissionsMode` to `"disable"`, users cannot turn on
 
 Configures OpenTelemetry export, routing Copilot usage data to a collector of your choice.
 
-This property is supported for Copilot CLI and VS Code.
+See the [supported keys table](#supported-keys) for client support.
 
 When you set the `telemetry` property, Copilot telemetry is sent to the endpoint you specify. The following sub-properties are supported:
 
 * `enabled`: Set to `true` to turn on telemetry export, or `false` to turn it off.
 * `endpoint`: The URL of your OTLP collector (for example, `https://otel-collector.example.com`).
 * `protocol`: The transport protocol for telemetry export. Accepted values are `"http/json"` and `"http/protobuf"`.
-* `captureContent`: Set to `true` to include prompt and response content in the telemetry payload, or `false` to exclude it.
-* `lockCaptureContent`: Set to `true` to prevent users from changing the `captureContent` setting.
+* `capture`: An object with independent, fine-grained controls for identity and sensitive content. Every sub-property defaults to `false`. For details, see [Capture controls](#capture-controls).
+* `captureContent`: Legacy shorthand that enables or disables the `prompts`, `responses`, `toolArguments`, `toolOutput`, and `policyDetail` capture classes together. It does not affect `identity`. An explicitly configured `capture` sub-property takes precedence over `captureContent` for that class.
+* `lockCaptureContent`: Set to `true` to prevent local settings from enabling a legacy content class unless you explicitly configure that class or `captureContent` in the managed `telemetry` object. This property does not govern identity.
 * `serviceName`: A label for the telemetry service name (for example, `"copilot"`).
 * `resourceAttributes`: An object of OpenTelemetry resource attributes to attach to all exported telemetry (for example, `{"deployment.environment": "production"}`).
-* `headers`: An object of HTTP headers to include with each telemetry request (for example, an `Authorization` header for your collector).
+* `headers`: An object of literal HTTP headers to include with each telemetry request (for example, an `Authorization` header for your collector). You must configure `endpoint` in the same `telemetry` object. Header values are not included in logs or status output. Use HTTPS when headers contain credentials because HTTP sends values in plaintext.
+
+Managed `telemetry` values take precedence over local settings, SDK configuration, and environment variables. If more than one managed source defines `telemetry`, the highest-precedence source supplies the complete managed `telemetry` object. Objects from lower-precedence managed sources are not merged into it.
+
+### Capture controls
+
+Use `capture.identity` when you need to attribute agent activity without collecting prompts, responses, or tool content. Use the other capture classes to collect only the additional content required for your audit or investigation.
+
+Fine-grained capture controls are supported in Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host. VS Code's local agent harness supports `capture.identity` and the legacy `captureContent` setting, but does not independently apply `prompts`, `responses`, `toolArguments`, `toolOutput`, or `policyDetail`.
+
+{% rowheaders %}
+
+| Key | Captured data |
+| --- | --- |
+| `identity` | The authenticated Copilot account name as `user.name`, the local operating-system account as `process.user.name`, and the local machine name as `host.name`. The account name is currently the GitHub login. This setting does not affect the pseudonymous `enduser.pseudo.id` attribute. |
+| `prompts` | User, system, and developer prompt text and associated model input, including supported attachments, compaction summaries, skill content, and workspace context. |
+| `responses` | Assistant response text and supported reasoning content from the top-level agent and subagents. |
+| `toolArguments` | Raw tool arguments, commands, denied resources, process names, tool descriptions and schemas, and raw identifiers for MCP servers, plugins, hooks, servers, and tools. |
+| `toolOutput` | Tool result content and execution error details from tools, hooks, MCP servers, and subagents. |
+| `policyDetail` | Unbounded policy details such as raw sandbox filesystem path arrays. Bounded policy posture, counts, outcomes, and classifications remain available when this setting is `false`. |
+
+{% endrowheaders %}
+
+For example, the following configuration attributes traces to a user and machine without capturing prompts, responses, tool content, or raw policy details:
+
+```json
+{
+  "telemetry": {
+    "capture": {
+      "identity": true
+    }
+  }
+}
+```
+
+> [!WARNING]
+> Captured content can include source code, file contents, prompts, commands, tool results, MCP identifiers, and paths to workspaces, user profiles, or files that may contain secrets. Enable only the capture classes required for your use case, and send the data to an approved collector.
 
 ## remoteControl
 
@@ -334,7 +382,7 @@ Enforces minimum local sandbox restrictions for Copilot CLI, Copilot Agent Host 
 
 In VS Code 1.138.0 and later, these settings apply to Copilot sessions that use Agent Host's built-in sandbox. This support does not extend to every type of chat session or terminal in VS Code. In VS Code 1.140.0 and later, setting `sandbox.enabled` to `true` prevents users from turning sandboxing off with the session's sandbox toggle. If your policy permits bypass, users can still turn it off for the current session when responding to a sandbox-bypass permission prompt. This does not change your organization's policy.
 
-In Copilot app sessions, the embedded runtime parses, combines, and enforces the complete managed `sandbox` object, including properties that are not available in the app's project settings. The app displays the user's project settings, not the complete effective managed policy, and does not show per-setting managed locks.
+For sessions in the Copilot app, the embedded runtime parses, combines, and enforces the complete managed `sandbox` object, including properties that are not available in the app's project settings. The app displays the user's project settings, not the complete effective managed policy, and does not show per-setting managed locks.
 
 The following sub-properties are supported:
 
@@ -401,3 +449,13 @@ In Copilot CLI, host rules and upstream proxies use a built-in local proxy. On m
 Configures macOS-specific Seatbelt options.
 
 * `keychainAccess`: `false` prevents sandboxed processes from accessing the macOS Keychain.
+
+### Minimum client version enforcement for `sandbox`
+
+When you add the `sandbox` key to managed settings, Copilot enforces a local sandbox for all users in scope. These users must use a Copilot client version that supports local sandbox. Until a user updates their client to at least the minimum supported version, their connections to Copilot are blocked.
+
+| Supported client | Minimum version |
+| --- | --- |
+| VS Code | [1.141.0](https://github.com/microsoft/vscode/releases/tag/1.141.0) |
+| Copilot CLI | [1.0.93](https://github.com/github/copilot-cli/releases/tag/v1.0.93) |
+| GitHub Copilot App | [1.1.26](https://github.com/github/app/releases#release-v1.1.26) |

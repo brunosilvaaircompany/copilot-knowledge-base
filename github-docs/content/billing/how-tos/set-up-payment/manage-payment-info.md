@@ -20,7 +20,7 @@ The payment methods available depend on your account type. Enterprise and organi
    * **Azure subscription**: Under "Azure subscription", click {% octicon "pencil" aria-label="Edit Azure Subscription" %} to edit your subscription or {% octicon "trash" aria-label="Delete Azure Subscription" %} to remove your subscription. See [Connect Azure Sub](https://docs.github.com/en/billing/how-tos/set-up-payment/connect-azure-sub).
 
 >[!NOTE]
-> * You may see an authorization hold on your provided payment method once it's updated or after accruing significant usage of metered services. Authorization holds are temporary and are released as quickly as possible.
+> * You may see an authorization hold on your provided payment method once it's updated or after accruing significant usage of metered services. GitHub initiates the release immediately, but your bank or card issuer may take a few days to make the funds available again. See [Authorization Holds](https://docs.github.com/en/billing/how-tos/troubleshooting/authorization-holds).
 > * If you have a paid subscription and remove your payment method, your subscription will automatically cancel on your next renewal date.
 > * If you are currently on an active paid trial, you will not be able to remove your payment method.
 > * To remove a payment method, you must have a balance of zero, and no billable metered usage in the current month, or the previous month if has yet to be paid.

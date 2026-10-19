@@ -23,7 +23,7 @@ To successfully manage and use code scanning across your company, you should bui
 
 You'll also need SMEs if you need to use advanced setup for code scanning. These SMEs will need knowledge of code scanning alerts, as well as topics like GitHub Actions and customizing code scanning workflows for particular frameworks. For custom configurations of advanced setup, consider running meetings on complicated topics to scale the knowledge of several SMEs at once.
 
-For code scanning alerts from CodeQL analysis, you can use security overview to see how CodeQL is performing in pull requests in repositories across your organization, and to identify repositories where you may need to take action. For more information, see [Pull Request Alert Metrics](https://docs.github.com/en/code-security/concepts/code-scanning/pull-request-alert-metrics).
+For code scanning alerts from CodeQL analysis, you can use security overview to see how CodeQL is performing in pull requests in repositories across your organization, and to identify repositories where you may need to take action. For more information, see [Code Scanning On Pull Requests](https://docs.github.com/en/code-security/concepts/code-scanning/code-scanning-on-pull-requests).
 
 
 

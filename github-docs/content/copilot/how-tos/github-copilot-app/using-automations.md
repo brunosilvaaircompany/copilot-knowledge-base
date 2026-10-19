@@ -9,7 +9,7 @@ You can create and manage automations from:
 * The **Agents** tab in a repository on GitHub, in the **Automations** pane.
 * The **[Automations](https://github.com/copilot/app/launch?open=ghapp%3A%2F%2Fautomations)** tab in the GitHub Copilot app.
 
-For an overview of automations, including triggers, tools, visibility, and security, see [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations).
+For an overview of automations, including triggers, tools, visibility, and security, see [About Automations](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations).
 
 The GitHub Copilot app supports two types of automations:
 

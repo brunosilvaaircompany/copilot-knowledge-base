@@ -3,10 +3,6 @@
 > [!NOTE]
 > Code Quality has its own standalone enterprise policies. Access was previously controlled by your Advanced Security policies, and those existing settings are automatically applied to the new Code Quality policies.
 
-> [!NOTE]
-> Agentic Autofix for GitHub Code Quality backlog findings is currently in public preview and subject to change.
-
-
 When you allow Code Quality for an organization and set the repository admin policy to **Allowed**, repository administrators can enable Code Quality scans and all associated capabilities, including bulk agentic remediation with Copilot. There is no separate policy for agentic remediation.
 
 If you restrict Code Quality, repository administrators cannot enable scans or use Copilot-powered autofixes for code quality findings.

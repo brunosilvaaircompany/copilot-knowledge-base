@@ -50,7 +50,7 @@ To mitigate this risk, Copilot cloud agent is designed to be auditable and trace
 
 ## Automations run without a person initiating each task
 
-Automations run Copilot cloud agent automatically, on a schedule or in response to events, without a person initiating each task. See [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations). This introduces some additional risks, which GitHub mitigates as follows.
+Automations run Copilot cloud agent automatically, on a schedule or in response to events, without a person initiating each task. See [About Automations](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations). This introduces some additional risks, which GitHub mitigates as follows.
 
 * **Work is attributed to the person who created the automation.** Pull requests opened and code pushed by an automation are attributed to the user who created the automation. As when that user creates a pull request themselves, they can't approve it, which preserves the expected "Required approvals" controls.
 * **You control which tools an automation can use.** When an automation is triggered by an event, input from untrusted users could become part of the prompt. To limit the impact of prompt injection, you choose exactly which tools an automation can use, so it can only take the actions the task requires.

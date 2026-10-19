@@ -23,6 +23,7 @@ It's important to understand how GitHub Code Quality uses AI credits before you 
 
 Code Quality usage appears in the **same billing and usage views as your other products**, not in a separate Code Quality meter. Where you look depends on how granular a breakdown you need:
 
+* **Committers consuming licenses**: Download the Code Quality license report from the **Licensing** page under **Billing & licensing**. The CSV lists active committers and the repositories contributing to their license usage. See [Download License Use](https://docs.github.com/en/billing/how-tos/products/download-license-use).
 * **For a repository- or organization-level breakdown, download the billing usage report** from the "Billing and licensing" tab. This is the only place you can attribute Code Quality spend, including GitHub Actions minutes, down to a specific repository or organization. There's no equivalent view in the UI. See [View Productlicense Use](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use).
 * **For Code Quality's AI credits usage over time, use the AI usage page** and group it by **Product** using the dropdown at the top right. This separates Code Quality from your other AI products, like Copilot, so you can track its share of the pool. To monitor the pool as a whole instead, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 

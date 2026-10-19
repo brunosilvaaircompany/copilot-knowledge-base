@@ -42,6 +42,10 @@ Changes you make mid-cycle, such as adding or removing users, seats, or resource
 * **Within the same billing account**: No double-billing. Moving users or resources between organizations under the same account is handled automatically.
 * **Between different billing accounts**: Each account is billed according to its own cycle. You may see charges in both accounts if the move overlaps billing periods.
 
+## Changing your billing cycle
+
+In some cases, you can change your billing cycle from monthly to annual, or vice versa. For information about when you can change your billing cycle and how to make the change, see [Change Billing Cycle](https://docs.github.com/en/billing/how-tos/manage-plan-and-licenses/change-billing-cycle).
+
 ## Where to find usage details for specific products
 
 Find product-specific guidance on how usage is calculated and billed.

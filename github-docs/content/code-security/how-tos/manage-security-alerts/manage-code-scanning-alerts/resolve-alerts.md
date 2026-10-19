@@ -10,13 +10,18 @@ With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to b
 
 ## Fixing alerts with Copilot
 
-> [!NOTE]
-> This feature is in public preview and subject to change. Copilot cloud agent and Copilot Autofix must be available in the repository. Access to preview features is controlled by policy settings at the organization and enterprise level. See [Manage Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies#opting-in-to-previews-or-feedback) and [Manage Enterprise Policies](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies#defining-policies-for-your-enterprise).
+You can assign a code scanning alert to Copilot to have it fix the alert for you. Assigning the alert starts an agent session that explores your codebase, generates and validates a fix, and opens a pull request.
 
+Agentic Autofix is only available for backlog alerts on the default branch of a repository.
 
-You can assign a code scanning alert to Copilot to have it fix the alert for you. Assigning the alert starts an agent session: Copilot cloud agent explores your codebase, generates a fix, validates it, and opens a pull request.
+### Prerequisites
 
-Each agentic autofix session is billed as a Copilot cloud agent session and consumes AI credits. See [Billing And Usage](https://docs.github.com/en/copilot/concepts/billing-and-usage).
+Before you assign an alert, agentic autofix must be enabled for the repository. See [Managing Access To Agentic Autofix For Code Scanning](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-code-scanning-alerts/managing-access-to-agentic-autofix-for-code-scanning).
+
+* You don't need a GitHub Copilot license to use this feature.
+* Agentic Autofix consumes Code Security AI Credits and GitHub Actions minutes. See [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#how-ai-feature-usage-is-billed).
+
+### Assigning a single alert
 
 To assign an individual alert to Copilot:
 
@@ -27,16 +32,27 @@ To assign an individual alert to Copilot:
 1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Code scanning**.
 
 1. Click the name of an alert.
-1. At the top of the page, click **{% octicon "agent" aria-label="Open agents panel" %} Assign to Copilot**.
+1. Towards the top of the page, under "Assignees", click **{% octicon "agent" aria-label="Open agents panel" %} Assign to Copilot**.
 
-You can also assign alerts to Copilot in bulk:
+### Assigning multiple alerts at once
 
-* From the code scanning alerts backlog or from a security campaign, select between 1 and 25 alerts and assign them to Copilot, which works to resolve the selected alerts in a single pull request. See [Fixing Alerts In Security Campaign](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/fixing-alerts-in-security-campaign).
-* Using the REST API, by setting the alert's assignee to `copilot-swe-agent[bot]`. See [Code Scanning](https://docs.github.com/en/rest/code-scanning/code-scanning#update-a-code-scanning-alert).
+To assign multiple alerts at once:
 
-Typically within a few minutes, Copilot opens a draft pull request authored by Copilot, with a summary of the fix and the validation steps taken. Review the agent session log for details, and comment on the pull request, mentioning Copilot, to ask it to iterate.
+1. From the code scanning alerts backlog or a security campaign, select up to 25 alerts.
+1. Above the list of alerts, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Assign to Copilot**.
 
-Copilot cloud agent validates fixes on a best-effort basis. If it can't validate a fix, or thinks the alert might be a false positive, it says so in the pull request.
+One assignment creates one agent session and one pull request for the selected alerts. See [Fixing Alerts In Security Campaign](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/fixing-alerts-in-security-campaign).
+
+### What happens after you assign an alert
+
+* Copilot typically opens a draft pull request within a few minutes.
+* The pull request, authored by Copilot, summarizes the fix and validation steps.
+* Review the agent session log for details, and interact with Copilot there.
+* You can also ask Copilot to iterate by mentioning it in a pull request comment.
+
+Copilot validates fixes on a best-effort basis. If it can't validate a fix, or thinks the alert might be a false positive, it says so in the pull request.
+
+You can also assign an alert with the REST API. Set the alert's assignee to `copilot-swe-agent[bot]`. See [Code Scanning](https://docs.github.com/en/rest/code-scanning/code-scanning#update-a-code-scanning-alert).
 
 
 
@@ -44,7 +60,9 @@ Copilot cloud agent validates fixes on a best-effort basis. If it can't validate
 
 ## Generating a suggested fix
 
-{% ifversion copilot %}If Copilot cloud agent isn't available in your repository, you can still use GitHub Copilot Autofix to generate a one-step suggested fix for the alert.
+{% ifversion copilot %}If agentic autofix isn't enabled for your repository, you can still use GitHub Copilot Autofix to generate a one-step suggested fix where supported.
+
+GitHub Copilot Autofix is also only available for backlog alerts on the default branch of a repository.
 
 
 

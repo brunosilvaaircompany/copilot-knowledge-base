@@ -16,7 +16,7 @@ Validity checks help you prioritize alerts by telling you which secrets are `act
 
 By default, GitHub checks the validity of GitHub tokens and displays the validation status of the token in the alert view.
 
-Organizations using GitHub Team, GitHub Enterprise Cloud with a license for GitHub Secret Protection, or GitHub Enterprise Server with a license for GitHub Secret Protection can also enable validity checks for partner patterns. For more information, see [Checking a secret's validity](/code-security/tutorials/remediate-leaked-secrets/evaluating-alerts#checking-a-secrets-validity).
+Organizations using GitHub Team, GitHub Enterprise Cloud with a license for GitHub Secret Protection, or GitHub Enterprise Server with a license for GitHub Secret Protection can also enable validity checks for partner patterns. 
 
    | Validity    | Status            |     Result                                                                           |
    |-------------|------------|--------------------------------------------------------------------------------|

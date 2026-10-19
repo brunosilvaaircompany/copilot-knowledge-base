@@ -65,7 +65,7 @@ The following controls are available:
 | Surface | Share | Delete | Archive |
 | --- | --- | --- | --- |
 | Copilot CLI | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| GitHub Copilot app | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| The GitHub Copilot app | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 For Copilot CLI, deleting a local session that has been synced to your account prompts you to choose whether to also delete the synced copy. For the GitHub Copilot app, deleting a local session also deletes its synced copy immediately.
 
@@ -80,13 +80,13 @@ The following controls are available:
 | Session source | Share | Delete | Archive |
 | --- | --- | --- | --- |
 | Synced Copilot CLI session | {% octicon "check" aria-label="Supported" %} (Unshared by default) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| Synced GitHub Copilot app session | {% octicon "check" aria-label="Supported" %} (Unshared by default) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Synced session from the GitHub Copilot app | {% octicon "check" aria-label="Supported" %} (Unshared by default) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Copilot cloud agent session | {% octicon "check" aria-label="Supported" %} (Shared by default) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 For more information, see:
 
 * **Copilot CLI**: [Chronicle](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle)
-* **GitHub Copilot app**: [Agent Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions)
+* **The GitHub Copilot app**: [Agent Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions)
 * **Copilot cloud agent**: [Manage And Track Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents)
 
 For information about the session data controls available for Copilot in an IDE, see the documentation for that IDE.

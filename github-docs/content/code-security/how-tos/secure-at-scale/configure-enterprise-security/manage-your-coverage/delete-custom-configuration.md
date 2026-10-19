@@ -15,7 +15,7 @@ If you no longer need a custom security configuration, you can delete that confi
 
 1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
 
-1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security Code security**.
+1. In the left sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
 1. In the configurations table, click the name of the custom security configuration you want to delete.
 1. In the "Edit configuration" page, scroll to the bottom of the page, then click **Delete configuration**.

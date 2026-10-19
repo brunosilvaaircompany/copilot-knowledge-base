@@ -10,7 +10,7 @@ When you save a change to a custom pattern, this closes all the secret scanning 
 
 1. Navigate to where the custom pattern was created. A custom pattern can be created in a repository, organization, or enterprise account.
    * For a repository or organization, display the "Advanced Security" settings for the repository or organization where the custom pattern was created. For more information, see [Defining a custom pattern for a repository](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-a-repository) or [Defining a custom pattern for an organization](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-an-organization).
-   * For an enterprise, under "Policies" display the "Advanced Security Code security" area, and then click **Security features**. For more information, see [Defining a custom pattern for an enterprise account](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-an-enterprise-account).
+   * For an enterprise, under "Policies" display the "Advanced Security" area, and then click **Security features**. For more information, see [Defining a custom pattern for an enterprise account](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-an-enterprise-account).
 
 1. Under "Custom patterns", to the right of the custom pattern you want to edit, click {% octicon "pencil" aria-label="Edit pattern" %}.
 1. When you're ready to test your edited custom pattern, to identify matches without creating alerts, click **Save and dry run**.
@@ -33,7 +33,7 @@ When you remove a custom pattern, GitHub gives you the option to close the secre
 
 1. Navigate to where the custom pattern was created. A custom pattern can be created in a repository, organization, or enterprise account.
    * For a repository or organization, display the "Advanced Security" settings for the repository or organization where the custom pattern was created. For more information, see [Defining a custom pattern for a repository](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-a-repository) or [Defining a custom pattern for an organization](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-an-organization).
-   * For an enterprise, under "Policies" display the "Advanced Security Code security" area, and then click **Security features**. For more information, see [Defining a custom pattern for an enterprise account](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-an-enterprise-account).
+   * For an enterprise, under "Policies" display the "Advanced Security" area, and then click **Security features**. For more information, see [Defining a custom pattern for an enterprise account](/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns#defining-a-custom-pattern-for-an-enterprise-account).
 
 1. To the right of the custom pattern you want to remove, click {% octicon "trash" aria-label="Remove pattern" %}.
 1. Review the confirmation, and select a method for dealing with any open alerts relating to the custom pattern.
@@ -61,9 +61,9 @@ Before enabling push protection for a custom pattern at enterprise level, you mu
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
-1. Under "Advanced Security Code security", click **Security features**.
+1. Under "Advanced Security", click **Security features**.
 1. Under "Secret scanning", under "Custom patterns", click {% octicon "pencil" aria-label="Edit custom pattern" %} for the pattern of interest.
 
 

@@ -9,6 +9,7 @@ GitHub offers a range of predefined and custom roles for access to enterprise se
 | Enterprise owner | Can manage all enterprise settings, members, and policies. |
 |  |
 | Billing manager | Can manage enterprise billing settings. |
+| Enterprise open-source license manager | Can edit license compliance policy. Receives notifications for license alert closure requests. |
 |  |
 |  |
 | App manager | Can manage GitHub App registrations that are owned by the enterprise. |

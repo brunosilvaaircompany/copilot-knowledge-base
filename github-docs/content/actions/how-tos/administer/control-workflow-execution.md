@@ -1,4 +1,4 @@
-# Controlling who can execute GitHub Actions workflows
+# Governing execution of GitHub Actions workflows
 
 With workflow execution protections, you can define an allowlist that controls who can trigger GitHub Actions workflows and which events are permitted to run them.
  For more information, see [About Actions Policies](https://docs.github.com/en/actions/concepts/about-actions-policies).
@@ -66,6 +66,18 @@ GitHub features are exempt from these restrictions for the built-in processes th
 ### Restrict events
 
 Event rules control which events are permitted, such as `push`, `pull_request`, `pull_request_target`, and `workflow_dispatch`.
+
+
+
+### Require lockfile
+
+The **Require lockfile** protection blocks runs of workflows with `uses:` dependencies on other actions, unless the dependencies are pinned in a dependency lockfile. This ensures that the targeted workflows run predictable, vetted code, rather than whatever a tag or branch points to at run time. See [Workflow Dependency Lockfiles](https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles).
+
+Generate and verify lockfiles in the repositories you're targeting before you set this protection to **Active**. Otherwise, you'll block workflow runs in repositories that aren't ready. For a staged rollout, see [Enforce Workflow Lockfiles](https://docs.github.com/en/actions/how-tos/administer/enforce-workflow-lockfiles).
+
+You can keep **Require actions to be pinned to a full-length commit SHA** enabled when adopting lockfiles. For dependencies covered by a lockfile, GitHub evaluates this requirement using the locked commit SHA. Keeping the policy enabled during a staged rollout preserves SHA-pinning enforcement for workflows that have not yet adopted lockfiles.
+
+
 
 ## Evaluating policies
 

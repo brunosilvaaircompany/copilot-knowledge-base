@@ -7,7 +7,7 @@ With automations, you can set up Copilot cloud agent to run automatically, eithe
 
 You can create and manage automations from the **Agents** tab of a repository on GitHub. You can also create and manage automations from the **Automations** tab in the GitHub Copilot app.
 
-For an overview of automations, including triggers, tools, visibility, and security, see [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations).
+For an overview of automations, including triggers, tools, visibility, and security, see [About Automations](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations).
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ Automations are available with the GitHub Copilot Pro, GitHub Copilot Pro+, GitH
 1. Optionally, select the **model** you want Copilot to use. See [Changing The Ai Model](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/changing-the-ai-model).
 1. Select the **tools** Copilot can use when the automation runs, such as pushing changes, updating issue labels, or creating a pull request.
 
-    Select only the tools the task requires. The tools you select control what actions Copilot can take in your repository. Optionally, you can use the **Suggest tools** button to ask Copilot to suggest tools based on your prompt. See [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations#tools-and-actions).
+    Select only the tools the task requires. The tools you select control what actions Copilot can take in your repository. Optionally, you can use the **Suggest tools** button to ask Copilot to suggest tools based on your prompt. See [About Automations](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations#tools-and-actions).
 
 1. Save the automation by clicking **Create automation**.
 
@@ -77,6 +77,6 @@ To see all of your automations across every repository, and navigate to manage e
 
 ## Further reading
 
-* [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations)
+* [About Automations](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations)
 * [Start Copilot Sessions](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/start-copilot-sessions)
 * [Risks And Mitigations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/risks-and-mitigations)

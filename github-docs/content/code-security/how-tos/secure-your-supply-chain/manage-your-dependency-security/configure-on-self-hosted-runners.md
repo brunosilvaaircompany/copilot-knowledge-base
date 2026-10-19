@@ -61,7 +61,7 @@ You can enable Dependabot on self-hosted runners for all existing private or int
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
 
 
-1. In the "Security" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
+1. In the "{% octicon "shield" aria-hidden="true" aria-label="shield" %} Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security** then **Global settings**.
 
 1. In the "Dependabot" section, next to "Runner type", click {% octicon "pencil" aria-label="Edit runner type" %}.
 1. Select the "Runner type" dropdown menu, then click **Labeled runner** and provide any additional information. If you applied a custom label to your self-hosted runners, type that label in the "Runner label" text box.

@@ -6,7 +6,7 @@ More than just a model picker, auto model selection is an intelligent system del
 
 ### Auto with task optimization
 
-> [!NOTE] Auto model selection with task optimization is generally available in Copilot Chat on the GitHub website, in VS Code, in Copilot CLI, in GitHub Copilot app, and in JetBrains IDEs.
+> [!NOTE] Auto model selection with task optimization is generally available in Copilot Chat on the GitHub website, in VS Code, in Copilot CLI, in the GitHub Copilot app, and in JetBrains IDEs.
 
 Auto model selection with task optimization combines two systems to provide high quality results and better reliability. One system tracks real-time system health and availability, while the other evaluates task complexity. Putting these together, auto model selection routes the task to the optimal model.
 
@@ -22,7 +22,7 @@ Benefits of using auto model selection include:
 
 #### Auto tier options
 
-When using auto with task optimization, there are three tiers available. Use these tiers to adjust how auto model selection preferentially routes models for each prompt. 
+When using auto with task optimization, there are three tiers available. Use these tiers to adjust how auto model selection preferentially routes models for each prompt.
 
 | Tier | Priority | Typical use |
 | --- | --- | --- |
@@ -31,11 +31,11 @@ When using auto with task optimization, there are three tiers available. Use the
 | **Intelligence** | Quality | Built for complex tasks. |
 
 With tiers, auto model selection still considers the prompt for each task. The same models remain available in each tier, but tiered routing changes how preferred models are selected for each task.  Examples for each tier:
-* **Efficiency**: All prompts are routed to the most cost-efficient and appropriately capable model for the task. 
+* **Efficiency**: All prompts are routed to the most cost-efficient and appropriately capable model for the task.
 * **Balance**: For each prompt, the model is selected by considering cost, quality, and latency, to provide cost effective and efficient performance appropriate to the complexity of each prompt.
 * **Intelligence**: Prompts are evaluated for which model would provide the highest quality response. A simple prompt could still be routed to a smaller model, while a complex prompt is routed to the most capable model for that task.
 
-Usage is still charged based on the model auto selects, regardless of tier, alongside the 10% discount for users on paid plans. See [Discount for auto model selection](#discount-for-using-auto-model-selection). 
+Usage is still charged based on the model auto selects, regardless of tier, alongside the 10% discount for users on paid plans. See [Discount for auto model selection](#discount-for-using-auto-model-selection).
 
 ### Auto optimized for model reliability and availability
 
@@ -61,7 +61,7 @@ Auto model selection may serve evaluation models to users on Copilot plans for i
 
 ### Discount for using auto model selection
 
-If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, GitHub Copilot app, or Copilot cloud agent.
+If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent.
 
 
 ## Auto model selection in Copilot
@@ -69,14 +69,14 @@ If you are on a paid Copilot plan, you qualify for a 10% discount on model costs
 Auto model selection, with task optimization, is generally available in these Copilot products:
 * Copilot Chat, on the GitHub website and supported IDEs
 * Copilot CLI
-* GitHub Copilot app
+* The GitHub Copilot app
 * Copilot cloud agent
 
-> [!NOTE] Auto tiers are only available on VS Code, Copilot CLI, and GitHub Copilot app .
+> [!NOTE] Auto tiers are only available on VS Code, Copilot CLI, and the GitHub Copilot app .
 
 > [!TIP]
 > You can see which model was used for each Copilot response.
-> * In **Copilot Chat** and **GitHub Copilot app**, hover over the response.
+> * In **Copilot Chat** and **the GitHub Copilot app**, hover over the response.
 > * In **Copilot CLI**, the model used for each response displays in the terminal.
 > * In **Copilot cloud agent**, the model used for each response displays at the end of the response.
 

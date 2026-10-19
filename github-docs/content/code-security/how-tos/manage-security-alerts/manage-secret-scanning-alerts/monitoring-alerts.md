@@ -26,7 +26,7 @@ You will receive an email notification if:
 
 
 
-In addition, you will receive a notification if someone assigns a code scanning or a secret scanning alert to you, see [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts-to-users-and-copilot-cloud-agent).
+In addition, you will receive a notification if someone assigns a code scanning or a secret scanning alert to you. See [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts).
 
 
 

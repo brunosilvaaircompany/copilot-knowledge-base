@@ -63,6 +63,18 @@ For more information, see [Events That Trigger Workflows](https://docs.github.co
 
 Ruleset workflows do not run on events triggered by the `GITHUB_TOKEN`. For more information, see [Authenticate With Github_Token](https://docs.github.com/en/actions/tutorials/authenticate-with-github_token#using-the-github_token-in-a-workflow).
 
+### Using CodeQL in a ruleset workflow
+
+Ruleset workflows can't use the CodeQL actions, except `github/codeql-action/upload-sarif`. This also applies to CodeQL actions in a reusable workflow that the ruleset workflow calls. If a ruleset workflow uses them, the workflow run fails to start with an error such as:
+
+```text
+The following actions are not allowed to be used inside a required workflow: github/codeql-action/analyze@v4
+, github/codeql-action/init@v4
+
+```
+
+To run code scanning with CodeQL across many repositories, use default setup, or add an advanced setup workflow to each repository. To block pull requests until code scanning results are available, use the "Require code scanning results" rule instead of a ruleset workflow. See [Code Scanning At Scale](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/configure-specific-tools/code-scanning-at-scale), [Configuring Advanced Setup For Code Scanning With Codeql At Scale](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/configure-specific-tools/configuring-advanced-setup-for-code-scanning-with-codeql-at-scale), and [Set Merge Protection](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/manage-your-configuration/set-merge-protection).
+
 ### Blocking repository creation
 
 A required workflow can block people from creating a repository, since a workflow can't run against a repository that's being initialized. To get around this, the ruleset either needs to have "Evaluate" as the enforcement status, or someone with bypass permissions needs to create the repository and bypass the branch protection.

@@ -84,7 +84,7 @@ You can also manually ask Copilot to get a review from the rubber duck agent.
 1. Open an active session.
 1. In the prompt box, type `/rubber-duck` and ask for a critique of your current plan, implementation, or tests.
 
-For more information on the rubber duck agent, see [Rubber Duck](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/rubber-duck).
+For more information on the rubber duck agent, see [Getting A Second Opinion](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/getting-a-second-opinion).
 
 ## Using `/chronicle` with app sessions
 

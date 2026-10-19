@@ -129,7 +129,7 @@ If a command cannot access a file, use a tool, or connect to a host, check the s
 
    This previews the policy without running `npm install`. Review the listed paths and network settings. Check **Notes** for settings that could not be applied.
 
-1. If the policy blocks access you intend to allow, use `/sandbox config` to update the required path or host rules. Grant only the access the command needs. For missing paths and symbolic links, see [Understanding Local Sandboxing](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/understanding-local-sandboxing#troubleshooting-filesystem-access). Adding a directory with `/add-dir` does not grant sandbox access.
+1. If the policy blocks access you intend to allow, use `/sandbox config` to update the required path or host rules. Grant only the access the command needs. For missing paths and symbolic links, see [Understanding Local Sandboxing](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/understanding-local-sandboxing#troubleshooting-filesystem-access). To grant read and write access to a directory for the current session only, without changing your saved sandbox settings, use `/add-dir PATH`. Access granted this way is still subject to any sandbox policy managed by your organization.
 1. If the setting is managed by your organization, contact your administrator. If the error names a missing operating-system feature or Linux dependency, address that requirement, then restart Copilot CLI before trying again.
 1. Ask Copilot to run the command again. If a one-command bypass is offered, approve it only if you are comfortable with the broader access described. Disabling sandboxing for the whole session gives subsequent commands broader access, not just the blocked command.
 

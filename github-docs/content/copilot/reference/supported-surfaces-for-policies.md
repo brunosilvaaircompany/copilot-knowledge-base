@@ -8,7 +8,7 @@ A dedicated policy exists to enable or disable each supported feature or surface
 
 {% rowheaders %}
 
-| Policy name | IDEs | Copilot cloud agent | Third-party agents | Copilot CLI | GitHub Copilot app | Copilot Chat in GitHub | Copilot code review | Spark |
+| Policy name | IDEs | Copilot cloud agent | Third-party agents | Copilot CLI | The GitHub Copilot app | Copilot Chat in GitHub | Copilot code review | Spark |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Editor preview features | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 | Copilot can search the web | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |

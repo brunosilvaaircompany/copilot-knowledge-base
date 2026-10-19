@@ -12,7 +12,7 @@ If you’re not sure where to start, choose a surface based on the coding work y
 
 | Where | Use it for | Get started |
 | ----- | ---------- | ----------- |
-| **GitHub Copilot app** | Managing your developer and agent-driven work across parallel tasks, multiple repositories, and the pull request lifecycle in one dedicated workspace. | [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app) |
+| **The GitHub Copilot app** | Managing your developer and agent-driven work across parallel tasks, multiple repositories, and the pull request lifecycle in one dedicated workspace. | [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app) |
 | **GitHub Copilot CLI** | Working with Copilot from the terminal, including repeatable command-line workflows. | [CLI Quickstart](https://docs.github.com/en/copilot/get-started/cli-quickstart) |
 | **Your IDE**<br>(Visual Studio Code, Visual Studio, JetBrains IDEs, Eclipse, and XCode) | Getting inline suggestions, chatting about nearby code, and using an agent that can edit files for you. | [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide) |
 | **GitHub Copilot SDK** | Building custom applications that use the same primitives as Copilot. | [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart) |
@@ -56,7 +56,7 @@ The surfaces also share the same foundation. The Copilot experiences you use acr
 Your choices hold across the workflow, including:
 
 * **Which model**: Different models suit different kinds of work, and you can switch models for chat and agents. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model).
-* **Which agents**: Copilot agents and agents from other providers work in the same repositories, open pull requests, and go through review. Copilot applies the same security protections, mitigations, and limitations to third-party agents as it does to Copilot cloud agent. See [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) and [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents).
+* **Which agents**: Copilot agents and agents from other providers work in the same repositories, open pull requests, and go through review. Copilot applies the same security protections, mitigations, and limitations to third-party agents as it does to Copilot cloud agent. See [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) and [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents).
 * **What Copilot can see**: Custom instructions, agent skills, and MCP servers connect Copilot to your conventions and to the tools your team uses. See [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
 * **What Copilot remembers**: For supported features, Copilot Memory can reuse repository facts and your preferences in later work. See [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
 

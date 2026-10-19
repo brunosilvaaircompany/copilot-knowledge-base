@@ -1,8 +1,8 @@
 # Viewing and changing your GitHub Copilot plan
 
-You can view your current plan details in your GitHub account settings. From there, you can change or cancel your plan.
+You can view your current plan details in your GitHub account settings. The billing and licensing steps described in this article apply only if you can sign in to the personal account billed for the plan.
 
-If you have access to GitHub Copilot through an organization or enterprise, you will not be able to modify your plan.
+If you have access to GitHub Copilot through an organization or enterprise, your plan can be modified by an organization or enterprise owner. See [Administer Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot).
 
 ## Viewing your Copilot plan
 
@@ -59,5 +59,7 @@ If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are th
 
 1. In the "GitHub Copilot" section, select the **Manage subscription** dropdown on the right and then click **Cancel subscription**.
 1. Select **Cancel Copilot Pro/Copilot Pro+/Copilot Max** to cancel your plan at the end of your current billing cycle.
+
+If you can't sign in to the personal account billed for your plan—for example, because you no longer have access to its work or school email or are blocked by account recovery—try the available account recovery methods. See [Recovering Your Account If You Lose Your 2Fa Credentials](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials). If you still can't access the account or identify which account is being charged, contact [GitHub Support](https://support.github.com) to request help stopping future Copilot charges or to request removal of the payment method from the locked account.
 
 For more information about billing in general, like adding a payment method or viewing your payment history, see [Get Started](https://docs.github.com/en/billing/get-started).

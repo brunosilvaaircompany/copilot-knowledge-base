@@ -10,7 +10,7 @@ Dependency insights can help you track, report, and act on your organization's o
 > To view organization dependency insights, your organization must use GitHub Enterprise Cloud. For more information about how you can try GitHub Enterprise Cloud for free, see [Setting up a trial of GitHub Enterprise Cloud](/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).
 
 >
-> On GHE.com, dependency insights and license and package metadata in the dependency graph are not currently available. The dependency graph itself remains available at the repository level. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
+> On GHE.com, organization-level dependency insights is not currently available. The dependency graph itself remains available at the repository level. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
 
 
 

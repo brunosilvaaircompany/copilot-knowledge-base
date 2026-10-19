@@ -28,7 +28,7 @@ Disallowing GitHub Secret Protection, GitHub Code Security, or GitHub Advanced S
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. On the "Policies" tab of the "Advanced Security" page, select the dropdown menu, then click a policy for the organizations owned by your enterprise.
 
@@ -54,7 +54,7 @@ Across all organizations owned by your enterprise, you can control whether organ
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. In the "Policies" section, under "Dependency insights", review the information about changing the setting.
 1. Optionally, to view the current configuration for all organizations in the enterprise account before you change the setting, click **{% octicon "eye" aria-hidden="true" aria-label="eye" %} View your organizations' current configurations**.
@@ -81,7 +81,7 @@ Across all organizations owned by your enterprise, you can allow members with ad
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. In the "Policies" section, under "Enable or disable Dependabot alerts by repository admins", use the dropdown menu to choose a policy.
 
@@ -97,7 +97,7 @@ Across all of your enterprise's organizations, you can allow or disallow people 
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. In the "Policies" section, under "Repository administrators can enable or disable `PRODUCT`", use the dropdown menu to define whether repository administrators can change the enablement of GitHub Secret Protection, GitHub Code Security, or GitHub Advanced Security.
 
@@ -115,29 +115,9 @@ Across all of your enterprise's organizations, you can allow or disallow people 
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. In the "Policies" section, under "AI detection in secret scanning", select the dropdown menu and click a policy.
-
-
-
-
-
-## Enforcing a policy for secret scanning in GitHub Actions workflow logs
-
-As an enterprise owner, you can choose whether GitHub scans GitHub Actions workflow logs for secrets. This policy is disabled by default.
-
-When you enable the policy, GitHub scans the logs of new workflow runs in all repositories in your enterprise where secret scanning is enabled.
-
-
-1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
-
-
-1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
-
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
-
-1. Under "Secret scanning for Actions workflow logs", select the **All repositories** dropdown menu, then click **Enabled** or **Disabled**.
 
 
 
@@ -153,7 +133,7 @@ Across all of your enterprise's organizations, you can allow or disallow people 
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. In the "Policies" section, under "Copilot Autofix", select the dropdown menu and click a policy.
 
@@ -176,6 +156,6 @@ Allowing AI Scan at the enterprise level does not enable it for any organization
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. Under "AI Scan", select the dropdown menu and click a policy.

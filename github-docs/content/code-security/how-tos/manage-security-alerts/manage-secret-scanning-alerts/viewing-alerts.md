@@ -22,7 +22,7 @@ Alerts for secret scanning are displayed under the **{% octicon "shield" aria-hi
    
 
 
-1. Optionally, assign the alert to someone to fix using the **Assignees** control shown on the right, see [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts-to-users-and-copilot-cloud-agent).
+1. Optionally, assign the alert to someone to fix using the **Assignees** control shown on the right. See [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts).
 
 
 

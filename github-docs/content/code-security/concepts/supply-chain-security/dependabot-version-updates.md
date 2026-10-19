@@ -56,6 +56,12 @@ For each action in the file, Dependabot checks the action's reference (typically
 
 Dependabot also checks workflow files for uses of reusable workflows, and updates the Git reference for these called reusable workflows.
 
+
+
+If a workflow has been onboarded to a workflow dependency lockfile, Dependabot also regenerates the matching lockfile entry in the same pull request, so the pinned commit in the lockfile always matches the updated reference in the workflow file. This needs no additional configuration. For more information, see [Lock Workflow Dependencies](https://docs.github.com/en/actions/how-tos/secure-your-work/lock-workflow-dependencies).
+
+
+
 To enable this feature, see [Auto Update Actions](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/auto-update-actions).
 
 ## About automatic deactivation of Dependabot updates

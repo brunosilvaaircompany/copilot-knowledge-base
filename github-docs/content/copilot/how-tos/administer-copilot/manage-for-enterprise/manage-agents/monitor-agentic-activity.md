@@ -39,4 +39,26 @@ OpenTelemetry (OTel) is an open source observability framework. It provides a st
 
 When you enable OTel monitoring, you can send data from users' Copilot clients to an OTel-compatible backend. This lets you analyze agent sessions and understand agent usage across your enterprise.
 
-For more information, see [Opentelemetry](https://docs.github.com/en/copilot/concepts/enterprise/opentelemetry).
+To attribute agent activity to a user without collecting prompts, responses, or tool content, enable the `identity` capture class in enterprise managed settings:
+
+```json
+{
+  "telemetry": {
+    "enabled": true,
+    "endpoint": "https://otel-collector.example.com",
+    "protocol": "http/protobuf",
+    "capture": {
+      "identity": true
+    }
+  }
+}
+```
+
+This configuration adds the authenticated Copilot account name, local operating-system account, and machine name to OTel data. Every capture class defaults to `false`. You can independently enable additional classes when an audit or investigation requires prompt, response, tool, or raw policy content.
+
+In VS Code, identity capture works for both local and Agent Host sessions. The five independent content capture classes require Agent Host; the local agent harness uses the legacy all-or-nothing `captureContent` setting.
+
+> [!WARNING]
+> Additional capture classes can include source code, file contents, prompts, commands, tool results, MCP identifiers, and workspace or user-profile paths. Enable only the classes required for your use case, and send the data to an approved collector.
+
+For the complete schema and the data controlled by each field, see [Enterprise Managed Settings](https://docs.github.com/en/copilot/reference/enterprise-administrators/enterprise-managed-settings#telemetry). For more information about the exported data, see [Opentelemetry](https://docs.github.com/en/copilot/concepts/enterprise/opentelemetry).

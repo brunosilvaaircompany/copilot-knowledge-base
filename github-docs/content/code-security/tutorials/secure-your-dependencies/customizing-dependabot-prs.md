@@ -45,7 +45,7 @@ To ensure your project's security updates get addressed promptly by the appropri
 
 By default, Dependabot raises pull requests with the `dependencies` label.
 
-Dependabot also applies an ecosystem label, such as `java`, `npm`, or `github-actions`, to pull requests. Dependabot adds both the `dependencies` label and the ecosystem label to all pull requests, including single-ecosystem updates, to improve filtering and triaging.
+Dependabot also applies an ecosystem label, such as `java`, `npm`, or `github_actions`, to pull requests. Dependabot adds both the `dependencies` label and the ecosystem label to all pull requests, including single-ecosystem updates, to improve filtering and triaging.
 
 Dependabot creates the default labels it applies to pull requests if they do not already exist in the repository. If you want to use custom labels instead of the defaults, you can set the `labels` option in your `dependabot.yml` file per package ecosystem; this overrides the defaults. For more information, see [Managing Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) and [`labels`](/code-security/reference/supply-chain-security/dependabot-options-reference#labels--).
 

@@ -102,7 +102,7 @@ To grant access to an enterprise team:
 
 ### Granting access to agent apps
 
-Agent apps are GitHub Apps that expose agents on GitHub. GitHub partners build agent apps to bring their tools and services into your development workflow. These agent apps are agents you can delegate work to alongside Copilot cloud agent and other third-party agents. See [Agent Apps](https://docs.github.com/en/copilot/concepts/agents/agent-apps).
+Agent apps are GitHub Apps that expose agents on GitHub. GitHub partners build agent apps to bring their tools and services into your development workflow. These agent apps are agents you can delegate work to alongside Copilot cloud agent and other third-party agents. See [Agent Apps](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/agent-apps).
 
 Ensure models you want to enable specifically for apps are set to **Delegate to Enterprise Teams/Apps** in your enterprise's model policies.
 

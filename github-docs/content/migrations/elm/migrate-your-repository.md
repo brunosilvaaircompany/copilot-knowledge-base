@@ -41,6 +41,7 @@ The operator must authenticate to both the source and destination enterprise wit
 1. On **GitHub Enterprise Server**, create a personal access token (classic) and select the required scope:
 
    * `admin:enterprise`
+   * `admin:org`
 
    You will use this token as the **Source token** when configuring the ELM CLI.
 

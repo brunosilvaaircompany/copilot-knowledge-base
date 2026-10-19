@@ -12,7 +12,7 @@ There are two ways to use autopilot mode:
 * **Programmatically:** Pass the CLI a prompt directly in a command, and include the `--autopilot` option. For example, to use autopilot mode with full permissions, restricting it to 10 continuations, enter `copilot --autopilot --yolo --max-autopilot-continues 10 -p "YOUR PROMPT HERE"
 `.
 
-For more information, see [Autopilot](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot).
+For more information, see [Use Autopilot Mode](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/use-autopilot-mode).
 
 ## Delegate tasks to Copilot cloud agent
 

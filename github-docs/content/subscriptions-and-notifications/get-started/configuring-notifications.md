@@ -103,8 +103,6 @@ Choose a default email address where you want to send updates for conversations 
 
 Depending on the organization that owns the repository, you can also send notifications to different email addresses. Your organization may require the email address to be verified for a specific domain. For more information, see [Managing Organization Notifications](https://docs.github.com/en/subscriptions-and-notifications/how-tos/managing-organization-notifications#choosing-where-your-organizations-email-notifications-are-sent).
 
-You can also send notifications for a specific repository to an email address. For more information, see [About Email Notifications For Pushes To Your Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/about-email-notifications-for-pushes-to-your-repository).
-
 You'll only receive notification emails if you've chosen to receive email notifications in your notification settings.
 
 

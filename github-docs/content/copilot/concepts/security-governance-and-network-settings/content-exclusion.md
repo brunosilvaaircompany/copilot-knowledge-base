@@ -38,7 +38,7 @@ The Copilot Business and Copilot Enterprise plans provide the following level of
 | Azure Data Studio                               | {% octicon "x" aria-label="Not supported" %}  | Not applicable                                 |
 | The GitHub website | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
 | GitHub Mobile    | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
-| GitHub Copilot app | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
+| The GitHub Copilot app | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
 | GitHub Copilot CLI        | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
 
 Content exclusions also apply to Copilot code review on the GitHub website.

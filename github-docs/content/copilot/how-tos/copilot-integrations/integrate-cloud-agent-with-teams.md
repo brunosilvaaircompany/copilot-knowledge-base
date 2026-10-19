@@ -6,7 +6,7 @@
 
 The GitHub integration in Microsoft Teams allows you to interact with Copilot cloud agent all from within your Teams conversations. Within Teams you can initiate cloud agent sessions to investigate, plan, write code, and create issues and pull requests, using the context of your conversation. Your team's collaborative decisions stay connected to your code, bridging the gap between where discussions happen and where implementation lives.
 
-For information about additional Copilot integrations, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/tools/about-copilot-integrations).
+For information about additional Copilot integrations, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/about-copilot-integrations).
 
 ## Security considerations
 

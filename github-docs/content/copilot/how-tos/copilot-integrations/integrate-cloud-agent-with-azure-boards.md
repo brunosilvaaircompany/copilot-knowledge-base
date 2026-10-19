@@ -2,7 +2,7 @@
 
 The Azure Boards GitHub integration allows you to invoke Copilot cloud agent without leaving your workspace. From within a Azure Boards work item you can initiate cloud agent sessions and open pull requests, using the context of your work item description and comments.
 
-For information about additional Copilot integrations, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/tools/about-copilot-integrations).
+For information about additional Copilot integrations, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/about-copilot-integrations).
 
 > [!NOTE]
 > * GitHub Copilot uses AI. Check for mistakes. See [Agents](https://docs.github.com/en/copilot/responsible-use/agents).

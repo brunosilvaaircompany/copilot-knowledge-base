@@ -4,8 +4,14 @@ The "dependency review action" refers to the specific action that can report on 
 
 
 
+For organizations using GitHub Enterprise Cloud with GitHub Code Security enabled, enterprise-wide management of license policy is available. This feature uses a similar pull-request based approach to dependency review action but adds auditability, centralized policy management, and ruleset-based enforcement of license policy. For more information, see [Open Source License Compliance](https://docs.github.com/en/code-security/concepts/supply-chain-security/open-source-license-compliance).
+
+
+
+
+
 > [!NOTE]
-> On GHE.com, dependency insights and license and package metadata in the dependency graph are not currently available. The dependency graph itself remains available at the repository level. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
+> On GHE.com, organization-level dependency insights is not currently available. The dependency graph itself remains available at the repository level. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
 
 
 

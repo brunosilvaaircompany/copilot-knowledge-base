@@ -2,14 +2,24 @@
 
 ## About archiving pull requests
 
-Archiving a pull request removes it from public view while preserving its history for repository administrators. This provides a safer moderation path when they need to take a pull request out of public view without permanently deleting it.
+Archiving a pull request removes it from public view while preserving its history for people with triage access or higher to the repository. This provides a safer moderation path when they need to take a pull request out of public view without permanently deleting it.
+
+
+
+Anyone with the triage, write, maintain, or admin role in a repository can archive, unarchive, and view archived pull requests.
+
+
 
 When a pull request is archived:
 
-* The pull request is only visible to repository administrators. Visitors without administrator access to the repository receive a 404 error.
-* The pull request is automatically closed and locked.
 
-When you unarchive a pull request, it becomes visible again, but it remains closed and locked. You can reopen and unlock it separately if needed.
+
+* The pull request is only visible to people with triage access or higher to the repository. Visitors without this access receive a 404 error.
+* The pull request is automatically closed and its conversation becomes read-only. New comments, reactions, and automated comments are blocked, including comments from repository administrators.
+
+When you unarchive a pull request, it becomes visible again and people can comment and react again, but it remains closed. You can reopen it separately if needed.
+
+
 
 ## Archiving a pull request
 
@@ -23,7 +33,7 @@ When you unarchive a pull request, it becomes visible again, but it remains clos
 
 ## Unarchiving a pull request
 
-You can find the PR by using the `is:archived` qualifier. See, [Searching Issues And Pull Requests](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-based-on-whether-a-pull-request-is-archived).
+You can find archived pull requests by using the `is:archived` qualifier. See [Searching Issues And Pull Requests](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-based-on-whether-a-pull-request-is-archived).
 
 1. Open the pull request you want to unarchive.
 1. In the right sidebar, click **{% octicon "archive" aria-hidden="true" aria-label="unarchive" %} Unarchive pull request**.

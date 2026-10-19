@@ -37,6 +37,6 @@ You can enable third-party MCP servers to allow developers to integrate Copilot 
 
 ## Enabling agent apps and third-party agents
 
-Enterprise owners can enable third-party agents, including agent apps, for their organizations. Once enabled at the enterprise level, organization owners can choose which agents to allow. For an overview of agent apps, see [Agent Apps](https://docs.github.com/en/copilot/concepts/agents/agent-apps).
+Enterprise owners can enable third-party agents, including agent apps, for their organizations. Once enabled at the enterprise level, organization owners can choose which agents to allow. For an overview of agent apps, see [Agent Apps](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/agent-apps).
 
 To manage agent and enterprise policies, see [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).

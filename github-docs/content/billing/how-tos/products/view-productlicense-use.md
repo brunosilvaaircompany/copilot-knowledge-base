@@ -58,14 +58,20 @@ The metered usage chart and usage break down table both show your current choice
 > [!NOTE]
 > Enterprise owners and billing managers can filter AI usage data by user. Organization owners cannot view user-level data directly—to see per-user consumption, download a usage report instead. See [Downloading usage reports](#downloading-usage-reports).
 
-If you use Copilot, an additional **AI usage** view is listed under **Usage**. You can use this view to dig deeper into how your enterprise is consuming AI credits and where additional spend is occurring. For example:
+If your account uses AI credits, an additional **AI usage** view is listed under **Usage**. You can use this view to understand included and metered usage across products, including Copilot and Advanced Security.
+
+To review combined AI Scan and agentic autofix usage, open the **AI usage** view, under "Group by," select **Products**, then review **Advanced Security**. These features share the Code Security AI Credits SKU, so their usage is reported together within the product total, not as separate totals for each feature.
+
+You can use the view to answer questions such as:
 
 * What's our total AI credits consumption across all users?
 * Which users are the heaviest consumers, and are they within their budget?
 * Which models are driving the most spend?
 * How widespread is adoption in the organizations where we rolled out Copilot?
 
-To understand how AI credits are pooled across your enterprise and what the usage data represents, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
+For information about Copilot allowances and how AI credits are pooled across your enterprise, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
+
+For information about Advanced Security AI-credit billing, see [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#how-ai-feature-usage-is-billed).
 
 
 

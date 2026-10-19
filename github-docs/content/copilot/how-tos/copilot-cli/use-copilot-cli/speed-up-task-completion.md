@@ -2,7 +2,7 @@
 
 Where a task involves multiple operations, some or all of which can be worked on in parallel, the `/fleet` slash command can speed up task completion. When you use this command, Copilot assigns separate parts of the work to subagents.
 
-For more information, see [Fleet](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/fleet).
+For more information, see [Delegating And Parallelizing Work With Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/delegating-and-parallelizing-work-with-agents).
 
 ## Using the `/fleet` slash command
 
@@ -17,8 +17,21 @@ Typically, you'll use the `/fleet` slash command after creating an implementatio
 1. Work with Copilot in plan mode to create an implementation plan.
 1. Once the plan is complete, select one of the following options:
 
-   * **Accept plan and build on autopilot + /fleet** to allow Copilot to use subagents and work autonomously to implement the plan without any further input.
+   * **Accept plan and continue in Autopilot execution mode + /fleet** to allow Copilot to use subagents and work autonomously to implement the plan without any further input.
    * **Exit plan mode and I will prompt myself** and then enter a prompt such as `/fleet implement the plan`. Copilot will start working on the plan, using subagents to run parts of the work in parallel where possible. It may ask you to answer questions or make decisions as it works through the plan.
+
+### Assigning specialized subagents
+
+If you have a custom agent with expertise suited to a particular subtask, name it in your `/fleet` prompt. Copilot can also select an appropriate custom agent based on the task and the agent's description.
+
+For example, you could prompt:
+
+```copilot
+/fleet Implement the plan. Use the @CUSTOM-AGENT-NAME agent
+to create tests for each component.
+```
+
+Replace `@CUSTOM-AGENT-NAME` with the name of a custom agent available in your CLI session. For more information, see [Create Custom Agents For CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/create-custom-agents-for-cli).
 
 ### Monitoring progress
 

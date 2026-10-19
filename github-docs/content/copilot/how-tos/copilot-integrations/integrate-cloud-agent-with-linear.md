@@ -5,7 +5,7 @@
 
 The Copilot integration in Linear allows you to invoke Copilot cloud agent without leaving your Linear workspace. From within a Linear issue you can initiate cloud agent sessions, customize which model, custom agent, or branches the agent uses, steer a session, and open pull requests, all using the context of your issue description and comments.
 
-For information about additional Copilot integrations, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/tools/about-copilot-integrations).
+For information about additional Copilot integrations, see [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/about-copilot-integrations).
 
 > [!NOTE]
 > When you mention @GitHub in, or assign Copilot to, a Linear issue, the agent captures the entire issue description and comments as context for your request. This helps the agent to understand the issue and implement an appropriate solution, based on all of the information in the issue. This context is stored in the pull request.

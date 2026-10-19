@@ -2,7 +2,7 @@
 
 Remote control lets you connect to a running Copilot CLI session from any browser or from GitHub Mobile. You can view session output, respond to permission requests, and continue working in the session without being at the machine where the session is running.
 
-This article explains how to enable and use remote control. For more conceptual information, see [About Remote Control](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-remote-control).
+This article explains how to enable and use remote control. For more conceptual information, see [About Remote Control](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-remote-control).
 
 Remote access is different from session syncing. Your Copilot CLI sessions are synced to your GitHub account by default, and synced sessions appear as view-only on GitHub.com and GitHub Mobile. These sessions are not steerable. To steer a session remotely, you must enable remote control. For more information about session syncing, see [Session Data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data#session-syncing).
 

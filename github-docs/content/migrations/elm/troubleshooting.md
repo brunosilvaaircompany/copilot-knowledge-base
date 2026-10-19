@@ -150,7 +150,7 @@ curl --silent --show-error --output /dev/null --dump-header - \
   "$TARGET_API_URL/user"
 ```
 
-Each request should return `200 OK`. The `X-OAuth-Scopes` response header should include `admin:enterprise`.
+Each request should return `200 OK`. The `X-OAuth-Scopes` response header should include `admin:enterprise` and `admin:org`.
 
 If `/user` returns `200 OK` but an Enterprise Live Migrations command returns `401 Bad credentials`, the CLI may have a different token or URL stored. Run `gh elm configure` again and carefully associate each token with its corresponding endpoint.
 

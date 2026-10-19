@@ -1,16 +1,12 @@
 # Configuring open source license policies
 
-> [!NOTE]
-> Open source license compliance is in public preview and subject to change.
-
-
 ## Prerequisites
 
 Before you configure license policies, ensure that:
 
-* Your organization has GitHub Code Security
-* You have access to manage enterprise policy and rulesets
-* Dependency graph is enabled for repositories you want to evaluate
+* You are using GitHub Enterprise Cloud (including data-resident GHEC), and your organization has GitHub Code Security enabled on the repositories you want to use license compliance.
+* You have access to manage enterprise policy and rulesets.
+* Dependency graph is enabled for repositories you want to evaluate.
 
 ## About license compliance
 
@@ -24,7 +20,9 @@ Violations are typically resolved by:
 * Approving an exception for a package
 * Updating policy to allow a license where appropriate
 
-## Create a license policy
+## Configuring license compliance
+
+### Create a license policy
 
 
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
@@ -45,7 +43,7 @@ Alternately, if you have an existing license policy from another tool, you can i
 
 The licenses you add form your baseline policy. You can later add package-level exceptions when handling alerts.
 
-## Configure access for Enterprise Open Source License Managers
+### Configure access for Enterprise Open-Source License Managers
 
 
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
@@ -56,13 +54,13 @@ The licenses you add form your baseline policy. You can later add package-level 
 1. In the left sidebar, click **{% octicon "globe" aria-hidden="true" aria-label="globe" %} Enterprise roles**.
 1. Click **Role assignments**.
 1. Click **Assign role**.
-1. Select the **Enterprise Open Source License Manager** role.
+1. Select the **Enterprise Open-Source License Manager** role.
 1. Choose a user or team to assign the role to.
 1. Click **Assign role**.
 
 Assigning this role also subscribes reviewers to request notifications so they can respond to dismissal requests quickly.
 
-## Optionally use custom properties to control rollout per repository
+### Optionally use custom properties to control rollout per repository
 
 If you want a gradual rollout, use a repository custom property to control whether each repository is in inactive, evaluate, or active enforcement mode.
 
@@ -83,7 +81,7 @@ If you want a gradual rollout, use a repository custom property to control wheth
 1. Decide who can change the property value.
 1. Assign property values to repositories based on their rollout stage.
 
-## Enforce policy in pull requests with rulesets
+### Enforce policy in pull requests with rulesets
 
 We suggest making two rulesets, one for **Evaluate** mode and one for **Active** mode. If you created custom properties to control the rollout, you can target those properties here.
 
@@ -110,9 +108,11 @@ For more information about rulesets, see [About Rulesets](https://docs.github.co
 1. Confirm that pull request annotations show license compliance results.
 1. If a dependency violates policy, review the generated alert and request dismissal if an exception is needed.
 
-When violations are unresolved, the pull request remains blocked.
+If the ruleset is in **Active** mode, the pull request remains blocked until all license policy violations are resolved.
 
-## Review and handle exception requests
+## Managing license compliance requests and policy
+
+### Review and handle exception requests
 
 1. As an Enterprise Open Source License Manager, open the list of pending license alert requests in your enterprise security views.
 1. Review each request and decide whether to deny or approve it.
@@ -122,7 +122,7 @@ When violations are unresolved, the pull request remains blocked.
 
 After a request is approved, the alert is closed and the pull request is unblocked, as long as no other required checks are failing.
 
-## Review effective policy for a repository
+### Review effective policy for a repository
 
 1. On GitHub, navigate to the main page of the repository.
 
@@ -133,6 +133,18 @@ After a request is approved, the alert is closed and the pull request is unblock
 1. In the sidebar, under "Security", click **License policy**.
 1. Review the combined policy and exception set in effect for that repository.
 1. Update enterprise-level or repository-level policy as needed.
+
+Package and license entries that are set at the enterprise level will not be editable in the repository policy. Items marked with a {% octicon "trash" aria-label="The trash can icon" %} indicate repository-level entries which can be deleted.
+
+### Audit events
+
+Changes to the license policy emit events to the audit log. These events are useful to review the history of changes or to feed external systems for compliance purposes. The log events are categorized as **Policy Management**, with a prefix of `license_compliance_policy`. They will have an action type `create` or `modify`. For details about the contents of the audit log events, see [Audit Log Events For Your Organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization).
+
+### License compliance API
+
+There are several REST API endpoints for managing license compliance policy. You can use the API to programatically back up and restore your enterprise policy and to query whether a list of packages would create any policy violations if they were included in a repository's dependencies. In addition, operations on license compliance closure requests can generate webhook events when a request is created, receives a response, or is cancelled.
+
+For details about the enterprise policy management API, see [Dependency Graph](https://docs.github.com/en/rest/dependency-graph/). For more about the package check API, see [Repos](https://docs.github.com/en/rest/repos#package-checks). For more about webhooks, see [Webhook Events And Payloads](https://docs.github.com/en/webhooks/webhook-events-and-payloads).
 
 ## Further reading
 

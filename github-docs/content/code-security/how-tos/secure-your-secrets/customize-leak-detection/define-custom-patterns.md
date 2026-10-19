@@ -119,9 +119,9 @@ Before defining a custom pattern, you must ensure that you enable secret scannin
 
 1. At the top of the page, click **{% octicon "law" aria-hidden="true" aria-label="law" %} Policies**.
 
-1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security Code security**.
+1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
-1. Under "Advanced Security Code security", click **Security features**.
+1. Under "Advanced Security", click **Security features**.
 1. Under "Secret scanning custom patterns", click **New pattern**.
 1. Enter the details for your new custom pattern. You must at least provide the name for your pattern, and a regular expression for the format of your secret pattern.
    1. In the "Pattern name" field, type a name for your pattern.

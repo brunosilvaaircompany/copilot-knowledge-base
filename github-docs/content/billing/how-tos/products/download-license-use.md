@@ -1,6 +1,6 @@
 # Downloading license use for your enterprise or organization
 
-You can download CSV files with details of paid license use through the GitHub user interface or the REST API.
+You can download CSV files with details of paid license use through the GitHub user interface. For supported products, you can also retrieve license usage information through the REST API.
 
 For more detailed reports on usage of all paid products, see [View Productlicense Use](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use).
 
@@ -13,7 +13,7 @@ For more detailed reports on usage of all paid products, see [View Productlicens
 
 1. In the license area of interest, click **Download CSV report**. If offered a choice, choose your preferred report.
 
-The report will be emailed to the default email address associated with your GitHub account. For information about the fields, see [License Reports](https://docs.github.com/en/billing/reference/license-reports).
+The report will be emailed to the default email address associated with your GitHub account. The exception is Code Quality reports, which download directly to your browser instead. For information about the fields, see [License Reports](https://docs.github.com/en/billing/reference/license-reports).
 
 ## On GitHub Enterprise Server
 

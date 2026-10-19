@@ -60,13 +60,13 @@ You can filter issues and pull requests based on whether they're open or closed 
 
 ## Search based on whether a pull request is archived
 
-Repository administrators can archive a pull request to remove it from public view. You can search for archived pull requests using the `is:archived` qualifier. For more information, see [Archive Pull Requests](https://docs.github.com/en/communities/moderating-comments-and-conversations/archive-pull-requests).
+{% ifversion triage-archive-pull-requests %}People with triage access or higher to a repository can archive, unarchive, and view archived pull requests. Archiving removes a pull request from public view. You can search for archived pull requests using the `is:archived` qualifier. For more information, see [Archive Pull Requests](https://docs.github.com/en/communities/moderating-comments-and-conversations/archive-pull-requests).
 
 | Qualifier        | Example
 | ------------- | -------------
-| `is:archived` | [**is:archived is:pr spam**](https://github.com/search?q=is%3Aarchived+is%3Apr+spam&ref_product=github&ref_type=engagement&ref_style=text) matches archived pull requests that contain the word "spam" in repositories where you are a repository administrator.
+| `is:archived` | [**is:archived is:pr spam**](https://github.com/search?q=is%3Aarchived+is%3Apr+spam&ref_product=github&ref_type=engagement&ref_style=text) matches archived pull requests that contain the word "spam" in repositories where you have triage access or higher.
 
-
+{% endif %}
 
 ## Search for pull requests in the merge queue
 

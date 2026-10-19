@@ -79,6 +79,9 @@ Users will be able to see available models for your region in the model selector
 * GPT-5.6 Sol
 * GPT-5.6 Terra
 * GPT-6 Astra
+* GPT-6 Luna
+* GPT-6 Sol
+* GPT-6.1 Sol
 * Claude Haiku 4.5
 * Claude Haiku 5.5
 * Claude Opus 4.8

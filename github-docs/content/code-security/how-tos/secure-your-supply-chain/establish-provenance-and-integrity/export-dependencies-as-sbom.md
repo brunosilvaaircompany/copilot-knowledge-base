@@ -4,15 +4,6 @@ You can export the current state of the dependency graph for your repository as 
 
 SBOMs include an inventory of a project's dependencies and associated information such as versions and package identifiers. SBOMs do not include dependents (other projects that rely on your project).
 
-
-
-> [!NOTE]
-> On GHE.com, dependency insights and license and package metadata in the dependency graph are not currently available. The dependency graph itself remains available at the repository level. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
-
-
-
-
-
 ## Exporting a software bill of materials for your repository from the UI
 
 1. On GitHub, navigate to the main page of the repository.
@@ -26,7 +17,9 @@ SBOMs include an inventory of a project's dependencies and associated informatio
 
 ## Exporting a software bill of materials for your repository using the REST API
 
+
 If you want to use the REST API to export an SBOM for your repository, see [Sboms](https://docs.github.com/en/rest/dependency-graph/sboms#export-a-software-bill-of-materials-sbom-for-a-repository).
+
 
 ## Generating a software bill of materials from GitHub Actions
 

@@ -1,6 +1,6 @@
 # Using GitHub Copilot code review on GitHub
 
-Copilot code review is also available for organization members without a Copilot license, when enabled by an enterprise administrator or organization owner. See [Copilot code review for organization members without a Copilot license](/copilot/concepts/agents/code-review#copilot-code-review-without-a-copilot-license).
+Copilot code review is also available for organization members without a Copilot license, when enabled by an enterprise administrator or organization owner. See [Copilot code review for organization members without a Copilot license](/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#copilot-code-review-without-a-copilot-license).
 
 ## Request a review from Copilot
 
@@ -110,5 +110,5 @@ In repository settings, **Allow Copilot to use MCP tools when reviewing pull req
 
 ## Further reading
 
-* [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review)
+* [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review)
 * [Review Copilot Output](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/review-copilot-output)

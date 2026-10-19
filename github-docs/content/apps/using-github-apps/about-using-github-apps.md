@@ -37,7 +37,7 @@ Before you install or authorize a GitHub App, you should make sure that you trus
 
 Agent apps are GitHub Apps that expose agents on GitHub. GitHub partners build agent apps to bring their tools and services into your development workflow. These agent apps are agents you can delegate work to alongside Copilot cloud agent and other third-party agents. Powered by Copilot cloud agent, you can trigger these agents from issues, pull requests, and the Agents UI.
 
-When you install an agent app, you will be asked if you want to enable agent features. For more information, see [Agent Apps](https://docs.github.com/en/copilot/concepts/agents/agent-apps).
+When you install an agent app, you will be asked if you want to enable agent features. For more information, see [Agent Apps](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/agent-apps).
 
 If the app is installed in an organization owned by an enterprise, an administrator must also enable the "agent apps" Copilot policy before the agent features become available.
 

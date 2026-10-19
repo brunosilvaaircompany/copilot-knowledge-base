@@ -8,7 +8,7 @@ Copilot can interact with desktop applications on your behalf by reading accessi
 
 This capability is useful for workflows in legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. It is available for local sessions on macOS and Windows.
 
-For information about its capabilities, controls, and limitations, see [Computer Use](https://docs.github.com/en/copilot/concepts/agents/computer-use).
+For information about its capabilities, controls, and limitations, see [Computer Use](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/computer-use).
 
 ## Checking computer use status
 
@@ -47,7 +47,7 @@ Replace `APP_NAME` with the name of an application installed on your computer.
 
 Computer use follows the active Copilot CLI permission mode. This mode determines whether Copilot asks for approval before controlling an application. Enter `/permissions show` to review the active mode. When approval is required, choose **Allow** to grant access for the current computer-use session, **Always allow** to save the approval for future sessions, or decline or cancel the request.
 
-If you choose **Always allow** for an application, the saved approval also applies when you use computer use in GitHub Copilot app on the same computer. When a prompt appears, confirm that the application and action match your request. Configured deny rules still take precedence.
+If you choose **Always allow** for an application, the saved approval also applies when you use computer use in the GitHub Copilot app on the same computer. When a prompt appears, confirm that the application and action match your request. Configured deny rules still take precedence.
 
 To interrupt an active operation, press <kbd>Esc</kbd> twice.
 

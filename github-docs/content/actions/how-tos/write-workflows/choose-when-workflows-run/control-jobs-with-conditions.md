@@ -1,7 +1,9 @@
 # Using conditions to control job execution
 
 You can use the `jobs.<job_id>.if` conditional to prevent a job from running unless a condition is met. You can use any supported context and expression to create a conditional. For more information on which contexts are supported in this key, see [Contexts](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability).
+ 
 
+Note that conditions executed by a shell (for example `[[ $variable == "prefix"* ]]`) cannot be evaluated in `jobs.<job_id>.if`. Such conditions must be written inside `jobs.<job_id>.steps[*].run`.
 
 ### Example: Only run job for a specific repository
 

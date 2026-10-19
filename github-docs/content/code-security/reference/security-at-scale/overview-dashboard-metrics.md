@@ -34,7 +34,7 @@ The dashboard is divided into three tabs, each focused around a different securi
 * **Prevention:** Shows metrics about how vulnerabilities have been prevented and fixed in pull requests.
 
 > [!NOTE]
-> Unlike the **Detection** and **Remediation** tabs which report alerts on the default branch, the **Prevention** tab gives you insights for CodeQL alerts found in merged pull requests.
+> Unlike the **Detection** and **Remediation** tabs which report alerts on the default branch, the **Prevention** tab gives you insights for CodeQL alerts found in merged pull requests and AI Scan findings from pull requests.
 
 ## Detection metrics
 
@@ -145,3 +145,19 @@ The count of pull request alerts detected by CodeQL or secret scanning with a cl
 Shows the ratio of accepted Copilot Autofix suggestions to the total number of Copilot Autofix suggestions on pull request alerts detected by code scanning.
 
 Copilot Autofix for code scanning provides targeted recommendations to help you fix code scanning alerts. See [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).
+
+
+
+
+
+### AI Scan findings
+
+Shows trends for **Total findings**, **Fix applied**, and **Dismissed** over the time period you have chosen. A finding is resolved when a fix is applied or the finding is dismissed.
+
+### AI Scan findings resolved
+
+Shows the number of resolved AI Scan findings out of the total number of findings, and the percentage resolved. A finding is resolved when a fix is applied or the finding is dismissed.
+
+### AI Scan findings with accepted autofix
+
+Shows the number of AI Scan findings with an accepted Copilot Autofix suggestion out of all findings that had a suggested autofix, and the acceptance percentage.

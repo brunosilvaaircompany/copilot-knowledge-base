@@ -28,7 +28,7 @@ Copilot policies are also managed at the enterprise level. If your enterprise ow
 > [!NOTE]
 > * Available for all paid [Copilot plans](/copilot/get-started/plans).
 > * If your organization is owned by an enterprise, these settings are only visible if an enterprise admin has enabled third-party coding agents at the enterprise level. See [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).
->   * Agent apps are not enabled here. They are controlled separately by a single "agent apps" policy. For more information, see [Agent Apps](https://docs.github.com/en/copilot/concepts/agents/agent-apps).
+>   * Agent apps are not enabled here. They are controlled separately by a single "agent apps" policy. For more information, see [Agent Apps](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/agent-apps).
 
 You can choose whether to allow the following coding agents to be enabled in your organization:
 

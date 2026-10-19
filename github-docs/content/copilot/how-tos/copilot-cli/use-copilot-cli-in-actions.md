@@ -1,6 +1,6 @@
 # Using Copilot CLI in GitHub Actions with GITHUB_TOKEN
 
-For background on authentication options and how billing works when running Copilot CLI in GitHub Actions, see [Copilot CLI In GitHub Actions](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/copilot-cli-in-github-actions).
+For background on authentication options and how billing works when running Copilot CLI in GitHub Actions, see [Copilot CLI In GitHub Actions](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/copilot-cli-in-github-actions).
 
 ## Enabling the policy
 

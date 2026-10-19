@@ -4,13 +4,13 @@
 
 GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
 
-For a full introduction to GitHub Copilot code review, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review).
+For a full introduction to GitHub Copilot code review, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review).
 
-Copilot code review uses GitHub Actions to run agentic capabilities. For more information, see [Agentic capabilities for Copilot code review](/copilot/concepts/agents/code-review#usage-of-github-actions-runners-for-agentic-capabilities-in-code-review).
+Copilot code review uses GitHub Actions to run agentic capabilities. For more information, see [Agentic capabilities for Copilot code review](/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#usage-of-github-actions-runners-for-agentic-capabilities-in-code-review).
 
 {% webui %}
 
-Copilot code review is also available for organization members without a Copilot license, when enabled by an enterprise administrator or organization owner. See [Copilot code review for organization members without a Copilot license](/copilot/concepts/agents/code-review#copilot-code-review-without-a-copilot-license).
+Copilot code review is also available for organization members without a Copilot license, when enabled by an enterprise administrator or organization owner. See [Copilot code review for organization members without a Copilot license](/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#copilot-code-review-without-a-copilot-license).
 
 ## Using Copilot code review
 
@@ -69,7 +69,7 @@ With review effort levels, you can choose the level of thoroughness of Copilot's
 
 You can select Copilot review effort in the pull request before you request a review from Copilot, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort in your settings. Organization owners and repository administrators can set a default Copilot review effort for automatic reviews.
 
-For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agents/code-review#review-effort-level).
+For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#review-effort-level).
 
 ## Pull request approvals from Copilot
 

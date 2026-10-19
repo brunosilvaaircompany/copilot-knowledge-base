@@ -35,7 +35,7 @@ For information on disabling Copilot cloud agent in repositories owned by your p
 
 ## Managing access to Automations
 
-Automations let users run Copilot cloud agent automatically, on a schedule or in response to events. See [About Automations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-automations).
+Automations let users run Copilot cloud agent automatically, on a schedule or in response to events. See [About Automations](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations).
 
 For automations to be available in a repository, all of the following must be true:
 

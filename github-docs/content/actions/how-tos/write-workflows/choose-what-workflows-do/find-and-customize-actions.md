@@ -171,6 +171,12 @@ steps:
   - uses: actions/javascript-action@a824008085750b8e136effc585c3cd6082bd575f
 ```
 
+
+
+> [!TIP] A workflow dependency lockfile pins your actions to verified commits without putting SHAs in your workflow files, so your `uses` references stay readable. It also covers transitive dependencies, which SHA pinning does not. See [Workflow Dependency Lockfiles](https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles).
+
+
+
 ### Using branches
 
 Specifying a target branch for the action means it will always run the version currently on that branch. This approach can create problems if an update to the branch includes breaking changes. This example targets a branch named `@main`:

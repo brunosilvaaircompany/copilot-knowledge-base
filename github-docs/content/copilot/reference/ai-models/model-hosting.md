@@ -73,10 +73,11 @@ Used for:
 
 * Gemini 3.7 Flash
 * Gemini 3.8 Flash
+* Gemini 4 Argon
 
 GitHub Copilot uses Gemini models hosted on Google Cloud Platform (GCP). When using Gemini models, prompts and metadata are sent to GCP, which makes the [following data commitment](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance): _Gemini doesn't use your prompts, or its responses, as data to train its models._
 
-To provide better service quality and reduce latency, GitHub uses [prompt caching](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance#customer_data_retention_and_achieving_zero_data_retention).
+To provide better service quality and reduce latency, GitHub uses [Google's Durable Caching](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention#durable-data-caching). Cached data is encrypted and held for up to 24 hours. Cached data is never used to train or fine-tune models.
 
 When using Gemini models, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content.
 

@@ -33,7 +33,7 @@ By default, the code scanning alerts page is filtered to show alerts for the def
 1. Alerts from CodeQL analysis include a description of the problem. Click **Show more** for guidance on how to fix your code.
 
 
-1. Optionally, assign the alert to someone to fix using the **Assignees** control shown on the right, see [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts-to-users-and-copilot-cloud-agent).
+1. Optionally, assign the alert to someone to fix using the **Assignees** control shown on the right. See [Assigning alerts](/code-security/concepts/security-at-scale/about-security-campaigns#about-assigning-alerts).
 
 
 
@@ -53,7 +53,7 @@ With a GitHub Copilot Enterprise license, you can ask Copilot Chat for help to b
 
 ## Viewing metrics for CodeQL pull request alerts for an organization
 
-For code scanning alerts from CodeQL analysis, you can use security overview to see how CodeQL is performing in pull requests in repositories where you have write access across your organization, and to identify repositories where you may need to take action. For more information, see [Pull Request Alert Metrics](https://docs.github.com/en/code-security/concepts/code-scanning/pull-request-alert-metrics).
+For code scanning alerts from CodeQL analysis, you can use security overview to see how CodeQL is performing in pull requests in repositories where you have write access across your organization, and to identify repositories where you may need to take action. For more information, see [Code Scanning On Pull Requests](https://docs.github.com/en/code-security/concepts/code-scanning/code-scanning-on-pull-requests).
 
 ## Filtering code scanning alerts
 

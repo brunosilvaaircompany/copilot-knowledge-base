@@ -4,11 +4,22 @@
 
 When you create an enterprise, you choose a "slug" for the enterprise, which is a string used in the URL for your enterprise. For example, if you chose `octo-enterprise` as the slug, the URL for your enterprise on GitHub.com would be `https://github.com/enterprises/octo-enterprise`.
 
-If your company pays for GitHub Enterprise Cloud by credit card or PayPal, you can change the slug in the settings for your enterprise. When you change the slug, GitHub does not set up any redirects from the old URL. Your old enterprise slug will immediately become available for another customer to use.
-
 > [!NOTE]
-> If you pay for GitHub Enterprise Cloud via invoice, or if your enterprise uses Enterprise Managed Users, you must contact [GitHub's Sales team](https://github.com/enterprise/contact) to change your enterprise slug.
 > For enterprises hosted on GHE.com, changing the enterprise slug is not currently supported.
+
+For enterprises hosted on GitHub.com, how you change your enterprise slug depends on your billing type and whether your enterprise uses Enterprise Managed Users.
+
+{% rowheaders %}
+
+| Enterprise configuration | How to change the slug |
+| --- | --- |
+| Self-serve billing without Enterprise Managed Users | Change the slug in your enterprise settings. See [Changing the enterprise slug](#changing-the-enterprise-slug). |
+| Self-serve billing with Enterprise Managed Users | Create a ticket through the [GitHub Support portal](https://support.github.com) to request a slug change. |
+| Invoiced billing with or without Enterprise Managed Users | Contact [GitHub's Sales team](https://github.com/enterprise/contact) to request a slug change. |
+
+{% endrowheaders %}
+
+When you change the slug, GitHub does not set up any redirects from the old URL. Your old enterprise slug will immediately become available for another enterprise to use.
 
 ## Considerations when changing your enterprise slug
 

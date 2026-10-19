@@ -48,9 +48,9 @@ Some commands require specific context, such as an active session, session chang
 | `/pr-merge` | **Requires a mergeable pull request.** Merges the current pull request. |
 | `/pr-open` | **Requires an active session with changes.** Opens a pull request from current session changes. |
 | `/pr-resolve-comments` | **Requires an open pull request with unresolved review comments.** Runs a prompt to resolve pull request comments. |
-| `/remote` | **Requires an active session.** Enables or manages remote control so you can access the current session from GitHub.com in a browser or from GitHub Mobile. Availability depends on your organization or enterprise policy. See [About Remote Control](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-remote-control). |
+| `/remote` | **Requires an active session.** Enables or manages remote control so you can access the current session from GitHub.com in a browser or from GitHub Mobile. Availability depends on your organization or enterprise policy. See [About Remote Control](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-remote-control). |
 | `/rename` | **Requires an active session.** Renames the current chat or session. |
-| `/research [PROMPT]` | Runs a research workflow and produces a cited report. |
+| `/research [PROMPT]` | Runs a research workflow and produces a cited report. See [Researching With Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/researching-with-agents). |
 | `/reset-allowed-tools` | **Requires an active session.** Clears session-level tool approvals and turns auto-approval off. |
 | `/restart-session` | **Requires an active session.** Restarts the current session and keeps its history. |
 | `/review` | **Requires an active session.** Reviews the current session's changes. |

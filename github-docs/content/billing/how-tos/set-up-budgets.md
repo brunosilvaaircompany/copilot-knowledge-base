@@ -14,9 +14,26 @@ We recommend that you avoid creating overlapping budgets for the use of a produc
 
 For Copilot under usage-based billing, user-level budgets add another layer to consider. A user-level budget can block a user even when the enterprise or cost center budget still has capacity. It is the first check in the evaluation sequence. When planning your budget configuration, account for how user-level budgets, cost center budgets, and the enterprise spending limit interact. See [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets#how-billing-flows-through-budgets).
 
+
+
+For Advanced Security AI features, choose the budget that matches the spending you want to control:
+
+* Use a **Bundled AI credits budget** to set one spending limit across all features that use AI credits. If **Stop usage when budget limit is reached** is enabled, usage by another product can exhaust this budget and stop AI Scan and agentic autofix.
+* Use a **Code Security AI Credits** SKU-level budget to set an independent spending limit for AI Scan and agentic autofix.
+
+Usually, choose one of these budgets as your primary control. If both hard budgets apply, exhausting either budget blocks further Code Security AI Credits usage.
+
+When no Code Security AI Credits quota remains because of a hard budget, AI Scan fails and agentic autofix cannot start a session. Usage resumes when the limiting budget is increased or a new billing cycle begins.
+
+For more information about AI Scan, see [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
+
+
+
 ## Managing budgets for your personal account
 
 You can set budgets and receive alerts when your usage of a product reaches 75%, 90%, or 100% of a defined budget. Budgets can be set for a specific repository or for your whole account.
+
+The personal-account guidance for Code Security AI Credits does not apply to repositories in the personal namespace of a managed user account. For details about feature availability for these repositories, see [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#how-ai-feature-usage-is-billed).
 
 1. Open your billing overview page: [https://github.com/settings/billing](https://github.com/settings/billing?ref_product=github&ref_type=engagement&ref_style=text).
 
@@ -27,7 +44,8 @@ You can set budgets and receive alerts when your usage of a product reaches 75%,
 
    * To limit spending at a Product-level, in "Product-level budget" choose a product from the dropdown, for example: Codespaces.
    * To limit spending at a SKU-level, in "SKU-level budget" choose a Product and then a SKU, for example: Codespaces and Codespaces storage.
-   * To limit spending on AI credits across all features, enable "Bundled AI credits budget" or to limit spending for a specific feature, set a SKU-level budget for the feature (such as Copilot AI credits, Spark AI credits, or Copilot cloud agent).
+   * To limit spending across all AI-credit SKUs, select **Bundled AI credits budget**.
+   * To limit spending for one SKU, select **SKU-level budget**. Examples include Copilot AI credits, Spark AI credits, Copilot cloud agent, and Code Security AI Credits.
 
 1. Under "Budget scope", set the scope of spending for this budget.
 1. Under "Budget", set a budget amount.
@@ -40,7 +58,7 @@ You can set budgets and receive alerts when your usage of a product reaches 75%,
 1. Click **Create budget**.
 
 
-To edit or delete a budget, on the "Budget and alerts" page, click **Edit** or **Delete** next to the budget you want to edit or delete. Follow the prompts.
+To edit or delete a budget, on the "Budgets and alerts" page, click {% octicon "kebab-horizontal" aria-label="View actions" %} next to the budget, then click **{% octicon "pencil" aria-hidden="true" aria-label="pencil" %} Edit** or **{% octicon "trash" aria-hidden="true" aria-label="trash" %} Delete**. Follow the prompts.
 
 ### Managing included usage alerts for your personal account
 
@@ -67,7 +85,7 @@ You can set budgets and receive alerts when your usage of a product or license t
 
 ### Viewing budgets
 
-If you are an organization owner, enterprise owner, or billing manager, any account-level budget is listed at the top of the "Budgets and alerts" page, followed by budgets for smaller scopes.
+If you are an organization owner, enterprise owner, or billing manager, all of your account's budgets appear in one list on the "Budgets and alerts" page. Each row shows the budget's scope, spending against the budget amount, and status.
 
 1. Navigate to your organization or enterprise. For example, from the [Organizations](https://github.com/settings/organizations?ref_product=github&ref_type=engagement&ref_style=text) or [Enterprises](https://github.com/settings/enterprises?ref_product=ghec&ref_type=engagement&ref_style=text) pages on GitHub.com.
 
@@ -77,7 +95,7 @@ If you are an organization owner, enterprise owner, or billing manager, any acco
 
 
 1. Click **Budgets and alerts**.
-1. Optionally, in the enterprise view only, to filter by scope, select **Scope**, then choose a scope.
+1. Optionally, to find specific budgets, choose a scope from the scope dropdown, or use the search bar to filter by scope, product, SKU, or user.
 
 ### Creating a budget
 
@@ -88,7 +106,9 @@ As the owner of an enterprise or organization account, or as a billing manager, 
 
    * **Product-level budget**: Limits spending on a single product (for example, Codespaces).
    * **SKU-level budget**: Limits spending on a specific SKU within a product (for example, GitHub Secret Protection within GitHub Advanced Security).
-   * **Bundled AI credits budget**: Limits spending across all SKUs that consume AI credits, including Copilot, Copilot cloud agent, and Spark. Available where overage spend is enabled.
+   * **Bundled AI credits budget**: Limits spending across all SKUs that consume AI credits, including Copilot, Copilot cloud agent, Spark, and Advanced Security AI features. Available where overage spend is enabled.
+
+   To limit spending on AI Scan and agentic autofix, select **SKU-level budget**. In the product dropdown, select **Advanced Security**, then in the SKU dropdown, select **Code Security AI Credits**.
 
 1. Under "Budget scope", set the scope of spending for this budget.
 
@@ -110,7 +130,7 @@ As the owner of an enterprise or organization account, or as a billing manager, 
 
 1. Under "Budget", set a budget amount or license count.
 
-   To stop any usage and further spending once the budget limit is reached, select **Stop usage when budget limit is reached** or **Limit usage when budget limit is reached**, if available. **This option is available for metered products and for Advanced Security SKU-level budgets**. For Advanced Security, this option prevents new enablement on additional repositories. It doesn't disable Advanced Security on repositories where it is already active. See [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#hard-budgets-for-github-advanced-security-skus).
+   To stop any usage and further spending once the budget limit is reached, select **Stop usage when budget limit is reached** or **Limit usage when budget limit is reached**, if available. **This option is available for metered products and for Advanced Security SKU-level budgets**. For active-committer license budgets for Code Security and Secret Protection, this option prevents new enablement on additional repositories. It doesn't disable these products on repositories where they are already active. See [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#hard-budgets-for-github-advanced-security-skus).
 
    >[!IMPORTANT] If you do not select one of these options, you will be notified by email if you exceed your budget, but usage **will not** be stopped.
 

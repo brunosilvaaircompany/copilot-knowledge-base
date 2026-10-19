@@ -27,8 +27,8 @@ The following Copilot features can use premium requests.
 | [Copilot code review](/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review) | Each time Copilot reviews a pull request (when assigned as a reviewer) or reviews code in your IDE, **13 premium requests** are consumed. | Copilot premium requests |
 | [Copilot cloud agent](/copilot/concepts/copilot-surfaces/copilot-on-github) | Copilot cloud agent uses **one premium request** per session, multiplied by the model's rate. A session begins when you prompt Copilot to undertake a task. In addition, each real-time steering comment made during an active session uses **one premium request** per session, multiplied by the model's rate. | Copilot cloud agent premium requests |
 | [Copilot Spaces](/copilot/concepts/context/spaces) | Copilot Spaces uses **one premium request** per user prompt, multiplied by the model's rate. | Copilot premium requests |
-| [OpenAI Codex Visual Studio Code integration](/copilot/concepts/agents/openai-codex) | While in preview, each prompt to OpenAI Codex uses **one premium request** multiplied by the model multiplier rates. | Copilot premium requests |
-| [Third-party coding agents](/free-pro-team@latest/copilot/concepts/agents/about-third-party-coding-agents) | While in preview, each prompt to a third-party coding agent uses **one premium request**, multiplied by the model's rate. | Copilot premium requests |
+| [OpenAI Codex Visual Studio Code integration](/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents#vs-code-extension) | While in preview, each prompt to OpenAI Codex uses **one premium request** multiplied by the model multiplier rates. | Copilot premium requests |
+| [Third-party coding agents](/free-pro-team@latest/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents) | While in preview, each prompt to a third-party coding agent uses **one premium request**, multiplied by the model's rate. | Copilot premium requests |
 
 {% endrowheaders %}
 
