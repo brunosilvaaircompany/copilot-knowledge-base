@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-08-12 08:11 UTC  
+> Atualizado em: 2026-10-21 12:50 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Automatically migrate branch protection rules to repository rulesets](https://github.blog/changelog/2026-08-11-automatically-migrate-branch-protection-rules-to-repository-rulesets)
+## [Bulk migrate branch protections to rulesets for a repository](https://github.blog/changelog/2026-10-20-bulk-migrate-branch-protections-to-rulesets-for-a-repository)
 
-**Data:** 2026-08-11  **Categorias:** `Release`, `platform governance`
+**Data:** 2026-10-20  **Categorias:** `Improvement`, `platform governance`
 
-You can now convert your existing branch protection rules to repository rulesets directly from your repository settings. This helps you migrate to GitHub&#8217;s more flexible and scalable policy framework without&#8230;
+You can now convert all branch protection rules of a repository to rulesets in a single action. This is an extension of the ability to convert a single branch protection&#8230;
 
-The post [Automatically migrate branch protection rules to repository rulesets](https://github.blog/changelog/2026-08-11-automatically-migrate-branch-protection-rules-to-repository-rulesets) appeared first on [The GitHub Blog](https://github.blog).
+The post [Bulk migrate branch protections to rulesets for a repository](https://github.blog/changelog/2026-10-20-bulk-migrate-branch-protections-to-rulesets-for-a-repository) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
