@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Model Context Protocol (MCP) is an open standard that defines how applications share context with large language models (LLMs). For an overview of MCP, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+The Model Context Protocol (MCP) is an open standard that defines how applications share context with large language models (LLMs). For an overview of MCP, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 For a curated list of MCP servers from partners and the community, see the [GitHub MCP Registry](https://github.com/mcp).
 

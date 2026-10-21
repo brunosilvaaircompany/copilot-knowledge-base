@@ -38,7 +38,12 @@ Auto model selection also **protects your cache**. It changes models at natural 
 
 Auto model selection also routes around degraded or busy models, so you hit fewer rate limits and errors.
 
-If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent.
+If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent. 
+
+
+> [!NOTE] 
+> If you are on the Copilot Max plan, you'll receive a 30% discount through October 28, 2026 while using auto model selection. 
+
 
 
 For information on the feature and its availability, see [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection#copilot-chat-in-ides).
@@ -59,7 +64,7 @@ Well-structured prompts have three qualities:
 
 This added guidance doesn't meaningfully increase token usage, but it can significantly reduce the number of agent runs needed to reach the right outcome.
 
-For prompt engineering best practices, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering).
+For prompt engineering best practices, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 
 ## 3. Keep your context lean
 
@@ -80,7 +85,7 @@ When you need the thread to keep going but it has grown large, run `/compact` in
 
 In addition, you can use `/context` to check current usage at any time.
 
-See [Context Management](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/context-management).
+See [Context Management](https://docs.github.com/en/copilot/concepts/prompting-and-context/context-management).
 
 ### Give Copilot a map of your project
 

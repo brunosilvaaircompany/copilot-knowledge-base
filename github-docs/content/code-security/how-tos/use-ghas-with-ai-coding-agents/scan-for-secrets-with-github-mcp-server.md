@@ -132,6 +132,6 @@ If push protection is enabled, the MCP server also blocks secrets from being inc
 |---|---|
 | Scanning returns no results | Verify the `secret_protection` toolset is enabled in your MCP configuration. |
 | Repository not eligible |Secret scanning via MCP is available to public repositories and requires GitHub Secret Protection to be enabled for private and internal repositories. |
-| Agent doesn't recognize the tool | Confirm your IDE or agent supports MCP. See [MCP](https://docs.github.com/en/copilot/concepts/context/mcp#availability). |
+| Agent doesn't recognize the tool | Confirm your IDE or agent supports MCP. See [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp#where-you-can-use-mcp). |
 | Unexpected detection results | Your organization's security configuration controls which patterns are scanned. Check your repository security settings. |
 | Tool works in one client but not another | The experience varies across MCP-compatible clients. Check your client's MCP documentation for supported features. |

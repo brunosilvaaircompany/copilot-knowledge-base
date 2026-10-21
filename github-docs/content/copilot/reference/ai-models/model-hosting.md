@@ -6,12 +6,8 @@ GitHub Copilot can use a variety of AI models. This article explains how these m
 
 Used for:
 
-* GPT-5 mini
 * GPT-5.3-Codex
-* GPT-5.4
-* GPT-5.4 mini
 * GPT-5.4 nano
-* GPT-5.5
 * GPT-5.6 Luna
 * GPT-5.6 Sol
 * GPT-5.6 Terra
@@ -71,7 +67,6 @@ When using Claude, input prompts and output completions continue to run through 
 
 Used for:
 
-* Gemini 3.7 Flash
 * Gemini 3.8 Flash
 * Gemini 4 Argon
 

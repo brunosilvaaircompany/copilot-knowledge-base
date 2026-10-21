@@ -642,7 +642,7 @@ An arrow in the gutter indicates an available edit suggestion. Hover over the ar
 
 ## Next steps
 
-* **Learn how to write effective prompts** - See [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering).
+* **Learn how to write effective prompts** - See [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 * **Configure Copilot in your editor** - You can enable or disable GitHub Copilot from within your editor, and create your own preferred keyboard shortcuts for Copilot. See [Configure In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide).
 * **Get started with GitHub Copilot Chat** - Learn how to ask Copilot for information and assistance, using GitHub Copilot Chat. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide) and [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github).
 * **Troubleshoot issues** - Learn more about how to troubleshoot common issues with GitHub Copilot. See [Troubleshoot Copilot](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot).

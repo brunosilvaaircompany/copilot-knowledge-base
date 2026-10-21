@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-Before setting up MCP servers for your repository, read [MCP](https://docs.github.com/en/copilot/concepts/context/mcp) and [MCP And Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/mcp-and-cloud-agent).
+Before setting up MCP servers for your repository, read [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 ## Introduction
 

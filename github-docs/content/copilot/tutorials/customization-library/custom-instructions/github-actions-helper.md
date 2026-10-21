@@ -3,7 +3,7 @@
 > [!NOTE]
 > * The examples in this library are intended for inspiration—you are encouraged to adjust them to be more specific to your projects, languages, and team processes.
 > * For community-contributed examples of custom instructions for specific languages and scenarios, see the [Awesome GitHub Copilot Customizations](https://github.com/github/awesome-copilot/blob/main/docs/README.instructions.md) repository.
-> * You can apply custom instructions across different scopes, depending on the platform or IDE where you are creating them. For more information, see "[Response Customization](https://docs.github.com/en/copilot/concepts/prompting/response-customization)."
+> * You can apply custom instructions across different scopes, depending on the platform or IDE where you are creating them. For more information, see "[Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions)."
 
 
 The following example shows a path-specific `actions.instructions.md` file that applies only to GitHub Actions workflow files in your repository, using the `applyTo` field. For more information about path-specific instructions files, see [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#creating-path-specific-custom-instructions).
@@ -54,6 +54,6 @@ jobs:
 
 ## Further reading
 
-* [Response Customization](https://docs.github.com/en/copilot/concepts/prompting/response-customization) - Overview of response customization in GitHub Copilot
+* [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions) - Overview of response customization in GitHub Copilot
 * [Add Custom Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions) - How to configure custom instructions
 * [Awesome GitHub Copilot Customizations](https://github.com/github/awesome-copilot/blob/main/README.md) - Repository of community-contributed custom instructions and other customizations for specific languages and scenarios

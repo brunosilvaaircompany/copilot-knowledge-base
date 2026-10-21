@@ -1,6 +1,6 @@
 # Adding MCP servers for GitHub Copilot CLI
 
-The Model Context Protocol (MCP) is an open standard that defines how applications share context with large language models (LLMs). You can connect MCP servers to GitHub Copilot CLI to give Copilot access to external tools, data sources, and services. For an overview of MCP, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+The Model Context Protocol (MCP) is an open standard that defines how applications share context with large language models (LLMs). You can connect MCP servers to GitHub Copilot CLI to give Copilot access to external tools, data sources, and services. For an overview of MCP, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 ## Adding an MCP server
 
@@ -192,6 +192,13 @@ If your organization has configured a custom MCP registry URL, `/mcp search` con
 1. Press <kbd>Ctrl</kbd>+<kbd>S</kbd> to save. The server is added to your `mcp-config.json` and started immediately.
 
 
+## Using agent finder
+
+Agent finder searches a catalog of capabilities, including MCP servers, tools, agents, and skills. To make it available in the CLI:
+
+1. Download the [agent finder skill](https://github.com/ards-project/connectors/blob/main/skills/github-copilot/SKILL.md).
+1. Add the skill to your `~/.copilot/skills` directory. For skill directory structure and installation guidance, see [Add Skills](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills).
+
 ## Managing MCP servers
 
 You can manage your configured MCP servers using the `/mcp` commands in interactive mode or the `copilot mcp` subcommands from the terminal.
@@ -258,6 +265,6 @@ Once you have added an MCP server, Copilot can automatically use the tools it pr
 
 ## Further reading
 
-* [MCP](https://docs.github.com/en/copilot/concepts/context/mcp)
+* [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp)
 * [Extend Copilot Chat With MCP](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/extend-copilot-chat-with-mcp)
 * [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers)

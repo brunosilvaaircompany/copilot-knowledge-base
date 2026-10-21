@@ -29,7 +29,7 @@ Follow these best practices to get the most out of combining MCP servers with ag
 * **Provide context**: Include relevant background information about your project and requirements, including links to external resources that Copilot can access.
 * **Set boundaries**: Specify any constraints or limitations for the task. For example, if you want Copilot to only plan a new feature and not make any changes yet, specify that. You can also limit which MCP tools are enabled.
 * **Request confirmations**: Ask Copilot to confirm its understanding before proceeding with significant changes.
-* **Use prompt files or custom instructions**: You can create prompt files or custom instructions files to guide Copilot on how to behave for different MCP servers. See [Response Customization](https://docs.github.com/en/copilot/concepts/prompting/response-customization).
+* **Use prompt files or custom instructions**: You can create prompt files or custom instructions files to guide Copilot on how to behave for different MCP servers. See [Prompt Files](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-files) and [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions).
 
 ### MCP server use
 

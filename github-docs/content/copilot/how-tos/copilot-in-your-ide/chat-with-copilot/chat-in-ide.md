@@ -50,7 +50,7 @@ You can give the agent a high-level description of what you want to build and it
 
    ![Screenshot of the 'Copilot Chat' button, highlighted with a dark orange outline.](/assets/images/help/copilot/vsc-copilot-chat-icon.png)
 
-1. Enter a prompt in the prompt box. For an introduction to the kinds of prompts you can use, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+1. Enter a prompt in the prompt box. For an introduction to writing prompts including examples of the kinds of prompts you can use, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 
 1. Evaluate Copilot's response, and make a follow-up request if needed.
 
@@ -60,7 +60,7 @@ You can give the agent a high-level description of what you want to build and it
 
 ## Using keywords in your prompt
 
-You can use special keywords to help Copilot understand your prompt. For examples, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+You can use special keywords to help Copilot understand your prompt. See [Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/chat-cheat-sheet).
 
 ### Chat participants
 
@@ -99,7 +99,7 @@ You can generate a list of currently available skills by asking Copilot: `@githu
 
 ## Using Model Context Protocol (MCP) servers
 
-You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 
 ## AI models for Copilot Chat
@@ -162,7 +162,7 @@ To leave feedback about the GitHub Copilot Chat extension, open an issue in the 
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Using Copilot Chat in VS Code](https://code.visualstudio.com/docs/copilot/copilot-chat) in the Visual Studio Code documentation
 * [Manage And Track Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents)
 * [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github)
@@ -214,7 +214,7 @@ To use ask mode, select **Ask** from the mode dropdown at the bottom of the chat
 You can ask Copilot Chat to give you code suggestions, explain code, generate unit tests, and suggest code fixes.
 
 1. In the Visual Studio menu bar, click **View**, then click **GitHub Copilot Chat**.
-1. In the Copilot Chat window, enter a prompt, then press **Enter**. For example prompts, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+1. In the Copilot Chat window, enter a prompt, then press **Enter**. For example prompts, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 1. Evaluate Copilot's response, and submit a follow up prompt if needed.
 
    The response often includes interactive elements. For example, the response may include buttons to copy, insert, or preview the result of a code block.
@@ -250,7 +250,7 @@ You can generate a list of currently available skills by asking Copilot: `@githu
 
 ## Using Model Context Protocol (MCP) servers
 
-You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 
 ## AI models for Copilot Chat
@@ -317,7 +317,7 @@ To share feedback about Copilot Chat, you can use the **Send feedback** button i
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Using GitHub Copilot Chat in Visual Studio in the Microsoft Learn documentation](https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-chat?view=vs-2022#use-copilot-chat-in-visual-studio)
 * [Tips to improve GitHub Copilot Chat results in the Microsoft Learn documentation](https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context?view=vs-2022)
 * [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github)
@@ -408,7 +408,7 @@ You can ask Copilot Chat to give you code suggestions, explain code, generate un
 
    ![Screenshot of the GitHub Copilot Chat icon in the Activity Bar.](/assets/images/help/copilot/jetbrains-copilot-chat-icon.png)
 
-1. Enter a prompt in the prompt box. For example prompts, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+1. Enter a prompt in the prompt box. For an introduction to writing prompts including examples of the kinds of prompts you can use, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 
 1. Evaluate Copilot's response, and submit a follow up prompt if needed.
 
@@ -443,7 +443,7 @@ You can generate a list of currently available skills by asking Copilot: `@githu
 
 ## Using Model Context Protocol (MCP) servers
 
-You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 
 ## AI models for Copilot Chat
@@ -470,7 +470,7 @@ To share feedback about Copilot Chat, you can use the **share feedback** link in
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github)
 * [Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 * [GitHub Pre Release License Terms](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-pre-release-license-terms)
@@ -509,7 +509,7 @@ You can ask Copilot Chat to give you code suggestions, explain code, generate un
 
 1. To open the chat window, click **Editor** in the menu bar, then click **GitHub Copilot** then **Open Chat**. Copilot Chat opens in a new window.
 
-1. Enter a prompt in the prompt box. For example prompts, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+1. Enter a prompt in the prompt box. For an introduction to writing prompts including examples of the kinds of prompts you can use, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 
 1. Evaluate Copilot's response, and submit a follow up prompt if needed.
 
@@ -519,7 +519,7 @@ You can ask Copilot Chat to give you code suggestions, explain code, generate un
 
 ## Using Model Context Protocol (MCP) servers
 
-You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 
 ## AI models for Copilot Chat
@@ -550,7 +550,7 @@ To indicate whether a response was helpful, use {% octicon "thumbsup" aria-label
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github)
 * [Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 * [GitHub Pre Release License Terms](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-pre-release-license-terms)
@@ -594,13 +594,13 @@ You can ask Copilot Chat to give you code suggestions, explain code, generate un
 
 1. Enter a prompt in the prompt box, then press <kbd>Enter</kbd>.
 
-   For an introduction to the kinds of prompts you can use, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+    For an introduction to writing prompts including examples of the kinds of prompts you can use, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 
 1. Evaluate Copilot's response, and make a follow up request if needed.
 
 ## Using keywords in your prompt
 
-You can use special keywords to help Copilot understand your prompt. For examples, see [Get Started With Chat In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/get-started-with-chat-in-your-ide).
+You can use special keywords to help Copilot understand your prompt. See [Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/chat-cheat-sheet).
 
 ### Slash commands
 
@@ -610,7 +610,7 @@ To see all available slash commands, type `/` in the chat prompt box.
 
 ## Using Model Context Protocol (MCP) servers
 
-You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+You can use MCP to extend the capabilities of Copilot Chat by integrating it with a wide range of existing tools and services. For additional information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 
 ## AI models for Copilot Chat
@@ -619,7 +619,7 @@ You can change the model Copilot uses to generate responses. You may find that d
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Chat In GitHub](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-github)
 * [Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 * [GitHub Terms For Additional Products And Features](https://docs.github.com/en/free-pro-team@latest/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot)

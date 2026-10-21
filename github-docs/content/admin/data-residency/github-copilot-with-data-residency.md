@@ -68,13 +68,9 @@ Users will be able to see available models for your region in the model selector
 
 * GPT-4o mini
 * GPT-4.1
-* GPT-5 mini
 * GPT-5.2
 * GPT-5.3-Codex
-* GPT-5.4
-* GPT-5.4 mini
 * GPT-5.4 nano
-* GPT-5.5
 * GPT-5.6 Luna
 * GPT-5.6 Sol
 * GPT-5.6 Terra

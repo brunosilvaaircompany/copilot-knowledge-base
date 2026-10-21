@@ -61,7 +61,7 @@ Use the agent picker dropdown in the prompt box to select a custom agent before 
 
 Alternatively, type `/agent` in the prompt box to choose and invoke a custom agent.
 
-For more information, see [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
+For more information, see [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents).
 
 ## Adding plugins
 

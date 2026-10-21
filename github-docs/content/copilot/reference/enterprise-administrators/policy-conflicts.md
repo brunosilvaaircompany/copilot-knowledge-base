@@ -21,7 +21,7 @@ Feature, model, and privacy settings for users are set according to the **least 
 | Policy | Availability matches | More information |
 | :---- | :---- | :---- |
 | Copilot Metrics API | Most restrictive organization | [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics) |
-| Semantic indexing for non-GitHub repositories | Most restrictive organization (only available when all organizations explicitly set **Enabled**; **Unconfigured** behaves as disabled) | [Repository Indexing](https://docs.github.com/en/copilot/concepts/context/repository-indexing) |
+| Semantic indexing for non-GitHub repositories | Most restrictive organization (only available when all organizations explicitly set **Enabled**; **Unconfigured** behaves as disabled) | [Repository Indexing](https://docs.github.com/en/copilot/concepts/prompting-and-context/repository-indexing) |
 | Suggestions matching public code (privacy policy) | Most restrictive organization | [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions) |
 | Allow members without a Copilot license to use Copilot code review in GitHub.com | Most restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | Copilot can search the web | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |

@@ -6,16 +6,16 @@ Custom agents allow you to tailor Copilot's expertise for specific tasks.
 
 When you prompt Copilot to carry out a task it may choose to use one of your custom agents, if Copilot determines that the agent's expertise is a good fit for the task.
 
-Work performed by a custom agent is carried out using a subagent, which is a temporary agent spun up to complete the task. The subagent has its own context window, which can be populated by information that is not relevant to the main agent. In this way, especially for larger tasks, parts of the work can be offloaded to custom agents, without cluttering the main agent's context window. The main agent can then focus on higher-level planning and coordination.
+When the main agent delegates work to a custom agent, that work is carried out by a subagent with its own context window. This lets the specialist focus on its assigned task without cluttering the main agent's context. You can also select a custom agent for the session directly.
 
-For more information, see [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents).
+For more information, see [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents).
 
 ## Creating a custom agent
 
 Each custom agent is defined by a Markdown file with an `.agent.md` extension. You can create these files yourself, or you can add them from within the CLI, as described in the following steps.
 
 1. In interactive mode, enter `/agent`.
-1. Select **Create new agent** from the list of options.
+1. Press <kbd>N</kbd> to create a new agent.
 1. Choose between the options to create the custom agent in the repository or in your home directory:
 
    * **Project** (`.github/agents/`)
@@ -84,7 +84,7 @@ Custom agents can be used in the following ways:
   Enter `/agent` in interactive mode and choose from the list of available custom agents. Then enter a prompt that will be passed to the selected agent.
 
   > [!NOTE]
-  > The CLI's default agents are not included in this list. For more information about the default agents, see [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#built-in-agents).
+  > The CLI's default agents are not included in this list. For more information about the default agents, see [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents#built-in-agents).
 
 * **Explicit instruction**
 
@@ -146,7 +146,7 @@ For more information, including how this setting interacts with the `--no-custom
 
 ## Further reading
 
-* [Comparing CLI Features](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/comparing-cli-features)
+* [Comparing Customizations](https://docs.github.com/en/copilot/concepts/customizations/comparing-customizations)
 * [Custom Agents Configuration](https://docs.github.com/en/copilot/reference/custom-agents-configuration)
 * [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#custom-agents-reference)
 * [Custom Agents](https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents)—a curated collection of examples

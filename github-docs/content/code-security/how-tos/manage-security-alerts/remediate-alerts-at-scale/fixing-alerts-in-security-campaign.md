@@ -58,4 +58,4 @@ For more information about reviewing the session and pull request, see [Resolve 
 If you have access to Copilot Chat then you can ask the AI questions about the vulnerability, the suggested fix, and how to test that the fix is comprehensive.
 
 > [!TIP]
-> Copilot's ability to answer natural language questions like these in a repository context is optimized when the semantic code search index for the repository is up to date. For more information, see [Repository Indexing](https://docs.github.com/en/copilot/concepts/context/repository-indexing).
+> Copilot's ability to answer natural language questions like these in a repository context is optimized when the semantic code search index for the repository is up to date. For more information, see [Repository Indexing](https://docs.github.com/en/copilot/concepts/prompting-and-context/repository-indexing).

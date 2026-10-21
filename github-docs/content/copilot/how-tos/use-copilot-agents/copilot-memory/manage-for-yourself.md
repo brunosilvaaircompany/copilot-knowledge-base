@@ -2,7 +2,7 @@
 
 > [!NOTE] This feature is currently in public preview and is subject to change.
 
-Copilot Memory lets Copilot learn about your codebase and your personal preferences, helping Copilot agents work more effectively. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
+Copilot Memory lets Copilot learn about your codebase and your personal preferences, helping Copilot agents work more effectively. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
 
 
 Copilot Memory is enabled for your account by default if:

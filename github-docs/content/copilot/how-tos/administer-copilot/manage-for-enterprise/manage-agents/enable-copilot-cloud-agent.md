@@ -25,7 +25,7 @@ Copilot cloud agent and use of third-party MCP servers are disabled by default. 
 
 ## Enabling MCP servers
 
-Copilot cloud agent automatically has access to a small number of default MCP servers. See [MCP And Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/mcp-and-cloud-agent#default-mcp-servers).
+Copilot cloud agent automatically has access to a small number of default MCP servers. See [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp#default-mcp-servers).
 
 You can enable third-party MCP servers to allow developers to integrate Copilot cloud agent with other services in your DevOps toolchain, such as error-tracking platforms or logging systems.
 

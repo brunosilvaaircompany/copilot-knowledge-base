@@ -42,7 +42,7 @@ The Model Context Protocol (MCP) allows you to add external tools and data sourc
 * Book tickets online
 * Integrate with a calendar application
 
-For more information, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+For more information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 ## Plugins
 

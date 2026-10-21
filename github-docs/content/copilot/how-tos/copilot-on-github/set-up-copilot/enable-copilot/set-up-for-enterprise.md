@@ -11,6 +11,10 @@
 * For **any other payment method and enterprises on GHE.com**, [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
 
 
+As an enterprise owner, contact [GitHub Support](https://support.github.com) if the enterprise **Licensing** page shows **Contact support to enable**, or if the **Copilot** card or **Manage** or **Enable** controls are missing. Also contact GitHub Support if activation remains unavailable after a trial expires, a plan change, or moving an organization into a new enterprise. Activation may need to be enabled for your enterprise first.
+
+After GitHub Support confirms the change, allow a short time for the change to propagate. Then return to the enterprise **Licensing** page and retry enabling Copilot.
+
 ## Set policies
 
 You will use enterprise policies to manage two aspects of governance:

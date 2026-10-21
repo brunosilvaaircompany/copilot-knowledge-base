@@ -111,5 +111,5 @@ The hybrid approach (option 4) is a balanced solution, offering fast access thro
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices)

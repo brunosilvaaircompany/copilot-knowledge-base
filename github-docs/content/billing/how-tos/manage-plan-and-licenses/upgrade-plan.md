@@ -70,9 +70,7 @@ As part of your upgrade to GitHub Enterprise Cloud, you set up an enterprise acc
 
 
 
-If you currently use GitHub Enterprise Cloud with a single organization, we encourage you to create an enterprise account.
-
-
+If you currently use GitHub Enterprise Cloud with a single organization, we encourage you to create an enterprise account. 
  See [Creating An Enterprise Account](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-your-enterprise-account/creating-an-enterprise-account) in the GitHub Enterprise Cloud documentation.
 
 >[!NOTE] If the organization has write permissions for GitHub Actions, you must manually set write permissions for the enterprise. For more information, see [Managing GitHub Actions Settings For A Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#managing-github-actions-permissions-for-your-repository). For more information about managing organization-level permissions for GitHub Actions, see [Disabling Or Limiting GitHub Actions For Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#managing-github-actions-permissions-for-your-organization).

@@ -323,4 +323,4 @@ Or:
 
 > Write a unit test for the refund logic in `refund.js`, following the structure in the existing test suite.
 
-For more information about using Copilot Spaces, see [Spaces](https://docs.github.com/en/copilot/concepts/context/spaces).
+For more information about using Copilot Spaces, see [Spaces](https://docs.github.com/en/copilot/concepts/prompting-and-context/spaces).

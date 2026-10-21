@@ -42,7 +42,7 @@ On GitHub.com, Copilot Chat and Copilot cloud agent can share context. When you 
 
 Copilot Chat can also answer questions about pull requests created by Copilot by pulling in the relevant agent session logs. You can ask what changed, what was validated, and why, without leaving the conversation.
 
-This context passing is scoped to the Copilot Chat and cloud agent sessions you are actively working with. It is distinct from Copilot Memory, which builds a longer-term, persistent understanding of your repositories and preferences across sessions. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
+This context passing is scoped to the Copilot Chat and cloud agent sessions you are actively working with. It is distinct from Copilot Memory, which builds a longer-term, persistent understanding of your repositories and preferences across sessions. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
 
 On GitHub.com, session logs show the work and tools used. Shared sessions and pull requests let teammates with repository access follow the work and review changes. Logs do not replace your own review and testing. See [Manage And Track Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents).
 

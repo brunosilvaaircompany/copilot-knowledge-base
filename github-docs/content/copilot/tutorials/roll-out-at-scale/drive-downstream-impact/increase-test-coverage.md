@@ -125,7 +125,7 @@ Developers **should not**:
 * [Write Tests](https://docs.github.com/en/copilot/tutorials/write-tests)
 * [How to generate unit tests with GitHub Copilot: Tips and examples](https://github.blog/ai-and-ml/github-copilot/how-to-generate-unit-tests-with-github-copilot-tips-and-examples/)
 * [GitHub Copilot is EVERYWHERE in Visual Studio](https://learn.microsoft.com/en-us/shows/github-copilot-for-visual-studio/github-copilot-is-everywhere-in-visual-studio-miniseries) (video content with a section on testing)
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model)
 
 ### Recommended features

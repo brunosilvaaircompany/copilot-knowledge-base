@@ -97,7 +97,14 @@ var client = new CopilotClient(new CopilotClientOptions()
 
 ### Log directory
 
-The CLI writes logs to a directory. You can specify a custom location:
+The SDK-managed out-of-process runtime writes redacted
+`process-<timestamp>-<pid>.log` files under the Copilot home's `logs` directory
+by default in `copilot-cli` mode. SDKs in `empty` mode do not set the logging
+opt-in, but an inherited setting can still enable it; session events remain
+available to `collectLogs`. An explicitly selected older CLI executable may
+ignore this setting. You can specify a custom log location with `--log-dir`;
+`collectLogs` searches the configured directory. In-process connections do
+not start a separate logging process.
 
 
 
@@ -116,13 +123,12 @@ const client = new CopilotClient({
 
 
 ```python
-# The Python SDK does not currently support passing extra CLI arguments.
-# Logs are written to the default location or can be configured via
-# the CLI when running in server mode.
-```
+from copilot import CopilotClient, RuntimeConnection
 
-> [!NOTE]
-> Python SDK logging configuration is limited. For advanced logging, run the CLI manually with `--log-dir` and connect via `RuntimeConnection.for_uri(...)`.
+client = CopilotClient(
+    connection=RuntimeConnection.for_stdio(args=["--log-dir", "/path/to/logs"])
+)
+```
 
 
 
@@ -157,9 +163,11 @@ var client = new CopilotClient(new CopilotClientOptions
 
 
 ```java
-// The Java SDK does not currently support passing extra CLI arguments.
-// For custom log directories, run the CLI manually with --log-dir
-// and connect via cliUrl.
+import com.github.copilot.CopilotClient;
+import com.github.copilot.rpc.CopilotClientOptions;
+
+var client = new CopilotClient(new CopilotClientOptions()
+    .setCliArgs(new String[] {"--log-dir", "/path/to/logs"}));
 ```
 
 
@@ -173,7 +181,7 @@ var client = new CopilotClient(new CopilotClientOptions
 
 **Solution:**
 
-1. Install the CLI: [Installation guide](/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+1. Install the CLI: [Installation guide](/copilot/how-tos/set-up/install-copilot-cli)
 
 1. Verify installation:
 
@@ -185,7 +193,7 @@ var client = new CopilotClient(new CopilotClientOptions
 
 
 
-#### JavaScript
+#### TypeScript
 
 
    ```typescript
@@ -256,7 +264,7 @@ var client = new CopilotClient(new CopilotClientOptions
 
 
 
-#### JavaScript
+#### TypeScript
 
 
    ```typescript

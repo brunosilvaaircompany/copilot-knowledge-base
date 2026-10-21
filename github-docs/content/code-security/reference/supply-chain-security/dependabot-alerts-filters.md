@@ -19,7 +19,7 @@ You can sort and filter Dependabot alerts by typing filters as `key:value` pairs
 | `manifest` | Displays alerts for the selected manifest | Use `manifest:webwolf/pom.xml` to show alerts on the pom.xml file of the webwolf application |
 | `package` | Displays alerts for the selected package | Use `package:django` to show alerts for django |
 |  |
-| `relationship` |  Displays alerts of the selected relationship status<br>Note that this filter is only available for ecosystems with transitive support.  | Use `relationship:direct` to show alerts for direct dependencies (marked with the `Direct` label). |
+| `relationship` |  Displays alerts of the selected relationship status<br>Note that this filter is only available for ecosystems with transitive support.  | Use `relationship:direct` to show alerts for direct dependencies (marked with the `Direct` label), or `relationship:transitive` to show alerts for transitive dependencies (marked with the `Transitive` label). |
 |  |
 | `resolution` | Displays alerts of the selected resolution status | Use `resolution:no-bandwidth` to show alerts previously parked due to lack of resources or time to fix them |
 | `repo` |  Displays alerts based on the repository they relate to<br>Note that this filter is only available for security overview. For more information, see [Security Overview](https://docs.github.com/en/code-security/concepts/security-at-scale/security-overview) | Use `repo:octocat-repo` to show alerts in the repository called `octocat-repo` |

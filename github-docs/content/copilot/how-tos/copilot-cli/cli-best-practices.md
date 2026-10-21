@@ -41,7 +41,7 @@ Avoid conflicting instructions. For example, this is a simple `.github/copilot-i
 > [!TIP]
 > Keep instructions concise and actionable. Lengthy instructions can dilute effectiveness.
 
-For more information, see [Response Customization?Tool=Webui](https://docs.github.com/en/copilot/concepts/prompting/response-customization?tool=webui).
+For more information, see [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions).
 
 ### Configure allowed tools
 

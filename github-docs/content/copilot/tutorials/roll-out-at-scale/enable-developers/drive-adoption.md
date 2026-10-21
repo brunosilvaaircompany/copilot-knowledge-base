@@ -61,7 +61,7 @@ You may choose to create internal onboarding materials to help teams get started
 GitHub documentation that you may want to feature in your onboarding materials includes:
 
 * [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices)
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Copilot App For Teams](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/enable-developers/copilot-app-for-teams)
 * [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/get-ide-code-suggestions)
 * [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide)

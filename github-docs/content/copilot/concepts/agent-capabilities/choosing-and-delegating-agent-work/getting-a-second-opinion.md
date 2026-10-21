@@ -102,4 +102,4 @@ When Copilot consults the rubber duck agent, it summarizes the resulting critiqu
 
 ## Further reading
 
-* [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#built-in-agents)
+* [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents#built-in-agents)

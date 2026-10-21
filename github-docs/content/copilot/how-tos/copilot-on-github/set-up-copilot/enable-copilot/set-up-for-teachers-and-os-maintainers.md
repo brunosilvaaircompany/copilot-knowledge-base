@@ -16,7 +16,7 @@ If you have been granted free access to Copilot as a verified student, teacher, 
 
 If you do not meet the previous criteria, you can do one of the following:
 
-* Subscribe to [Copilot Pro](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro), [Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro), or [Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max) for a paid plan with access to premium models.
+* Subscribe to [Copilot Pro](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro), [Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro-plus), or [Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max) for a paid plan with access to premium models.
 * Set up Copilot Free to get a limited experience of Copilot without a paid plan. See [Plans](https://docs.github.com/en/copilot/get-started/plans).
 
 ## Accessing Copilot Pro for free

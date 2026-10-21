@@ -1,6 +1,6 @@
 # Creating custom agents for Copilot cloud agent
 
-Custom agents allow you to tailor Copilot's expertise for specific tasks. For a conceptual overview of custom agents, see [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
+Custom agents allow you to tailor Copilot's expertise for specific tasks. For a conceptual overview of custom agents, see [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents).
 
 > [!NOTE]
 > Custom agents are in public preview for JetBrains IDEs, Eclipse, and Xcode, and subject to change.

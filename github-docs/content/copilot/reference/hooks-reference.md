@@ -920,4 +920,4 @@ Behavior depends on where you set the flag:
 * [Use Hooks](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-hooks)
 * [Hooks Reference](https://docs.github.com/en/copilot/reference/hooks-reference)
 * [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference)
-* [Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent)
+* [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)

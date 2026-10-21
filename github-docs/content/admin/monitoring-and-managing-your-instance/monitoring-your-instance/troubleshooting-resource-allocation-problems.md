@@ -11,7 +11,7 @@
 
 We recommend using the monitor dashboard to stay informed on your appliance's resource health and make decisions on how to fix high usage issues, such as the ones outlined on this page.
 
-For system-critical issues, and prior to making modifications to your appliance, we highly recommend contacting us by visiting [GitHub Enterprise Support](https://support.github.com) and including your support bundle. For more information, see [Providing Data To GitHub Support](https://docs.github.com/en/enterprise/{{ currentVersion}}/support/contacting-github-support/providing-data-to-github-support#creating-and-sharing-support-bundles).
+For system-critical issues, and prior to making modifications to your appliance, we highly recommend contacting us by visiting [GitHub Enterprise Support](https://support.github.com) and including your support bundle. For more information, see [Providing Data To GitHub Support](https://docs.github.com/en/support/contacting-github-support/providing-data-to-github-support#creating-and-sharing-support-bundles).
 
 ## High CPU usage
 

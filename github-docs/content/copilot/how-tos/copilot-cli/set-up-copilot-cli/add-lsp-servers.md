@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This article explains how to add LSP servers for Copilot CLI. For conceptual information about LSP servers, see [Lsp Servers](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/lsp-servers).
+This article explains how to add LSP servers for Copilot CLI. For conceptual information about LSP servers, see [Lsp Servers](https://docs.github.com/en/copilot/concepts/customizations/lsp-servers).
 
 Adding an LSP server for Copilot CLI is a two-step process:
 

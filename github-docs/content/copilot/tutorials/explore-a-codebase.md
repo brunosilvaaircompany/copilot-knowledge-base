@@ -118,7 +118,7 @@ Use Copilot to help you understand the purpose of a specific file or symbol in t
 
    > [!TIP]
    >
-   > Copilot's ability to answer natural language questions like these in a repository context is optimized when the semantic code search index for the repository is up to date. For more information, see [Repository Indexing](https://docs.github.com/en/copilot/concepts/context/repository-indexing).
+   > Copilot's ability to answer natural language questions like these in a repository context is optimized when the semantic code search index for the repository is up to date. For more information, see [Repository Indexing](https://docs.github.com/en/copilot/concepts/prompting-and-context/repository-indexing).
 
 
 ## Finding out about commits

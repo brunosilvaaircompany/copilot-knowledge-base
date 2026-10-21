@@ -61,7 +61,12 @@ Auto model selection may serve evaluation models to users on Copilot plans for i
 
 ### Discount for using auto model selection
 
-If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent.
+If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent. 
+
+
+> [!NOTE] 
+> If you are on the Copilot Max plan, you'll receive a 30% discount through October 28, 2026 while using auto model selection. 
+
 
 
 ## Auto model selection in Copilot

@@ -1,6 +1,6 @@
 # Support for different types of custom instructions
 
-This reference article provides details of which types of custom instructions are supported in various environments. For more information about the various types of custom instructions for GitHub Copilot, see [Response Customization](https://docs.github.com/en/copilot/concepts/prompting/response-customization).
+This reference article provides details of which types of custom instructions are supported in various environments. For more information about the various types of custom instructions for GitHub Copilot, see [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions).
 
 ## GitHub.com
 

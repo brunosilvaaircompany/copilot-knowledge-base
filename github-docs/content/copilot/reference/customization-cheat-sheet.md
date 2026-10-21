@@ -8,13 +8,13 @@ This table shows what each customization feature is and where it lives.
 
 | Feature | What it is | Filename and location |
 |---------|-----------|-------------------|
-| [Custom instructions](/copilot/concepts/prompting/response-customization) | Always-on context that automatically applies to every interaction within its defined scope | `.github/copilot-instructions.md` (repo-wide), `.github/instructions/*.instructions.md` (path-specific), `AGENTS.md` (third-party agents), or personal/org settings via UI on GitHub |
-| [Prompt files](/copilot/concepts/prompting/response-customization?tool=vscode#about-prompt-files) | Reusable, standalone prompt template with input variables | `.github/prompts/*.prompt.md` |
-| [Custom agents](/copilot/concepts/agents/cloud-agent/about-custom-agents) | Specialist persona with its own instructions, tool restrictions, and context | `.github/agents/AGENT-NAME.md` (repository), `/agents/AGENT-NAME.md` in the organization's `.github` or `.github-private` repository (org-level), `/agents/AGENT-NAME.md` in a designated `.github-private` repository (enterprise-level), or user profile |
+| [Custom instructions](/copilot/concepts/prompting-and-context/custom-instructions) | Always-on context that automatically applies to every interaction within its defined scope | `.github/copilot-instructions.md` (repo-wide), `.github/instructions/*.instructions.md` (path-specific), `AGENTS.md` (third-party agents), or personal/org settings via UI on GitHub |
+| [Prompt files](/copilot/concepts/prompting-and-context/prompt-files) | Reusable, standalone prompt template with input variables | `.github/prompts/*.prompt.md` |
+| [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents) | Specialist persona with its own instructions, tool restrictions, and context | `.github/agents/AGENT-NAME.md` (repository), `/agents/AGENT-NAME.md` in the organization's `.github` or `.github-private` repository (org-level), `/agents/AGENT-NAME.md` in a designated `.github-private` repository (enterprise-level), or user profile |
 | [Subagents](/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-subagents) | Separate agent spawned by the main agent to handle delegated work in an isolated context | N/A (runtime process, not a user-configured file) |
 | [Agent skills](/copilot/concepts/agents/about-agent-skills) | Folder of instructions, scripts, and resources that Copilot loads when relevant to a task | `.github/skills/<skill-name>/SKILL.md`, `.claude/skills/<skill-name>/SKILL.md`, or `.agents/skills/<skill-name>/SKILL.md` (project); `~/.copilot/skills/<skill-name>/SKILL.md` or `~/.agents/skills/<skill-name>/SKILL.md` (personal) |
 | [Hooks](/copilot/concepts/agents/hooks) | Custom shell commands that execute deterministically at specific points in an agent's workflow | `.github/hooks/*.json` |
-| [MCP servers](/copilot/concepts/context/mcp) | Connection to external systems, APIs, and databases | `mcp.json` (path varies by IDE), repository MCP settings on GitHub (applies to cloud agent and Copilot code review), or `mcp-servers` property in custom agent configurations |
+| [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp) | Connection to external systems, APIs, and databases | `mcp.json` (path varies by IDE), repository MCP settings on GitHub (applies to cloud agent and Copilot code review), or `mcp-servers` property in custom agent configurations |
 
 ## Usage comparison
 
@@ -22,13 +22,13 @@ This table helps you decide which customization feature to use.
 
 | Feature | How to trigger | Best for | Example use cases |
 |---------|---------------|-------------|-------------------|
-| [Custom instructions](/copilot/concepts/prompting/response-customization) | Automatic | Standards, guidelines, or expectations that apply broadly across a context | Enforce coding standards, accessibility rules, review checklists |
-| [Prompt files](/copilot/concepts/prompting/response-customization?tool=vscode#about-prompt-files) | Manual: reference directly in chat or use the prompt file picker | Focused single tasks you run once with different inputs each time | Generate unit tests, run a code review checklist |
-| [Custom agents](/copilot/concepts/agents/cloud-agent/about-custom-agents) | Manual: select from the agent dropdown in your IDE, on GitHub, or in Copilot CLI | Projects or processes with distinct stages that need specialized capabilities or strict handoffs | React reviewer agent, read-only auditing agent |
+| [Custom instructions](/copilot/concepts/prompting-and-context/custom-instructions) | Automatic | Standards, guidelines, or expectations that apply broadly across a context | Enforce coding standards, accessibility rules, review checklists |
+| [Prompt files](/copilot/concepts/prompting-and-context/prompt-files) | Manual: reference directly in chat or use the prompt file picker | Focused single tasks you run once with different inputs each time | Generate unit tests, run a code review checklist |
+| [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents) | Manual: select from the agent dropdown in your IDE, on GitHub, or in Copilot CLI | Projects or processes with distinct stages that need specialized capabilities or strict handoffs | React reviewer agent, read-only auditing agent |
 | [Subagents](/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-subagents) | Automatic, or reference a subagent directly in your prompt | Complex subtasks that should run in isolation from the main agent | Codebase research, running test suites |
 | [Agent skills](/copilot/concepts/agents/about-agent-skills) | Automatic: chosen by Copilot when relevant to your prompt | Multi-step workflows with bundled assets that should be loaded as needed | GitHub Actions failure debugging, deployment procedures, release note drafting |
 | [Hooks](/copilot/concepts/agents/hooks) | Automatic: at configured lifecycle events | Tasks that need to run at a specific point in the agent lifecycle, with guaranteed execution | Run a formatter after every file edit, approve or deny tool executions, prevent credential leaks with secret scanning |
-| [MCP servers](/copilot/concepts/context/mcp) | Automatic, or ask for a specific tool by name | Tasks that require access to external tools or real-time data | Manage issues and PRs (GitHub MCP server), automate browser testing (Playwright MCP server) |
+| [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp) | Automatic, or ask for a specific tool by name | Tasks that require access to external tools or real-time data | Manage issues and PRs (GitHub MCP server), automate browser testing (Playwright MCP server) |
 
 ## IDE and surface support
 

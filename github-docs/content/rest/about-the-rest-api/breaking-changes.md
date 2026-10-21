@@ -2016,6 +2016,12 @@ Version `2022-11-28` is the first version of the GitHub Enterprise Cloud REST AP
   </details>
 
 
+{% if query.apiVersion == nil or "2022-11-28" <= query.apiVersion %}
+## Version 2022-11-28
+
+Version `2022-11-28` is the first version of the GitHub Enterprise Server REST API after date-based versioning was introduced. This version does not include any breaking changes.
+
+{% endif %}
 {% endif %}
 
 
@@ -2687,6 +2693,39 @@ Version `2022-11-28` is the first version of the GitHub Enterprise Cloud REST AP
   - `POST /users/{username}/attestations/bulk-list`
 
   </details>
+
+
+{% if query.apiVersion == nil or "2022-11-28" <= query.apiVersion %}
+## Version 2022-11-28
+
+Version `2022-11-28` is the first version of the GitHub Enterprise Server REST API after date-based versioning was introduced. This version does not include any breaking changes.
+
+{% endif %}
+{% endif %}
+
+
+{% if query.apiVersion == nil or "2022-11-28" <= query.apiVersion %}
+## Version 2022-11-28
+
+Version `2022-11-28` is the first version of the GitHub Enterprise Server REST API after date-based versioning was introduced. This version does not include any breaking changes.
+
+
+{% endif %}
+
+
+{% if query.apiVersion == nil or "2022-11-28" <= query.apiVersion %}
+## Version 2022-11-28
+
+Version `2022-11-28` is the first version of the GitHub Enterprise Server REST API after date-based versioning was introduced. This version does not include any breaking changes.
+
+
+{% endif %}
+
+
+{% if query.apiVersion == nil or "2022-11-28" <= query.apiVersion %}
+## Version 2022-11-28
+
+Version `2022-11-28` is the first version of the GitHub Enterprise Server REST API after date-based versioning was introduced. This version does not include any breaking changes.
 
 
 {% endif %}

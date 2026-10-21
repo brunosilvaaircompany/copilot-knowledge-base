@@ -130,5 +130,5 @@ Copilot goes on to explain how to run the new file using Node.
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices)

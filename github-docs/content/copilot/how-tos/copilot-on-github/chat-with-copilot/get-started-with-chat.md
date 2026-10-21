@@ -50,10 +50,12 @@ Navigate to a failed workflow run, a pull request with a failing check, or paste
 
 ## Security alert questions
 
-Navigate to a code scanning, secret scanning, or Dependabot alert to ask about it.
+Navigate to a repository in your organization to ask Copilot about a security alert from GitHub Advanced Security features (code scanning, secret scanning, and Dependabot alerts). For example:
 
 * {% prompt %}How would I fix this alert?{% endprompt %}
 * {% prompt %}Which line of code is this alert referencing?{% endprompt %}
+* {% prompt %}How many alerts do I have on this pull request?{% endprompt %}
+* {% prompt %}What library is affected by this Dependabot alert?{% endprompt %}
 
 ## Issue, discussion, and commit questions
 

@@ -57,9 +57,7 @@ Enterprise accounts are a feature of GitHub Enterprise Cloud that allow owners t
 
 
 
-If you currently use GitHub Enterprise Cloud with a single organization, we encourage you to create an enterprise account.
-
-
+If you currently use GitHub Enterprise Cloud with a single organization, we encourage you to create an enterprise account. 
  For more information, see [Creating An Enterprise Account](https://docs.github.com/en/admin/managing-your-enterprise-account/creating-an-enterprise-account).
 
 Enterprise account owners can invite existing organization accounts to join their enterprise. For more information, see [Adding Organizations To Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-organizations-in-your-enterprise/adding-organizations-to-your-enterprise#inviting-an-existing-organization).

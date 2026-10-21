@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-You should understand what Copilot custom agents are and how they work. See [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
+You should understand what Copilot custom agents are and how they work. See [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents).
 
 > [!NOTE]
 > If your organization is part of an enterprise, enterprise owners can configure a ruleset that restricts custom agents. Contact your enterprise owners to check whether you can create and manage organization-level custom agents.

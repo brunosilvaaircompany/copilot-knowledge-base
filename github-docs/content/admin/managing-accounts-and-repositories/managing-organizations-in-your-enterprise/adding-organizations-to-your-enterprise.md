@@ -10,9 +10,7 @@ There are three ways to add organizations to your enterprise.
 
 
 
-If you currently use GitHub Enterprise Cloud with a single organization, we encourage you to create an enterprise account.
-
-
+If you currently use GitHub Enterprise Cloud with a single organization, we encourage you to create an enterprise account. 
  See [Creating An Enterprise Account](https://docs.github.com/en/admin/managing-your-enterprise-account/creating-an-enterprise-account).
 
 ## Limitations

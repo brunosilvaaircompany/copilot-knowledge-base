@@ -22,10 +22,8 @@ The following options are currently available:
 * Claude Sonnet 5.5
 * Claude Haiku 4.5
 * Claude Haiku 5.5
-* Gemini 3.7 Flash
 * Gemini 3.8 Flash
 * Gemini 4 Argon
-* GPT-5.4 mini
 * GPT-5.6 Luna
 * GPT-5.6 Sol
 * GPT-5.6 Terra

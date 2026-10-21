@@ -240,7 +240,7 @@ The more Copilot knows about the code in your repository, the tools you use, and
 
 ### Custom instructions
 
-These are short, natural-language statements that you write and store as one or more files in a repository. If you are the owner of an organization on GitHub, you can also define custom instructions in the settings for your organization. For more information, see [Response Customization?Tool=Webui](https://docs.github.com/en/copilot/concepts/prompting/response-customization?tool=webui#about-repository-custom-instructions).
+These are short, natural-language statements that you write and store as one or more files in a repository. If you are the owner of an organization on GitHub, you can also define custom instructions in the settings for your organization. For more information, see [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions#about-repository-custom-instructions).
 
 ### Choosing between custom instructions, AGENTS.md, and skills
 
@@ -259,7 +259,7 @@ For more information, see [Add Skills](https://docs.github.com/en/copilot/how-to
 
 ### Copilot Memory (public preview)
 
-If you have a Copilot Pro, Copilot Pro+, or Copilot Max plan, you can enable Copilot Memory. This allows Copilot to store useful details it has learned about a repository. Copilot can then use this information when it reviews pull requests in that repository. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
+If you have a Copilot Pro, Copilot Pro+, or Copilot Max plan, you can enable Copilot Memory. This allows Copilot to store useful details it has learned about a repository. Copilot can then use this information when it reviews pull requests in that repository. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
 
 ## Getting detailed code quality feedback across your repository
 

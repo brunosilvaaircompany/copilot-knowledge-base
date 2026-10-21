@@ -10,7 +10,7 @@
 
 Custom agents are specialized versions of Copilot cloud agent that maintain consistent expertise across entire workflows. Unlike custom instructions that apply broadly, or prompt files for one-time tasks, custom agents are selected for specific tasks and maintain their configuration throughout the workflow.
 
-For a more in-depth overview, see [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents).
+For a more in-depth overview, see [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents).
 
 ## Your first custom agent
 
@@ -77,6 +77,6 @@ The agent task will appear on the page below the text box. The agent will focus 
 
 ## Further reading
 
-* [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents)
+* [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents)
 * [Create Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents)
 * [Custom Agents Configuration](https://docs.github.com/en/copilot/reference/custom-agents-configuration)

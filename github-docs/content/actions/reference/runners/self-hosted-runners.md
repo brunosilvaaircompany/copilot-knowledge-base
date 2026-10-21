@@ -39,7 +39,6 @@ You can use a machine as a self-hosted runner as long as it meets these requirem
 
 * `x64` - Linux, macOS, Windows.
 * `ARM64` - Linux, macOS, Windows (currently in public preview).
-* `ARM32` - Linux.
 
 ## Routing precedence for self-hosted runners
 

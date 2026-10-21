@@ -69,6 +69,6 @@ The agent task will appear on the page below the text box. You can click into th
 
 ## Further reading
 
-* [About Custom Agents](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents)
+* [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents)
 * [Create Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents)
 * [Custom Agents Configuration](https://docs.github.com/en/copilot/reference/custom-agents-configuration)

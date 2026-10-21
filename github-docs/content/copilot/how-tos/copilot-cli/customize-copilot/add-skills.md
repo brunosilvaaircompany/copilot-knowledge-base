@@ -155,4 +155,4 @@ We recommend using **custom instructions** for simple instructions relevant to a
 To learn more about repository custom instructions, see [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions).
 
 
-To learn more about how skills differ from other customization features, see [Comparing CLI Features](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/comparing-cli-features).
+To learn more about how skills differ from other customization features, see [Comparing Customizations](https://docs.github.com/en/copilot/concepts/customizations/comparing-customizations).

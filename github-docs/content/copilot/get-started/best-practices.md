@@ -43,7 +43,7 @@ Prompt engineering, or structuring your request so Copilot can easily understand
 * Provide examples of things like input data, outputs, and implementations.
 * Follow good coding practices.
 
-To learn more, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering).
+To learn more, see [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 
 ## Check Copilot's work
 

@@ -68,8 +68,6 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | Claude Fable 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Fable 5.1 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.3-Codex | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| GPT-5.4 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| GPT-5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Terra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -106,13 +104,9 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 
 | Model                                                    | Visual Studio Code | Visual Studio | JetBrains IDEs | Xcode | Eclipse |
 |----------------------------------------------------------|----------------------------------------------|------------------------------------------|----------------|-------|---------|
-| Gemini 3.7 Flash     | `v1.128.0` | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 3.8 Flash     | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 4 Argon      | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
-| GPT-5.4              | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
-| GPT-5.4 mini         | `v1.104.1` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
-| GPT-5.5              | `v1.117` | `17.14.19`                     | `1.5.66` | `0.47.0` | `0.15.0` |
 | GPT-5.6 Luna         | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Sol          | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Terra        | `1.128.0` | TBD | TBD | TBD | TBD |

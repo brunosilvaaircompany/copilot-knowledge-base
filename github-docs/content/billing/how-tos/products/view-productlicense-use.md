@@ -71,6 +71,8 @@ You can use the view to answer questions such as:
 
 For information about Copilot allowances and how AI credits are pooled across your enterprise, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
+App attribution is not available in the **AI usage** view. To identify usage from a GitHub App installed on an organization, download an AI usage report. Use the “List app installations for an organization” REST API endpoint and match `app_client_id` in the report to `client_id` in the response. The response’s `app_slug` identifies the app, and `id` identifies the installation. See [Orgs](https://docs.github.com/en/rest/orgs/orgs#list-app-installations-for-an-organization). For report field definitions, see [Billing Reports](https://docs.github.com/en/billing/reference/billing-reports#usage-report-fields).
+
 For information about Advanced Security AI-credit billing, see [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#how-ai-feature-usage-is-billed).
 
 

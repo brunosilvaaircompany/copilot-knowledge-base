@@ -39,7 +39,7 @@ function displayName(name) {
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices)
 
 * [Code Scanning](https://docs.github.com/en/code-security/concepts/code-scanning/code-scanning)

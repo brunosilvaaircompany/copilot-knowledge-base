@@ -25,7 +25,6 @@ Use these models for common development tasks that require a balance of quality,
 | Model                                             | Why it's a good fit                                                                                                                             |
 |---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | GPT-5.3-Codex | Delivers higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews without lengthy instructions. |
-| GPT-5 mini   | Reliable default for most coding and writing tasks. Fast, accurate, and works well across languages and frameworks.                             |
 | GPT-5.6 Terra | Balanced all-round choice for everyday interactive and agentic coding.                                                                          |
 
 ### When to use these models
@@ -74,8 +73,6 @@ These models are designed for tasks that require step-by-step reasoning, complex
 
 | Model                                                 | Why it's a good fit                                                                                                                                             |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GPT-5 mini       | Delivers deep reasoning and debugging with faster responses and lower resource usage than GPT-5. Ideal for interactive sessions and step-by-step code analysis. |
-| GPT-5.5           | Great at complex reasoning, code analysis, and technical decision-making.                                                                                       |
 | GPT-5.6 Sol       | The highest reasoning ceiling in the GPT-5.6 family. Best for complex reasoning over large codebases and demanding, long-running agentic work. |
 | Claude Sonnet 4.6 | Reliable completions and smarter reasoning under pressure.                                                                     |
 
@@ -100,7 +97,7 @@ Use these models when you want to ask questions about screenshots, diagrams, UI 
 
 | Model                                                 | Why it's a good fit                                                                                                                                                       |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GPT-5 mini       | Reliable default for most coding and writing tasks. Fast, accurate, and supports multimodal input for visual reasoning tasks. Works well across languages and frameworks. |
+| GPT-5.6 Luna      | Quick, cost-efficient responses for smaller coding tasks, and supports multimodal input for visual reasoning tasks. |
 | Claude Sonnet 4.6 | Reliable completions and smarter reasoning under pressure.                                                                               |
 
 ### When to use these models
@@ -132,7 +129,7 @@ Kimi K3 is designed for long-context, multi-step coding and agentic workflows. F
 
 [^kimi-k3]: For important information about Kimi K3 behavior and safeguards, see [Model-specific considerations](#kimi-k3).
 
-Choosing the right model helps you get the most out of Copilot. If you're not sure which model to use, start with a general-purpose option like GPT-5 mini, then adjust based on your needs.
+Choosing the right model helps you get the most out of Copilot. If you're not sure which model to use, start with a general-purpose option like GPT-5.6 Terra, then adjust based on your needs.
 
 * For detailed model specs and pricing, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
 * To switch between models, refer to [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model) or [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/change-the-completion-model).

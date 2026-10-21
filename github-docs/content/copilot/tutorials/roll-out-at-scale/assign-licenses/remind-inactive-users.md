@@ -23,7 +23,7 @@ In the next section, we'll use this message in an automation that creates an iss
 > We noticed you haven't used your assigned license for GitHub Copilot in 30 days. Here are some resources that might help you get started:
 >
 > * If you haven't yet set up Copilot in your environment, see [Where To Use GitHub Copilot](https://docs.github.com/en/copilot/get-started/where-to-use-github-copilot) or [Troubleshoot Common Issues](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues).
-> * For best practices and advice on getting started, see [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices) or [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering).
+> * For best practices and advice on getting started, see [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices) or [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering).
 > * For examples related to specific tasks, see [Copilot Cookbook](https://docs.github.com/en/copilot/tutorials/copilot-cookbook).
 >
 > If you no longer need access to Copilot, please let us know in this issue. If your license remains inactive for a further 30 days, we'll revoke it to free up access for another user.

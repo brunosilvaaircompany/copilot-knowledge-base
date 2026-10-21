@@ -2,7 +2,7 @@
 
 > [!NOTE] This feature is currently in public preview and is subject to change.
 
-Copilot Memory lets Copilot learn about your codebase and your personal preferences, helping Copilot agents work more effectively. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
+Copilot Memory lets Copilot learn about your codebase and your personal preferences, helping Copilot agents work more effectively. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
 
 
 ## Enabling Copilot Memory
@@ -64,7 +64,7 @@ As an administrator of a repository in which Copilot Memory is in use, you can r
 
 ## Managing user-level preferences for an organization
 
-As an administrator, you can export or delete all user-level preferences that were generated with your organization as the active billing entity. For more information on the ownership model, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory#user-level-preferences).
+As an administrator, you can export or delete all user-level preferences that were generated with your organization as the active billing entity. For more information on the ownership model, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory#user-level-preferences).
 
 ### Exporting user-level preferences
 
@@ -105,7 +105,7 @@ You can delete user-level preferences in bulk or for individual users.
 
 ## Managing user-level preferences for an enterprise
 
-As an administrator, you can export or delete all user-level preferences that were generated with your enterprise as the active billing entity. For more information on the ownership model, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory#user-level-preferences).
+As an administrator, you can export or delete all user-level preferences that were generated with your enterprise as the active billing entity. For more information on the ownership model, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory#user-level-preferences).
 
 ### Exporting user-level preferences
 

@@ -32,3 +32,12 @@ If you see restrictions on your account, complete the following steps to secure 
 1. Check your inbox (and spam folder) for security emails from GitHub and follow any instructions.
 
 If restrictions remain after you secure your account, contact GitHub Support.
+
+#### If an attacker changed your sign-in settings
+
+If you own a personal account and can't sign in because an attacker changed your password, email address, or two-factor authentication settings, complete the following steps. If you lost access to your own two-factor authentication credentials, see [Recovering Your Account If You Lose Your 2Fa Credentials](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials).
+
+1. Secure the email account associated with GitHub and make sure you can access it.
+1. Contact GitHub Support.
+
+During its review, GitHub Support may temporarily suspend your account. GitHub Support may remove authentication settings changed by the attacker and send you a password-reset link that expires after 24 hours. After you regain access, complete the steps at the beginning of this article to secure your account.

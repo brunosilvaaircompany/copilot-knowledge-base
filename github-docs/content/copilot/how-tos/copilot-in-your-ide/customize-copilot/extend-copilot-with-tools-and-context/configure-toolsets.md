@@ -7,7 +7,7 @@ The GitHub MCP server includes default toolsets (`repos`, `issues`, and `pull_re
 * **Accessing remote-only toolsets** such as `copilot` (for Copilot cloud agent) and `github_support_docs_search`, which are only available on the remote MCP server
 * **Selecting specific tools** for granular control when you want to exclude specific tools or combine toolsets with individual tools
 
-For a complete list of available toolsets, see [Tools](https://github.com/github/github-mcp-server/blob/main/README.md#tools) in the `github/github-mcp-server` repository. For configuration examples, see [Server configuration](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md). For a full introduction to the GitHub MCP server and an overview of MCP, see [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
+For a complete list of available toolsets, see [Tools](https://github.com/github/github-mcp-server/blob/main/README.md#tools) in the `github/github-mcp-server` repository. For configuration examples, see [Server configuration](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md). For a full introduction to the GitHub MCP server and an overview of MCP, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
 ## Configuring toolsets for the remote MCP server
 

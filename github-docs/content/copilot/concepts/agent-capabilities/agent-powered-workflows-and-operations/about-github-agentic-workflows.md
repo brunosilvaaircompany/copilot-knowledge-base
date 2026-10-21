@@ -6,7 +6,7 @@
 
 ## About agentic workflows
 
-GitHub Agentic Workflows are AI-powered repository automations that you define in markdown and run as GitHub Actions workflows. Unlike traditional automation with fixed if-then rules, agentic workflows use coding agents to understand context, make decisions, and take meaningful actions—all from natural language instructions.
+GitHub Agentic Workflows are AI-powered repository automations that you define in markdown and run as GitHub Actions workflows. Unlike traditional automation with fixed if-then rules, agentic workflows use coding agents to understand context, evaluate decisions, and propose meaningful actions—all from natural language instructions.
 
 In practice, compared with traditional workflows that execute predefined steps:
 
@@ -25,7 +25,7 @@ With agentic workflows, you can automate tasks like:
 
 * **Automate repetitive repository work**. Define issue triage, CI investigation, documentation updates, and reporting in natural language.
 * **Reduce workflow complexity**. Write markdown instructions instead of building complex procedural scripts for every scenario.
-* **Keep human review in the loop**. Agentic workflows can generate ready-to-review outputs, such as issues, comments, and pull requests, while you control approvals and merges.
+* **Keep human review in the loop**. Agentic workflows can generate reviewable outputs, such as issues, comments, and pull requests, while you control approvals and merges.
 * **Run agents with layered security**. Agents run in firewalled containers with read-only tokens by default. Write actions are limited to declared "safe outputs" that you have defined, and checked by agentic threat detection.
 
 ## Requirements
@@ -46,7 +46,7 @@ Each workflow markdown file has two parts:
 At a high level, the process to create and use agentic workflows is:
 
 1. Define the agentic workflow `.md` file, including YAML frontmatter and markdown instructions.
-1. Compile the markdown workflow file into a hardened `.lock.yml` GitHub Actions workflow file.
+1. Compile the markdown workflow file into a `.lock.yml` GitHub Actions workflow file.
 1. Commit and push both files to the default branch of your repository.
 1. Run the workflow like any other GitHub Actions workflow, on a trigger or in the GitHub web interface for your repository. You can also run it from the GitHub CLI.
 

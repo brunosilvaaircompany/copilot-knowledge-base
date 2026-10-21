@@ -64,7 +64,6 @@ The OpenAI Codex coding agent and the VS Code OpenAI Codex integration use the C
 
 * Auto
 * GPT-5.3-Codex
-* GPT-5.4
 * GPT-5.4 nano
 
 

@@ -68,7 +68,7 @@ Rulesets offer more flexible ways to manage and understand protections:
 * Anyone with read access to a repository can view its active rulesets. This helps developers understand which rules apply and allows auditors to review protections without administrator access.
 * Rulesets can also control commit metadata, such as commit messages and author email addresses. For more information, see [Available Rules For Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets)."
 
-To convert an existing branch protection rule to rulesets, see [Converting Branch Protections To Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/converting-branch-protections-to-rulesets).
+To convert branch protection rules to rulesets, see [Converting Branch Protections To Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/converting-branch-protections-to-rulesets).
 
 
 ## Using ruleset enforcement statuses

@@ -4,6 +4,8 @@
 
 When you migrate repositories to or from GitHub products, your origin and destination repositories may be “locked” for migration. While a repository is locked, you cannot make any changes to the repository, such as pushing commits, creating issues, or commenting on pull requests.
 
+While a repository is locked, webhooks are not delivered for any events in the repository.
+
 Whether your repositories will be locked during migration depends on the tooling you use and the options you choose when you run the migration. When a repository is locked, a banner with the following text is displayed on the repository's page on GitHub:
 
 > This repository is currently being migrated. It's locked while the migration is in progress.

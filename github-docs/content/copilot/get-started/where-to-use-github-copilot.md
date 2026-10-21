@@ -57,8 +57,8 @@ Your choices hold across the workflow, including:
 
 * **Which model**: Different models suit different kinds of work, and you can switch models for chat and agents. See [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model).
 * **Which agents**: Copilot agents and agents from other providers work in the same repositories, open pull requests, and go through review. Copilot applies the same security protections, mitigations, and limitations to third-party agents as it does to Copilot cloud agent. See [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) and [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents).
-* **What Copilot can see**: Custom instructions, agent skills, and MCP servers connect Copilot to your conventions and to the tools your team uses. See [MCP](https://docs.github.com/en/copilot/concepts/context/mcp).
-* **What Copilot remembers**: For supported features, Copilot Memory can reuse repository facts and your preferences in later work. See [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory).
+* **What Copilot can see**: Custom instructions, agent skills, and MCP servers connect Copilot to your conventions and to the tools your team uses. See [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
+* **What Copilot remembers**: For supported features, Copilot Memory can reuse repository facts and your preferences in later work. See [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
 
 For organizations, administrator policies apply across most surfaces developers use. See [Administer Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot).
 

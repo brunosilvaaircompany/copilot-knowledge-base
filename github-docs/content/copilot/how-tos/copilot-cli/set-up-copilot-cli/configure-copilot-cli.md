@@ -4,7 +4,7 @@
 
 Copilot CLI has several configuration options that control what it can access and do on your behalf.
 
-This article shows you how to set trusted directories, configure access for tools, and grant permissions to file paths and URLs.
+This article shows you how to set trusted directories, configure access for tools, grant permissions to file paths and URLs, and disable client-side telemetry.
 
 ### Prerequisites
 
@@ -40,7 +40,7 @@ You can edit the list of permanently trusted directories. Trusted directories ar
 
 ## Setting allowed tools
 
-You can control which tools Copilot CLI can use, either by responding to approval prompts when Copilot attempts to use a tool, or by specifying permissions via command-line flags.
+You can control which tools Copilot CLI can use, either by responding to approval prompts when Copilot attempts to use a tool, or by specifying permissions via command-line options.
 
 Be aware that allowing tool access has security implications, see [Security considerations](/copilot/concepts/copilot-surfaces/copilot-cli#security-considerations).
 
@@ -81,7 +81,7 @@ The first time that Copilot needs to use a tool that may require approval—for 
 
 ### Allowing tools to be used without manual approval
 
-You can use command-line flags to designate tools that Copilot can use without asking for your approval.
+You can use command-line options to designate tools that Copilot can use without asking for your approval.
 
 #### Allowing all tools
 
@@ -210,7 +210,7 @@ Path permissions apply to shell commands, file operations (create, edit, view), 
 
 ### Allowing access to all paths
 
-To disable path verification and allow access to any path, use the `--allow-all-paths` flag when starting Copilot CLI.
+To disable path verification and allow access to any path, use the `--allow-all-paths` option when starting Copilot CLI.
 
 ### Disallowing access to the temp directory
 
@@ -233,7 +233,7 @@ URL permissions can be persisted for the session or permanently.
 
 ### Disabling URL verification
 
-To disable URL verification, use the `--allow-all-urls` flag.
+To disable URL verification, use the `--allow-all-urls` option.
 
 ### Pre-approving specific domains
 
@@ -251,7 +251,7 @@ To deny specific domains, use `--deny-url=DOMAIN`.
 
 To allow all tools, paths and URLs, use `--allow-all`, or its alias, `--yolo`.
 
-This flag combines:
+This option combines:
 * `--allow-all-tools` (skip tool approval).
 * `--allow-all-paths` (disable path verification).
 * `--allow-all-urls` (disables URL verification).
@@ -266,6 +266,21 @@ During an interactive session, you can also enable all permissions with the `/al
 The various `--allow-all...` options save you from having to decide whether to allow Copilot to access individual tools, files, and URLs. However, using them widens the scope for Copilot to perform actions that you might not want it to—for example, altering files outside of the repository you are working in.
 
 To mitigate this risk, you can instruct the CLI to sandbox its commands (local sandboxing), or you can run the entire Copilot CLI session within a remote, sandboxed environment (cloud sandboxing). For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
+
+## Disabling client-side telemetry
+
+To disable first-party client-side telemetry for the current invocation, start Copilot CLI with the `--disable-client-telemetry` option:
+
+```shell
+copilot --disable-client-telemetry
+```
+
+This option disables first-party telemetry sent by the CLI, including unrestricted and restricted telemetry. It is not saved in your configuration.
+
+The option does not disable GitHub's server-side collection of session data or telemetry. It also does not affect:
+
+* OpenTelemetry exports configured by you or your enterprise.
+* Telemetry sent to an application that uses the GitHub Copilot SDK, when that application explicitly enables telemetry forwarding as it connects to the CLI.
 
 ## Further reading
 

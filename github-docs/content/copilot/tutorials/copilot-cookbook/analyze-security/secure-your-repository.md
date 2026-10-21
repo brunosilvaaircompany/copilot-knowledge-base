@@ -107,5 +107,5 @@ We are committed to working with security researchers and the community to ensur
 
 ## Further reading
 
-* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+* [Prompt Engineering](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-engineering)
 * [Best Practices](https://docs.github.com/en/copilot/get-started/best-practices)

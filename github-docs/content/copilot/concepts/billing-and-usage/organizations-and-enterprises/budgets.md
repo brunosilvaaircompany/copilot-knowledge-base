@@ -83,6 +83,8 @@ An organization budget caps metered charges for users who receive their Copilot 
 
 Organization budgets are the only budget option available to organization owners. They can only further restrict usage below any budget set by an enterprise admin, and they cannot override a higher-level budget.
 
+Usage billed directly to an organization from a GitHub App installation counts against the organization budget. You cannot create a budget for an individual app or installation. If **Stop usage when budget limit is reached** is not enabled, the budget only sends alerts and app spending continues after the limit is reached. For information about managing app access, see [Manage App Copilot Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-app-copilot-access).
+
 If a user receives Copilot licenses from multiple organizations, GitHub picks one organization at random each billing cycle to bill the seat. This means the user's spend could count against a different organization's budget from month to month, making enforcement unpredictable. To avoid this, ensure each user has a single license through one organization, or use cost center budgets with direct user assignment.
 
 ### Enterprise budget

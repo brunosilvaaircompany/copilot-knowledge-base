@@ -14,6 +14,14 @@ Copilot features that use AI models consume AI credits. This includes Copilot Ch
 
 Code completions and next edit suggestions are **not** billed in AI credits. They remain unlimited for all paid plans.
 
+## How is GitHub App usage billed?
+
+A GitHub App installed on an organization can use an installation access token to make Copilot requests without a user signing in. The organization that owns the installation pays for the usage, and the organization’s model policies and spending controls apply.
+
+You cannot create a budget for an individual app or installation. This authentication method does not require the **Allow use of Copilot CLI billed to the organization** policy, which applies to a different authentication path.
+
+For information about approving access, identifying app usage, and blocking an app, see [Manage App Copilot Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-app-copilot-access).
+
 ## How do AI credits work?
 
 Each assigned Copilot license comes with a monthly amount of **included AI credits**:

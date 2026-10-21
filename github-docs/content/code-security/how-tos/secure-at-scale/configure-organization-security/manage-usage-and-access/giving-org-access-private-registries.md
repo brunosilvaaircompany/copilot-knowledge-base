@@ -102,7 +102,9 @@ See [Configure Access To Private Registries](https://docs.github.com/en/code-sec
 
 ### Configuring OIDC authentication for a private registry
 
-OIDC (OpenID Connect) authentication allows Dependabot to use short-lived credentials from your cloud identity provider to access private registries, eliminating the need to store long-lived secrets. With OIDC, credentials are generated dynamically for each Dependabot update job. You must configure a trust relationship between your cloud provider and GitHub before Dependabot can authenticate.
+OIDC (OpenID Connect) authentication allows Dependabot and code scanning default setup to use short-lived credentials from your cloud identity provider to access private registries. Each feature is limited to its supported registry types.
+
+With OIDC, credentials are generated dynamically for update or analysis jobs, eliminating the need to store long-lived secrets. You must configure a trust relationship between your cloud provider and GitHub before either feature can authenticate.
 
 When you select **OIDC** as the authentication method for a private registry, choose one of the supported providers and fill in the required fields:
 
@@ -122,7 +124,7 @@ For more information about how OIDC works, see [Openid Connect](https://docs.git
 
 ### Configuring an anonymous private registry
 
-Some registries, such as internal mirrors, don't require authentication. You can add these registries at the organization level with the **Anonymous** authentication method so that Dependabot can use them without a token, password, or OIDC configuration.
+Some registries, such as internal mirrors, don't require authentication. You can add these registries at the organization level with the **Anonymous** authentication method so that Dependabot and code scanning default setup can use them without a token, password, or OIDC configuration. 
 
 {% ifversion dependabot-egress-allowlist %}
 Dependabot update jobs can only connect to hosts on an egress allowlist. Adding an anonymous registry allows Dependabot to reach the registry's host for jobs in repositories that have access to the registry, without storing a secret or sending credentials. For more information, see [Resolve A Blocked Host](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/resolve-a-blocked-host).

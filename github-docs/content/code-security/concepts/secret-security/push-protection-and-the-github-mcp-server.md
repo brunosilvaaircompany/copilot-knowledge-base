@@ -18,5 +18,5 @@ To resolve the block, you can either:
 ## Further reading
 
 * [Push Protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)
-* [About the GitHub MCP server](/copilot/concepts/context/mcp#about-the-github-mcp-server)
+* [About the GitHub MCP server](/copilot/concepts/customizations/mcp#about-the-github-mcp-server)
 * [Scan For Secrets With GitHub MCP Server](https://docs.github.com/en/code-security/how-tos/use-ghas-with-ai-coding-agents/scan-for-secrets-with-github-mcp-server)

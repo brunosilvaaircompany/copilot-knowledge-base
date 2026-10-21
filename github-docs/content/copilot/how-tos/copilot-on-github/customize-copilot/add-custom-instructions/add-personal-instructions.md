@@ -3,7 +3,7 @@
 > [!NOTE] Personal custom instructions are only supported for GitHub Copilot Chat in GitHub.
 
 
-You can layer multiple types of custom instructions to shape GitHub Copilot Chat responses. For an overview, see [Response Customization?Tool=Webui](https://docs.github.com/en/copilot/concepts/prompting/response-customization?tool=webui).
+You can layer multiple types of custom instructions to shape GitHub Copilot Chat responses. For an overview, see [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions).
 
 ## About personal custom instructions for Copilot Chat
 
@@ -28,10 +28,10 @@ To add personal custom instructions on GitHub:
 1. Open [Copilot Chat](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text).
 1. In the bottom left corner, click your profile picture. Then click **{% octicon "note" aria-hidden="true" aria-label="note" %} Personal instructions**.
 1. Add natural language instructions to the text box.
-  
+
    Use any format. For example, a single block of text, each instruction on a new line, or instructions separated by blank lines.
 
-1. Optionally, use a template for common instructions. Click {% octicon "light-bulb" aria-label="The light-bulb icon" %} and select a template. 
+1. Optionally, use a template for common instructions. Click {% octicon "light-bulb" aria-label="The light-bulb icon" %} and select a template.
 
    When you select a template, placeholder text appears. Replace placeholders like `{format}` with your preferences.
 1. Click **Save**.
