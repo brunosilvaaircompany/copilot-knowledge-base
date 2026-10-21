@@ -44,7 +44,7 @@ By default, tool call details are collapsed in the chat conversation. Use `setti
 
 ## Reference a tool explicitly
 
-Type `#` in the chat input to reference a specific tool or tool set. Use an explicit reference when you want to direct the agent to a particular capability instead of letting it choose.
+Type `#` in the chat input to reference an available tool. Use an explicit reference when you want to direct the agent to a particular capability instead of letting it choose. Tool names depend on the harness.
 
 For example, use the `#web/fetch` tool to retrieve a specific web page:
 
@@ -52,15 +52,9 @@ For example, use the `#web/fetch` tool to retrieve a specific web page:
 Summarize the latest release notes at code.visualstudio.com/updates with #web/fetch.
 ```
 
-Use a tool set, such as `#web`, to make a group of related tools available:
-
-```prompt
-Research how Next.js handles routing. Use #web tools and summarize the relevant guidance.
-```
-
 The `#` menu also contains context items, such as files, folders, and editor selections. Context items provide information for the request, while tools give the agent capabilities to gather information or take actions. Learn more about [adding context to chat prompts](../../chat/chat-overview.md#add-context-to-your-prompts).
 
-**NOTE:** **For Local harness sessions:** To group related tools and reuse them across prompts, prompt files, and custom agents, [create a tool set](../../agent-customization/tool-sets.md).
+**NOTE:** User-defined tool sets are deprecated and are not supported in the Copilot harness. For a reusable tool selection, configure a custom agent. See [Replace tool sets](../../agent-customization/migrate-customizations.md#replace-tool-sets).
 
 <a name="select-tools-for-a-request"></a>
 
@@ -72,7 +66,7 @@ For Copilot harness sessions, manage tools from the Agent Customizations editor.
 
 1. Open the Agent Customizations editor:
 
-    * In the {% data variables.copilot.chat_view %}, select **Configure Chat** (gear icon), or run **Chat: Open Customizations** from the Command Palette (`kb(workbench.action.showCommands)`).
+    * In the {% data variables.copilot.chat_view %}, select **Open Customizations** in the title bar, or run **Chat: Open Customizations** from the Command Palette (`kb(workbench.action.showCommands)`).
     * In the {% data variables.copilot.agents_window %}, go to the **Customizations** panel.
 
 1. Select the **Tools** tab.
@@ -132,7 +126,7 @@ For Local harness sessions, select tools for an individual request from the {% d
 
 1. Select or deselect tools to control which ones are available for the current request. Use the search box to filter the list.
 
-You can also specify tools in a [prompt file](../../agent-customization/prompt-files.md) or [custom agent](../../agent-customization/custom-agents.md). Learn more about the [tool list priority order](../../agent-customization/custom-agents.md#tool-list-priority).
+You can also specify tools in a [prompt file](../../agent-customization/prompt-files.md) or [custom agent](../../agent-customization/custom-agents.md). Learn more about the [tool list priority order](../reference/custom-agent-file-reference.md#tool-list-priority).
 
 </details>
 
@@ -225,7 +219,7 @@ For individual names, descriptions, and availability, see the [Tools and context
 <details>
 <summary>How do I know which tools are available?</summary>
 
-Type `#` in the chat input field to browse available tools, tool sets, and context items. For Copilot harness sessions, open the Agent Customizations editor and select the **Tools** tab to view and manage enabled tools. For Local harness sessions, use **Configure Tools** in the chat input.
+Type `#` in the chat input field to browse available tools and context items. For Copilot harness sessions, open the Agent Customizations editor and select the **Tools** tab to view and manage enabled tools. For Local harness sessions, use **Configure Tools** in the chat input.
 
 </details>
 
@@ -266,5 +260,5 @@ Yes. You can create tools in two ways:
 ## Related resources
 
 * [AI features cheat sheet](../reference/ai-features-cheat-sheet.md)
-* [Create and use tool sets](../../agent-customization/tool-sets.md)
+* [Migrate existing customizations](../../agent-customization/migrate-customizations.md)
 * [Security considerations for using AI in {% data variables.product.prodname_vscode_shortname %}](security.md)

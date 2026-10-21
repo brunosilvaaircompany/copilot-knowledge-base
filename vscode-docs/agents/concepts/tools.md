@@ -56,4 +56,4 @@ Review the tool name and inputs before you approve a call. Learn more about [tru
 
 * [Use tools with agents](../run/tools.md)
 * [Manage approvals and permissions](../run/approvals.md)
-* [Add and manage MCP servers](../../agent-customization/mcp-servers.md)
+* [Add MCP servers](../../agent-customization/mcp-servers.md)

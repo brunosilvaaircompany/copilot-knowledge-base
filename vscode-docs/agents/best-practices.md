@@ -49,7 +49,7 @@ For step-by-step guides in an existing project, [explore a codebase](guides/expl
 
 ## Write effective prompts
 
-The quality of AI responses depends on the clarity and specificity of your prompt. These techniques help you get better results.
+The quality of AI responses depends on the clarity and specificity of your prompt. Writing requests with a clear goal, constraints, and relevant context is often called *prompt engineering*. These techniques help you get better results.
 
 * **Be specific about inputs, outputs, and constraints.** State the programming language, frameworks, and libraries you want to use. Describe expected behavior or include example input and output.
 
@@ -83,7 +83,7 @@ The quality of AI responses depends on the clarity and specificity of your promp
 
 * **Parallel tasks.** If you have multiple independent tasks, ask the AI to run them in parallel to save time. For example, "Perform isolated research about X and Y in parallel and summarize the findings."
 
-For more information, find practical [prompt examples](https://docs.github.com/en/copilot/copilot-chat-cookbook) in the GitHub Copilot documentation.
+Adapt the [prompt examples](guides/prompt-examples.md) for your task, including the multi-turn examples for refining a result. For a video introduction, watch [Core principles of prompt engineering with {% data variables.product.prodname_copilot %}](https://www.youtube.com/watch?v=hh1nOX14TyY).
 
 ## Provide the right context
 
@@ -152,6 +152,8 @@ For more information, see [GitHub Copilot security](run/security.md) and the [Gi
 
 When working with agents, choose the harness that matches your task and workflow. Each harness offers different provider capabilities, tools, and execution environments.
 
+**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
+
 * **Use the Copilot harness for day-to-day coding.** The Copilot harness runs tools on your machine with access to your workspace and run-time context. It is a good default for most coding tasks. Tool execution location is separate from where the selected language model runs.
 
 * **Use Claude or Codex for provider-specific capabilities.** These harnesses also run tools on your machine and provide their own SDK capabilities through the same {% data variables.product.prodname_vscode_shortname %} session experience.
@@ -192,7 +194,7 @@ AI responses might degrade as the conversation fills with irrelevant context. Ma
 
 * **Start new sessions for unrelated tasks.** Don't keep piling unrelated questions into one conversation. Context pollution reduces response quality and wastes tokens on irrelevant history.
 
-* **Remove irrelevant history.** Delete past questions and responses that are no longer relevant, or start a fresh session.
+* **Start a fresh chat for related work.** When the task still belongs in the same workspace but doesn't need the current conversation history, [start another chat in the session](run/sessions/manage-sessions.md#run-multiple-chats-in-a-session), where supported. It shares the session's files and code changes without inheriting the other chats' history.
 
 * **Compact context.** Use [/compact](run/sessions/manage-sessions.md#compact-conversation-context) and provide instructions to selectively compact the context and retain only the most relevant information. Compacting reduces the tokens sent with each subsequent request, which helps [manage AI credit usage](guides/optimize-usage.md).
 

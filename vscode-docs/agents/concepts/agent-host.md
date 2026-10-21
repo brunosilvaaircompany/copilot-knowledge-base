@@ -16,6 +16,8 @@ Separating the agent from the window that displays it provides these capabilitie
 * **Multiple agent implementations**: different agent runtimes plug into one host-facing interface and present common session concepts to clients.
 * **Dedicated process**: agents run in their own process, where they won't be blocked by busy extensions.
 
+**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
+
 ## Process architecture
 
 The components have different responsibilities:
@@ -100,7 +102,7 @@ The process boundary also affects how you review edits, configure the agent, and
 | Configure hooks | [Choose the hook implementation for your session](../../agent-customization/hooks.md#choose-the-hook-implementation-for-your-session). Sharing a host does not give harnesses a shared hook schema. |
 | Set permissions and Autopilot behavior | [Manage approvals and permissions](../run/approvals.md#permission-levels). |
 | Continue sessions across interfaces | [Sessions across surfaces](sessions.md#sessions-across-surfaces). |
-| Configure tools and MCP servers | [Manage available tools](../run/tools.md#manage-available-tools) and [configure MCP servers](../../agent-customization/mcp-servers.md#configure-the-mcpjson-file). |
+| Configure tools and MCP servers | [Manage available tools](../run/tools.md#manage-available-tools) and [MCP configuration formats](../reference/mcp-configuration.md#configuration-file). |
 
 ## Related resources
 

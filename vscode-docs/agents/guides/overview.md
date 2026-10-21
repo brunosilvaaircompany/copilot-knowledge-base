@@ -36,11 +36,11 @@ Or jump to a task:
 
 ## Experienced-agent fast track
 
-Use your own repository and keep the default harness and session settings for your first task. Adjust them only when your provider, environment, or project requires a different setup.
+Use your own repository and follow the harness, interface, and prerequisites specified by the guide you choose. Keep its recommended session settings for the first task. A guide's tool names or customization files might need changes before you can use them with another harness.
 
 1. [Open your repository as a workspace](https://code.visualstudio.com/docs/getstarted/overview#open-your-code) so that files, source control, terminals, tests, and agents share the same project context.
 
-1. Map your existing workflow to [{% data variables.product.prodname_vscode_shortname %} sessions](../concepts/sessions.md), then [choose a harness or the Cloud target](../run/agent-harnesses.md#choose-a-session-target) that fits your provider and execution requirements.
+1. Map your existing workflow to [{% data variables.product.prodname_vscode_shortname %} sessions](../concepts/sessions.md). Check that your account and environment meet the chosen guide's [harness setup requirements](../run/agent-harnesses.md#requirements-and-setup).
 
 1. Start with a bounded task in your own repository. [Explore the codebase](explore-a-codebase.md) without making changes, or [add a feature](add-a-feature.md) with your existing development environment and tests.
 
@@ -50,33 +50,45 @@ After one real-project task, [adapt agents to your project](customize-copilot-gu
 
 On a managed device, your organization might control which agents and providers are available. Developers can review the [agent availability troubleshooting steps](../agent-troubleshooting/faq.md#agents-are-not-available-in-chat), and administrators can [manage AI settings](https://code.visualstudio.com/docs/enterprise/manage-ai-settings). For keyboard, screen reader, and low-vision workflows, use the [Accessible View and other accessibility features](https://code.visualstudio.com/docs/configure/accessibility/accessibility#accessible-view).
 
+## Match a guide to your setup
+
+Before starting a guide, check:
+
+* **Project:** Does it create a sample project, or require your own repository with working build and test commands?
+
+* **Harness:** Does it use your selected harness's tools and customization formats? Choosing the same language model doesn't make those formats interchangeable.
+
+* **Interface:** Which steps use the {% data variables.copilot.chat_view %} or the {% data variables.copilot.agents_window %}?
+
+Both interfaces run agents. The {% data variables.copilot.chat_view %} emphasizes collaboration over code in the current workspace; the {% data variables.copilot.agents_window %} emphasizes multi-project orchestration and higher-level task assignment. Follow the guide's chosen interface for its walkthrough. See [Run agents](../run/overview.md) to compare approaches.
+
 ## Work on a project
 
-* [Explore a codebase](explore-a-codebase.md): trace a behavior without editing files and verify explanations against source references. **Use your own repository.**
+* [Explore a codebase](explore-a-codebase.md): trace a behavior without editing files and verify explanations against source references. **Use your own repository with {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}.**
 
-* [Add a feature](add-a-feature.md): research, plan, implement, and verify a bounded change. **Use your own repository with a working development environment and tests.**
+* [Add a feature](add-a-feature.md): research, plan, implement, and verify a bounded change. **Use your own repository with a working development environment and tests, and {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}.**
 
 * [Fix an API bug](fix-a-bug-with-agents.md): reproduce a pagination bug, add a regression test, and review the fix. **Sample project. Requires Node.js 22 or later and Git.**
 
-* [Refactor safely](refactor-safely.md): change code structure in reviewable steps while preserving behavior and checking existing callers. **Use your own repository.**
+* [Refactor safely](refactor-safely.md): change code structure in reviewable steps while preserving behavior and checking existing callers. **Use your own repository with {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}.**
 
 * [Work with Jupyter notebooks](notebooks-with-ai.md): create or edit a notebook, run cells, and review analysis results. **Use your own data. Requires the Jupyter extension and a notebook kernel.**
 
 ## Test and validate
 
-* [Add tests to existing code](test-code-with-ai.md): generate tests for a function or module, run them, and review assertions, failures, and coverage. **Use your own project.**
+* [Add tests to existing code](test-code-with-ai.md): generate tests for a function or module, run them, and review assertions, failures, and coverage. **Use your own project with {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}.**
 
 * [Validate a web app with browser tools](browser-agent-testing-guide.md): build a calculator app and check it against observable acceptance criteria. **Sample web app.**
 
-* [Set up test-driven development](test-driven-development-guide.md): create custom agents and instructions for a repeatable test-first workflow. **Workflow setup, rather than a one-off testing task.**
+* [Set up test-driven development](test-driven-development-guide.md): create custom agents and instructions for a repeatable test-first workflow. **Use your own repository with working tests and the Local harness in the {% data variables.copilot.chat_view %}.**
 
 ## Customize and coordinate agents
 
 * [Adapt agents to your project](customize-copilot-guide.md): share project instructions with your team, then add skills or specialized agents where needed. **Use your own repository.**
 
-* [Set up a context engineering workflow](context-engineering-guide.md): curate project context and connect planning to implementation with instructions, custom agents, and prompt files. **Workflow setup.**
+* [Set up a context engineering workflow](context-engineering-guide.md): curate project context and connect planning to implementation with instructions, custom agents, and prompt files. **Use your own repository and the Local harness in the {% data variables.copilot.chat_view %}.**
 
-* [Run independent tasks in parallel](delegate-two-tasks.md): work in separate Git worktrees, review each result, then integrate and retest the changes. **Use your own Git repository after completing a single agent task.**
+* [Run independent tasks in parallel](delegate-two-tasks.md): work in separate Git worktrees, review each result, then integrate and retest the changes. **Use your own Git repository with {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.agents_window %}, after completing a single agent task.**
 
 ## Improve results and recover
 

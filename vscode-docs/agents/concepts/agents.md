@@ -55,11 +55,13 @@ Learn more about [trust and safety controls](trust-and-safety.md).
 
 A session is the unit of work with an agent. It brings together the workspace, code changes, and execution state for a task. Depending on the harness, a session can contain multiple chats, each with its own conversation history.
 
-Sessions are independent, can run in parallel, and are shared across the [{% data variables.copilot.chat_view %}](../run/chat-view.md) and the [{% data variables.copilot.agents_window %}](../run/agents-window.md). A session can run on your machine or a remote host, and you can hand it off to another agent. Learn more about [sessions and handoff](sessions.md).
+Sessions can run in parallel. Both the [{% data variables.copilot.chat_view %}](../run/chat-view.md) and the [{% data variables.copilot.agents_window %}](../run/agents-window.md) support agents, but the harness determines whether you can continue the same session in both interfaces. For example, Local harness sessions are editor-only. Sessions can use the same folder or separate worktrees, so separate conversations don't necessarily isolate code changes. Learn about [session compatibility, execution environments, and handoff](sessions.md).
 
 ## Agent harnesses and execution environments
 
 An agent harness is the runtime that coordinates the agent loop. It manages the session, connects the language model to tools, and provides provider-specific capabilities. {% data variables.product.prodname_vscode_shortname %} supports harnesses such as Copilot, Claude, and Codex.
+
+**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
 
 The execution environment is where the harness runs workspace tools and changes code. Depending on the available harness, this can be your machine, a connected host, a Dev Container on either host, or cloud infrastructure. A Dev Container provides the project's configured tools and dependencies without changing the harness. Learn more about [agent harnesses and execution environments](agent-harnesses.md#relate-execution-environments-and-code-isolation).
 

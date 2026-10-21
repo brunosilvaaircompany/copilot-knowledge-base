@@ -48,7 +48,7 @@ If the model does not call an expected tool:
 
 1. Run **MCP: List Servers** from the Command Palette and verify that the server is running.
 1. Open the Chat Debug view and check whether the tool appears in the available tool definitions.
-1. If the tool is absent, [troubleshoot the MCP server](../../agent-customization/mcp-servers.md#troubleshoot-and-debug-mcp-servers).
+1. If the tool is absent, [troubleshoot the MCP server](../run/manage-mcp-servers.md#troubleshoot-mcp-servers).
 1. If the tool is available, check the Agent Debug Logs for tool calls and errors.
 1. State the tool name and the action it should perform in your prompt, and then repeat the request.
 

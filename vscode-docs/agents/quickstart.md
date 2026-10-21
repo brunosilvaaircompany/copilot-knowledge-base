@@ -216,7 +216,7 @@ If a follow-up doesn't resolve the problem, use [Get an agent back on track](gui
 
 ## If your screen looks different
 
-* If the **Copilot** target or **Agent** role isn't available, verify your sign-in and review the [agent harness setup requirements](run/agent-harnesses.md#cloud-target). Your organization's policies might restrict specific agents, models, or tools.
+* If the **Copilot** harness or **Agent** isn't available, verify your sign-in and review the [agent harness setup requirements](run/agent-harnesses.md#requirements-and-setup). Your organization's policies might restrict specific agents, models, or tools.
 
 * If you reach an AI credits limit, review [what remains available and when allowances reset](agent-troubleshooting/faq.md#i-reached-my-inline-suggestions-or-ai-credits-limit).
 

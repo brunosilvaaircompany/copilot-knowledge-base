@@ -15,7 +15,7 @@ New to agents? [Complete your first task with an agent](../quickstart.md). Avail
 
 | I want to... | Use | Start with... |
 |---|---|---|
-| Understand unfamiliar code without changing it | [Ask](../run/agent-harnesses.md#choose-a-built-in-agent-role) | Select **Ask** and enter "Trace how a request reaches the database." |
+| Understand unfamiliar code without changing it | [Ask](../run/agent-harnesses.md#choose-a-built-in-agent) | Select **Ask** and enter "Trace how a request reaches the database." |
 | Plan a complex change | [Plan agent](../run/planning.md) | Select **Plan** and describe the change to research before implementation. |
 | Build a feature, fix a bug, or create a project | [Agents](#use-agents) | Select **Agent**, describe the outcome, and specify how to verify it. |
 | Make a focused edit | [Inline chat](../../chat/inline-chat.md) | Select code in the editor and describe the change. |
@@ -154,12 +154,14 @@ Type `/` to see commands available in the current session. Availability depends 
 | `/doc` | Generate documentation comments from editor inline chat. |
 | `/setupTests` (Experimental) | Get help choosing and setting up a test framework. |
 | `/new`, `/newNotebook` | Scaffold a workspace, file, or notebook. |
-| `/compact`, `/fork` | Compact context, or branch the conversation with its history. |
+| `/compact` | Compact conversation context. |
+| `/fork` | [Fork the conversation](../run/sessions/manage-sessions.md#fork-a-chat-session) with its history. |
+| `/fork <title>`, `/fork prompt <prompt>` | Name a fork, or fork and immediately send a prompt with attached context. Requires a supported Agent Host session. See [named and prompted forks](../run/sessions/manage-sessions.md#name-a-fork-or-send-a-prompt). |
 | `/clear` | Start a new chat and archive or mark the current chat as done. |
 | `/rename <name>`, `/help` | Rename a local chat, or list commands and agents in a local Ask chat. |
 | `/models`, `/tools` | Open the model picker, or configure tools for a local chat. |
 | `/init` | Generate or update workspace instructions in a local agent session. |
-| `/agents`, `/instructions`, `/skills`, `/prompts`, `/hooks` | Configure the corresponding customization type. |
+| `/agents`, `/instructions`, `/skills`, `/prompts`, `/hooks` | Configure the corresponding customization type. In the {% data variables.copilot.chat_view %}, all are available with **Local**. Only `/prompts` and `/hooks` are available with **Copilot**. |
 | `/create-agent`, `/create-instructions`, `/create-skill`, `/create-prompt`, `/create-hook` | Generate a customization in a local agent session. |
 | `/troubleshoot` | Analyze agent debug logs in a local or {% data variables.copilot.copilot_cli_short %} session. |
 | `/debug` | Open the Chat Debug view from the {% data variables.copilot.chat_view %}, not the {% data variables.copilot.agents_window %}. |
@@ -168,9 +170,9 @@ Type `/` to see commands available in the current session. Availability depends 
 
 For example, a skill in `.github/skills/webapp-testing/SKILL.md` can be invoked with `/webapp-testing`. For permission and Autopilot commands, see [approvals and permissions](../run/approvals.md).
 
-### Chat participants
+### Chat participants (deprecated)
 
-In chat surfaces that support participants, type `@` to choose a specialist. Use `@github` for repositories, issues, and pull requests, `@terminal` for shell questions, or `@vscode` for editor features and settings. For example, `@vscode /search` generates a Search view query.
+Chat participants are not supported in the Copilot harness. Ask the agent directly and attach relevant context, or use a plugin with skills and MCP tools for a domain-specific workflow. See [Replace chat participants](../../agent-customization/migrate-customizations.md#replace-chat-participants).
 
 ## Next steps
 

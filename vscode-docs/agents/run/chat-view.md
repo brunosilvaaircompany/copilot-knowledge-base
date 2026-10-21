@@ -1,8 +1,8 @@
 # Use the {% data variables.copilot.chat_view %}
 
-The {% data variables.copilot.chat_view %} is a code-first interface for asking questions and working with agents in the main {% data variables.product.prodname_vscode %} window. Use it when your task centers on the current project and you want the editor, debugger, tests, extensions, and notebooks available alongside the conversation.
+The {% data variables.copilot.chat_view %} runs agents beside your code in the main {% data variables.product.prodname_vscode %} window. Use it when you want to collaborate over code in the current workspace while keeping the editor, debugger, tests, terminals, extensions, and notebooks available alongside the conversation.
 
-In this article, you learn how to open the {% data variables.copilot.chat_view %}, choose a layout, understand its interface, and start a workspace-scoped session. To compare it with other interfaces, see [Ways to work with agents](../overview.md#ways-to-work-with-agents). For conversation mechanics shared with the [{% data variables.copilot.agents_window %}](agents-window.md), see [Use chat in {% data variables.product.prodname_vscode_shortname %}](../../chat/chat-overview.md).
+In this article, you learn how to open the {% data variables.copilot.chat_view %}, choose a layout, understand its interface, and start a workspace-scoped session. Both the {% data variables.copilot.chat_view %} and [{% data variables.copilot.agents_window %}](agents-window.md) let you direct agents and review their work. To choose an interface based on where you want to focus, see [Run agents in {% data variables.product.prodname_vscode_shortname %}](overview.md#choose-an-interface). For conversation mechanics shared by both interfaces, see [Use chat in {% data variables.product.prodname_vscode_shortname %}](../../chat/chat-overview.md).
 
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Get started with agents">
 Follow a hands-on tutorial to build an app with AI agents in {% data variables.product.prodname_vscode_shortname %}.
@@ -61,6 +61,8 @@ With a harness that supports multiple chats, such as Copilot or Claude, a sessio
 You can continue peer chats created in the {% data variables.copilot.agents_window %} without starting a new session. For creation steps, navigation options, and interface-specific controls, see [Run multiple chats in a session](sessions/manage-sessions.md#run-multiple-chats-in-a-session).
 
 ## Start a session
+
+**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
 
 To start a workspace-scoped session, select **New Chat** (`+`) or press `kb(workbench.action.chat.newChat)`. Before you send the first prompt, use the chat input controls to choose a **Session Target**, **Agent**, **Language model**, and **Permissions**. For a first coding task, use **Copilot**, **Agent**, **Auto**, and **Manual permissions**, as shown in the [agents quickstart](../quickstart.md). Available choices depend on your account, installed providers, and organization policies. Learn how to [identify your current harness](agent-harnesses.md#identify-your-current-harness) or [compare agent harnesses](agent-harnesses.md#compare-agent-harnesses).
 
