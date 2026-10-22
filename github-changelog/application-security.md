@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-21 12:50 UTC  
+> Atualizado em: 2026-10-22 12:53 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens](https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens)
+
+**Data:** 2026-10-21  **Categorias:** `Release`, `application security`, `client apps`
+
+You can now use expiring, automatically refreshing OAuth credentials in GitHub CLI as part of a public preview. When you opt in, gh stores an expiring access token alongside a&#8230;
+
+The post [GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens](https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
