@@ -1,26 +1,26 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-22 12:53 UTC  
+> Atualizado em: 2026-10-23 12:31 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Copilot model policy API for enterprise, orgs, and teams](https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams)
+## [GitHub Copilot in Visual Studio — September update](https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2)
 
-**Data:** 2026-10-19  **Categorias:** `Improvement`, `copilot`, `enterprise management tools`
+**Data:** 2026-10-23  **Categorias:** `Release`, `copilot`
 
-You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, agent apps, and organizations. What&#8217;s new GET and PATCH endpoints are now&#8230;
+September 2026 brought deeper visibility into your work: explore pull requests without leaving chat, bring the AI model your team trusts, and fix vulnerable packages the moment Visual Studio flags&#8230;
 
-The post [Copilot model policy API for enterprise, orgs, and teams](https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Copilot in Visual Studio — September update](https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [GitHub Copilot models deprecated on October 19, 2026](https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026)
+## [Global default for Copilot features generally available](https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available)
 
-**Data:** 2026-10-19  **Categorias:** `Retired`, `copilot`
+**Data:** 2026-10-22  **Categorias:** `Improvement`, `copilot`, `enterprise management tools`
 
-As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). These&#8230;
+In September, we announced a global default policy for generally available GitHub Copilot features and supported client capabilities on Copilot Business and Copilot Enterprise plans. Starting today, we&#8217;re gradually rolling&#8230;
 
-The post [GitHub Copilot models deprecated on October 19, 2026](https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026) appeared first on [The GitHub Blog](https://github.blog).
+The post [Global default for Copilot features generally available](https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
