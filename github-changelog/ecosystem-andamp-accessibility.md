@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-12 16:38 UTC  
+> Atualizado em: 2026-10-24 11:55 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Screen readers can navigate timelines as lists](https://github.blog/changelog/2026-10-08-screen-readers-can-navigate-timelines-as-lists)
+## [Enterprise installations for GitHub Apps generally available](https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available)
 
-**Data:** 2026-10-08  **Categorias:** `Improvement`, `ecosystem &amp; accessibility`, `projects &amp; issues`
+**Data:** 2026-10-23  **Categorias:** `Improvement`, `ecosystem &amp; accessibility`, `enterprise management tools`
 
-Screen readers can now navigate issue and pull request timelines as a list. When you move through a timeline, assistive technology can announce the list structure, item count, current position,&#8230;
+Installing GitHub Apps on your enterprise is now generally available. You can replace classic PATs with GitHub Apps in more of your enterprise and organization automation with the expanded API&#8230;
 
-The post [Screen readers can navigate timelines as lists](https://github.blog/changelog/2026-10-08-screen-readers-can-navigate-timelines-as-lists) appeared first on [The GitHub Blog](https://github.blog).
+The post [Enterprise installations for GitHub Apps generally available](https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

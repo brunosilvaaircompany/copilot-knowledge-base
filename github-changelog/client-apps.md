@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-15 12:33 UTC  
+> Atualizado em: 2026-10-24 11:55 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Enterprise managed settings enforcement updates](https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates)
+## [Turn notifications into code with GitHub Copilot in Teams](https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams)
 
-**Data:** 2026-10-13  **Categorias:** `Improvement`, `client apps`, `copilot`, `enterprise management tools`
+**Data:** 2026-10-23  **Categorias:** `Improvement`, `client apps`, `copilot`
 
-Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version&#8230;
+The new GitHub app in Teams brings notifications and Copilot together, helping teams turn issues into fixes and ship code faster without leaving the conversation. Get notified in channels, group&#8230;
 
-The post [Enterprise managed settings enforcement updates](https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates) appeared first on [The GitHub Blog](https://github.blog).
+The post [Turn notifications into code with GitHub Copilot in Teams](https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
