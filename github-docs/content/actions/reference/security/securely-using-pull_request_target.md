@@ -60,7 +60,7 @@ The default policy:
 * Does not replace an applicable event policy that you have already configured.
 * Currently runs in **evaluate** mode. In this mode, workflow runs continue, but you can use policy insights to identify runs that would be blocked after enforcement.
 
-On November 2, 2026, GitHub will enforce the default policy for affected repositories that were using the default `pull_request_target` policy before general availability.
+On December 2, 2026, GitHub will enforce the default policy for affected repositories that were using the default `pull_request_target` policy before general availability.
 
 
 

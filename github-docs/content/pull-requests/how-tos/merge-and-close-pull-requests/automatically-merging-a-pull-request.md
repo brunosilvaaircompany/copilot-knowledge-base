@@ -4,6 +4,8 @@
 
 Auto-merge merges a pull request automatically after all required reviews and status checks pass. Before you use auto-merge, it must be enabled for the repository. See [Managing Auto Merge For Pull Requests In Your Repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-auto-merge-for-pull-requests-in-your-repository).
 
+On a branch that requires a merge queue, the repository setting doesn't apply. **Merge when ready** enables auto-merge for a pull request that can't be added to the queue immediately, even if auto-merge isn't allowed for the repository. See [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request-with-a-merge-queue).
+
 Auto-merge is disabled if someone without write permissions pushes new changes to the head branch or switches the base branch.
 
 ## Enabling auto-merge

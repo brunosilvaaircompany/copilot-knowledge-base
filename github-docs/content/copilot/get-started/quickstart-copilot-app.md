@@ -33,22 +33,22 @@ Download and install the GitHub Copilot app for your operating system. For other
    If you use GitHub Enterprise Cloud with data residency, choose **Use GitHub Enterprise** and enter your `*.ghe.com` hostname when prompted. GitHub Enterprise Server is not supported by the GitHub Copilot app.
 1. If you do not have a Copilot plan, choose whether to sign up for a plan or continue with your own model provider.
     * If you choose to use your own model provider, select a provider, enter any required credentials, then click **Save and continue**.
-1. When prompted, select one or more repositories based on your recent GitHub activity. You can also add a local folder or repository, or skip this step and add projects later.
+1. When prompted, select one or more repositories based on your recent GitHub activity. You can also add a local folder or repository, or skip this step and add repositories later.
 1. Choose a theme, then complete onboarding to open the app.
 
 ## Connecting a repository or folder
 
-To work on code, you need at least one project connected to the app. A project can be a folder already on your machine, including a repository you've already cloned locally, or a repository you clone from GitHub or another remote Git host such as Azure DevOps. Connecting a project unlocks the core app workflow: reading code, making edits, and opening pull requests from agent sessions. If you skipped project setup during onboarding, or want to add more projects later:
+To work on code, you need at least one repository or local folder connected to the app. You can connect a folder already on your machine, including a repository you've already cloned locally, or a repository you clone from GitHub or another remote Git host such as Azure DevOps. Connecting a repository or folder unlocks the core app workflow: reading code, making edits, and opening pull requests from agent sessions. If you skipped repository setup during onboarding, or want to add more repositories or folders later:
 
-1. In the sidebar, next to **Projects**, click {% octicon "plus" aria-label="Add project" %}.
-1. Under **Add project from**, choose one of the following:
-  * **Local folder or repository** — Select a folder already on your machine, including one that contains a repository you've already cloned locally.
-  * **GitHub repository** — Browse and clone a repository from GitHub.
-  * **Repository URL** — Clone from a Git URL for repositories hosted outside GitHub (for example, on Azure DevOps) or for private repositories without app access.
+1. In the sidebar, next to **Sessions**, click {% octicon "plus" aria-label="New" %}.
+1. Choose where to add the repository or folder from:
+  * **Open local folder** — Select a folder already on your machine, including one that contains a repository you've already cloned locally.
+  * **Add GitHub repository** — Browse and clone a repository from GitHub.
+  * **Clone repository** — Clone from a Git URL for repositories hosted outside GitHub (for example, on Azure DevOps) or for private repositories without app access.
 
 ## Making your first code changes
 
-1. Under **Projects** in the sidebar, find the connected folder or repository you want to use, then click {% octicon "plus" aria-label="Start a new session" %} next to it.
+1. In the sidebar, next to **Sessions**, click {% octicon "plus" aria-label="New" %}, then select the connected repository or folder under "Start session in."
 1. Select a session mode from the dropdown below the prompt field—for example, **Interactive** to work collaboratively with the agent.
 1. In the prompt box, paste this prompt:
 
@@ -73,7 +73,7 @@ The sidebar gives you access to the main areas of the app:
 * **[Automations](https://github.com/copilot/app/launch?open=ghapp%3A%2F%2Fautomations)** — Saved agent tasks that run on a schedule or on demand.
 * **Customize** — Discover and manage plugins, skills, MCP servers, and canvases.
 * **Search** — Search across your repositories directly from the app.
-* **Projects** — View connected projects and their active agent sessions, or start a new session for a project.
+* **Sessions** — View connected repositories, local folders, and their active agent sessions, or start a new session for a repository or folder.
 * **Chats** — General conversations that do not require a dedicated branch or workspace.
 
 ## Next steps

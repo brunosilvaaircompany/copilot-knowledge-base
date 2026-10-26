@@ -46,7 +46,7 @@ To use cloud automations, make sure the following settings are enabled.
    For a cloud automation, use the **Tools** dropdown to select the tools Copilot can use, such as pushing changes, updating issue labels, or creating a pull request. Select only the tools the task requires.
 1. In the prompt box, describe the task you want Copilot to perform each time the automation runs. You can type `/` to use an available skill.
 1. Use the controls below the prompt box to select the model, reasoning effort, and agent for the automation.
-1. Click **Select project**, then choose the project where the automation will run.
+1. Choose the repository or local folder where the automation will run.
 1. Click **Create** to save the automation. To save and test it immediately, open the dropdown next to **Create**, then click **Create and run**.
 
 ## Running an automation on demand

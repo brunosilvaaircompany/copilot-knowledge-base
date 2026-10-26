@@ -81,6 +81,22 @@ You can set a budget in your personal billing settings to receive alerts when yo
 * **Bundled premium request budget** - Combines all premium requests into a single budget (Recommended for most users)
 * **Individual SKU budgets** - Set separate budgets for each AI product (Copilot, Spark, Copilot cloud agent)
 
+To prevent paid premium-request overages while keeping your annual Copilot subscription:
+
+1. Open your billing overview page: [https://github.com/settings/billing](https://github.com/settings/billing?ref_product=github&ref_type=engagement&ref_style=text).
+
+
+1. Click **Budgets and alerts**.
+1. Create or edit a bundled premium request budget covering all premium-request SKUs, or individual SKU budgets covering every applicable premium-request SKU.
+1. Set each budget to **$0 USD**, enable **Stop usage when budget limit is reached**, and save your changes.
+
+This blocks additional paid premium requests after your included monthly allowance is exhausted without canceling your subscription. 
+
+> [!NOTE]
+> Deleting a budget is not a substitute for this configuration and can remove spending limits.
+
+For configuration steps, see [Set Up Budgets](https://docs.github.com/en/billing/how-tos/set-up-budgets#managing-budgets-for-your-personal-account).
+
 ## Monitoring usage
 
 * Track your monthly usage in your IDE, in Copilot settings on GitHub, or by downloading a usage report.

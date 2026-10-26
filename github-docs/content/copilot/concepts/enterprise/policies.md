@@ -28,13 +28,9 @@ To see details for each policy, see [Policy Conflicts](https://docs.github.com/e
 
 ## What is the default status of policies?
 
-For enterprises with Copilot Business or Copilot Enterprise plans, two separate policies control whether unconfigured generally available (GA) features and models default to enabled or disabled. If these policies are enabled, users benefit from the latest features and models without the need for administrator intervention.
+For enterprises with Copilot Business or Copilot Enterprise plans, two separate policies control whether unconfigured generally available (GA) features and models default to enabled or disabled.
 
-
-
-The models policy is already active. The feature policy will become active soon.
-
-
+If these policies are enabled, users benefit from the latest features and models without the need for administrator intervention.
 
 
 For more information, see [Default Availability](https://docs.github.com/en/copilot/concepts/enterprise/default-availability).

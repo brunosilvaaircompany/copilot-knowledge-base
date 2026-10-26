@@ -26,7 +26,7 @@ Event 'workflow_dispatch' is not allowed to trigger Actions workflows. Workflow 
 
 
 
-> [!NOTE] GitHub has added a default policy that will block the `pull_request_target` event in public repositories. This policy will be enforced on November 2, 2026. See [Securely Using Pull_Request_Target](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target#default-policy-for-pull_request_target).
+> [!NOTE] GitHub has added a default policy that will block the `pull_request_target` event in public repositories. This policy will be enforced on December 2, 2026. See [Securely Using Pull_Request_Target](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target#default-policy-for-pull_request_target).
 
 
 

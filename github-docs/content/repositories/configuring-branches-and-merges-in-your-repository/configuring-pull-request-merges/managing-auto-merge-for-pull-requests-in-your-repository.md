@@ -4,6 +4,8 @@
 
 If you allow auto-merge for pull requests in your repository, people with write permissions can configure individual pull requests in the repository to merge automatically when all merge requirements are met. If someone who does not have write permissions pushes changes to a pull request that has auto-merge enabled, auto-merge will be disabled for that pull request. For more information, see [Automatically Merging A Pull Request](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/automatically-merging-a-pull-request).
 
+The **Allow auto-merge** setting doesn't apply to branches that require a merge queue. On those branches, **Merge when ready** can enable auto-merge for a pull request even when this setting is disabled. See [Merging A Pull Request With A Merge Queue](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/merging-a-pull-request-with-a-merge-queue).
+
 ## Managing auto-merge
 
 > [!NOTE]

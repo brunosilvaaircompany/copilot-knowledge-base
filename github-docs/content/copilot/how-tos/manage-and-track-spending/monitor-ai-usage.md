@@ -42,6 +42,8 @@ Alternatively, you can view your usage under the Copilot settings page.
 
 For details on how to request a usage report, see [View Productlicense Use](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use#downloading-usage-reports).
 
+The **AI usage** page shows credits consumed and costs by model. However, you generally cannot trace consumed credits to specific prompts, sessions, or exact features at a per-request level.
+
 ## Viewing usage in your IDE
 
 You can view Copilot usage in certain IDEs directly. For example, in Visual Studio Code, you can view information about features included in your plan, your progress towards any limits on your plan, and the date your allowance resets.

@@ -308,7 +308,7 @@ For situations where you trust Copilot to run freely, you can use the `--allow-a
 
 You can use sandboxing to restrict what Copilot can access. Local sandboxing does not run the CLI itself in a sandbox; instead, the commands and tools that Copilot CLI runs on your behalf are restricted, limiting their access to your filesystem, network, and system capabilities. To enable local sandboxing, enter `/sandbox enable` inside a session.
 
-Alternatively, with cloud sandboxing, the entire Copilot CLI session runs remotely in an isolated environment. To start a Copilot CLI session in the cloud, run `copilot ‑‑cloud`. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
+Alternatively, with cloud sandboxing, the entire Copilot CLI session runs remotely in an isolated environment. To start a Copilot CLI session in the cloud, run `copilot --cloud`. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
 
 ### Toggle reasoning visibility
 

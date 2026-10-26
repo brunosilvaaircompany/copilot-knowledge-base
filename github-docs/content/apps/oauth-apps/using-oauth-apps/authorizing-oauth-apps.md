@@ -7,6 +7,8 @@ When an OAuth app wants to identify you by your account on GitHub, you'll see a 
 > [!TIP]
 > You must [verify your email address](/account-and-profile/how-tos/email-preferences/verifying-your-email-address) before you can authorize an OAuth app.
 
+If you see “This account is flagged, and therefore cannot authorize a third party application” while authorizing an OAuth app or choosing **Continue with GitHub**, your account has a restriction or is under review. This message isn't caused by missing email verification, organization approval, or SAML reauthorization. Retrying the authorization flow won't resolve the error while the restriction remains. For next steps, see [GitHub Appeal And Reinstatement](https://docs.github.com/en/free-pro-team@latest/site-policy/acceptable-use-policies/github-appeal-and-reinstatement).
+
 
 
 ## OAuth app access

@@ -24,17 +24,37 @@ With the Enterprise Accounts API, you can:
 * Invite administrators to your enterprise account.
 * Create new organizations in your enterprise account.
 
-For a list of the fields available with the Enterprise Accounts API, see [Managing Enterprise Accounts](https://docs.github.com/en/graphql/guides/managing-enterprise-accounts#graphql-fields-and-types-for-the-enterprise-accounts-api).
+For a list of the fields available with the Enterprise Accounts API, see [Managing Enterprise Accounts](https://docs.github.com/en/enterprise-cloud@latest/graphql/guides/managing-enterprise-accounts#graphql-fields-and-types-for-the-enterprise-accounts-api).
 
+
+  
 ## Getting started using GraphQL for enterprise accounts
 
 See [Using GraphQL Clients](https://docs.github.com/en/graphql/guides/using-graphql-clients) to get started using GraphQL to manage your enterprise accounts.
 
 For some example queries, see [An example query using the Enterprise Accounts API](#an-example-query-using-the-enterprise-accounts-api).
 
-### 1. Authenticate with your personal access token
+### 1. Choose an authentication method
 
-1. To authenticate with GraphQL, you need to generate a personal access token from developer settings. For more information, see [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+
+
+We recommend using a GitHub App for enterprise GraphQL operations that support it. GitHub Apps provide fine-grained permissions and short-lived tokens without relying on an enterprise owner's personal access token. Not all enterprise GraphQL queries and mutations support GitHub Apps. Use a personal access token for operations that do not support them.
+
+#### Using a GitHub App
+
+1. Register a GitHub App and select the enterprise permissions needed for your operations. See [Registering A GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app).
+1. Install the app on the enterprise you want to manage. If you are not an enterprise owner, you'll need to ask the enterprise owner to install it. See [Installing A GitHub App On Your Enterprise](https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-on-your-enterprise).
+1. Authenticate with an installation access token or a user access token, depending on the operation and whether the app needs to act on behalf of a user. The Insomnia instructions below use a user access token.
+
+An enterprise installation grants enterprise permissions only. It does not grant access to organizations or repositories in the enterprise. For organization or repository operations, the app needs separate installations on the relevant organizations and the appropriate permissions. Once installed in the organizations, your app can operate across them in a GraphQL query using a user access token. Installation tokens are locked to a single enterprise or organization account and cannot be used across account boundaries.
+
+#### Using a personal access token
+
+Use a personal access token if the operation you need does not support GitHub Apps, or if you are building automation to access multiple organizations or repository data in a single GraphQL query.
+
+
+
+1. To authenticate with GraphQL with a personal access token, create one in the developer settings. For more information, see [Managing Your Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 1. Grant admin and full control permissions to your personal access token for areas of your enterprise you'd like to access. For full permission to private repositories, organizations, teams, user data, and access to enterprise billing and profile data, we recommend you select these scopes for your personal access token:
     * `repo`
@@ -68,10 +88,55 @@ The next steps will use Insomnia.
     * For GitHub Enterprise Cloud: `https://api.github.com/graphql`
     * For GitHub Enterprise Cloud with Data Residency: `https://api.SUBDOMAIN.ghe.com/graphql`
 
-1. Select the "Auth" menu and click **Bearer Token**. If you've previously selected a different authentication method, the menu will be labeled with that method, such as "Basic Auth", instead.
-   ![Screenshot of the expanded "Auth" menu in Insomnia. The menu label, "Auth", and the "Bearer Token" option are outlined in dark orange.](/assets/images/developer/graphql/insomnia-bearer-token-option.png)
+
+
+#### Authenticate with a GitHub App
+
+This procedure uses the OAuth 2.0 authorization code flow to obtain a GitHub App **user access token**, not an installation access token.
+
+1. In your app's settings, set **Callback URL** to `http://localhost`. This must exactly match the **Redirect URL** you use in Insomnia.
+1. Copy your app's **Client ID**, not its App ID. Generate and copy a client secret. Keep the secret secure and do not share it in screenshots or source code. This flow does not use the app's private key.
+1. In Insomnia, select the **Auth** tab, then select **OAuth 2.0**. If you've previously selected a different authentication method, the tab may be labeled with that method.
+1. Configure these settings with your own app's credentials.
+
+   | Setting | Value |
+   | --- | --- |
+   | Enabled | ✔️ |
+   | Grant Type | Authorization Code |
+   | Authorization URL | `https://github.com/login/oauth/authorize` |
+   | Access Token URL | `https://github.com/login/oauth/access_token` |
+   | Client ID | Your app's Client ID |
+   | Client Secret | Your app's client secret |
+   | Use PKCE | {% ifversion pkce_support %}Selected |
+   |  |
+   | Code Challenge Method | SHA-256 |
+   |  |
+   | Redirect URL | `http://localhost` |
+   | Using default browser | Leave unchecked unless your enterprise has SSO enabled, which may fail in Insomnia's embedded browser. If it has SSO enabled, check this box and follow the directions for updating your app's redirect URL |
+   | Scope | Leave empty. GitHub Apps use permissions from the app registration, not OAuth scopes. |
+
+   
+   In both OAuth URLs, replace `https://github.com` with your instance's web URL, such as `https://HOSTNAME`. Do not use an API hostname or add `/api/v3`.
+   
+
+1. Click **Fetch Tokens**, sign in, and authorize the app as a user with the required enterprise permissions. The user access token is limited to the permissions and resources that both the user and the app can access. Insomnia uses the fetched token for your requests.
+
+For more information, see [Generating A User Access Token For A GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app).
+
+#### Authenticate with a personal access token
+
+If you use a personal access token instead, configure bearer authentication.
+
+{% endif %}
+
+1. Select the **Auth** menu and click **Bearer Token**. If you've previously selected a different authentication method, the menu will be labeled with that method, such as "Basic Auth", instead.
 1. In the "TOKEN" field, enter your personal access token from an earlier step.
    ![Screenshot of the "Bearer" authentication settings in Insomnia. The "TOKEN" field is outlined in dark orange.](/assets/images/developer/graphql/insomnia-base-url-and-pat.png)
+
+#### Set the content type
+
+After configuring your authentication method, set the request's content type.
+
 1. Click **Headers**.
    ![Screenshot of the settings tabs in Insomnia. The "Headers" tab is outlined in dark orange.](/assets/images/developer/graphql/json-content-type-header.png)
 1. Under the **Headers** tab, click **Add**.

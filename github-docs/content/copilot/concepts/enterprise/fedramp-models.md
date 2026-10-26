@@ -25,6 +25,7 @@ Enabling the FedRAMP policy restricts users to the following models:
 * Claude Opus 4.8
 * Claude Opus 5
 * Claude Opus 5.5
+* Gemini 4 Argon
 
 
 ## Client version requirements
