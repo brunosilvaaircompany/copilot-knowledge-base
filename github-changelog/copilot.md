@@ -1,7 +1,27 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-26 14:04 UTC  
+> Atualizado em: 2026-10-27 13:05 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [GitHub Copilot assisted permissions generally available](https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available)
+
+**Data:** 2026-10-26  **Categorias:** `Release`, `copilot`
+
+Assisted permissions are now generally available in GitHub Copilot CLI, GitHub Copilot app, and Visual Studio Code. When Copilot requests permission to run a command, access a file system path,&#8230;
+
+The post [GitHub Copilot assisted permissions generally available](https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [GPT-6.1 Terra in GitHub Copilot](https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot)
+
+**Data:** 2026-10-26  **Categorias:** `Release`, `copilot`
+
+GPT-6.1 Terra, OpenAI&#8217;s newest model, is now generally available in GitHub Copilot. It is designed for everyday agentic coding and terminal work at a lower cost than GPT-6.1 Sol. In&#8230;
+
+The post [GPT-6.1 Terra in GitHub Copilot](https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
