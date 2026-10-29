@@ -1,46 +1,76 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-28 13:55 UTC  
+> Atualizado em: 2026-10-29 14:02 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [GitHub Copilot supports server-to-server authentication](https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication)
+## [Route and orchestrate models with GitHub Copilot Fusion](https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion)
 
-**Data:** 2026-10-27  **Categorias:** `Release`, `copilot`
+**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `enterprise management tools`, `universe26`
 
-GitHub Copilot now supports server-to-server authentication for GitHub Apps installed on organizations, available in public preview. Services and agents built with the GitHub Copilot SDK can now make requests on&#8230;
+GitHub Copilot Fusion is generally available. Instead of picking a model for each task, choose Copilot Fusion and let Copilot intelligently route and orchestrate which models it uses for you.&#8230;
 
-The post [GitHub Copilot supports server-to-server authentication](https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [GitHub Copilot assisted permissions generally available](https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available)
-
-**Data:** 2026-10-26  **Categorias:** `Release`, `copilot`
-
-Assisted permissions are now generally available in GitHub Copilot CLI, GitHub Copilot app, and Visual Studio Code. When Copilot requests permission to run a command, access a file system path,&#8230;
-
-The post [GitHub Copilot assisted permissions generally available](https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available) appeared first on [The GitHub Blog](https://github.blog).
+The post [Route and orchestrate models with GitHub Copilot Fusion](https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [GPT-6.1 Terra in GitHub Copilot](https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot)
+## [GitHub Copilot app, Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases)
 
-**Data:** 2026-10-26  **Categorias:** `Release`, `copilot`
+**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`
 
-GPT-6.1 Terra, OpenAI&#8217;s newest model, is now generally available in GitHub Copilot. It is designed for everyday agentic coding and terminal work at a lower cost than GPT-6.1 Sol. In&#8230;
+Work doesn&#8217;t always fit in a single repository or session. A feature can span several repositories. A launch plan can pull in specs, designs, and assets without touching a repository&#8230;
 
-The post [GPT-6.1 Terra in GitHub Copilot](https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Copilot app, Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [GitHub Copilot in Visual Studio — September update](https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2)
+## [GitHub Enterprise now includes access to GitHub Copilot](https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot)
 
-**Data:** 2026-10-23  **Categorias:** `Release`, `copilot`
+**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`
 
-September 2026 brought deeper visibility into your work: explore pull requests without leaving chat, bring the AI model your team trusts, and fix vulnerable packages the moment Visual Studio flags&#8230;
+Enterprises working with a GitHub or Microsoft account team can now get Copilot included with GitHub Enterprise for every licensed user. Previously, you had to manage two things: how many&#8230;
 
-The post [GitHub Copilot in Visual Studio — September update](https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Enterprise now includes access to GitHub Copilot](https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [GitHub intelligence puts your code, context, and history to work](https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work)
+
+**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`
+
+Agents should understand more than your codebase&#8212;they should understand how your team works. Your preferences, repository conventions, skills, and custom instructions guide how changes should be made, while code in&#8230;
+
+The post [GitHub intelligence puts your code, context, and history to work](https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [Build shared workflows for your team with Copilot Automations](https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations)
+
+**Data:** 2026-10-28  **Categorias:** `Improvement`, `copilot`, `universe26`
+
+Shared Copilot Automations are rolling out, enabling teams to build and maintain AI-powered workflows together. With Copilot Automations, you can combine prompts, triggers, and tools to design workflows around the&#8230;
+
+The post [Build shared workflows for your team with Copilot Automations](https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [GitHub Copilot in VS Code, Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases)
+
+**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`, `vs code`
+
+This year, we focused on giving you more choice in how you work with GitHub Copilot in Visual Studio Code: which models you use, where your agents run, and how&#8230;
+
+The post [GitHub Copilot in VS Code, Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [Generate and edit images directly in Copilot](https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot)
+
+**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`
+
+You can now generate and edit images using natural language in GitHub Copilot. When you ask for an image, your selected reasoning model calls a dedicated image-generation tool powered by&#8230;
+
+The post [Generate and edit images directly in Copilot](https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

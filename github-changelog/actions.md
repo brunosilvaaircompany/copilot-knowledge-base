@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-26 14:04 UTC  
+> Atualizado em: 2026-10-29 14:02 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Meta API endpoints updated for Actions blob storage](https://github.blog/changelog/2026-10-22-meta-api-endpoints-updated-for-actions-blob-storage)
+## [GitHub Agentic Workflows generally available](https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available)
 
-**Data:** 2026-10-22  **Categorias:** `Improvement`, `actions`
+**Data:** 2026-10-28  **Categorias:** `Release`, `actions`, `copilot`, `universe26`
 
-We&#8217;re adding blob storage endpoints for GitHub Actions on github.com as part of our ongoing work to improve capacity and reliability. The meta API now includes these new endpoints. If&#8230;
+GitHub Agentic Workflows, an open source project from GitHub Next, is now generally available. With agentic workflows, you can automate reasoning-based tasks like issue triage, CI failure analysis, documentation updates,&#8230;
 
-The post [Meta API endpoints updated for Actions blob storage](https://github.blog/changelog/2026-10-22-meta-api-endpoints-updated-for-actions-blob-storage) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Agentic Workflows generally available](https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

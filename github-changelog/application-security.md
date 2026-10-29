@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-28 13:55 UTC  
+> Atualizado em: 2026-10-29 14:02 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Public monitoring adds triage, validity, API, and webhooks](https://github.blog/changelog/2026-10-23-public-monitoring-adds-triage-validity-api-and-webhooks)
+## [Security extension for the GitHub Copilot app](https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app)
 
-**Data:** 2026-10-23  **Categorias:** `Improvement`, `application security`
+**Data:** 2026-10-28  **Categorias:** `Release`, `application security`, `copilot`, `universe26`
 
-Public monitoring now includes alert management capabilities like automatic validity checks to help you triage and remediate leaked secrets at scale. Alert management with dismissals, timelines, and filtering Always-on validity&#8230;
+You can now work through your repository&#8217;s GitHub code scanning alerts without leaving the GitHub Copilot app. The new GitHub security extension, now in public preview, lets you find the&#8230;
 
-The post [Public monitoring adds triage, validity, API, and webhooks](https://github.blog/changelog/2026-10-23-public-monitoring-adds-triage-validity-api-and-webhooks) appeared first on [The GitHub Blog](https://github.blog).
+The post [Security extension for the GitHub Copilot app](https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
