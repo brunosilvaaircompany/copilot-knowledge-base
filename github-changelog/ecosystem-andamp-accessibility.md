@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-28 13:55 UTC  
+> Atualizado em: 2026-10-30 13:56 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Enterprise installations for GitHub Apps generally available](https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available)
+## [Webhook IP ranges added to the Meta API](https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api)
 
-**Data:** 2026-10-23  **Categorias:** `Improvement`, `ecosystem &amp; accessibility`, `enterprise management tools`
+**Data:** 2026-10-29  **Categorias:** `Improvement`, `ecosystem &amp; accessibility`
 
-Installing GitHub Apps on your enterprise is now generally available. You can replace classic PATs with GitHub Apps in more of your enterprise and organization automation with the expanded API&#8230;
+We&#8217;re adding IP ranges for GitHub webhook deliveries on github.com. The Meta API now includes these additional ranges in the hooks field. If you maintain a static network allowlist for&#8230;
 
-The post [Enterprise installations for GitHub Apps generally available](https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available) appeared first on [The GitHub Blog](https://github.blog).
+The post [Webhook IP ranges added to the Meta API](https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
