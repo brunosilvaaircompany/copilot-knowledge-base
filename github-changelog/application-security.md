@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-01 14:11 UTC  
+> Atualizado em: 2026-11-02 16:56 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [Security risk assessments include repository protection status](https://github.blog/changelog/2026-11-02-security-risk-assessments-include-repository-protection-status)
+
+**Data:** 2026-11-02  **Categorias:** `Improvement`, `application security`
+
+The GitHub code security risk assessment and secret risk assessment now show whether findings are in protected or unprotected repositories, helping you identify where to extend your security coverage. Organization&#8230;
+
+The post [Security risk assessments include repository protection status](https://github.blog/changelog/2026-11-02-security-risk-assessments-include-repository-protection-status) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 

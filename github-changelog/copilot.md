@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-01 14:11 UTC  
+> Atualizado em: 2026-11-02 16:56 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -72,15 +72,5 @@ The post [GitHub Copilot in VS Code, Universe releases](https://github.blog/chan
 Repository plugin defaults and enterprise-managed plugin controls are now generally available in VS Code, Copilot CLI, and the GitHub Copilot app. Trusted repositories can install and enable default plugins for&#8230;
 
 The post [Repository plugin defaults and enterprise plugin controls generally available](https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Generate and edit images directly in Copilot](https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot)
-
-**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`
-
-You can now generate and edit images using natural language in GitHub Copilot. When you ask for an image, your selected reasoning model calls a dedicated image-generation tool powered by&#8230;
-
-The post [Generate and edit images directly in Copilot](https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
