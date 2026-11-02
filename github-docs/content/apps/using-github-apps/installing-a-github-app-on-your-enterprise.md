@@ -1,8 +1,5 @@
 # Installing a GitHub App on your enterprise
 
-> [!NOTE]
-> Enterprise-installed GitHub Apps are in public preview and subject to change.
-
 ## About installing GitHub Apps on your enterprise
 
 Enterprise-installed GitHub Apps are apps that request enterprise-level permissions and can perform operations on your enterprise account. Unlike organization or user installations, they do not have access to any organization or repository permissions—they only manage the enterprise itself.
@@ -53,11 +50,11 @@ The installation token for an enterprise-installed GitHub Apps has the same rate
 
 ## Current limitations
 
-Enterprise-installed GitHub Apps are currently in public preview with the following limitations.
+Enterprise-installed GitHub Apps have some limitations in what they're able to do.
 
 ### API support
 
-Not all APIs support enterprise-installed GitHub Apps yet. As more permissions are built and APIs updated, support will become broader. For more information about the APIs and permissions that support enterprise-installed GitHub Apps, see [Permissions Required For GitHub Apps](https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps).
+Not all APIs support enterprise-installed GitHub Apps yet. As more permissions are built and APIs updated, support will become broader. For more information about the APIs and permissions that support enterprise-installed GitHub Apps, see [Permissions Required For GitHub Apps](https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps) and [Managing Enterprise Accounts](https://docs.github.com/en/graphql/guides/managing-enterprise-accounts).
 
 ### Webhook support
 

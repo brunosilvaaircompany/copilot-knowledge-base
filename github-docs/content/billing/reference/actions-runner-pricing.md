@@ -64,7 +64,9 @@ GitHub rounds the minutes and partial minutes each job uses up to the nearest wh
 * Larger runners are only billed at the per-minute rate for the amount of time workflows are executed on them. There is no cost associated with creating a larger runner that is not being used by a workflow.
 
 * For larger runners, there is no additional cost for configurations that assign public static IP addresses to a larger runner. For more information on larger runners, see [Larger Runners](https://docs.github.com/en/actions/concepts/runners/larger-runners).
-* Included minutes cannot be used for larger runners.
-* The larger runners are not free for public repositories.
+
+* The per-minute rates above determine the cost deducted from your included compute usage. Where larger runners are available, the cost of eligible usage can draw from the included value for billing accounts on GitHub Team and GitHub Enterprise Cloud.
+
+* Larger runners are not free for public repositories.
 
 * Custom images can only be used with larger runners. Jobs that use custom images are billed at the same per-minute rates as those runners, and storage for custom images is billed separately through GitHub Actions storage based on the amount of stored image data over time. For more information, see [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions#custom-image-storage).

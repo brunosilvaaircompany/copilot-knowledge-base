@@ -3,7 +3,9 @@
 ## About billing for GitHub Actions
 
 
-GitHub Actions usage is free for standard GitHub-hosted runners in public repositories, and for self-hosted runners. See [Choose The Runner For A Job](https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job#standard-github-hosted-runners-for-public-repositories). For private repositories, each GitHub account receives a quota of free minutes and storage for use with GitHub-hosted runners, depending on the account's plan. Any usage beyond the included amounts is billed to your account.
+GitHub Actions usage is free for standard GitHub-hosted runners in public repositories, and for self-hosted runners. See [Choose The Runner For A Job](https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job#standard-github-hosted-runners-for-public-repositories).
+
+For private repositories, each GitHub account receives storage and a monthly included compute usage, depending on the account's plan. The cost of eligible runner usage draws from the included compute usage, which is also available for cloud sandbox compute and memory. Additional usage is billed to your account.
  For more information, see [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
 
 

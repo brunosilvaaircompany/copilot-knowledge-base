@@ -55,11 +55,9 @@ You can enable local sandboxing inside a Copilot CLI session to restrict Copilot
 
 ### Cloud sandboxing
 
-> [!NOTE]
-> Cloud sandboxes for GitHub Copilot are in public preview and subject to change.
+You can start a Copilot CLI session in a cloud sandbox. The `--cloud` option starts the same kind of cloud sandbox as other Copilot clients, so the session runs in an isolated environment that GitHub hosts, without using your machine.
 
-
-You can start a Copilot CLI session inside an isolated, cloud-hosted environment with cloud sandboxes. This is useful when you want to run code without affecting your local machine, keep a session's state between uses, continue a session from a different machine, or run multiple tasks in parallel. Cloud sandbox policies inherit from Copilot cloud agent policies, so existing security controls like firewall rules extend to cloud sandboxes without additional setup.
+Because the session runs in the cloud, you can follow and steer it from any Copilot client. For example, you can start work in Copilot CLI, steer it from GitHub Mobile while away, then pick it back up in Copilot CLI or another client. For more information, see [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes).
 
 To start a cloud-backed session, run:
 
@@ -184,7 +182,7 @@ You can customize GitHub Copilot CLI in a number of ways:
 * **Custom agents**: Custom agents allow you to create different specialized versions of Copilot for different tasks. For example, you could customize Copilot to be an expert frontend engineer following your team's guidelines. GitHub Copilot CLI includes specialized custom agents that it automatically delegates common tasks to. For more information, see [Overview](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview#use-custom-agents).
 * **Hooks**: Hooks allow you to execute custom shell commands at key points during agent execution, enabling you to add validation, logging, security scanning, or workflow automation. See [Hooks](https://docs.github.com/en/copilot/concepts/agents/hooks).
 * **Skills**: Skills allow you to enhance the ability of Copilot to perform specialized tasks with instructions, scripts, and resources. For more information, see [About Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills).
-* **Copilot Memory**: Copilot Memory allows Copilot to build a persistent understanding of your repository by storing "memories", which are pieces of information about coding conventions, patterns, and preferences that Copilot deduces as it works. This reduces the need to repeatedly explain context in your prompts and makes future sessions more productive. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
+* **Copilot Memory**: Copilot Memory allows Copilot to build a persistent understanding of your repository by storing "memories", which are pieces of information about coding conventions, patterns, and preferences that Copilot deduces as it works. This reduces the need to repeatedly explain context in your prompts and makes future sessions more productive. Copilot CLI stores both repository-level facts and your personal preferences. In interactive sessions, depending on your permission settings, Copilot asks you to approve storing a new memory. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory) and [Create Memories](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/create-memories).
 
 ## Security considerations
 
@@ -208,8 +206,8 @@ When you start a GitHub Copilot CLI session, you'll be asked to confirm that you
 
 ### Allowed tools
 
-The first time that Copilot needs to use a tool that could be used to modify or execute a file—for example, `touch`, `chmod`, `node`, or `sed`
-—it will ask you whether you want to allow it to use that tool.
+In manual approval mode, Copilot asks for your approval when a tool request isn't already allowed. This can include tools that modify or execute files—for example, `touch`, `chmod`, `node`, or `sed`
+.
 
 Typically, you can choose from three options:
 
@@ -299,11 +297,13 @@ copilot --allow-tool='My-MCP-Server' --deny-tool='My-MCP-Server(tool_name)'
 
 It's important to be aware of the security implications of using the approval command-line options. These options allow Copilot to execute commands needed to complete your request, without giving you the opportunity to review and approve those commands before they are run. While this streamlines workflows, and allows headless operation of the CLI, it increases the risk of unintended actions being taken that might result in data loss or corruption, or other security issues.
 
-You can control which tools Copilot CLI can use by responding to approval prompts when Copilot attempts to use a tool, by specifying permissions with command-line flags, or (in an interactive session) by using slash commands (such as `/allow-all` and `/yolo`. See [Configure Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/configure-copilot-cli#setting-allowed-tools).
+You can control which tools Copilot CLI can use by responding to approval prompts when Copilot attempts to use a tool, by specifying permissions with command-line flags, or (in an interactive session) by using slash commands, such as `/permissions allow-all` and `/yolo`. See [Configure Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/configure-copilot-cli#setting-allowed-tools).
+
+To reduce how often you're prompted for an approval decision, without granting blanket permissions, you can use assisted permissions by entering the `/permissions assisted` slash command in an interactive session. A large language model assesses eligible permission requests and automatically approves those it judges to be safe. Existing permissions and enterprise rules still apply, and requests that still need your approval are put to you. For more information, see [Allowing Safe Commands](https://docs.github.com/en/copilot/concepts/customizations/allowing-safe-commands).
 
 ### Risk mitigation
 
-You can mitigate the risks associated with using the automatic approval options by running Copilot CLI in a sandboxed environment. GitHub provides first-party sandboxing for this, with local sandboxing to restrict access on your machine and cloud sandboxing for fully isolated execution. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
+You can mitigate the risks associated with using the automatic approval options by running Copilot CLI in a sandboxed environment. GitHub provides first-party sandboxing for this, with local sandboxing to restrict access on your machine and cloud sandboxing for fully isolated execution. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-and-local-sandboxes) and [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes).
 
 Alternatively, you can run Copilot CLI in a virtual machine, container, or dedicated system with tightly controlled permissions and network access.
 

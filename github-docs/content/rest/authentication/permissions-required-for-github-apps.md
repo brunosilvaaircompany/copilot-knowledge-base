@@ -12,3 +12,12 @@ These permissions are required to access private resources. Some endpoints can a
 
 
 Some endpoints require more than one permission. Other endpoints work with any one permission from a set of permissions. In these cases, the "Additional permissions" column will include a checkmark. For full details about the permissions that are required to use the endpoint, see the documentation for that endpoint.
+
+
+
+
+## Enterprise permission availability
+
+The "Enterprise billing" permission group in the generated tables below is not generally available when registering an enterprise-owned GitHub App, on either GitHub.com or GHE.com. A table entry does not mean that your enterprise can grant the permission. Do not plan an integration using this permission unless it is available in your app's permission settings.
+
+For the supported authentication methods for cost center and budget endpoints, see [Cost Centers](https://docs.github.com/en/rest/billing/cost-centers) and [Budgets](https://docs.github.com/en/rest/billing/budgets).

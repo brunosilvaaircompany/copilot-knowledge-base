@@ -21,7 +21,7 @@ Third-party threat intelligence services, IP reputation scanners, or firewall ve
 
 GitHub does not control third-party IP reputation lists and cannot comment on their accuracy or update frequency. To verify whether an IP address belongs to GitHub-hosted runners, check the IP ranges returned by the Meta API.
 
-If you have a security concern about a Microsoft-owned IP address, report it to the [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/report/).
+Report security concerns about an IP address to the infrastructure provider that owns it. For Microsoft-owned IP addresses, report concerns to the [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/report/).
 
 
 For more information about GitHub Actions runner IP ranges, see [Troubleshoot Workflows](https://docs.github.com/en/actions/how-tos/troubleshoot-workflows#runner-ip-addresses-flagged-by-security-scanners).

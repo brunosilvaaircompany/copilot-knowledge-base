@@ -1,8 +1,12 @@
 # Configuring OpenTelemetry for your instance
 
-OpenTelemetry metrics are the future foundation for monitoring, available from GitHub Enterprise Server 3.18 onward. This new monitoring stack provides enhanced observability and management capabilities compared to the legacy collectd system.
+OpenTelemetry metrics are the foundation for monitoring GitHub Enterprise Server, available from version 3.18 onward. This monitoring stack provides enhanced observability and management capabilities compared to the legacy collectd system.
 
-Collectd metrics continue to be gathered by default and remain fully supported in this release.
+
+
+New installations of version 3.19 and later use OpenTelemetry metrics by default. On version 3.18, and on instances upgraded from earlier releases, collectd metrics are still gathered by default and remain supported in this release. Collectd is retired in version 3.23, and upgrading to 3.23 disables it. Migration to OpenTelemetry is recommended before upgrading instances that still use collectd. See [Migration Guidance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/migration-guidance).
+
+
 
 
 
@@ -29,9 +33,62 @@ Collectd metrics continue to be gathered by default and remain fully supported i
 
 
 
-OpenTelemetry metrics are enabled by default for **new installations** of GitHub Enterprise Server 3.19 and later. Upgrades to GitHub Enterprise Server 3.19 will still have `collectd` metrics enabled by default, but you can choose to switch to OpenTelemetry metrics.
+{% ifversion ghes > 3.18 %}
+
+OpenTelemetry metrics are enabled by default for **new installations** of GitHub Enterprise Server 3.19 and later. Instances upgraded from earlier releases still have collectd metrics enabled by default. For the complete migration procedure for instances that still use collectd, including how to disable collectd, see [Migration Guidance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/migration-guidance).
 
 
+
+### Using the Management Console
+
+1. From an administrative account on GitHub Enterprise Server, in the upper-right corner of any page, click {% octicon "rocket" aria-label="Site admin" %}.
+1. If you're not already on the "Site admin" page, in the upper-left corner, click **Site admin**.
+
+1. In the "{% octicon "rocket" aria-hidden="true" aria-label="rocket" %} Site admin" sidebar, click **Management Console**.
+
+
+1. In the monitoring settings, select **Enable OpenTelemetry**.
+
+1. Under the "Settings" sidebar, click **Save settings**.
+
+   > [!NOTE]
+   > Saving settings in the Management Console restarts system services, which could result in user-visible downtime.
+
+1. Wait for the configuration run to complete.
+
+
+
+### Using the command line
+
+1. SSH into your GitHub Enterprise Server instance. If your instance comprises multiple nodes, for example if high availability or geo-replication are configured, SSH into the primary node. If you use a cluster, you can SSH into any node. Replace HOSTNAME with the hostname for your instance, or the hostname or IP address of a node. For more information, see [Accessing The Administrative Shell SSH](https://docs.github.com/en/enterprise-server@latest/admin/administering-your-instance/administering-your-instance-from-the-command-line/accessing-the-administrative-shell-ssh).
+
+   ```shell copy
+   ssh -p 122 admin@HOSTNAME
+   ```
+
+1. Run the following command to enable OpenTelemetry metrics.
+
+   ```shell
+   ghe-config observability.metrics.next-enabled true
+   ```
+
+1. To apply the configuration, run the following command.
+
+   > [!NOTE]
+   > During a configuration run, services on your GitHub Enterprise Server instance may restart, which can cause brief downtime for users.
+
+    ```shell copy
+    ghe-config-apply
+    ```
+
+1. Wait for the configuration run to complete.
+
+
+{% else %}
+
+OpenTelemetry metrics are always enabled and are the only supported metrics stack. Collectd is retired in GitHub Enterprise Server 3.23 and later, and upgrading from an earlier version disables it. For information about post-upgrade checks and historical collectd data, see [Migration Guidance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/migration-guidance).
+
+{% endif %}
 
 ## Performance considerations
 
@@ -164,5 +221,5 @@ sudo journalctl -u victoriametrics -f
 ## Next steps
 
 * To enable advanced monitoring dashboards, see [Advanced Dashboards](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/advanced-dashboards)
-* Exploring OpenTelemetry metrics, see [Using Grafana To Analyze Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/using-grafana-to-analyze-opentelemetry-metrics).
+* To explore OpenTelemetry metrics, see [Using Grafana To Analyze Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/using-grafana-to-analyze-opentelemetry-metrics)
 * To set up external monitoring, see [Setting Up External Monitoring With Opentelemetry](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/setting-up-external-monitoring-with-opentelemetry).

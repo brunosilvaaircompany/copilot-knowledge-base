@@ -1,5 +1,3 @@
-# Enforcing policies for GitHub Copilot in your enterprise
-
 Enterprise admins can:
 
 * Enforce Copilot policies for organizations in the enterprise. See [Manage Enterprise Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-enterprise-policies).

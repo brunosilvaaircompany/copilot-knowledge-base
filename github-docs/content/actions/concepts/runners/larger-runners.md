@@ -12,7 +12,7 @@ To learn about larger runners, see [the GitHub Enterprise Cloud documentation](/
 ## Billing
 
 > [!NOTE]
-> Larger runners are not eligible for the use of included minutes on private repositories. For both private and public repositories, when larger runners are in use, they will always be billed at the per-minute rate.
+> Where available, larger runner costs can draw from the included compute usage for accounts on GitHub Team and GitHub Enterprise Cloud. After the included value is consumed, usage is billed at the per-minute rate. Usage in public repositories is also billed at the per-minute rate.
 
 Compared to standard GitHub-hosted runners, larger runners are billed differently. Larger runners are only billed at the per-minute rate for the amount of time workflows are executed on them. There is no cost associated with creating a larger runner that is not being used by a workflow.
  For more information, see [Actions Runner Pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing).

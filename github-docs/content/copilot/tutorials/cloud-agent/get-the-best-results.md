@@ -1,7 +1,7 @@
 # Best practices for using GitHub Copilot to work on tasks
 
 > [!NOTE]
-> For an introduction to Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
+> For an introduction to Copilot in the cloud, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
 ## Making sure your issues are well-scoped
 
@@ -12,7 +12,7 @@ GitHub Copilot provides better results when assigned clear, well-scoped tasks. A
 * Directions about which files need to be changed.
 
 > [!TIP]
-> Copilot cloud agent has the ability to search your codebase, including semantic code search, which helps it find relevant code based on meaning rather than just exact text matches. Even if you don't specify exact file paths in a task, the agent can often discover the right code on its own.
+> Copilot in the cloud has the ability to search your codebase, including semantic code search, which helps it find relevant code based on meaning rather than just exact text matches. Even if you don't specify exact file paths in a task, the agent can often discover the right code on its own.
 
 If you pass a task to Copilot by assigning an issue, it's useful to think of the issue you assign to Copilot as a prompt. Consider whether the issue description is likely to work as an AI prompt, and will enable Copilot to make the required code changes.
 
@@ -42,7 +42,7 @@ Issues that you may choose to work on yourself, rather than assigning to Copilot
 
 ## Researching, planning, and iterating before opening a pull request
 
-Rather than asking Copilot to open a pull request right away, you can use Copilot cloud agent to research a repository, create an implementation plan, and make iterative code changes on a branch first. This lets you review the diff and refine the work before deciding to open a pull request.
+Rather than asking Copilot to open a pull request right away, you can use Copilot to research a repository, create an implementation plan, and make iterative code changes on a branch first. This lets you review the diff and refine the work before deciding to open a pull request.
 
 This workflow is useful when you want to:
 
@@ -75,7 +75,7 @@ By adding custom instructions to your repository, you can guide Copilot on how t
 
 If Copilot is able to build, test and validate its changes in its own development environment, it is more likely to produce good pull requests which can be merged quickly.
 
-Copilot cloud agent supports a number of different types of custom instructions files:
+Copilot in the cloud supports a number of different types of custom instructions files:
 
 * `/.github/copilot-instructions.md`
 * `/.github/instructions/**/*.instructions.md`
@@ -156,11 +156,11 @@ When writing Playwright tests, please follow these guidelines to ensure consiste
 
 ## Organization-wide custom instructions
 
-Copilot cloud agent leverages your organization's custom instructions as part of its work. Copilot cloud agent first prioritizes repository-wide custom instructions. For more information on how to configure organization custom instructions, see [Add Organization Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-organization-instructions).
+Copilot in the cloud leverages your organization's custom instructions as part of its work. Copilot in the cloud first prioritizes repository-wide custom instructions. For more information on how to configure organization custom instructions, see [Add Organization Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-organization-instructions).
 
 ## Using the Model Context Protocol (MCP)
 
-You can extend the capabilities of Copilot cloud agent by using MCP. This allows Copilot cloud agent to use tools provided by local and remote MCP servers. The GitHub MCP server and [Playwright MCP server](https://github.com/microsoft/playwright-mcp) are enabled by default. For more information, see [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers).
+You can extend the capabilities of Copilot in the cloud by using MCP. This allows Copilot to use tools provided by local and remote MCP servers. The GitHub MCP server and [Playwright MCP server](https://github.com/microsoft/playwright-mcp?utm_source=best-practices-using-work-tasks-article-playwright-mcp&utm_medium=docs&utm_campaign=universe-2026) are enabled by default. For more information, see [Configure MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers).
 
 ## Creating custom agents
 
@@ -175,16 +175,16 @@ Here are some examples of custom agents you could create:
 
 By default, custom agents inherit any MCP server tools that have been configured in the repository, but you can also configure custom agents to only have access to specific tools.
 
-You can use custom agents anywhere you use Copilot cloud agent, including when assigning an issue or prompting with a task.
+You can use custom agents anywhere you use Copilot in the cloud, including when assigning an issue or prompting with a task.
 
 For more information on creating and configuring custom agents, see [Create Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents).
 
 ## Pre-installing dependencies in GitHub Copilot's environment
 
-While working on a task, Copilot has access to its own ephemeral development environment, powered by GitHub Actions, where it can explore your code, make changes, execute automated tests and linters and more.
+During a Copilot cloud agent session, Copilot has access to its own ephemeral development environment, either in a cloud sandbox or on GitHub Actions, where it can explore your code, make changes, execute automated tests and linters and more.
 
 If Copilot is able to build, test and validate its changes in its own development environment, it is more likely to produce good pull requests which can be merged quickly.
 
 To do that, it will need your project's dependencies. Copilot can discover and install these dependencies itself via a process of trial and error - but this can be slow and unreliable, given the non-deterministic nature of large language models (LLMs).
 
-You can configure a `copilot-setup-steps.yml` file to pre-install these dependencies before the agent starts working so it can hit the ground running. For more information, see [Customize The Agent Environment](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment#preinstalling-tools-or-dependencies-in-copilots-environment).
+When Copilot runs on GitHub Actions, you can configure a `copilot-setup-steps.yml` file to pre-install these dependencies before the agent starts working so it can hit the ground running. For more information, see [Customize The Agent Environment](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment#preinstalling-tools-or-dependencies-in-copilots-environment).

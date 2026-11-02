@@ -20,7 +20,7 @@ Copilot Chat is available from any page on GitHub. Some questions work best in a
 
 1. Within a conversation thread, you can ask follow-up questions. Copilot will answer within the context of the conversation.
 
-### Viewing an editing generated files
+### Viewing and editing generated files
 
 > [!NOTE]
 > This feature is currently in public preview and subject to change.

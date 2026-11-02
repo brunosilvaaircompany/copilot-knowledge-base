@@ -1,16 +1,12 @@
 # Creating GitHub Agentic Workflows
 
-> [!NOTE]
-> GitHub Agentic Workflows are in public preview and subject to change.
-
-
 ## About creating GitHub Agentic Workflows
 
 You can create GitHub Agentic Workflows with a coding agent (recommended) or manually. A workflow is a markdown file in `.github/workflows/` that contains YAML frontmatter for configuration and natural language instructions for the AI agent.
 
 To create an agentic workflow, you define the workflow in markdown, compile it into a `.lock.yml` file, commit both files, then run it through GitHub Actions triggers or the GitHub CLI.
 
-This article focuses on the core tasks: creating, updating, and reusing workflows. For complete technical detail and additional patterns, use the [GitHub Agentic Workflows documentation site](https://github.github.com/gh-aw/).
+This article focuses on the core tasks: creating, updating, and reusing workflows. For complete technical detail and additional patterns, use the [GitHub Agentic Workflows documentation site](https://github.github.com/gh-aw/?utm_source=creating-agentic-workflows-article-gh-aw-repo&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Prerequisites
 
@@ -58,7 +54,7 @@ If you are using GitHub Copilot in an organization-owned repository, you can use
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -82,7 +78,7 @@ permissions:
 
 For personal repositories or third-party AI engines, you need to create a repository secret storing a personal access token or API key. For GitHub Copilot, the secret is `COPILOT_GITHUB_TOKEN`, which stores a fine-grained personal access token.
 
-If you use `gh aw add-wizard`, the setup flow prompts you to create that secret. If you are creating an agentic workflow from the GitHub web interface or manually, you will first need to add the secret yourself in your repository's GitHub Actions secrets, either in the GitHub UI or with `gh aw secrets set` in the CLI. For instructions, see [authentication reference](https://github.github.com/gh-aw/reference/auth/).
+If you use `gh aw add-wizard`, the setup flow prompts you to create that secret. If you are creating an agentic workflow from the GitHub web interface or manually, you will first need to add the secret yourself in your repository's GitHub Actions secrets, either in the GitHub UI or with `gh aw secrets set` in the CLI. For instructions, see [authentication reference](https://github.github.com/gh-aw/reference/auth/?utm_source=creating-agentic-workflows-article-gh-aw-auth-reference&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Creating a workflow
 
@@ -118,8 +114,8 @@ The recommended way to create agentic workflows is to use a CLI coding agent or 
 
 You can also create agentic workflows:
 
-* In the GitHub web interface. See [creating workflows in the GitHub web interface](https://github.github.com/gh-aw/setup/creating-workflows/#github-web-interface).
-* Manually. See [creating workflows by manual editing](https://github.github.com/gh-aw/setup/creating-workflows/#manual-editing).
+* In the GitHub web interface. See [creating workflows in the GitHub web interface](https://github.github.com/gh-aw/setup/creating-workflows/?utm_source=creating-agentic-workflows-article-gh-aw-setup-web-interface&utm_medium=docs&utm_campaign=universe-2026#github-web-interface).
+* Manually. See [creating workflows by manual editing](https://github.github.com/gh-aw/setup/creating-workflows/?utm_source=creating-agentic-workflows-article-gh-aw-setup-creating&utm_medium=docs&utm_campaign=universe-2026#manual-editing).
 
 ## Workflow structure reference
 
@@ -139,7 +135,7 @@ Key frontmatter fields:
 | `safe-outputs` | Write operations the agent is allowed to perform (for example, `create-issue`, `add-comment`, `create-pull-request`). |
 | `engine` | The AI engine to use (`copilot` is the default; `claude`, `codex`, and `gemini` are also supported). |
 
-For the full frontmatter reference, see the [GitHub Agentic Workflows frontmatter documentation](https://github.github.com/gh-aw/reference/frontmatter/).
+For the full frontmatter reference, see the [GitHub Agentic Workflows frontmatter documentation](https://github.github.com/gh-aw/reference/frontmatter/?utm_source=creating-agentic-workflows-article-gh-aw-reference&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Example agentic workflow
 
@@ -192,7 +188,7 @@ To update an existing workflow:
 1. Commit and push both updated files.
 1. Open a pull request and verify GitHub Actions checks.
 
-For detailed editing guidance, see [Editing Workflows](https://github.github.com/gh-aw/guides/editing-workflows/).
+For detailed editing guidance, see [Editing Workflows](https://github.github.com/gh-aw/guides/editing-workflows/?utm_source=creating-agentic-workflows-article-gh-aw-editing-workflows&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Reusing workflows
 
@@ -210,7 +206,7 @@ Only import workflows from sources you trust, and review what a workflow does be
 
 When you update an imported workflow, GitHub CLI tries to preserve local changes. If there are merge conflicts, resolve them and run `gh aw compile` again.
 
-For more information, see [Reusing Workflows](https://github.github.com/gh-aw/guides/reusing-workflows/).
+For more information, see [Reusing Workflows](https://github.github.com/gh-aw/guides/reusing-workflows/?utm_source=creating-agentic-workflows-article-gh-aw-reusing-workflows&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Next steps
 

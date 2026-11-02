@@ -53,7 +53,8 @@ GitHub Enterprise is our most comprehensive plan. In addition to the features in
 * An enterprise account, which provides a single place to manage teams, grant access, enforce policies, and audit activity.
 * Additional features such as SAML authentication and internal repositories. For a detailed list, see [GitHub Pricing](https://github.com/pricing).
 * Extra allowances for usage-based products such as GitHub Actions.
-* The option to add GitHub Premium Support, and GitHub Copilot Enterprise.
+* Included Copilot access for eligible GitHub Enterprise Cloud enterprises. See [Whats Changing With GitHub Enterprise And Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/whats-changing-with-github-enterprise-and-copilot).
+* The option to add GitHub Premium Support.
 
 When businesses adopt GitHub Enterprise, their return on investment (ROI) is high. For example, their developers **save 45 minutes per day**, and onboarding and **training time is reduced by 40%**. See [The Total Economic Impact of GitHub Enterprise](https://resources.github.com/forrester/).
 

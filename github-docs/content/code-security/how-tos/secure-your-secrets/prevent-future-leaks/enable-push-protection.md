@@ -10,3 +10,9 @@
 
 1. If you have not already enabled Secret Protection, to the right of "Secret Protection", click **Enable**.
 1. In the "Secret Protection" section, to the right of "Push protection", click **Enable**.
+
+
+
+## Next steps
+
+* [Enable Ai Push Protection](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/prevent-future-leaks/enable-ai-push-protection)

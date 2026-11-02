@@ -12,7 +12,7 @@ You can also configure Copilot in GitHub Desktop to use your own LLM provider (B
 * You have the base URL and at least one model identifier for the provider you want to use.
 
 > [!NOTE]
-> Custom LLM providers in GitHub Desktop require access to Copilot in GitHub Desktop. To use your own LLM models with Copilot CLI, see [Use Byok Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models).
+> Custom LLM providers in GitHub Desktop require access to Copilot in GitHub Desktop. To use your own LLM models with Copilot CLI, see [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models).
 
 ## Supported provider types
 
@@ -112,4 +112,4 @@ Always review generated commit messages and conflict-resolution suggestions befo
 
 * [Committing And Reviewing Changes To Your Project In GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop)
 * [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models)
-* [Use Byok Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models)
+* [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models)

@@ -23,7 +23,7 @@ You can ask Copilot cloud agent to investigate a repository before deciding what
 
 In the same session, you can review the findings, steer the investigation with follow-up prompts, and ask the agent to create a plan. You can then continue into code changes. This makes cloud agent useful when research is the first phase of a larger development task.
 
-This workflow is available through GitHub.com, including the Agents tab, agents panel, dashboard, and Copilot Chat. It is also available in public preview through the Microsoft Teams and Slack integrations. Other integrations, such as Azure Boards, Jira, and Linear, only support asking the agent to create a pull request directly.
+This workflow is available through GitHub.com, including the Agents tab, agents panel, dashboard, and Copilot Chat. It is also available through the Microsoft Teams and Slack integrations. Other integrations, such as Azure Boards, Jira, and Linear, only support asking the agent to create a pull request directly.
 
 For more information, see [Research Plan Iterate](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/research-plan-iterate).
 

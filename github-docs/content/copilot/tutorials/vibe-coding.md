@@ -174,7 +174,7 @@ You can now start planning for an initial implementation of your application. It
 
 1. Keep your chat conversation open, as Copilot will use this in the next series of steps.
 
-## Building your application with Copilot cloud agent
+## Building your application with Copilot
 
 When you think the plan contains enough detail:
 

@@ -48,6 +48,7 @@ In the table below:
 > * GitHub Actions workflows must be located in the `.github/workflows/` directory of a repository to be recognized as manifests. Any actions or workflows referenced using the syntax `jobs[*].steps[*].uses` or `jobs.<job_id>.uses` will be parsed as dependencies. For more information, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax).
 > * For GitHub Actions, alerts are only generated for actions that use semantic versioning, not SHA versioning.
  For more information, see [Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts) and [Dependabot Version Updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-version-updates).
+> * When pnpm writes `pnpm-lock.yaml` as two YAML documents, the dependency graph does not detect the dependencies in that file. This is the default format for pnpm 12 projects that pin a pnpm version. For more information, see [Supported Ecosystems And Repositories](https://docs.github.com/en/code-security/reference/supply-chain-security/supported-ecosystems-and-repositories#pnpm).
 
 
 

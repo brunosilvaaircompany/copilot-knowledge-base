@@ -27,18 +27,12 @@ If you use the REST API for secret scanning, you can use the `Secret type` to re
 |------------|:-:|:-:|:-:|
 | User alerts | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Partner notifications | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} (if partner) |
-| Push protection (default) | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} (most) |
-| Push protection (configurable) | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | Some |
+| Push protection | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} (most) |
 | Validity checks | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | Some |
 | Extended metadata | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | Some |
 | Base64 format support | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | Some |
 
-
-
-> [!NOTE]
-> Validity{% ifversion secret-scanning-extended-metadata-checks %} and extended metadata checks for partner patterns are only available to users with GitHub Team or GitHub Enterprise who enable the feature as part of GitHub Secret Protection.
-
-{% endif %}
+The table shows the capabilities that each category supports. Whether a capability is available to you also depends on your plan and your repository's settings.
 
 ## Supported generic patterns
 
@@ -99,7 +93,7 @@ Secret scanning uses Copilot to detect generic secrets using AI.{% ifversion fpt
 |----------|:--------------------|
 |  Generic | password |
 
->[!NOTE] Push protection and validity checks are not supported for passwords.
+>[!NOTE] Validity checks are not supported for passwords.
 {% endif %}
 
 ## Supported provider patterns

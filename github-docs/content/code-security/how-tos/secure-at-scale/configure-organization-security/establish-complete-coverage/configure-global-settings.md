@@ -89,7 +89,13 @@ You can recommend that repositories in your organization use the "Extended" quer
 
 
 
-* [Enabling AI Scan](#enabling-ai-scan)
+* [Enabling AI Scan for pull requests](#enabling-ai-scan-for-pull-requests)
+
+
+* [Enabling AI Scan for repositories](#enabling-ai-scan-for-repositories)
+
+
+* [Enabling AI applications scanning](#enabling-ai-applications-scanning)
 
 * [Expanding CodeQL analysis](#expanding-codeql-analysis)
 
@@ -112,9 +118,27 @@ You can select **Copilot Autofix** to enable Copilot Autofix for all the reposit
 
 
 
-### Enabling AI Scan
+### Enabling AI Scan for pull requests
 
-You can select **AI Scan** to enable AI Scan for eligible repositories in your organization where code scanning is enabled. Repositories inherit the organization setting, but repository administrators can opt out for individual repositories. See [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
+You can select **AI Scan for pull requests** to enable the feature for eligible repositories in your organization where code scanning is enabled. Repositories inherit the organization setting, but repository administrators can opt out for individual repositories. See [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections).
+
+
+
+
+
+### Enabling AI Scan for repositories
+
+You can select **AI Scan for repositories** to enable the feature for eligible repositories in your organization where code scanning is enabled. Repositories inherit the organization setting, but repository administrators can opt out for individual repositories. See [Ai Scan For Repositories](https://docs.github.com/en/code-security/concepts/code-scanning/ai-scan-for-repositories).
+
+
+
+
+
+### Enabling AI applications scanning
+
+You can select **Scan for AI applications** to enable AI applications scanning for eligible repositories in your organization. This setting is separate from **AI Scan** and controls a different detector. Repositories inherit the organization setting, but repository administrators can opt out for individual repositories. See [Ai Applications Scanning For Pull Requests](https://docs.github.com/en/code-security/concepts/code-scanning/ai-applications-scanning-for-pull-requests).
+
+If your organization already has AI Scan enabled for pull requests, or you're moving from the private preview of AI applications scanning, you still need to select **Scan for AI applications** separately. Enabling AI Scan doesn't enable AI applications scanning.
 
 
 

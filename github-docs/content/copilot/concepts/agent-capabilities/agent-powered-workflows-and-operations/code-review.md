@@ -55,7 +55,7 @@ Copilot code review utilizes agentic capabilities to extend its functionality.
 * **Full project context gathering**. This provides more specific, accurate, and contextually aware code reviews. This capability analyzes your entire repository to better understand the context of code changes.
 * **The ability to pass suggestions to Copilot cloud agent**. This automates creating a new pull request against your branch with the suggested fixes applied. Passing suggestions to Copilot cloud agent is in public preview and subject to change.
 
-These capabilities are enabled automatically for all plans that include Copilot code review. See [Review effort level](#review-effort-level) later in this article for information about choosing between Lite and Balanced analysis levels.
+These capabilities are enabled automatically for all plans that include Copilot code review. See [Review effort level](#review-effort-level) later in this article for information about choosing between Lite, Balanced, and Max analysis levels.
 
 If GitHub Actions is unavailable or if Actions workflows used by Copilot code review fail, reviews will still be generated. However, they will not include the additional features provided by the agentic capabilities.
 
@@ -76,9 +76,16 @@ You can view the GitHub Actions minutes associated with Copilot code review runs
 
 ### Estimated consumption
 
-A review typically consumes an estimated $0.05 USD to $1 USD worth of AI credits with "Lite" effort, and $0.25 USD to $5 USD worth of AI credits with "Balanced" effort.
+The following table shows the estimated AI credits consumption of a single review at each review effort level.
 
-Consumption generally increases with pull request size and repository custom instructions, and the ranges may change as models evolve. These estimates do not include GitHub Actions minutes.
+| Review effort level | Typical range per review | Approximate average per review |
+| ------------------- | ------------------------ | ------------------------------ |
+| Lite | $0.05 USD to $1 USD | $0.25 USD |
+| Balanced | $0.25 USD to $5 USD | $1.50 USD |
+| Max | $1.50 USD to $25 USD | $10 USD |
+
+These figures are estimates only. Consumption generally increases with pull request size and repository custom instructions. Actual costs can fall outside these ranges and may change as models evolve. Estimates exclude GitHub Actions minutes.
+
 
 Repository and organization administrators can set the default review effort level for automatic code reviews. For configuration steps, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review#customizing-copilot-code-review-1).
 
@@ -169,8 +176,13 @@ Copilot code review supports multiple Copilot review effort levels, so you can c
 
 * **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies.
 * **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes (default). Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes, than Lite reviews.
+* **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
 
-Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
+>[!NOTE] Max review effort level is currently in public preview and subject to change.
+
+Use Max for high-risk or release-critical pull requests that need the most thorough review. Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
+
+Higher effort levels consume more AI credits. On average, a review costs an estimated $0.25 USD with Lite, $1.50 USD with Balanced, and $10 USD with Max. For typical ranges, see [Estimated consumption](#estimated-consumption).
 
 You can select Copilot review effort when requesting a review in the pull request, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort in your Copilot code review settings. Organization owners can set a default Copilot review effort for automatic code reviews in their organization. Repository administrators can override the organization default for a specific repository.
 
@@ -188,10 +200,6 @@ After Copilot code review reviews a pull request, the pull request overview comm
 For configuration steps, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review).
 
 ## Copilot approvals
-
-> [!NOTE]
-> Copilot approvals are in public preview and subject to change.
-
 
 Every Copilot code review includes an approval assessment in the overview comment, indicating whether Copilot has determined the pull request ready to approve after reviewing it. By default, Copilot's reviews do not count toward required approvals for the pull request.
 
@@ -257,9 +265,9 @@ Copilot code review can draw on several sources of customization, and each serve
 
 For more information, see [Add Skills](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) and [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions).
 
-### Copilot Memory (public preview)
+### Copilot Memory
 
-If you have a Copilot Pro, Copilot Pro+, or Copilot Max plan, you can enable Copilot Memory. This allows Copilot to store useful details it has learned about a repository. Copilot can then use this information when it reviews pull requests in that repository. For more information, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory).
+When repository settings and applicable policies allow it, Copilot can store useful details it has learned about a repository and use them when reviewing pull requests. Copilot code review uses repository-level facts, not user-level preferences. For defaults and settings, see [Copilot Memory](https://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory#default-settings).
 
 ## Getting detailed code quality feedback across your repository
 

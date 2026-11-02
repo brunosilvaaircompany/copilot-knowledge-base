@@ -4,6 +4,8 @@
 
 To keep your account secure, you must authenticate before you can use GitHub Desktop to access resources on GitHub.
 
+GitHub Desktop uses short-lived tokens when you authenticate to GitHub.com. This improves security by limiting how long a compromised token can be used.
+
 Before you authenticate, you must already have an account on GitHub. For more information, see [Creating An Account On GitHub](https://docs.github.com/en/account-and-profile/how-tos/account-management/creating-an-account-on-github). If you're part of an organization that uses Enterprise Managed Users and you do not have an account, contact your enterprise administrator.{% elsif ghes %} If you're a member of an organization that uses GitHub Enterprise Server and you do not have an account, contact your GitHub Enterprise site administrator.
 
 

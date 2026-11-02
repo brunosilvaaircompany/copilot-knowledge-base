@@ -1,25 +1,25 @@
-# Enabling generic secret detection for AI-detected secrets
+# Enabling scanning for AI-detected secrets
 
-## Enabling generic secret detection
-
-
-
-To use generic secret detection, an enterprise owner must first set a policy at the enterprise level that controls whether the feature can be enabled and disabled for repositories in an organization. This policy is set to "allowed" by default.
+## Enabling scanning for AI-detected secrets
 
 
 
+To use scanning for AI-detected secrets, an enterprise owner must first set a policy at the enterprise level that controls whether the feature can be enabled and disabled for repositories in an organization. This policy is set to "allowed" by default.
 
-You can enable generic secret detection in the security settings page of your repository or organization.
+
+
+
+You can enable scanning for AI-detected secrets in the security settings page of your repository or organization.
 
 
 
 > [!NOTE]
-> You do not need a subscription to GitHub Copilot to use AI-powered generic secret detection. AI-detected secrets features are available to repositories owned by organizations and enterprises with GitHub Secret Protection enabled.
+> You do not need a subscription to GitHub Copilot to use scanning for AI-detected secrets. The feature is available to repositories owned by organizations and enterprises with GitHub Secret Protection enabled.
 
 
 
 
-### Enabling generic secret detection for your repository
+### Enabling scanning for AI-detected secrets for your repository
 
 1. On GitHub, navigate to the main page of the repository.
 
@@ -31,9 +31,9 @@ You can enable generic secret detection in the security settings page of your re
 
 1. Under "Secret Protection", to the right of "Scan for AI-detected secrets", click **Enable**.
 
-### Enabling generic secret detection for your organization
+### Enabling scanning for AI-detected secrets for your organization
 
-You must configure generic secret detection for your organization using a custom security configuration. You can then apply the security configuration to all (or selected) repositories in your organization.
+You must configure scanning for AI-detected secrets for your organization using a custom security configuration. You can then apply the security configuration to all (or selected) repositories in your organization.
 
 1. Create a new custom security configuration, or edit an existing one. See [Create Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/create-custom-configuration).
 1. When creating the custom security configuration, ensure that "Secret Protection" is set to **Enabled**, and that the dropdown menu for "Scan for AI-detected secrets" is also set to **Enabled**.

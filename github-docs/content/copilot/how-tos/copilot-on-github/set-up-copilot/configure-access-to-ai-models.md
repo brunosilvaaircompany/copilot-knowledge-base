@@ -19,11 +19,20 @@ For individual Copilot plans, you can use AI models directly within Copilot with
 
 As an enterprise or organization owner, you can enable or disable access to AI models for members with a Copilot Enterprise or Copilot Business seat. See [Manage Availability Of Default Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models) or [Manage Default Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-default-models).
 
+Image generation uses a dedicated image generation model, which you manage in the same model policy. To turn off image generation for members, disable this model. See [Image Generation](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/image-generation).
+
 ## Custom models
 
-Bring your own key (BYOK) allows you to use Copilot with models of your choice, such as models that are running on your local machine or hosted by an external provider.
+Bring your own key (BYOK) allows you to use Copilot with compatible models that you or your organization configure.
 
-There are two separate mechanisms for providing your own LLM keys to Copilot. One allows users to configure their own models locally, and the other allows enterprise and organization owners to provide custom models for all users.
+There are two ways to configure access to additional models:
+
+* Users can configure additional models for themselves in a supported Copilot client.
+* Enterprise owners, and organization owners with the necessary permissions, can make additional models available to eligible users in their enterprise or organization through GitHub's Copilot API.
+
+Your ability to access additional locally hosted or cloud-hosted models depends on the surface in which you're using Copilot and the configuration method used to add models. For example, user-configured BYOK in Copilot CLI can connect to a compatible cloud-hosted service or a model server running on your computer or network.
 
 
 For more information, see [Bring Your Own Key](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key).
+
+Windows users can also add the MAI Code 1.1 Flash model to their local machine, directly from Copilot CLI, the Copilot app, or Visual Studio Code, provided their computer meets the required system resources. See [Add Llm Models](https://docs.github.com/en/copilot/how-tos/github-copilot-app/add-llm-models#installing-a-local-model-from-the-model-picker), [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models#installing-a-local-model-from-the-model-picker), and [AI language models in VS Code](https://code.visualstudio.com/docs/agent-customization/language-models#_use-on-device-models).

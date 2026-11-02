@@ -14,7 +14,7 @@ This table shows what each customization feature is and where it lives.
 | [Subagents](/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-subagents) | Separate agent spawned by the main agent to handle delegated work in an isolated context | N/A (runtime process, not a user-configured file) |
 | [Agent skills](/copilot/concepts/agents/about-agent-skills) | Folder of instructions, scripts, and resources that Copilot loads when relevant to a task | `.github/skills/<skill-name>/SKILL.md`, `.claude/skills/<skill-name>/SKILL.md`, or `.agents/skills/<skill-name>/SKILL.md` (project); `~/.copilot/skills/<skill-name>/SKILL.md` or `~/.agents/skills/<skill-name>/SKILL.md` (personal) |
 | [Hooks](/copilot/concepts/agents/hooks) | Custom shell commands that execute deterministically at specific points in an agent's workflow | `.github/hooks/*.json` |
-| [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp) | Connection to external systems, APIs, and databases | `mcp.json` (path varies by IDE), repository MCP settings on GitHub (applies to cloud agent and Copilot code review), or `mcp-servers` property in custom agent configurations |
+| [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp) | Connection to external systems, APIs, and databases | `mcp.json` (path varies by IDE), repository MCP settings on GitHub (applies to Copilot in the cloud and Copilot code review), or `mcp-servers` property in custom agent configurations |
 
 ## Usage comparison
 
@@ -29,6 +29,7 @@ This table helps you decide which customization feature to use.
 | [Agent skills](/copilot/concepts/agents/about-agent-skills) | Automatic: chosen by Copilot when relevant to your prompt | Multi-step workflows with bundled assets that should be loaded as needed | GitHub Actions failure debugging, deployment procedures, release note drafting |
 | [Hooks](/copilot/concepts/agents/hooks) | Automatic: at configured lifecycle events | Tasks that need to run at a specific point in the agent lifecycle, with guaranteed execution | Run a formatter after every file edit, approve or deny tool executions, prevent credential leaks with secret scanning |
 | [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp) | Automatic, or ask for a specific tool by name | Tasks that require access to external tools or real-time data | Manage issues and PRs (GitHub MCP server), automate browser testing (Playwright MCP server) |
+| Copilot connectors | Automatic when relevant, or ask for a connected service | Tasks that combine repository context with external project information | Find requirements in connected documents, then propose code changes and tests |
 
 ## IDE and surface support
 
@@ -51,6 +52,8 @@ GitHub recommends using the latest stable IDE, Copilot CLI, and Copilot extensio
 | Agent skills | ✓ | ✓ | P | ✗ | ✗ | ✓ | ✓ |
 | Hooks | P | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
 | MCP servers | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+Connectors are in public preview in the GitHub Copilot app, GitHub Copilot CLI, Visual Studio Code, Copilot in the cloud, and GitHub Mobile. In Copilot in the cloud, they work in sessions running in a cloud sandbox, but not in sessions running on GitHub Actions. See [Copilot Connectors](https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors).
 
 For a detailed breakdown of which types of custom instructions are supported in each IDE and surface, see [Custom Instructions Support](https://docs.github.com/en/copilot/reference/custom-instructions-support).
 

@@ -33,7 +33,7 @@ Users can only access AI models that are enabled at the enterprise level. When y
 
 Enterprise and organization owners can provide keys for custom models. Users can select these like any other model: with the Copilot CLI model selector, the `--model` flag, or environment variables. See [Enable Custom Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models).
 
-Separately, users can also provide their own LLM keys locally. This is not controlled by enterprise policies. See [Use Byok Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models).
+Separately, users can also provide their own LLM keys locally. This is not controlled by enterprise policies. See [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models).
 
 ### Custom agents
 
@@ -64,6 +64,10 @@ Users must have an assigned GitHub Copilot seat to access Copilot CLI.
 All other controls do **not** affect Copilot CLI, notably:
 
 * **IDE-specific policies**: Policies configured for specific IDEs or editor extensions
+
+## Applying guardrails so teams follow organizational policies
+
+You can apply guardrails to keep developer's use within organizational policies. First, work with platform and security teams to decide which Copilot CLI actions need review, ultimately agreeing on what usage information to log. Prefer collecting only the minimum data needed (for example, metadata rather than full prompt contents), and redact or mask secrets and personal data before writing any logs. If teams configure repository-scoped hooks to log prompts and tool use, ensure log access is restricted to authorized personnel and follow your organization's retention and deletion requirements so sensitive data is not stored longer than necessary. These hooks can also block selected command patterns. See [Copilot CLI Hooks](https://docs.github.com/en/copilot/tutorials/copilot-cli-hooks).
 
 ## Why can't my developers access Copilot CLI?
 

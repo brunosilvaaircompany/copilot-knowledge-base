@@ -2,6 +2,14 @@
 
 You can schedule reminders for pending pull request reviews in Microsoft Teams channels or in the GitHub personal app. Reminders are available for organizations, not personal accounts.
 
+
+
+The combined GitHub app preserves your scheduled reminders when you update from GitHub Notifications. You don't need to recreate them to use Copilot.
+
+Reminders and agent settings are separate. Use the `schedule` commands in this article to configure review reminders, and use `@GitHub settings` to choose repositories for Copilot. Reminders are available in channels and the personal app, not in group chats.
+
+
+
 ## Scheduling reminders in a channel
 
 1. In a Teams channel, run `@GitHub Notifications schedule ORGANIZATION`.
@@ -21,6 +29,20 @@ To edit or remove reminders for the organization, run `@GitHub Notifications sch
 In the personal app, you can list reminders with `schedule list`.
 
 >[!NOTE] To configure reminders for an organization, you must be a member of the organization and have write access to at least one repository.
+
+
+
+## Following up on a reminder with Copilot
+
+You can use a pull request link from a reminder as context for a new task. For example:
+
+```text
+@GitHub Summarize the changes in PULL-REQUEST-URL and identify what needs review.
+```
+
+Replace `PULL-REQUEST-URL` with the pull request link. Asking Copilot for an explanation or follow-up work doesn't change the reminder configuration. To start or steer an agent session, you need write access to every repository selected for that session. See [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams).
+
+
 
 ## Further reading
 

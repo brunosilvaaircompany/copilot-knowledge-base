@@ -27,13 +27,15 @@ Session storage for sessions started in an IDE is IDE-specific. For information 
 
 ### Sessions run on GitHub
 
-Copilot cloud agent sessions run in an ephemeral environment hosted by GitHub. The environment is destroyed when the session ends, but the session log remains available on GitHub.com. These sessions are shared by default and visible to people with access to the repository.
+Cloud sessions using GitHub Actions run in an ephemeral environment hosted by GitHub. The environment is destroyed when the session ends, but the session log remains available on GitHub.com. These sessions are shared by default and visible to people with access to the repository.
+
+Cloud sessions using sandbox run in an isolated environment hosted by GitHub. While a session is stopped, the sandbox keeps a snapshot of its state so you can resume with your files and in-progress work intact. These sessions are unshared by default.
 
 ## Session syncing
 
 By default, locally-run sessions created with Copilot CLI or the GitHub Copilot app are synced to your GitHub account.
 
-You can control syncing for Copilot CLI and the GitHub Copilot app.  See `remote` and `remoteExport` in [CLI Config Dir Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference).
+You can control syncing for Copilot CLI and the GitHub Copilot app.  See `remoteExport` in [CLI Config Dir Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference).
 
 ### Policy governing session syncing
 
@@ -45,7 +47,7 @@ Local sessions are unshared by default. You can share an individual local sessio
 
 Synced session data is tied to your personal account and is accessible only to you by default. Administrators can control whether syncing is available, but enabling syncing does not give them access to your session data.
 
-Copilot cloud agent sessions are shared by default. They appear in the "All sessions" view on the "Agents" tab of your repository, visible to anyone with access to the repository.
+Cloud sessions using GitHub Actions are shared by default. They appear in the "All sessions" view on the "Agents" tab of your repository, visible to anyone with access to the repository. Cloud sessions using sandbox are unshared by default.
 
 When you query previous interactions or use `/chronicle`,
 Copilot may send relevant session data, such as prompts, context, and responses, to the AI model.
@@ -74,20 +76,21 @@ For Copilot CLI, deleting a local session that has been synced to your account p
 The following controls are available:
 
 * **Share**: Make the session visible to people with access to the repository.
-* **Delete**: Permanently remove the synced session record from GitHub.com.
+* **Delete**: Permanently remove the session record from GitHub.com.
 * **Archive**: Move the session out of the active list on GitHub.com without deleting it.
 
 | Session source | Share | Delete | Archive |
 | --- | --- | --- | --- |
 | Synced Copilot CLI session | {% octicon "check" aria-label="Supported" %} (Unshared by default) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Synced session from the GitHub Copilot app | {% octicon "check" aria-label="Supported" %} (Unshared by default) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| Copilot cloud agent session | {% octicon "check" aria-label="Supported" %} (Shared by default) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Cloud session using GitHub Actions | {% octicon "check" aria-label="Supported" %} (Shared by default) | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Cloud session using sandbox | {% octicon "check" aria-label="Supported" %} (Unshared by default) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 For more information, see:
 
 * **Copilot CLI**: [Chronicle](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle)
 * **The GitHub Copilot app**: [Agent Sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions)
-* **Copilot cloud agent**: [Manage And Track Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents)
+* **Cloud sessions using GitHub Actions**: [Manage And Track Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents)
 
 For information about the session data controls available for Copilot in an IDE, see the documentation for that IDE.
 

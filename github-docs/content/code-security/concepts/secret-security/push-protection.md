@@ -6,15 +6,49 @@ Push protection is a secret scanning feature designed to prevent hardcoded crede
 
 ## How push protection works
 
-Push protection blocks secrets detected in:
-
-* Pushes from the command line
-* Commits made in the GitHub UI
-* File uploads to a repository on GitHub
-* Requests to the REST API
-* Interactions with the GitHub MCP server (public repositories only)
-
 When push protection detects a potential secret during a push attempt, it will block the push and provide a detailed message explaining the reason for the block. You will need to review the code in question, remove any sensitive information, and reattempt the push.
+
+Push protection can block the following types of secrets.
+
+### Partner patterns
+
+GitHub blocks pushes containing provider-specific credentials where push protection is supported for that secret as part of secret scanning's partner program. See [Supported provider patterns](/code-security/reference/secret-security/supported-secret-scanning-patterns#supported-provider-patterns).
+
+### Generic patterns
+
+GitHub blocks pushes containing structured secrets that are not tied to a specific provider, such as private keys and database connection strings. Scanning for generic patterns and push protection must be enabled in your repository's security settings or security configuration for this to work. The relevant patterns must also be enabled in your organization or enterprise's push protection pattern configuration. See [Specifying patterns to include in push protection](/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/configure-global-settings#specifying-patterns-to-include-in-push-protection).
+
+### Custom patterns
+
+GitHub blocks pushes containing custom patterns, which are regular expressions that you define to detect secrets specific to your repository, organization, or enterprise. When defining a custom pattern, you can choose to enable push protection for it. See [Define Custom Patterns](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns).
+
+
+
+### Generic secrets found with AI
+
+> [!NOTE]
+> Push protection for AI-detected secrets is in public preview and subject to change.
+
+
+GitHub blocks pushing containing unstructured secrets, such as passwords, that have been found using AI based on surrounding code context. To understand how this feature is billed, see [GitHub Advanced Security](https://docs.github.com/en/billing/concepts/product-billing/github-advanced-security#secret-protection-ai-credits). To enable the feature, see [Enable Ai Push Protection](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/prevent-future-leaks/enable-ai-push-protection).
+
+
+
+### Supported push surfaces
+
+The following table shows which secret types are blocked on each push surface.
+
+
+
+| Push surface | Partner patterns | Generic patterns | Custom patterns | Generic secrets found with AI |
+| --- | :-: | :-: | :-: | :-: |
+| Pushes from the command line | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Commits made in the GitHub UI | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| File uploads to a repository on GitHub | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| Requests to the REST API | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| Interactions with the GitHub MCP server (public repositories only) | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
+
+
 
 ## Types of push protection
 
@@ -71,6 +105,7 @@ If you want greater control over which contributors can bypass push protection a
 * **Efficient secret management:** Instead of retrospectively dealing with exposed secrets, developers can address issues at the source. This makes secret management more efficient and less time-consuming.
 * **Bypass functionality for flexibility:** For cases where false positives occur or when certain patterns are necessary, you can bypass push protection for users, and designated users can use the delegated bypass feature to bypass push protection for repositories. Additionally, you can exempt trusted actors {% ifversion push-protection-repo-exemptions %}from push protection entirely. {% endif %}This provides flexibility without compromising overall security.
 * **Ability to detect custom patterns (for repositories in organizations):** Organizations can define custom patterns for detecting secrets unique to their environment. This customization ensures that push protection can effectively identify and block even non-standard secrets.
+* **Coverage beyond known patterns:** AI detects unstructured secrets, such as passwords, that no regular expression can reliably match.
 
 ## Customization
 

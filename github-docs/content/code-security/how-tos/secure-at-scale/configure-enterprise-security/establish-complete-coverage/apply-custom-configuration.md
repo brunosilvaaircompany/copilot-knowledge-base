@@ -8,7 +8,7 @@ The repository list displays each repository's configuration status. For the ful
 
 
 
->[!NOTE] Some features enabled in security configurations may require Actions minutes to work. GitHub will let you know if that's the case when you apply the configuration to a repository. For more information about billing for GitHub Actions, see [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
+>[!NOTE] Some features enabled in security configurations may use GitHub Actions runner compute. GitHub will let you know if that's the case when you apply the configuration to a repository. For more information about billing for GitHub Actions, see [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
 
 
 

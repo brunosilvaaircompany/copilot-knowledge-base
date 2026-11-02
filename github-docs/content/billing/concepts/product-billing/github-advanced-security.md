@@ -41,21 +41,37 @@ You need to **pay** to use Advanced Security features in **private repositories*
 
 ## How AI feature usage is billed
 
-Some Advanced Security features consume AI credits in addition to the active-committer licenses described in this article. AI Scan and agentic autofix consume the **Code Security AI Credits** SKU.
+Some Advanced Security features consume AI credits in addition to the active-committer licenses described in this article.
 
-These features consume Code Security AI Credits even when the repository is public and does not require active-committer licenses.
+### Code Security AI Credits
+
+AI Scan and agentic autofix consume the **Code Security AI credits** SKU, even in public repositories that don't require active-committer licenses.
 
 If the account being billed has included AI credits from a GitHub Copilot entitlement, eligible usage draws from that allowance first. After the included allowance is exhausted, further usage is metered. If the account doesn't have included AI credits, all usage is metered.
 
-For an organization-owned repository, usage is attributed to the account that pays for the organization's usage. This is the standalone organization account or its enterprise account. The included AI credits and budgets for that account apply, including for public repositories.
+For an organization-owned repository, usage is attributed to the account that pays for the organization's usage: the standalone organization account or its enterprise account.
 
-Repositories in the personal namespace of a managed user account are not treated as ordinary personal-account repositories for Code Security AI Credits. AI Scan and agentic autofix are not currently available for these repositories and do not consume Code Security AI Credits there. Purchasing Code Security, having included AI credits, or configuring a Code Security AI Credits budget does not make these features available.
+AI Scan and agentic autofix are not currently available for repositories in the personal namespace of a managed user account, so they don't consume Code Security AI credits there. Purchasing Code Security, having included AI credits, or configuring a Code Security AI credits budget does not make these features available.
 
 This limitation does not affect classic Copilot Autofix, which is distinct from agentic autofix and does not consume AI credits.
 
-Before security administrators enable AI Scan or agentic autofix broadly, billing administrators should review the account's included AI credits and set budgets for metered usage. After the included allowance is exhausted, a hard budget can prevent further metered usage. For more information, see [Budgets And Alerts](https://docs.github.com/en/billing/concepts/budgets-and-alerts).
+Before security administrators enable AI Scan or agentic autofix broadly, billing administrators should review the account's included AI credits and set a hard budget to cap metered usage. For more information, see [Budgets And Alerts](https://docs.github.com/en/billing/concepts/budgets-and-alerts).
 
-For information about features that consume Code Security AI Credits, see [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections) and [Autofix For Code Scanning](https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning).
+For information about features that consume Code Security AI credits, see [Ai Powered Security Detections](https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections) and [Autofix For Code Scanning](https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning).
+
+### Secret Protection AI credits
+
+Push protection for AI-detected secrets consumes **Secret Protection AI credits**.
+
+AI credit usage applies to your organization. The number of AI credits consumed will depend on the amount of file content scanned during a push. Charging by content scanned ensures pricing is fair and predictable for organizations.
+
+Usage is billed to the organization that owns the repository. You can view usage under **AI credit consumption** for the **Secret Protection AI credits** SKU in your AI usage insights.
+
+Each push that is scanned can consume AI credits, even when no potential secret is identified and the push is not blocked, as the model is still providing value by scanning the push.
+
+If the billing account has included AI credits, eligible usage is deducted from that allowance.
+
+To cap metered spending, set a budget with **Stop usage when budget limit is reached** enabled before you enable push protection for AI-detected secrets. See [Set Up Budgets](https://docs.github.com/en/billing/how-tos/set-up-budgets).
 
 
 

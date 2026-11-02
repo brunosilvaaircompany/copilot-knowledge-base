@@ -38,7 +38,7 @@ In a pull request from a fork, the base branch is where you want to merge your c
 
 
 1. To create a pull request that is ready for review, click **Create Pull Request**.
-To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. If you are the member of an organization, you may need to request access to draft pull requests from an organization owner. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
+To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 
 
 > [!TIP]

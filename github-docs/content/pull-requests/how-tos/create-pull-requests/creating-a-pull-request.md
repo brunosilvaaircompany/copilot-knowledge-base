@@ -33,7 +33,7 @@ You can link a pull request to an issue to show that a fix is in progress and au
 1. Type a title and description for your pull request.
 
 1. To create a pull request that is ready for review, click **Create Pull Request**.
-To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. If you are the member of an organization, you may need to request access to draft pull requests from an organization owner. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
+To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 
 
 > [!TIP]
@@ -124,7 +124,7 @@ gh pr create --web
 1. Type a title and description for your pull request.
 
 1. To create a pull request that is ready for review, click **Create Pull Request**.
-To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. If you are the member of an organization, you may need to request access to draft pull requests from an organization owner. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
+To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**. See [Pull Requests](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests).
 
 
 {% enddesktop %}

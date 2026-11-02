@@ -1,16 +1,12 @@
 # Your first agentic workflow
 
-> [!NOTE]
-> GitHub Agentic Workflows are in public preview and subject to change.
-
-
 ## Introduction
 
 GitHub Agentic Workflows let you automate repository tasks using AI-powered workflows. For an overview of GitHub Agentic Workflows, see [About GitHub Agentic Workflows](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-github-agentic-workflows).
 
 In this guide, you'll add a pre-built agentic workflow—a daily repository status report—to an existing repository. This takes about 10 minutes and gives you a working example of automated agents running in GitHub Actions.
 
-This quickstart focuses on getting your first workflow running. For deeper setup and troubleshooting guidance, see the [GitHub Agentic Workflows documentation site](https://github.github.com/gh-aw/).
+This quickstart focuses on getting your first workflow running. For deeper setup and troubleshooting guidance, see the [GitHub Agentic Workflows documentation site](https://github.github.com/gh-aw/?utm_source=your-first-agentic-workflow-quickstart-gh-aw-repo&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Prerequisites
 
@@ -51,7 +47,7 @@ The `add-wizard` command accepts workflow references in `OWNER/REPO/WORKFLOW-NAM
 
 1. Check repository prerequisites.
 1. Prompt you to select an AI engine (Copilot is the default, or choose from other engines).
-1. Guide you through secret and authentication setup for your chosen engine. Depending on the engine you choose, the wizard may prompt you to configure `COPILOT_GITHUB_TOKEN`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `GEMINI_API_KEY`. See the [authentication reference](https://github.github.com/gh-aw/reference/auth/) article for setup instructions.
+1. Guide you through secret and authentication setup for your chosen engine. Depending on the engine you choose, the wizard may prompt you to configure `COPILOT_GITHUB_TOKEN`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `GEMINI_API_KEY`. See the [authentication reference](https://github.github.com/gh-aw/reference/auth/?utm_source=your-first-agentic-workflow-quickstart-article-gh-aw-auth&utm_medium=docs&utm_campaign=universe-2026) article for setup instructions.
 1. Generate the workflow markdown file and compile the corresponding `.lock.yml` file.
 1. Open a pull request that adds both generated files in `.github/workflows/`.
 1. Let you review and merge the pull request yourself, or choose a flow that merges it for you.

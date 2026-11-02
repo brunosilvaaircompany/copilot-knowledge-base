@@ -1,18 +1,18 @@
-# Overriding enterprise-managed settings for teams
+# Overriding enterprise-managed settings for enterprise teams
 
-With a server-managed deployment, you can configure your enterprise's `managed-settings.json` file to apply different governance settings to groups of users based on their enterprise team membership. The enterprise defines all settings in a central place, and team membership determines which users receive a given set of values. **If you haven't created the `managed-settings.json` file yet, see [Get Started](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started).**
+With a server-managed deployment, you can configure your enterprise's `managed-settings.json` file to apply different governance settings to groups of users based on their enterprise team membership. The enterprise defines all settings in a central place, and enterprise team membership determines which users receive a given set of values. **If you haven't created the `managed-settings.json` file yet, see [Get Started](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started).**
 
-To let teams replace an enterprise default, mark the key as `overridable` in `managed-settings.json`. An overridable key uses the team's value when set, or falls back to your enterprise default when the team leaves it unset.
+To let enterprise teams replace an enterprise default, mark the key as `overridable` in `managed-settings.json`. An overridable key uses the enterprise team's value when set, or falls back to your enterprise default when the enterprise team leaves it unset.
 
 ## Supported keys
 
-The `{ "overridable": <VALUE> }` syntax applies to the `model`, `autoTier`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, `deniedMcpServers`, `extraKnownMarketplaces`, `strictKnownMarketplaces`, and `sandbox` keys.
+The `{ "overridable": <VALUE> }` syntax applies to the `model`, `autoTier`,`fusionTier`, `permissions.disableBypassPermissionsMode`, `permissions.deny`, `permissions.ask`, `permissions.allow`, `allowedMcpServers`, `deniedMcpServers`, `extraKnownMarketplaces`, `strictKnownMarketplaces`, and `sandbox` keys.
 
 `enabledPlugins` works additively. The enterprise `managed-settings.json` sets a baseline, and an enterprise team file can add more plugins on top of it.
 
 For a full description of these keys and their syntax, see [Enterprise Managed Settings](https://docs.github.com/en/copilot/reference/enterprise-administrators/enterprise-managed-settings).
 
-## Overriding settings for specific teams
+## Overriding settings for specific enterprise teams
 
 These instructions apply to **server-managed deployments** (a `managed-settings.json` hosted on GitHub). Other deployment methods do not support enterprise team overrides, and would require you to deploy different settings to different groups of users via your MDM platform.
 
@@ -30,11 +30,11 @@ After you complete this section, your `.github-private` repository will have the
 
 ## Steps
 
-1. In your enterprise's `copilot/managed-settings.json` file, mark each key you want to make eligible for override using the `{ "overridable": <VALUE> }` syntax. The `json` files you map to teams can only send different values for keys you mark overridable.
+1. In your enterprise's `copilot/managed-settings.json` file, mark each key you want to make eligible for override using the `{ "overridable": <VALUE> }` syntax. The `json` files you map to enterprise teams can only send different values for keys you mark overridable.
 
-   An `overridable` value you provide in `managed-settings.json` is the default when team files do not declare a different value for a given key.
+   An `overridable` value you provide in `managed-settings.json` is the default when enterprise team files do not declare a different value for a given key.
    
-   For example, to defer `model`, `disableBypassPermissionsMode`, and `allowedMcpServers` to teams:
+   For example, to defer `model`, `disableBypassPermissionsMode`, and `allowedMcpServers` to enterprise teams:
 
     ```json
     {
@@ -50,7 +50,7 @@ After you complete this section, your `.github-private` repository will have the
     }
     ```
 
-1. In your enterprise's `.github-private` repository, create `copilot/team-mappings.json`. Map each team settings file to one or more enterprise team slugs. The key is the settings file name, and the value is an array of team slugs, so you can apply one file across multiple teams.
+1. In your enterprise's `.github-private` repository, create `copilot/team-mappings.json`. Map each enterprise team settings file to one or more enterprise team slugs. The key is the settings file name, and the value is an array of enterprise team slugs, so you can apply one file across multiple enterprise teams.
 
     ```json
     {
@@ -60,7 +60,7 @@ After you complete this section, your `.github-private` repository will have the
     }
     ```
 
-1. Create the team settings file under `copilot/teams/`. You can include any keys you marked as overridable, more restrictive values for `autoTier`, plus the additive key `enabledPlugins`. Every other key stays governed by your enterprise default.
+1. Create the enterprise team settings file under `copilot/teams/`. You can include any keys you marked as overridable, more restrictive values for `autoTier`, plus the additive key `enabledPlugins`. Every other key stays governed by your enterprise default.
 
    ```json
    {
@@ -76,4 +76,4 @@ After you complete this section, your `.github-private` repository will have the
 
 1. Commit and push your changes to the default branch.
 
-GitHub evaluates enterprise team membership and applies matching settings for each person. If a user belongs to multiple teams, their team files are combined using the least restrictive value for each key, then applied beneath the enterprise settings, where platform decisions always win.
+GitHub evaluates enterprise team membership and applies matching settings for each person. If a user belongs to multiple enterprise teams, their enterprise team files are combined using the least restrictive value for each key, then applied beneath the enterprise settings, where platform decisions always win.

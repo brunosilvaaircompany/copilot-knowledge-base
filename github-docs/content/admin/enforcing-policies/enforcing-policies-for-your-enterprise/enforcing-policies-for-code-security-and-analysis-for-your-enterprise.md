@@ -148,7 +148,11 @@ Across all of your enterprise's organizations, you can allow or disallow people 
 
 As an enterprise owner, you can control whether organizations in your enterprise can enable AI Scan. This policy is set to "Not allowed" by default.
 
-Allowing AI Scan at the enterprise level does not enable it for any organization. Organization administrators must enable AI Scan for their organization. Eligible repositories where code scanning is enabled inherit the organization setting, and repository administrators can opt out for individual repositories.
+{% ifversion ai-applications-scanning %}
+This same policy also controls AI applications scanning; there's no separate enterprise-level policy for that detector.
+
+
+Allowing this policy does not enable AI Scan or AI applications scanning for any organization. Organization administrators must separately enable each detector for their organization. Eligible repositories where code scanning is enabled inherit the organization setting, and repository administrators can opt out for individual repositories, for each detector.
 
 
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
@@ -159,3 +163,9 @@ Allowing AI Scan at the enterprise level does not enable it for any organization
 1. Under {% octicon "law" aria-hidden="true" aria-label="law" %} "Policies", click **Advanced Security**.
 
 1. Under "AI Scan", select the dropdown menu and click a policy.
+
+
+For information about enabling AI applications scanning at the organization level, see [Ai Applications Scanning For Pull Requests](https://docs.github.com/en/code-security/concepts/code-scanning/ai-applications-scanning-for-pull-requests#how-to-enable-ai-applications-scanning).
+
+
+{% endif %}

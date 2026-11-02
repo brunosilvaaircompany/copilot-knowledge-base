@@ -6,7 +6,9 @@ GitHub Copilot supports multiple AI models with different capabilities. The mode
 
 > [!NOTE]
 > * Different models consume AI credits at different rates based on their token pricing. For details, see [Models And Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
-> * Choosing the **Auto** option when selecting a model automatically selects the optimum model for your task, based on model availability and task complexity.  If you are on a paid Copilot plan, you qualify for a discount on model costs when you use the **Auto** option. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+> * If you select **Copilot Fusion** and then an effort level, Copilot Fusion will select the best model and execution pattern based on the task. See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion).
+> * If you select **Auto**, auto model selection will select the best model based on the task. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+
 
 ### Recommended models by task
 

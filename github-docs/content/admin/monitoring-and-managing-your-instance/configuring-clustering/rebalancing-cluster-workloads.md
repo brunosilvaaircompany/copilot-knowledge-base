@@ -47,8 +47,7 @@ After you determine which jobs are unbalanced across your cluster's nodes, you c
 
 You can schedule rebalancing of jobs on your cluster by setting and applying configuration values for your GitHub Enterprise Server instance.
 
-> [!NOTE]
-> Currently, you can only schedule reallocation of jobs for the HTTP server, `github-unicorn`.
+By default, scheduled rebalancing considers all eligible jobs, including `github-unicorn` and other eligible services. You can apply a job filter with `-j`.
 
 1. To configure automatic, hourly balancing of jobs, run the following command.
 

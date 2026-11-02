@@ -40,7 +40,7 @@ To ensure uniform access, you can set and maintain your MCP registry URL and all
 
 1. In the **Restrict MCP access to registry servers** section, select the dropdown menu, then click one of the following options:
    * **Allow all**: No restrictions. All MCP servers can be used.
-   * **Registry only**: Only servers from the registry may run.
+   * **Registry only**: Only servers from the registry may run, so users can't use Copilot connectors. To allow connectors, select **Allow all**.
 
     Your chosen policy will immediately apply to developers in your enterprise.
 
@@ -48,7 +48,7 @@ To ensure uniform access, you can set and maintain your MCP registry URL and all
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -77,7 +77,7 @@ To ensure uniform access, you can set and maintain your MCP registry URL and all
 
 1. In the **Restrict MCP access to registry servers** section, select the dropdown menu, then click one of the following options:
    * **Allow all**: No restrictions. All MCP servers can be used.
-   * **Registry only**: Only servers from the registry may run.
+   * **Registry only**: Only servers from the registry may run, so users can't use Copilot connectors. To allow connectors, select **Allow all**.
 
     Your chosen policy will immediately apply to developers in your organization.
 

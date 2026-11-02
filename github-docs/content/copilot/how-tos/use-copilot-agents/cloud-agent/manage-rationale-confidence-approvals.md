@@ -1,6 +1,8 @@
 # Managing rationale, confidence, and approvals for issues
 
-Rationale and confidence need no extra configuration. When an automation's agent changes a supported issue attribute, it attaches a rationale and a confidence level automatically. Whether that change applies directly or waits for review depends on your repository's automation level, or on an explicit request to suggest rather than apply the change.
+When an automation's agent changes a supported issue attribute, it attaches a rationale and a confidence level automatically.
+
+Whether that change applies directly or waits for review depends on your repository's automation level, or on an explicit request to suggest rather than apply the change.
 
 ## Setting your repository's automation level
 

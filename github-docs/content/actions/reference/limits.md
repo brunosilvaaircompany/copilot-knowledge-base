@@ -61,13 +61,13 @@ GitHub Support **can** increase job concurrency limits for GitHub Actions. To re
 
 GitHub Support **cannot** increase storage limits for GitHub Actions.
 
-| Plan | Artifact storage | Minutes (per month) | Cache storage (per repository) | Custom image storage |
+| Plan | Artifact storage | Included compute usage (per month) | Cache storage (per repository) | Custom image storage |
 | ------- | ------- | --------- | ------- | ------- |
-| GitHub Free | 500 MB | 2,000 | 10 GB | Not applicable |
-| GitHub Pro | 1 GB | 3,000 | 10 GB | Not applicable |
-| GitHub Free for organizations | 500 MB | 2,000 | 10 GB | Not applicable |
-| GitHub Team | 2 GB | 3,000 | 10 GB | 75 GB |
-| GitHub Enterprise Cloud | 50 GB | 50,000 | 10 GB | 150 GB |
+| GitHub Free | 500 MB | $12 USD | 10 GB | Not applicable |
+| GitHub Pro | 1 GB | $18 USD | 10 GB | Not applicable |
+| GitHub Free for organizations | 500 MB | $12 USD | 10 GB | Not applicable |
+| GitHub Team | 2 GB | $18 USD | 10 GB | 75 GB |
+| GitHub Enterprise Cloud | 50 GB | $300 USD | 10 GB | 150 GB |
 
 
 

@@ -37,11 +37,13 @@ Starting with GitHub Enterprise Server 3.18, you can create custom Grafana dashb
 
 > [!IMPORTANT] Pre-built dashboards can be opened and edited for inspection, but changes cannot be saved. Create a copy of a dashboard to apply and retain any customizations.
 
-You can use OpenTelemetry and collectd metrics concurrently for external monitoring. During the public preview, collectd remains enabled and cannot be disabled.
-
 For more information about OpenTelemetry metrics, see [About Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/about-opentelemetry-metrics).
 
+
+
 For more information about collectd metrics, see [About Collectd Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/collectd-metrics/about-collectd-metrics).
+
+
 
 ## About the metrics on the monitor dashboards
 

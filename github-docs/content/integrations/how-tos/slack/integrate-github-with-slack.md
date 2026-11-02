@@ -13,9 +13,9 @@ With the GitHub integration for Slack, you can:
 
 
 * **Initiate and steer Copilot cloud agent sessions** in a conversation. Teammates can collaborate with each other and the agent, add context, correct assumptions, continue an agent task, and review the resulting plan, issues, pull requests and other artifacts.
-
-   > [!NOTE]
-   > * This feature is currently in public preview and subject to change.
+* **Work across repositories and tools** with multi-repository sessions, and repository-configured MCP servers.
+* **Choose a model** for a conversation or set a default for new conversations in a channel.
+* **Retain context across sessions** with Copilot Memory.
 
 
 
@@ -30,10 +30,10 @@ To use the GitHub integration for Slack, you need:
 
 
 
-* To use Copilot cloud agent, you must have cloud sandboxes enabled for your Copilot plan. See [Cloud sandboxing for GitHub Copilot](/copilot/concepts/about-cloud-and-local-sandboxes#cloud-sandboxing).
+To use Copilot cloud agent, you also need a paid Copilot plan. To start or steer work, you need write access to every repository selected for the session.
 
-   > [!NOTE]
-   > Cloud sandbox policies share the same configuration as Copilot cloud agent policies. Members of an organization or enterprise, including an enterprise with managed users may need their owner to enable cloud sandboxes and Copilot cloud agent before they can use Copilot in Slack. See [Enabling Or Disabling Cloud Sandboxes For Your Organization](https://docs.github.com/en/copilot/how-tos/cloud-and-local-sandboxes/enabling-or-disabling-cloud-sandboxes-for-your-organization).
+* If you get Copilot through an organization or enterprise, including an enterprise with managed users, the **Copilot in the cloud** policy is enabled by default, but an owner can turn it off. Copilot runs your Slack sessions in a cloud sandbox, which doesn't need a separate setting. See [Enabling Or Disabling Cloud Sandboxes For Your Organization](https://docs.github.com/en/copilot/how-tos/cloud-and-local-sandboxes/enabling-or-disabling-cloud-sandboxes-for-your-organization).
+
 
 
 ## Installing the GitHub integration for Slack in a single workspace
@@ -48,6 +48,14 @@ The GitHub integration for Slack only needs to be installed once per workspace, 
 1. Also once the integration is installed, to work with Copilot cloud agent, @mention the app by typing `@GitHub` in a Slack message or channel. Then, if prompted, connect your GitHub account.
 
 To see what else you can do with Copilot, in the thread, @mention the app by typing `@GitHub help`.
+
+## Choosing what to configure next
+
+* To receive repository events, use `/github subscribe OWNER/REPO`. See [Customize Notifications](https://docs.github.com/en/integrations/how-tos/slack/customize-notifications).
+* To set repositories, the default owner, or a default model for new channel conversations, run `/github settings`.
+* To start a task, mention `@GitHub` and describe the work. Name the repositories in your prompt when using a direct message.
+
+Notification subscriptions and Copilot repository defaults are separate. Subscribing to a repository does not select it for agent work, and selecting it for agent work does not subscribe the channel to notifications. For multi-repository sessions, MCP, and Copilot Memory, see [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack).
 
 ## Installing the GitHub integration for Slack on the Slack Enterprise Grid
 

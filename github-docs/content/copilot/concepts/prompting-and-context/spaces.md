@@ -29,6 +29,8 @@ Organization-owned spaces can be shared with other organization members, and you
 
 Alternatively, you can choose to grant "No access" to organization members, and keep the space hidden.
 
+If your Spaces includes data from multiple organizations or mixes private and organization data, it may not work correctly in Copilot in the cloud. For steps to restore chat use in Spaces containing incompatible private sources, see [Create Copilot Spaces](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/copilot-spaces/create-copilot-spaces#restoring-chat-use-in-spaces-with-incompatible-private-sources).
+
 ### Individual-owned spaces
 
 Spaces belonging to a personal account can be shared publicly, shared with specific GitHub users, or kept private to the person who created the space.

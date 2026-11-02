@@ -11,7 +11,7 @@ Dependabot metrics offer detailed information about vulnerabilities detected in 
 * **Severity**: Indicates the potential impact of a vulnerability (e.g., low, medium, high, critical).
 * **Exploitability**: Assesses how easily a vulnerability can be exploited.
 * **Dependency relationship**: Differentiates between direct and transitive dependencies.
-* **Dependency scope**: Differentiates between runtime and development dependencies. Determines if the vulnerable code is actually used in your application.
+* **Dependency scope**: Differentiates between runtime and development dependencies.
 * **Alerts closed in the last 30 days, including the number of alerts fixed by Dependabot, manually dismissed, and auto dismissed**: Tracks alert resolution progress. Illustrates how GitHub Code Security can help you detect vulnerabilities early.
 * **Table showing the total number of open alerts for each repository, as well as severity and expoitability data**: Allows you to dig deeper at the repository level.
 
@@ -34,6 +34,23 @@ Start by identifying alerts with the highest severity by using the `severity-cri
 ### 3. Assess exploitability and reachability
 
 Prioritize vulnerabilities that are the most likely to be exploited in your codebase. To identify alerts that are most likely to be exploited, you can use the `epss-percentage` filter associated to a value (for example `epss-percentage:>=0.10`).
+
+
+
+> [!NOTE]
+> Reachability analysis for Dependabot alerts is in public preview and subject to change.
+
+
+For JavaScript repositories that use npm, pnpm, or Yarn, and TypeScript repositories, use reachability analysis to assess whether your application can call vulnerable functions in its dependencies. This is a separate signal from exploitability: a call path does not prove that an attacker can exploit a vulnerability.
+
+1. Open a repository's Dependabot alerts and filter for `reachability:reachable,potentially-reachable`.
+1. Prioritize these alerts alongside severity and EPSS. For reachable alerts, review the call-path evidence to understand how your code calls the vulnerable function. See [View Dependabot Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/view-dependabot-alerts#reviewing-reachability-evidence).
+
+For "Reachability unavailable" results, use severity, EPSS, dependency scope, and dependency relationship to prioritize alerts. An unavailable result does not mean the vulnerable function cannot be called.
+
+Give "Unreachable" alerts a lower priority, but do not close or dismiss an alert solely because of its verdict. Verdicts are point-in-time assessments and can change as your code or an advisory changes.
+
+
 
 ### 4. Review dependency scope and relationship
 

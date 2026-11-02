@@ -13,6 +13,8 @@ When you enable SAML SSO for your GitHub organization, you connect your identity
 
 
 
+## Supported identity providers
+
 You can find the SAML and SCIM implementation details for your IdP in the IdP's documentation.
 * Microsoft Active Directory Federation Services (AD FS) [SAML](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services)
 * Microsoft Entra ID (previously known as Azure AD) [SAML](https://docs.microsoft.com/azure/active-directory/active-directory-saas-github-tutorial) and [SCIM](https://docs.microsoft.com/azure/active-directory/active-directory-saas-github-provisioning-tutorial)
@@ -21,10 +23,12 @@ You can find the SAML and SCIM implementation details for your IdP in the IdP's 
 * PingOne [SAML](https://support.pingidentity.com/s/marketplace-integration/a7i1W0000004ID3QAM/github-connector)
 * Shibboleth [SAML](https://shibboleth.atlassian.net/wiki/spaces/IDP4/overview)
 
-> [!NOTE]
-> GitHub's supported identity providers for SCIM are Entra ID, Okta, and OneLogin. For more information about SCIM, see [About Scim For Organizations](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization/about-scim-for-organizations).
->
-> You cannot use this implementation of SCIM with an enterprise account or with an organization with managed users. If your enterprise is enabled for Enterprise Managed Users, you must use a different implementation of SCIM. Otherwise, SCIM is not available at the enterprise level. For more information, see [Configuring Scim Provisioning For Users](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users).
+> [!NOTE] GitHub does not test or validate identity provider (IdP) gallery applications for use in Government Cloud environments, including Microsoft Entra ID Government Cloud and Okta Government Cloud. Authentication and SCIM provisioning issues that involve gallery applications in these environments fall outside GitHub's [scope of support](/support/learning-about-github-support/about-github-support#scope-of-support).
+
+
+GitHub's supported identity providers for SCIM are Entra ID, Okta, and OneLogin. For more information about SCIM, see [About Scim For Organizations](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization/about-scim-for-organizations).
+
+You cannot use this implementation of SCIM with an enterprise account or with an organization with managed users. If your enterprise is enabled for Enterprise Managed Users, you must use a different implementation of SCIM. Otherwise, SCIM is not available at the enterprise level. For more information, see [Configuring Scim Provisioning For Users](https://docs.github.com/en/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users).
 
 
 ## SAML metadata

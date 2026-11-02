@@ -180,7 +180,7 @@ For public repositories, jobs using the workflow labels shown in the table below
 
 ### Standard GitHub-hosted runners for internal and private repositories
 
-For internal and private repositories, jobs using the workflow labels shown in the table below will run on virtual machines with the associated specifications. These runners use your GitHub account's allotment of free minutes, and are then charged at the per minute rates. See [Actions Runner Pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing).
+For internal and private repositories, jobs using the workflow labels shown in the table below will run on virtual machines with the associated specifications. These runners draw from your GitHub account's included compute usage, and are then charged at the per-minute rates. See [Actions Runner Pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing).
 
 <table style="width:100%">
   <thead>

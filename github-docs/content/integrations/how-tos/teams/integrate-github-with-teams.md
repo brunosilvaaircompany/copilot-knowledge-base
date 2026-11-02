@@ -12,10 +12,10 @@ With the GitHub integration for Teams, you can:
 
 
 
-* **Initiate and steer Copilot cloud agent sessions** in a conversation. Teammates can collaborate with each other and the agent, add context, correct assumptions, continue an agent task, and review the resulting plan, issues, pull requests and other artifacts.
+* **Delegate tasks to Copilot** by replying to a notification and @mentioning GitHub.
+* **Initiate and steer Copilot cloud agent sessions** in a conversation. Teammates can collaborate with each other and the agent, add context, correct assumptions, continue an agent task, and review the resulting plan, issues, pull requests and other artifacts. You can also choose a model, connect MCP servers, and work across multiple repositories in a single session. You can follow the plan, changes, and pull request in a canvas without leaving Teams. Copilot Memory can retain context across sessions and is in public preview.
 
-   > [!NOTE]
-   > * This feature is currently in public preview and subject to change.
+The combined **GitHub** app includes repository notifications and Copilot. If you already use **GitHub Notifications**, update it to the combined app. Your existing subscriptions and scheduled reminders are preserved.
 
 
 
@@ -31,11 +31,12 @@ To use the GitHub integration for Teams, you need:
 
 
 
-* You must have Microsoft Public Developer Preview enabled for your Microsoft Teams client, see [Public developer preview for Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/dev-preview/developer-preview-intro) in the Microsoft Learn documentation.
-* To use Copilot cloud agent, you must have cloud sandboxes enabled for your Copilot plan. See [Cloud sandboxing for GitHub Copilot](/copilot/concepts/about-cloud-and-local-sandboxes#cloud-sandboxing).
+* If you get Copilot through an organization or enterprise, including an enterprise with managed users, the Copilot cloud agent policy is enabled by default, but an owner can turn it off. Copilot runs your Teams sessions in a cloud sandbox, which doesn't need a separate setting. See [Enabling Or Disabling Cloud Sandboxes For Your Organization](https://docs.github.com/en/copilot/how-tos/cloud-and-local-sandboxes/enabling-or-disabling-cloud-sandboxes-for-your-organization).
 
-   > [!NOTE]
-   > Cloud sandbox policies share the same configuration as Copilot cloud agent policies. Members of an organization or enterprise, including an enterprise with managed users may need their owner to enable cloud sandboxes and Copilot cloud agent before they can use Copilot in Teams. See [Enabling Or Disabling Cloud Sandboxes For Your Organization](https://docs.github.com/en/copilot/how-tos/cloud-and-local-sandboxes/enabling-or-disabling-cloud-sandboxes-for-your-organization).
+
+
+
+
 
 
 ## Installing the GitHub integration for Teams in a single workspace
@@ -46,7 +47,17 @@ To use the GitHub integration for Teams, you need:
 1. In a Teams message or channel, @mention the app by typing `@GitHub` and follow the prompts to connect your GitHub account.
 1. To see what else you can do, in the thread, @mention the app by typing `@GitHub help`.
 
-{% ifversion ghec %}
+### Choosing what to configure next
+
+* To receive repository events, use `@GitHub subscribe OWNER/REPO`. See [Customize Notifications](https://docs.github.com/en/integrations/how-tos/teams/customize-notifications).
+{% ifversion copilot %}
+* To choose default repositories for a channel, use `@GitHub settings`.
+* To start a task, mention `@GitHub` and describe the work. In a personal chat, name the repositories in your prompt.
+
+Notification subscriptions, review reminders, and Copilot repository settings are separate. For multi-repository sessions, models, MCP servers, and Copilot Memory, see [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams).
+
+
+
 
 ### Installing the Teams app for GitHub Enterprise Cloud with data residency
 

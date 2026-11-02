@@ -29,6 +29,10 @@ While setting up your trial of GitHub Enterprise Cloud, you'll choose an enterpr
 To help you decide which choice is best for your enterprise, see [Choosing An Enterprise Type For GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/understanding-iam-for-enterprises/choosing-an-enterprise-type-for-github-enterprise-cloud) in the GitHub Enterprise Cloud documentation.
 
 
+## Copilot access
+
+Eligible enterprises can provide Copilot access to licensed users at no additional per-user access charge. Administrators must assign access separately, and metered usage is billed from the first use without an included allowance. For eligibility and details, see [Whats Changing With GitHub Enterprise And Copilot](https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot).
+
 ## About data residency
 
 If you choose an enterprise with managed users, you can also choose where your company's data is stored.

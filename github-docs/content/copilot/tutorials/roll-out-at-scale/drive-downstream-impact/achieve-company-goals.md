@@ -10,10 +10,48 @@ GitHub's [Engineering System Success Playbook](https://resources.github.com/engi
 
 ## Define your goals
 
-Based on the recommendations of the ESSP, the following guides show how GitHub Copilot can help you achieve your company's goals in specific areas. They explain how Copilot can help, provide advice and resources for an effective rollout, and recommend metrics for assessing Copilot's impact.
+Choose an engineering outcome before deciding which Copilot metrics to track. Usage and adoption signals show only whether people are **using** the tool. Outcome measures from your engineering systems and developer feedback help you assess whether the changes you want are actually occurring.
 
-We recommend defining your goals and planning your rollout accordingly. You should communicate your goals to staff and organize training to enable everyone to contribute.
+Start with one or two goals and communicate them to your teams. Record a baseline before changing your rollout. Use the existing guidance for each goal to plan training and select outcome measures.
 
-* [Increase Test Coverage](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/increase-test-coverage)
-* [Accelerate Pull Requests](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/accelerate-pull-requests)
-* [Reduce Security Debt](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/reduce-security-debt)
+Usage signals do not identify whether a particular interaction produced a test, fixed a vulnerability, or prevented an incident. Use them to understand adoption alongside your outcome measures, not as a substitute for those measures. For example, more generated code does not establish better test coverage, and a higher acceptance rate does not establish code quality or developer satisfaction.
+
+### Increase test coverage
+
+If gaps in testing are delaying releases or reducing confidence, track line and branch coverage from your continuous integration reports. Also track time spent writing tests and developer confidence. Compare these outcomes with chat and agent usage trends among participating teams. See [Increase Test Coverage](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/increase-test-coverage).
+
+### Accelerate pull requests
+
+If review delays are slowing delivery, track pull request lead time and review cycles, while checking for defects after deployment. Use adoption cohorts, pull requests merged per user, and time to merge in the impact dashboard to explore how adoption relates to delivery. See [Accelerate Pull Requests](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/accelerate-pull-requests).
+
+### Reduce security debt
+
+If unresolved vulnerabilities are accumulating, track the security alert backlog and time to remediate in security overview. Consider agent and code review usage trends among teams working on remediation alongside these outcomes. See [Reduce Security Debt](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/drive-downstream-impact/reduce-security-debt).
+
+### Improve code quality
+
+If maintainability or reliability problems are increasing, review organization-level code health and open findings over time in Code Quality. Compare these with adoption and feature usage trends among the teams working on those problems. See [Explore Code Quality](https://docs.github.com/en/code-security/how-tos/maintain-quality-code/explore-code-quality).
+
+Keep the set of analyzed repositories consistent. Open finding counts can change when analysis is enabled on more repositories or findings are dismissed, not only when code is improved.
+
+### Reduce production incidents
+
+If refactoring and maintenance work aims to improve stability, track production incidents related to the refactored code using your incident records. Review those results alongside usage trends among teams using Copilot for that work. See [Reduce Technical Debt](https://docs.github.com/en/copilot/tutorials/reduce-technical-debt#quality-metrics).
+
+### Improve developer experience
+
+If your goal is to reduce workflow friction, gather feedback on usefulness, trust, and satisfaction through surveys or retrospectives. Use sustained usage, feature adoption, and acceptance rate trends to identify questions to explore with developers, rather than inferring satisfaction from activity alone. See [Measure Success](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/measure-success#step-4-incorporate-qualitative-feedback).
+
+## Compare results responsibly
+
+Use the same comparison approach each time you review progress:
+
+1. **Align the scope and period.** Compare usage and outcomes for the same teams and reporting dates. Record the repositories and tools included, and keep metric definitions consistent with your baseline.
+
+   The impact dashboard compares users in different adoption cohorts, not the same users before and after adoption. Differences between cohorts can reflect their work or experience as well as their use of Copilot. See [Interpret Copilot Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics#reviewing-the-adoption-multiplier).
+
+1. **Check what else changed.** Record changes in staffing, project complexity, release schedules, training, or engineering practices. These can affect outcomes independently of Copilot.
+1. **Check quality alongside speed.** If pull requests merge faster, also review defects, incidents, and developer feedback. Increased output alone does not establish an improvement in engineering outcomes.
+1. **Investigate before attributing results.** Review trends over multiple periods and ask teams how they used Copilot. Describe observed changes as associations unless you have additional evidence that supports a causal conclusion.
+
+Use the combined findings to choose a next action. For example, if test coverage is unchanged despite growing usage, ask teams whether they are using Copilot to write tests. Address any training or workflow barriers before expanding that approach.

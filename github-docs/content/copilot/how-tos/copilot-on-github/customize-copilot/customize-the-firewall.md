@@ -23,7 +23,7 @@ If Copilot tries to make a request which is blocked by the firewall, a warning i
 The agent firewall has important limitations that affect its security coverage.
 
 * **Only applies to processes started by the agent**: The firewall only applies to processes started by the agent via its Bash tool. It does not apply directly to Model Context Protocol (MCP) server processes or processes started in configured Copilot setup steps. Other agent processes can still make network requests while an MCP server is in use, and these requests are subject to the firewall.
-* **Only applies within the GitHub Actions appliance**: The firewall only operates within the GitHub Actions appliance environment. It does not apply to processes running outside of this environment.
+* **Only applies within the agent's environment**: The firewall only operates within the environment where Copilot runs, either a GitHub Actions runner or a cloud sandbox. It does not apply to processes running outside of this environment.
 * **Bypass potential**: Sophisticated attacks may bypass the firewall, potentially allowing unauthorized network access and data exfiltration.
 
 These limitations mean that the firewall provides protection for common scenarios, but should not be considered a comprehensive security solution.
@@ -46,7 +46,7 @@ Organization owners can configure all firewall settings at the organization leve
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -55,7 +55,7 @@ Organization owners can configure all firewall settings at the organization leve
 In the sidebar, under "Code, planning, and automation", click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, and then click **Internet access**.
 
 
-The "Internet access" page has separate sections for Copilot cloud agent and Copilot code review, so you can configure the following settings independently for each.
+The "Internet access" page has separate sections labeled "Copilot in the cloud" and "Copilot code review". Use the section for the feature you want to configure.
 
 ### Enabling or disabling the firewall
 
@@ -78,7 +78,8 @@ By default, repository administrators can add their own entries to the firewall 
 
 Items added to the organization custom allowlist apply to all repositories in the organization. These items cannot be deleted at the repository level. Organization-level and repository-level rules are combined.
 
-1. Under "Internet access", click **Organization custom allowlist**.
+1. In the "Copilot in the cloud" or "Copilot code review" section, click **Organization custom allowlist**.
+1. On the "Custom allowlist for Copilot in the cloud" or "Custom allowlist for Copilot code review" page, confirm that the title matches the feature you want to configure.
 1. Add the addresses you want to include in the allowlist. You can include:
 
    * **Domains** (for example, `packages.contoso.corp`). Traffic will be allowed to the specified domain and any subdomains.
@@ -95,7 +96,7 @@ Items added to the organization custom allowlist apply to all repositories in th
 
 ## Configuring the firewall at the repository level
 
-Repository administrators can configure firewall settings at the repository level, including enabling or disabling the firewall, enabling or disabling the recommended allowlist, and managing a custom allowlist. Depending on the organization-level configuration, some of these settings may be locked. The repository settings page also has separate sections for Copilot cloud agent and Copilot code review, so you can configure these settings independently for each.
+Repository administrators can configure firewall settings at the repository level, including enabling or disabling the firewall, enabling or disabling the recommended allowlist, and managing a custom allowlist. Depending on the organization-level configuration, some of these settings may be locked. The repository settings page also has separate sections labeled "Copilot in the cloud" and "Copilot code review". Use the section for the feature you want to configure.
 
 To access the firewall settings:
 
@@ -127,7 +128,8 @@ To access the firewall settings:
 > [!NOTE]
 > You can only add custom allowlist rules at the repository level if the organization-level **Allow repository custom rules** setting is set to **Enabled**. For more information, see [Controlling whether repositories can add custom allowlist rules](#controlling-whether-repositories-can-add-custom-allowlist-rules).
 
-1. Click **Custom allowlist**.
+1. In the "Copilot in the cloud" or "Copilot code review" section, click **Custom allowlist**.
+1. On the "Custom allowlist for Copilot in the cloud" or "Custom allowlist for Copilot code review" page, confirm that the title matches the feature you want to configure.
 1. Add the addresses you want to include in the allowlist. You can include:
 
    * **Domains** (for example, `packages.contoso.corp`). Traffic will be allowed to the specified domain and any subdomains.

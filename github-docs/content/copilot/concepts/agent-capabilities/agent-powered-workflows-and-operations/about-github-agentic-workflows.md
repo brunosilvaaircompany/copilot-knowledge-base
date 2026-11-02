@@ -1,9 +1,5 @@
 # GitHub Agentic Workflows
 
-> [!NOTE]
-> GitHub Agentic Workflows are in public preview and subject to change.
-
-
 ## About agentic workflows
 
 GitHub Agentic Workflows are AI-powered repository automations that you define in markdown and run as GitHub Actions workflows. Unlike traditional automation with fixed if-then rules, agentic workflows use coding agents to understand context, evaluate decisions, and propose meaningful actions—all from natural language instructions.
@@ -95,7 +91,7 @@ GitHub Agentic Workflows support multiple coding agents, including:
 
 You specify which agent to use in the workflow frontmatter property `engine`. Each engine requires its own authentication secret configured in your repository. GitHub Copilot is the default engine if none is specified.
 
-For more information, see the [engine reference](https://github.github.com/gh-aw/reference/engines/).
+For more information, see the [engine reference](https://github.github.com/gh-aw/reference/engines/?utm_source=agentic-workflow-docs-gh-aw-engines-reference&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Security guardrails
 
@@ -108,7 +104,7 @@ GitHub Agentic Workflows are designed with security as a priority:
 * **Firewalled execution**: Agents run in isolated GitHub Actions environments.
 * **Role-based access**: You can restrict who can trigger or modify agentic workflows using role-based access controls.
 
-For a full architecture walkthrough, see the [security documentation](https://github.github.com/gh-aw/introduction/architecture/).
+For a full architecture walkthrough, see the [security documentation](https://github.github.com/gh-aw/introduction/architecture/?utm_source=agentic-workflow-docs-gh-aw-architecture&utm_medium=docs&utm_campaign=universe-2026).
 
 ## Usage and billing
 
@@ -128,7 +124,7 @@ You can use the GitHub CLI to review usage and estimated cost for agentic workfl
 
 You can also set `max-ai-credits` in workflow frontmatter to cap inference usage for a single run. The default cap is 1,000 AIC per run.
 
-For an overview of billing for GitHub Agentic Workflows and cost optimization guidance, see [Cost management](https://github.github.com/gh-aw/reference/cost-management/) on the GitHub Agentic Workflows documentation site.
+For an overview of billing for GitHub Agentic Workflows and cost optimization guidance, see [Cost management](https://github.github.com/gh-aw/reference/cost-management/?utm_source=agentic-workflow-docs-gh-aw-cost-management-reference&utm_medium=docs&utm_campaign=universe-2026) on the GitHub Agentic Workflows documentation site.
 
 ### Enabling organization billing for GitHub Agentic Workflows
 

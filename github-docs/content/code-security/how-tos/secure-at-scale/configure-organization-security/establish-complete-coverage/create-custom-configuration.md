@@ -52,7 +52,7 @@ When creating a security configuration, keep in mind that:
       > [!NOTE]
 > To create a configuration that you can apply to all repositories regardless of current code scanning setup, choose "Enabled with advanced setup allowed". This setting enables default setup only in repositories where CodeQL analysis is not actively run. _Option available from GitHub Enterprise Server 3.19._
 
-   * **Runner type**. If you want to target specific runners for code scanning, you can choose to use custom-labeled runners at this step. See [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning#assigning-labels-to-self-hosted-runners). 
+   * **Runner type**. If you want to target specific runners for code scanning, you can choose to use custom-labeled runners at this step. See [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning#assigning-labels-to-self-hosted-runners).
     * **Prevent direct alert dismissals**. To learn more, see [Enable Delegated Alert Dismissal](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-code-scanning-alerts/enable-delegated-alert-dismissal).
 1. Still under "Code Security", in the "Dependency scanning" table, choose whether you want to enable, disable, or keep the existing settings for the following dependency scanning features:
    * **Dependency graph**. To learn about dependency graph, see [Dependency Graph](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-graph).
@@ -60,6 +60,7 @@ When creating a security configuration, keep in mind that:
       > When both "Code Security" and Dependency graph are enabled, this enables dependency review, see [Dependency Review](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-review).
    * **Automatic dependency submission**. To learn about automatic dependency submission, see [Submit Dependencies Automatically](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/submit-dependencies-automatically).
    * **Dependabot alerts**. To learn about Dependabot, see [Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts).
+   * **Reachability analysis**. To learn about reachability analysis, see [About Reachability Analysis For Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/about-reachability-analysis-for-dependabot-alerts).
    * **Security updates**. To learn about security updates, see [Dependabot Security Updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-security-updates).
    * **Prevent direct alert dismissals**. To learn more, see [Enable Delegated Alert Dismissal](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/enable-delegated-alert-dismissal).
    * **Malware alerts**. To learn more, see [Malware Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/malware-alerts).
@@ -105,7 +106,7 @@ When creating a security configuration, keep in mind that:
       > [!NOTE]
 > To create a configuration that you can apply to all repositories regardless of current code scanning setup, choose "Enabled with advanced setup allowed". This setting enables default setup only in repositories where CodeQL analysis is not actively run. _Option available from GitHub Enterprise Server 3.19._
 
-   * **Runner type**. If you want to target specific runners for code scanning, you can choose to use custom-labeled runners at this step. See [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning#assigning-labels-to-self-hosted-runners). 
+   * **Runner type**. If you want to target specific runners for code scanning, you can choose to use custom-labeled runners at this step. See [Configure Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configure-code-scanning#assigning-labels-to-self-hosted-runners).
     * **Prevent direct alert dismissals**. To learn more, see [Enable Delegated Alert Dismissal](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-code-scanning-alerts/enable-delegated-alert-dismissal).
 1. In the "Dependency scanning" table, choose whether you want to enable, disable, or keep the existing settings for the following dependency scanning features:
    * **Dependency graph**. To learn about dependency graph, see [Dependency Graph](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-graph).
@@ -113,6 +114,7 @@ When creating a security configuration, keep in mind that:
       > When both "GitHub Advanced Security" and Dependency graph are enabled, this enables dependency review, see [Dependency Review](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-review).
    * **Automatic dependency submission**. To learn about automatic dependency submission, see [Submit Dependencies Automatically](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/submit-dependencies-automatically).
    * **Dependabot alerts**. To learn about Dependabot, see [Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts).
+   * **Reachability analysis**. To learn about reachability analysis, see [About Reachability Analysis For Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/about-reachability-analysis-for-dependabot-alerts).
    * **Security updates**. To learn about security updates, see [Dependabot Security Updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-security-updates).
    * **Prevent direct alert dismissals**. To learn more, see [Enable Delegated Alert Dismissal](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/enable-delegated-alert-dismissal).
    * **Malware alerts**. To learn more, see [Malware Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/malware-alerts).

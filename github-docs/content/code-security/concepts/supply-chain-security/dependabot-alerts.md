@@ -23,6 +23,9 @@ When GitHub detects a vulnerable dependency, a Dependabot alert appears on the r
 
 Alerts generated from an innersource advisory carry a distinct "Innersource" label, distinguishing them from alerts based on public advisories.
 
+
+You can optionally enable reachability analysis to help prioritize alerts by identifying whether your application can reach vulnerable dependency code. During the public preview, analysis supports JavaScript repositories that use npm, pnpm, or Yarn, and TypeScript repositories. Use reachability alongside severity, Exploit Prediction Scoring System (EPSS) scores, dependency scope, and dependency relationship. See [About Reachability Analysis For Dependabot Alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/about-reachability-analysis-for-dependabot-alerts).
+
 For information about viewing and managing alerts, see [View Dependabot Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/view-dependabot-alerts).
 
 ## Who can enable alerts?
@@ -40,7 +43,7 @@ See [Configure Dependabot Alerts](https://docs.github.com/en/code-security/how-t
 
 ## Alert ownership and assignments
 
-Users with write access or higher can assign Dependabot alerts to repository collaborators, teams, or AI agents to establish clear ownership for vulnerability remediation. Assignments help track who's responsible for each alert and prevent vulnerabilities from being overlooked.
+Users with write access or higher can assign Dependabot alerts to repository collaborators, teams, or AI agents to establish clear ownership for vulnerability remediation. Assignments help track who's responsible for each alert and prevent vulnerabilities from being overlooked. Assigning alerts requires a license for GitHub Code Security or GitHub Advanced Security, including for public repositories.
 
 You can assign alerts to the following types of agents:
 

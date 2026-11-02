@@ -15,9 +15,9 @@ Setting up this feature involves two roles:
 * You have administrative SSH access to the GitHub Enterprise Server instance.
 * You have an API key from a supported LLM provider.
 * Copilot CLI is installed on client machines. See [Install Copilot CLI](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli).
-* GitHub CLI (`gh`) is installed on client machines. See [GitHub CLI manual](https://cli.github.com/manual/) in the GitHub CLI documentation.
+* GitHub CLI (`gh`) is installed on client machines. See [GitHub CLI manual](https://cli.github.com/manual/?utm_source=set-up-cli-ghes-docs-cli-manual&utm_medium=docs&utm_campaign=universe-2026) in the GitHub CLI documentation.
 
-For information about supported providers and model requirements, see [Use Byok Models](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models).
+For information about supported providers and model requirements, see [Add Llm Models](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models).
 
 ## Configuring your GitHub Enterprise Server instance
 
@@ -67,7 +67,7 @@ Configure Copilot CLI to connect to your GitHub Enterprise Server instance by se
 
 Copilot CLI needs access to LLM inference, so `COPILOT_PROVIDER_GHES_TOKEN` is always required. You will also very likely want Copilot CLI to perform GitHub operations such as create issues, pull requests, and search repositories. Such operations can be done via the GitHub CLI.
 
-It is recommended and preferred that you run `gh auth login --hostname YOUR-GHES-HOSTNAME`. After it succeeds, next step is to set `COPILOT_PROVIDER_GHES_TOKEN` to the token generated in `gh auth login --hostname YOUR-GHES-HOSTNAME`. It is more secure to retrieve the token dynamically rather than copying it from `~/.config/gh/hosts.yml`. You can do so by using `COPILOT_PROVIDER_GHES_TOKEN="$(gh auth token --hostname YOUR-GHES-HOSTNAME)"`. 
+It is recommended and preferred that you run `gh auth login --hostname YOUR-GHES-HOSTNAME`. After it succeeds, next step is to set `COPILOT_PROVIDER_GHES_TOKEN` to the token generated in `gh auth login --hostname YOUR-GHES-HOSTNAME`. It is more secure to retrieve the token dynamically rather than copying it from `~/.config/gh/hosts.yml`. You can do so by using `COPILOT_PROVIDER_GHES_TOKEN="$(gh auth token --hostname YOUR-GHES-HOSTNAME)"`.
 
 Alternatively, you can generate a personal access token on your GitHub Enterprise Server instance, set that token as `COPILOT_PROVIDER_GHES_TOKEN`, and use the same token when running `gh auth login --hostname YOUR-GHES-HOSTNAME`.
 
@@ -93,7 +93,7 @@ The above approach works when you are using Copilot CLI interactively. For autom
    ```
 
    If you are authenticated with `gh auth login` to multiple accounts, you can set `GH_HOST` to your server's hostname and set `GH_ENTERPRISE_TOKEN` (or `GITHUB_ENTERPRISE_TOKEN`) to `"$(gh auth token --hostname YOUR-GHES-HOSTNAME)"`. This ensures GitHub CLI targets your GitHub Enterprise Server instance.
-   
+
    ```shell
    export GH_HOST=YOUR-GHES-HOSTNAME
    export GH_ENTERPRISE_TOKEN="$(gh auth token --hostname YOUR-GHES-HOSTNAME)"
@@ -125,7 +125,7 @@ If both GitHub Enterprise Server and your Copilot CLI configurations are correct
 
  ❯ what is going on in github/codeql-action repo?                          13:33
 
- ● I’ll check recent repository activity on the GHES host: repo metadata, open 
+ ● I’ll check recent repository activity on the GHES host: repo metadata, open
    PRs/issues, and latest commits.
 
  $ Shell Fetch repo metadata 2 lines…                                         5s

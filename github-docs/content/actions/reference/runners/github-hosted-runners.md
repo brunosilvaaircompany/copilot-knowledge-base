@@ -126,7 +126,7 @@ For public repositories, jobs using the workflow labels shown in the table below
 
 ### Standard GitHub-hosted runners for internal and private repositories
 
-For internal and private repositories, jobs using the workflow labels shown in the table below will run on virtual machines with the associated specifications. These runners use your GitHub account's allotment of free minutes, and are then charged at the per minute rates. See [Actions Runner Pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing).
+For internal and private repositories, jobs using the workflow labels shown in the table below will run on virtual machines with the associated specifications. These runners draw from your GitHub account's included compute usage, and are then charged at the per-minute rates. See [Actions Runner Pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing).
 
 <table style="width:100%">
   <thead>
@@ -296,7 +296,9 @@ Windows virtual machines are configured to run as administrators with User Accou
 
 To get a list of IP address ranges that GitHub Actions uses for GitHub-hosted runners, you can use the GitHub REST API. For more information, see the `actions` key in the response of the `GET /meta` endpoint. For more information, see [Meta](https://docs.github.com/en/rest/meta/meta#get-github-meta-information).
 
-Windows and Ubuntu runners are hosted in Azure and subsequently have the same IP address ranges as the Azure datacenters. macOS runners are hosted in GitHub's own macOS cloud.
+Eligible Linux runners use a multi-cloud compute pool, so their outbound IP addresses are not limited to Azure datacenter ranges. Keep any IP allowlists or network-based access policies used by your workflows in sync with all ranges in the `actions` array, rather than relying on cloud-provider-specific ranges. Policies that allow only Azure or Microsoft-owned ranges, including Microsoft Entra Conditional Access policies, can block connections or authentication from these runners.
+
+For multi-cloud eligibility, see [Cloud hosts used by GitHub-hosted runners](/actions/concepts/runners/github-hosted-runners#cloud-hosts-used-by-github-hosted-runners). macOS runners are hosted in GitHub's own macOS cloud.
 
 Since there are so many IP address ranges for GitHub-hosted runners, we do not recommend that you use these as allowlists for your internal resources. Instead, we recommend you use larger runners with a static IP address range, or self-hosted runners. For more information, see [Larger Runners](https://docs.github.com/en/actions/how-tos/manage-runners/larger-runners) or [Self Hosted Runners](https://docs.github.com/en/actions/concepts/runners/self-hosted-runners).
 

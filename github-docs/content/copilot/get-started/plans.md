@@ -4,40 +4,44 @@
 
 GitHub offers a variety of plans for Copilot. Choose between them depending on your needs and whether you're using Copilot as an individual or as part of an organization or enterprise.
 
-**Copilot Free**: [Start using Copilot Free](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text&ref_plan=free).
+**Copilot Free**: [Start using Copilot Free](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text&ref_plan=free&utm_source=get-started-plans-doc-web&utm_medium=docs&utm_campaign=universe-2026).
 
 * This plan includes limited access to a selection of Copilot features allowing you to try AI-powered coding assistance at no cost.
 
 **Copilot Student**: [Get access to Copilot Student](/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students).
 
-* Available to verified students. Get access to Copilot's features for free. 
+* Available to verified students. Get access to Copilot's features for free.
 
-**GitHub Copilot Pro**: [Subscribe to Copilot Pro](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro).
+**GitHub Copilot Pro**: [Subscribe to Copilot Pro](https://github.com/github-copilot/pro/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro&utm_source=get-started-plans-doc-signup-pro&utm_medium=docs&utm_campaign=universe-2026).
 
-* Designed for individuals who want more flexibility with access to a selection of models and a monthly allowance of AI credits. 
+* Designed for individuals who want more flexibility with access to a selection of models and a monthly allowance of AI credits.
 
-**GitHub Copilot Pro+**: [Subscribe to Copilot Pro+](https://github.com/github-copilot/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro-plus).
+**GitHub Copilot Pro+**: [Subscribe to Copilot Pro+](https://github.com/github-copilot/pro-plus/signup?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=pro-plus&utm_source=get-started-plans-doc-signup-pro-plan&utm_medium=docs&utm_campaign=universe-2026).
 
-* Ideal for AI power users who want access to the most advanced capabilities. This paid plan includes everything in GitHub Copilot Pro and a higher monthly allowance of AI credits. 
+* Ideal for AI power users who want access to the most advanced capabilities. This paid plan includes everything in GitHub Copilot Pro and a higher monthly allowance of AI credits.
 
-**GitHub Copilot Max**: [Upgrade to Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max).
+**GitHub Copilot Max**: [Upgrade to Copilot Max](https://github.com/settings/billing/licensing?ref_product=copilot&ref_type=purchase&ref_style=text&ref_plan=max&utm_source=get-started-plans-doc-max-licensing-billing-settings&utm_medium=docs&utm_campaign=universe-2026).
 
-* Ideal for sustained, high-volume AI power users who want access to the most AI credits available to them. This paid plan includes everything in Copilot Pro+, plus our highest individual monthly allowance of AI credits. 
+* Ideal for sustained, high-volume AI power users who want access to the most AI credits available to them. This paid plan includes everything in Copilot Pro+, plus our highest individual monthly allowance of AI credits.
 
-**GitHub Copilot Business**: [Subscribe to Copilot Business](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=business).
+**GitHub Copilot Business**: [Subscribe to Copilot Business](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=business&utm_source=get-started-plans-section-activates-business-purchase&utm_medium=docs&utm_campaign=universe-2026).
 
 * Made for organizations and enterprises, this plan offers centralized management and Copilot policy control for organization members.
 
-**GitHub Copilot Enterprise**: [Subscribe to Copilot Enterprise](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=enterprise).
+**GitHub Copilot Enterprise**: [Subscribe to Copilot Enterprise](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=enterprise&utm_source=getting-started-plans-doc-purchase-enterprise-cta&utm_medium=docs&utm_campaign=universe-2026).
 
-* Designed for enterprises using GitHub Enterprise Cloud. This plan includes all the features of Copilot Business, offers a larger monthly pool of AI credits, plus additional enterprise-grade capabilities. 
+* Designed for enterprises using GitHub Enterprise Cloud. This plan includes all the features of Copilot Business, offers a larger monthly pool of AI credits, plus additional enterprise-grade capabilities.
+
+**Copilot access**: Available to eligible enterprises.
+
+* Provides the same feature and model eligibility as Copilot Enterprise, with a $0 seat charge for users with a GitHub Enterprise Cloud license or $10 USD per user per month for Copilot Standalone. Metered usage is billed separately, with no included allowance.
 
 > [!NOTE]
 > Copilot is not currently available for GitHub Enterprise Server.
 
 ## Copilot plans overview
 
-The table below provides an overview of differences between plans. All plans include Copilot CLI and the Copilot app.
+The table below compares pricing, usage allowances, agents, and models. All plans include Copilot CLI and the Copilot app.
 
 {% rowheaders %}
 
@@ -50,26 +54,30 @@ The table below provides an overview of differences between plans. All plans inc
 | Copilot Max        | $100 USD per month                           | Base: 10,000                | {% octicon "check" aria-label="Included" %}                                | Priority access to premium models |
 | Copilot Business   | $19 USD per granted seat per month         | Total per user per month: 1,900                | {% octicon "check" aria-label="Included" %}                                | Access to premium models          |
 | Copilot Enterprise | $39 USD per granted seat per month          | Total per user per month: 3,900                | {% octicon "check" aria-label="Included" %}                                | Priority access to premium models |
+| Copilot access | $0 for licensed users of GitHub Enterprise Cloud<br><br>$10 USD per user per month for Copilot Standalone (users with no GitHub Enterprise Cloud license) | No included allowance | {% octicon "check" aria-label="Included" %} | Priority access to premium models |
 
 {% endrowheaders %}
 
-Each plan comes with an allowance of GitHub AI Credits. For more information, including how GitHub AI Credits work, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing) and [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
+For more information about how GitHub AI Credits work, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing) and [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
-For more detail on what's uniquely available in each plan, see the following sections: 
+Feature and model availability is subject to administrator policies and spending controls.
+
+For more detail on what's uniquely available in each plan, see the following sections:
 * [Individual plans](#individual-plans)
 * [Organization and enterprise plans](#organization-and-enterprise-plans)
 
 ## Individual plans
 
-The individual plans available are: 
+The individual plans available are:
 * Free plans including Copilot Free and Copilot Student.
 * Paid plans including Copilot Pro, Copilot Pro+, and Copilot Max.
 
-With these plans you'll receive access to the following features and capabilities. 
+With these plans you'll receive access to the following features and capabilities.
 
-> [!NOTE] 
+> [!NOTE]
 > * Copilot Free plans are only available to individual developers who don't have access to Copilot through an organization or enterprise.
-> * Verified teachers, and maintainers of popular open source projects may be eligible for free access to Copilot Pro. 
+> * Verified teachers and maintainers of popular open source projects may be eligible for free access to Copilot Pro.
+> * Users on paid plans have access to Copilot in the cloud, subject to applicable organization and enterprise policies. Copilot Free users can continue to use Copilot Chat on GitHub.com and GitHub Mobile, and can upgrade to a paid plan to access Copilot in the cloud.
 
 ### GitHub AI Credits allowance by plan
 
@@ -88,8 +96,8 @@ For more information on how GitHub AI Credits work, see [Billing](https://docs.g
 
 ### Inline suggestions and Copilot Chat
 
-Inline suggestions are real-time code suggestions with included models in IDEs and Next edit suggestions. 
-* Limited to 2000 completions per month on Copilot Free. 
+Inline suggestions are real-time code suggestions with included models in IDEs and Next edit suggestions.
+* Limited to 2000 completions per month on Copilot Free.
 
 **Copilot Chat** features available include:
 * Copilot Chat in IDEs
@@ -120,7 +128,7 @@ On Copilot Free and Copilot Student plans, access to models is available through
 
 | Agents                                                                  | Copilot Free                                   | Copilot Student | Copilot Pro | Copilot Pro+ | Copilot Max |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------- |
-| Copilot cloud agent                        | {% octicon "x" aria-label="Not included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
+| Copilot in the cloud                        | {% octicon "x" aria-label="Not included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 | Agent mode                                                              | {% octicon "check" aria-label="Included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 | Copilot code review         | Only "Review selection" in VS Code | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 | Model Context Protocol (MCP)                                            | {% octicon "check" aria-label="Included" %}                                       | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
@@ -155,53 +163,69 @@ On Copilot Free and Copilot Student plans, access to models is available through
 | Content exclusion                                                                                | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "x" aria-label="Not included" %}         | {% octicon "x" aria-label="Not included" %}    |
 | Copilot CLI                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
 | The Copilot app                                                   | {% octicon "check" aria-label="Included" %}     | {% octicon "check" aria-label="Included" %}        | {% octicon "check" aria-label="Included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}    |
-| GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %}     | {% octicon "x" aria-label="Not included" %}        | {% octicon "x" aria-label="Not included" %}    | {% octicon "check" aria-label="Included" %}         | {% octicon "x" aria-label="Not included" %}    |
 
 {% endrowheaders %}
 
 ## Organization and enterprise plans
 
-The Copilot plans available for organizations and enterprises are: 
-* Copilot Business
-* Copilot Enterprise
+Organizations and enterprises can centrally manage access, policies, and usage controls with Copilot Business, Copilot Enterprise, or Copilot access for eligible enterprises.
 
-With these plans you'll receive access to the following features and capabilities. 
+For organizations within an enterprise, enterprise owners make the plan decisions.
 
-> [!NOTE] With GitHub Enterprise Cloud, an enterprise owner chooses the plan for each organization in the enterprise. For guidance on choosing a plan, see [Choose Enterprise Plan](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/choose-enterprise-plan).
+### How the billing models differ
+
+There are two billing models:
+
+* **With included credits**: Copilot Business and Copilot Enterprise charge a monthly fee per seat and include a shared pool of AI credits. Copilot Enterprise includes more credits per seat and priority access to new models and features. Usage beyond the shared pool is billed separately.
+* **Without included credits**: Copilot access provides the same feature and model eligibility as Copilot Enterprise, but metered usage is billed from the first use.
+
+An enterprise must choose one billing model. Copilot access cannot coexist with Copilot Business or Copilot Enterprise seats in the same enterprise. Organizations within the enterprise cannot choose a different billing model.
+
+Eligible enterprises can provide Copilot access through two options:
+
+* **Through GitHub Enterprise Cloud**: Copilot access has a $0 seat cost for users with a GitHub Enterprise Cloud license.
+* **As Copilot Standalone**: Copilot access costs $10 USD per user per month, without requiring a GitHub Enterprise Cloud license for the user.
+
+An enterprise can use both access options. Existing Copilot Business and Copilot Enterprise plans remain supported, and transitioning is voluntary. For eligibility and transition details, see [Whats Changing With GitHub Enterprise And Copilot](https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot).
 
 ### GitHub AI Credits allowance by plan
 
-| Plan | Price per granted seat per month | GitHub AI Credits per user per month | 
-| --- | --- | --- | 
-| Copilot Business | $19 USD  | 1,900 | 
-| Copilot Enterprise| $39 USD  | 3,900 | 
+Copilot access does not include any GitHub AI Credits. Copilot Business and Copilot Enterprise include the following allowances:
 
-Copilot usage is measured in AI credits under usage-based billing. Each license contributes AI credits to a shared enterprise pool, and usage beyond the pool is charged at $0.01 USD per AI credit. Code completions and next edit suggestions are not billed in AI credits and remain unlimited for all paid plans.
+| Plan | Price per granted seat per month | GitHub AI Credits per user per month |
+| --- | --- | --- |
+| Copilot Business | $19 USD  | 1,900 |
+| Copilot Enterprise| $39 USD  | 3,900 |
+
+These licenses contribute credits to a shared pool, and usage beyond the pool is charged at $0.01 USD per AI credit.
 
 For a full explanation of how AI credits work, including pooling, additional usage, and what happens when credits run out, see [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
-### Inline suggestions and Copilot Chat
+### Inline suggestions and GitHub Copilot in the cloud
 
 **Inline suggestions**: Inline suggestion features are available in all plans:
 
 * Real-time code suggestions with included models
 * Next edit suggestions
 
-**Copilot Chat** features are available in all plans: 
+These features are unlimited and do not consume credits, including when a user has a $0 USD budget or reaches an enforced spending limit.
 
-* Copilot Chat in IDEs
+Chat features are available in all plans:
+
+* Copilot in IDEs
 * Inline chat
 * Slash commands
-* Copilot Chat in GitHub Mobile
-* Copilot Chat in GitHub
-* Copilot Chat in Windows Terminal
-* Copilot Chat skills in IDEs[^1]
+* Copilot in GitHub
+* Copilot in GitHub Mobile
+* Copilot in Windows Terminal
+* Copilot skills in IDEs[^1]
+* GitHub Copilot in the cloud
 
 ### Models
 
 {% rowheaders %}
 
-| Available models                               | Copilot Business | Copilot Enterprise |
+| Available models                               | Copilot Business | Copilot Enterprise and Copilot access |
 |---------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------|
 | {% for model in tables.copilot.model-supported-plans %} |
 | {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' %}[^claude-fable-5]{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
@@ -215,9 +239,9 @@ For a full explanation of how AI credits work, including pooling, additional usa
 
 {% rowheaders %}
 
-| Agents                                                                  | Copilot Business | Copilot Enterprise |
+| Agents                                                                  | Copilot Business | Copilot Enterprise and Copilot access |
 | ----------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
-| Copilot cloud agent                        | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
+| Copilot in the cloud                         | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Agent mode                                                              | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Copilot code review         | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Model Context Protocol (MCP)                                            | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
@@ -229,7 +253,7 @@ For a full explanation of how AI credits work, including pooling, additional usa
 
 {% rowheaders %}
 
-| Customization                                                                    | Copilot Business | Copilot Enterprise |
+| Customization                                                                    | Copilot Business | Copilot Enterprise and Copilot access |
 | -------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
 | Repository and personal custom instructions                                      | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Organization custom instructions                                                 | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
@@ -245,14 +269,13 @@ For a full explanation of how AI credits work, including pooling, additional usa
 
 {% rowheaders %}
 
-|                                                                                                  | Copilot Business | Copilot Enterprise |
+|                                                                                                  | Copilot Business | Copilot Enterprise and Copilot access |
 | ------------------------------------------------------------------------------------------------ | --------------------------------------------------- | ----------------------------------------------------- |
 | Copilot pull request summaries                                                     | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Audit logs                                                                                       | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Content exclusion                                                                                | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | Copilot CLI                                                   | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
 | The Copilot app                                                  | {% octicon "check" aria-label="Included" %}         | {% octicon "check" aria-label="Included" %}           |
-| GitHub Spark (public preview) | {% octicon "x" aria-label="Not included" %}         | {% octicon "check" aria-label="Included" %}           |
 
 {% endrowheaders %}
 

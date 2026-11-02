@@ -1,15 +1,14 @@
 # Enabling public monitoring for your enterprise
 
-> [!NOTE]
-> Public monitoring for secret scanning is currently in public preview and subject to change. If you have feedback, please join the [discussion](https://github.com/orgs/community/discussions/categories/code-security).
-
-
 ## Prerequisites
 
 Before enabling public monitoring, ensure your enterprise has:
 
 * GitHub Advanced Security or GitHub Secret Protection enabled
-* While not necessary, we recommend having at one verified domain configured (see [Verifying Or Approving A Domain For Your Enterprise](https://docs.github.com/en/admin/configuring-settings/configuring-user-applications-for-your-enterprise/verifying-or-approving-a-domain-for-your-enterprise)) in order to get the full value for the feature.
+* For GitHub Enterprise Cloud with data residency enterprises, we strongly recommend at least one verified domain configured, since it's the only method available to receive attributed alerts. See [Verifying Or Approving A Domain For Your Enterprise](https://docs.github.com/en/admin/configuring-settings/configuring-user-applications-for-your-enterprise/verifying-or-approving-a-domain-for-your-enterprise).
+
+> [!NOTE]
+> A verified domain isn't required to enable public monitoring. For enterprises not using GitHub Enterprise Cloud with data residency, configuring one is optional, but it provides full attribution coverage. See [Public Monitoring](https://docs.github.com/en/code-security/concepts/secret-security/public-monitoring#attribution-methods).
 
 ## Enabling public monitoring
 

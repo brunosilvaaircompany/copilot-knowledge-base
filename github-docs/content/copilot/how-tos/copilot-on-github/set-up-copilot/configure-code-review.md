@@ -32,7 +32,7 @@ You can choose the Copilot review effort that Copilot code review uses for the r
 1. Next to "Review effort level," select the Copilot review effort for reviews you request.
    * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
-   * **Max**: Most thorough review. This option appears with a **Coming soon** label and is not available yet.
+   * **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
 
 To return to the built-in default, select the **Default** option at the top of the menu. Until you choose a specific level, the control shows the built-in default, **Default (Balanced)**.
 
@@ -87,16 +87,14 @@ You can configure how Copilot code review completes code reviews in your reposit
 1. To choose the depth of Copilot code reviews, next to "Review effort level," select the effort level for automatic reviews in this repository.
    * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
+   * **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
 
-   Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
+   Balanced and Max reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
+1. To limit the review effort available within the repository, next to "Maximum review effort," select **No limit**, **Lite**, **Balanced**, or **Max**.
 1. To choose whether Copilot can approve pull requests in your repository, configure the settings under "Auto-approval."
    * **Allow Copilot to approve pull requests**: Toggle on to let Copilot submit approving reviews.
    * **Allow Copilot approvals to count toward merge requirements**: Toggle on so Copilot approvals can satisfy pull request approval requirements.
    * **File paths**: Optionally, limit which pull requests count toward merge requirements. Enter one file glob per line to count approvals only on pull requests where every changed file matches one of the globs. Leave blank to count approvals for all files. Up to 15 globs are supported.
-
-   > [!NOTE]
-   > Copilot approvals are in public preview and subject to change.
-
 
 1. To prevent people from using an external Copilot license to request reviews in this repository, enable **Only allow Copilot code review to be triggered by authorized users**. If this setting is enabled for your organization, you cannot turn it off for the repository. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#reviews-requested-with-an-external-copilot-license).
 
@@ -108,7 +106,7 @@ You can enable automatic code reviews for repositories in your organization and 
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -153,7 +151,7 @@ You can configure how Copilot code review completes code reviews in repositories
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -161,11 +159,13 @@ You can configure how Copilot code review completes code reviews in repositories
 
 1. In the sidebar, under "Code, planning, and automation",
  click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**, then **Code review**.
-1. To choose the depth of Copilot code reviews, next to "Review effort level," select the default effort level for automatic reviews in repositories in your organization.
+1. To choose the depth of Copilot code reviews, under "General," next to "Default review effort level," select the default effort level for automatic reviews in repositories in your organization. Repositories can override this default.
    * **Lite**: Standard review.
    * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes.
+   * **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
 
-    Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
+    Balanced and Max reviews use more AI credits, and may consume marginally more GitHub Actions minutes. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
+1. To limit the review effort available across the organization, next to "Maximum review effort," select **No limit**, **Lite**, **Balanced**, or **Max**. This maximum applies to every repository in the organization. Repositories can choose the selected effort level or a lower level, but cannot exceed the maximum.
 1. To choose how AI credits usage associated with members who have paid Copilot licenses is billed, next to **Choose how members with a Copilot license are billed**, select an option.
    * **Member**: Use the member's Copilot entitlement. If the member's quota is exhausted, the code review fails. This is the default.
    * **Organization**: Bill the organization.
@@ -176,10 +176,6 @@ You can configure how Copilot code review completes code reviews in repositories
    * **Let repositories decide**: Repository admins can decide this in repository settings.
    * **Enable for selected repositories**: Copilot approvals can count toward merge requirements only in the repositories you select. If you choose this option, also assign the repositories you want to enable this for.
    * **Disabled everywhere**: Copilot approvals cannot count toward merge requirements in any repository in the organization.
-
-   > [!NOTE]
-   > Copilot approvals are in public preview and subject to change.
-
 
 1. To prevent people from using an external Copilot license to request reviews in your organization's repositories, enable **Only allow Copilot code review to be triggered by authorized users**. This setting applies to every repository in the organization, and repository administrators cannot turn it off.
 
@@ -207,6 +203,8 @@ You can configure how Copilot code review completes code reviews for your enterp
 
 1. Scroll down to "Available Agents", then click **Copilot code review**.
 1. Next to "Copilot code review", select a policy.
+1. To choose the depth of Copilot code reviews, next to "Default review effort level," select the default effort level for your enterprise. Organizations and repositories can override this default.
+1. To limit the review effort available across the enterprise, next to "Maximum review effort," select **No limit**, **Lite**, **Balanced**, or **Max**. Organizations and repositories can choose the selected effort level or a lower level, but cannot exceed the maximum.
 1. Then choose which Copilot code review features to enable for your enterprise.
 1. To choose who is billed for Copilot code review usage by members with a paid Copilot license, next to "Choose how members with a Copilot license are billed," select a policy.
    * **Member**: Use the member's Copilot entitlement for organizations in the enterprise.
@@ -218,6 +216,3 @@ You can configure how Copilot code review completes code reviews for your enterp
    * **Let organizations decide**: Organization owners can choose whether to enable Copilot approvals.
    * **Enable for selected organizations**: Copilot approvals are enabled only for the organizations you select.
    * **Disabled everywhere**: Organizations cannot enable Copilot approvals. This is the default.
-
-   > [!NOTE]
-   > Copilot approvals are in public preview and subject to change.

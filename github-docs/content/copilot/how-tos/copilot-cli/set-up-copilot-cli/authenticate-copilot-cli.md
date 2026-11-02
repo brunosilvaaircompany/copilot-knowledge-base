@@ -214,7 +214,7 @@ To revoke the OAuth app authorization on GitHub and prevent it from being used e
    1. In the upper-right corner of any page on GitHub, click your profile picture.
    1. Click **Settings**.
 1. In the left sidebar, click **Applications**.
-1. Under **Authorized OAuth Apps**, click {% octicon "kebab-horizontal" aria-label="The horizontal kebab icon" %} next to **GitHub CLI** to expand the menu and select **Revoke**.
+1. Under **Authorized OAuth Apps**, click {% octicon "kebab-horizontal" aria-label="The horizontal kebab icon" %} next to **GitHub Copilot CLI** to expand the menu and select **Revoke**.
 
 ## Next steps
 

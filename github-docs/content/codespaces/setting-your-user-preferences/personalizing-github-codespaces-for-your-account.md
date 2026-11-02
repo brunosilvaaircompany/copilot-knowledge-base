@@ -117,6 +117,8 @@ Dotfiles are files and folders on Unix-like systems starting with `.` that contr
 
 Your dotfiles repository might include your shell aliases and preferences, any tools you want to install, or any other codespace personalization you want to make.
 
+Your dotfiles setting is shared with Copilot in the cloud. If your selected repository contains a root `.copilot` directory, Copilot also copies the repository's contents into your cloud sandboxes when they are created or resumed, without running installation scripts. For details, see [Personalize Cloud Sessions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/personalize-cloud-sessions).
+
 You can configure GitHub Codespaces to use dotfiles from any repository you own by selecting that repository in your [personal GitHub Codespaces settings](https://github.com/settings/codespaces).
 
 When you create a new codespace, GitHub clones your selected dotfiles repository to the codespace environment, and looks for one of the following files to set up the environment.

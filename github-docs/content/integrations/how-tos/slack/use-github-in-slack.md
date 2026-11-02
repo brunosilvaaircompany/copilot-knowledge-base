@@ -4,10 +4,7 @@ The GitHub integration for Slack allows you to connect your GitHub account to th
 
 
 
-> [!NOTE]
-> * GitHub Copilot in Slack is currently in public preview and subject to change.
-
-You can also use the GitHub integration to initiate and steer Copilot cloud agent sessions in a conversation, including asking Copilot to perform deep research, planning and triage tasks within a thread. Teammates can collaborate with each other and the agent, add context, correct assumptions, continue an agent task, and review the resulting artifacts.
+You can also use the GitHub integration to initiate and steer Copilot cloud agent sessions in a conversation, including asking Copilot to perform deep research, planning and triage tasks within a thread. Teammates can collaborate with each other and the agent, add context, correct assumptions, continue an agent task, and review the resulting artifacts. You can also select the model, connect MCP servers, work across multiple repositories in one session, and benefit from Copilot Memory.
 
 
 
@@ -41,7 +38,7 @@ To use a slash command, type `/github` followed by the command you want to execu
 
 
 
-To change the settings for Copilot cloud agent in Slack, use the `@GitHub settings` command.
+To change the repositories, default owner, or default model for new conversations in a channel, run `@GitHub settings`. These defaults are separate from repository notification subscriptions. To change the model only for the current conversation, ask Copilot to choose a model.
 
 ## Initiating Copilot cloud agent sessions within Slack
 
@@ -49,14 +46,22 @@ The GitHub integration includes Copilot cloud agent in Slack. You can summon Git
 
 Use Copilot in direct messages, threads, and channels. Besides creating issues, pull requests and other artifacts, working with Copilot in Slack allows you to:
 
-* Move directly from discussion to investigation and implementation.
-* Ask questions and investigate failures.
-* Plan work before implementation.
-* Collaboratively steer an agent with teammates.
-* Delegate work from any device.
-* Let tasks run asynchronously.
-* Review the resulting work in the open.
-* Resume work on the agent-generated artifacts outside of Slack, in GitHub, the terminal, or your preferred code editor.
+* Move from discussion to investigation, planning, and implementation.
+* Ask questions, investigate failures, and steer an agent together with teammates.
+* Delegate work from any device and let tasks run asynchronously.
+* Choose the model, connect MCP servers, and work across multiple repositories.
+* Use Copilot Memory to help Copilot learn from your work over time.
+* Review the resulting work in the open, then resume it outside of Slack, in GitHub, the terminal, or your preferred code editor.
+
+For example:
+
+```text
+@GitHub Investigate this failed workflow and explain the cause before changing code.
+@GitHub Update the API in octo-org/service and its client in octo-org/web, then open linked pull requests.
+@GitHub Choose a model for this conversation.
+```
+
+You need write access to every selected repository to start or steer work. Other participants in the thread can still add context. For a task moved to a Slack Code channel, continue steering it there.
 
 For more information, see [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack).
 
@@ -105,6 +110,12 @@ You can disable threading for issue and pull request notifications in individual
 1. In the settings menu, to the right of "Disable threading for Pull Request and Issue notifications", click **Disable**.
 
 You, or any other member of the channel, can re-enable threading at any time by following the same steps and clicking **Enable** in the settings menu.
+
+
+
+Notification threading and Copilot sessions serve different purposes. Changing notification threading settings does not change the repositories or model of an agent session. To ask for investigation or implementation, reply to a notification and mention `@GitHub`.
+
+
 
 ## Broadcasting comments and reviews to the Slack channel
 

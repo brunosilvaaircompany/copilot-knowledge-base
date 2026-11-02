@@ -29,8 +29,8 @@ These instructions are for Visual Studio Code. For instructions on different cli
 
 1. At the bottom of the chat view, select the **CURRENT-MODEL** {% octicon "chevron-down" aria-hidden="true" aria-label="chevron-down" %} dropdown menu, then click the AI model of your choice.
 
-> [!NOTE] If you select **Auto**, Copilot auto model selection will select the best model based on availability and to help reduce rate limiting. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
-
+> [!NOTE]
+> If you select **Copilot Fusion** and then an effort level, Copilot Fusion will select the best model and execution pattern based on the task. See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion).
 
 ## Adding more models
 
@@ -73,8 +73,6 @@ The models you selected are now available in the model picker in the chat view.
 
 If you added a model from a provider via the AI Toolkit then the first time you use the model, you will be prompted to download it. You may also be prompted to authenticate with the provider.
 
-> [!TIP] If you're already using chat with auto model selection, you'll need to start a new chat session to switch models. To start a new session, in the top right of the chat view, click {% octicon "plus" aria-label="new chat" %} new chat.
-
 {% endvscode %}
 
 {% visualstudio %}
@@ -94,7 +92,8 @@ To use multi-model Copilot Chat, you must use Visual Studio 2022 version 17.12 o
 1. In the Visual Studio menu bar, click **View**, then click **GitHub Copilot Chat**.
 1. In the bottom right of the chat view, select the **CURRENT-MODEL** {% octicon "triangle-down" aria-hidden="true" aria-label="triangle-down" %} dropdown menu, then click the AI model of your choice.
 
-> [!NOTE] If you select **Auto**, Copilot auto model selection will select the best model based on availability and to help reduce rate limiting. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+> [!NOTE]
+> If you select **Auto**, auto model selection will select the best model based on the task. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 
 {% endvisualstudio %}
@@ -119,8 +118,8 @@ For reasoning models that support configurable thinking effort, you can control 
 1. Optionally, hover over a reasoning model that supports configurable thinking effort.
    1. In the **Thinking Effort** submenu, select an effort level. Nonreasoning models do not display the **Thinking Effort** submenu.
 
-> [!NOTE] If you select **Auto**, Copilot auto model selection will select the best model based on availability and to help reduce rate limiting. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
-
+> [!NOTE]
+> If you select **Copilot Fusion** and then an effort level, Copilot Fusion will select the best model and execution pattern based on the task. See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion).
 
 > [!TIP]
 > Model selection is also available when using Copilot through JetBrains AI Assistant. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides).
@@ -143,7 +142,8 @@ These instructions are for the Eclipse IDE. For instructions on different client
 1. In the popup menu, click **Open Chat**.
 1. In the bottom right of the chat panel, click the currently selected AI model, then select an alternative model from the popup menu.
 
-> [!NOTE] If you select **Auto**, Copilot auto model selection will select the best model based on availability and to help reduce rate limiting. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+> [!NOTE]
+> If you select **Auto**, auto model selection will select the best model based on the task. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 
 {% endeclipse %}
@@ -165,7 +165,8 @@ To use multi-model Copilot Chat, you must install the GitHub Copilot for Xcode e
 1. To open the chat view, click **Editor** in the menu bar, then click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot** then **Open Chat**. Copilot Chat opens in a new window.
 1. In the bottom right of the chat view, select the **CURRENT-MODEL** {% octicon "triangle-down" aria-hidden="true" aria-label="triangle-down" %} dropdown menu, then click the AI model of your choice.
 
-> [!NOTE] If you select **Auto**, Copilot auto model selection will select the best model based on availability and to help reduce rate limiting. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+> [!NOTE]
+> If you select **Auto**, auto model selection will select the best model based on the task. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 
 {% endxcode %}

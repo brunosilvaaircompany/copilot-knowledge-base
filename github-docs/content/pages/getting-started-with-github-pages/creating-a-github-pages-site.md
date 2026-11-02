@@ -54,7 +54,7 @@ Before you can create your site, you must have a repository for your site on Git
 1. Your GitHub Pages site is built and deployed with a GitHub Actions workflow. For more information, see [View Workflow Run History](https://docs.github.com/en/actions/how-tos/monitor-workflows/view-workflow-run-history).
 
    > [!NOTE]
-   > GitHub Actions is free for public repositories. Usage charges apply for private and internal repositories that go beyond the monthly allotment of free minutes. For more information, see [Billing And Usage](https://docs.github.com/en/actions/concepts/billing-and-usage).
+   > Standard GitHub Actions runners are free for public repositories. For private and internal repositories, usage charges apply after the included compute usage for your plan is consumed. For more information, see [Billing And Usage](https://docs.github.com/en/actions/concepts/billing-and-usage).
 
 
 

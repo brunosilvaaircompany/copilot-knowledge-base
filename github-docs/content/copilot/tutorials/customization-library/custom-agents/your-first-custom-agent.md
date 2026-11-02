@@ -8,7 +8,7 @@
 
 ## About custom agents
 
-Custom agents are specialized versions of Copilot cloud agent that maintain consistent expertise across entire workflows. Unlike custom instructions that apply broadly, or prompt files for one-time tasks, custom agents are selected for specific tasks and maintain their configuration throughout the workflow.
+Custom agents are specialized versions of Copilot that maintain consistent expertise across entire workflows. Unlike custom instructions that apply broadly, or prompt files for one-time tasks, custom agents are selected for specific tasks and maintain their configuration throughout the workflow.
 
 For a more in-depth overview, see [Custom Agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents).
 

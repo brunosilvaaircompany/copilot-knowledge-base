@@ -49,7 +49,9 @@ Content exclusions also apply to Copilot code review on the GitHub website.
 
 ### Limitations of content exclusion
 
-It's possible that Copilot may use semantic information from an excluded file if the information is provided by the IDE indirectly. Examples of such content include type information and hover-over definitions for symbols used in code, as well as general project properties such as build configuration information.
+Content exclusion is a guardrail for the tools that GitHub controls. It is not guaranteed to be respected by third-party MCP servers.
+
+It's also possible that Copilot may use semantic information from an excluded file if the information is provided by the IDE indirectly. Examples of such content include type information and hover-over definitions for symbols used in code, as well as general project properties such as build configuration information.
 
 
 Currently, content exclusions do not apply to symbolic links (symlinks) and repositories located on remote filesystems.

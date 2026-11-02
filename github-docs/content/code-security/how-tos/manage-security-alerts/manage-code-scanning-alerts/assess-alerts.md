@@ -40,6 +40,12 @@ By default, the code scanning alerts page is filtered to show alerts for the def
 
 For more information, see [Code Scanning Alerts](https://docs.github.com/en/code-security/concepts/code-scanning/code-scanning-alerts).
 
+
+
+To view, understand, and fix code scanning alerts alongside your local code in the GitHub Copilot app, see [View And Fix Security Alerts](https://docs.github.com/en/copilot/how-tos/github-copilot-app/view-and-fix-security-alerts).
+
+
+
 > [!NOTE]
 > You can see information about when code scanning analysis last ran on the tool status page. For more information, see [Use The Tools Status Page For Code Scanning](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/manage-your-configuration/use-the-tools-status-page-for-code-scanning).
 
@@ -62,6 +68,12 @@ You can filter the alerts shown in the code scanning alerts view. This is useful
 When you select a keyword from either a drop-down list, or as you enter a keyword in the search field, only values with results are shown. This makes it easier to avoid setting filters that find no results.
 
 ![Screenshot of search field in alerts view. The field has "branch:dependabot" and all valid branches with a matching name are shown.](/assets/images/help/repository/code-scanning-filter-keywords.png)
+
+
+
+To focus on findings from AI Scan for repositories, filter the alert list by the **AI Scan** tool. See [Ai Scan For Repositories](https://docs.github.com/en/code-security/concepts/code-scanning/ai-scan-for-repositories).
+
+
 
 If you enter multiple filters, the view will show alerts matching _all_ these filters. For example, `is:closed severity:high branch:main` will only display closed high-severity alerts that are present on the `main` branch. The exception is filters relating to refs (`ref`, `branch` and `pr`): `is:open branch:main branch:next` will show you open alerts from both the `main` branch and the `next` branch.
 

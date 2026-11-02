@@ -47,6 +47,18 @@ You can add files to a space directly from the code view on GitHub, so you don't
 
 1. From the dropdown, select the space you want to add the file to, or create a new space.
 
+## Restoring chat use in spaces with incompatible private sources
+
+If a space includes data from multiple organizations or a mix of private and organization data, chat may not work correctly in GitHub Copilot in the cloud.
+
+To use chat in Copilot in the cloud, include only public repositories and private repositories owned by the space owner.
+
+To restore chat in an incompatible space:
+
+1. Identify the incompatible sources.
+1. Remove the sources or adjust their access permissions to meet these requirements.
+1. If necessary, add the sources back, ensuring they meet these requirements.
+
 ## Next steps
 
 * For an overview of Copilot Spaces, see [Spaces](https://docs.github.com/en/copilot/concepts/prompting-and-context/spaces).

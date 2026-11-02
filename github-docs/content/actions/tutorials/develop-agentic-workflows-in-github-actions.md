@@ -1,9 +1,5 @@
 # Develop agentic workflows in GitHub Actions
 
-> [!NOTE]
-> GitHub Agentic Workflows are in public preview and subject to change.
-
-
 ## Introduction
 
 GitHub Agentic Workflows let you define repository automations in Markdown and choose the AI coding agent that runs them. The `gh aw` extension compiles each agentic workflow into a GitHub Actions workflow.
@@ -50,7 +46,7 @@ This article walks through a simple setup that adds the agent's credential as a 
 | Google Gemini CLI | `gemini` | `GEMINI_API_KEY` containing a Google AI Studio API key |
 | Copilot CLI (default) | `copilot` | No secret needed for organization repositories (see below). For personal repositories, `COPILOT_GITHUB_TOKEN` containing a fine-grained personal access token with **Copilot Requests** set to **Read**. |
 
-Other engines such as Pi (experimental) are also supported. For the full list, see the [GitHub Agentic Workflows authentication reference](https://github.github.com/gh-aw/reference/auth/).
+Other engines such as Pi (experimental) are also supported. For the full list, see the [GitHub Agentic Workflows authentication reference](https://github.github.com/gh-aw/reference/auth/?utm_source=agentic-workflow-actions-docs-linking-gh-aw-auth-reference&utm_medium=docs&utm_campaign=universe-2026).
 
 ### Organization billing for GitHub Copilot
 
@@ -106,4 +102,4 @@ The generated workflow triggers automatically on pull requests, so it runs the n
 ## Next steps
 
 * To create a workflow that produces a weekly issue activity report, see [Creating GitHub Agentic Workflows](https://docs.github.com/en/copilot/how-tos/github-agentic-workflows/creating-github-agentic-workflows).
-* For advanced engine configuration, safe outputs, and more workflow examples, see the [GitHub Agentic Workflows documentation site](https://github.github.com/gh-aw/).
+* For advanced engine configuration, safe outputs, and more workflow examples, see the [GitHub Agentic Workflows documentation site](https://github.github.com/gh-aw/?utm_source=linking-agentic-workflows-actions-docs-gh-aw-repo&utm_medium=docs&utm_campaign=universe-2026).

@@ -1,6 +1,6 @@
 # Kick off a task with Copilot agents on GitHub
 
-You can start a Copilot cloud agent task in several ways. **Assigning an issue** always creates a pull request. **Starting with a prompt** works on a branch by default, giving you a chance to review, steer, and iterate before you open a pull request. **Seeding a repository** creates a draft pull request with scaffolded code.
+You can start a GitHub Copilot task by assigning an issue, describing the work in a prompt, or asking Copilot to scaffold a new repository. When you start with a prompt, Copilot begins a session that you can steer with follow-up prompts. You can ask it to open a pull request, or review its changes in the session and create a pull request when you're ready.
 
 ## Assign an issue to Copilot
 
@@ -20,15 +20,23 @@ Copilot receives the issue title, description, and existing comments at assignme
 
 ## Start a task with a prompt
 
-Cloud agent works on a branch by default. You can review the diff, iterate with follow-up prompts, and create a pull request when you're ready.
+Start a GitHub Copilot task from:
+* A Copilot prompt
+* By using the "Get started with agents" suggested prompts section shown on the agents tab or Copilot home page
 
 1. Open the agents panel or tab:
 
    * Open the **{% octicon "agent" aria-label="The Agents icon" %} Agents** tab in a repository.
-   * **Navigate to the agents page**: Go to [github.com/copilot/agents](https://github.com/copilot/agents?ref_product=copilot&ref_type=engagement&ref_style=text). You can also get here by opening the agents panel, then clicking **View all**.
-   * **Open the agents panel**: Click {% octicon "agent" aria-label="The Agents icon" %} in the navigation bar at the top right of GitHub.
+   * **Navigate to the GitHub Copilot all sessions page**: Go to [github.com/copilot](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text&utm_source=open-agent-panel-reusable-home&utm_medium=docs&utm_campaign=universe-2026). You can also get here by opening the GitHub Copilot menu in top navigation bar, then clicking **View all sessions**.
+   * **Open the agents panel**: From the code tab in a repository, click {% octicon "agent" aria-label="The Agents icon" %} to the right of the "Go to file" search bar.
 
 1. Using the dropdown menu in the prompt field, select the repository you want Copilot to work in.
+1. Open **{% octicon "sliders" aria-hidden="true" aria-label="sliders" %} Environment** to choose where Copilot runs.
+
+   * **Cloud**: (default) Run in a GitHub-hosted cloud sandbox.
+   * **Actions**: Run in an GitHub Actions-based environment. If you've previously selected a Chat session context, you cannot select this environment for the session.
+   * **Environments**: Expand the list and select one of the listed remote environments.
+
 1. Type a prompt describing your request. You can also add visual inputs like screenshots or UI mockups by pasting, dragging, or uploading an image. Files supported: image/png, image/jpeg, image/gif, image/webp.
 
     For example, `Implement a user friendly message for common errors.`
@@ -47,7 +55,7 @@ Cloud agent works on a branch by default. You can review the diff, iterate with 
     You can track Copilot's work and open a pull request in one click from the session logs. For more information, see [Manage And Track Agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents).
 
 
-The same prompt box is available on your [dashboard](https://github.com) and in Copilot Chat (type `/task`).
+If you don't specify a repository to work in, Copilot will prompt you to select one. To start a session, describe the outcome you want and any constraints. Copilot can work on the changes in a session that you steer with follow-up prompts. Ask it to open a pull request in your prompt, or review its changes and open a pull request from the session when you're ready.
 
 For the full workflow of researching, planning, and iterating before creating a pull request, see [Research Plan Iterate](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/research-plan-iterate).
 

@@ -20,8 +20,8 @@ Copilot in VS Code brings AI assistance and agent-driven development into the en
 
 Choose the most appropriate workflow for your task, from getting focused assistance in the editor to delegating work to agents.
 
-* **Code suggestions:** Get suggestions directly in the editor as you work. See [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions).
-* **Chat:** Ask questions about your codebase, compare approaches, and plan complex changes using context from your open files and workspace. Use inline chat for quick help within your code. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+* **Code suggestions:** Get suggestions directly in the editor as you work. See [Get Ide Code Suggestions](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/get-ide-code-suggestions).
+* **Chat:** Ask questions about your codebase, compare approaches, and plan complex changes using context from your open files and workspace. Use inline chat for quick help within your code. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 * **Agent mode:** Ask an agent to find relevant code, edit files, run commands, and validate its work, while you review changes and redirect it as it works. See [Use Agent Mode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-agent-mode).
 * **Parallel agent sessions:** Start, monitor, and review multiple agent sessions across projects from the Agents window. See [Agents window](https://code.visualstudio.com/docs/agents/run/agents-window) in the VS Code documentation.
 * **Cloud agent sessions:** Manage Copilot cloud agent sessions directly from your IDE. See [Use Cloud Agent In Your Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-cloud-agent-in-your-ide).
@@ -34,7 +34,7 @@ For a full overview, see [Build with AI in VS Code](https://code.visualstudio.co
 
 ## Using Copilot in other IDEs
 
-For most supported IDEs, the **GitHub Copilot extension or plugin** is the primary entry point. It connects Copilot to your editor and provides the features supported by that IDE. To install the appropriate integration, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
+For most supported IDEs, the **GitHub Copilot extension or plugin** is the primary entry point. It connects Copilot to your editor and provides the features supported by that IDE. To install the appropriate integration, see [Install Copilot Extension](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension).
 
 You can also run GitHub Copilot CLI in an IDE's integrated terminal if the terminal environment meets the requirements for Copilot CLI. Integration between CLI sessions and the IDE varies.
 
@@ -57,16 +57,17 @@ Copilot is also available as an agent in JetBrains AI Assistant through the Agen
 
 ## References to matching public code
 
-GitHub Copilot checks suggestions for matches with code in public repositories on GitHub.com. Depending on the policy that applies to your account or organization, matching suggestions can be blocked or shown with information about the matching code.
+GitHub Copilot can generate code that matches code in public repositories on GitHub.com. Depending on the policy that applies to your account or organization, matching suggestions can be blocked or shown with information about the matching code. The public-code index does not include private repositories or code hosted outside GitHub. It is refreshed periodically, so it may omit recently added code or refer to code that has since moved or been deleted.
 
-For inline suggestions, code referencing compares a potential suggestion and approximately 150 characters of surrounding code with an index of public repositories. Code from private repositories and code hosted outside GitHub are not included in the search.
+For inline suggestions, code referencing compares a potential suggestion and approximately 150 characters of surrounding code with the public-code index.
 
 When you accept an inline suggestion that matches public code, Copilot records details such as the matching file URLs and any detected licenses. Only accepted, unchanged suggestions are checked in this way.
 
-When a Copilot Chat response contains code that matches code in a public repository, the response includes a link to information about the match. See [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github#references-to-matching-public-code).
+On GitHub, references appear in the context where you review the output:
 
-Typically, matches to public code occur in less than one percent of Copilot suggestions, so you should not expect to see code references for many suggestions.
+* **Chat responses**: If you or your organization allow suggestions matching public code, a matching response may show a reference beneath the output. The reference identifies public repositories containing matching code and licensing information, if found.
+* **Agent session logs**: When Copilot generates matching code during a delegated task, the session logs include a link to details of the matched code.
 
-The public-code index is refreshed periodically, so it may not include recently added code and may contain references to code that has since moved or been deleted.
+Typically, matches to public code occur in less than one percent of Copilot inline suggestions, so you should not expect to see code references for many suggestions.
 
-Code references help you review the source and licensing of matching code so you can decide whether to use, attribute, or remove it. For instructions on viewing references, see [Find Matching Code](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code).
+Code references help you review the source and licensing of matching code so you can decide whether to use, attribute, or remove it. For instructions on viewing references in an IDE, see [Find Matching Code](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code). To view references on the web, see [Find Matching Code?Tool=Webui](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/find-matching-code?tool=webui).

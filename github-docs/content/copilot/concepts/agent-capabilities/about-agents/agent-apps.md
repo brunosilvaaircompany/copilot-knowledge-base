@@ -20,7 +20,7 @@ You can start an agent app's agent from the following entry points on GitHub.com
 * **Agents UI**: Select the agent app under the prompt box in the Agents tab or panel, then start a task with a prompt.
 
 
-You can use these entry points in the same way as you use Copilot cloud agent and other third-party coding agents. For more information, see [Use Agent Apps](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-agent-apps).
+You can use these entry points in the same way as you use Copilot and other third-party coding agents. For more information, see [Use Agent Apps](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-agent-apps).
 
 ## How agent apps work
 
@@ -42,7 +42,7 @@ By default, agent apps have access to the models that are enabled in the organiz
 
 ## Billing
 
-Agent apps are powered by Copilot cloud agent. When you use an agent app, the AI usage is billed to your Copilot subscription, and sessions consume AI credits in the same way as Copilot cloud agent. See [GitHub Copilot Billing](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-billing).
+Agent apps are powered by Copilot. When you use an agent app, the AI usage is billed to your Copilot subscription, and sessions consume AI credits in the same way as Copilot. See [GitHub Copilot Billing](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-billing).
 
 
 ## Next steps

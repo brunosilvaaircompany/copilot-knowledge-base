@@ -44,6 +44,12 @@ The Model Context Protocol (MCP) allows you to add external tools and data sourc
 
 For more information, see [MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp).
 
+## GitHub-verified MCP servers
+
+GitHub-verified MCP servers (connectors) give Copilot CLI access to tools and context from external services. Connect a service once, then use the connection across supported Copilot surfaces without repeating setup or signing in separately in each one. GitHub handles MCP server configuration and authentication for you.
+
+For more information, see [Copilot Connectors](https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors).
+
 ## Plugins
 
 Copilot CLI plugins are distributable packages that provide a simple way to extend the functionality of the CLI.

@@ -48,4 +48,8 @@ If the email address you used to author the commits is not connected to your Git
 
 After force-pushing, rewriting history, or deleting commits, repository contributor displays and statistics can take about 24 hours to refresh.
 
-If you're a repository owner and contributor data is still incorrect after waiting about 24 hours, contact GitHub Support. For more information about creating a support ticket, see [Creating A Support Ticket](https://docs.github.com/en/support/contacting-github-support/creating-a-support-ticket).
+
+If you're a repository owner and contributor data is still incorrect after waiting about 24 hours, contact {% ifversion fpt or ghec %}us through the [GitHub Support portal](https://support.github.com){% elsif ghes %}your site administrator.
+{% else %}
+If you're a repository owner and contributor data is still incorrect after waiting approximately 24 hours, you can contact GitHub Support depending on the support options available to your account. For more information, see [About GitHub Support](https://docs.github.com/en/support/learning-about-github-support/about-github-support). 
+{% endif %}

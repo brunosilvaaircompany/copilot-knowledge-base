@@ -32,21 +32,21 @@ You can work with agents in several Copilot experiences. Choose an experience ba
 
 ### GitHub Copilot app
 
-The GitHub Copilot app is a desktop application for directing agent-driven development. You can run multiple agent sessions in parallel, use local or cloud environments, and manage work from an initial task through pull request review. See [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app).
+The GitHub Copilot app is a desktop application for directing agent-driven development. You can run multiple agent sessions in parallel, use local or cloud environments, and manage work from an initial task through pull request review. See [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app).
 
 ### Copilot CLI
 
-GitHub Copilot CLI lets you work with an agent from your terminal. The agent can answer questions, modify files, run commands, and complete multi-step tasks in local or sandboxed environments. See [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli).
+GitHub Copilot CLI lets you work with an agent from your terminal. The agent can answer questions, modify files, run commands, and complete multi-step tasks in local or sandboxed environments. See [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli).
 
 ### Copilot in IDEs
 
-Agent mode in supported IDEs provides a collaborative experience in your local development environment. The agent can identify files to change, propose edits, run commands, and respond to your feedback while you work. See [Chat In Ide](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide).
+Agent mode in supported IDEs provides a collaborative experience in your local development environment. The agent can identify files to change, propose edits, run commands, and respond to your feedback while you work. See [Use Agent Mode](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-agent-mode).
 
 ### GitHub
 
-On GitHub, you can delegate asynchronous work to Copilot cloud agent from entry points such as the Agents view, issues, pull requests, and Copilot Chat. The agent works in a cloud environment and can research a repository, create a plan, make changes on a branch, and open a pull request for review. See [About Cloud Agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent).
+On GitHub, you can delegate asynchronous work to Copilot from entry points such as [github.com/copilot](https://github.com/copilot?ref_product=copilot&ref_type=engagement&ref_style=text&utm_source=about-agents-docs-dotcom&utm_medium=docs&utm_campaign=universe-2026), issues, and pull requests. The agent works in a cloud environment and can research a repository, create a plan, make changes on a branch, and open a pull request for review. See [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
-You can also delegate tasks to supported third-party coding agents. These agents work alongside Copilot cloud agent and return their changes through the same pull request workflow. See [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents).
+You can also delegate tasks to supported third-party coding agents. These agents work alongside Copilot and return their changes through the same pull request workflow. See [About Third Party Coding Agents](https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents).
 
 ### Agent apps
 
@@ -58,7 +58,7 @@ You can configure agents to perform recurring or event-driven work. For example,
 
 ### Copilot integrations
 
-You can integrate Copilot cloud agent with various tools and platforms to enhance its functionality and streamline your development workflow. With integrations, you can work with and trigger Copilot cloud agent from within your existing tools, such as Microsoft Teams, Slack, Linear, Azure Boards, and Jira, providing the cloud agent with the context it needs to assist you. See [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/about-copilot-integrations).
+You can integrate Copilot with various tools and platforms to enhance its functionality and streamline your development workflow. With integrations, you can work with and trigger Copilot from within your existing tools, such as Microsoft Teams, Slack, Linear, Azure Boards, and Jira, providing the cloud agent with the context it needs to assist you. See [About Copilot Integrations](https://docs.github.com/en/copilot/concepts/agent-capabilities/choosing-and-delegating-agent-work/about-copilot-integrations).
 
 ## Choosing an agent experience
 

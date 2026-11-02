@@ -10,6 +10,8 @@ Copilot can interact with desktop applications on your behalf by reading accessi
 
 Computer use is available in GitHub Copilot CLI and the GitHub Copilot app on macOS and Windows.
 
+Copilot interacts with applications in the background where possible, so you can continue working in other applications.
+
 Computer use expands the tasks Copilot can help automate, including workflows in legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration.
 
 Computer use can help you complete tasks such as:

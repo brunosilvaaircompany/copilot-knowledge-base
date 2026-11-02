@@ -2,7 +2,7 @@
 
 ## What are GitHub AI Credits?
 
-GitHub AI Credits are the billing unit for Copilot usage in Copilot Business and Copilot Enterprise.
+GitHub AI Credits are the billing unit for metered Copilot usage in organizations and enterprises.
 
 When someone in your organization uses Copilot, the interaction consumes tokens: input tokens (what's sent to the model), output tokens (what the model generates), and cached tokens (context the model reuses or stores). Each token is priced based on the model used, and the total is converted into AI credits, where 1 AI credit = $0.01 USD.
 
@@ -10,9 +10,16 @@ The cost of an interaction depends on two things: the model and the number of to
 
 ## What is billed in AI credits?
 
-Copilot features that use AI models consume AI credits. This includes Copilot Chat, Copilot CLI, Copilot cloud agent, Copilot Spaces, Spark, and third-party coding agents.
+The following features consume AI credits:
 
-Code completions and next edit suggestions are **not** billed in AI credits. They remain unlimited for all paid plans.
+* Copilot Chat
+* Copilot CLI
+* Copilot cloud agent
+* Copilot Spaces
+* Spark
+* Third-party coding agents
+
+Inline code completions and next edit suggestions are **not** billed in AI credits and remain unlimited. They remain available when a user has a $0 USD budget or reaches an enforced spending limit.
 
 ## How is GitHub App usage billed?
 
@@ -24,7 +31,20 @@ For information about approving access, identifying app usage, and blocking an a
 
 ## How do AI credits work?
 
-Each assigned Copilot license comes with a monthly amount of **included AI credits**:
+Some plans include a monthly allowance of AI credits, while others do not:
+
+* **Copilot Business and Copilot Enterprise** include credits that are pooled across the organization or enterprise. Usage draws from this pool first, and is billed separately only after the pool is exhausted.
+* **Copilot access**, through GitHub Enterprise Cloud or as Copilot Standalone, has no included allowance. Metered usage is billed from the first use.
+
+The **AI credits paid usage** policy is enabled by default for Copilot Business, Copilot Enterprise, and Copilot access. With Copilot access, it must remain enabled for users to use features that consume credits. If the policy is disabled, those features are blocked because there is no included allowance.
+
+In both cases, budgets control how much users can consume and how much metered spending is allowed. Configure budgets before users begin consuming AI credits.
+
+## Included credits for Copilot Business and Copilot Enterprise
+
+Each assigned license contributes a monthly allowance to the shared pool.
+
+### Allowances and monthly reset
 
 | Plan | Total AI credits per user per month |
 | --- | --- |
@@ -37,7 +57,7 @@ Adding licenses mid-cycle increases the pool immediately. Removing licenses mid-
 
 Included AI credits do not carry over between months. Unused credits are forfeited, and the pool resets to the full monthly amount at 00:00:00 UTC on the first day of each calendar month. This reset date is fixed and does not change based on when licenses are added, removed, or billed. See [Billing Cycles](https://docs.github.com/en/billing/concepts/billing-cycles#billing-cycles-for-metered-products).
 
-## What happens if I exceed my included AI credits?
+### What happens if I exceed my included AI credits?
 
 When your pooled AI credits are exhausted, what happens next depends on how you have configured policies for additional usage.
 
@@ -45,20 +65,22 @@ When your pooled AI credits are exhausted, what happens next depends on how you 
 * **Additional usage not allowed**: Usage is blocked until the next billing cycle when monthly amounts are refreshed.
 
 > [!NOTE]
-> Additional usage is **enabled by default** for organizations and enterprises. If you want to prevent any spending beyond your included AI credits, an administrator must explicitly disable the **AI credits paid usage** policy in your enterprise's or organization's AI Controls settings.
-
-If you have set a user-level budget and a user exhausts it, that user's access to Copilot is halted, regardless of whether the organization's pool still has capacity. A user can also be blocked by an enterprise spending limit before they reach their individual user-level budget, if the spending limit runs out first. There is no automatic fallback to lower-cost models when a budget is exhausted. For more information about how these controls interact, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets).
-
-Additional usage budgets are set in US dollars, and usage is shown in AI credits. AI credits draw down the budget at a fixed rate: 1 AI credit = $0.01 USD, so a $10 USD budget covers 1,000 AI credits.
+> On Copilot Business and Copilot Enterprise, additional usage is **enabled by default**. If you want to prevent any spending beyond your included AI credits, an administrator must explicitly disable the **AI credits paid usage** policy in your enterprise's or organization's AI Controls settings.
 
 ## How can I control costs with budgets?
 
-Budget controls let you govern how individual users draw from the shared pool and cap any additional spending once it's exhausted. You can set budgets at multiple levels:
+Budgets let you limit individual consumption and metered charges. They are set in US dollars, while usage is shown in AI credits. At 1 AI credit = $0.01 USD, a $10 USD budget covers 1,000 AI credits.
 
-* **User-level budgets** cap how much an individual user can consume per billing cycle, from both the shared pool and additional usage. A $0 USD user-level budget blocks the user immediately.
-* **Cost-center budgets** cap metered charges for a defined group of users after the pool is exhausted.
-* **Enterprise spending limits** cap total metered charges across your entire enterprise after the pool is exhausted.
-* **Organization-level budgets** cap metered charges for users whose Copilot seats are billed to the organization, after the pool is exhausted.
+You can set budgets at multiple levels:
+
+* **User-level budgets** cap an individual's total consumption per billing cycle, including any usage drawn from an included pool. They always enforce a hard stop. A $0 USD user-level budget immediately blocks features that consume AI credits.
+* **Cost-center budgets** limit metered charges for a defined group of users.
+* **Enterprise spending limits** limit total metered charges across your enterprise.
+* **Organization-level budgets** limit metered charges for users whose Copilot seats are billed to the organization.
+
+With Copilot access, spending limits apply from the first metered use. With Copilot Business and Copilot Enterprise, they apply after the included pool is exhausted. Enable **Stop usage when budget limit is reached** on spending limits to enforce them.
+
+An enforced spending limit can block a user before they reach their user-level budget. Budget restrictions do not remove assigned seats.
 
 For a full explanation of how these controls work together and when usage gets blocked, see [Budgets](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets).
 

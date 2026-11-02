@@ -22,6 +22,8 @@ To allow GitHub Actions workflows to run, click the **Approve and run workflows*
 
 Optionally, you can configure Copilot cloud agent to allow GitHub Actions workflows to run without human intervention. For more information, see [Configuring Agent Settings](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/configuring-agent-settings).
 
+To have Copilot watch a pull request and fix failed GitHub Actions workflows or merge conflicts automatically, enable Agent Merge with **Watch and fix** in the merge box. See [Get Pull Requests Ready To Merge](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/get-pull-requests-ready-to-merge).
+
 ## Give feedback on Copilot's work
 
 Use the feedback buttons on Copilot's pull requests and comments to rate the output. Your feedback helps improve Copilot's quality.

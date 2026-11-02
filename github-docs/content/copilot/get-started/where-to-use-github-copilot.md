@@ -15,7 +15,7 @@ If you’re not sure where to start, choose a surface based on the coding work y
 | **The GitHub Copilot app** | Managing your developer and agent-driven work across parallel tasks, multiple repositories, and the pull request lifecycle in one dedicated workspace. | [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app) |
 | **GitHub Copilot CLI** | Working with Copilot from the terminal, including repeatable command-line workflows. | [CLI Quickstart](https://docs.github.com/en/copilot/get-started/cli-quickstart) |
 | **Your IDE**<br>(Visual Studio Code, Visual Studio, JetBrains IDEs, Eclipse, and XCode) | Getting inline suggestions, chatting about nearby code, and using an agent that can edit files for you. | [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide) |
-| **GitHub Copilot SDK** | Building custom applications that use the same primitives as Copilot. | [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart) |
+| **Copilot SDK** | Building custom applications that use the same primitives as Copilot. | [SDK Quickstart](https://docs.github.com/en/copilot/get-started/sdk-quickstart) |
 | **GitHub website** | Asking questions about repositories, issues, and pull requests, or assigning work to an agent. | [Quickstart For Using GitHub Copilot On GitHub Com](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-on-github-com) |
 | **GitHub Mobile** | Chatting with Copilot while away from your main development environment. | [Chat In Mobile](https://docs.github.com/en/copilot/how-tos/copilot-on-github/chat-with-copilot/chat-in-mobile) |
 | **GitHub Desktop** | Getting help with commit messages and summaries. | [Configuring Copilot In GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-copilot-in-github-desktop) |
@@ -35,7 +35,7 @@ Use these common development contexts to choose a surface:
 * **Coordinating agent work**: Use the GitHub Copilot app when you want one place to coordinate agent work, manage parallel workstreams, work across multiple repositories, and keep the browser, terminal, and pull request lifecycle connected.
 * **Running commands**: Use GitHub Copilot CLI when you want to work in the terminal, run complex terminal commands, and execute tasks in parallel. For agent tasks that run commands, use cloud or local sandboxes to control where commands run and what they can access.
 * **Writing code**: Use GitHub Copilot in your IDE when you want to write and refine your code interactively.
-* **Extending your own tools**: Use GitHub Copilot SDK when you are building an application or internal workflow that calls Copilot directly.
+* **Extending your own tools**: Use Copilot SDK when you are building an application or internal workflow that calls Copilot directly.
 * **Planning a change**: Use the GitHub website when the work starts from an issue, pull request, or unfamiliar repository.
 * **Checking work away from your desk**: Use GitHub Mobile when you need to ask a quick question from a mobile device.
 

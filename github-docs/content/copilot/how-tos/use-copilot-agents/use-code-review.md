@@ -66,16 +66,15 @@ With review effort levels, you can choose the level of thoroughness of Copilot's
 
 * **Lite**: Cost-efficient review that provides targeted feedback on glaring issues such as bugs, security vulnerabilities, and style inconsistencies.
 * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes, using a higher-reasoning model.
+* **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
+
+Higher effort levels consume more AI credits. As a rough guide, a review costs approximately $0.25 USD on average with Lite, $1.50 USD with Balanced, and $10 USD with Max. Actual costs vary by review, depending on factors such as pull request size. For estimated ranges, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
 
 You can select Copilot review effort in the pull request before you request a review from Copilot, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort in your settings. Organization owners and repository administrators can set a default Copilot review effort for automatic reviews.
 
 For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#review-effort-level).
 
 ## Pull request approvals from Copilot
-
-> [!NOTE]
-> Copilot approvals are in public preview and subject to change.
-
 
 Every Copilot code review includes an approval assessment in the overview comment, indicating whether Copilot considers the pull request ready to approve. On its own, this assessment does not count toward merge requirements.
 

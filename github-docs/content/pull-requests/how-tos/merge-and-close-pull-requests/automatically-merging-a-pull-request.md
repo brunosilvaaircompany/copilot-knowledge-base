@@ -8,6 +8,12 @@ On a branch that requires a merge queue, the repository setting doesn't apply. *
 
 Auto-merge is disabled if someone without write permissions pushes new changes to the head branch or switches the base branch.
 
+
+
+To have Copilot fix failed GitHub Actions workflows and merge conflicts before auto-merge completes, you can also enable Agent Merge. Agent Merge fixes the blockers you select, while auto-merge waits for all merge requirements to be met. See [Get Pull Requests Ready To Merge](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/get-pull-requests-ready-to-merge).
+
+
+
 ## Enabling auto-merge
 
 > [!NOTE]

@@ -2,9 +2,9 @@
 
 ## About organization-level revocation
 
-Revoking access at the organization level only removes access for people who receive Copilot through the organization. If a person also has access through an enterprise team or as an individual, they will retain it.
+On Copilot Business and Copilot Enterprise, organization owners can revoke seats assigned through their organization using the procedures below. This only removes access for people who receive Copilot through that organization.
 
-To remove access for those users, an enterprise owner must remove them from the enterprise team or unassign their license in the enterprise settings, which revokes access immediately. For more information, see [Grant Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/grant-access#assigning-licenses-to-users-or-teams).
+If a person also has access through an enterprise team or as an individual, they will retain it. To remove access for those users, an enterprise owner must remove them from the enterprise team or unassign their license in the enterprise settings, which revokes access immediately.
 
 For people whose access is revoked through organization-level revocation, the removal takes effect from the start of the next billing cycle. If you remove a seat during a cycle, the user will have access to Copilot for the remainder of the billing cycle. For more information, see [GitHub Copilot Licenses](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses).
 
@@ -12,7 +12,7 @@ For people whose access is revoked through organization-level revocation, the re
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -32,7 +32,7 @@ Removing a user from the organization(s) that had granted them Copilot access wi
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)

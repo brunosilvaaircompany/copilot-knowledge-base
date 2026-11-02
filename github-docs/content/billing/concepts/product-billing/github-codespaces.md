@@ -7,7 +7,7 @@ A GitHub Codespaces instance (a "codespace") incurs two types of charges.
 * **Compute time**: processing time and power, while the codespace is active.
 * **Storage**: amount of disk space the codespace or prebuild occupies, while it exists.
 
-In addition, any prebuilt codespaces are generated using actions minutes, see [About GitHub Codespaces Prebuilds](https://docs.github.com/en/codespaces/prebuilding-your-codespaces/about-github-codespaces-prebuilds).
+In addition, generating prebuilt codespaces uses GitHub Actions runner compute. The calculated runner cost can draw from your included compute usage. See [About GitHub Codespaces Prebuilds](https://docs.github.com/en/codespaces/prebuilding-your-codespaces/about-github-codespaces-prebuilds).
 
 ### Compute time
 

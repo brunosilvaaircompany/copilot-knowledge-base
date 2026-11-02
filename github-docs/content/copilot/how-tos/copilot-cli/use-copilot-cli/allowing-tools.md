@@ -4,9 +4,9 @@
 
 Copilot CLI uses a variety of tools to complete tasks for you. It can execute shell commands, read and write files, search your codebase, fetch web content, and delegate tasks to specialized sub-agents.
 
-While read-only operations like searching, reading files, and running read-only shell commands are allowed automatically, tools that can modify your system—such as running destructive shell commands, editing files, or accessing URLs—require your explicit approval before Copilot can use them. This helps avoid your use of the CLI resulting in changes you didn't intend because, for example, a shell command can do anything your user account can do: install packages, delete files, push code, or make network requests.
+Read-only operations like searching, reading files, and running read-only shell commands are generally allowed automatically, subject to applicable policy. Other operations—such as running destructive shell commands, editing files, or accessing URLs—need permission before Copilot can use them. Whether you're prompted depends on your existing permissions and permission mode. These controls help avoid unintended changes because, for example, a shell command can do anything your user account can do: install packages, delete files, push code, or make network requests.
 
-You can allow or deny permissions for tools either when you start the CLI or during your interactive session. If you haven't granted permission prior to starting a session, Copilot CLI will prompt you for permission each time it needs to perform a potentially destructive action. You can choose to allow the tool this one time, or for the remainder of the session.
+You can allow or deny permissions for tools either when you start the CLI or during your interactive session. In manual approval mode, Copilot CLI prompts you for requests that aren't already allowed. You can choose to allow the tool this one time, or for the remainder of the session.
 
 ## Persisted permissions
 
@@ -80,22 +80,34 @@ The following command-line options give Copilot CLI permission to use all availa
 If you have a Copilot Business or Copilot Enterprise license, these commands may be blocked by an enterprise administrator.
 
 
-Before you grant Copilot wide-ranging permissions with an allow-all option, consider using local sandboxing, or running the session in a cloud sandbox, to limit what Copilot can access. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
+Before you grant Copilot wide-ranging permissions with an allow-all option, consider using local sandboxing, or running the session in a cloud sandbox, to limit what Copilot can access. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-and-local-sandboxes) and [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes).
 
 * `--allow-all-tools` — Full access to the available tools.
 
 * `--allow-all`  or `--yolo` — Equivalent to using all of the `--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls` options when starting the CLI.
 
-  Within an interactive session, you can use the `/allow-all` or `/yolo` slash commands to allow all tools without needing to restart the session.
+  Within an interactive session, you can use the `/permissions allow-all` or `/yolo` slash commands to allow all tools without needing to restart the session.
 
 > [!CAUTION]
 > It is strongly recommended that you only use these options in an isolated environment. You should never use an alias to apply one of these options every time you start Copilot CLI, as doing so would allow Copilot to use any tool without your explicit permission every time you use the CLI, which could lead to unintended consequences.
 
+### Reducing prompts with assisted permissions
+
+The allow-all permissions options grant broad permissions without reviewing individual actions. To reduce approval prompts without granting blanket permissions, use the assisted permissions option instead.
+
+To turn on assisted permissions, enter the `/permissions assisted` slash command in an interactive session. A large language model assesses eligible permission requests and automatically approves those it judges to be safe. Existing permissions and enterprise rules still apply, and requests that still need your approval are put to you. Enter `/permissions manual` to return to manual approval, or `/permissions show` to check the current setting. You can also enter `/permissions`, with no argument, to choose a mode from a list.
+
+To use assisted permissions by default in new interactive sessions when no managed default is configured, set `defaultPermissionMode` to `"assisted"` in your user configuration file. To use it for a non-interactive run, such as in a CI/CD workflow, use the `--assisted-approval` command line option. For more information, see [Allowing Safe Commands](https://docs.github.com/en/copilot/concepts/customizations/allowing-safe-commands).
+
 ## Resetting permissions
 
-The `/reset-allowed-tools` slash command revokes all permissions you granted during the current interactive session. This applies equally to permissions you gave by responding to prompts, and to the use of the `/allow-all` or `/yolo` slash commands.
+The `/reset-allowed-tools` slash command revokes the permissions you granted during the current interactive session. This applies equally to permissions you gave by responding to prompts, and to the use of the `/permissions`, `/allow-all` or `/yolo` slash commands. It also returns the permission mode to manual, turning off allow-all permissions or assisted permissions if either is on.
 
-Using `/reset-allowed-tools` resets the permissions to the default, or to the state defined by any command-line options you used when you started Copilot CLI. It also clears saved tool approvals for the current location from `permissions-config.json`. For example, if you start a Copilot CLI interactive session with the option `--allow-tool='shell(git:*)'`, and then you allow and deny further permissions during the session by responding to prompts, when you then use the `/reset-allowed-tools` command, the CLI's permissions return to the original `--allow-tool='shell(git:*)'` state, with no other permissions allowed or denied. As you continue to work in the session, you will be prompted again if Copilot needs additional permissions.
+Using `/reset-allowed-tools` returns permissions to the default, or to the baseline defined by the rule-based and URL command-line options you used when you started Copilot CLI, such as `--allow-tool`, `--deny-tool`, `--allow-url`, and `--deny-url`.
+
+The command also clears all saved approvals for the current location from `permissions-config.json`, including both saved tool approvals and any saved directory permissions. In addition, it re-arms the autopilot permission dialog, so Copilot will prompt you for autopilot permissions again if needed.
+
+For example, if you start a Copilot CLI interactive session with the option `--allow-tool='shell(git:*)'`, and then you allow and deny further permissions during the session by responding to prompts, when you then use the `/reset-allowed-tools` command, the CLI's permissions return to the original `--allow-tool='shell(git:*)'` state, with no other permissions allowed or denied. As you continue to work in the session, you will be prompted again if Copilot needs additional permissions.
 
 To remove saved approvals for a different location, edit or delete the relevant location entry in `permissions-config.json`. For more information, see [CLI Config Dir Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#permissions-configjson).
 

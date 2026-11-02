@@ -19,6 +19,10 @@ For example, if you started a paid plan or converted from a trial on the 15th of
 > [!NOTE]
 > From **December 1, 2025**, all self-serve, metered GitHub Enterprise Cloud accounts that pay by credit card will migrate to a **billing date** of 1st of the month. See [Billing date standardized to the first of the month for self-serve credit card metered Enterprise customers](https://github.blog/changelog/2025-11-17-billing-date-standardized-to-the-first-of-the-month-for-self-serve-credit-card-metered-enterprise-customers-now-generally-available/) in the changelog.
 
+## Included compute usage reset
+
+Your plan's included compute usage is available for eligible GitHub Actions runner usage and cloud sandbox compute and memory. This value resets to the full amount at the start of each billing cycle. Additional usage is billed on your normal billing date. For more information, see [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
+
 ## Billing cycles for volume-based products
 
 Volume-based licenses may follow a different billing cycle. These products are often billed based on the anniversary date of your subscription rather than by calendar month.

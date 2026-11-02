@@ -37,8 +37,8 @@ Install Copilot CLI. See [Install Copilot CLI](https://docs.github.com/en/copilo
 
    For some examples of prompts, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli).
 
-1. When Copilot wants to use a tool that could modify or execute files—for example, `touch`, `chmod`, `node`, or `sed`
-—it will ask you to approve the use of the tool.
+1. Review any permission prompts that Copilot displays. Tools that modify or execute files—for example, `touch`, `chmod`, `node`, or `sed`
+—can require approval, depending on your existing permissions and permission mode.
 
    Choose one of the options:
 
@@ -300,19 +300,22 @@ Copilot CLI provides several slash commands to help you monitor and manage your 
 
 GitHub Copilot CLI automatically starts compressing your history in the background when your conversation approaches 80% of the token limit. This starting point is dynamic: when static context—your system messages and tool definitions—already uses a large share of the limit (roughly 75% or more), Copilot waits until usage is closer to 90% before compacting, because compressing the conversation reclaims less space in that situation. If usage reaches approximately 95% before background compaction has finished, the CLI waits for it to complete before continuing.
 
-### Enable all permissions
+### Enable assisted permissions
 
-For situations where you trust Copilot to run freely, you can use the `--allow-all` or `--yolo` flags to enable all permissions at once.
+Assisted permissions reduces approval prompts without granting blanket permissions. A large language model assesses eligible permission requests and automatically approves those it judges to be safe. Existing permissions and enterprise rules still apply, and requests that still need your approval are put to you. To turn it on during an interactive session, enter `/permissions assisted`. For more information, see [Allowing Safe Commands](https://docs.github.com/en/copilot/concepts/customizations/allowing-safe-commands).
+
+> [!NOTE]
+> To grant broad permissions without a model safety review, use the `--allow-all` or `--yolo` command line options (or the `/permissions allow-all` or `/yolo` slash commands within an interactive session). These options can allow destructive commands to run without individual approval, so only use them in a sandboxed or otherwise isolated environment. Deny rules and enterprise restrictions still apply.
 
 ### Use sandboxing
 
 You can use sandboxing to restrict what Copilot can access. Local sandboxing does not run the CLI itself in a sandbox; instead, the commands and tools that Copilot CLI runs on your behalf are restricted, limiting their access to your filesystem, network, and system capabilities. To enable local sandboxing, enter `/sandbox enable` inside a session.
 
-Alternatively, with cloud sandboxing, the entire Copilot CLI session runs remotely in an isolated environment. To start a Copilot CLI session in the cloud, run `copilot --cloud`. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
+Alternatively, you can run the entire Copilot CLI session in a cloud sandbox. To start a Copilot CLI session in a cloud sandbox, run `copilot --cloud`. For more information, see [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes).
 
-### Toggle reasoning visibility
+### Toggle model thinking visibility
 
-Press <kbd>Ctrl</kbd>+<kbd>T</kbd> to show or hide the model's reasoning process while it generates a response. This setting persists across sessions, allowing you to observe how Copilot works through complex problems.
+Press <kbd>Ctrl</kbd>+<kbd>T</kbd> to show or hide the model's thoughts as it works on a task. This expands/collapses text in the model output in the conversation in your interactive session. This setting persists across sessions, allowing you to observe how Copilot works through complex problems.
 
 ### Configure settings
 

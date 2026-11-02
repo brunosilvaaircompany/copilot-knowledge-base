@@ -1,7 +1,7 @@
 # Adding organization custom instructions for GitHub Copilot
 
 > [!NOTE]
-> **Support:** Organization custom instructions are currently only supported for Copilot Chat on GitHub.com, Copilot code review on GitHub.com and Copilot cloud agent on GitHub.com.
+> **Support:** Organization custom instructions are currently supported for sessions running on the GitHub website (in cloud sandboxes or on GitHub Actions) and for Copilot code review. They are not supported in local client sessions.
 
 
 Organization owners can add instructions for Copilot, to tailor responses to specific needs and preferences across the organization. For an overview of this, and other types of custom instructions for Copilot, see [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions).
@@ -12,7 +12,7 @@ You can add organization custom instructions via your organization settings.
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)

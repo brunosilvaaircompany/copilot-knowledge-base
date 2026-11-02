@@ -2,7 +2,7 @@
 
 ## About GitHub Actions usage for code review tools
 
-Copilot code review uses GitHub Actions to run the agentic capabilities, including full project context gathering and any capabilities in public preview. By default, Copilot code review uses GitHub-hosted runners. Actions minutes are consumed from your account or organization's existing plan entitlement for reviews on private repositories, with any usage beyond your included minutes billed at standard GitHub Actions rates.
+Copilot code review uses GitHub Actions to run the agentic capabilities, including full project context gathering and any capabilities in public preview. By default, Copilot code review uses GitHub-hosted runners. For reviews on private repositories, the cost of Actions usage draws from your account or organization's included compute usage. Additional usage is billed at standard GitHub Actions rates.
 
 If your organization has disabled GitHub-hosted runners, the agentic capabilities will not be available. In this case, code reviews will fall back to a more limited review.
  Organizations in this situation can use self-hosted runners.
@@ -79,7 +79,7 @@ This is useful if your organization requires all code reviews and cloud agent ta
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)

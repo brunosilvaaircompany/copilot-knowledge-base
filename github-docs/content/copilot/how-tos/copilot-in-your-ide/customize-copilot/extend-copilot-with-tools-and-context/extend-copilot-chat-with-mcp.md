@@ -19,6 +19,9 @@ Enterprises and organizations can choose to enable or disable use of MCP for mem
 * If you are a member of an organization or enterprise with a Copilot Business or Copilot Enterprise plan, the "MCP servers in Copilot" policy must be enabled in order to use MCP with Copilot.
 
 
+> [!NOTE]
+> You can connect services through GitHub-verified MCP servers (connectors) from **Customizations** in the Agents window. Sign in to a service and approve access once, then use the connection across supported Copilot surfaces without repeating setup. See [Copilot Connectors](https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors).
+
 ## Configuring MCP servers in Visual Studio Code
 
 MCP servers can be configured manually in a configuration file, or through the GitHub MCP Registry. The GitHub MCP Registry provides a curated list of MCP servers that you can easily add to your Visual Studio Code instance.

@@ -4,7 +4,7 @@
 > You can find help on using plugins by entering `copilot plugin [SUBCOMMAND] --help` in the terminal.
 
 
-For an overview of what plugins are and how they work across Copilot clients, see [About Plugins](https://docs.github.com/en/copilot/concepts/agents/about-plugins).
+For an overview of what plugins are and how they work across Copilot clients, see [Plugins](https://docs.github.com/en/copilot/concepts/customizations/plugins).
 
 ## CLI commands
 
@@ -31,6 +31,8 @@ Before `copilot plugin` was split into separate commands by resource, `copilot p
 > A plugin or marketplace pinned by an organization or MDM managed policy (`enabledPlugins`, `extraKnownMarketplaces`) can't be re-enabled, disabled, or repointed locally—the managed value wins for that entry. The `/plugin` dashboard marks these rows with a `Managed` badge and refuses a conflicting toggle. See [CLI Config Dir Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#mdm-managed-settings).
 >
 > A plugin whose activation is currently decided by the current repository's `enabledPlugins` overlay rejects `copilot plugin enable`/`disable` instead of silently persisting a global value that would have no effect in that repository. The error names the settings file that actually controls the plugin. See [CLI Config Dir Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#repository-settings-githubcopilotsettingsjson).
+
+Unlike managed requirements, repository defaults can be turned off with an explicit entry in repository-local settings. Managed required or blocked entries always take precedence. See [Plugins Finding Installing](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing#turn-off-a-repository-default).
 
 ### Plugin specification for `install` command
 
@@ -104,7 +106,7 @@ In interactive mode, run `/plugin marketplace update [NAME]` (alias `/plugin mar
 
 ## `plugin.json`
 
-All plugins consist of a plugin directory containing a manifest file named `plugin.json`. Agent Plugins requires the manifest at the plugin root. A root `plugin.json` that targets Agent Plugins takes precedence over `.plugin/plugin.json` and `.claude-plugin/plugin.json` per spec §5.1. Legacy plugins support the alternative locations listed in [File locations](#file-locations). See [Plugins Creating](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-creating).
+All plugins consist of a plugin directory containing a manifest file named `plugin.json`. Agent Plugins requires the manifest at the plugin root. A root `plugin.json` that targets Agent Plugins takes precedence over `.plugin/plugin.json` and `.claude-plugin/plugin.json` per spec §5.1. Legacy plugins support the alternative locations listed in [File locations](#file-locations). For shared format details, see [Plugin And Marketplace Reference](https://docs.github.com/en/copilot/reference/plugin-and-marketplace-reference). For CLI authoring guidance, see [Plugins Creating](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-creating).
 
 Copilot CLI supports both the legacy plugin manifest and the Agent Plugins manifest. Copilot CLI recognizes the canonical `$schema` values for Agent Plugins (Open Plugin Spec) v1.0.0 (`https://agent-plugins.org/schemas/1.0.0/plugin.schema.json`) and v1.1.0 (`https://agent-plugins.org/schemas/1.1.0/plugin.schema.json`), opting a plugin into Agent Plugins semantics. A manifest without one of these exact values uses the legacy format and loads as before. If a plugin declares an Agent Plugins version that Copilot CLI doesn't support, the CLI rejects the plugin instead of silently falling back to legacy mode. A rejected plugin contributes no hooks, LSP servers, MCP servers, skills, commands, agents, rules, or extension directories.
 
@@ -217,6 +219,22 @@ These tell the CLI where to find your plugin's components. All are optional. The
 | `mcpServers`| string \| object   | —          | Path to an MCP configuration file (e.g., `.mcp.json`), or inline server definitions. |
 | `lspServers`| string \| object   | —          | Path to an LSP configuration file, or inline server definitions. |
 
+For example, a legacy plugin using the default locations can have this structure:
+
+```text
+my-plugin/
+├── plugin.json
+├── agents/
+│   └── helper.agent.md
+├── skills/
+│   └── deploy/
+│       └── SKILL.md
+├── hooks.json
+└── .mcp.json
+```
+
+You can use additional manifest locations and configure component paths. For all supported paths and discovery order, see [File locations](#file-locations).
+
 #### Plugin-shipped agent MCP servers
 
 An agent bundled inside a plugin can declare its own `mcp-servers` in its frontmatter, scoping an MCP server to just that agent instead of exposing it through the plugin's shared `mcpServers` configuration. Within that `mcp-servers` block, `${PLUGIN_ROOT}` (or its `${CLAUDE_PLUGIN_ROOT}`/`${COPILOT_PLUGIN_ROOT}` aliases) expands to the plugin's root directory, so the server's `command` or `args` can point at a script bundled with the plugin:
@@ -297,7 +315,7 @@ copilot plugin marketplace add /PATH/TO/my-marketplace
 
 
 
-For more information, see [Plugins Marketplace](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-marketplace).
+For more information, see [Create And Share Plugin Marketplaces](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/create-and-share-plugin-marketplaces).
 
 ### Example `marketplace.json` file
 

@@ -75,6 +75,7 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | GPT-6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6.1 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| GPT-6.1 Terra | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}  |
 | Kimi K3 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 {% endrowheaders %}
@@ -114,6 +115,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | GPT-6 Luna          | TBD | `17.14.19` | TBD | TBD | TBD |
 | GPT-6 Sol           | TBD | `17.14.19` | TBD | TBD | TBD |
 | GPT-6.1 Sol          | TBD | `17.14.19` | TBD | TBD | TBD |
+| GPT-6.1 Terra        | TBD | TBD | TBD | TBD | TBD |
 | Claude Opus 4.8      | `v1.118` | `17.14.6`                     | TBD | TBD | TBD |
 | Claude Opus 5       | `v1.128.0` | `17.14.22` | TBD | TBD | TBD |
 | Claude Opus 5.5      | TBD | `17.14.6` | TBD | TBD | TBD |
@@ -123,7 +125,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Claude Fable 5      | `v1.124` | `17.14.6`                    | TBD | TBD | TBD |
 | Claude Fable 5.1    | TBD | TBD                    | TBD | TBD | TBD |
 | Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |
-| MAI-Code-1.1-Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
+| MAI Code 1.1 Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
 | Grok 4.6             | TBD | TBD | TBD | TBD | TBD |
 | Grok 4.7             | TBD | `17.14.19` | TBD | TBD | TBD |

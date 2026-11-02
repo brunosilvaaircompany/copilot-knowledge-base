@@ -8,28 +8,69 @@ For instructions on creating the file, see [Get Started](https://docs.github.com
 
 {% rowheaders %}
 
-| Key | Purpose | Copilot CLI | VS Code | The GitHub Copilot app | Copilot cloud agent | JetBrains IDEs |
+| Key | Purpose |
+| --- | --- |
+| `permissions.disableBypassPermissionsMode` | Disables bypass or YOLO-style allow-all behavior |
+| `permissions.deny` | Blocks specific operations |
+| `permissions.ask` | Requires a fresh human approval before specific operations can proceed |
+| `permissions.allow` | Permits specific operations to proceed without a prompt |
+| `permissions.disableAssistedPermissionsMode` | Prevents users from enabling assisted permissions |
+| `permissions.defaultMode` | Controls the default permission mode for new sessions |
+| `features.computerUse` | Controls whether users can enable computer use |
+| `model` | Sets your preferred model as the default for new conversations |
+| `fusionTier` | Sets the default effort level for new conversations when the selected model is `fusion` |
+| `autoTier` | Sets the default Auto routing tier for new conversations |
+| `enabledPlugins` | Enables or disables specific plugins by key |
+| `extraKnownMarketplaces` | Adds plugin marketplaces that users can access |
+| `strictKnownMarketplaces` | Restricts plugin installation to explicitly listed marketplaces |
+| `telemetry` | Configures OpenTelemetry export, routing Copilot usage data to a collector of your choice |
+| `remoteControl` | Restricts whether sessions hosted on this device can be remotely controlled, based on the controlling client's SSO authorization status for the listed organizations. Doesn't affect the user's ability to remotely control sessions hosted on other devices |
+| `forceRemoteSettingsRefresh` | Requires a fresh server-managed settings fetch on client startup |
+| `allowedMcpServers` | Defines an allowlist of MCP servers permitted to run. Any server not matched is blocked. Omit to allow all servers, subject to any deny rules |
+| `deniedMcpServers` | Defines MCP servers that are unconditionally blocked, even if they also match an entry in `allowedMcpServers` |
+| `sandbox` | Enforces minimum local sandbox restrictions for command execution, filesystem and network access, credentials, and local MCP and LSP servers. Subject to minimum client version requirements. |
+
+{% endrowheaders %}
+
+## Client support by key
+
+{% rowheaders %}
+
+| Key | Copilot CLI | VS Code | The GitHub Copilot app | Copilot in the cloud (sandbox) | Copilot in the cloud (GitHub Actions) | JetBrains IDEs |
 | --- | --- | --- | --- | --- | --- | --- |
-| `permissions.disableBypassPermissionsMode` | Disables bypass or YOLO-style allow-all behavior | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `permissions.deny` | Blocks specific operations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `permissions.ask` | Requires a fresh human approval before specific operations can proceed | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `permissions.allow` | Permits specific operations to proceed without a prompt | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `features.computerUse` | Controls whether users can enable computer use | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `model` | Sets your preferred model as the default for new conversations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `autoTier` | Sets the default Auto routing tier for new conversations | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `enabledPlugins` | Enables or disables specific plugins by key | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `extraKnownMarketplaces` | Adds plugin marketplaces that users can access | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `strictKnownMarketplaces` | Restricts plugin installation to explicitly listed marketplaces | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `telemetry` | Configures OpenTelemetry export, routing Copilot usage data to a collector of your choice | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `remoteControl` | Restricts whether sessions hosted on this device can be remotely controlled, based on the controlling client's SSO authorization status for the listed organizations. Doesn't affect the user's ability to remotely control sessions hosted on other devices | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `forceRemoteSettingsRefresh` | Requires a fresh server-managed settings fetch on client startup | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
-| `allowedMcpServers` | Defines an allowlist of MCP servers permitted to run. Any server not matched is blocked. Omit to allow all servers, subject to any deny rules | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `deniedMcpServers` | Defines MCP servers that are unconditionally blocked, even if they also match an entry in `allowedMcpServers` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
-| `sandbox` | Enforces minimum local sandbox restrictions for command execution, filesystem and network access, credentials, and local MCP and LSP servers. Subject to minimum client version requirements. | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} (Agent Host, 1.138.0+) | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `permissions.disableBypassPermissionsMode` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `permissions.deny` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `permissions.ask` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `permissions.allow` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `permissions.disableAssistedPermissionsMode` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `permissions.defaultMode` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `features.computerUse` | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `model` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `fusionTier` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `autoTier` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `enabledPlugins` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `extraKnownMarketplaces` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `strictKnownMarketplaces` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `telemetry` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `remoteControl` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `forceRemoteSettingsRefresh` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
+| `allowedMcpServers` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `deniedMcpServers` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "check" aria-label="Supported" %} |
+| `sandbox` | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} | {% octicon "x" aria-label="Not supported" %} |
 
 {% endrowheaders %}
 
 Support for `telemetry` varies by sub-property and harness. See [Capture controls](#capture-controls) for the clients that support fine-grained capture.
+
+### More information on Copilot in the cloud
+
+Cloud sessions can run in sandboxes or on GitHub Actions. Coverage of policies and enterprise managed settings currently varies between environments. Where users can choose between these environments, cloud sandboxes are the default. However, currently, some interfaces can only run on GitHub Actions (such as assigning an issue to Copilot or mentioning `@Copilot` in a pull request).
+
+
+The keys defined in the table for **Copilot in the cloud (sandbox)** are supported from all surfaces that support starting sessions in cloud sandboxes. As an exception, the `model` key is only supported for cloud sessions started from the GitHub website, Copilot CLI, and VS Code.
+
+`allowedMcpServers` and `deniedMcpServers` apply to MCP servers defined in user settings and repository settings, but **don't** apply to MCP servers defined in repository custom agent profiles. However, you can prevent use of MCP servers configured in custom agent profiles by ensuring that any required domains to start them are not allowed by the organization or repository-level custom firewall. See [Customizing Or Disabling The Firewall For Copilot Coding Agent](https://docs.github.com/en/copilot/how-tos/agents/copilot-coding-agent/customizing-or-disabling-the-firewall-for-copilot-coding-agent).
+
 
 ## Example configuration
 
@@ -138,6 +179,8 @@ Controls whether users can enable computer use in GitHub Copilot CLI and the Git
 
 Defines plugins that are automatically installed or blocked for all enterprise users. Each entry uses the format `PLUGIN-NAME@MARKETPLACE-NAME` as the key, with a boolean value: `true` to require the plugin to be enabled, or `false` to require it to be disabled. See [Plugin Standards](https://docs.github.com/en/copilot/concepts/enterprise/plugin-standards).
 
+Managed values always take precedence over repository defaults and member preferences. Repository defaults cannot enable a plugin that managed policy blocks or use a marketplace that policy disallows.
+
 ## extraKnownMarketplaces
 
 Defines additional plugin marketplaces available to users. Each entry is a named marketplace object containing a `source` property and an optional `autoUpdate` boolean.
@@ -171,11 +214,11 @@ For server-managed enterprise team overrides, wrap the complete marketplace map 
 }
 ```
 
-A team file can then provide a regular marketplace map to replace this default. Include any default marketplaces that the team should retain. If the team omits the key, the enterprise default remains.
+An enterprise team file can then provide a regular marketplace map to replace this default. Include any default marketplaces that the enterprise team should retain. If the enterprise team omits the key, the enterprise default remains.
 
 ## strictKnownMarketplaces
 
-Restricts plugin installation to only the marketplaces explicitly defined by the enterprise. An empty array means complete lockdown. Each entry is a marketplace object with a `source` property indicating the source type. The following source types are supported:
+Restricts plugin installation to only the marketplaces explicitly defined by the enterprise. Setting this key disables the built-in marketplaces. An empty array means complete lockdown. Each entry is a marketplace object with a `source` property indicating the source type. The following source types are supported:
 
 * `"github"` — requires `repo` in `OWNER/REPO` format; optional `ref` and `path`
 * `"git"` — requires `url`; optional `ref` and `path`
@@ -198,18 +241,39 @@ This key is overridable for enterprise teams. Wrap the complete allowlist in `ov
 }
 ```
 
-Use a regular array in the team file to replace the default allowlist. Omitting the key retains the enterprise default. An explicit empty array, `[]`, means complete lockdown, not an unmanaged policy.
+Use a regular array in the enterprise team file to replace the default allowlist. Omitting the key retains the enterprise default. An explicit empty array, `[]`, means complete lockdown, not an unmanaged policy.
 
 ## model
 
 Sets your preferred model as the default for new conversations. This lets you choose the default model that best fits your enterprise's workflows. Users can still select a different model on a per-conversation basis.
+* Set `model` to `"fusion"` to use Copilot Fusion as the default, so new sessions choose a model or execution pattern automatically unless the user specifies a different model on a per-conversation basis. See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion).
 * Set `model` to `"auto"` to use auto model selection as the default, so new sessions choose a model automatically unless the user specifies a different model on a per-conversation basis. See [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 * Set `model` to a specific model and version to make that model the default for new conversations, for example `"kimi-k3"`.
 
-This key is overridable by enterprise team mapping. In your `managed-settings.json`, use the `{ "overridable": "auto" }` syntax to specialize the key's configuration on a per-team basis. You can then set `"model": "unmanaged"` in a team settings file, providing a specialization that takes precedence over `managed-settings.json` for members of the subject team.
+This key is overridable by enterprise team mapping. In your `managed-settings.json`, use the `{ "overridable": "auto" }` syntax to specialize the key's configuration for an enterprise team. You can then set `"model": "unmanaged"` in an enterprise team settings file, providing a specialization that takes precedence over `managed-settings.json` for members of that enterprise team.
 
 > [!NOTE]
 > `model` was originally documented as `permissions.model`. Clients still read the nested `permissions.model` value when the top-level `model` key is absent, but you should use the top-level `model` key in new configurations.
+
+## fusionTier
+
+Sets the default effort level for new conversations when the selected model is `"fusion"`. Accepted values, from most restrictive to least restrictive, are `"standard"`, `"high"`, `"max"`, and `"unmanaged"`. This setting does not select the model itself.
+
+This settings requires these versions: 
+* In Copilot CLI, it requires version 1.0.104-3 or later. 
+* In VS Code, it requires version 1.144.0 or later.
+* In GitHub Copilot app, it requires  1.1.33-4 or later.
+
+Set `fusionTier` to a string other than `"unmanaged"` to lock the effort level against user and repository overrides. To provide a default that enterprise teams can override, use `overridable`:
+
+```json
+{
+  "model": "fusion",
+  "fusionTier": { "overridable": "standard" }
+}
+```
+
+For example, a team settings file can set `"fusionTier": "high"`. If the team does not set `fusionTier`, the enterprise default applies.
 
 ## autoTier
 
@@ -217,7 +281,7 @@ Sets the default routing tier for new conversations when the selected model is `
 
 In Copilot CLI, this setting requires version 1.0.87-0 or later. In VS Code, it requires version 1.140.0 or later.
 
-Set `autoTier` to a string other than `"unmanaged"` to lock the tier against user and repository overrides. To provide a default that users, repositories, and enterprise teams can override, use `overridable`:
+Set `autoTier` to a string other than `"unmanaged"` to lock the tier against user and repository overrides. To provide a default that enterprise teams can override, use `overridable`:
 
 ```json
 {
@@ -226,7 +290,7 @@ Set `autoTier` to a string other than `"unmanaged"` to lock the tier against use
 }
 ```
 
-For example, a team settings file can set `"autoTier": "intelligence"`. If the team does not set `autoTier`, the enterprise default applies.
+For example, an enterprise team settings file can set `"autoTier": "intelligence"`. If the enterprise team does not set `autoTier`, the enterprise default applies.
 
 ## forceRemoteSettingsRefresh
 
@@ -259,18 +323,38 @@ Rules use the following selectors:
 | `Edit(...)` | File write and edit paths, matched the same way as `Read(...)`. `Write(...)` is an alias for `Edit(...)`. |
 | `Domain(...)` | Network origins. A bare host defaults to HTTPS, and host matching is case-insensitive. Use `*.` to include subdomains; for example, `*.example.com` matches both example.com and its subdomains. |
 
-Each subkey is overridable for enterprise teams. Set the enterprise value to `{ "overridable": <VALUE> }`, replacing `<VALUE>` with the rule array. Then use the regular syntax to define replacement rules in each team's file.
+Each subkey is overridable for enterprise teams. Set the enterprise value to `{ "overridable": <VALUE> }`, replacing `<VALUE>` with the rule array. Then use the regular syntax to define replacement rules in each enterprise team's file.
 
 ### disableBypassPermissionsMode
 
-Prevents users from enabling bypass mode (also known as "YOLO mode"). Bypass mode lets an agent run commands, access files, and fetch URLs without asking for approval.
+Use this to prevent users from enabling bypass mode. Bypass mode lets an agent run commands, access files, and fetch URLs without asking for approval.
+
+Set this key to `"disable"` to turn off bypass mode.
+
+This setting does not prevent assisted permissions. Read-only operations and requests allowed by applicable permission rules can still proceed without a prompt. Managed `deny` and `ask` rules continue to apply. For more information about assisted permissions, see [Allowing Safe Commands](https://docs.github.com/en/copilot/concepts/customizations/allowing-safe-commands).
 
 When you set `disableBypassPermissionsMode` to `"disable"`, users cannot turn on bypass mode:
 
-* In Copilot CLI, all of the command line options for allowing all permissions (`--yolo`, `--allow-all`, and the individual `--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls` options) are suppressed at startup and cannot grant elevated permissions. The `/yolo` and `/allow-all` slash commands are also blocked.
+* In Copilot CLI, all of the command line options for allowing all permissions (`--yolo`, `--allow-all`, and the individual `--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls` options) have no effect at startup and cannot grant elevated permissions. The `/permissions allow-all` slash command, and its aliases `/allow-all` and `/yolo`, are also blocked. This setting does not block `/permissions assisted` or `/allow-all auto`. The `permissions.disableAssistedPermissionsMode` setting controls whether users can enable assisted permissions.
 * In VS Code, the global auto-approve setting (`chat.tools.global.autoApprove`) is turned off and cannot be re-enabled.
-* In the GitHub Copilot app, the "Allow all" setting for "Tool Permissions" is blocked in the sessions settings.
-* This key is overridable by enterprise team mapping. In your `managed-settings.json`, use the `{ "overridable": "disable" }` syntax to specialize the key's configuration on a per-team basis. You can then set `"disableBypassPermissionsMode": "unmanaged"` in a team settings file, providing a specialization that takes precedence over `managed-settings.json` for members of the subject team.
+* In the GitHub Copilot app, sessions cannot use **Approve all** for **Tool permissions**, even if a user selects it as their default in **Settings** > **Sessions**.
+
+For this key, the most restrictive value across all policy layers wins. A `"disable"` set by any layer takes effect and cannot be relaxed. A lower-authority layer or a per-team override cannot set this key back to unmanaged once any layer disables bypass mode.
+
+> [!NOTE]
+> If `disableBypassPermissionsMode` is set to a value that Copilot CLI doesn't recognize, the CLI logs the problem and enforces `"disable"` as a fail-closed default.
+
+### disableAssistedPermissionsMode
+
+Set `permissions.disableAssistedPermissionsMode` to `true` to prevent users from enabling assisted permissions. This setting does not disable bypass mode.
+
+### defaultMode
+
+Set `permissions.defaultMode` to `"manual"`, `"assisted"`, or `"allow-all"` to choose the default permission mode for new sessions. If the selected mode is unavailable or blocked by policy, the session starts with manual approval.
+
+This setting selects a default, not a locked mode. An explicit permitted choice for a session takes precedence over the managed default. Resumed sessions keep their saved mode, subject to current policy restrictions.
+
+In Copilot CLI, this managed default takes precedence over the user's `defaultPermissionMode` setting.
 
 ## telemetry
 
@@ -350,7 +434,7 @@ Each entry must contain exactly one matcher property.
 | `serverUrl` | Matches a remote server URL. Supports `*` wildcards for subdomains or path prefixes—for example, `https://mcp.example.com/*` or `https://*.internal.example.com/*`. | Remote servers that connect over HTTP or server-sent events (SSE). This property does not apply to local servers, even if they have a URL. |
 | `serverCommand` | Matches the exact command and each argument for a local server—for example, `["npx", "-y", "my-mcp-server"]`. Wildcards and command-line expansion are not supported. | Local servers that use standard input and output (`stdio`). This property does not apply to remote servers, even if they have a command. |
 
-This key is overridable for enterprise teams. Wrap the matcher objects under `overridable` at the enterprise level, then use the regular syntax to define allowlists and denylists in each team's file.
+This key is overridable for enterprise teams. Wrap the matcher objects under `overridable` at the enterprise level, then use the regular syntax to define allowlists and denylists in each enterprise team's file.
 
 ### URL canonicalization
 
@@ -414,7 +498,7 @@ For server-managed enterprise team overrides, wrap the entire sandbox object in 
 }
 ```
 
-The wrapper must be the only property directly inside `sandbox`. Individual sub-properties, such as `sandbox.enabled`, cannot use their own `overridable` wrappers. A team file's regular sandbox object replaces the entire wrapped default, so include every restriction that should remain. Omitting `sandbox` retains the enterprise default.
+The wrapper must be the only property directly inside `sandbox`. Individual sub-properties, such as `sandbox.enabled`, cannot use their own `overridable` wrappers. An enterprise team file's regular sandbox object replaces the entire wrapped default, so include every restriction that should remain. Omitting `sandbox` retains the enterprise default.
 
 ### `sandbox.learningMode`
 

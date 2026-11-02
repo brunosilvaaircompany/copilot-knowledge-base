@@ -49,7 +49,7 @@ You can cancel your Copilot plan at any time. You’ll retain access to your cur
 If you have been granted free access to Copilot as a verified student, teacher, or maintainer of a popular open source project, you won’t be able to cancel your plan.
  If you have access to Copilot through an organization or enterprise, you will not be able to cancel your plan. In these cases, you can disable Copilot in your environment. See [Configure In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide).
 
-If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat as part of a Copilot Business or Copilot Enterprise plan, your personal Copilot plan will be automatically canceled.
+If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat through Copilot Business, Copilot Enterprise, or Copilot access, your personal Copilot plan will be automatically canceled.
 
 
 1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**.

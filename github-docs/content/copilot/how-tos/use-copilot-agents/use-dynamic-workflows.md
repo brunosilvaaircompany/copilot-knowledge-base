@@ -1,6 +1,7 @@
 # Using dynamic workflows
 
-> [!NOTE] This feature is in public preview and is subject to change.
+> [!NOTE]
+> This feature is in public preview and is subject to change.
 
 
 This article explains how to create, use, and share dynamic workflows in GitHub Copilot CLI and the GitHub Copilot app.
@@ -175,7 +176,7 @@ Plugins provide a way to distribute custom Copilot functionality. You can use a 
 
 For more information, see [Plugins Creating](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-creating).
 
-After creating a plugin containing your dynamic workflow, and publishing it on a plugin marketplace, people will be able to discover and install it. See [Plugins Finding Installing](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing#installing-plugins).
+After creating a plugin containing your dynamic workflow and publishing it on a plugin marketplace, people can discover and install it. For instructions, see [Plugins Finding Installing](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing).
 
 ## Monitoring and managing dynamic workflow runs
 

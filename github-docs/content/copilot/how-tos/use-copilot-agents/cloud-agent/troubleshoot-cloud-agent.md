@@ -5,7 +5,7 @@
 You can only assign issues to Copilot if you have access to Copilot through a paid Copilot plan.
 
 If you do not already have a subscription for one of these plans, click this button for more information:<br>
-<a href="https://github.com/features/copilot/plans?ref_product=copilot&ref_type=engagement&ref_style=button" target="_blank" class="btn btn-primary mt-3 mr-3 no-underline"><span>Sign up for Copilot</span> {% octicon "link-external" height:16 aria-label="link-external" %}</a>
+<a href="https://github.com/features/copilot/plans?ref_product=copilot&ref_type=engagement&ref_style=button&utm_source=troubleshooting-cca-signup-cta&utm_medium=docs&utm_campaign=universe-2026" target="_blank" class="btn btn-primary mt-3 mr-3 no-underline"><span>Sign up for Copilot</span> {% octicon "link-external" height:16 aria-label="link-external" %}</a>
 
 If you _do_ have a paid Copilot plan, check that Copilot cloud agent is enabled and has not been manually disabled for the repository:
 
@@ -20,7 +20,7 @@ If you _do_ have a paid Copilot plan, check that Copilot cloud agent is enabled 
 * For personal repositories, the availability of Copilot cloud agent in the repository is configured in your account settings. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#disabling-or-enabling-copilot-cloud-agent-in-your-repositories).
 
 > [!NOTE]
-> You can check whether Copilot cloud agent has been enabled for you in the features page of your Copilot settings: [github.com/settings/copilot/features](https://github.com/settings/copilot/features).
+> You can check whether Copilot cloud agent has been enabled for you in the features page of your Copilot settings: [github.com/settings/copilot/features](https://github.com/settings/copilot/features?utm_source=troubleshooting-cca-article-features&utm_medium=docs&utm_campaign=universe-2026).
 
 ## I have an Enterprise Managed User account and Copilot won't work in my personal repository
 
@@ -40,6 +40,10 @@ If you asked Copilot to create a pull request and it responds that it cannot dir
 > [!IMPORTANT]
 > In VS Code, Visual Studio, and JetBrains IDEs, you must mention the `@github` chat participant in your prompt. You can omit this in Copilot Chat on GitHub.com.
 
+
+## Copilot can't start a session in a cloud sandbox
+
+If Copilot can't start a session that runs in a cloud sandbox, check that you can use Copilot in the cloud. If you get Copilot through an organization or enterprise, an owner must enable the **Copilot in the cloud** policy. See [Enabling Or Disabling Cloud Sandboxes For Your Organization](https://docs.github.com/en/copilot/how-tos/cloud-and-local-sandboxes/enabling-or-disabling-cloud-sandboxes-for-your-organization).
 
 ## I assigned an issue to Copilot, but nothing is happening
 
@@ -62,7 +66,7 @@ If this doesn't happen, Copilot may have been unassigned from the pull request, 
 
 Copilot can appear to be stuck for a while, and then get moving again.
 
-If the session remains stuck, it will time out after an hour. You can retry by unassigning the issue and then reassigning it to Copilot.
+If a session that runs on GitHub Actions remains stuck, it will time out after an hour. You can retry by unassigning the issue and then reassigning it to Copilot.
 
 If Copilot got stuck while responding to a comment, try adding the same comment to the pull request again.
 
@@ -74,7 +78,7 @@ To allow GitHub Actions workflows to run, click the **Approve and run workflows*
 
 ## Copilot is pushing changes which don't pass my CI checks
 
-While working on an issue, Copilot has access to its own ephemeral development environment, powered by GitHub Actions, where it can execute automated tests and linters to validate its work before it pushes.
+While working on an issue, Copilot has access to its own ephemeral development environment, either in a cloud sandbox or on GitHub Actions, where it can execute automated tests and linters to validate its work before it pushes.
 
 It is most likely to do this if given clear instructions on what to do. The best way to do this is with a `.github/copilot-instructions.md` file. See [Get The Best Results](https://docs.github.com/en/copilot/tutorials/cloud-agent/get-the-best-results#adding-custom-instructions-to-your-repository).
 

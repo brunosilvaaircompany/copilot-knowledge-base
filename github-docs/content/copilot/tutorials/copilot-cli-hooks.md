@@ -1,10 +1,12 @@
-# Using hooks with Copilot CLI for predictable, policy-compliant execution
+# Rolling out Copilot CLI hooks for your teams
 
-This tutorial is for DevOps engineers, platform teams, and engineering leaders who support developers using Copilot CLI.
+This tutorial is for platform teams, DevOps engineers, and engineering leaders rolling out Copilot CLI across their organization. You'll work with security and development teams to define a policy. Then you'll test hooks in one repository and plan a gradual rollout.
 
 Hooks are custom scripts that run at specific points during a Copilot CLI session. They can inspect prompts and tool calls, log information for auditing, and even block execution of certain commands.
 
-You’ll configure repository-scoped hooks that:
+This tutorial uses repository-scoped hooks stored in `.github/hooks/`.
+
+You’ll configure hooks that:
 
 * Provide visibility into prompts and tool use.
 * Block high-risk command patterns before execution.
@@ -684,5 +686,7 @@ Some teams (for example, infrastructure or platform teams) may require broader p
 * Avoid ad-hoc local bypasses that undermine auditability.
 
 ## Further reading
+
+To review the enterprise controls that apply alongside your repository-scoped hooks, see [Administer Copilot CLI For Your Enterprise](https://docs.github.com/en/copilot/how-tos/copilot-cli/administer-copilot-cli-for-your-enterprise).
 
 For troubleshooting hooks, see [Use Hooks](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/use-hooks#troubleshooting).

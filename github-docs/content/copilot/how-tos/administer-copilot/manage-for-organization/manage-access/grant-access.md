@@ -4,13 +4,15 @@
 
 After a GitHub enterprise owner enables Copilot Enterprise or Copilot Business for an organization, an owner of that organization can grant GitHub Copilot access to members of their organization.
 
-Billing for GitHub Copilot starts when you grant an organization member access, irrespective of when they first use Copilot. If you grant an organization member access midway through a billing cycle, the cost is prorated for the remainder of the cycle. For more information, see [GitHub Copilot Licenses](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses).
+For these plans, seat billing starts when you grant an organization member access, irrespective of when they first use Copilot. If you grant an organization member access midway through a billing cycle, the cost is prorated for the remainder of the cycle. For more information, see [GitHub Copilot Licenses](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses).
+
+Enterprise owners can also assign seats to users directly, without going through an organization. See [Grant Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/grant-access).
 
 ## Granting access to GitHub Copilot for all current and future users in your organization
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -36,7 +38,7 @@ When access is granted this way, the `copilot.cfb_seat_added` audit log event at
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)

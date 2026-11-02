@@ -33,7 +33,7 @@ Repository-specific instructions apply to every session for the selected reposit
 
 Agent skills are folders of instructions, scripts, and resources that Copilot can load when relevant to improve its performance in specialized tasks. Any skills configured for your repositories or Copilot CLI are automatically available in the GitHub Copilot app. To add or manage skills, click **Customize** in the app sidebar, then click **Skills**.
 
-For more information about agent skills, see [About Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills).
+For more information about agent skills, see [Agent Skills](https://docs.github.com/en/copilot/concepts/customizations/agent-skills).
 
 For a GitHub-provided built-in skills reference, see [Built In Skills](https://docs.github.com/en/copilot/reference/github-copilot-app-reference/built-in-skills).
 
@@ -52,10 +52,27 @@ To view or manage MCP servers that are already installed, click **Installed**.
 
 For more information about MCP, see [Add MCP Servers](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers).
 
+## Connecting services
+
+> [!NOTE]
+> Copilot connectors are in public preview and are subject to change.
+
+
+Connect an external service in the GitHub Copilot app to give Copilot access to its tools and context. You can then use the connector across supported Copilot surfaces without repeating setup. GitHub handles MCP server configuration and authentication for you.
+
+If your organization or enterprise provides your Copilot subscription, an administrator may need to update its policies to allow these connections. See [Copilot Connectors](https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors).
+
+To connect a service:
+
+1. Click **Customize** in the app sidebar.
+1. Select **MCP** from the dropdown next to the search field.
+1. Select the **GitHub verified** filter. GitHub-verified MCP servers (connectors) are marked with a Mona badge that shows **Verified** when you hover over it.
+1. Next to the service you want to connect, click **Connect**. **Connect** only appears for services that have a GitHub-verified MCP server. Other services are listed as standard MCP servers, which you install instead. See [Configuring MCP servers](#configuring-mcp-servers).
+1. Follow the prompts to sign in to the service and approve access.
 
 ## Using custom agents
 
-Custom agents are specialized versions of Copilot cloud agent that you can tailor to specific tasks and workflows.
+Custom agents are specialized versions of Copilot that you can tailor to specific tasks and workflows.
 
 Use the agent picker dropdown in the prompt box to select a custom agent before or during a session.
 
@@ -67,24 +84,37 @@ For more information, see [Custom Agents](https://docs.github.com/en/copilot/con
 
 Plugins are installable packages that add a preconfigured set of capabilities, such as skills, hooks, custom agents, MCP servers, and canvas extensions, extending the functionality of the GitHub Copilot app.
 
-The **Plugins** view shows plugins from the marketplaces configured in the app. You can filter the list by marketplace or add a custom marketplace.
+The **Customize** page shows plugins and other customizations from the sources configured in the app. Use its search field to find a plugin.
 
-To browse and install a plugin:
+Repository defaults are a project-specific option in clients that read `.github/copilot/settings.json`. Members can turn off these defaults. Enterprise managed settings always win: required plugins cannot be turned off, and blocked plugins cannot be turned on. For an overview of plugin behavior, see [Plugins](https://docs.github.com/en/copilot/concepts/customizations/plugins).
 
-1. Click **Customize** in the app sidebar, then click **Plugins**.
-1. Optionally, use the marketplace dropdown to filter the available plugins.
-1. Find the plugin you want to use, then click **Install**.
+### Install a plugin
 
-To add a custom marketplace:
+1. Click **Customize** in the app sidebar.
+1. Search the Browse page for the plugin you want to use, then click **Install**.
 
-1. In the **Plugins** view, click the {% octicon "gear" aria-label="The marketplace settings icon" %} icon next to the marketplace dropdown.
+To test a plugin in the app, add the marketplace that contains it, then find and install the plugin from **Customize**.
+
+### Manage installed plugins
+
+1. Click **Customize** in the app sidebar.
+1. Click **Installed**.
+1. Turn on or off the toggle next to the plugin.
+
+## Adding a plugin marketplace
+
+To add a custom marketplace in the GitHub Copilot app:
+
+1. On the **Customize** page, select the marketplace settings control next to the marketplace dropdown.
 1. Follow the prompts to add the GitHub repository or Git URL that hosts the marketplace.
 
-For more information, see [About Plugins](https://docs.github.com/en/copilot/concepts/agents/about-plugins).
+To create and share a marketplace, see [Create And Share Plugin Marketplaces](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/create-and-share-plugin-marketplaces).
 
 ## Working with canvas extensions
 
-Use canvas extensions to build shared, agent-driven artifacts and interfaces for team or personal workflows. You can find canvases under **Canvas** in **Customize**, or use `/create-canvas` in a session to create your own. For more information, see [Working With Canvas Extensions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions).
+Use canvas extensions to build shared, agent-driven artifacts and interfaces for collaborative or personal workflows. You can find canvases under **Canvas** in **Customize**, or use `/create-canvas` in a session to create your own. For more information, see [Working With Canvas Extensions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions).
+
+To work through code scanning alerts alongside your code, install the `github-security` plugin. See [View And Fix Security Alerts](https://docs.github.com/en/copilot/how-tos/github-copilot-app/view-and-fix-security-alerts).
 
 ## Organization and enterprise management
 

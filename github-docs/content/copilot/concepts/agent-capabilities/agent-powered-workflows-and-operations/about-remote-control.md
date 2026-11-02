@@ -40,7 +40,7 @@ When connected to a session remotely from GitHub.com or GitHub Mobile, you can:
 * **End the current operation**: Cancel the agent's current work.
 
 > [!NOTE]
-> Slash commands—such as `/allow-all`—are not currently available from the remote interface.
+> Slash commands—such as `/permissions assisted`—are not currently available from the remote interface.
 
 
 ## Reconnection

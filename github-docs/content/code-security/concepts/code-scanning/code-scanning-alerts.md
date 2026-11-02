@@ -16,6 +16,12 @@ By default, code scanning analyzes your code periodically on the default branch 
 
 
 
+AI Scan for repositories adds alerts from on-demand scans of your default branch to the same alert list as CodeQL. You can use existing alert assignment, remediation, security campaign, and issue-linking workflows with these alerts. See [Ai Scan For Repositories](https://docs.github.com/en/code-security/concepts/code-scanning/ai-scan-for-repositories).
+
+
+
+
+
 You can use GitHub Copilot Autofix to generate fixes automatically for code scanning alerts, including CodeQL alerts. For more information, see [Resolve Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-code-scanning-alerts/resolve-alerts#generating-a-suggested-fix).
 
 

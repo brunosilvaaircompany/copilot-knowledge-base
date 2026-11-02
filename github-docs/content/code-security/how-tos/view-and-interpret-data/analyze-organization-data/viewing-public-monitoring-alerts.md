@@ -1,9 +1,5 @@
 # Viewing and managing public monitoring alerts
 
-> [!NOTE]
-> Public monitoring for secret scanning is currently in public preview and subject to change. If you have feedback, please join the [discussion](https://github.com/orgs/community/discussions/categories/code-security).
-
-
 ## About the public monitoring page
 
 The **Public monitoring** page is a dedicated view within the enterprise-level security overview. It displays alerts for secrets detected in public repositories across GitHub that are attributed to your enterprise members or users with an email matching your enterprise's verified domain.
@@ -39,9 +35,19 @@ Public monitoring must be enabled for your enterprise. See [Enabling Public Moni
    * The file location where the secret was detected, with the secret highlighted in context
    * A **Recommendations** tab with suggested remediation steps
 
+## Triaging public monitoring alerts
+
+Use the available alert information and controls to focus and prioritize your review:
+
+* **Activity:** Review an alert's timeline to see actions and state changes. This shows how your enterprise has triaged the alert.
+* **Filters:** Filter the alert list by repository, committer, secret type, attribution method, or state. Use the state filter to focus on open or closed alerts.
+* **Validity:** For supported secret types, public monitoring periodically checks credential validity. Use the `active`, `inactive`, or `unknown` status to prioritize active credentials for remediation.
+
 ## Dismissing and reopening alerts
 
 When you have reviewed an alert, you can dismiss it to remove it from the list of open alerts. If you need to revisit a dismissed alert later, you can reopen it. When you dismiss or reopen an alert, you can add an optional comment to record the reason for your decision.
+
+Dismissing a public monitoring alert updates its state for your enterprise. It does not affect a repository-level secret scanning alert for the same secret. It also does not revoke the credential or remove the secret from its public location.
 
 Dismissing alerts you have already triaged helps you manage a high volume of public monitoring alerts, keeping the active list focused on the exposures that still need attention.
 

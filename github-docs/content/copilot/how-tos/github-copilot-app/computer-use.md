@@ -10,6 +10,8 @@ Copilot can interact with desktop applications on your behalf by reading accessi
 
 This capability is useful for workflows in legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. It is available for local sessions on macOS and Windows.
 
+Copilot interacts with applications in the background so you can continue working in other applications. On Windows, it brings the target application into focus only when needed, then restores the previously active window.
+
 For information about its capabilities, controls, and limitations, see [Computer Use](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/computer-use).
 
 ## Enabling computer use

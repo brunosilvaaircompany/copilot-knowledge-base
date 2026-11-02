@@ -15,6 +15,7 @@ Used for:
 * GPT-6 Luna
 * GPT-6 Sol
 * GPT-6.1 Sol
+* GPT-6.1 Terra
 
 These models are hosted by OpenAI and GitHub's Azure infrastructure.
 
@@ -102,15 +103,19 @@ When using xAI, input prompts and output completions continue to run through Git
 
 Used for:
 
-* MAI-Code-1.1-Flash
+* MAI Code 1.1 Flash
 
-MAI-Code-1.1-Flash is a first-party Microsoft model hosted on Azure in GitHub's tenant.
+MAI Code 1.1 Flash is a first-party Microsoft model hosted on Azure in GitHub's tenant.
 
-GitHub does not use Copilot Business or Copilot Enterprise customer data to train AI models. For individual subscribers—Copilot Free, Copilot Pro, Copilot Pro+, and Copilot Max users—GitHub may use Copilot interaction data, including prompts (inputs), suggestions (outputs), and code snippets generated during Copilot sessions to train and improve AI models, in accordance with our [GitHub General Privacy Statement](https://docs.github.com/en/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement) and applicable user settings. Individual subscribers can opt out of having their data used for AI model training. To manage this setting, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements).
+This model can also be hosted locally on a user's own machine, if the GPU and memory requirements are met. See [Add Llm Models](https://docs.github.com/en/copilot/how-tos/github-copilot-app/add-llm-models#installing-a-local-model-from-the-model-picker) and [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models#installing-a-local-model-from-the-model-picker).
 
-MAI-Code-1.1-Flash is served on Microsoft Azure AI Foundry within GitHub's tenant and is subject to GitHub's data handling configuration for that deployment. For details about how data is processed, retained, and secured for models served on Azure AI Foundry, see [Data, privacy, and security for Foundry Models sold by Azure](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) in the Microsoft documentation.
+GitHub does not use Copilot Business or Copilot Enterprise customer data to train AI models.
 
-When using MAI-Code-1.1-Flash, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content.
+When the model is cloud hosted, GitHub may use Copilot interaction data for individual subscribers—that is, users on Copilot Free, Copilot Pro, Copilot Pro+, and Copilot Max plans—to train and improve AI models, in accordance with our [GitHub General Privacy Statement](https://docs.github.com/en/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement) and applicable user settings. This may include prompts (inputs), suggestions (outputs), and code snippets generated during Copilot sessions. Individual subscribers can opt out of having their data used for AI model training. To manage this setting, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements).
+
+When cloud hosted, MAI Code 1.1 Flash is served on Microsoft Azure AI Foundry within GitHub's tenant and is subject to GitHub's data handling configuration for that deployment. For details about how data is processed, retained, and secured for models served on Azure AI Foundry, see [Data, privacy, and security for Foundry Models sold by Azure](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) in the Microsoft documentation.
+
+When MAI Code 1.1 Flash is cloud hosted, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content. When MAI Code 1.1 Flash is locally hosted, the model may not use the same safety filters as GitHub -provided models and may be more susceptible to malicious instructions, especially when actions are automatically approved.
 
 ## Open-weight models
 

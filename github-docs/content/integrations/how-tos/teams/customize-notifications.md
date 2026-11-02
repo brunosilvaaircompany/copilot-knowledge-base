@@ -2,6 +2,20 @@
 
 You can customize your notifications by subscribing to activity that is relevant to your Microsoft Teams channel, and unsubscribing from activity that is less helpful to your project.
 
+
+
+## Notifications and Copilot settings
+
+The combined GitHub app supports both repository notifications and Copilot. Existing subscriptions are preserved when you update from GitHub Notifications.
+
+Subscriptions control which repository events appear in a channel or the personal app. Use `@GitHub settings` separately to choose repositories for agent work in a channel or group chat. Selecting repositories for a session doesn't subscribe you to their events, and subscribing to events doesn't select repositories for a session.
+
+Group chats support Copilot conversations, but notification subscriptions are available only in channels and the personal app. In the personal app, omit the `@GitHub` prefix from subscription commands. See [Teams Command Reference](https://docs.github.com/en/integrations/reference/teams-command-reference).
+
+
+
+## Choosing notification events
+
 ### Notifications enabled by default
 
 The following notifications are enabled by default, but you can disable any of them using the `@GitHub Notifications unsubscribe OWNER/REPO [FEATURE]` command.
@@ -20,7 +34,7 @@ The following notifications are enabled by default, but you can disable any of t
 
 ### Notifications disabled by default
 
-The following notifications are disabled by default, but you can enable any of them using the `@GitHub Notifications subscribe owner/repo [FEATURE]` command.
+The following notifications are disabled by default, but you can enable any of them using the `@GitHub Notifications subscribe OWNER/REPO [FEATURE]` command.
 
 |Feature|Description|
 |-------|-----------|
@@ -165,3 +179,15 @@ You can subscribe or unsubscribe to deployment notifications using the following
 ```
 
 >[!NOTE] If you are using GitHub Actions and want to track your deployments to environments, the `workflows` feature is recommended, as it provides a more complete picture and the ability to approve your deployments directly from Teams.
+
+
+
+## Acting on a notification with Copilot
+
+Reply to a notification and mention `@GitHub` with a task:
+
+```text
+@GitHub Investigate this failed workflow, explain the cause, and propose a fix.
+```
+
+The linked GitHub resource and the conversation provide context. To include related repositories, name them in your prompt. You need write access to every selected repository to start or steer work. For models, MCP servers, multi-repository sessions, and Copilot Memory, see [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams).

@@ -14,7 +14,7 @@ This article collects resources that you can send to teams in your company to ac
 
 These teams need to know the terms that will govern your company's purchase of Copilot.
 
-* If you purchase directly from GitHub, you'll be governed by the [GitHub Generative AI Services Terms](https://github.com/customer-terms/github-generative-ai-services-terms).
+* If you purchase directly from GitHub, you'll be governed by the [GitHub Generative AI Services Terms](https://github.com/customer-terms/github-generative-ai-services-terms?utm_source=resources-getting-approval-article-generative-ai-services&utm_medium=docs&utm_campaign=universe-2026).
 * If you purchase through Microsoft, you'll be governed by [Microsoft's Product Terms](https://www.microsoft.com/licensing/terms). This includes both the [Microsoft Generative AI Service terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/all), and terms specifically for [GitHub Offerings](https://www.microsoft.com/licensing/terms/productoffering/GitHubOfferings/allprograms).
 * Copilot also falls under the [GitHub Data Protection Agreement](https://gh.io/dpa). This applies to all generally available (GA) Copilot features and to the preview features listed in [GitHub DPA-Covered Previews](https://gh.io/dpa-previews).
 
@@ -42,7 +42,7 @@ These teams need to know how Copilot will work with your company's corporate net
 
 * The allowlist required for a firewall or proxy to ensure Copilot works as expected. See [Copilot Allowlist Reference](https://docs.github.com/en/copilot/reference/copilot-allowlist-reference).
 * The network protocol that Copilot operates on by default, and your company's options for routing traffic through a proxy server and intercepting traffic. See [Network Settings](https://docs.github.com/en/copilot/concepts/network-settings).
-* The option to use Copilot in air-gapped environments by configuring API keys locally. See [Bring Your Own Key](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key#local-byok).
+* The option to use Copilot in air-gapped environments by configuring API keys locally. See [Bring Your Own Key](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key#byok-configured-by-users).
 * The clients where users will be using Copilot.
   * Your enterprise can enable or disable Copilot in IDEs, on GitHub Mobile, in the CLI, and on the GitHub website.
   * If your company distributes approved software for users, IT teams may need to approve the supported versions of IDEs. See [Copilot Feature Matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix).

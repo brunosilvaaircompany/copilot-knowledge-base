@@ -1,8 +1,10 @@
-# Configure the development environment
+# Configure the development environment for agents on GitHub Actions
 
 ## About customizing Copilot cloud agent's development environment
 
-While working on a task, Copilot has access to its own ephemeral development environment, powered by GitHub Actions, where it can explore your code, make changes, execute automated tests and linters and more.
+During an agent session, Copilot has access to a development environment, where it can explore your code, make changes, execute automated tests and linters and more. Sessions can run in a cloud sandbox, on GitHub Actions, or in a custom environment. The setup steps, runner, and Windows options in this article use GitHub Actions, so they apply only to sessions that run on GitHub Actions. For more information, see [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes#choosing-where-copilot-runs).
+
+To use your own tools and dependencies outside GitHub Actions, you can register a Linux machine or codespace as a custom environment. You manage the host and select it in a client that supports custom environments. See [Create A Custom Environment](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-a-custom-environment).
 
 You can customize Copilot's development environment with a [Copilot setup steps file](#customizing-copilots-development-environment-with-copilot-setup-steps). You can use a Copilot setup steps file to:
 
@@ -25,6 +27,9 @@ In addition, you can:
 ## Customizing Copilot's development environment with Copilot setup steps
 
 You can customize Copilot's environment by creating a special GitHub Actions workflow file, located at `.github/workflows/copilot-setup-steps.yml` within your repository.
+
+This customization applies only when Copilot runs on GitHub Actions. It doesn't apply to sessions that run in a cloud sandbox.
+
 
 A `copilot-setup-steps.yml` file looks like a normal GitHub Actions workflow file, but must contain a single `copilot-setup-steps` job. The steps in this job will be executed in GitHub Actions before Copilot starts working. For more information on GitHub Actions workflow files, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax).
 
@@ -77,7 +82,7 @@ In your `copilot-setup-steps.yml` file, you can only customize the following set
 
 For more information on these options, see [Workflow Syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#jobs).
 
-Any value that is set for the `fetch-depth` option of the `actions/checkout` action will be overridden to allow the agent to rollback commits upon request, while mitigating security risks. For more information, see [`actions/checkout/README.md`](https://github.com/actions/checkout/blob/main/README.md).
+Any value that is set for the `fetch-depth` option of the `actions/checkout` action will be overridden to allow the agent to rollback commits upon request, while mitigating security risks. For more information, see [`actions/checkout/README.md`](https://github.com/actions/checkout/blob/main/README.md?utm_source=configure-dev-environment-agents-actions-article-actions&utm_medium=docs&utm_campaign=universe-2026).
 
 Your `copilot-setup-steps.yml` file will automatically be run as a normal GitHub Actions workflow when changes are made, so you can see if it runs successfully. This will show alongside other checks in a pull request where you create or modify the file.
 
@@ -93,7 +98,7 @@ In its ephemeral development environment, Copilot can build or compile your proj
 
 Copilot can discover and install these dependencies itself via a process of trial and error, but this can be slow and unreliable, given the non-deterministic nature of large language models (LLMs), and in some cases, it may be completely unable to download these dependencies—for example, if they are private.
 
-You can use a Copilot setup steps file to deterministically install tools or dependencies before Copilot starts work. To do this, add `steps` to the `copilot-setup-steps` job:
+When Copilot runs on GitHub Actions, you can use a Copilot setup steps file to deterministically install tools or dependencies before Copilot starts work. To do this, add `steps` to the `copilot-setup-steps` job:
 
 ```yaml
 # ...
@@ -122,6 +127,9 @@ jobs:
 
 
 ## Upgrading to larger GitHub-hosted GitHub Actions runners
+
+This customization applies only when Copilot runs on GitHub Actions. It doesn't apply to sessions that run in a cloud sandbox.
+
 
 By default, Copilot works in a standard GitHub Actions runner. You can upgrade to larger runners for better performance (CPU and memory), more disk space and advanced features like Azure private networking. For more information, see [Larger Runners](https://docs.github.com/en/actions/concepts/runners/larger-runners).
 
@@ -155,6 +163,9 @@ By default, Copilot works in a standard GitHub Actions runner. You can upgrade t
 > * Copilot cloud agent is only compatible with Ubuntu x64 Linux and Windows 64-bit runners. Runners with macOS or other operating systems are not supported.
 
 ## Using self-hosted GitHub Actions runners
+
+This customization applies only when Copilot runs on GitHub Actions. It doesn't apply to sessions that run in a cloud sandbox.
+
 
 You can run Copilot cloud agent on self-hosted runners. You may want to do this to match how you run CI/CD workflows on GitHub Actions, or to give Copilot access to internal resources on your network.
 
@@ -204,6 +215,9 @@ We recommend that you only use Copilot cloud agent with ephemeral, single-use ru
     You can set these environment variables by creating Agents variables or secrets, or by setting them on the runner directly, for example with a custom runner image. For more information, see [Configure Secrets And Variables](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/configure-secrets-and-variables) and [Actions Runner Controller](https://docs.github.com/en/actions/concepts/runners/actions-runner-controller#creating-your-own-runner-image).
 
 ## Switching Copilot to a Windows development environment
+
+This customization applies only when Copilot runs on GitHub Actions. It doesn't apply to sessions that run in a cloud sandbox.
+
 
 By default, Copilot uses an Ubuntu Linux-based development environment.
 

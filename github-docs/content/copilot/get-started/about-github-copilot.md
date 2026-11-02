@@ -44,29 +44,29 @@ You can start using Copilot in several ways, depending on your role and needs.
 
 ### Individuals
 
-* **Try Copilot for free.** Use [Copilot Free](https://github.com/copilot?ref_product=copilot&ref_plan=free&ref_style=text&ref_type=engagement) to explore core features with no paid plan required.
+* **Try Copilot for free.** Use [Copilot Free](https://github.com/copilot?ref_product=copilot&ref_plan=free&ref_style=text&ref_type=engagement&utm_source=setup-guide-link-web-app&utm_medium=docs&utm_campaign=universe-2026) to explore core features with no paid plan required.
 * **Subscribe to a paid plan.** Upgrade to a paid plan for access to premium features, increased access to models, and a higher monthly allowance of AI credits. See [Get Started With A Copilot Plan](https://docs.github.com/en/copilot/how-tos/manage-your-account/get-started-with-a-copilot-plan) for more information.
 * **Get free access if you're eligible.** Students, teachers, and open source maintainers may qualify for access to premium features at no cost. See [Set Up For Students](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students) and [Set Up For Teachers And Os Maintainers](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers).
 
 ### Members of an organization
 
-* **Request access from your organization.** If your organization or enterprise has a GitHub Copilot plan, go to [https://github.com/settings/copilot](https://github.com/settings/copilot) and request access under "Get Copilot from an organization."
+To use Copilot at the expense of your organization or enterprise, an administrator must assign you a seat, even if the right to use Copilot is included with your enterprise license.
 
-### Organization and enterprise owners
+* **Request access from your organization.** Go to [https://github.com/settings/copilot](https://github.com/settings/copilot?utm_source=get-started-about-doc-settings&utm_medium=docs&utm_campaign=universe-2026) and, where available, request access under "Get Copilot from an organization."
+* **Ask your administrator.** If the request option is not available, ask your organization or enterprise administrator how to get access.
+
+Once access is assigned, sign in with that account. See [Quickstart For Using GitHub Copilot In Your Ide](https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-in-your-ide).
+
+### Organization owners
 
 Owners of **organizations on GitHub Free or GitHub Team** can purchase Copilot Business for their organization. [Subscribe to Copilot Business](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button&ref_plan=business).
 
 If your organization is owned by an enterprise that has a Copilot subscription, you can ask your enterprise owner to enable Copilot for your organization. Go to [https://github.com/settings/copilot](https://github.com/settings/copilot) and request access under "Get Copilot from an organization."
 
 
-**Enterprise owners** can set up Copilot Business or Copilot Enterprise for their enterprise.
+### Enterprise owners
 
-* If **you're on GitHub.com and pay by credit card or PayPal**, you can [subscribe here](https://github.com/github-copilot/purchase?ref_product=copilot&ref_type=purchase&ref_style=button).
-
-   >[!NOTE] If you are currently in a trial of GitHub Enterprise Cloud, you must convert to a paid enterprise before you can purchase GitHub Copilot.
-
-* For **any other payment method and enterprises on GHE.com**, [contact GitHub's Sales team](https://github.com/enterprise/contact?ref_product=copilot&ref_type=engagement&ref_style=text).
-
+Choose a plan and prepare policies, budgets, and access assignment for your enterprise. See [Set Up For Enterprise](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-enterprise).
 
 If you are on **GitHub Enterprise Server**, see [About Copilot On Ghes](https://docs.github.com/en/enterprise-server@latest/copilot/copilot-on-ghes/about-copilot-on-ghes).
 
@@ -79,4 +79,4 @@ These settings help administrators manage Copilot across the environments and fe
 ## Next steps
 
 * Start using Copilot. See [Where To Use GitHub Copilot](https://docs.github.com/en/copilot/get-started/where-to-use-github-copilot).
-* View the Copilot features available to you by navigating to your Copilot settings at [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features?ref_product=copilot&ref_type=engagement&ref_style=text).
+* View the Copilot features available to you by navigating to your Copilot settings at [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features?ref_product=copilot&ref_type=engagement&ref_style=text&utm_source=getting-started-overview-links-settings-feature&utm_medium=docs&utm_campaign=universe-2026).

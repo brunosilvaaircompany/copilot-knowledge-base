@@ -29,6 +29,20 @@ The data **does not include** activity from other Copilot surfaces, such as:
 
 License and seat management data are not included in Copilot usage metrics reports. To view or manage license assignments, use the Copilot user management API, which is the source of truth for license and seat information. See [Copilot User Management](https://docs.github.com/en/rest/copilot/copilot-user-management).
 
+### Troubleshooting missing usage data
+
+Detailed breakdowns depend on client-side telemetry from the IDE or Copilot CLI. This telemetry provides data about features, languages, models, accepted suggestions, and lines of code. Server-side telemetry can show that a user was active, but it can't observe what happens in the editor.
+
+If client-side telemetry is missing, reports may contain lower numbers or empty breakdowns even when server-side data shows activity. Common causes include:
+
+| Cause | Effect on your reports | What you can check |
+|:--|:--|:--|
+| Telemetry is turned off in the IDE, for example with the `telemetry.telemetryLevel` setting in VS Code. | The IDE sends no detailed activity. The user may still be counted as active through server-side telemetry, but feature, language, and lines of code breakdowns are empty. | Confirm that IDE telemetry is enabled for your developers. |
+| A network proxy, firewall, or VPN blocks the Copilot telemetry endpoint. | Same as when telemetry is turned off. | Allow the Copilot client telemetry endpoint. See [Copilot Allowlist Reference](https://docs.github.com/en/copilot/reference/copilot-allowlist-reference). |
+| The client isn't a supported IDE and doesn't send Copilot telemetry. | The user may be counted as active through server-side telemetry, but the client doesn't appear in `totals_by_ide` or detailed breakdowns. | Use a supported IDE for complete metrics. |
+
+If a gap persists after you check the causes above, contact us through the [GitHub Support portal](https://support.github.com){% elsif ghes %}your site administrator and include the affected users, IDEs, versions, and dates.
+
 ## Why Copilot usage metrics may differ across API resources
 
 The following API resources expose Copilot-related data, but they are not interchangeable and should not be compared directly. Each API resource is designed for a specific use case and data model, and differences in totals or coverage are expected. Use this table to understand which API resource best fits your reporting needs.
@@ -65,19 +79,47 @@ In short: users must be licensed somewhere in the enterprise to appear in its me
 
 To be included in the Copilot usage metrics, end users must use one of the following IDEs and Copilot Chat extension versions.
 
+Older versions may not send all the events that usage metrics rely on, or may attribute activity to the wrong IDE. Keep IDEs and Copilot extensions current, and use device management tooling to enforce these minimum versions where possible.
+
 | IDE | Minimum IDE version | Minimum Copilot Chat extension version |
 |:--|:--|:--|
 | Eclipse | 4.31 | 0.9.3.202507240902 |
 | JetBrains / IntelliJ | 2024.2.6 | 1.5.52-241 |
 | Visual Studio | 17.14.13 | 18.0.471.29466 |
 | VS Code | 1.107.1 | 0.35.3 |
-| Xcode | 13.2.1 | 0.40.0 |
+| Xcode | 14.3.1 | 0.40.0 |
+
+In per-user reports, each `totals_by_ide` entry includes `last_known_ide_version` and `last_known_plugin_version`. Use these fields to identify developers who need to update. See [Copilot Usage Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics).
+
+### Version requirements for SDK-based agent activity
+
+Some IDEs run Copilot agent sessions through the Copilot SDK. Some versions of these IDEs don't identify themselves when they send agent activity, so that activity is left out of usage metrics. This causes agent interactions and agent lines of code to be undercounted. To include this activity, end users must use one of the following versions or later:
+
+| IDE | Minimum version for SDK-based agent activity | Affected versions |
+|:--|:--|:--|
+| VS Code | 1.139.0 | 1.134 through 1.138, when using the agent window |
+| Copilot plugin for JetBrains IDEs | 1.20.0 | 1.15.0 through 1.19.x |
+| Visual Studio | 18.12 | Insiders (preview) builds before 18.12 |
+
+If you're planning IDE updates, move developers directly to these versions or later. Generally available versions of Visual Studio aren't affected.
+
+For JetBrains IDEs, avoid Copilot plugin versions 1.15.0 through 1.19.x.
+
+Eclipse and Xcode don't run agent sessions through the Copilot SDK, so they aren't affected.
+
+Missing data can't be backfilled, because activity from affected versions doesn't identify which IDE it came from.
+
+Some of this activity was counted as Copilot CLI activity instead, which can inflate Copilot CLI metrics. This clears up as developers update the affected IDEs, but earlier Copilot CLI metrics can't be corrected. Copilot CLI users don't need to update.
+
+This issue affects only how activity is attributed in usage metrics. Billing is not affected.
 
 ## Data freshness
 
 The data in the dashboards and API reports is updated on a regular schedule.
 
 You can expect data to be available within **two full days**. This means that data for a given day is processed and made available within two full UTC days after that day closes.
+
+Telemetry that is still being processed can make the most recent days appear incomplete. Wait for the processing window to close before investigating a gap.
 
 ## What does the data measure?
 
@@ -92,6 +134,8 @@ Copilot usage metrics can be grouped into a few main categories: Adoption, engag
 **Lines of Code (LoC) metrics** measure the number of lines Copilot suggested, added, or deleted in the editor, providing a directional view of Copilot’s tangible output. For example, "Lines added" shows how much code was actually accepted and inserted into the editor.
 
 **Pull request lifecycle metrics** measure how Copilot activity relates to pull request outcomes and delivery flow. These metrics include pull request creation and merge counts, median time to merge, and review suggestion activity. By comparing overall pull request activity with pull requests created by Copilot, you can evaluate how AI-assisted workflows influence throughput and cycle time at the organization or enterprise level.
+
+Model breakdowns can include models that developers didn't select directly. For example, Copilot can use other models for Auto model selection or for background tasks.
 
 ### Understanding adoption cohorts
 
@@ -203,3 +247,7 @@ These metrics can be used together to answer key questions about your teams' usa
 | How do I act on the insights from the dashboard? | See [Interpret Copilot Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics#reviewing-adoption-cohorts) |
 
 Look for patterns across these signals rather than focusing on any single number. For example, a steady DAU paired with a rising acceptance rate indicates growing trust and value.
+
+## Analyze your metrics in more detail
+
+When you need to explain or validate your findings, use the reference articles to help you understand all the data available, how it compares across surfaces, and how it should be interpreted. See [Copilot Usage Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics).

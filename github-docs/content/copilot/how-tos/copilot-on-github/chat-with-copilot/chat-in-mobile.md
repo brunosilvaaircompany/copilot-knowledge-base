@@ -2,10 +2,14 @@
 
 ## Limitations
 
-The following limitations apply to Copilot Chat in GitHub Mobile:
+If you're a member of an organization or enterprise, your access to Copilot Chat in GitHub Mobile may depend on policies set by your administrator. See [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
 
-* If you're a member of an organization or enterprise, your access to Copilot Chat in GitHub Mobile may depend on policies set by your administrator. See [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
-* If you purchased Copilot Pro, Copilot Pro+, or Copilot Max through an in-app purchase on iOS or Android, you cannot enable additional GitHub AI Credits. To do so, cancel your mobile subscription and re-subscribe on GitHub.com through a web browser.
+If you purchased Copilot Pro, Copilot Pro+, or Copilot Max through an in-app purchase on iOS or Android, you can't buy additional GitHub AI Credits through the app store. However, if your GitHub account has a payment method on file, additional paid usage beyond your included AI credits is billed to that payment method based on your budget settings.
+
+To avoid charges beyond your plan, create or edit a **Bundled AI credits budget**, set it to $0 USD, and enable **Stop usage when budget limit is reached**. See [Set Up Budgets](https://docs.github.com/en/billing/how-tos/set-up-budgets#managing-budgets-for-your-personal-account).
+
+To manage all Copilot billing in one place, cancel your mobile subscription in the App Store or Google Play and re-subscribe on GitHub.com.
+
 
 ## Asking a general question about software development
 

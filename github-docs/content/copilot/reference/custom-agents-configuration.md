@@ -19,9 +19,9 @@ The following table outlines the properties that you can configure for agent pro
 | `target` | string     | Target environment or context for the custom agent (`vscode` or `github-copilot`). If unset, defaults to both environments. |
 | `tools`       | list of strings, string | List of tool names the custom agent can use. Supports both a comma separated string and yaml string array. If unset, defaults to all tools. See [Tools](#tools). |
 | `model`       | string | Model to use when this custom agent executes. If unset, inherits the default model. |
-| `disable-model-invocation`  | boolean | Disables Copilot cloud agent from automatically using this custom agent based on task context. When `true`, the agent must be manually selected. Setting `disable-model-invocation: true` is equivalent to `infer: false`. If both are set, `disable-model-invocation` takes precedence. If unset, defaults to `false`. |
+| `disable-model-invocation`  | boolean | Disables Copilot in the cloud from automatically using this custom agent based on task context. When `true`, the agent must be manually selected. Setting `disable-model-invocation: true` is equivalent to `infer: false`. If both are set, `disable-model-invocation` takes precedence. If unset, defaults to `false`. |
 | `user-invocable` | boolean | Controls whether this custom agent can be selected by a user. When `false`, the agent cannot be manually selected and can only be accessed programmatically. If unset, defaults to `true`. |
-| `infer`       | boolean | **Retired**. Use `disable-model-invocation` and `user-invocable` instead. Enables Copilot cloud agent to automatically use this custom agent based on task context. When `false`, the agent must be manually selected. If unset, defaults to `true`. |
+| `infer`       | boolean | **Retired**. Use `disable-model-invocation` and `user-invocable` instead. Enables Copilot in the cloud to automatically use this custom agent based on task context. When `false`, the agent must be manually selected. If unset, defaults to `true`. |
 | `mcp-servers` | object                  | Additional MCP servers and tools that should be used by the custom agent. **Not used in VS Code and other IDE custom agents.** |
 | `metadata`   | object consisting of a name and value pair, both strings | Allows annotation of the agent with useful data. **Not used in VS Code and other IDE custom agents.** |
 
@@ -31,7 +31,7 @@ Define the agent's behavior, expertise, and instructions in the Markdown content
 
 > [!NOTE]
 >
-> * The `argument-hint` and `handoffs` properties from VS Code and other IDE custom agents are currently not supported for Copilot cloud agent on GitHub.com. They are ignored to ensure compatibility.
+> * The `argument-hint` and `handoffs` properties from VS Code and other IDE custom agents are currently not supported for Copilot in the cloud on GitHub.com. They are ignored to ensure compatibility.
 > * For more information on custom agent file structure in VS Code, see [Custom agents in VS Code](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-file-structure) in the VS Code documentation.
 
 ## Tools
@@ -62,12 +62,12 @@ The following tool aliases are available for custom agents. All aliases are case
 | `edit`        | `Edit`, `MultiEdit`, `Write`, `NotebookEdit` | Edit tools: e.g. `str_replace`, `str_replace_editor`             | Allow LLM to edit. Exact arguments can vary.                                                            |
 | `search`      | `Grep`, `Glob`                               | `search`                                                         | Search for files or text in files.                                                                       |
 | `agent` | `custom-agent`, `Task`                                       | "Custom agent" tools                                             | Allows a different custom agent to be invoked to accomplish a task. |
-| `web`         | `WebSearch`, `WebFetch`                      | Currently not applicable for cloud agent. | Allows fetching content from URLs and performing a web search                                            |
-| `todo`        | `TodoWrite`                                  | Currently not applicable for cloud agent. | Creates and manages structured task lists. Not supported in cloud agent today, but supported by VS Code. |
+| `web`         | `WebSearch`, `WebFetch`                      | Currently not applicable for Copilot in the cloud. | Allows fetching content from URLs and performing a web search                                            |
+| `todo`        | `TodoWrite`                                  | Currently not applicable for Copilot in the cloud. | Creates and manages structured task lists. Not supported in Copilot in the cloud today, but supported by VS Code. |
 
 ### Tool names for "out-of-the-box" MCP servers
 
-The following MCP servers are available out-of-box for Copilot cloud agent and can be referenced using namespacing:
+The following MCP servers are available out-of-box for Copilot in the cloud and can be referenced using namespacing:
 
 | MCP server name | Available tools |
 | --------------- | --------------- |
@@ -102,14 +102,14 @@ Most sub-properties are the same as the JSON representation. The following secti
 
 ### MCP server type
 
-For compatibility, the `stdio` type used by Claude Code and VS Code is mapped to cloud agent's `local` type.
+For compatibility, the `stdio` type used by Claude Code and VS Code is mapped to Copilot in the cloud's `local` type.
 
 ### MCP server environment variables and secrets
 
 > [!NOTE]
 > If your MCP server requires secrets or environment variables, these must be configured as Agents secrets or variables at either the organization or repository level. For more information, see [Configure Secrets And Variables](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/configure-secrets-and-variables).
 
-Custom agent MCP configuration supports the same environment variable and secret replacement capabilities as existing repository-level MCP configurations. Similar to repository-level configurations, secrets and variables can be sourced from Agents secrets and variables for Copilot cloud agent, configured at either the organization or repository level. The syntax for referencing these values has been expanded to support common patterns used in GitHub Actions and Claude Code.
+Custom agent MCP configuration supports the same environment variable and secret replacement capabilities as existing repository-level MCP configurations. Similar to repository-level configurations, secrets and variables can be sourced from Agents secrets and variables for Copilot in the cloud, configured at either the organization or repository level. The syntax for referencing these values has been expanded to support common patterns used in GitHub Actions and Claude Code.
 
 Both the repository-level MCP JSON configuration and the custom agent YAML configuration support the following syntax patterns:
 

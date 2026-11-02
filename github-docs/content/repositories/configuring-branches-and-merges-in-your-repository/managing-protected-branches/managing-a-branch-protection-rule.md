@@ -58,8 +58,13 @@ When you create a branch rule, the branch you specify doesn't have to exist yet 
 1. Optionally, select **Require conversation resolution before merging**.
 1. Optionally, select **Require signed commits**.
 1. Optionally, select **Require linear history**.
-1. Optionally, to merge pull requests using a merge queue, select **Require merge queue**. 
+1. Optionally, to merge pull requests using a merge queue, select **Require merge queue**.
+
+   > [!NOTE]
+   > Pull request merge queues are available in any public repository owned by an organization, or in private repositories owned by organizations using GitHub Enterprise Cloud. See [Githubs Plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans).
+{% elsif ghes %}Pull request merge queues are available in any organization-owned repository on GitHub Enterprise Server. 
 For more information about merge queues, see [Managing A Merge Queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue).
+
 
 1. Optionally, to choose which environments the changes must be successfully deployed to before merging, select **Require deployments to succeed before merging**, then select the environments.
 1. Optionally, make the branch read-only.

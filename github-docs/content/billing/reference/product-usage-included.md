@@ -22,12 +22,12 @@ The table below shows the usage available in each plan. When you exceed these am
     <td>50 GB</td>
   </tr>
   <tr>
-    <th><b>Minutes (per month)</b></th>
-    <td>2,000</td>
-    <td>3,000</td>
-    <td>2,000</td>
-    <td>3,000</td>
-    <td>50,000</td>
+    <th><b>Included compute usage (per month)</b></th>
+    <td>$12 USD</td>
+    <td>$18 USD</td>
+    <td>$12 USD</td>
+    <td>$18 USD</td>
+    <td>$300 USD</td>
   </tr>
    <tr>
     <th rowspan="2" scope="rowgroup"><b>GitHub Codespaces</b></th>
@@ -84,5 +84,12 @@ The table below shows the usage available in each plan. When you exceed these am
 
 > [!TIP]
 > You can receive email notifications when your included usage reaches 90% and 100% during a billing period. To opt in, see [Set Up Budgets](https://docs.github.com/en/billing/how-tos/set-up-budgets#managing-included-usage-alerts).
+
+The included compute usage is expressed as a monetary amount, not a quantity of minutes or other usage units. On all plans, the calculated cost of the following usage can draw from this amount:
+
+* Standard GitHub-hosted runners for private or internal repositories.
+* Cloud sandbox compute and memory.
+
+Where larger runners are available, their cost can also draw from the included compute usage. This applies to billing accounts on GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
 
 For information about included requests for GitHub Copilot plans, see [Plans](https://docs.github.com/en/copilot/get-started/plans).

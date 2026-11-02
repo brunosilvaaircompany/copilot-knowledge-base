@@ -41,6 +41,17 @@ These models are labeled as "Delegate to Default Policy" in your model settings.
 
 If you are not happy with any of these settings, you can disable specific models, make them available only for specific organizations or teams, or disable the "Default availability" policy so unconfigured models default to disabled.
 
+## Configuring models available for Copilot Fusion
+
+Configure which models you want available for Copilot Fusion. See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion). Models enabled here will be available to a user through Copilot Fusion, but only if your other model policies allow that user to use the model. 
+
+1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
+
+1. In the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
+
+1. Under **Models**, click **Configure Copilot Fusion models**.
+1. Select a status for each model in the list. 
+
 ## Granting access to specific organizations (default)
 
 This section applies if you are **not** opted in to the enterprise teams model access preview.

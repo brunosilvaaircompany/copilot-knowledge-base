@@ -13,7 +13,7 @@ The following clients are supported, although not every client supports every pr
 * Copilot CLI
 * VS Code
 * The GitHub Copilot app
-* Copilot cloud agent
+* Copilot in the cloud
 * JetBrains IDEs
 
 For a full reference of supported keys, see [Enterprise Managed Settings](https://docs.github.com/en/copilot/reference/enterprise-administrators/enterprise-managed-settings).

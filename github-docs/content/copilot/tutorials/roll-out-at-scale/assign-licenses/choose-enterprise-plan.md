@@ -2,34 +2,33 @@
 
 ## Introduction
 
-When you adopt GitHub Copilot in a company, you will sign up to a Copilot plan designed for businesses. These plans allow you to grant access to users and meet security requirements with policies and audit logs.
+GitHub Copilot plans let enterprises grant access to users and meet security requirements with policies and audit logs. To choose a plan, compare the cost of access and expected usage alongside the capabilities your company needs.
 
 To identify which plan is right for your company:
 
 1. Define the overall goals you are hoping to achieve with your Copilot rollout. Think about downstream goals such as reducing security debt, as opposed to earlier success indicators such as developer satisfaction or feature adoption.
-1. Understand the benefits of Copilot Business and Copilot Enterprise, including included AI credits.
-1. Choose the Copilot plan with the allowances and features that will help you meet your goals.
-
-   >[!TIP] When you subscribe to Copilot at the enterprise level, you can choose a plan individually for each organization in your enterprise. This allows you to evaluate the benefits of Copilot Enterprise with a pilot program or enable it in the organizations where it will have the most impact.
-
-This article explains the available plans and provides examples for how Copilot Enterprise can help you achieve specific business goals.
+1. Compare plan capabilities, access charges, and included AI credits using the options below.
+1. Estimate total monthly costs for your users and expected consumption, then choose a plan and spending controls that support your goals.
 
 ## Plans and AI credits
 
-GitHub offers two Copilot plans for customers on GitHub Enterprise Cloud:
+The plans differ in how they charge for access and metered usage:
 
 * **Copilot Business** ($19 USD per user per month): includes 1,900 AI credits per user and most Copilot features in IDEs and on GitHub.
 * **Copilot Enterprise** ($39 USD per user per month): includes 3,900 AI credits per user, and often allows earlier access to new features and models.
+* **Copilot access** (eligible enterprises only): provides the same feature and model eligibility as Copilot Enterprise, subject to administrator policies and spending controls. Access is $0 incremental through GitHub Enterprise Cloud for licensed users, or $10 USD per user per month as Copilot Standalone without a GitHub Enterprise Cloud license. Neither option includes credits, so metered usage is billed from the first use.
 
-For a full comparison, see our [plans page](https://github.com/features/copilot/plans?ref_product=copilot&ref_type=purchase&ref_style=text).
+To check eligibility for Copilot access, see [Whats Changing With GitHub Enterprise And Copilot](https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot).
 
-AI credits are consumed by advanced Copilot features and models, including AI agents. Each plan's included AI credits are pooled across your enterprise, so heavier users can draw from lighter users' unused portions. By giving members access to more AI credits, you can scale your company with AI agents and drive real business outcomes.
+With Copilot Business and Copilot Enterprise, an enterprise owner can choose a plan for each organization. You can pilot Copilot Enterprise or enable it in organizations where its capabilities will have the most impact.
 
-By default, usage can continue beyond the included pool, with additional usage charged at $0.01 USD per AI credit. You can control this with budget controls. See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
+AI credits are consumed by metered features and models, including AI agents. On plans with an included allowance, credits are pooled across your enterprise so heavier users can draw from lighter users' unused portions. By default, usage can continue beyond that pool with additional charges. On every plan, budget controls let you govern consumption and metered spending. See [Billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing).
 
 ## How does Copilot Enterprise support business goals?
 
 The following table shows examples of goals your company might set for a Copilot rollout, and how AI credits and other Copilot Enterprise features can help you achieve those goals.
+
+The Copilot access plan provides the same feature eligibility, but all credit consumption is metered rather than drawing from an included pool.
 
 | Goal | Problem to solve | How Copilot Enterprise helps |
 | ---- | ---------------- | --------------------------------------------------------------- |
@@ -42,5 +41,7 @@ The following table shows examples of goals your company might set for a Copilot
 We recommend considering the included AI credits in the Copilot Business plan as a baseline, not a limit. Developers using agentic workflows including features like agent mode, Copilot cloud agent, and Copilot code review are likely to consume beyond the included amount.
 
 If your company is gaining value from agentic workflows, you will likely want to make more AI credits available to developers. Depending on consumption patterns, the most cost effective approach is either to upgrade users to Copilot Enterprise or to allow additional usage beyond the included pool with appropriate budget controls.
+
+If your enterprise is eligible for Copilot access, also compare its access and metered usage costs with the full cost of your current plan. Include usage currently covered by your pool, not just overage charges.
 
 To review your enterprise's consumption, see the AI usage dashboard in your enterprise billing settings. For guidance on managing spend, see [Optimizing Your Budget Configuration](https://docs.github.com/en/copilot/tutorials/budgets/optimizing-your-budget-configuration).

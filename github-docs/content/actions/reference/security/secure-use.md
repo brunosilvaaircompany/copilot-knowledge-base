@@ -233,7 +233,7 @@ SBOMs are available for Ubuntu, Windows, and macOS runner images maintained by G
 
 #### Denying access to hosts
 
-GitHub-hosted runners are provisioned with an `etc/hosts` file that blocks network access to various cryptocurrency mining pools and malicious sites. Hosts such as MiningMadness.com and cpu-pool.com are rerouted to localhost so that they do not present a significant security risk.
+GitHub-hosted runners are provisioned with an `/etc/hosts` file that blocks network access to various cryptocurrency mining pools and malicious sites. Hosts such as MiningMadness.com and cpu-pool.com are rerouted to localhost so that they do not present a significant security risk.
  For more information, see [GitHub Hosted Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners).
 
 {% endif %}

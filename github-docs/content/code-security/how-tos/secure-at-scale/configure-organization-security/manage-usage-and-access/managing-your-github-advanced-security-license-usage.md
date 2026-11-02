@@ -31,8 +31,12 @@ Before you can effectively manage your paid use of Advanced Security, you should
 
 The simplest way to turn off all Secret Protection or Code Security features for one or more repositories is to create a security configuration where the product is disabled at the top level. You can apply this custom configuration to repositories where you want to turn off paid features.
 
-> [!TIP]
-> Ensure that you give your custom configuration a very clear name, for example: "No Code Security" or "Secret Protection and Supply chain only" to avoid confusion.
+To keep Code Security disabled, set "Default setup" and "Prevent direct alert dismissals" in the "Code scanning" section to **Disabled**. You can leave "Dependency graph" and "Dependabot alerts" enabled because they are included in all plans.
+
+> [!WARNING]
+> Changing "Prevent direct alert dismissals" in the "Code scanning" section to **Not set** automatically switches Code Security to **Enabled**. To avoid unintentionally enabling paid features, organization administrators must keep "Default setup" and "Prevent direct alert dismissals" in this section **Disabled** and recheck the top-level Code Security setting before saving and applying the configuration.
+
+Ensure that you give your custom configuration a very clear name, for example: "No Code Security" or "Secret Protection and Supply chain only" to avoid confusion.
 
 For more information, see [Create Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/create-custom-configuration) and [Apply Custom Configuration](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/apply-custom-configuration).
 

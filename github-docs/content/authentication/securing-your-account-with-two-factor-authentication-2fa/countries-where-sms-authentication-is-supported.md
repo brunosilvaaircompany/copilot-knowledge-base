@@ -24,7 +24,6 @@ If your country or region is not on this list, then we aren't currently able to 
 <li>Brunei</li>
 <li>Bulgaria</li>
 <li>Burundi</li>
-<li>Cambodia</li>
 <li>Canada</li>
 <li>Cape Verde</li>
 <li>Cayman Islands</li>
@@ -45,7 +44,6 @@ If your country or region is not on this list, then we aren't currently able to 
 <li>Gambia</li>
 <li>Georgia</li>
 <li>Germany</li>
-<li>Ghana</li>
 <li>Gibraltar</li>
 <li>Greece</li>
 <li>Guatemala</li>

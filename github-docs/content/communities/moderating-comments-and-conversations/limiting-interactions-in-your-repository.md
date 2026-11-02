@@ -38,6 +38,18 @@ This setting helps maintainers manage contribution volume by preventing users fr
 
 You can choose whether draft pull requests count toward a user's limit. If you enable **Count draft pull requests toward the limit**, both draft and non-draft open pull requests count toward the maximum. Otherwise, only open, non-draft pull requests count.
 
+For repositories owned by an organization, repository-level pull request limit settings override the organization's settings.
+
+### Automatically exempting established contributors
+
+You can automatically exempt established contributors from pull request limits by enabling either or both of these rules:
+
+* **Account age**: Exempt contributors whose accounts are at least the minimum age you set, in days.
+* **Merged pull requests**: Exempt contributors who have had at least the number of pull requests you set merged in the repository.
+
+A contributor is exempt if they meet at least one enabled rule. If you enable both rules, contributors do not need to meet both thresholds.
+
+
 ### Adding trusted contributors to the bypass list
 
 Rather than granting full collaborator access, you can add trusted contributors to a bypass list, allowing them to exceed the pull request limit while keeping their permissions otherwise unchanged. This bypass is ideal for regular external contributors who routinely open multiple pull requests but do not need the additional permissions that come with collaborator access.
@@ -50,7 +62,9 @@ To configure the pull request limit, navigate to the **Interaction limits** sett
 
 1. Under **Pull request limits**, select the maximum number of concurrent open pull requests allowed for users without write access.
 1. Optionally, select **Count draft pull requests toward the limit** to include draft pull requests in the maximum.
-1. Optionally, under **Bypass list**, search for and select the users you want to allow to bypass the pull request limit.
+1. Optionally, enable **Exempt users based on account age** and set the minimum account age in days.
+1. Optionally, enable **Exempt users based on merged pull requests** and set the minimum number of pull requests a contributor must have had merged in the repository.
+1. Optionally, under **Exemption list**, search for and select the users you want to allow to exempt the pull request limit.
 
 
 

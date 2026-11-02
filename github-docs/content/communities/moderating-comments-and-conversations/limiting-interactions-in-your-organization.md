@@ -24,7 +24,7 @@ Organization owners and moderators can also block users for a specific amount of
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.
 
-1. Select an organization by clicking on it.
+1. Select an organization by clicking it.
 1. Under your organization name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
 
    ![Screenshot of the tabs in an organization's profile. The "Settings" tab is outlined in dark orange.](/assets/images/help/discussions/org-settings-global-nav-update.png)
@@ -47,7 +47,17 @@ This setting helps maintainers manage contribution volume by preventing users fr
 
 You can choose whether draft pull requests count toward a user's limit. If you enable **Count draft pull requests toward the limit**, both draft and non-draft open pull requests count toward the maximum. Otherwise, only open, non-draft pull requests count.
 
-The organization-level limit takes precedence, but if a repository owned by your organization has its own pull request limit configured after the organization-level limit, the repository-level limit overrides the organization-level limit. See [Limiting Interactions In Your Repository](https://docs.github.com/en/communities/moderating-comments-and-conversations/limiting-interactions-in-your-repository#limiting-concurrent-open-pull-requests-for-users-without-write-access).
+Repository-level pull request limit settings override the organization's settings. See [Limiting Interactions In Your Repository](https://docs.github.com/en/communities/moderating-comments-and-conversations/limiting-interactions-in-your-repository#limiting-concurrent-open-pull-requests-for-users-without-write-access).
+
+### Automatically exempting established contributors
+
+You can automatically exempt established contributors from pull request limits by enabling either or both of these rules:
+
+* **Account age**: Exempt contributors whose accounts are at least the minimum age you set, in days.
+* **Merged pull requests**: Exempt contributors who have had at least the number of pull requests you set merged in the repository.
+
+A contributor is exempt if they meet at least one enabled rule. If you enable both rules, contributors do not need to meet both thresholds.
+
 
 ### Configuring the pull request limit
 
@@ -55,6 +65,8 @@ To configure the pull request limit, navigate to the **Interaction limits** sett
 
 1. Under **Pull request limits**, select the maximum number of concurrent open pull requests allowed for users without write access.
 1. Optionally, select **Count draft pull requests toward the limit** to include draft pull requests in the maximum.
+1. Optionally, enable **Exempt users based on account age** and set the minimum account age in days.
+1. Optionally, enable **Exempt users based on merged pull requests** and set the minimum number of merged pull requests required for exemption. A contributor's merged pull requests are counted separately for each repository.
 
 You can also use the REST API to configure the pull request limit. See [Orgs](https://docs.github.com/en/rest/interactions/orgs#update-pull-request-creation-cap-for-an-org).
 

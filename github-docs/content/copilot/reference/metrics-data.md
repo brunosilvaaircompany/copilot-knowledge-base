@@ -20,7 +20,7 @@ The following interactions count as activity:
 * Receiving a code suggestion in an IDE
 * Chatting with Copilot Chat in an IDE
 * Generating a pull request summary
-* Interacting with Copilot Chat in GitHub
+* Interacting with Copilot Chat on GitHub
 * Interacting with Copilot on a mobile device
 * Interacting with Copilot Chat for CLI
 
@@ -77,9 +77,8 @@ The activity report provides visibility into usage of all generally available (G
 
 ### Limitations
 
-There is a possibility that GitHub lacks consistent telemetry from some third party IDEs outside of VS Code (such as JetBrains and Xcode). Users should ensure they're running the latest version of their IDE.
+Telemetry from some third-party IDEs may be incomplete, particularly when users run older versions. For version requirements and troubleshooting guidance, see [Copilot Metrics](https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics).
 
-The activity report may exclude usage of GitHub Copilot features that are not yet generally available (GA). Currently, the following features are not fully recorded:
+The activity report may exclude usage of GitHub Copilot features that are not yet generally available (GA). Currently, the following feature is not fully recorded:
 
 * Copilot Spaces
-* Copilot Spark

@@ -54,16 +54,17 @@ In this section, you can learn how to:
 
 ### Allowing a tool for the first time
 
-The first time that Copilot needs to use a tool that may require approval—for example, `touch`, `chmod`, `node`, or `sed`
-—it will ask you whether you want to allow it to run. Whether you’re prompted can depend on the tool and how it’s being used (such as the arguments provided or whether the tool has been previously approved).
+In manual approval mode, Copilot asks you to approve tool requests that aren't already allowed—for example, `touch`, `chmod`, `node`, or `sed`
+. Whether you're prompted depends on the permissions in effect and how the tool is being used, such as its arguments or previous approvals.
 
+1. Start an interactive session by running `copilot`, then enter `/permissions manual`.
 1. Prompt Copilot to perform a task that requires a tool. For example:
 
-   ```shell
-   copilot -p "Create a new file called README.md with a project description"
+   ```copilot
+   Create a new file called README.md with a project description
    ```
 
-1. Choose from one of the three options:
+1. If the tool is not already allowed, choose from the approval options:
 
    * `1. Yes`
 
@@ -82,6 +83,8 @@ The first time that Copilot needs to use a tool that may require approval—for 
 ### Allowing tools to be used without manual approval
 
 You can use command-line options to designate tools that Copilot can use without asking for your approval.
+
+Alternatively, to reduce approval prompts without granting blanket permissions, enter `/permissions assisted` in an interactive session. With assisted permissions, a large language model assesses eligible permission requests and automatically approves those it judges to be safe. Existing permissions and enterprise rules still apply, and requests that still need your approval are put to you. For more information, see [Allowing Safe Commands](https://docs.github.com/en/copilot/concepts/customizations/allowing-safe-commands).
 
 #### Allowing all tools
 
@@ -256,7 +259,7 @@ This option combines:
 * `--allow-all-paths` (disable path verification).
 * `--allow-all-urls` (disables URL verification).
 
-During an interactive session, you can also enable all permissions with the `/allow-all` or `/yolo` slash commands.
+During an interactive session, you can also enable all permissions with the `/permissions allow-all` slash command, or its aliases `/allow-all` and `/yolo`.
 
 > [!NOTE] If you have a Copilot Business or Copilot Enterprise license, these commands may be blocked by an enterprise administrator.
 
@@ -265,7 +268,7 @@ During an interactive session, you can also enable all permissions with the `/al
 
 The various `--allow-all...` options save you from having to decide whether to allow Copilot to access individual tools, files, and URLs. However, using them widens the scope for Copilot to perform actions that you might not want it to—for example, altering files outside of the repository you are working in.
 
-To mitigate this risk, you can instruct the CLI to sandbox its commands (local sandboxing), or you can run the entire Copilot CLI session within a remote, sandboxed environment (cloud sandboxing). For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
+To mitigate this risk, you can instruct the CLI to sandbox its commands (local sandboxing), or you can run the entire Copilot CLI session in a cloud sandbox. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-and-local-sandboxes) and [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes).
 
 ## Disabling client-side telemetry
 
@@ -280,7 +283,7 @@ This option disables first-party telemetry sent by the CLI, including unrestrict
 The option does not disable GitHub's server-side collection of session data or telemetry. It also does not affect:
 
 * OpenTelemetry exports configured by you or your enterprise.
-* Telemetry sent to an application that uses the GitHub Copilot SDK, when that application explicitly enables telemetry forwarding as it connects to the CLI.
+* Telemetry sent to an application that uses the Copilot SDK, when that application explicitly enables telemetry forwarding as it connects to the CLI.
 
 ## Further reading
 

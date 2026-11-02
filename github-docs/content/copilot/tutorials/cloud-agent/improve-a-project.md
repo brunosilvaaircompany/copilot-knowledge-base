@@ -1,18 +1,18 @@
 # Using GitHub Copilot cloud agent to improve a project
 
 > [!NOTE]
-> For an introduction to Copilot cloud agent, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
+> For an introduction to Copilot in the cloud, see [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github).
 
 ## Introduction
 
 Modern development often starts with good intentions: a quick script, a prototype, maybe an action to automate one small thing. But as projects evolve, those early efforts can become brittle.
 
-This tutorial shows how you can use Copilot cloud agent to improve a mature project, without slowing down your momentum.
+This tutorial shows how you can use Copilot in the cloud to improve a mature project, without slowing down your momentum.
 
 In the following sections we'll:
 
 * Make sure that the project contains custom instructions that Copilot can use to tailor its responses to your project.
-* Make sure there's an environment setup file for Copilot cloud agent, so that it can get started on tasks more quickly by pre-installing your project’s dependencies.
+* Make sure there's an environment setup file for Copilot in the cloud, so that it can get started on tasks more quickly by pre-installing your project’s dependencies.
 * Get Copilot to look for improvements that could be made to the code, and then create issues for that work.
 * Delegate the coding work to Copilot by assigning it to an issue.
 
@@ -29,8 +29,8 @@ In the following sections we'll:
 
    For more information, see the section "Writing effective custom instructions" in [Custom Instructions](https://docs.github.com/en/copilot/concepts/prompting-and-context/custom-instructions#writing-effective-custom-instructions), and the library of examples at [Custom Instructions](https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions).
 
-1. If there are no custom instructions files in the repository, use Copilot cloud agent to create a `.github/copilot-instructions.md` file, by following the instructions in [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#asking-copilot-cloud-agent-to-generate-a-copilot-instructionsmd-file).
-1. Review the pull request that Copilot cloud agent creates. Check that the `.github/copilot-instructions.md` file provides Copilot with all of the information it needs to know to work on this project.
+1. If there are no custom instructions files in the repository, use Copilot in the cloud to create a `.github/copilot-instructions.md` file, by following the instructions in [Add Repository Instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#asking-copilot-cloud-agent-to-generate-a-copilot-instructionsmd-file).
+1. Review the pull request that Copilot creates. Check that the `.github/copilot-instructions.md` file provides Copilot with all of the information it needs to know to work on this project.
 
    The file should include:
 
@@ -44,9 +44,9 @@ In the following sections we'll:
 
 ## 2. Check for an environment setup file
 
-A `copilot-setup-steps.yml` GitHub Actions workflow file can help Copilot cloud agent to get started on tasks more quickly by pre-installing the dependencies that are used by the project.
+A `copilot-setup-steps.yml` GitHub Actions workflow file can help Copilot to get started on tasks more quickly by pre-installing the dependencies that are used by the project.
 
-Creating this file is optional but is a good idea if you use Copilot cloud agent regularly in the repository.
+Creating this file is optional but is a good idea if you use Copilot regularly in the repository.
 
 1. In your repository on GitHub, check that the following file exists:
 
@@ -58,13 +58,13 @@ Creating this file is optional but is a good idea if you use Copilot cloud agent
    > A quick way to do this is to copy the above path, go to the main page of your repository and paste the path into the "Go to file" field.
 
 1. If the file exists, open it and check that the steps in the workflow install the correct dependencies for your project. After verifying this, you can skip the remaining steps in this section.
-1. If you don't already have a `copilot-setup-steps.yml` file, use the following steps to get Copilot cloud agent to create it for you.
+1. If you don't already have a `copilot-setup-steps.yml` file, use the following steps to get Copilot to create it for you.
 1. At the top of any page of your repository on the GitHub website, click **{% octicon "agent" aria-label="Open agents panel" %}**.
 1. Copy and paste the following prompt into the Agents dialog:
 
    
    ```text copy
-   Analyze this repository to understand the dependencies that need to be installed on the development environment to work on the code in this repository. Using this information, and the details about the `copilot-setup-steps.yml` file that are given in https://docs.github.com/copilot/how-tos/use-copilot-agents/cloud-agent/customize-the-agent-environment, add a `.github/workflows/copilot-setup-steps.yml` to this repository. This Actions workflow file should install, in the development environment for Copilot cloud agent, all of the dependencies necessary to work on the code in this repository. Make sure that the workflow job is named `copilot-setup-steps`, and that the workflow includes a `workflow_dispatch` trigger so that it can be run manually. Choose any other triggers to suit this repository; there's no need to run on both `push` and `pull_request`.
+   Analyze this repository to understand the dependencies that need to be installed on the development environment to work on the code in this repository. Using this information, and the details about the `copilot-setup-steps.yml` file that are given in https://docs.github.com/copilot/how-tos/use-copilot-agents/cloud-agent/customize-the-agent-environment, add a `.github/workflows/copilot-setup-steps.yml` to this repository. This Actions workflow file should install, in the development environment for Copilot in the cloud, all of the dependencies necessary to work on the code in this repository. Make sure that the workflow job is named `copilot-setup-steps`, and that the workflow includes a `workflow_dispatch` trigger so that it can be run manually. Choose any other triggers to suit this repository; there's no need to run on both `push` and `pull_request`.
    ```
    
 
@@ -173,7 +173,7 @@ Now that you have created issues, the next step is to delegate an issue to Copil
 
 ## Conclusion
 
-Copilot cloud agent can help you to improve the quality of code in any project, but it's particularly useful for reducing technical debt in a project that has grown organically over many months or years. By using Copilot cloud agent, you can make improvements that you might have struggled to find time for without an AI assistant working on your behalf.
+Copilot can help you to improve the quality of code in any project, but it's particularly useful for reducing technical debt in a project that has grown organically over many months or years. By using Copilot in the cloud, you can make improvements that you might have struggled to find time for without an AI assistant working on your behalf.
 
 Copilot doesn't replace you as a developer—you still need to be involved at every step of this process, specifying what you want Copilot to do and carefully reviewing the code it changes or adds—but it does allow you to implement improvements at the same time as you work on other important tasks.
 

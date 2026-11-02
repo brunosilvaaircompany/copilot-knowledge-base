@@ -46,7 +46,9 @@ After you add or change content exclusions, it can take up to 30 minutes to take
  For more information, see [Exclude Content From Copilot](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot#propagate-content-exclusion-changes-to-your-ide).
 
 > [!NOTE]
-> It's possible that Copilot may use semantic information from an excluded file if the information is provided by the IDE indirectly. Examples of such content include type information and hover-over definitions for symbols used in code, as well as general project properties such as build configuration information.
+> Content exclusion is a guardrail for the tools that GitHub controls. It is not guaranteed to be respected by third-party MCP servers.
+
+It's also possible that Copilot may use semantic information from an excluded file if the information is provided by the IDE indirectly. Examples of such content include type information and hover-over definitions for symbols used in code, as well as general project properties such as build configuration information.
 
 
 ## Error: "GitHub Copilot could not connect to server. Extension activation failed"

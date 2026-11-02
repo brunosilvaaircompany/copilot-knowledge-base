@@ -34,6 +34,28 @@ If you encounter issues when adding or updating a payment method, you can try th
 1. Try adding a new payment method.
 1. Contact GitHub Support or your customer representative for additional assistance.
 
+## Adding information to your receipts
+
+You can add contact or tax information to your personal account's or organization's receipts, such as your full business name, VAT/GST identification number, or address of record. This information is included on every receipt, regardless of the paid product purchased.
+
+For security reasons, do not include confidential financial information, such as credit card numbers.
+
+### Personal account receipts
+
+1. In the upper-right corner of any page on GitHub, click your profile picture, then click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**.
+
+1. In the "Access" section of the sidebar, click **{% octicon "credit-card" aria-hidden="true" aria-label="credit-card" %} Billing & Licensing**.
+1. From the list of "Billing & licensing" pages, click **Payment information**.
+1. To the right of "Additional information", click **Add information** and add your contact or tax information.
+
+### Organization receipts
+
+1. In the upper-right corner of any page on GitHub, click your profile picture.
+1. Click **Your organizations**, then next to the organization, click **Settings**.
+1. In the organization sidebar, click **{% octicon "credit-card" aria-hidden="true" aria-label="credit-card" %} Billing & Licensing**.
+1. From the list of "Billing & licensing" pages, click **Payment information**.
+1. To the right of "Additional information", click **Add information** and add your contact or tax information.
+
 ## Viewing payment history
 
 You can view your payment history, including the date, amount, and payment method. You can also download past payments.
@@ -42,6 +64,10 @@ You can view your payment history, including the date, amount, and payment metho
 1. Click **Payment history** to show details of payments.
 1. To view the receipt for a payment, click {% octicon "eye" aria-label="View receipt" %}.
 1. To download a receipt or invoice, click {% octicon "download" aria-label="Download" %} under "Receipt" or "Invoice".
+
+If an issued receipt or invoice has an incorrect or missing recipient name, company name, or address, contact [GitHub Support](https://support.github.com) for review and possible correction. This applies even when your saved billing information is correct.
+
+Follow Support's instructions to obtain any corrected copy. If a regenerated receipt or invoice is available in **Payment history**, download it using the steps above.
 
 ## Managing billing contacts
 

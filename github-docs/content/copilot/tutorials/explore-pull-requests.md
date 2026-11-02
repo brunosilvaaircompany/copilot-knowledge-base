@@ -87,7 +87,7 @@ You can ask Copilot to explain why a workflow has failed in a pull request, and 
 
 ## Ask about a pull request created by Copilot
 
-When you view a pull request created by Copilot cloud agent, you can ask Copilot about the work it did. Copilot retrieves the agent's session logs to explain what changed, what was validated, and why.
+When you view a pull request created by Copilot, you can ask Copilot about the work it did. Copilot retrieves the agent's session logs to explain what changed, what was validated, and why.
 
 ### Example prompts
 

@@ -64,7 +64,7 @@ Which types of repository custom instructions you can use (repository-wide, path
 ## About organization custom instructions
 
 > [!NOTE]
-> **Support:** Organization custom instructions are currently only supported for Copilot Chat on GitHub.com, Copilot code review on GitHub.com and Copilot cloud agent on GitHub.com.
+> **Support:** Organization custom instructions are currently supported for sessions running on the GitHub website (in cloud sandboxes or on GitHub Actions) and for Copilot code review. They are not supported in local client sessions.
 
 
 Organization owners can add instructions to tailor Copilot to the needs and preferences of their organization. These instructions are used for all members of the organization, regardless of whether they receive their Copilot subscription from that organization.
@@ -93,7 +93,7 @@ For Copilot Chat on GitHub.com, all relevant instructions are provided to Copilo
    1. **Agent instructions**, such as instructions in an `AGENTS.md` file
 1. **Organization custom instructions**
 
-Whenever possible, try to avoid providing conflicting sets of instructions. If you are concerned about response quality, you can temporarily disable repository instructions. See [Add Repository Instructions?Tool=Webui](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions?tool=webui#enabling-or-disabling-custom-instructions-for-copilot-code-review).
+Whenever possible, try to avoid providing conflicting sets of instructions. If you are concerned about response quality, you can temporarily disable repository instructions. See [Add Repository Instructions?Tool=Webui](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions?tool=webui).
 
 
 ## Using custom instructions

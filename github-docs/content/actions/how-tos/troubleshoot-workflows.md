@@ -150,8 +150,43 @@ Third-party threat intelligence services, IP reputation scanners, or firewall ve
 
 GitHub does not control third-party IP reputation lists and cannot comment on their accuracy or update frequency. To verify whether an IP address belongs to GitHub-hosted runners, check the IP ranges returned by the Meta API.
 
-If you have a security concern about a Microsoft-owned IP address, report it to the [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/report/).
+Report security concerns about an IP address to the infrastructure provider that owns it. For Microsoft-owned IP addresses, report concerns to the [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/report/).
 
+
+### Azure SDK authentication failures
+
+Applications using Azure SDK `DefaultAzureCredential` can fail to authenticate on runners in the multi-cloud compute pool, even when a preceding `azure/login` step succeeds.
+
+AWS EC2 and Azure expose their instance metadata services at the same address, `169.254.169.254`. Some Azure Identity SDKs interpret the EC2 metadata response as an Azure managed identity authentication failure. This stops the credential chain before it tries the Azure CLI session established by `azure/login`.
+
+The error can include:
+
+```text
+DefaultAzureCredential: failed to acquire a token.
+ManagedIdentityCredential authentication failed.
+GET http://169.254.169.254/metadata/identity/oauth2/token
+RESPONSE 401: 401 Unauthorized
+```
+
+If your application should use the Azure CLI session established by `azure/login`, select `AzureCLICredential` explicitly. For Go applications using the Azure Identity `azidentity` module version 1.11.0 or later, set `AZURE_TOKEN_CREDENTIALS` on the application step after a successful login:
+
+```yaml
+- name: Run application
+  env:
+    AZURE_TOKEN_CREDENTIALS: AzureCLICredential
+  run: ./application
+```
+
+Replace `./application` with the command that runs your application.
+
+Alternatively, use one of these approaches:
+
+* Construct `AzureCLICredential` directly in your application.
+* Fully configure environment or workload identity credentials, which are evaluated before managed identity.
+
+A successful `azure/login` step does not by itself configure the SDK's workload identity credential.
+
+Support for restricting `DefaultAzureCredential` varies by language and package version. For the Go configuration and credential order, see [Credential chains in the Azure Identity library for Go](https://learn.microsoft.com/en-us/azure/developer/go/sdk/authentication/credential-chains). For other languages, consult the documentation for your application's Azure Identity SDK version.
 
 
 
@@ -202,6 +237,8 @@ If your GitHub account is configured with an IP allowlist, workflows will fail i
 
 
 For information on GitHub's IP addresses, such as those used by GitHub-hosted runners, see [About Githubs Ip Addresses](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses).
+
+For runners using multi-cloud compute, policies that allow only Azure or Microsoft-owned IP ranges can block connections or authentication, including through Microsoft Entra Conditional Access. Keep network policies in sync with all published runner IP ranges. See [IP addresses](/actions/reference/runners/github-hosted-runners#ip-addresses).
 
 Static IP addresses are available for use with GitHub-hosted larger runners. See [Manage Larger Runners](https://docs.github.com/en/actions/how-tos/manage-runners/larger-runners/manage-larger-runners) for more information.
 

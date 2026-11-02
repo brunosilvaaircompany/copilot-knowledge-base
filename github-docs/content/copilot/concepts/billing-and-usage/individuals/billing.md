@@ -68,12 +68,13 @@ More complex interactions consume more of your usage allowance. The main factors
 * **Agentic features**: Features like agent mode and Copilot cloud agent can involve multiple model calls within a single task. A complex agentic session working across a large codebase will consume significantly more usage than a quick question in chat.
 * **Model choice**: Different models have different costs per token. More capable models designed for complex reasoning cost more than lighter models suited to quick tasks. Switching to a less expensive model is one way to extend your usage allowance.
 
-> [!NOTE] If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, Copilot CLI, the GitHub Copilot app, or Copilot cloud agent. 
+
+> [!NOTE]
+> Through November 30, 2026, users on paid Copilot plans receive a 30% discount on model costs when using Copilot Fusion.
 
 
-> [!NOTE] 
-> If you are on the Copilot Max plan, you'll receive a 30% discount through October 28, 2026 while using auto model selection. 
 
+> [!NOTE] If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, or Copilot cloud agent. 
 
 
 For guidance on how to optimize your usage and reduce spend, including how to set session limits to cap spend for agent tasks, see [Optimize Ai Usage](https://docs.github.com/en/copilot/tutorials/optimize-ai-usage).
@@ -95,7 +96,7 @@ To set up a budget for GitHub AI Credits, see [Set Up Budgets](https://docs.gith
 
 ## About changes to your Copilot plan
 
-If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat as part of a Copilot Business or Copilot Enterprise plan, your personal Copilot plan will be automatically canceled. You will receive a prorated refund for any remaining portion of your personal plan's current billing cycle. You will then be able to continue using Copilot according to the policies set by your company.
+If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat through Copilot Business, Copilot Enterprise, or Copilot access, your personal Copilot plan will be automatically canceled. This includes Copilot access through GitHub Enterprise Cloud or as Copilot Standalone. You will receive a prorated refund for any remaining portion of your personal plan's current billing cycle. You will then be able to continue using Copilot according to the policies set by your company.
 
 
 You can cancel your Copilot plan at any time. The cancellation will take effect at the end of your current billing cycle. See [View And Change Your Copilot Plan](https://docs.github.com/en/copilot/how-tos/manage-your-account/view-and-change-your-copilot-plan).

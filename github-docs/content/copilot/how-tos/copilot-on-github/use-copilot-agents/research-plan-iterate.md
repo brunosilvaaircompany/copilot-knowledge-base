@@ -1,6 +1,6 @@
-# Research, plan, and iterate on code changes with Copilot cloud agent
+# Research, plan, and iterate on code changes with Copilot
 
-Copilot cloud agent lets you:
+Copilot lets you:
 
 * **Research** a repository by asking Copilot questions.
 * **Plan** and refine an approach before Copilot makes changes.
@@ -8,7 +8,7 @@ Copilot cloud agent lets you:
 
 Sessions do not create pull requests automatically. To create one immediately, include that in your prompt—for example, "Create a pull request to ...".
 
-> [!NOTE] These capabilities are only available with Copilot cloud agent on GitHub.com, and in public preview for the Teams and Slack integrations. Other Cloud agent integrations (such as Azure Boards, JIRA, or Linear) only support creating a pull request directly.
+> [!NOTE] These capabilities are only available with Copilot on GitHub.com, and in the Teams and Slack integrations. Other Cloud agent integrations (such as Azure Boards, JIRA, or Linear) only support creating a pull request directly.
 
 ## Perform deep research
 

@@ -37,7 +37,7 @@ The following table lists specific domains required for Copilot. If you have alr
 | `https://*.githubcopilot.com/*`                             | API service for Copilot suggestions. Allows access to authorized users regardless of Copilot plan. Do not add this URL to your allowlist if you are using subscription-based network routing. For more information on subscription-based network routing, see [Manage Network Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access). | `*.githubcopilot.com` |
 | `https://*.individual.githubcopilot.com`                    | API service for Copilot suggestions. Allows access to authorized users via a Copilot Individual plan. Do not add this URL to your allowlist if you are using subscription-based network routing. | Not included |
 | `https://*.business.githubcopilot.com`                      | API service for Copilot suggestions. Allows access to authorized users via a Copilot Business plan. Do not add this URL to your allowlist if you want to use subscription-based network routing to block users from using Copilot Business on your network. | Not included |
-| `https://*.enterprise.githubcopilot.com`                    | API service for Copilot suggestions. Allows access to authorized users via a Copilot Enterprise plan. Do not add this URL to your allowlist if you want to use subscription-based network routing to block users from using Copilot Enterprise on your network. | Not included |
+| `https://*.enterprise.githubcopilot.com`                    | API service for Copilot suggestions. Allows access to authorized users via a Copilot Enterprise plan or the Copilot access billing model. Blocking this URL blocks access through both billing models. | Not included |
 | `https://copilot-reports.github.com`                        | Copilot usage metrics report downloads | `*.github.com` |
 | `https://copilot-reports-*.b01.azurefd.net`                 | Copilot usage metrics report downloads (fallback). Required for fallback scenarios where downloads bypass the custom domain and are served from an Azure Front Door CDN. | Not included |
 | `https://usagereports*.blob.core.windows.net`               | Copilot usage metrics report downloads (fallback). Required for fallback scenarios where downloads bypass the Azure Front Door CDN and are served directly from Azure Blob Storage. | Not included |
@@ -79,9 +79,11 @@ Voice features in GitHub Copilot CLI and the GitHub Copilot app use Foundry Loca
 | `https://*.api.azureml.ms`                     | Regional model catalog endpoints |
 | `https://amlwlrt4*.blob.core.windows.net`      | Model downloads from regional Azure Blob Storage. The `amlwlrt4*` wildcard matches the regional Azure Blob Storage accounts that Foundry Local voice features use to download models. The specific storage account depends on the Azure region closest to the user. |
 
-## Copilot cloud agent recommended allowlist
+<a name="copilot-cloud-agent-recommended-allowlist"></a>
 
-The Copilot cloud agent includes a built-in firewall with a recommended allowlist that is enabled by default. The recommended allowlist allows access to:
+## Copilot in the cloud recommended allowlist
+
+The Copilot in the cloud includes a built-in firewall with a recommended allowlist that is enabled by default. The recommended allowlist allows access to:
 
 * Common operating system package repositories (for example, Debian, Ubuntu, Red Hat).
 * Common container registries (for example, Docker Hub, Azure Container Registry, AWS Elastic Container Registry).
@@ -89,7 +91,7 @@ The Copilot cloud agent includes a built-in firewall with a recommended allowlis
 * Common certificate authorities (to allow SSL certificates to be validated).
 * Hosts used to download web browsers for the Playwright MCP server.
 
-For more information about configuring the Copilot cloud agent firewall, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
+For more information about configuring the Copilot in the cloud firewall, see [Customize The Firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall).
 
 The allowlist allows access to the following hosts:
 

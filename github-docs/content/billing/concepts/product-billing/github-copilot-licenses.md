@@ -10,10 +10,18 @@ Copilot licenses are required for each user who uses Copilot. Licenses are avail
 |-------------------|-------------------------------------------------------------------------|
 | **Personal accounts** | <ul><li>Copilot Pro: $10 USD per calendar month.</li><li>Copilot Pro+: $39 USD per calendar month.</li><li>Copilot Max: $100 USD per calendar month.</li><li>Copilot Student: access to Copilot premium features at no cost.</li><li>Copilot Free: limited access to Copilot features at no cost.</li></ul> |
 | **Organizations** | Copilot Business: $19 USD per user per month (billed monthly). |
-| **Enterprises**   | Choose Copilot Business or Copilot Enterprise, or mix them across organizations. Both are billed monthly, pricing varies. |
+| **Enterprises**   | Two licensing models are available. See [Enterprise licensing models](#enterprise-licensing-models). |
 
-> [!NOTE] If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat as part of a Copilot Business or Copilot Enterprise plan, your personal Copilot plan will be automatically canceled. You will receive a prorated refund for any remaining portion of your personal plan's current billing cycle. You will then be able to continue using Copilot according to the policies set by your company.
+> [!NOTE] If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are then assigned a seat through Copilot Business, Copilot Enterprise, or Copilot access, your personal Copilot plan will be automatically canceled. This includes Copilot access through GitHub Enterprise Cloud or as Copilot Standalone. You will receive a prorated refund for any remaining portion of your personal plan's current billing cycle. You will then be able to continue using Copilot according to the policies set by your company.
 
+
+### Enterprise licensing models
+
+Most enterprises already using Copilot have Copilot Business or Copilot Enterprise. These plans charge a monthly fee per assigned seat and include a pooled allowance of AI credits.
+
+The Copilot access plan is rolling out to eligible enterprises. It provides Copilot through GitHub Enterprise Cloud with no Copilot seat charge, or as Copilot Standalone for $10 USD per user per month without a GitHub Enterprise Cloud license. It has no included usage allowance. Existing plans remain supported, and transitioning is voluntary.
+
+For eligibility, pricing, and a comparison of the models, see [Whats Changing With GitHub Enterprise And Copilot](https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot).
 
 ## Free use of Copilot
 
@@ -46,9 +54,8 @@ For details on billing and proration, see [Billing](https://docs.github.com/en/c
 ### Organizations and enterprises
 
 * A seat is a license for one user.
-* Organizations and enterprises are billed for the number of assigned seats at the end of each monthly billing cycle.
-* If a user has seats in multiple organizations within the same enterprise, the enterprise is only billed once per cycle.
-* If both a Copilot Business and a Copilot Enterprise seat are assigned, only the enterprise seat is billed.
+* Under the Copilot access plan, enterprise owners assign seats, even when access is included through GitHub Enterprise Cloud.
+* With Copilot Business and Copilot Enterprise, organizations and enterprises are billed for assigned seats each monthly billing cycle. If a user has seats in multiple organizations within the same enterprise, the enterprise is only billed once per cycle. If both plans are assigned, only the Copilot Enterprise seat is billed.
 
 For more information about seat assignment, see [Seat Assignment](https://docs.github.com/en/copilot/reference/copilot-billing/seat-assignment).
 
@@ -56,7 +63,7 @@ For more information about seat assignment, see [Seat Assignment](https://docs.g
 
 Individual plans are tied to a single account and can’t include additional seats. To license multiple users, upgrade to an organizational plan.
 
-For **organizations and enterprises**:
+For **organizations and enterprises** on Copilot Business or Copilot Enterprise:
 
 * You can assign additional Copilot seats at any time.
 * Additional seats are billed immediately on a prorated basis for the rest of the current billing cycle.

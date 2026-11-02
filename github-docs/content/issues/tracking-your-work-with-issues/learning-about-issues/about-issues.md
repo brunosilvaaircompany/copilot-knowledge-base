@@ -9,6 +9,12 @@ Issues can be created in a variety of ways, so you can choose the most convenien
 You can add sub-issues to an issue to quickly break down larger pieces of work into smaller issues. Sub-issues add support for hierarchies of issues on GitHub by creating relationships between your issues. You can create multiple levels of sub-issues that accurately represent your project by breaking down tasks into exactly the amount of detail that you and your team require.
  See [Adding Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-sub-issues) and [Browsing Sub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/browsing-sub-issues).
 
+
+## About issue artifacts
+
+Issue artifacts keep plans, research, links, and other supporting content attached to an issue. Artifacts provide a durable place for people and agents to preserve context alongside the work. See [Using Artifacts With Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/using-artifacts-with-issues).
+
+
 ## About issue dependencies
 
 You can define blocking relationships between issues using issue dependencies. Issue dependencies let you identify issues that are blocked by, or blocking, other work. See [Creating Issue Dependencies](https://docs.github.com/en/free-pro-team@latest/issues/tracking-your-work-with-issues/using-issues/creating-issue-dependencies).

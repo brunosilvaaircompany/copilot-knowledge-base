@@ -563,7 +563,7 @@ Package manager | YAML value      | Supported versions |
 |  |
 | Nix flakes | `nix`            | Not applicable   |
 |  |
-| npm            | `npm`            |  v7, v8, v9, v10, v11   |
+| npm            | `npm`            | v7, v8, v9, v10, v11, v12 |
 | NuGet          | `nuget`          | <=6.12.0 |
 |  |
 | OpenTofu     | `opentofu`       | Not applicable     |
@@ -571,7 +571,7 @@ Package manager | YAML value      | Supported versions |
 | pip         | `pip`            | 26.1.1             |
 | pip-compile | `pip`            | 7.5.3            |
 | pipenv      | `pip`            | 2024.4.1      |
-| pnpm   | `npm`            | v7, v8, v9, v10   |
+| pnpm        | `npm` | v7, v8, v9, v10, v11, v12 |
 | poetry      | `pip`    | v2    |
 |  |
 | pre-commit | `pre-commit` | Not applicable |

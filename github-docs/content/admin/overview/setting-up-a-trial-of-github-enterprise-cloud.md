@@ -22,8 +22,7 @@ The 50,000 monthly GitHub Actions minutes included with a paid GitHub Enterprise
 ## Features not included in the trial
 
 * GitHub Codespaces
-* GitHub Copilot Enterprise
-* GitHub Copilot Business
+* GitHub Copilot
 * GitHub Sponsors
 * Paid GitHub Marketplace apps
 * GitHub Connect
@@ -32,6 +31,8 @@ The 50,000 monthly GitHub Actions minutes included with a paid GitHub Enterprise
 * Access to GitHub Enterprise Server. To test this, contact [GitHub's Sales team](https://github.com/enterprise/contact).
 
 If you invite an existing organization into your trial enterprise, **all of these features will be disabled**. If you remove the organization from the enterprise, the features will be re-enabled.
+
+To arrange a separate Copilot trial, contact [GitHub's Sales team](https://github.com/enterprise/contact) and confirm the trial terms with them.
 
 ## Do I need to provide a payment method?
 
@@ -61,6 +62,12 @@ You can end your trial at any time by purchasing GitHub Enterprise or canceling 
  days, your trial will expire.
 
 GitHub Enterprise trial accounts are automatically deleted 90 days after the trial period ends if the account has not been converted to a paid account.
+
+### If you convert to a paid enterprise
+
+Purchasing GitHub Enterprise ends the trial and starts your paid subscription.
+
+If you want Copilot access included with your paid GitHub Enterprise Cloud licenses, contact your GitHub or Microsoft account team before converting to confirm eligibility. See [Whats Changing With GitHub Enterprise And Copilot](https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot).
 
 ### If you cancel your trial
 

@@ -6,7 +6,7 @@ This guide will walk you through setting up the products in your GitHub Enterpri
 
 ### 1. Learn about the GitHub Enterprise Cloud trial
 
-For full details of what is included in the trial, and what happens during, and after the trial, see [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).
+For full details of the trial's features and what happens during the trial and when you convert to a paid enterprise, see [Setting Up A Trial Of GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).
 
 ### 2. Sign up for the trial
 

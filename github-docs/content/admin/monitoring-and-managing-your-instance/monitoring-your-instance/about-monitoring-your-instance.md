@@ -2,12 +2,17 @@
 
 ## Metrics
 
-OpenTelemetry metrics were introduced in GitHub Enterprise Server 3.18 and are the future foundation for monitoring your GitHub Enterprise Server instance.
-Collectd metrics will continue to be gathered by default, but we expect collectd metrics to be discontinued in a future release.
+OpenTelemetry metrics were introduced in GitHub Enterprise Server 3.18 and are the foundation for monitoring GitHub Enterprise Server instances.
+
+
+
+New installations of version 3.19 and later use OpenTelemetry metrics by default. On version 3.18, and on instances upgraded from earlier releases, collectd metrics are still gathered by default. Collectd is retired in version 3.23, and upgrading to 3.23 disables it. For migration guidance for instances that still use collectd, see [Migration Guidance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/migration-guidance).
+
+
 
 For more information about OpenTelemetry metrics, see [About Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/about-opentelemetry-metrics).
 
-For more information about Collectd metrics, see [About Collectd Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/collectd-metrics/about-collectd-metrics).
+For more information about collectd metrics, see [About Collectd Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/collectd-metrics/about-collectd-metrics).
 
 ## Dashboards
 

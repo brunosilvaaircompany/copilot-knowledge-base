@@ -1,6 +1,7 @@
 # Dynamic workflows
 
-> [!NOTE] This feature is in public preview and is subject to change.
+> [!NOTE]
+> This feature is in public preview and is subject to change.
 
 
 This article explains what dynamic workflows are and what they can do. For details of how to use them, see [Use Dynamic Workflows](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-dynamic-workflows).
@@ -46,7 +47,7 @@ In Copilot CLI, you can also run an existing dynamic workflow directly from your
 
 The command waits for the run to finish or stop before returning control to your shell. Use this approach to repeat a workflow with specific inputs, save its result, or run it from a script or CI/CD pipeline. For more information, see [Use Dynamic Workflows](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-dynamic-workflows#running-a-dynamic-workflow-from-the-command-line).
 
-You can also start a workflow through an extension's slash command, custom tool, or programmatic hook, or from other code that uses the GitHub Copilot SDK. In the Copilot app, an extension can provide a canvas—a custom interface—with controls to start the workflow. These alternatives depend on the extension and the client you're using.
+You can also start a workflow through an extension's slash command, custom tool, or programmatic hook, or from other code that uses the Copilot SDK. In the Copilot app, an extension can provide a canvas—a custom interface—with controls to start the workflow. These alternatives depend on the extension and the client you're using.
 
 For more information about canvases, see [Working With Canvas Extensions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions).
 

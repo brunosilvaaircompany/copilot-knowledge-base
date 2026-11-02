@@ -80,7 +80,18 @@ To get started with custom images, see [Use Custom Images](https://docs.github.c
 
 ## Cloud hosts used by GitHub-hosted runners
 
-GitHub hosts Linux and Windows runners on virtual machines in Microsoft Azure with the GitHub Actions runner application installed. The GitHub-hosted runner application is a fork of the Azure Pipelines Agent. Inbound ICMP packets are blocked for all Azure virtual machines, so ping or traceroute commands might not work. GitHub hosts macOS runners in Azure data centers.
+GitHub Actions uses a multi-cloud compute pool to help improve runner availability for eligible Linux jobs. These jobs can run on either Amazon Web Services (AWS) or Microsoft Azure.
+
+Multi-cloud compute is used for standard 2-core and 4-core Linux runners and compatible 2-core and 4-core larger runners without specialized configurations. It does not apply to Windows runners or runners with private networking or other specialized configurations. Jobs are automatically scheduled across available cloud providers.
+
+> [!NOTE] If you used GitHub-hosted Linux runners before multi-cloud compute was introduced, existing runner labels and workflow syntax remain unchanged.
+
+
+Eligible runners on GitHub Free, GitHub Pro, and GitHub Team automatically use multi-cloud compute. Enterprises on GitHub Enterprise Cloud can opt in. See [Enforcing Policies For GitHub Actions In Your Enterprise](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#enabling-multi-cloud-compute).
+
+If your workflows depend on network allowlists or Azure SDK credentials, running on a different cloud provider can cause connection or authentication failures. Review [IP address requirements](/actions/reference/runners/github-hosted-runners#ip-addresses) and [Azure SDK authentication troubleshooting](/actions/how-tos/troubleshoot-workflows#azure-sdk-authentication-failures).
+
+GitHub hosts Windows runners and Linux runners that don't use multi-cloud compute on virtual machines in Azure. Inbound ICMP packets are blocked for Azure virtual machines, so ping or traceroute commands might not work. GitHub hosts macOS runners in Azure data centers.
 
 ## Workflow continuity
 
@@ -89,9 +100,9 @@ If GitHub Actions services are temporarily unavailable, then a workflow run is d
 
 In addition, if the workflow run has been successfully queued, but has not been processed by a GitHub-hosted runner within 45 minutes, then the queued workflow run is discarded.
 
-## The `etc/hosts` file
+## The `/etc/hosts` file
 
-GitHub-hosted runners are provisioned with an `etc/hosts` file that blocks network access to various cryptocurrency mining pools and malicious sites. Hosts such as MiningMadness.com and cpu-pool.com are rerouted to localhost so that they do not present a significant security risk.
+GitHub-hosted runners are provisioned with an `/etc/hosts` file that blocks network access to various cryptocurrency mining pools and malicious sites. Hosts such as MiningMadness.com and cpu-pool.com are rerouted to localhost so that they do not present a significant security risk.
 
 
 {% endif %}

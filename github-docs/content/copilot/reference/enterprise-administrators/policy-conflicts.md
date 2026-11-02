@@ -25,13 +25,11 @@ Feature, model, and privacy settings for users are set according to the **least 
 | Suggestions matching public code (privacy policy) | Most restrictive organization | [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides#code-suggestions) |
 | Allow members without a Copilot license to use Copilot code review in GitHub.com | Most restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | Copilot can search the web | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
-| Copilot Chat in GitHub Mobile | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
+| Copilot in the cloud | Least restrictive organization | [Copilot On GitHub](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github) |
 | Copilot Chat in the IDE | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot Agent Mode in IDE Chat | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot code review | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
-| Copilot cloud agent | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | Spark | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
-| Copilot in GitHub.com | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot in GitHub Desktop | Least restrictive organization | [Chat](https://docs.github.com/en/copilot/responsible-use/chat) |
 | Copilot CLI | Least restrictive organization | [Agents](https://docs.github.com/en/copilot/responsible-use/agents) |
 | The GitHub Copilot app | Least restrictive organization | [GitHub Copilot App](https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app) |

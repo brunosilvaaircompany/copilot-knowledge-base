@@ -48,9 +48,9 @@ Usage of premium requests is tracked monthly and is based on the following facto
 
 ### Usage by Copilot cloud agent
 
-When you use Copilot cloud agent, including any Copilot custom agents, both **GitHub Actions minutes** and **premium requests** are consumed:
+When you use Copilot cloud agent, including any Copilot custom agents, you use both **GitHub Actions compute** and **premium requests**:
 
-* **GitHub Actions minutes** come from your account’s monthly allowance of free minutes for GitHub-hosted runners. This allowance is shared with all GitHub Actions workflows. See [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions#free-use-of-github-actions).
+* For **GitHub Actions compute**, the calculated runner cost draws from your account's monthly included compute usage. This included value is shared with other eligible GitHub Actions and cloud sandbox usage. See [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions#included-compute-usage-and-storage).
 * **Premium requests** come from the monthly allowance associated with your Copilot license. This allowance is shared with other features, such as Copilot Chat.
 
 Each cloud agent **session** consumes one premium request. A session begins when you:
@@ -58,7 +58,7 @@ Each cloud agent **session** consumes one premium request. A session begins when
 * Prompt Copilot to undertake a task.
 * Assign Copilot to an issue
 
-If you run out of free minutes or premium requests, and you have _not_ set up billing, a message is displayed explaining why Copilot cannot work on the task.
+If you use all your included compute usage or all your premium requests, and you have _not_ set up billing, a message is displayed explaining why Copilot cannot work on the task.
 
 Copilot cloud agent uses a dedicated Copilot cloud agent premium request SKU. This SKU still pulls from your monthly allowance of premium requests, but allows for more granular budget control and monitoring.
 
