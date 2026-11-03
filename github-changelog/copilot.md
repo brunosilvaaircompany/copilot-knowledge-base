@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-02 16:56 UTC  
+> Atualizado em: 2026-11-03 14:56 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -42,35 +42,5 @@ The post [GitHub Enterprise now includes access to GitHub Copilot](https://githu
 Agents should understand more than your codebase&#8212;they should understand how your team works. Your preferences, repository conventions, skills, and custom instructions guide how changes should be made, while code in&#8230;
 
 The post [GitHub intelligence puts your code, context, and history to work](https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Build shared workflows for your team with Copilot Automations](https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations)
-
-**Data:** 2026-10-28  **Categorias:** `Improvement`, `copilot`, `universe26`
-
-Shared Copilot Automations are rolling out, enabling teams to build and maintain AI-powered workflows together. With Copilot Automations, you can combine prompts, triggers, and tools to design workflows around the&#8230;
-
-The post [Build shared workflows for your team with Copilot Automations](https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [GitHub Copilot in VS Code, Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases)
-
-**Data:** 2026-10-28  **Categorias:** `Release`, `copilot`, `universe26`, `vs code`
-
-This year, we focused on giving you more choice in how you work with GitHub Copilot in Visual Studio Code: which models you use, where your agents run, and how&#8230;
-
-The post [GitHub Copilot in VS Code, Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Repository plugin defaults and enterprise plugin controls generally available](https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available)
-
-**Data:** 2026-10-28  **Categorias:** `Improvement`, `copilot`, `universe26`
-
-Repository plugin defaults and enterprise-managed plugin controls are now generally available in VS Code, Copilot CLI, and the GitHub Copilot app. Trusted repositories can install and enable default plugins for&#8230;
-
-The post [Repository plugin defaults and enterprise plugin controls generally available](https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

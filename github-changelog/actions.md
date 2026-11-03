@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-29 14:02 UTC  
+> Atualizado em: 2026-11-03 14:56 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [GitHub Agentic Workflows generally available](https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available)
+## [pull_request_target blocked by default December 2](https://github.blog/changelog/2026-11-02-pull_request_target-blocked-by-default-december-2)
 
-**Data:** 2026-10-28  **Categorias:** `Release`, `actions`, `copilot`, `universe26`
+**Data:** 2026-11-02  **Categorias:** `Retired`, `actions`, `application security`
 
-GitHub Agentic Workflows, an open source project from GitHub Next, is now generally available. With agentic workflows, you can automate reasoning-based tasks like issue triage, CI failure analysis, documentation updates,&#8230;
+Starting December 2, 2026, GitHub Actions will block pull_request_target events by default in all public repositories, unless an applicable Actions event policy explicitly allows them. Enforcement was previously scheduled for&#8230;
 
-The post [GitHub Agentic Workflows generally available](https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available) appeared first on [The GitHub Blog](https://github.blog).
+The post [pull_request_target blocked by default December 2](https://github.blog/changelog/2026-11-02-pull_request_target-blocked-by-default-december-2) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

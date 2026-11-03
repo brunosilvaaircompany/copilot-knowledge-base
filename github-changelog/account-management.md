@@ -1,36 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-28 13:55 UTC  
+> Atualizado em: 2026-11-03 14:56 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Usage metrics API adds usage from tools like OpenCode](https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode)
+## [GitHub Desktop adds short-lived authentication tokens](https://github.blog/changelog/2026-11-02-github-desktop-adds-short-lived-authentication-tokens)
 
-**Data:** 2026-10-23  **Categorias:** `Improvement`, `account management`, `copilot`, `enterprise management tools`
+**Data:** 2026-11-03  **Categorias:** `Improvement`, `account management`, `application security`, `client apps`
 
-The Copilot usage metrics API now reports model usage from more of the tools your developers use with Copilot, including tools like OpenCode that weren&#8217;t previously captured in your reports.&#8230;
+When you sign in to GitHub Desktop 3.6.10 or later, eligible accounts can now use short-lived, automatically refreshing authentication tokens. Short-lived access tokens reduce how long a leaked token can&#8230;
 
-The post [Usage metrics API adds usage from tools like OpenCode](https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [EMU deletions fix](https://github.blog/changelog/2026-10-23-emu-deletions-fix)
-
-**Data:** 2026-10-23  **Categorias:** `Improvement`, `account management`
-
-Between June 1 and June 13, 2026, some Enterprise Managed User accounts that were deprovisioned through SCIM were incorrectly deleted instead of being suspended and obfuscated as expected. As a&#8230;
-
-The post [EMU deletions fix](https://github.blog/changelog/2026-10-23-emu-deletions-fix) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Custom skills, agents, and MCP servers in usage metrics API](https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api)
-
-**Data:** 2026-10-22  **Categorias:** `Improvement`, `account management`, `copilot`, `enterprise management tools`
-
-Copilot usage metrics now show the names of the skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins that your organization creates, instead of grouping them under&#8230;
-
-The post [Custom skills, agents, and MCP servers in usage metrics API](https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Desktop adds short-lived authentication tokens](https://github.blog/changelog/2026-11-02-github-desktop-adds-short-lived-authentication-tokens) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
