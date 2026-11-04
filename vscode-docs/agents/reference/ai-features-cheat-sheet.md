@@ -21,9 +21,10 @@ New to agents? [Complete your first task with an agent](../quickstart.md). Avail
 | Make a focused edit | [Inline chat](../../chat/inline-chat.md) | Select code in the editor and describe the change. |
 | Get help while typing and editing | [Inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions) | Accept ghost text to complete code, or use next edit suggestions to navigate to and apply a related edit. |
 | Manage independent tasks across projects | [{% data variables.copilot.agents_window %}](../run/agents-window.md) | Select **Open in Agents** in the title bar, then start and monitor sessions. |
-| Delegate work that returns a pull request | [Cloud agents](../run/agent-harnesses.md#cloud-target) | Select **Cloud** from the **Session Target** UI control and choose a repository. |
+| Continue agent work across apps and devices | [GitHub Environments (Preview)](../run/remote-agent-sessions.md#github-environments-preview) | Register your development machine from **Remote Connections**, then connect from a supported {% data variables.product.prodname_copilot_short %} client. For {% data variables.product.prodname_vscode_shortname %}-specific access, use [SSH or dev tunnels](../run/remote-agent-sessions.md#choose-how-to-connect). |
+| Run and continue interactive work without keeping my machine online | [Cloud sessions](../run/cloud-sandbox-sessions.md) `feature(cloud-sessions)` | Turn on cloud session support, select **Cloud**, and choose a repository. Reopen the existing session to continue. |
 | Check a web app's behavior | [Browser tools](../run/browser-tools.md) | Ask the agent to open the app, test a user flow, and report the result. |
-| Repeat routine work on a schedule | [Automations](../run/automations.md) `feature(automations)` | Save a prompt and schedule in the {% data variables.copilot.agents_window %}. |
+| Repeat routine work on a schedule or repository event | [Automations](../run/automations.md) | Save a prompt and configuration in the {% data variables.copilot.agents_window %}. Check a manual run first. Cloud automations `feature(cloud-automations)` also support service-advertised issue and pull request triggers. |
 | Generate commit messages or rename symbols | [Smart actions](https://code.visualstudio.com/docs/editing/copilot-smart-actions) | Use the sparkle action or editor context menu without writing a prompt. |
 | Explore data or edit a notebook | [AI for notebooks](../guides/notebooks-with-ai.md) | In a **Local** agent session, ask the agent to create, edit, and run notebook cells. |
 | Find code or settings without exact keywords | [Semantic search](https://code.visualstudio.com/docs/editing/copilot-smart-actions#semantic-search-results-preview) (Preview) and [AI settings search](https://code.visualstudio.com/docs/editing/copilot-smart-actions#search-settings-with-ai) | Search by meaning in the Search view, or describe a setting in the Settings editor. |
@@ -54,7 +55,7 @@ To organize larger tasks:
 
 * Use [separate sessions and worktrees](../guides/delegate-two-tasks.md) for independent tasks that should not share code changes.
 * Use [subagents](../run/subagents.md) to delegate a focused part of a task in a separate context.
-* [Hand off a session](../run/agent-harnesses.md#continue-with-a-different-harness) when you want to continue work with another supported harness or the Cloud target.
+* [Hand off a session](../run/agent-harnesses.md#continue-with-a-different-harness) when you want to continue work with another supported harness. For cloud execution, [start a cloud session](../run/cloud-sandbox-sessions.md).
 
 <a name="add-context-to-your-prompt"></a>
 
@@ -95,7 +96,7 @@ To organize larger tasks:
 | Run a saved prompt on demand | [Prompt files](../../agent-customization/prompt-files.md), invoked as slash commands. |
 | Define a specialized role and tool selection | [Custom agents](../../agent-customization/custom-agents.md), such as a read-only reviewer. |
 | Connect a database, issue tracker, or other external system | [MCP servers](../../agent-customization/mcp-servers.md) that provide tools. |
-| Run a command at a specific agent lifecycle event | [Hooks](../../agent-customization/hooks.md), rather than relying on the model to follow an instruction. |
+| Run a command at a specific point in the agent's workflow | [Hooks](../../agent-customization/hooks.md), rather than relying on the model to follow an instruction. |
 | Install a packaged set of customizations | [Agent plugins](../../agent-customization/agent-plugins.md). |
 
 Use the [Agent Customizations editor](../../agent-customization/overview.md#agent-customizations-editor) to create and manage these options for your selected harness.

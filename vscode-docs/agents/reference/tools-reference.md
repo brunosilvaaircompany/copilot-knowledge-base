@@ -73,7 +73,7 @@ The following tables use Local harness tool reference names. Do not assume that 
 | `#todos` | Track task progress with a todo list. |
 | `#vscode/askQuestions` | Ask clarifying questions with interactive controls. |
 
-To coordinate work across sessions, see [Coordinate work across sessions](../run/sessions/manage-sessions.md#coordinate-work-across-sessions).
+To coordinate work across sessions, see [Coordinate work across sessions](../run/tools.md#coordinate-work-across-sessions).
 
 ### Configure projects and the editor
 

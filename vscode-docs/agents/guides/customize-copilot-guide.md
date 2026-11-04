@@ -6,6 +6,8 @@ This guide helps you configure the {% data variables.product.prodname_copilot %}
 
 To understand how the customization types differ and work together, see [Agent customization](../concepts/customization.md).
 
+For ready-made workflows and integrations, [browse customization marketplaces](../../agent-customization/overview.md#discover-and-install-existing-customizations-preview) before authoring your own. You can reuse an existing skill or plugin and still follow this guide to add repository-specific instructions.
+
 ## Prerequisites
 
 **NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
@@ -38,6 +40,8 @@ If the result already meets your success criterion, stop. You don't need a custo
 
 Start with a project instructions file for information that applies across your codebase. Focus the initial change on the observed problem and decisions the agent can't reliably infer from the repository. Each harness has its own discovery rules, so use its expected file name and location.
 
+In the prompts below, replace `<observed problem>` with the behavior you want to improve. For example, describe that the agent places HTTP handlers outside `src/api/routes` or uses a test command that doesn't work in your repository.
+
 1. Open the [Agent Customizations editor](../../agent-customization/overview.md#agent-customizations-editor) for the selected harness. In the {% data variables.copilot.chat_view %}, run **Chat: Open Customizations** from the Command Palette (`kb(workbench.action.showCommands)`).
 
 1. In the **Overview** section, enter the prompt for your harness below and press `kbstyle(Enter)` to submit it.
@@ -54,7 +58,7 @@ Start with a project instructions file for information that applies across your 
 Use `.github/copilot-instructions.md` at the repository root for project-wide instructions.
 
 ```prompt
-Analyze this codebase and create or update .github/copilot-instructions.md with project-wide instructions. Cover architecture, important directories, build and test commands, coding conventions, and requirements for completing a change. Preserve useful existing guidance, avoid duplication, and ask about anything you cannot determine from the repository.
+Create or update .github/copilot-instructions.md to address this repeated problem: <observed problem>. Inspect relevant code and commands, then add only the project-specific guidance needed to avoid the problem. Preserve useful existing guidance, avoid duplication, and ask about anything you cannot verify. Do not change application code.
 ```
 
 
@@ -65,7 +69,7 @@ Analyze this codebase and create or update .github/copilot-instructions.md with 
 Use `CLAUDE.md` at the repository root for project-wide instructions.
 
 ```prompt
-Analyze this codebase and create or update CLAUDE.md at the repository root with project-wide instructions. Cover architecture, important directories, build and test commands, coding conventions, and requirements for completing a change. Preserve useful existing guidance, avoid duplication, and ask about anything you cannot determine from the repository.
+Create or update CLAUDE.md at the repository root to address this repeated problem: <observed problem>. Inspect relevant code and commands, then add only the project-specific guidance needed to avoid the problem. Preserve useful existing guidance, avoid duplication, and ask about anything you cannot verify. Do not change application code.
 ```
 
 
@@ -76,7 +80,7 @@ Analyze this codebase and create or update CLAUDE.md at the repository root with
 Use `AGENTS.md` at the repository root for project-wide instructions.
 
 ```prompt
-Analyze this codebase and create or update AGENTS.md at the repository root with project-wide instructions. Cover architecture, important directories, build and test commands, coding conventions, and requirements for completing a change. Preserve useful existing guidance, avoid duplication, and ask about anything you cannot determine from the repository.
+Create or update AGENTS.md at the repository root to address this repeated problem: <observed problem>. Inspect relevant code and commands, then add only the project-specific guidance needed to avoid the problem. Preserve useful existing guidance, avoid duplication, and ask about anything you cannot verify. Do not change application code.
 ```
 
 
@@ -86,7 +90,7 @@ Analyze this codebase and create or update AGENTS.md at the repository root with
 
 ## Step 2: Review the generated instructions
 
-Treat generated instructions as a starting point. Check that they contain accurate, project-specific information:
+Treat generated instructions as a starting point. Check the categories relevant to your observed problem, rather than adding every category to the file:
 
 * **Observed problem**: include only the guidance needed to improve the baseline behavior.
 * **Architecture**: describe important directories, component boundaries, and where to add different types of code.
@@ -123,9 +127,19 @@ Confirm that the instructions apply, and then repeat the representative task fro
 
 1. In the Agent Customizations editor, select **Instructions** for your harness and confirm that the project instructions file is listed. This checks discovery, not whether the agent follows every instruction.
 1. Start a new chat with the same harness and repository so the comparison doesn't rely on guidance from the creation conversation.
-1. Expand **References** in the response and confirm that the expected instructions were included.
-1. Repeat the representative task with the same success criterion.
+1. Repeat the representative task with the same success criterion, without restating the saved instructions in the prompt.
+1. Check **References** in the response, where available, for the expected instructions. If inclusion is unclear, [inspect the request or instruction-loading activity](../agent-troubleshooting/chat-debug-view.md#instructions-or-a-prompt-file-are-not-applied).
 1. Compare the result with the baseline. Review file placement, project patterns, libraries, tool activity, commands, tests, and errors rather than relying on the agent's summary.
+
+For an API task, record the observed results against criteria such as these:
+
+| Criterion | Baseline observation | Successful result after adding instructions |
+|-----------|----------------------|---------------------------------------------|
+| Handler location | The agent creates a new top-level route directory. | The handler uses the existing `src/api/routes` directory. |
+| Data access | The handler contains database queries. | The handler uses the existing repository layer. |
+| Validation | The agent skips tests or runs the wrong command. | Tool activity shows the relevant tests and their results. |
+
+These are example criteria, not guaranteed model outputs. Compare equivalent tasks from the same starting code, using the same model and available tools.
 
 If the file is missing, invalid, or included but not followed, use the [agent customization troubleshooting guide](../agent-troubleshooting/troubleshooting.md) to identify the failure before adding more instructions.
 
@@ -166,7 +180,7 @@ applyTo: "**/*.tsx"
 
 The pattern matches `.tsx` files throughout the repository. Review the pattern and test the instructions by asking the agent to make a small change to a specific matching file.
 
-Learn more about [file-based instructions](../../agent-customization/custom-instructions.md#use-instructionsmd-files).
+Learn more about [targeted instructions](../../agent-customization/custom-instructions.md#apply-instructions-to-specific-files-or-tasks) and [pattern syntax](../reference/custom-instructions-reference.md#file-patterns).
 
 
 
@@ -304,7 +318,7 @@ After generating the agent:
 1. Ask it to research how a feature works. Check that it identifies relevant files, supports findings with evidence, and follows its configured role.
 1. Review any changes and tool activity rather than assuming the agent's name or instructions make it read-only.
 
-Learn more about [custom agents](../../agent-customization/custom-agents.md).
+For a complete test procedure and guidance on refining the agent's role, see [Verify your custom agent](../../agent-customization/custom-agents.md#verify-your-custom-agent).
 
 ## What you configured
 
@@ -377,4 +391,4 @@ Review and share any optional customization files through the same process as th
 
 * [Create and manage customizations](../../agent-customization/overview.md) from the Agent Customizations editor.
 * Add [MCP servers](../../agent-customization/mcp-servers.md) to connect the agent to external tools and services.
-* Set up [hooks](../../agent-customization/hooks.md) when an action must run at a specific agent lifecycle event.
+* Set up [hooks](../../agent-customization/hooks.md) when an action must run at a specific point in the agent's workflow, such as before a tool runs.

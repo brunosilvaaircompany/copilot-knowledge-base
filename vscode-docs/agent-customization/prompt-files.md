@@ -9,137 +9,46 @@ Use prompt files to:
 * Simplify prompting for common tasks, such as scaffolding a new component, running and fixing tests, or preparing a pull request
 * Override default behavior of a custom agent, such as creating a minimal implementation plan or generating mockups for API calls
 
-With **Local** selected, use the [Agent Customizations editor](overview.md#agent-customizations-editor) (Preview) to discover, create, and manage prompt files. Run **Chat: Open Customizations** from the Command Palette.
+With **Local** selected, use the [Agent Customizations editor](overview.md#agent-customizations-editor) to discover, create, and manage prompt files. Run **Chat: Open Customizations** from the Command Palette.
 
 **IMPORTANT:** Prompt files run only in **Local** harness sessions in the {% data variables.copilot.chat_view %}. For reusable workflows in other harnesses, create an [agent skill](agent-skills.md) or [convert an existing prompt file to a skill](migrate-customizations.md#convert-prompt-files-to-skills).
 
-## Prompt file locations
-
-You can define prompt files for a specific workspace or at the user level, where they are available across all your workspaces. The following table lists the default file locations that the Local harness uses for prompt files.
-
-| Scope | Default file location |
-|-------|-----------------------|
-| Workspace | `.github/prompts` folder |
-| User profile | Your user data (specific to your {% data variables.product.prodname_vscode_shortname %} profile) |
-
-To create a user-level prompt file, use the Agent Customizations editor or the **Chat: New Prompt File** command.
-
-**TIP:** In a monorepo, enable `setting(chat.useCustomizationsInParentRepositories)` to discover prompt files from the parent repository root. Learn more about [parent repository discovery](overview.md#use-customizations-in-a-monorepo).
-
-## Prompt file format
-
-Prompt files are Markdown files with the `.prompt.md` extension. The optional YAML frontmatter header configures the prompt's behavior:
-
-| Field | Required | Description |
-| --- | --- | --- |
-| `description` | No | A short description of the prompt. |
-| `name` | No | The name of the prompt, used after typing `/` in chat. If not specified, the file name is used. |
-| `argument-hint` | No | Hint text shown in the chat input field to guide users on how to interact with the prompt. |
-| `agent` | No | The agent used for running the prompt: `ask`, `agent`, `plan`, or the name of a [custom agent](custom-agents.md). By default, the current agent is used. If tools are specified, the default agent is `agent`. |
-| `model` | No | The language model used when running the prompt. If not specified, the currently selected model in model picker is used. |
-| `tools` | No | A list of tool names that are available for this Local harness prompt. Can include built-in tools, MCP tools, or tools contributed by extensions. To include all tools of an MCP server, use the `<server name>/*` format. Existing tool-set references are deprecated; see [Replace tool sets](migrate-customizations.md#replace-tool-sets).<br/>Learn more about [tools with agents](../agents/run/tools.md). |
-
-**NOTE:** If a given tool is not available when running the prompt, it is ignored.
-
-The body contains the prompt text in Markdown format. Provide specific instructions, guidelines, or any other relevant information that you want the AI to follow.
-
-### Reference files
-
-You can reference files in the prompt body by using Markdown links or the `#file:` syntax.
-
-* For files in your workspace, use paths relative to the prompt file. For example, `[coding standards](../instructions/coding.instructions.md)` references a file in a sibling `instructions` folder.
-* For files in your environment user home folder, use `~` or start the path with `~/`. A standalone `~` references the user home folder, and a path such as `~/prompts/style-guide.md` resolves from that folder.
-
-Use Unix-style `/` path separators to keep prompt files portable across operating systems.
-
-The following example uses both reference formats to reference files in the user home folder:
-
-```markdown
-Review [my personal instructions](~/copilot/instructions.md).
-Use #file:~/templates/component.md as the component template.
-```
-
-To reference agent tools in the body text, use the `#tool:<tool-name>` syntax. For example, to reference the `browser` tool, use `#tool:browser`.
-
-**TIP:** If you want the user to provide additional information, you can use the `vscode/askQuestion` tool. You can also use a syntax like `${input:variableName}`, `${input:variableName:placeholder}`. Most language models understand this syntax and will prompt for these inputs.
-
-The following examples demonstrate how to use prompt files. For more community-contributed examples, see the [Awesome Copilot repository](https://github.com/github/awesome-copilot/tree/main).
-
-<details>
-<summary>Example: generate a React form component</summary>
-
-```markdown
----
-agent: 'agent'
-model: GPT-4o
-tools: ['search/codebase', 'vscode/askQuestions']
-description: 'Generate a new React form component'
----
-Your goal is to generate a new React form component based on the templates in the Github repo contoso/react-templates.
-
-Use the #tool:vscode/askQuestions to ask for the form name and fields if not provided.
-
-Requirements for the form:
-* Use form design system components: [design-system/Form.md](../docs/design-system/Form.md)
-* Use `react-hook-form` for form state management:
-* Always define TypeScript types for your form data
-* Prefer *uncontrolled* components using register
-* Use `defaultValues` to prevent unnecessary rerenders
-* Use `yup` for validation:
-* Create reusable validation schemas in separate files
-* Use TypeScript types to ensure type safety
-* Customize UX-friendly validation rules
-```
-
-</details>
-
-
-<details>
-<summary>Example: perform a security review of a REST API</summary>
-
-```markdown
----
-agent: 'ask'
-model: Claude Sonnet 4
-description: 'Perform a REST API security review'
----
-Perform a REST API security review and provide a TODO list of security issues to address.
-
-* Ensure all endpoints are protected by authentication and authorization
-* Validate all user inputs and sanitize data
-* Implement rate limiting and throttling
-* Implement logging and monitoring for security events
-
-Return the TODO list in a Markdown format, grouped by priority and issue type.
-```
-
-</details>
+Before writing a prompt file, consider [reusing a skill from the Customization Marketplace](agent-skills.md#install-a-skill-from-the-customization-marketplace-preview) for the same task. This installs a skill, not a Local prompt file. Follow the skill's harness requirements and invocation instructions.
 
 ## Create a prompt file
 
 Before creating a prompt file, select the **Local** harness in the {% data variables.copilot.chat_view %}. Choose whether to store the file in your workspace or user profile. Workspace prompt files are available to Local sessions in that workspace. User prompt files are available to Local sessions across workspaces in the same profile.
 
-To create a prompt file:
-
-**TIP:** With **Local** selected in the {% data variables.copilot.chat_view %}, type `/prompts` in the chat input to quickly open the **Configure Prompt Files** menu.
+Use the Agent Customizations editor to create the file in the selected scope:
 
 1. In the {% data variables.copilot.chat_view %}, select **Open Customizations** in the title bar to open the Agent Customizations editor, and then select **Prompts**.
 
 1. Select **New Prompt** (plus icon) next to the **Workspace** or **User** group, depending on where you want to store the prompt file.
 
     <!-- TODO: Replace screenshot to show the New Prompt (plus icon) buttons next to the Workspace and User groups in the Prompts section. -->
-    ![Screenshot of the Agent Customizations editor, showing the Prompts tab and the dropdown to create a new prompt file.](images/customization/create-prompt-file.png)
-
-    Alternatively, use the **Chat: New Prompt File** or **Chat: New Untitled Prompt File** command from the Command Palette (`kb(workbench.action.showCommands)`).
+    ![Screenshot of the Agent Customizations editor, showing the Prompts tab and the options to create a new prompt file.](images/customization/create-prompt-file-2.png)
 
 1. Select the location and enter a file name for your prompt file. This is the default name that appears when you type `/` in chat.
 
-1. Author the chat prompt by using Markdown formatting.
+1. Replace the generated content with this self-contained prompt:
 
-    * Fill in the YAML frontmatter at the top of the file to configure the prompt's description, agent, tools, and other settings.
-    * Add instructions for the prompt in the body of the file.
+    ```markdown
+    ---
+    name: review-api-security
+    agent: agent
+    description: Review a REST API implementation for common security risks
+    argument-hint: [API folder or file]
+    ---
+    Review the REST API implementation identified by the user. If no path is provided, ask which folder or file to review.
 
-You can modify existing prompt files by opening them in the Agent Customizations editor.
+    Check authentication, authorization, input validation, sensitive-data handling, and rate limiting. Do not claim that a control exists unless the available code demonstrates it.
+
+    Return a Markdown TODO list grouped by high, medium, and low priority. For each item, cite the relevant file and explain the risk. If you find no issue in a category, say what you checked.
+    ```
+
+1. Save the file. You can modify it later by opening it in the Agent Customizations editor.
+
+As alternatives, run **Chat: New Prompt File** or **Chat: New Untitled Prompt File** from the Command Palette (`kb(workbench.action.showCommands)`), or enter `/prompts` in a Local chat to open **Configure Prompt Files**.
 
 ### Generate a prompt file with AI
 
@@ -159,7 +68,7 @@ Select **Local** in the {% data variables.copilot.chat_view %} before running th
 
 * In the {% data variables.copilot.chat_view %}, type `/` followed by the prompt name in the chat input field. [Agent skills](agent-skills.md) also appear as slash commands alongside prompt files.
 
-    You can add extra information in the chat input field. For example, `/create-react-form formName=MyForm` or `/create-api for listing customers`.
+    You can add extra information in the chat input field. For example, `/review-api-security src/api` identifies the API folder to review.
 
 * Run the **Chat: Run Prompt** command from the Command Palette (`kb(workbench.action.showCommands)`) and select a prompt file from the Quick Pick.
 
@@ -170,7 +79,82 @@ Select **Local** in the {% data variables.copilot.chat_view %} before running th
 **TIP:** Use the `setting(chat.promptFilesRecommendations)` setting to show prompts as recommended actions when starting a new chat session.
 ![Screenshot showing a "explain" prompt file recommendation in the {% data variables.copilot.chat_view %}.](images/customization/prompt-file-recommendations.png)
 
-## Tool list priority
+## Verify and refine a prompt file
+
+Test discovery and effectiveness separately:
+
+1. Start a fresh **Local** chat in the workspace where you created the prompt.
+1. Type `/` and confirm that `/review-api-security` appears. If it does not, follow [Troubleshoot prompt files](#troubleshoot-prompt-files).
+1. Run `/review-api-security` followed by the path to a small API file or folder.
+1. Confirm that the result cites files, groups findings by priority, and distinguishes observed controls from missing or uncertain controls.
+1. Open the prompt file, adjust instructions that produced an unclear or unsupported result, and use the editor play button to rerun the same request in a new chat.
+
+Discovery only confirms that the Local harness found the file. Review the result and tool activity to determine whether the prompt is effective for your task.
+
+## Troubleshoot prompt files
+
+If a prompt is missing or produces an unexpected result:
+
+1. Confirm that the session target is **Local** and that the file has the `.prompt.md` extension.
+1. Confirm that a workspace prompt is in `.github/prompts` for the open workspace, or that the user prompt is in the current {% data variables.product.prodname_vscode_shortname %} profile.
+1. Check the YAML frontmatter for syntax errors and confirm that configured agents, models, and tools are available.
+1. Run the prompt in a fresh chat to avoid context from an earlier task.
+1. Open the Agent Debug Log panel from the ellipsis (**...**) menu in the {% data variables.copilot.chat_view %} to inspect discovery and related errors. Learn more about [troubleshooting AI in {% data variables.product.prodname_vscode_shortname %}](../agents/agent-troubleshooting/troubleshooting.md).
+
+## Prompt file reference
+
+### Locations
+
+You can define prompt files for a specific workspace or at the user level, where they are available across all your workspaces. The following table lists the default file locations that the Local harness uses for prompt files.
+
+| Scope | Default file location |
+|-------|-----------------------|
+| Workspace | `.github/prompts` folder |
+| User profile | Your user data (specific to your {% data variables.product.prodname_vscode_shortname %} profile) |
+
+To create a user-level prompt file, use the Agent Customizations editor or the **Chat: New Prompt File** command.
+
+**TIP:** In a monorepo, enable `setting(chat.useCustomizationsInParentRepositories)` to discover prompt files from the parent repository root. Learn more about [parent repository discovery](overview.md#use-customizations-in-a-monorepo).
+
+### File format
+
+Prompt files are Markdown files with the `.prompt.md` extension. The optional YAML frontmatter header configures the prompt's behavior:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `description` | No | A short description of the prompt. |
+| `name` | No | The name of the prompt, used after typing `/` in chat. If not specified, the file name is used. |
+| `argument-hint` | No | Hint text shown in the chat input field to guide users on how to interact with the prompt. |
+| `agent` | No | The agent used for running the prompt: `ask`, `agent`, `plan`, or the name of a [custom agent](custom-agents.md). By default, the current agent is used. If tools are specified, the default agent is `agent`. |
+| `model` | No | The language model used when running the prompt. If not specified, the currently selected model in model picker is used. |
+| `tools` | No | A list of tool names that are available for this Local harness prompt. Can include built-in tools, MCP tools, or tools contributed by extensions. To include all tools of an MCP server, use the `<server name>/*` format. Existing tool-set references are deprecated; see [Replace tool sets](migrate-customizations.md#replace-tool-sets).<br/>Learn more about [tools with agents](../agents/run/tools.md). |
+
+**NOTE:** If a given tool is not available when running the prompt, it is ignored.
+
+The body contains the prompt text in Markdown format. Provide specific instructions, guidelines, or any other relevant information that you want the AI to follow.
+
+#### Reference files
+
+You can reference files in the prompt body by using Markdown links or the `#file:` syntax.
+
+* For files in your workspace, use paths relative to the prompt file. For example, `[coding standards](../instructions/coding.instructions.md)` references a file in a sibling `instructions` folder.
+* For files in your environment user home folder, use `~` or start the path with `~/`. A standalone `~` references the user home folder, and a path such as `~/prompts/style-guide.md` resolves from that folder.
+
+Use Unix-style `/` path separators to keep prompt files portable across operating systems.
+
+The following example uses both reference formats to reference files in the user home folder:
+
+```markdown
+Review [my personal instructions](~/copilot/instructions.md).
+Use #file:~/templates/component.md as the component template.
+```
+
+To reference agent tools in the body text, use the `#tool:<tool-name>` syntax. For example, to reference the `browser` tool, use `#tool:browser`.
+
+**TIP:** If you want the user to provide additional information, you can use the `vscode/askQuestion` tool. You can also use a syntax like `${input:variableName}`, `${input:variableName:placeholder}`. Most language models understand this syntax and will prompt for these inputs.
+
+
+### Tool list priority
 
 You can specify the list of available tools for both a custom agent and prompt file by using the `tools` metadata field. Prompt files can also reference a custom agent by using the `agent` metadata field.
 
@@ -196,20 +180,7 @@ To sync your user prompt files, enable Settings Sync and run **Settings Sync: Co
 
 * Take advantage of built-in variables like `${selection}` and input variables to make prompts more flexible.
 
-* Use the editor play button to test your prompts and refine them based on the results.
-
-## Frequently asked questions
-
-### How do I know where a prompt file comes from?
-
-Prompt files can come from different sources: built-in, user-defined in your profile, workspace-defined prompts in your current workspace, or extension-contributed prompts.
-
-To identify the source of a prompt file:
-
-1. Select **Chat: Configure Prompt Files** from the Command Palette (`kb(workbench.action.showCommands)`).
-1. Hover over the prompt file in the list. The source location is displayed in a tooltip.
-
-**TIP:** Use the Agent Debug Log panel to inspect prompt file discovery and related errors. In the {% data variables.copilot.chat_view %}, select the ellipsis (**...**) menu, then select **Show Agent Debug Logs**. Learn more about [troubleshooting AI in {% data variables.product.prodname_vscode_shortname %}](../agents/agent-troubleshooting/troubleshooting.md).
+* Use the editor play button to rerun the same task after changing a prompt.
 
 ## Related resources
 

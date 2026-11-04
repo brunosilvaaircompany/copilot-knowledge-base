@@ -9,7 +9,7 @@
 
 **NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), even when you use separate provider credentials. Contact the IT team that deployed the settings to discuss access. This harness restriction does not itself disable Claude or OpenAI models in the Copilot harness.
 
-This article explains how language models work, their characteristics, and how to think about model selection.
+This article explains how language models work, their characteristics, and when to select a model, use Auto, or use Copilot Fusion.
 
 ![Screenshot of the Language Models editor, showing the list of available models.](../images/language-models/language-models-editor.png)
 
@@ -65,7 +65,9 @@ You can switch models at any time, based on your needs for a particular task. Fo
 
 ### Auto model selection
 
-Auto model selection in GitHub Copilot combines two systems to route each request to the optimal model. One system tracks real-time model health and availability, while the other evaluates task complexity. Together, they match each task to the model that can solve it most efficiently, reserving higher-cost reasoning models for problems that need them and routing simpler tasks to faster models.
+Auto model selection in {% data variables.product.prodname_copilot %} combines two systems to select one model for each request. One system tracks real-time model health and availability, while the other evaluates task complexity. Together, they match each task to the model that can solve it most efficiently, reserving higher-cost reasoning models for problems that need them and routing simpler tasks to faster models.
+
+In [{% data variables.product.prodname_copilot_short %} harness sessions](../run/agent-harnesses.md#copilot), the same routing entry can appear as **Copilot Fusion** instead of **Auto**, depending on your settings and the tiers offered to your account. Fusion adds [multi-model orchestration](#copilot-fusion) alongside single-model routing.
 
 Auto selects from multiple models and respects your organization's [model access settings](https://docs.github.com/en/copilot/how-tos/use-ai-models/configure-access-to-ai-models). Auto won't select models excluded by administrator policies or models restricted by data-residency policies.
 
@@ -73,9 +75,19 @@ When you turn on **Use in Auto** for an [on-device model](../../agent-customizat
 
 For more details, see [About Copilot auto model selection](https://docs.github.com/en/copilot/concepts/auto-model-selection) in the GitHub documentation.
 
+### Copilot Fusion
+
+Copilot Fusion is a model orchestration system, not an individual language model. It chooses models and a workflow for your task, so you don't need to coordinate each step yourself. Unlike Auto, which selects one model per request, Fusion can use one model or coordinate multiple models. For example, one model can draft a solution, another can critique it, and the original model can revise it. You receive a single final response.
+
+Consider Fusion for substantial, well-scoped coding tasks where additional review can be worth the extra time and [AI credits](#ai-credits-and-model-costs). Availability depends on your account and organization policies.
+
+Learn how to [use Copilot Fusion](../../agent-customization/language-models.md#use-copilot-fusion). For details about orchestration, see [GitHub Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion) in the GitHub documentation.
+
 ### AI credits and model costs
 
 Each Copilot plan includes a monthly allowance of [AI credits](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals). Different models consume AI credits at different rates, based on the model and the number of tokens processed. More capable models cost more per token, while lighter models extend your usage further. When you use auto model selection, {% data variables.product.prodname_vscode_shortname %} routes each request to an efficient model that balances quality and cost.
+
+Copilot Fusion can use multiple model passes for a task, such as drafting, critique, and revision. Each pass contributes to AI credit consumption, so an orchestrated workflow can take longer and use more credits than a single-model request.
 
 Other factors also affect credit consumption, such as [thinking effort](../../agent-customization/language-models.md#configure-thinking-effort) (higher effort produces more thinking tokens), context window size, and tool usage. Prompt caching lowers the effective cost of a request by reusing tokens from a previous one. You can inspect cache hit rates with the [Cache Explorer](../agent-troubleshooting/cache-explorer.md). For practical tips on reducing credit consumption, see [optimize AI credit usage](../guides/optimize-usage.md).
 

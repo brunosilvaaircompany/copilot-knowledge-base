@@ -2,7 +2,7 @@
 
 Change, stop, share, or troubleshoot an existing MCP server in {% data variables.product.prodname_vscode %}. For first-time setup, see [Add MCP servers](../../agent-customization/mcp-servers.md). For formats and properties, see the [MCP configuration reference](../reference/mcp-configuration.md).
 
-Use the [Agent Customizations editor](../../agent-customization/overview.md#agent-customizations-editor) (Preview) to edit connections, start or stop servers, change their enabled state, and view output. The editor is scoped to the selected agent harness. The configuration form steps below use the {% data variables.product.prodname_copilot_short %} harness. For differences in server support and configuration, see [Agent harnesses](agent-harnesses.md).
+Use the [Agent Customizations editor](../../agent-customization/overview.md#agent-customizations-editor) to edit connections, start or stop servers, change their enabled state, and view output. The editor is scoped to the selected agent harness. The configuration form steps below use the {% data variables.product.prodname_copilot_short %} harness. For differences in server support and configuration, see [Agent harnesses](agent-harnesses.md).
 
 ## Open the server controls
 
@@ -55,6 +55,8 @@ Starting can require trust or authentication. If the server fails to start, [vie
 <a name="remove-an-mcp-server"></a>
 
 **Removal depends on the configuration source.** If **Uninstall** isn't available for a manually configured server, remove only its entry from the source configuration, not the whole file. If automatic discovery restores it, review its [discovery source](../reference/mcp-configuration.md#automatic-mcp-server-discovery). You can also uninstall an installed server from the **MCP SERVERS - INSTALLED** section of the Extensions view.
+
+For {% data variables.product.prodname_github %}-managed MCP servers, [disconnect the {% data variables.product.prodname_copilot_short %} connector](../../agent-customization/copilot-connectors.md#disconnect-a-service) instead of uninstalling a server or editing a local configuration file.
 
 ## Automatically start MCP servers
 
@@ -148,7 +150,7 @@ Start with the symptom, then inspect the server output. A running server doesn't
 | Startup is blocked by trust. | Review the server configuration and [Workspace Trust](#mcp-server-trust). Don't bypass restricted mode for a repository you haven't reviewed. |
 | A Docker stdio server exits or doesn't connect. | Check its arguments. Don't use detached mode (`-d`), because the client needs the stdio connection. |
 | An HTTP server fails to connect or authenticate. | Check the endpoint and network access. Follow the publisher's sign-in instructions and inspect authentication errors without exposing credentials. |
-| An enterprise restriction blocks a server. | Ask your administrator about the [enterprise MCP allowlist](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-enterprise-allowlist). Local configuration can't override organizational restrictions. |
+| An enterprise restriction blocks a server. | Ask your administrator to check the [managed MCP allowlist and registry precedence](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#managed-allowlists-and-registry-precedence). For editor-managed servers, registry membership alone does not override a managed allowlist. Deny rules and explicit MCP disablement still apply. Local configuration can't override organizational restrictions. |
 | The server runs, but its tools aren't available. | Check that the server is enabled, supports the selected harness, and exposes the expected tools. Review [available tool selection](tools.md#manage-available-tools). |
 | A tool is available, but the agent doesn't call it. | Follow [An MCP tool is not being invoked](../agent-troubleshooting/chat-debug-view.md#an-mcp-tool-is-not-being-invoked) to inspect tool selection and the request. |
 

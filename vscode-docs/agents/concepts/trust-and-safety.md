@@ -14,7 +14,7 @@ Understand the control mechanisms and safety considerations for using AI in {% d
 Agents can read files, edit code, run terminal commands, and call external services. {% data variables.product.prodname_vscode_shortname %}'s trust model layers several control mechanisms so you remain in charge of what reaches your codebase:
 
 * **Review before integrating.** Agents can save edits directly in the session folder or worktree. Inspect the changes in a diff before you commit, merge, or create a pull request. For supported sessions, [checkpoints](../run/review-code-edits.md#edit-requests-and-restore-checkpoints) restore affected workspace files and chat to an earlier point.
-* **Approve sensitive actions.** With [Manual permissions](../run/approvals.md#permission-levels) in Copilot harness sessions, actions that aren't covered by your approval settings require confirmation. File edits might be auto-approved. Configure [sensitive-file approval](../run/review-code-edits.md#edit-sensitive-files) when an edit must require confirmation before it is applied.
+* **Approve sensitive actions.** With [Manual permissions](../run/approvals.md#permission-levels) in Copilot harness sessions, actions that aren't covered by your approval settings require confirmation. File edits might be auto-approved. Configure [sensitive-file approval](../run/review-code-edits.md#require-approval-before-sensitive-edits) when an edit must require confirmation before it is applied.
 * **Constrain autonomy.** [Permission levels](../run/approvals.md#permission-levels) decide how much the agent runs on its own, from per-call approvals to broad auto-approval, up to fully autonomous operation with Autopilot.
 * **Enforce boundaries at the OS level.** [Agent sandboxing](#agent-sandboxing) restricts file system and network access for terminal commands so auto-approved actions cannot escape a defined scope.
 * **Trust boundaries.** {% data variables.product.prodname_vscode_shortname %} uses trust decisions for workspaces, extensions, MCP servers, and network domains. Workspace MCP servers inherit Workspace Trust.
@@ -33,6 +33,8 @@ Always review AI-generated code before committing. Verify that it handles edge c
 * **Network domain**: controls whether the agent can fetch content from a URL. {% data variables.product.prodname_vscode_shortname %} prompts you to trust a domain before making requests to it, integrated with the [Trusted Domains](https://code.visualstudio.com/docs/editing/editingevolved#outgoing-link-protection) list. You can also enable `setting(chat.agent.networkFilter)` to restrict domains for the fetch tool and integrated browser. [Sandbox network controls](../run/agent-sandboxing.md#configure-network-access) apply separately to terminal commands.
 
 You can revoke trust at any time through dedicated commands in the Command Palette. Changing Workspace Trust controls whether workspace MCP servers can run. For servers with a separate trust decision, run **MCP: Reset Trust**. For steps to configure these controls, see [AI security in {% data variables.product.prodname_vscode_shortname %}](../run/security.md).
+
+Authorizing a [{% data variables.product.prodname_copilot_short %} connector](../../agent-customization/copilot-connectors.md) `feature(copilot-connectors)` grants access to the connected service. This is separate from approval of individual tool calls. The session's permission and approval settings still determine whether a tool action requires confirmation.
 
 ## Agent sandboxing
 
@@ -87,7 +89,7 @@ Built-in and other non-process tools are not covered by the process sandbox. The
 
 **TIP:** The `setting(chat.agent.networkFilter)` setting provides network domain filtering for the fetch tool and integrated browser, independently of terminal sandboxing. It does not add domain filtering to {% data variables.product.prodname_copilot_short %}'s built-in shell or the Windows terminal sandbox. See [sandbox network capabilities](../run/agent-sandboxing.md#configure-network-access).
 
-Use the [review flow](../run/review-code-edits.md) and [sensitive file protection](../run/review-code-edits.md#edit-sensitive-files) to control these operations.
+Use the [review flow](../run/review-code-edits.md) and [sensitive file protection](../run/review-code-edits.md#require-approval-before-sensitive-edits) to control these operations.
 
 A [Dev Container session](../run/agents-window.md#run-a-session-in-a-dev-container) runs the agent and its workspace tools inside the project's container, on your machine or a supported connected host. This is different from a Git worktree, which separates code changes, and terminal sandboxing, which restricts command access.
 

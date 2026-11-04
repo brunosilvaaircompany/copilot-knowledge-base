@@ -2,9 +2,11 @@
 
 Choose a tutorial to learn with a sample project, or follow a guide to apply an agent workflow to your own codebase in {% data variables.product.prodname_vscode_shortname %}.
 
+Still choosing how to use AI? [Compare suggestions, collaboration alongside code, and agent orchestration](../overview.md#choose-how-you-work) before choosing a guide. You don't need to delegate a task to use AI.
+
 ## Choose where to start
 
-If you're new to both {% data variables.product.prodname_vscode_shortname %} and AI, first [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview). If you already know {% data variables.product.prodname_vscode_shortname %}, use one of these sample projects to learn the agent workflow:
+If you're new to both {% data variables.product.prodname_vscode_shortname %} and AI, first [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview). Otherwise, choose a sample project to learn with, or apply an agent workflow to your own repository:
 
 <div class="card-grid">
     <a class="card" href="/docs/agents/quickstart">
@@ -18,14 +20,22 @@ If you're new to both {% data variables.product.prodname_vscode_shortname %} and
     <a class="card" href="/docs/agents/agents-tutorial">
         <i class="codicon codicon-mortar-board" aria-hidden="true"></i>
         <div>
-            <p><strong>Build an app step by step</strong></p>
-            <p>Build a portfolio page while learning agent, editor, browser, and source control workflows.</p>
+            <p><strong>Start in the {% data variables.copilot.agents_window %}, continue in the editor</strong></p>
+            <p>Build a portfolio page, then continue the same session alongside your code to refine, test, and review it.</p>
             <p>Sample project. Requires Git.</p>
+        </div>
+    </a>
+    <a class="card" href="/docs/agents/guides/overview#experienced-agent-fast-track">
+        <i class="codicon codicon-source-control" aria-hidden="true"></i>
+        <div>
+            <p><strong>Work in your own repository</strong></p>
+            <p>Already use agents? Follow the fast track to explore your codebase or add a feature.</p>
+            <p>Use your own repository. Check the requirements for the guide you choose.</p>
         </div>
     </a>
 </div>
 
-Already use agents? Skip the sample projects and follow the [experienced-agent fast track](#experienced-agent-fast-track). If you want AI help without delegating changes, [choose a lighter-weight AI feature](../reference/ai-features-cheat-sheet.md#choose-a-feature).
+To work beyond your development machine, [start a task in a cloud session and continue it from a terminal with {% data variables.copilot.copilot_cli_short %}](../cloud-continuity-tutorial.md) `feature(cloud-sessions)`. Use your own private repository without cloning it or installing project dependencies. Requires cloud session access and {% data variables.copilot.copilot_cli_short %}.
 
 Or jump to a task:
 
@@ -37,6 +47,8 @@ Or jump to a task:
 ## Experienced-agent fast track
 
 Use your own repository and follow the harness, interface, and prerequisites specified by the guide you choose. Keep its recommended session settings for the first task. A guide's tool names or customization files might need changes before you can use them with another harness.
+
+To bring an existing setup, compare [agent harnesses and supported accounts](../run/agent-harnesses.md#requirements-and-setup), or [connect a model with your own API key](../../agent-customization/language-models.md#bring-your-own-language-model-key). Use the chosen guide's requirements to check compatibility.
 
 1. [Open your repository as a workspace](https://code.visualstudio.com/docs/getstarted/overview#open-your-code) so that files, source control, terminals, tests, and agents share the same project context.
 
@@ -60,7 +72,7 @@ Before starting a guide, check:
 
 * **Interface:** Which steps use the {% data variables.copilot.chat_view %} or the {% data variables.copilot.agents_window %}?
 
-Both interfaces run agents. The {% data variables.copilot.chat_view %} emphasizes collaboration over code in the current workspace; the {% data variables.copilot.agents_window %} emphasizes multi-project orchestration and higher-level task assignment. Follow the guide's chosen interface for its walkthrough. See [Run agents](../run/overview.md) to compare approaches.
+Both interfaces run agents. The {% data variables.copilot.chat_view %} emphasizes collaboration over code in the current workspace; the {% data variables.copilot.agents_window %} emphasizes multi-project orchestration and higher-level task assignment. Follow the guide's chosen interface for its walkthrough. See [Choose how you work](../overview.md#choose-how-you-work) to compare approaches.
 
 ## Work on a project
 

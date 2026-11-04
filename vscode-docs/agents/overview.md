@@ -1,92 +1,87 @@
 # Build with AI in {% data variables.product.prodname_vscode_shortname %}
 
-Use AI in {% data variables.product.prodname_vscode %} to understand unfamiliar code, fix bugs, and build features. For a task that spans files and tools, an agent can find relevant code, make changes, and run checks without you directing each search, edit, and test run. You describe the outcome, review the changes, and verify the result.
+Use as much or as little AI as your task needs in {% data variables.product.prodname_vscode %}. Get suggestions as you type, collaborate with an agent beside your code, or coordinate tasks across projects in the {% data variables.copilot.agents_window %}. Combine these approaches as your work changes.
 
-Work with an agent in the same workspace as your editor, terminal, tests, and debugger. You can inspect its changes and investigate failures without moving code and command output to a separate chat application. For a question or focused edit, use chat, inline chat, or suggestions without delegating an entire task.
+You can choose models from multiple providers and work with the {% data variables.product.prodname_copilot_short %}, Claude, or Codex agent harness, using a supported account or your own API key. Customizations and plugins help you tailor agents to your work.
 
-For day-to-day coding and agent tasks, start with the [{% data variables.product.prodname_copilot_short %} harness](run/agent-harnesses.md#copilot) to explore code, plan changes, implement features, and run tests. The harness uses a shared runtime for core capabilities and more consistent behavior across {% data variables.product.prodname_vscode_shortname %}, {% data variables.copilot.copilot_cli %}, and the {% data variables.copilot.github_copilot_app %}. You can continue the same live session in the {% data variables.copilot.chat_view %} or {% data variables.copilot.agents_window %}, and [discover and continue supported sessions created in {% data variables.copilot.copilot_cli %} or the {% data variables.copilot.github_copilot_app %}](run/sessions/manage-sessions.md#view-sessions-from-other-applications).
+Continuity lets you pick up agent work across supported interfaces without starting over. Connect to sessions on your own machine through GitHub Environments, or use a cloud session without keeping a local host online.
 
-Choose another [agent harness](concepts/agent-harnesses.md) when you need its tools or workflows, or delegate an independent task to a [cloud agent](run/agent-harnesses.md#start-a-cloud-session).
+## Try your first agent task
 
-<div class="docs-action" data-show-in-doc="true" data-show-in-sidebar="false" title="Try your first agent task">
-Build and validate a small app in the {% data variables.copilot.chat_view %}, then review the result.
+{% action-card title="Build your first app with an agent" %}
+Build and validate a small app, then review the result. The quickstart uses the {% data variables.product.prodname_copilot %} harness with recommended defaults, so you don't need to configure every option first.
 
 * [Start the agents quickstart](quickstart.md)
 
+{% /action-card %}
+
+* **Already use agents:** Follow the [experienced-agent fast track](guides/overview.md#experienced-agent-fast-track) in your own repository.
+* **New to {% data variables.product.prodname_vscode_shortname %}:** First [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview).
+
+<video src="images/agents-overview/build-with-ai-overview.mp4" title="Video overview of building with AI in VS Code, showing inline suggestions, collaboration alongside code, and task orchestration in the Agents window." autoplay loop controls muted></video>
+
+<a name="what-you-can-do-with-ai"></a>
+<a name="ways-to-work-with-agents"></a>
+
+## Choose how you work
+
+Switch between different experiences depending on your task, and [continue agent sessions across interfaces](#continue-across-interfaces-and-machines) to pick up where you left off.
+
+<div class="card-grid">
+    <a class="card" href="/docs/editing/ai-powered-suggestions">
+        <i class="codicon codicon-edit" aria-hidden="true"></i>
+        <div>
+            <p><strong>Write code with assistance</strong></p>
+            <p>Get inline suggestions as you type, including suggestions for your next edit.</p>
+        </div>
+    </a>
+    <a id="work-alongside-your-code" class="card" href="/docs/agents/run/chat-view">
+        <i class="codicon codicon-comment-discussion" aria-hidden="true"></i>
+        <div>
+            <p><strong>Collaborate alongside your code</strong></p>
+            <p>Work with an agent in the {% data variables.copilot.chat_view %}, focused on the current workspace alongside your editor, terminal, tests, and debugger.</p>
+        </div>
+    </a>
+    <a id="delegate-and-manage-tasks" class="card" href="/docs/agents/run/agents-window">
+        <i class="codicon codicon-hubot" aria-hidden="true"></i>
+        <div>
+            <p><strong>Delegate and coordinate work</strong></p>
+            <p>Assign tasks and manage agent sessions across projects in the {% data variables.copilot.agents_window %}.</p>
+        </div>
+    </a>
 </div>
 
-If you're new to both {% data variables.product.prodname_vscode_shortname %} and AI, first [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview). If you already use agents, skip the sample project and follow the [experienced-agent fast track](guides/overview.md#experienced-agent-fast-track). For AI help without delegating a task, [choose between suggestions, focused edits, questions, and agents](reference/ai-features-cheat-sheet.md#choose-a-feature).
+An [agent](concepts/agents.md) uses a model and tools to find relevant code, make changes, and run checks. Both the {% data variables.copilot.chat_view %} and the {% data variables.copilot.agents_window %} run agents. You set the goal, guide the work, and review the results.
 
-The quickstart uses the [{% data variables.product.prodname_copilot %} harness](run/agent-harnesses.md#copilot). See the [{% data variables.product.prodname_copilot_short %} setup guide](https://code.visualstudio.com/docs/setup/copilot) for account, usage, and data-handling requirements. If provider, sign-in, or execution location affects your setup, [compare agent harnesses](run/agent-harnesses.md#compare-agent-harnesses) and review their [requirements and setup](run/agent-harnesses.md#requirements-and-setup).
+For routine work, save a prompt as an [automation](run/automations.md). Run it locally on a schedule, or use cloud automations `feature(cloud-automations)` for scheduled or event-triggered repository work that continues while your computer is off. Review a manual run before enabling recurring work.
 
-## What you can do with AI
-
-Choose a workflow based on the task, from help with a single line to a coordinated change across your project.
-
-| Your goal | How AI helps |
-|-----------|--------------|
-| Implement a feature, fix a bug, or refactor across files | [Work with an agent](#how-you-work-with-an-agent) to find relevant code, make changes, and run tests. |
-| Understand a codebase or explore an approach | [Ask questions in chat](../chat/chat-overview.md) to get explanations grounded in your code and discuss alternatives. |
-| Research a complex change before editing | [Plan with an agent](run/planning.md) and review the proposed approach before implementation. |
-| Make a focused edit without leaving your code | Use [inline chat](../chat/inline-chat.md) to describe the change in the editor. |
-| Get code suggestions while you type | Use [inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions) for completions and suggested next edits. |
-| Complete a common development task | Use [smart actions](https://code.visualstudio.com/docs/editing/copilot-smart-actions) for tasks such as generating a commit message or explaining selected code. |
-
-You use chat both to ask questions and to direct agents. You can ask **Agent** to propose an approach before editing, or select **Plan**, where available, for a dedicated planning workflow.
-
-For a compact comparison, use the [AI features cheat sheet](reference/ai-features-cheat-sheet.md#choose-a-feature) to choose the least autonomous option that fits your task.
-
-## How you work with an agent
-
-An agent uses a language model to reason about your request and [tools](concepts/tools.md) to act on your development environment. It gathers [context](concepts/context.md), such as code, error messages, and test results, rather than relying only on the words in your prompt.
-
-For example, ask an agent to fix a failing test while preserving the intended behavior:
-
-1. The agent finds the test and reads the related code to understand the failure.
-1. It edits the implementation or tests based on the task and your constraints.
-1. It runs the tests, inspects the results, and revises its changes if needed.
-1. You review the diff and validation results, verify the behavior yourself, and decide which changes to keep.
-
-This repeated reasoning, action, and validation is the **agent loop**. You can provide more context, redirect the work, or stop the agent along the way. Learn more about [how agents work](concepts/agents.md).
-
-The conversation and work for a task belong to a **session**. Sessions keep related context and changes together so you can return to a task or manage independent tasks separately. Learn about [sessions and handoff](concepts/sessions.md).
-
-## Ways to work with agents
-
-Both the {% data variables.copilot.chat_view %} and the {% data variables.copilot.agents_window %} support agent workflows. Choose the {% data variables.copilot.chat_view %} for collaboration over code in your current workspace, or the {% data variables.copilot.agents_window %} for multi-project orchestration and higher-level task assignment. You can continue supported sessions between them rather than choosing one interface for every task.
-
-For a path from your first request through planning, steering, review, and recovery, see [Run agents in {% data variables.product.prodname_vscode_shortname %}](run/overview.md).
-
-### Work alongside your code
-
-Use the [{% data variables.copilot.chat_view %}](run/chat-view.md) when you're working in an open project. Keep the conversation beside your editor, inspect changes as they happen, and use the debugger, terminal, and tests as part of the same workflow. This is the starting point for the agents quickstart.
-
-![Screenshot showing the {% data variables.copilot.chat_view %} with the sessions list, conversation, and chat input.](images/agents-overview/chat-view-expanded.png)
-
-For keyboard, screen reader, and low-vision workflows, learn how to use the [Accessible View and other accessibility features](https://code.visualstudio.com/docs/configure/accessibility/accessibility#accessible-view).
-
-### Delegate and manage tasks
-
-Use the [{% data variables.copilot.agents_window %}](run/agents-window.md) when your focus is assigning tasks and reviewing their results. Manage multiple sessions across projects, follow their progress, and open the editor when you want to work directly with the code.
-
-![Screenshot showing how to start a new agent session by selecting New at the top of the sidebar in the {% data variables.copilot.agents_window %}.](images/agents-overview/agents-window-hero.png)
-
-### Other ways to access agents
-
-For terminal-based work, use [{% data variables.copilot.copilot_cli %}](run/sessions/manage-sessions.md#use-copilot-cli-from-the-terminal). The [{% data variables.copilot.github_copilot_app %}](https://github.com/features/copilot) provides a dedicated desktop experience. You can [open and continue supported local sessions created in either application](run/sessions/manage-sessions.md#view-sessions-from-other-applications) in {% data variables.product.prodname_vscode_shortname %}. To continue a {% data variables.product.prodname_copilot_short %} session in the CLI, right-click the session and select **Resume in Terminal**.
-
-For work away from your machine, explore [cloud agents that return pull requests](run/agent-harnesses.md#start-a-cloud-session) or [remote sessions and browser access](run/remote-agent-sessions.md).
+For a focused edit, use [inline chat](../chat/inline-chat.md) without leaving your code. To compare features for a specific task, use the [AI features cheat sheet](reference/ai-features-cheat-sheet.md#choose-a-feature).
 
 ## Choose your models, agents, and tools
 
-Start with the quickstart's recommended setup, then adjust individual choices to fit your task and project:
+For a first agent task, [use the quickstart](quickstart.md) without configuring every option. You can adapt the choices below as your needs change.
 
-* **Models**: choose a [language model](concepts/language-models.md) based on the reasoning capabilities, speed, and cost your task requires.
-* **Agent harnesses**: use a supported [agent harness](run/agent-harnesses.md), such as {% data variables.product.prodname_copilot_short %}, {% data variables.product.prodname_anthropic_claude %}, or {% data variables.product.prodname_openai_codex %}, for its tools and workflows. The harness connects a model to tools and manages the session, so changing harnesses is different from switching models.
-* **Model access**: use models from your {% data variables.product.prodname_copilot %} plan, [bring your own API key (BYOK)](../agent-customization/language-models.md#bring-your-own-language-model-key), or connect a supported local model. These options let you use an existing model provider account or keep model processing local.
-* **Tools and customization**: share your coding standards and test commands through [project instructions](guides/customize-copilot-guide.md). Connect external systems through [Model Context Protocol (MCP) servers](../agent-customization/mcp-servers.md), package recurring tasks as [agent skills](../agent-customization/agent-skills.md), or install [plugins](../agent-customization/agent-plugins.md) that bundle tools and workflows. Compare the options in [agent customization concepts](concepts/customization.md).
+| Choice | Options |
+|--------|---------|
+| **Models** | Choose [models from multiple providers](../agent-customization/language-models.md) through {% data variables.product.prodname_copilot %}, or use your own [API key (BYOK)](../agent-customization/language-models.md#bring-your-own-language-model-key) or a supported local model. |
+| **Agent harnesses** | Choose between {% data variables.product.prodname_copilot_short %}, {% data variables.product.prodname_anthropic_claude_short %}, or {% data variables.product.prodname_openai_codex_short %} based on its [tools and workflows](run/agent-harnesses.md#compare-agent-harnesses). |
+| **Access and billing** | Use your existing {% data variables.product.prodname_copilot %} plan, a supported provider account, or an API key. Check [requirements for your harness](run/agent-harnesses.md#requirements-and-setup). |
+| **Customization** | Tailor agents with [plugins](../agent-customization/agent-plugins.md), [project instructions](guides/customize-copilot-guide.md), and [skills](../agent-customization/agent-skills.md). Connect external tools through [Model Context Protocol (MCP) servers](../agent-customization/mcp-servers.md). |
 
-Available models, tools, and customizations depend on the selected harness, your account, and your organization's policies.
+## Continue across interfaces and machines
+
+Continuity means picking up agent work across supported interfaces and machines without starting over. Choose where you interact with an agent while its workspace and execution stay on the host. Session support and requirements differ by harness and destination.
+
+| Where you want to work | Start here |
+|------------------------|------------|
+| **Across {% data variables.product.prodname_copilot_short %} apps and devices** | Use [GitHub Environments (Preview)](run/remote-agent-sessions.md#github-environments-preview) to register your development machine and continue its agent sessions from {% data variables.product.prodname_vscode_shortname %}, the {% data variables.copilot.github_copilot_app %}, {% data variables.copilot.copilot_cli_short %}, GitHub.com, or GitHub Mobile. Available actions vary by client. |
+| **On managed cloud compute** | Use [cloud sessions](run/cloud-sandbox-sessions.md) `feature(cloud-sessions)` for interactive agent work without keeping your own machine online. Reopen the existing cloud session to continue the conversation. Execution stays in the cloud environment, whose availability and lifetime are managed by the service. |
+| **Editor or {% data variables.copilot.agents_window %}** | Use the {% data variables.product.prodname_copilot %}, {% data variables.product.prodname_anthropic_claude_short %}, or {% data variables.product.prodname_openai_codex_short %} agent harness in {% data variables.product.prodname_vscode_shortname %} and [continue your session across interfaces](run/sessions/manage-sessions.md#continue-between-the-chat-view-and-agents-window). |
+| **{% data variables.product.prodname_vscode_shortname %} on another machine** | Use {% data variables.product.prodname_vscode_shortname %}-specific remote connections through [SSH](run/remote-agent-sessions.md#connect-via-ssh) or a [dev tunnel](run/remote-agent-sessions.md#connect-via-dev-tunnel). Dev tunnels also support the [browser-based {% data variables.copilot.agents_window %}](run/remote-agent-sessions.md#use-the-agents-window-in-the-browser). |
+
+For sessions that run on your own machine, keep the host running and reachable. Cloud sessions use managed compute instead. Start a cloud session for work in the cloud, then reopen that session to continue.
+
+Use your own private repository to [start a cloud agent task in {% data variables.product.prodname_vscode_shortname %} and continue it in {% data variables.copilot.copilot_cli_short %}](cloud-continuity-tutorial.md) (Experimental).
 
 Where tools run and where the model is hosted are separate choices. An agent can edit files on your machine while sending model requests to a hosted provider.
 
@@ -100,10 +95,9 @@ AI can produce incorrect code or misunderstand your intent. You remain responsib
 
 Before using agents on an existing project, review the [recommended security baseline](run/security.md#recommended-security-baseline). On a managed device, your organization might restrict available agents, models, and tools through [enterprise AI policies](https://code.visualstudio.com/docs/enterprise/manage-ai-settings). If agents don't appear in chat, review the [availability troubleshooting steps](agent-troubleshooting/faq.md#agents-are-not-available-in-chat).
 
+For keyboard, screen reader, and low-vision workflows, learn how to use the [Accessible View and other accessibility features](https://code.visualstudio.com/docs/configure/accessibility/accessibility#accessible-view).
+
 ## Next steps
 
-* **New to {% data variables.product.prodname_vscode_shortname %} and AI:** [Install the editor, open a workspace, and choose a first task](https://code.visualstudio.com/docs/getstarted/overview).
-* **Already use {% data variables.product.prodname_vscode_shortname %}, but new to agents:** [Complete a first agent task](quickstart.md) with a recommended starting configuration.
-* **Already use AI agents:** Follow the [experienced-agent fast track](guides/overview.md#experienced-agent-fast-track) to work in your own repository.
-* **Prefer lighter-weight AI:** [Choose an AI feature](reference/ai-features-cheat-sheet.md#choose-a-feature) for suggestions, focused edits, questions, or delegated work.
-* **Ready to improve a project workflow:** [Adapt agents to your project](guides/customize-copilot-guide.md), then [compare quality, reliability, and usage](guides/optimize-usage.md).
+* [Apply agent best practices to your project](best-practices.md).
+* [Compare quality, reliability, and AI credit usage](guides/optimize-usage.md).

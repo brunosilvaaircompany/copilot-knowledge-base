@@ -97,13 +97,10 @@ Learn more about [using subagents](../run/subagents.md).
 
 ### Memory
 
-When the memory tool is available, an agent can store notes for use later in the same session or in future sessions. These notes can record preferences, lessons from previous tasks, or information about your codebase. Memory is separate from the conversation context that a session accumulates automatically.
+Memory retains preferences and codebase knowledge separately from the conversation context that a session accumulates automatically. The memory system depends on the agent harness:
 
-The memory tool stores notes locally on your machine in three scopes:
-
-* **User memory** (`/memories/`): persists across all workspaces and conversations. The first 200 lines are automatically loaded into every session.
-* **Repository memory** (`/memories/repo/`): scoped to the current workspace and persists across conversations.
-* **Session memory** (`/memories/session/`): scoped to the current conversation and cleared when it ends.
+* **{% data variables.copilot.copilot_memory %}**: Sessions that use the {% data variables.product.prodname_copilot_short %} harness locally can recall cloud-backed repository facts and user preferences. Repository facts are shared with people who have access to that repository and memory. User preferences apply to your own supported interactions across repositories.
+* **File-based memory**: The Local harness uses a separate memory tool for user, repository, and session notes. These files are stored locally by default. Session memory can hold temporary task context, such as an implementation plan.
 
 Learn more about [memory in {% data variables.product.prodname_vscode_shortname %} agents](../run/memory.md).
 
@@ -113,7 +110,7 @@ You can customize the agent loop for a project or workflow:
 
 * A [**custom agent**](../../agent-customization/custom-agents.md) defines instructions, available tools, a language model, and optional handoffs for a specific workflow.
 * [**Agent skills**](../../agent-customization/agent-skills.md) give an agent instructions and resources for a specialized task.
-* [**Hooks**](../../agent-customization/hooks.md) run commands at specific points in the agent lifecycle.
+* [**Hooks**](../../agent-customization/hooks.md) run commands at specific points in the agent's workflow, such as before or after a tool runs.
 
 Learn more about [customization concepts](customization.md).
 
