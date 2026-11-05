@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-04 15:17 UTC  
+> Atualizado em: 2026-11-05 15:18 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [GitHub Copilot is now available in Xcode’s coding assistant](https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant)
+
+**Data:** 2026-11-04  **Categorias:** `Release`, `copilot`
+
+You can now work with GitHub Copilot directly in Xcode&#8217;s built-in coding assistant, bringing Copilot into your native Xcode workflow. The integration is now in public preview, available starting with&#8230;
+
+The post [GitHub Copilot is now available in Xcode&#8217;s coding assistant](https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 

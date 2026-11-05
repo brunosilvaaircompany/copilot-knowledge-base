@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-04 15:17 UTC  
+> Atualizado em: 2026-11-05 15:18 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [CodeQL 2.27.4 improves accuracy and query metadata](https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata)
+
+**Data:** 2026-11-04  **Categorias:** `Improvement`, `application security`
+
+CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We&#8217;ve recently released CodeQL 2.27.4 with query accuracy improvements across several&#8230;
+
+The post [CodeQL 2.27.4 improves accuracy and query metadata](https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
