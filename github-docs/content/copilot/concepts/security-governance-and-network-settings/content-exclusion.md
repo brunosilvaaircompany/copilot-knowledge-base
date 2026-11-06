@@ -2,7 +2,7 @@
 
 ## About content exclusion for Copilot
 
-You can use content exclusion to configure Copilot to ignore certain files. When you exclude content from Copilot:
+You can configure content exclusion to make Copilot ignore certain files. When you exclude content from Copilot:
 
 * Inline suggestions will not be available in the affected files.
 * The content in affected files will not inform inline suggestions in other files.
@@ -30,28 +30,28 @@ The Copilot Business and Copilot Enterprise plans provide the following level of
 | Tool                                            | Inline suggestions support                    | Chat and agent support                         |
 |-------------------------------------------------|:---------------------------------------------:|:----------------------------------------------:|
 | Visual Studio        | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
-| Visual Studio Code    | {% octicon "check" aria-label="Supported" %}  | Chat: {% octicon "check" aria-label="Supported" %}<br>Edit: {% octicon "x" aria-label="Not supported" %}<br>Agent: {% octicon "x" aria-label="Not supported" %} |
+| Visual Studio Code    | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
 | JetBrains IDEs                                  | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}   |
 | Vim/Neovim                                      | {% octicon "check" aria-label="Supported" %}  | Not applicable                                 |
 | Xcode                                           | {% octicon "check" aria-label="Supported" %}  | {% octicon "x" aria-label="Not supported" %}   |
 | Eclipse                                         | {% octicon "check" aria-label="Supported" %}  | {% octicon "x" aria-label="Not supported" %}   |
 | Azure Data Studio                               | {% octicon "x" aria-label="Not supported" %}  | Not applicable                                 |
-| The GitHub website | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
-| GitHub Mobile    | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
 | The GitHub Copilot app | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
 | GitHub Copilot CLI        | Not applicable                                | {% octicon "check" aria-label="Supported" %}   |
+| Copilot in the cloud | Not applicable | {% octicon "check" aria-label="Supported" %} |
+| Copilot code review | Not applicable | {% octicon "check" aria-label="Supported" %} |
 
-Content exclusions also apply to Copilot code review on the GitHub website.
-
-> [!NOTE]
-> * Content exclusion is in public preview on the GitHub website and in GitHub Mobile and is subject to change.
-> * Content exclusion is currently not supported in Edit and Agent modes of Copilot Chat in Visual Studio Code and other editors.
+Copilot in the cloud includes chat and agent sessions started on the GitHub website, GitHub Mobile, or cloud sandboxes.
 
 ### Limitations of content exclusion
 
-Content exclusion is a guardrail for the tools that GitHub controls. It is not guaranteed to be respected by third-party MCP servers.
+Content exclusion is not a filesystem security boundary and cannot guarantee prevention of every form of file access. It is a guardrail for the tools that GitHub controls, and is not guaranteed to be respected by third-party MCP servers or clients.
 
 It's also possible that Copilot may use semantic information from an excluded file if the information is provided by the IDE indirectly. Examples of such content include type information and hover-over definitions for symbols used in code, as well as general project properties such as build configuration information.
+
+
+> [!NOTE]
+> When you use a Copilot agent in an IDE, GitHub Copilot CLI, or the GitHub Copilot app, content exclusion prevents the agent from accessing excluded files through Copilot tools and checks identifiable file paths in commands and scripts before running them, but might not detect indirect file access. Content exclusion is not a substitute for operating-system permissions or other access controls.
 
 
 Currently, content exclusions do not apply to symbolic links (symlinks) and repositories located on remote filesystems.

@@ -12,9 +12,11 @@ The policy for Copilot code review allows your licensed users to request reviews
 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
-1. Scroll down to "Available Agents", then click **Copilot code review**.
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
+1. Under "Features & clients", click **Configure features & clients**.
+
 1. Next to "Copilot code review", select a policy.
-1. Then choose which Copilot code review features to enable for your enterprise.
+1. Then choose which Copilot code review features to enable for your enterprise. For more information, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review#configuring-automatic-code-review-for-an-enterprise).
 
 ### Next steps
 

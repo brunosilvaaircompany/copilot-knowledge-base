@@ -32,10 +32,7 @@ Policy state | Outcome
 
 ### What counts as a feature?
 
-For the purposes of this policy, a "feature" refers to any policy configured on an enterprise's "Features & clients" page (`github.com/enterprises/ENTERPRISE/ai-controls/copilot/features`), **plus**:
-
-* The **Copilot code review** policy on the "Agents" page
-* The **MCP servers in Copilot** policy on the "MCP" page
+For the purposes of this policy, a "feature" refers to any policy configured on an enterprise's "Features & clients" page (`github.com/enterprises/ENTERPRISE/ai-controls/copilot/features`), **plus** the **MCP servers in Copilot** policy on the "MCP" page.
 
 The following policies are exceptions and are **not** affected:
 

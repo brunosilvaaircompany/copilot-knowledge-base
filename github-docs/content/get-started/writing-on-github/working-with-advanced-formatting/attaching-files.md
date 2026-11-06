@@ -55,10 +55,8 @@ The following file types are supported for uploads in issue comments, pull reque
 
 * PDFs (`.pdf`)
 * Microsoft Office documents (`.docx`, `.pptx`, `.xlsx`, `.xls`, `.xlsm`)
-
 * OpenDocument formats (`.odt`, `.fodt`, `.ods`, `.fods`, `.odp`, `.fodp`, `.odg`, `.fodg`, `.odf`)
 * Rich text and word processing files (`.rtf`, `.doc`)
-
 
 ### Text and data files
 
@@ -67,26 +65,19 @@ The following file types are supported for uploads in issue comments, pull reque
 
 ### Development and code files
 
-
 * C files (`.c`)
 * C# files (`.cs`)
 * C++ files (`.cpp`)
 * CSS files (`.css`)
 * Diagrams (`.drawio`)
-
 * Dump files (`.dmp`)
-
 * HTML files (`.html`, `.htm`)
 * Java files (`.java`)
 * JavaScript files (`.js`)
 * Jupyter notebooks (`.ipynb`)
-
 * Patch files (`.patch`)
-
 * PHP files (`.php`)
-
 * Profiling files (`.cpuprofile`)
-
 * Program database files (`.pdb`)
 * Python files (`.py`)
 * Shell scripts (`.sh`)
@@ -95,15 +86,12 @@ The following file types are supported for uploads in issue comments, pull reque
 * XML files (`.xml`)
 * YAML files (`.yaml`, `.yml`)
 
-
 > [!NOTE]
 > If you use Linux and try to upload a `.patch` file, you will receive an error message. This is a known issue.
 
 ### Archive and compressed files
 
 * Archives and packages (`.zip`, `.gz`, `.tgz`)
-
-
 
 ### Communication and logs
 

@@ -11,18 +11,6 @@ New installations of version 3.19 and later use OpenTelemetry metrics by default
 
 
 
-
-
-
-
-> [!NOTE]
-> OpenTelemetry metrics are in public preview and subject to change. We would love to hear your feedback on the preview. You can share it with your customer success team, or leave a comment in the [community discussion post](https://github.com/orgs/community/discussions/176826).
-
-
-
-
-
-
 ## Prerequisites
 
 * GitHub Enterprise Server 3.18 or later
@@ -33,11 +21,7 @@ New installations of version 3.19 and later use OpenTelemetry metrics by default
 
 
 
-{% ifversion ghes > 3.18 %}
-
 OpenTelemetry metrics are enabled by default for **new installations** of GitHub Enterprise Server 3.19 and later. Instances upgraded from earlier releases still have collectd metrics enabled by default. For the complete migration procedure for instances that still use collectd, including how to disable collectd, see [Migration Guidance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/migration-guidance).
-
-
 
 ### Using the Management Console
 
@@ -84,11 +68,7 @@ OpenTelemetry metrics are enabled by default for **new installations** of GitHub
 1. Wait for the configuration run to complete.
 
 
-{% else %}
 
-OpenTelemetry metrics are always enabled and are the only supported metrics stack. Collectd is retired in GitHub Enterprise Server 3.23 and later, and upgrading from an earlier version disables it. For information about post-upgrade checks and historical collectd data, see [Migration Guidance](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/migration-guidance).
-
-{% endif %}
 
 ## Performance considerations
 

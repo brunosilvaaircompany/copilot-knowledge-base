@@ -28,8 +28,9 @@ Before enabling Copilot in the cloud, you may want to review your enterprise pol
 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
-1. In the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
 1. Under "Features & clients", click **Configure features & clients**.
+
 1. Select a global policy for Copilot in the cloud, then communicate your decision with your organizations.
 
    > [!TIP] If you select **Enabled for selected organizations**, click **Manage organizations**, then **Select organizations**. In the "Copilot in the cloud" dialog, select the organizations to enable, then click **Save**. To select organizations based on custom properties instead, use the REST API. See [Copilot Coding Agent Management](https://docs.github.com/en/rest/copilot/copilot-coding-agent-management#selecting-organizations-with-custom-properties).

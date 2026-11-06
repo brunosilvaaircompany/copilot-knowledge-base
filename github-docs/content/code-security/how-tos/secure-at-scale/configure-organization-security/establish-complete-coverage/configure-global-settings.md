@@ -163,7 +163,7 @@ When you enable default setup, an initial scan runs, but weekly scheduled scans 
 
 ## Configuring global secret scanning settings
 
-Secret scanning is a security tool that scans the entire Git history of repositories, as well as issues, pull requests, discussions, and wikis{% elsif ghes < 3.19 %}, pull requests, and discussions in those repositories, for leaked secrets that have been accidentally committed, such as tokens or private keys.
+Secret scanning is a security tool that scans the entire Git history of repositories, as well as issues, pull requests, discussions, and wikis in those repositories, for leaked secrets that have been accidentally committed, such as tokens or private keys.
 
 
 You can customize several global settings for secret scanning:
@@ -179,8 +179,6 @@ To provide context for developers when secret scanning blocks a commit, you can 
 ### Defining custom patterns
 
 You can define custom patterns for secret scanning with regular expressions. Custom patterns can identify secrets that are not detected by the default patterns supported by secret scanning. To create a custom pattern, click **New pattern**, then enter the details for your pattern and click **Save and dry run**. For more information on custom patterns, see [Define Custom Patterns](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns).
-
-
 
 ### Specifying patterns to include in push protection
 
@@ -204,8 +202,6 @@ You can customize which secret patterns are included in push protection, giving 
 
 
 For more information on how to read data on the secret scanning pattern configuration page, see [Secret Pattern Data](https://docs.github.com/en/code-security/reference/secret-security/secret-pattern-data).
-
-
 
 ## Creating security managers for your organization
 

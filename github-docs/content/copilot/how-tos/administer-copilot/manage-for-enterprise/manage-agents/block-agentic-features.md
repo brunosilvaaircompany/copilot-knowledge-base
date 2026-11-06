@@ -10,7 +10,8 @@ Most Copilot policies only affect users who receive a Copilot license from your 
 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
-1. On the "Agents" page, under "Available agents", click **Copilot in the cloud**.
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
+1. Under "Features & clients", click **Configure features & clients**.
 
 1. Next to **Block Copilot cloud agent in all repositories owned by ENTERPRISE-NAME**, click the toggle.
 
@@ -22,7 +23,8 @@ Most Copilot policies only affect users who receive a Copilot license from your 
 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
-1. In the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
 1. Under "Features & clients", click **Configure features & clients**.
+
 1. Find the **Copilot code review** policies.
 1. Next to **Block Copilot code review in all enterprise repositories**, click the toggle.

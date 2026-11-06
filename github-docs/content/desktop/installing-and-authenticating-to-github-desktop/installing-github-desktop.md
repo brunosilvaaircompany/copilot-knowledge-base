@@ -48,6 +48,6 @@ You can install GitHub Desktop on Windows 10 64-bit or later.
 
 {% linux %}
 
-Linux is not yet supported
+Linux is not yet supported.
 
 {% endlinux %}

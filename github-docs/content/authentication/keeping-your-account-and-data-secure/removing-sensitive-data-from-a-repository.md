@@ -132,7 +132,10 @@ After using `git-filter-repo` to remove the sensitive data and pushing your chan
     If you have successfully cleaned up all references other than PRs, and no forks have references to the sensitive data, Support will then:
     If you have successfully cleaned up all references other than PRs, and no forks have references to the sensitive data, your site administrator will then:
 
-    * Dereference or delete any affected PRs on GitHub.
+    * Dereference or delete any affected pull requests on GitHub. Deleting an entire pull request removes its conversation, reviews, and diffs.
+
+      GitHub Support may offer to remove only a pull request's internal references ("dereferencing"). This can preserve the pull request body and comment history while making affected historical diffs inaccessible. Dereferencing does not remove sensitive data quoted in retained bodies or comments.
+
     * Run a garbage collection on the server to expunge the sensitive data from storage.
     * Remove cached views.
     * If LFS Objects are involved, delete and/or purge the orphaned LFS objects.

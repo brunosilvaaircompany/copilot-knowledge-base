@@ -92,15 +92,11 @@ See [Push Protection](https://docs.github.com/en/code-security/concepts/secret-s
 
 Push protection can be enabled at the organization, repository, and user account level. See [Enable Push Protection](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/prevent-future-leaks/enable-push-protection).
 
-
-
 > [!NOTE]
 > The configuration of patterns for push protection at enterprise and organization level is currently in public preview and subject to change.
 
 
 To align secret detection with internal security policies and more effectively prevent unauthorized exposure of sensitive information in your repositories, you can customize which secret patterns are included in push protection at the enterprise or organization level. See [Configure Additional Settings](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-enterprise-security/establish-complete-coverage/configure-additional-settings#specifying-patterns-to-include-in-push-protection-for-your-enterprise) and [Configure Global Settings](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/configure-global-settings#specifying-patterns-to-include-in-push-protection).
-
-
 
 ## Setting up an approval process for sensitive actions
 

@@ -11,8 +11,6 @@ For more information on rulesets, see [About Rulesets](https://docs.github.com/e
 
 For customers on GitHub Team and GitHub Enterprise plans you can also create rulesets for repositories in an organization. For more information, see [Creating Rulesets For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/creating-rulesets-for-repositories-in-your-organization).
 
-
-
 ## Importing prebuilt rulesets
 
 To import one of the prebuilt rulesets by GitHub, see [`github/ruleset-recipes`](https://github.com/github/ruleset-recipes).

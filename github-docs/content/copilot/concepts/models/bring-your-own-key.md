@@ -47,3 +47,12 @@ Custom models are available in Copilot Chat, Copilot CLI, and IDEs, and apply to
 Users access these models through GitHub's Copilot API without configuring the provider's credentials themselves. Users must have a Copilot license and internet access to use the custom models.
 
 For more information, see [Enable Custom Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models).
+
+## Choosing between the two
+
+For most organizations, we recommend enterprise custom models as the default, with BYOK configured by users allowed where it's needed.
+
+* **Enterprise custom models** keep provider keys under central control, so users never handle credentials. Requests are routed through GitHub, so usage is fully reported in Copilot usage metrics.
+* **BYOK configured by users** fits local or on-device models, air-gapped environments, and experimentation with new providers. Its usage is reported from client telemetry in supported clients only. You can disable it in IDEs with a policy.
+
+To see how each kind is used, see [Copilot Usage Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/copilot-usage-metrics#byok-metrics-fields).

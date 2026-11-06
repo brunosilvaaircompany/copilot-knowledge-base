@@ -135,7 +135,7 @@ Network settings are excluded from the backup snapshot. After restoration, you m
 ### Prerequisites
 
 1. Ensure maintenance mode is enabled on the primary instance and all active processes have completed. For more information, see [Enabling And Scheduling Maintenance Mode](https://docs.github.com/en/admin/administering-your-instance/configuring-maintenance-mode/enabling-and-scheduling-maintenance-mode).
-1. Stop replication on all replica nodes in a high-availability configuration. For more information, see [About High Availability Configuration](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-high-availability/about-high-availability-configuration#ghe-repl-stop).
+1. Tear down replication on all replica nodes in a high-availability configuration. For more information, see [Removing A High Availability Replica](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-high-availability/removing-a-high-availability-replica).
 1. Provision a new GitHub Enterprise Server instance to use as a target for the restoration of your backup. For more information, see [Setting Up A GitHub Enterprise Server Instance](https://docs.github.com/en/admin/installing-your-enterprise-server/setting-up-a-github-enterprise-server-instance).
 1. If your GitHub Enterprise Server instance has GitHub Actions enabled, you must configure the external storage provider for GitHub Actions on the replacement instance. For more information, see [Backing Up And Restoring GitHub Enterprise Server With GitHub Actions Enabled](https://docs.github.com/en/admin/managing-github-actions-for-your-enterprise/advanced-configuration-and-troubleshooting/backing-up-and-restoring-github-enterprise-server-with-github-actions-enabled).
 

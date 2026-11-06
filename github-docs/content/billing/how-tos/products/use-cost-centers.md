@@ -41,6 +41,14 @@ After you create a cost center, you can add a monthly budget and receive alerts 
 
 You can view the usage of your cost centers and download the usage data for further analysis. See [Gather Insights](https://docs.github.com/en/billing/tutorials/gather-insights).
 
+## Finding the cost center for a resource
+
+You can use the REST API to find which cost center a user, organization, repository, or enterprise team belongs to, without listing and searching through all cost centers.
+
+Enterprise owners and billing managers can look up any resource in the enterprise. Organization owners and holders of a custom role with fine-grained read access to enterprise billing are limited to resources and cost centers they can access.
+
+The endpoint returns the cost center's ID and name, or an empty `memberships` array if the resource is not assigned to a cost center. For parameters and authentication requirements, see [Cost Centers](https://docs.github.com/en/rest/billing/cost-centers).
+
 ## Viewing, editing, and deleting cost centers
 
 You can view, edit, and delete cost centers to manage your business units effectively.

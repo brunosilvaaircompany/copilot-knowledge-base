@@ -11,11 +11,7 @@ Each GitHub Enterprise Server instance accepts SSH connections over two ports. S
 
 To accommodate the SSH clients in your environment, you can configure the types of connections that your GitHub Enterprise Server instance will accept.
 
-
-
-You can also configure the cryptographic algorithms (ciphers, MAC algorithms, key exchange algorithms, and signature types) that {% ifversion ghes %}your GitHub Enterprise Server instance uses for SSH connections. For more information, see [Configuring Tls And SSH Ciphers](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-tls-and-ssh-ciphers).
-
-{% endif %}
+You can also configure the cryptographic algorithms (ciphers, MAC algorithms, key exchange algorithms, and signature types) that your GitHub Enterprise Server instance uses for SSH connections. For more information, see [Configuring Tls And SSH Ciphers](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-tls-and-ssh-ciphers).
 
 ## Configuring SSH connections with RSA keys
 

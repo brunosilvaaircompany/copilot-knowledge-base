@@ -8,6 +8,9 @@ For these plans, seat billing starts when you grant an organization member acces
 
 Enterprise owners can also assign seats to users directly, without going through an organization. See [Grant Access](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/grant-access).
 
+> [!TIP]
+> If your organization belongs to an enterprise, see [Enterprise Ai Governance](https://docs.github.com/en/copilot/get-started/enterprise-ai-governance) to align access, policies, and feature rollout with its governance approach.
+
 ## Granting access to GitHub Copilot for all current and future users in your organization
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.

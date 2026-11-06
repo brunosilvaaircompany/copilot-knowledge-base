@@ -175,8 +175,6 @@ Flag | Description
 `--error-checks-only` | Only run high severity checks that should be treated as blocking errors.
 `--warning-checks-only` | Only run low severity checks that can be treated as warnings.
 
-
-
 ### ghe-crypto
 
 This utility is used to verify and list Management Console `github-ssl` crypto settings for TLS and SSH connections.
@@ -260,8 +258,6 @@ ghe-crypto check ssh-ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.co
 ```
 
 For more information about configuring cipher suites and cryptographic algorithms, see [Configuring Tls And SSH Ciphers](https://docs.github.com/en/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-tls-and-ssh-ciphers).
-
-
 
 ### ghe-console
 

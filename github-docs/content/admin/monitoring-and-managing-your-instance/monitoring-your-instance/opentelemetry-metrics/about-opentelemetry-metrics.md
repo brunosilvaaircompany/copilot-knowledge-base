@@ -11,18 +11,6 @@ New installations of version 3.19 and later use OpenTelemetry metrics by default
 
 
 
-
-
-
-
-> [!NOTE]
-> OpenTelemetry metrics are in public preview and subject to change. We would love to hear your feedback on the preview. You can share it with your customer success team, or leave a comment in the [community discussion post](https://github.com/orgs/community/discussions/176826).
-
-
-
-
-
-
 ## About OpenTelemetry metrics
 
 The OpenTelemetry monitoring stack is based on industry-standard observability tools and includes various components for collecting, processing, and storing metrics. This comprehensive approach provides a complete view of your system's performance and health across all components of your GitHub Enterprise Server instance.

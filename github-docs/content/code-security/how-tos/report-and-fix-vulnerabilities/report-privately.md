@@ -34,3 +34,15 @@ If the repository doesn't have private vulnerability reporting enabled, you need
 
 
 The next steps depend on the action taken by the repository maintainer. See [Manage Vulnerability Reports](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/manage-vulnerability-reports).
+
+## Rate limits for private vulnerability reports
+
+To protect maintainers from spam and abuse, GitHub limits the number of private vulnerability reports that you can submit:
+
+* You can submit a maximum of 25 reports per 24-hour period across repositories where you are not a trusted reporter.
+* You can submit a maximum of 5 reports to a single repository per 24-hour period.
+* By default, a repository accepts a maximum of 10 reports per 24-hour period from all reporters combined.
+
+Repository maintainers can set a lower or higher total limit for their repository and exempt trusted reporters. Reports to a repository where you are a trusted reporter are exempt from that repository's limits and do not count toward your global 25-report limit. Reports to other repositories still count toward both the global limit and each repository's limits.
+
+If you reach a rate limit, you will see a message when you try to submit a new report on GitHub. Each 24-hour period starts with the first report that counts toward that limit, and the limit resets in full when the period ends.

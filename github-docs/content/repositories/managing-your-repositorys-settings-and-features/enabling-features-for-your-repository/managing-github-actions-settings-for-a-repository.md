@@ -50,9 +50,7 @@ You can disable GitHub Actions for a repository, or set a policy that configures
 
 When you allow actions and reusable workflows from only in your enterprise, the policy blocks all access to actions authored by GitHub. For example, the [`actions/checkout`](https://github.com/actions/checkout) action would not be accessible.
 
-
 When you enable **Require actions to be pinned to a full-length commit SHA**, all actions must be pinned to a full-length commit SHA to be used. This includes actions from your enterprise and actions authored by GitHub. Reusable workflows can still be referenced by tag. For more information, see [Secure Use](https://docs.github.com/en/actions/reference/security/secure-use#using-third-party-actions).
-
 
 1. Click **Save**.
 
@@ -83,9 +81,7 @@ When you choose **Allow enterprise, and select non-enterprise, actions and reusa
 
   Use `,` to separate patterns. For example, to allow all actions and reusable workflows from the `octocat` and `octokit` organizations, you can specify `octocat/*, octokit/*`.
 
-  
   Use the `!` prefix to block patterns. For example, to allow all actions and reusable workflows from the `space-org` organization, but block a specific action like `space-org/action`, you can specify `space-org/*, !space-org/action@*`. By default, only actions and reusable workflows specified in the list will be allowed. To allow all actions and reusable workflows while also blocking specific actions, you can specify `*, !space-org/action@*`.
-  
 
 
 

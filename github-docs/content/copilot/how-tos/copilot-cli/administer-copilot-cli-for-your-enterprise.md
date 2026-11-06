@@ -12,8 +12,9 @@ You can control the use of Copilot CLI by configuring a policy.
 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
-1. To manage policies for **Copilot**, in the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.
-1. Under "Features & clients," click **Configure features & clients**.
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
+1. Under "Features & clients", click **Configure features & clients**.
+
 1. In the "Clients" section, for Copilot CLI, select your preferred policy.
 
 > [!NOTE]

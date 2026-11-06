@@ -196,8 +196,6 @@ For more information about production context, see [Prioritize Alerts In Product
 |`team`|Display Dependabot alerts owned by members of the specified team, for example: `team:octocat-dependabot-team`.|
 |`topic`|Display Dependabot alerts with the matching repository topic, for example: `topic:asdf`.|
 
-
-
 ## Dependabot dashboard filters
 
 **Available in:** Dependabot dashboard view
@@ -221,8 +219,6 @@ For more information about production context, see [Prioritize Alerts In Product
 
 
 Alternatively, you can use complex filters by clicking **{% octicon "filter" aria-hidden="true" aria-label="filter" %} Filter** and build custom filters to suit your needs.
-
-
 
 ## Code scanning view filters
 

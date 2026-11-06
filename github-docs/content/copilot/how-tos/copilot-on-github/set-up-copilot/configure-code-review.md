@@ -96,7 +96,7 @@ You can configure how Copilot code review completes code reviews in your reposit
    * **Allow Copilot approvals to count toward merge requirements**: Toggle on so Copilot approvals can satisfy pull request approval requirements.
    * **File paths**: Optionally, limit which pull requests count toward merge requirements. Enter one file glob per line to count approvals only on pull requests where every changed file matches one of the globs. Leave blank to count approvals for all files. Up to 15 globs are supported.
 
-1. To prevent people from using an external Copilot license to request reviews in this repository, enable **Only allow Copilot code review to be triggered by authorized users**. If this setting is enabled for your organization, you cannot turn it off for the repository. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#reviews-requested-with-an-external-copilot-license).
+1. To prevent people from using an external Copilot license to request reviews in this repository, enable **Block reviews requested with an external Copilot license**. If this setting is enabled for your organization, you cannot turn it off for the repository. See [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#reviews-requested-with-an-external-copilot-license).
 
 ## Configuring automatic code review for repositories in an organization
 
@@ -177,7 +177,7 @@ You can configure how Copilot code review completes code reviews in repositories
    * **Enable for selected repositories**: Copilot approvals can count toward merge requirements only in the repositories you select. If you choose this option, also assign the repositories you want to enable this for.
    * **Disabled everywhere**: Copilot approvals cannot count toward merge requirements in any repository in the organization.
 
-1. To prevent people from using an external Copilot license to request reviews in your organization's repositories, enable **Only allow Copilot code review to be triggered by authorized users**. This setting applies to every repository in the organization, and repository administrators cannot turn it off.
+1. To prevent people from using an external Copilot license to request reviews in your organization's repositories, enable **Block reviews requested with an external Copilot license**. This setting applies to every repository in the organization, and repository administrators cannot turn it off.
 
 ## Configuring automatic code review for an enterprise
 
@@ -201,11 +201,12 @@ You can configure how Copilot code review completes code reviews for your enterp
 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
-1. Scroll down to "Available Agents", then click **Copilot code review**.
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
+1. Under "Features & clients", click **Configure features & clients**.
+
 1. Next to "Copilot code review", select a policy.
 1. To choose the depth of Copilot code reviews, next to "Default review effort level," select the default effort level for your enterprise. Organizations and repositories can override this default.
 1. To limit the review effort available across the enterprise, next to "Maximum review effort," select **No limit**, **Lite**, **Balanced**, or **Max**. Organizations and repositories can choose the selected effort level or a lower level, but cannot exceed the maximum.
-1. Then choose which Copilot code review features to enable for your enterprise.
 1. To choose who is billed for Copilot code review usage by members with a paid Copilot license, next to "Choose how members with a Copilot license are billed," select a policy.
    * **Member**: Use the member's Copilot entitlement for organizations in the enterprise.
    * **Organization**: Bill the organization that owns the repository.

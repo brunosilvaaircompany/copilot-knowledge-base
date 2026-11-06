@@ -16,8 +16,6 @@ To create a more **targeted review process** that prioritizes meaningful updates
 
 For detailed guidance, see [Prioritizing meaningful updates](/code-security/tutorials/secure-your-dependencies/optimizing-pr-creation-version-updates#prioritizing-meaningful-updates).
 
-
-
 ## Automatically adding assignees
 
 Use `assignees` to automatically add individuals or teams as assignees to pull requests.
@@ -27,8 +25,6 @@ For detailed guidance, see [Automatically adding assignees](/code-security/tutor
 ## Automatically adding reviewers
 
 To ensure your project's security updates get addressed promptly by the appropriate team, you can automatically add reviewers to Dependabot pull requests using a CODEOWNERS file. See [About Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
-
-
 
 ## Labeling pull requests with custom labels
 
@@ -59,7 +55,7 @@ For detailed guidance, see [Customizing pull request branch names](/code-securit
 In this example, the `dependabot.yml` file:
 * Uses a private registry for updates to npm dependencies.
 * Disables version updates for dependencies, so that any customizations apply to security updates only.
-* Is customized so that Dependabot applies custom labels to the pull requests and automatically adds reviewers and assignees.
+* Is customized so that Dependabot applies custom labels to the pull requests and automatically adds assignees.
 * Groups security updates for golang dependencies into a single pull request.
 
 ```yaml copy

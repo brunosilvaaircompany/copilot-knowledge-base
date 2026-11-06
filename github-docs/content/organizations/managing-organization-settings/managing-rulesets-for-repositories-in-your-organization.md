@@ -108,8 +108,6 @@ You can view all the changes to a ruleset and revert back to a specific iteratio
 
 
 
-
-
 ## Importing a ruleset
 
 You can import a ruleset from another repository or organization using the exported JSON file from the previous section. This can be useful if you want to apply the same ruleset to multiple repositories or organizations.
@@ -131,8 +129,6 @@ You can import a ruleset from another repository or organization using the expor
 
 1. Open the exported JSON file.
 1. Review the imported ruleset and click **Create**.
-
-
 
 
 

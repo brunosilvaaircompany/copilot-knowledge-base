@@ -111,8 +111,6 @@ You can view all the changes to a ruleset and revert back to a specific iteratio
 
 
 
-
-
 ## Importing a ruleset
 
 You can import an existing ruleset using a JSON file. This can be useful if you want to apply the same ruleset to multiple repositories or organizations.
@@ -163,7 +161,7 @@ Additionally, these insights are available via the rule suites [REST API](/rest/
 
    ![Screenshot of the "Rule Insights" page. To the right of an event labeled "not-allowed," an icon of three horizontal dots is outlined in orange.](/assets/images/help/repository/view-rule-runs.png)
 
-{%- ifversion repo-rules-merge-queue %}
+
 1. Optionally, review merge queue details for corresponding pull requests in the same merge group.
 
 
@@ -202,8 +200,6 @@ To view the dashboard:
 At the organization level, you can view the rule insights dashboard to review the evaluation activity of rulesets across your organization. See [Managing Rulesets For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization#viewing-the-rule-insights-dashboard).
 
 
-
-{% endif %}
 
 {% endif %}
 

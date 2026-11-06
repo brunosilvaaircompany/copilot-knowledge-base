@@ -3,6 +3,9 @@
 Copilot policies are also managed at the enterprise level. If your enterprise owner has selected a specific policy, such as enabling a feature everywhere, disabling it everywhere, or enabling it for selected organizations only, you cannot override that setting at the organization level. For information on how policies combine, see [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
 
 
+> [!TIP]
+> If your organization belongs to an enterprise, see [Enterprise Ai Governance](https://docs.github.com/en/copilot/get-started/enterprise-ai-governance) for guidance on coordinating policies with broader governance and rollout decisions.
+
 ## Enabling Copilot features and models in your organization
 
 1. In the upper-right corner of GitHub, click your profile picture, then click **{% octicon "organization" aria-hidden="true" aria-label="organization" %} Organizations**.

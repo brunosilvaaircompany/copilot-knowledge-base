@@ -84,7 +84,9 @@ After you submit your support request, we may ask you to share a support bundle 
 * `elasticsearch-logs/github-enterprise.log`: Elasticsearch logs
 * `configuration-logs/`: GitHub Enterprise Server configuration logs
 
+
 * `collectd/logs/collectd.log`: Collectd logs
+
 * `mail-logs/mail.log`: SMTP email delivery logs
 
 For more information, see [Audit Log For An Enterprise](https://docs.github.com/en/admin/concepts/security-and-compliance/audit-log-for-an-enterprise).

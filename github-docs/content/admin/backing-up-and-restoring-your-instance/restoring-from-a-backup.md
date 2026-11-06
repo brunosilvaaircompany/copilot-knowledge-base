@@ -19,10 +19,11 @@ You also can’t restore from a newer version to an older one. For example, tryi
 
 Before restoring a backup:
 
-1. **Enable maintenance mode** on the target instance. See [Enabling And Scheduling Maintenance Mode](https://docs.github.com/en/admin/administering-your-instance/configuring-maintenance-mode/enabling-and-scheduling-maintenance-mode).
-1. **Verify access** to the backup storage containing the snapshot.
+1. **Provision a new GitHub Enterprise Server instance** to use as a target for the restoration of your backup. For more information, see [Setting Up A GitHub Enterprise Server Instance](https://docs.github.com/en/admin/installing-your-enterprise-server/setting-up-a-github-enterprise-server-instance).
 1. **Tear down replication**. If using High Availability (HA), run `ghe-repl-teardown` on the target instance. Stopping replication with `ghe-repl-stop` is not sufficient, because the target remains configured as part of a replication pair and the restore fails. See [Removing A High Availability Replica](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-high-availability/removing-a-high-availability-replica).
-1. **Prepare for GitHub Actions** — if enabled, ensure the target instance is configured with the correct external storage. See [Restoring With GitHub Actions Enabled](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/restoring-with-github-actions-enabled) for details.
+1. **Prepare for GitHub Actions**: if enabled, ensure the target instance is configured with the correct external storage. See [Restoring With GitHub Actions Enabled](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/restoring-with-github-actions-enabled) for details.
+1. **Enable maintenance mode** on the target instance. See [Enabling And Scheduling Maintenance Mode](https://docs.github.com/en/admin/administering-your-instance/configuring-maintenance-mode/enabling-and-scheduling-maintenance-mode).
+1. **Verify access** to the backup storage containing the snapshot after attaching and mounting the backup disk volume to the target instance. See [Configuring The Backup Service](https://docs.github.com/en/admin/backing-up-and-restoring-your-instance/configuring-the-backup-service#reusing-a-previously-initialized-disk).
 
 ## Starting the restore operation
 
@@ -30,7 +31,6 @@ To restore from a snapshot:
 
 1. SSH into the target instance as the `admin` user.
 1. Run one of the following commands:
-
    * Restore the latest snapshot:
 
      ```shell
@@ -46,19 +46,17 @@ To restore from a snapshot:
    * (Optional) Overwrite appliance configuration, certificates, and license data from the backup. The `-c` option does not control database or repository restoration:
 
      ```shell
-     ghe-restore -c          # Latest snapshot
-     ghe-restore -s <SNAPSHOT_TIMESTAMP> -c  # Specific snapshot
+     ghe-restore -c # Latest snapshot
+     ghe-restore -s <SNAPSHOT_TIMESTAMP> -c # Specific snapshot
      ```
 
 1. **Finalize in Management Console:**
-
     * Review all configuration settings (network, auth, TLS, etc.).
     * Click **Save settings** to apply them and start services.
     * The instance is not fully operational until this step is complete.
-
 1. **Validate the restored instance** to ensure everything works as expected.
+   * (Optional) Configure an IP exception list on the restored instance to allow access to a specified list of IP addresses. For more information, see [Enabling And Scheduling Maintenance Mode](https://docs.github.com/en/admin/administering-your-instance/configuring-maintenance-mode/enabling-and-scheduling-maintenance-mode#validating-changes-in-maintenance-mode-using-the-ip-exception-list).
 1. **If using HA**, complete the restore on a standalone instance first. Then reconfigure HA.
-
    * If you run into sync issues (e.g., stale UUIDs in `ghe-repl-status`), run `ghe-repl-teardown`.
    * For help, contact GitHub Support.
 

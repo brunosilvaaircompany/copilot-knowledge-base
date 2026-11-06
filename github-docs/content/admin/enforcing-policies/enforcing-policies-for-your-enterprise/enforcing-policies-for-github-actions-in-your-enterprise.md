@@ -43,9 +43,7 @@ You can enforce strict controls without defining exceptions or additional config
 * **Allow enterprise actions and reusable workflows:** Only actions and reusable workflows defined in a repository within the enterprise can be used. Blocks all access to actions authored by GitHub, such as the [`actions/checkout`](https://github.com/actions/checkout) action.
 * **Allow enterprise, and select non-enterprise, actions and reusable workflows**
 : Any action or reusable workflow defined in a repository within the enterprise can be used, plus any action or reusable workflow that matches criteria you specify.
-
-* **Require actions to be pinned to a full-length commit SHA**: All actions must be pinned to a full-length commit SHA to be used. This includes actions from your enterprise and actions authored by GitHub. {% ifversion actions-workflow-policy %}Reusable workflows can still be referenced by tag. For more information, see [Secure Use](https://docs.github.com/en/actions/reference/security/secure-use#using-third-party-actions).
-{%- endif %}
+* **Require actions to be pinned to a full-length commit SHA**: All actions must be pinned to a full-length commit SHA to be used. This includes actions from your enterprise and actions authored by GitHub. Reusable workflows can still be referenced by tag. For more information, see [Secure Use](https://docs.github.com/en/actions/reference/security/secure-use#using-third-party-actions).
 
 <span id="allowing-select-actions-and-reusable-workflows-to-run" ></span>
 
@@ -72,11 +70,9 @@ When specifying actions and reusable workflows, use the following syntax:
    * To allow all actions and reusable workflows in repositories that start with octocat, use `*/octocat**@*`.
 * To specify multiple patterns, use `,` to separate patterns.
    * To allow all actions and reusable workflows from the `octocat` and `octokit` organizations, use `octocat/*, octokit/*`.
-
 * To block specific patterns, use the `!` prefix.
-   * To allow all actions{% ifversion actions-workflow-policy %} and reusable workflows from the `space-org` organization, but block a specific action like `space-org/action`, use `space-org/*, !space-org/action@*`.
+   * To allow all actions and reusable workflows from the `space-org` organization, but block a specific action like `space-org/action`, use `space-org/*, !space-org/action@*`.
    * By default, only actions and reusable workflows specified in the list will be allowed. To allow all actions and reusable workflows while also blocking specific actions, use `*, !space-org/action@*`.
-{%- endif %}
 
 
 

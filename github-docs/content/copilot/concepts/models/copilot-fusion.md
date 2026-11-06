@@ -49,7 +49,8 @@ Copilot Fusion has multiple effort levels to let you prioritize the quality, cos
 | **Fusion Fast** | Only used in scenarios that require fast models. | Not selectable by users. Only available in Visual Studio Code inline chat. |
 
 > [!NOTE]
-> If you have installed either the MAI Code 1.1 Flash or {% data variables.copilot.qwen3.8-flash-next %} models locally, these are more likely to be used, where appropriate, on the Fusion Standard effort level. See [Selecting local models in Copilot Fusion](#selecting-local-models-in-copilot-fusion).
+> * If Fusion Max is not available in your model picker, one or more of the models required for Fusion Max may be disabled. See [Configure Access To Ai Models](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models) and [Manage Availability Of Default Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models#configuring-models-available-for-copilot-fusion).
+> * If you have installed either the MAI Code 1.1 Flash or {% data variables.copilot.qwen3.8-flash-next %} models locally, these are more likely to be used, where appropriate, on the Fusion Standard effort level. See [Selecting local models in Copilot Fusion](#selecting-local-models-in-copilot-fusion).
 
 ## Selecting local models in Copilot Fusion
 

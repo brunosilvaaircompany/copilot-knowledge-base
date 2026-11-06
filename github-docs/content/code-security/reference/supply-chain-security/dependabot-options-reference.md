@@ -161,15 +161,13 @@ Supported by: `bundler`, `composer`, `mix`, `maven`, `npm`, `pip`, and `uv`.
 * Supports only the value `scope`
 * When defined any prefix is followed by the type of dependencies updated in the commit: `deps` or `deps-dev`.
 
-
-
 ## `cooldown` {% octicon "versions" aria-label="Version updates" height="24" %}
 
 Defines a **cooldown period** for dependency updates, allowing updates to be delayed for a configurable number of days. The `cooldown` option is only available for _version_ updates, not _security_ updates.
 
 This feature enables users to customize how often Dependabot generates new version updates, offering greater control over update frequency. For examples, see [Optimizing Pr Creation Version Updates](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/optimizing-pr-creation-version-updates#setting-up-a-cooldown-period-for-dependency-updates).
 
-{% ifversion dependabot-cooldown-default-days %}
+
 
 Dependabot default behavior:
 
@@ -203,6 +201,9 @@ The table below shows the package managers that support `cooldown`. The `default
 
 | Package manager        | Default days supported | SemVer-bump days supported |
 |-----------------------|:----------------------:|:--------------------------:|
+|  |
+| APM                   | {% octicon "check" aria-label="Supported" %}              | {% octicon "check" aria-label="Supported" %} |
+|  |
 |  |
 | Bazel               | {% octicon "check" aria-label="Supported" %}              | {% octicon "x" aria-label="Not supported" %} |
 |  |
@@ -261,8 +262,6 @@ The table below shows the package managers that support `cooldown`. The `default
 >
 > * If `semver-major-days`, `semver-minor-days`, or `semver-patch-days` are not defined, the `default-days` settings will take precedence for cooldown-based updates.
 > * The `exclude` list always take precedence over the `include` list. If a dependency is specified in both lists, it is **excluded from cooldown** and will be updated immediately.
-
-{% endif %}
 
 ## `directories` or `directory` {% octicon "versions" aria-label="Version updates" height="24" %} {% octicon "shield-check" aria-label="Security updates" height="24" %}
 
@@ -533,6 +532,9 @@ When either limit is reached, Dependabot reports an error and stops opening addi
 Package manager | YAML value      | Supported versions |
 ---------------|------------------|:------------------:|
 |  |
+| APM           | `apm`            | Not applicable           |
+|  |
+|  |
 | Bazel         | `bazel`          | v7, v8, v9               |
 |  |
 | Bun | `bun`         | >=v1.1.39              |
@@ -729,8 +731,6 @@ When `registries` is defined for a package manager:
 * Dependabot uses the access details defined in the top-level `registries` section.
 
 Supported values: `REGISTRY_NAME` or `"*"`
-
-
 
 ## `schedule` {% octicon "versions" aria-label="Version updates only" height="24" %}
 
@@ -992,6 +992,9 @@ The `dependabot.yml` file doesn't control the versioning tags that you can use, 
 | git submodule       | `gitsubmodule` | None—pins to commit SHAs or git tags (no versioning scheme) | `my-lib@abc1234`, `shared-utils@v1.2.0` |
 | Go modules          | `gomod`        | `alpha`, `beta`, `rc` (SemVer prerelease after `-`) | `github.com/go-chi/chi@v5.0.0-rc1`, `google.golang.org/grpc@v1.60.0-beta.1`, `github.com/octo-org/octo-module@v0.17.0-alpha.1` |
 |  |
+| APM                 | `apm`          | Any SemVer prerelease identifier (commonly `alpha`, `beta`, `rc`) | `microsoft/edge-ai#v1.1.0-rc.1`, `octo-org/octo-skills/skills/review#review-v2.0.0-beta.1` |
+|  |
+|  |
 | Bazel               | `bazel`        | Any SemVer prerelease identifier (commonly `alpha`, `beta`, `rc`) | `rules_go@0.46.0-rc1`, `rules_rust@0.40.0-beta`, `bazel_skylib@1.5.0-alpha` |
 |  |
 | Bun                 | `bun`          | `alpha`, `beta`, `rc`, `canary` (SemVer prerelease after `-`) | `bun@1.0.0-beta.1`, `elysia@1.0.0-rc.3`, `hono@4.0.0-canary.1` |
@@ -1042,6 +1045,9 @@ The following details describe how Dependabot interprets versioning for specific
 * **Elm:** Enforces strict SemVer (`MAJOR.MINOR.PATCH` integers only). The Elm package registry does not allow publishing prerelease versions. Dependabot compares versions numerically.
 * **Go modules:** Follows SemVer with a mandatory `v` prefix. Pseudo-versions (`v0.0.0-YYYYMMDDHHMMSS-commithash`) represent unreleased commits and are always treated as prerelease. The `+incompatible` suffix marks modules at major version 2+ without a `go.mod` file and does not affect version ordering.
 * **git submodule:** Dependabot tracks the latest commit on the configured branch. There is no version comparison—updates always move the pinned SHA forward. If the submodule tracks a tag, Dependabot follows the tag's commit.
+
+* **APM:** Resolves dependency versions from git tags. Both plain tags (`v1.4.0`) and package-scoped tags (`review-v1.4.0`, `review--v1.4.0`, `review_v1.4.0`) are recognized. The prefix of a package-scoped tag must match the package name, which is the repository name or the last component of a virtual package path. Build metadata (`+...`) is ignored for version precedence. Commit SHA pins only move to annotated, non-prerelease release tags.
+
 
 * **Bazel:** Follows SemVer prerelease conventions. The Bazel Central Registry (BCR) `.bcr.N` suffix is stripped before comparison and does not affect prerelease detection.
 

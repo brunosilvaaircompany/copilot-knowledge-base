@@ -45,6 +45,9 @@ If you are not happy with any of these settings, you can disable specific models
 
 Configure which models you want available for Copilot Fusion. See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion). Models enabled here will be available to a user through Copilot Fusion, but only if your other model policies allow that user to use the model. 
 
+> [!NOTE]
+> Frontier models are often used by Fusion Max. If you disable any of the models required for Fusion Max, then Fusion Max will not be available for use.
+
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
 1. In the sidebar, click {% octicon "copilot" aria-hidden="true" aria-label="copilot" %} **Copilot**.

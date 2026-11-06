@@ -2720,12 +2720,3 @@ Version `2022-11-28` is the first version of the GitHub Enterprise Server REST A
 
 
 {% endif %}
-
-
-{% if query.apiVersion == nil or "2022-11-28" <= query.apiVersion %}
-## Version 2022-11-28
-
-Version `2022-11-28` is the first version of the GitHub Enterprise Server REST API after date-based versioning was introduced. This version does not include any breaking changes.
-
-
-{% endif %}

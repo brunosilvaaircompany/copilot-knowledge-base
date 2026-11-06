@@ -68,9 +68,7 @@ When you choose **Allow enterprise, and select non-enterprise, actions and reusa
 
   Use `,` to separate patterns. For example, to allow all actions and reusable workflows from the `octocat` and `octokit` organizations, you can specify `octocat/*, octokit/*`.
 
-  
   Use the `!` prefix to block patterns. For example, to allow all actions and reusable workflows from the `space-org` organization, but block a specific action like `space-org/action`, you can specify `space-org/*, !space-org/action@*`. By default, only actions and reusable workflows specified in the list will be allowed. To allow all actions and reusable workflows while also blocking specific actions, you can specify `*, !space-org/action@*`.
-  
 
 
 

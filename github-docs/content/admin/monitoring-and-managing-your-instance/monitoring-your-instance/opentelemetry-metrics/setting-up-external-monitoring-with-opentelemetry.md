@@ -1,13 +1,5 @@
 # Setting up external monitoring with OpenTelemetry
 
-> [!NOTE]
-> OpenTelemetry metrics are in public preview and subject to change. We would love to hear your feedback on the preview. You can share it with your customer success team, or leave a comment in the [community discussion post](https://github.com/orgs/community/discussions/176826).
-
-
-
-
-
-
 ## External monitoring approaches
 
 External monitoring with OpenTelemetry allows you to integrate your GitHub Enterprise Server instance with existing monitoring infrastructure and tools. GitHub Enterprise Server provides two primary approaches for external monitoring:

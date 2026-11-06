@@ -21,7 +21,7 @@ To access Copilot usage metrics, the **"Copilot usage metrics"** policy must be 
 1. Click the **Insights** tab.
 
 
-The dashboard displays aggregated telemetry from developer IDEs and updates daily, though data may be up to 3 days behind UTC.
+The dashboard displays aggregated telemetry from developer IDEs and updates daily. Data for a given day is available within two full UTC days after that day closes.
 
 ## Step 2: Track license activation
 

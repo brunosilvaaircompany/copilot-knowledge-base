@@ -18,7 +18,6 @@ For a forked repository, the only people who have bypass permissions for a push 
 
 To import one of the prebuilt rulesets by GitHub, see [`github/ruleset-recipes`](https://github.com/github/ruleset-recipes).
 
-
 You can import an existing ruleset using a JSON file. This can be useful if you want to apply the same ruleset to multiple repositories or organizations.
  For more information, see [Managing Rulesets For Repositories In Your Organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization#importing-a-ruleset).
 

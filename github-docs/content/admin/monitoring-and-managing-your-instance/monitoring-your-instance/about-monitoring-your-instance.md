@@ -12,7 +12,11 @@ New installations of version 3.19 and later use OpenTelemetry metrics by default
 
 For more information about OpenTelemetry metrics, see [About Opentelemetry Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/opentelemetry-metrics/about-opentelemetry-metrics).
 
+
+
 For more information about collectd metrics, see [About Collectd Metrics](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/monitoring-your-instance/collectd-metrics/about-collectd-metrics).
+
+
 
 ## Dashboards
 

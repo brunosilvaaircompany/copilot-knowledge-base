@@ -105,9 +105,9 @@ For requests associated with organization members who have paid Copilot licenses
 
 ### Reviews requested with an external Copilot license
 
-An external Copilot license is one that is not provided by the organization or enterprise that owns the repository, such as a personal license or a license from another organization. By default, people can use an external license to request a review from Copilot.
+By default, people can use an external Copilot license to request a review from Copilot. An external Copilot license is one that is not provided by the organization or enterprise that owns the repository, such as a personal license or a license from another enterprise. Licenses assigned by another organization in the same enterprise do **not** count as external.
 
-To prevent this, organization owners and repository administrators can enable the **Only allow Copilot code review to be triggered by authorized users** setting for an organization or a single repository. When the setting is enabled:
+To prevent people from using an external Copilot license to request reviews, organization owners and repository administrators can enable the **Block reviews requested with an external Copilot license** setting for an organization or a single repository. When the setting is enabled:
 
 * Copilot is not offered as a reviewer to people who are not authorized, and API review requests from those people do not start a review.
 * In personal repositories, only the repository owner or a direct collaborator can request a review.

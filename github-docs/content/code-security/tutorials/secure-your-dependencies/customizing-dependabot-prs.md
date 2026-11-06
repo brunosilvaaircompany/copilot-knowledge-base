@@ -6,8 +6,6 @@ For example, to integrate Dependabot's pull requests into your CI/CD pipelines, 
 
 There are several different customization options which can all be used in combination, and tailored per package ecosystem.
 
-
-
 ## Automatically adding assignees
 
 By default, Dependabot raises pull requests without any assignees.
@@ -38,8 +36,6 @@ updates:
 By default, Dependabot raises pull requests without any reviewers.
 
 To ensure your project's security updates get addressed promptly by the appropriate team, you can automatically add reviewers to Dependabot pull requests using a CODEOWNERS file. See [About Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
-
-
 
 ## Labeling pull requests with custom labels
 

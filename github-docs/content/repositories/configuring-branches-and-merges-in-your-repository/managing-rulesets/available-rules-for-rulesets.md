@@ -62,6 +62,13 @@ You can configure various settings for your merge queue rule.
 
 You can require that changes are successfully deployed to specific environments before a branch can be merged. For example, you can use this rule to ensure that changes are successfully deployed to a staging environment before the changes merge to your default branch.
 
+
+
+For stacked pull requests, deploying a pull request also satisfies this requirement for pull requests below it while the stack has a linear history. See [Stacked Pull Requests](https://docs.github.com/en/pull-requests/reference/stacked-pull-requests#branch-protections-and-required-checks).
+
+
+
+
 ## Require signed commits
 
 When you enable required commit signing on a branch, contributors and bots can only push commits that have been signed and verified to the branch. For more information, see [About Commit Signature Verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).

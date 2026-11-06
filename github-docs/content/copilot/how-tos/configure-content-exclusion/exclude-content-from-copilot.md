@@ -1,11 +1,8 @@
 # Excluding content from GitHub Copilot
 
+You can configure content exclusion to make Copilot ignore certain files. For more information and a list of supported clients, see [Content Exclusion](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/content-exclusion).
+
 ## Configuring content exclusion for your repository
-
-You can use your repository settings to specify content in your repository that GitHub Copilot should ignore.
-
-> [!NOTE]
-> GitHub Copilot CLI and Agent mode in Copilot Chat in IDEs do not support content exclusion. For more information about these Copilot features, see [About Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli) and [Chat In Ide](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/chat-in-ide).
 
 1. On GitHub, navigate to the main page of the repository.
 
@@ -152,6 +149,11 @@ As an enterprise owner, you can use the enterprise settings to specify files tha
 
 > [!NOTE]
 > The key difference between setting content exclusion at the enterprise level and the organization level is that rules set at the enterprise level apply to all Copilot users in the enterprise, whereas the rules set by organization owners only apply to users who are assigned a Copilot seat by that organization.
+
+## Limitations of content exclusion with Copilot agents
+
+When you use a Copilot agent in an IDE, GitHub Copilot CLI, or the GitHub Copilot app, content exclusion prevents the agent from accessing excluded files through Copilot tools and checks identifiable file paths in commands and scripts before running them, but might not detect indirect file access. Content exclusion is not a substitute for operating-system permissions or other access controls.
+
 
 ## Testing changes to content exclusions
 

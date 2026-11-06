@@ -2,6 +2,9 @@
 
 After your initial rollout, the Copilot usage metrics dashboard helps you monitor how usage evolves over time. By exploring adoption, feature, model, and language trends, you can see how developers are engaging with Copilot and identify areas where additional enablement or communication may drive deeper value.
 
+> [!TIP]
+> To connect these insights with broader governance and rollout decisions, see [Enterprise Ai Governance](https://docs.github.com/en/copilot/get-started/enterprise-ai-governance).
+
 ## Prerequisite
 
 To access Copilot usage metrics, the **"Copilot usage metrics"** policy must be enabled:
@@ -20,7 +23,7 @@ To access Copilot usage metrics, the **"Copilot usage metrics"** policy must be 
 
 1. In the left sidebar, click **Copilot usage**.
 
-Data in the dashboard is primarily based on IDE telemetry and is supplemented by server-side telemetry to capture additional active users. Data may appear up to three full UTC days behind the current date. See [Copilot Metrics](https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics).
+Data in the dashboard is primarily based on IDE telemetry and is supplemented by server-side telemetry to capture additional active users. Data for a given day is available within two full UTC days after that day closes. See [Copilot Metrics](https://docs.github.com/en/copilot/concepts/billing-and-usage/copilot-usage-metrics/copilot-metrics).
 
 ## Using Copilot Chat to analyze exported data
 

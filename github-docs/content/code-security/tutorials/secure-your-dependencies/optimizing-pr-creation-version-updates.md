@@ -41,13 +41,11 @@ updates:
 
 See also [schedule](/code-security/reference/supply-chain-security/dependabot-options-reference#schedule-).
 
-
-
 ### Setting up a cooldown period for dependency updates
 
 You can use `cooldown` with a combination of options to control when Dependabot creates pull requests for **version updates**, but not **security updates**.
 
-{% ifversion dependabot-cooldown-default-days %}
+
 
 By default, Dependabot applies a cooldown period of 3 days to version updates, so a new version is not considered for a version update until 3 days after its release. **This default cooldown does not apply to security updates.**
 
@@ -93,8 +91,6 @@ SemVer is supported for most package managers. Updates to new versions for depen
 * Patch updates: Delayed by 3 days (`semver-patch-days: 3`).
 
 See also [`cooldown`](/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-).
-
-{% endif %}
 
 ## Prioritizing meaningful updates
 

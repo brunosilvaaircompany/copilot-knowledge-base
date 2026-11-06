@@ -29,7 +29,7 @@ You can also enable or disable Dependabot security updates for an individual rep
 
 1. In the "Security and quality" section of the sidebar, click **{% octicon "codescan" aria-hidden="true" aria-label="codescan" %} Advanced Security**.
 
-1. To the right of "Dependabot security updates," click **Enable** to enable the feature or **Disable** to disable it. For public repositories, the button is disabled if the feature is always enabled.
+1. To the right of "Dependabot security updates," click **Enable** to enable the feature or **Disable** to disable it.
 
 ## Grouping Dependabot security updates into a single pull request
 

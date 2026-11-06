@@ -34,6 +34,7 @@ The procedure below sets the enterprise policy for **user-level preferences**—
 
 1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
 1. Under "Features & clients", click **Configure features & clients**.
+
 1. Scroll down to "Features", find the **Copilot Memory** setting and select a policy from the dropdown.
 
    * **Let organizations decide**: User-level preferences are off by default for all organizations in the enterprise. Organization owners can enable them for their organization if they choose.
@@ -81,7 +82,8 @@ Allowing Copilot Dreaming through an enterprise or organization policy does not 
 1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
 
 1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
-1. Under "Features & clients," click **Configure features & clients**.
+1. Under "Features & clients", click **Configure features & clients**.
+
 1. Find the "Memory" section.
 1. Make sure the policy for Copilot Memory is set to either **Let organizations decide** or **Enabled everywhere**. Enabling Copilot Memory does not, by itself, enable Copilot Dreaming.
 1. Set the policy for Copilot Dreaming:
@@ -173,6 +175,7 @@ By default, repository-level facts and user-level preferences expire 90 days aft
 
 1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
 1. Under "Features & clients", click **Configure features & clients**.
+
 1. Scroll down to "Features" and find the **Copilot Memory** settings.
 1. Edit the number of days in the **Copilot Memory retention** setting and click **Save**.
 

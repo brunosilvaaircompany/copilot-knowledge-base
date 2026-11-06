@@ -35,8 +35,6 @@ To ensure that any repositories created by users outside of an organization are 
 
 Under "Additional settings", use the options in the "User namespace repositories" section to enable or disable features for new repositories.
 
-
-
 ### Specifying patterns to include in push protection for your enterprise
 
 > [!NOTE]
