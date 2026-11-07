@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-29 14:02 UTC  
+> Atualizado em: 2026-11-07 13:50 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [GitHub Copilot Fusion now supports selection of local models](https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models)
+## [@GitHub in Slack and Teams is generally available and more](https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available)
 
-**Data:** 2026-10-28  **Categorias:** `Release`, `client apps`, `copilot`, `universe26`
+**Data:** 2026-11-06  **Categorias:** `Release`, `client apps`, `copilot`
 
-Today we are shipping intelligent routing for local models into experimental preview. GitHub Copilot Fusion can now choose between supported on-device models and cloud models, enabling intelligent local model routing&#8230;
+Turn conversations into code with @GitHub in Slack and Teams! Investigate bugs, create issues, implement changes, and open pull requests&#8212;all without leaving your conversation. What&#8217;s new Build and review together&#8230;
 
-The post [GitHub Copilot Fusion now supports selection of local models](https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models) appeared first on [The GitHub Blog](https://github.blog).
+The post [@GitHub in Slack and Teams is generally available and more](https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
