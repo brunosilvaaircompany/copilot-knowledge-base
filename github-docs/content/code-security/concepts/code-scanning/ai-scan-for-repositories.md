@@ -25,7 +25,7 @@ You do not need a GitHub Copilot license.
 
 You run AI Scan for repositories on demand, and each scan consumes **Code Security AI credits**. This usage is separate from active-committer licensing.
 
-Usage is billed to the account responsible for the organization's billing. 
+Usage is billed to the account responsible for the organization's billing.
 
 For public repositories owned by a personal account, usage is billed to that personal account unless the repository owner has a GitHub Copilot license provided by an organization or enterprise. In that case, usage is billed to the organization or enterprise that provides the license.
 
@@ -54,6 +54,7 @@ The alert will only close automatically if the applied fix changes the exact lin
 ## Limitations
 
 * Scans analyze the default branch only.
+* Self-hosted runners are not supported.
 * Scans are manually triggered. Scheduled scans and automatic scans on push are not supported.
 * The agent selects which code to examine within a time budget. A scan does not exhaustively analyze every file or guarantee that it finds every vulnerability.
 * Matching against existing CodeQL alerts is best effort, so duplicate alerts can occur.

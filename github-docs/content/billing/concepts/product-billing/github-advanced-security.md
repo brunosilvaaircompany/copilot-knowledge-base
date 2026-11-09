@@ -63,9 +63,21 @@ For information about features that consume Code Security AI credits, see [Ai Po
 
 Push protection for AI-detected secrets consumes **Secret Protection AI credits**.
 
-AI credit usage applies to your organization. The number of AI credits consumed will depend on the amount of file content scanned during a push. Charging by content scanned ensures pricing is fair and predictable for organizations.
+The number of AI credits consumed will depend on the amount of file content scanned during a push. Charging by content scanned ensures pricing is fair and predictable for organizations.
 
-Usage is billed to the organization that owns the repository. You can view usage under **AI credit consumption** for the **Secret Protection AI credits** SKU in your AI usage insights.
+Usage is billed to the organization that owns the repository:
+
+* For repositories owned by an organization in an enterprise, usage counts toward the enterprise's pool of AI credits, not the individual pool of the user who pushes.
+* For repositories owned by a standalone organization, usage counts toward the organization's pool of AI credits.
+* For repositories owned by an enterprise-managed user in their user namespace, usage counts toward the repository owner.
+
+The exception is a repository in the personal namespace of a managed user account:
+
+* Usage for that repository counts toward the repository owner's individual pool of AI credits, regardless of who pushes.
+* Organization-owned repositories in an enterprise with managed user accounts still use the enterprise's pool.
+* Otherwise, push protection for AI-detected secrets does not consume users' individual AI credits.
+
+You can view usage under **AI credit consumption** for the **Secret Protection AI credits** SKU in your AI usage insights.
 
 Each push that is scanned can consume AI credits, even when no potential secret is identified and the push is not blocked, as the model is still providing value by scanning the push.
 

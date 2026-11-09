@@ -33,5 +33,13 @@ An administrator configures a model provider for the instance, and users connect
 
 For more information, see [Set Up Copilot CLI](https://docs.github.com/en/copilot/copilot-on-ghes/set-up-copilot-cli).
 
+{% ifversion copilot-cli-ghes-ga %}
 > [!NOTE]
-> This feature is in technical preview and subject to change.
+> This feature is generally available.
+
+
+{% else %}
+
+To use this feature as generally available, upgrade your instance to **version 3.22.3 or later**.
+
+{% endif %}

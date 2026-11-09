@@ -101,6 +101,10 @@ If you have an active Copilot Pro, Copilot Pro+, or Copilot Max plan, and are th
 
 You can cancel your Copilot plan at any time. The cancellation will take effect at the end of your current billing cycle. See [View And Change Your Copilot Plan](https://docs.github.com/en/copilot/how-tos/manage-your-account/view-and-change-your-copilot-plan).
 
+AI credits usage beyond your plan’s included amount is billed after it occurs, separately from your subscription renewal. You must pay for usage you incurred before you canceled, downgraded to Copilot Free, or reduced your additional usage budget to $0. Usage from your final days on the plan might not appear on your last invoice, so you might receive a charge after you cancel.
+
+To investigate a charge, review the payment history section in [Manage Payment Info](https://docs.github.com/en/billing/how-tos/set-up-payment/manage-payment-info#viewing-payment-history) and compare the invoice or receipt with the usage dates in the usage reports section of [View Productlicense Use](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use#downloading-usage-reports). Your current plan, budget, or payment date alone does not show when the usage occurred.
+
 ## Determining your billing date
 
 Your billing date will depend on whether or not you are already being billed by GitHub.
@@ -132,4 +136,3 @@ We recommend keeping your IDE, client, and Copilot extensions on the latest avai
 
 * [Plans](https://docs.github.com/en/copilot/get-started/plans)
 * [Manage Your Account](https://docs.github.com/en/copilot/how-tos/manage-your-account)
-* [Manage Payment Info](https://docs.github.com/en/billing/how-tos/set-up-payment/manage-payment-info)

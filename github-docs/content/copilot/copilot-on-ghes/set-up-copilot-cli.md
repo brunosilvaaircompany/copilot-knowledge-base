@@ -1,7 +1,8 @@
 # Set up GitHub Copilot CLI for GitHub Enterprise Server
 
 > [!NOTE]
-> This feature is in technical preview and subject to change.
+> This feature is generally available.
+
 
 You can configure Copilot CLI to work with GitHub Enterprise Server in disconnected or air-gapped environments without connectivity to GitHub Cloud. An administrator configures a model provider for the instance, and users connect Copilot CLI with their GitHub Enterprise Server credentials.
 

@@ -44,7 +44,7 @@ These instructions explain how to use Copilot code review in the GitHub website.
 
    Any comments you add to Copilot's review comments will be visible to humans, but they won't be visible to Copilot, and Copilot won't reply.
 
-You can also request a review from Copilot through the GitHub REST API by requesting `copilot-pull-request-reviewer[bot]` as a reviewer. For more information, see [Review Requests](https://docs.github.com/en/rest/pulls/review-requests#request-reviewers-for-a-pull-request).
+You can also use the GitHub REST API to request reviews from Copilot and to identify reviews and comments from Copilot code review. For more information, see [Review Requests](https://docs.github.com/en/rest/pulls/review-requests#request-reviewers-for-a-pull-request), [Reviews](https://docs.github.com/en/rest/pulls/reviews), and [Comments](https://docs.github.com/en/rest/pulls/comments).
 
 ## Enabling automatic reviews
 

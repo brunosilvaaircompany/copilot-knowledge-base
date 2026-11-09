@@ -217,3 +217,13 @@ You can configure how Copilot code review completes code reviews for your enterp
    * **Let organizations decide**: Organization owners can choose whether to enable Copilot approvals.
    * **Enable for selected organizations**: Copilot approvals are enabled only for the organizations you select.
    * **Disabled everywhere**: Organizations cannot enable Copilot approvals. This is the default.
+
+## Configuring Copilot code review with the API
+
+You can use the GitHub REST and GraphQL APIs to manage some Copilot code review settings.
+
+* **Enterprise**: Enable or disable Copilot code review for all organizations, or let organization owners decide.
+* **Organization**: Enable or disable Copilot code review when the enterprise lets organization owners decide, set the default review effort level, and configure the runner that Copilot code review uses.
+* **Repository**: Set the review effort level and choose whether reviews use custom instructions and MCP servers.
+
+Other settings on this page, such as maximum review effort, billing, and approvals, are not available through the API. For more information, see [GraphQL API reference for Copilot](/graphql/reference/copilot).

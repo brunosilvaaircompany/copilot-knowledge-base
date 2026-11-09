@@ -145,7 +145,7 @@ Users are grouped into the following phases:
 
 | Phase | What it represents |
 |:--|:--|
-| Passive users | The user has not met the engagement threshold for a phase during the period. A passive user may still be using Copilot regularly, for example by asking questions in Copilot Chat or agent mode without applying any code edits. In the API, this phase is labeled `No Cohort`. |
+| Chat-first users | The user is active but hasn't used a qualifying feature on at least two distinct days in the trailing 28-day window. For example, a chat-first user may be asking questions in Copilot Chat or agent mode without applying any code edits. In the API, this phase is labeled `No Cohort`. |
 | Phase 1: Code first | The user engaged with code completions and/or agent edits, where Copilot writes changes directly into files in the IDE. Using Copilot Chat or agent mode without producing code completion or agent edit activity does not qualify on its own. |
 | Phase 2: Agent first | The user engaged with a single GitHub-based agent surface, such as Copilot cloud agent, Copilot code review, or Copilot CLI. Both active engagement with Copilot code review and having it automatically assigned to review a pull request count as the same surface. |
 | Phase 3: Multi-agent | The user engaged with two or more GitHub-based agent surfaces, or with the GitHub Copilot app. |
@@ -156,17 +156,17 @@ Phase assignment is recalculated daily from the trailing 28-day window, so a use
 
 The impact dashboard counts every user who was active during the trailing 28-day window and groups each user by their current phase. The phase classification rules are the same, but the dashboard population is broader than the `totals_by_ai_adoption_phase.total_engaged_users` field in API and NDJSON reports, which counts users who were active on a specific day.
 
-Users who haven't met any phase's threshold are grouped into **Passive users**, which is not a measure of inactivity, but a signal that a user's engagement hasn't yet reached the level needed to reliably classify their adoption depth. For example, a user with fewer than two active days in the trailing 28-day window, or one who only lightly uses a surface like Copilot Chat on GitHub.com, shows as a passive user.
+Users who haven't met any phase's threshold are grouped into **Chat-first users**, which is not a measure of inactivity, but a signal that a user's engagement hasn't yet reached the level needed to reliably classify their adoption depth. For example, a user with fewer than two active days in the trailing 28-day window, or one who only lightly uses a surface like Copilot Chat on GitHub.com, shows as a chat-first user.
 
 Because phase assignment is based on **which surfaces a user engages with**, not simply how many actions they take, a user with high completion volume but no agent usage stays in Phase 1, while a user with lighter but broader usage across agent surfaces progresses to Phase 2 or Phase 3.
 
 For the underlying schema fields, see [AI adoption phase fields](/copilot/reference/copilot-usage-metrics/copilot-usage-metrics#ai-adoption-phase-fields).
 
-The impact dashboard's **adoption multiplier** divides the average amount of pull requests merged for engaged users, which are ones in Phase 1, 2, or 3, by the amount of pull requests merged for Passive users.
+The impact dashboard's **adoption multiplier** divides the average amount of pull requests merged for engaged users, which are ones in Phase 1, 2, or 3, by the amount of pull requests merged for chat-first users.
 
 This shows the relative impact of deeper adoption, independent of how many users fall into each phase. This is a measurement to understand the potential lift that becoming a more engaged user can provide.
 
-For example, if users in the engaged cohorts averaged 20 pull requests/user/month and the passive cohort averaged 10, then the equation is 20 / 10 = 2x multiplier.
+For example, if engaged users averaged 20 merged pull requests per user per month and chat-first users averaged 10, the multiplier is 20 / 10 = 2x.
 
 ### Understanding industry comparisons
 
