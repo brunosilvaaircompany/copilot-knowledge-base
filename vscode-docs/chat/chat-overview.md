@@ -49,7 +49,7 @@ For example, enter the following message to run your tests:
 
 The command runs immediately in the session's default shell, without sending the message to the agent or asking for approval. It uses the session folder or worktree as the working directory. The command output and exit status appear in the chat transcript.
 
-**NOTE:** The `!` command isn't available in Local harness sessions, cloud sessions, or extension-based agent integrations. Use the [integrated terminal](https://code.visualstudio.com/docs/terminal/getting-started) to run commands yourself instead.
+**NOTE:** The `!` command isn't available in Local harness sessions `feature(local-harness)`, cloud sessions, or extension-based agent integrations. Use the [integrated terminal](https://code.visualstudio.com/docs/terminal/getting-started) to run commands yourself instead.
 
 ## Send messages while a request is running
 
@@ -87,7 +87,9 @@ Providing the right context helps the AI generate more relevant and accurate res
 
 Learn more about [managing context for AI](copilot-chat-context.md).
 
-## Generate and edit images (Experimental)
+## Generate and edit images
+
+`feature(image-generation)`
 
 Generate illustrations, UI mockups, or other image assets directly in chat. In a [{% data variables.product.prodname_copilot_short %} harness](../agents/run/agent-harnesses.md) session, the agent uses a dedicated image-generation model, separate from the language model selected for the conversation.
 
@@ -209,9 +211,11 @@ For an image background, run **Chat: Change Background Layout...** to repeat, st
 
 Backgrounds are hidden in high contrast themes to preserve chat readability. The background commands are also unavailable while a high contrast theme is active.
 
-#### Generate a chat background (Experimental)
+#### Generate a chat background
 
-Generate a background from a text description instead of finding an image yourself. [Configure image generation](#generate-and-edit-images-experimental) and keep `setting(chat.agentSessions.appearanceTools.enabled)` turned on.
+`feature(image-generation)`
+
+Generate a background from a text description instead of finding an image yourself. [Configure image generation](#generate-and-edit-images) and keep `setting(chat.agentSessions.appearanceTools.enabled)` turned on.
 
 In a [Copilot harness](../agents/run/agent-harnesses.md) session in the {% data variables.copilot.agents_window %}, ask the agent to generate an image and apply it as your chat background. For example:
 

@@ -21,12 +21,12 @@ New to agents? [Complete your first task with an agent](../quickstart.md). Avail
 | Make a focused edit | [Inline chat](../../chat/inline-chat.md) | Select code in the editor and describe the change. |
 | Get help while typing and editing | [Inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions) | Accept ghost text to complete code, or use next edit suggestions to navigate to and apply a related edit. |
 | Manage independent tasks across projects | [{% data variables.copilot.agents_window %}](../run/agents-window.md) | Select **Open in Agents** in the title bar, then start and monitor sessions. |
-| Continue agent work across apps and devices | [GitHub Environments (Preview)](../run/remote-agent-sessions.md#github-environments-preview) | Register your development machine from **Remote Connections**, then connect from a supported {% data variables.product.prodname_copilot_short %} client. For {% data variables.product.prodname_vscode_shortname %}-specific access, use [SSH or dev tunnels](../run/remote-agent-sessions.md#choose-how-to-connect). |
+| Continue agent work across apps and devices | [{% data variables.copilot.github_environments %}](../run/remote-agent-sessions.md#github-environments) `feature(github-environments)` | Register your development machine from **Remote Connections**, then connect from a supported {% data variables.product.prodname_copilot_short %} client. For {% data variables.product.prodname_vscode_shortname %}-specific access, use [SSH or dev tunnels](../run/remote-agent-sessions.md#choose-how-to-connect). |
 | Run and continue interactive work without keeping my machine online | [Cloud sessions](../run/cloud-sandbox-sessions.md) `feature(cloud-sessions)` | Turn on cloud session support, select **Cloud**, and choose a repository. Reopen the existing session to continue. |
 | Check a web app's behavior | [Browser tools](../run/browser-tools.md) | Ask the agent to open the app, test a user flow, and report the result. |
 | Repeat routine work on a schedule or repository event | [Automations](../run/automations.md) | Save a prompt and configuration in the {% data variables.copilot.agents_window %}. Check a manual run first. Cloud automations `feature(cloud-automations)` also support service-advertised issue and pull request triggers. |
 | Generate commit messages or rename symbols | [Smart actions](https://code.visualstudio.com/docs/editing/copilot-smart-actions) | Use the sparkle action or editor context menu without writing a prompt. |
-| Explore data or edit a notebook | [AI for notebooks](../guides/notebooks-with-ai.md) | In a **Local** agent session, ask the agent to create, edit, and run notebook cells. |
+| Explore data or edit a notebook | [AI for notebooks](../guides/notebooks-with-ai.md) | In a **Local** agent session `feature(local-harness)`, ask the agent to create, edit, and run notebook cells. |
 | Find code or settings without exact keywords | [Semantic search](https://code.visualstudio.com/docs/editing/copilot-smart-actions#semantic-search-results-preview) (Preview) and [AI settings search](https://code.visualstudio.com/docs/editing/copilot-smart-actions#search-settings-with-ai) | Search by meaning in the Search view, or describe a setting in the Settings editor. |
 
 <a name="chat-experience-in-vs-code"></a>
@@ -162,7 +162,7 @@ Type `/` to see commands available in the current session. Availability depends 
 | `/rename <name>`, `/help` | Rename a local chat, or list commands and agents in a local Ask chat. |
 | `/models`, `/tools` | Open the model picker, or configure tools for a local chat. |
 | `/init` | Generate or update workspace instructions in a local agent session. |
-| `/agents`, `/instructions`, `/skills`, `/prompts`, `/hooks` | Configure the corresponding customization type. In the {% data variables.copilot.chat_view %}, all are available with **Local**. Only `/prompts` and `/hooks` are available with **Copilot**. |
+| `/agents`, `/instructions`, `/skills`, `/prompts`, `/hooks` | Configure the corresponding customization type. In the {% data variables.copilot.chat_view %}, all are available with **Local** `feature(local-harness)`. Only `/prompts` and `/hooks` are available with **Copilot**. |
 | `/create-agent`, `/create-instructions`, `/create-skill`, `/create-prompt`, `/create-hook` | Generate a customization in a local agent session. |
 | `/troubleshoot` | Analyze agent debug logs in a local or {% data variables.copilot.copilot_cli_short %} session. |
 | `/debug` | Open the Chat Debug view from the {% data variables.copilot.chat_view %}, not the {% data variables.copilot.agents_window %}. |

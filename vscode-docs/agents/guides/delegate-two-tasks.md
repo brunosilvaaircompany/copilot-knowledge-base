@@ -120,6 +120,8 @@ Worktrees don't include uncommitted changes from your primary workspace. Git-ign
 
 Use the sessions list to track each task's status. Select a session to inspect its conversation and **Changes** view. Confirm which session is active before you send feedback or open a terminal.
 
+To prioritize tasks waiting for input or review, [triage sessions with Inbox mode](../run/sessions/organize-sessions.md#triage-sessions-with-inbox-mode).
+
 **TIP:** You can view multiple sessions side by side in the Agents window to easily compare their progress and changes. Drag and drop sessions to arrange them as needed.
 
 Check each task after its first meaningful change:

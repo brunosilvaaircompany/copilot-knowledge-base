@@ -21,7 +21,7 @@ For this walkthrough, work in the current folder. If you're using the {% data va
 
 Choose the tabs for your **harness**, not your language model. For example, a Claude model in a {% data variables.product.prodname_copilot_short %} session still uses the {% data variables.product.prodname_copilot_short %} harness.
 
-**NOTE:** The **Local** harness also supports the {% data variables.product.prodname_copilot_short %} file layout shown in this guide, but tool names and some activation behavior differ. For Local harness-specific configuration, see [custom instructions](../../agent-customization/custom-instructions.md), [agent skills](../../agent-customization/agent-skills.md), and [custom agents](../../agent-customization/custom-agents.md).
+**NOTE:** The **Local** harness `feature(local-harness)` also supports the {% data variables.product.prodname_copilot_short %} file layout shown in this guide, but tool names and some activation behavior differ. For Local harness-specific configuration, see [custom instructions](../../agent-customization/custom-instructions.md), [agent skills](../../agent-customization/agent-skills.md), and [custom agents](../../agent-customization/custom-agents.md).
 
 ## Establish a baseline
 

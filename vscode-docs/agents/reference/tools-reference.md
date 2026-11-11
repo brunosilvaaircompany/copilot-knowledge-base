@@ -19,7 +19,7 @@ Referencing a tool does not bypass its [approval and permission controls](../run
 
 ## Tools
 
-The following tables use Local harness tool reference names. Do not assume that these identifiers map directly to Copilot harness tools. In a Copilot session, use the **Tools** tab to [review the available tools](../run/tools.md#manage-available-tools).
+The following tables use Local harness `feature(local-harness)` tool reference names. Do not assume that these identifiers map directly to Copilot harness tools. In a Copilot session, use the **Tools** tab to [review the available tools](../run/tools.md#manage-available-tools).
 
 ### Read and search workspace files
 

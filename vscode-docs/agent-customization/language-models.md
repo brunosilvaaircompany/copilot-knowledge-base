@@ -29,7 +29,7 @@ You can further extend the list of available models by [using your own language 
 
 **NOTE:** If you are a {% data variables.copilot.copilot_business_short %} or {% data variables.copilot.copilot_enterprise_short %} user, your administrator needs to enable certain models for your organization by opting in to `Editor Preview Features` in the [Copilot policy settings](https://docs.github.com/en/enterprise-cloud@latest/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#enabling-copilot-features-in-your-organization) on GitHub.com.
 
-To compare solutions to the same coding task, use [model comparison (Preview)](../agents/run/compare-models.md) in the {% data variables.copilot.agents_window %}. Run one prompt with multiple models or harnesses, then review the results side by side.
+To compare solutions to the same coding task, use [model comparison](../agents/run/compare-models.md) in the {% data variables.copilot.agents_window %}. Run one prompt with multiple models or harnesses, then review the results side by side.
 
 ### Organization-managed model defaults
 
@@ -254,7 +254,7 @@ To pin or unpin a model:
 
 Bring Your Own Key (BYOK) lets you connect to any compatible model provider while still using the {% data variables.product.prodname_vscode_shortname %} chat experience and tools. You can use BYOK to access models from other providers, to run models locally, or to use models that are not yet available as built-in options in {% data variables.product.prodname_vscode_shortname %}.
 
-In [Local harness sessions](../agents/run/agent-harnesses.md#local), BYOK models work without signing into a GitHub account and without a Copilot plan. This lets you use AI chat features with your own models, including offline scenarios with local models such as Ollama.
+In [Local harness sessions](../agents/run/agent-harnesses.md#local) `feature(local-harness)`, BYOK models work without signing into a GitHub account and without a Copilot plan. This lets you use AI chat features with your own models, including offline scenarios with local models such as Ollama.
 
 **NOTE:** To use supported BYOK models in Copilot harness sessions in the {% data variables.copilot.chat_view %} or [{% data variables.copilot.agents_window %}](../agents/run/agents-window.md), enable `setting(chat.agentHost.byokModels.enabled)` `feature(agent-host-byok-models)`. For sign-in requirements, see [{% data variables.copilot.agents_window %} accounts and provider credentials](../agents/run/agents-window-configuration.md#manage-ai-providers-and-accounts).
 

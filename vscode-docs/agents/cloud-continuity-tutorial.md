@@ -1,5 +1,3 @@
-<a name="tutorial-continue-a-cloud-agent-session-in-your-terminal-experimental"></a>
-
 # Tutorial: Continue a cloud agent session in your terminal
 
 Start an agent task in {% data variables.product.prodname_vscode %}, close the application, and continue the same conversation from {% data variables.copilot.copilot_cli %} in a regular terminal. The agent runs in a managed cloud environment, so your development machine doesn't need to stay online for the task to run.
@@ -25,8 +23,6 @@ Choose a repository from your own projects that is available for cloud sessions.
 The task only reads repository files and returns its findings in the conversation. You don't need to install dependencies or run the project for this walkthrough.
 
 The cloud session works with the code available on GitHub.com. Uncommitted changes, local dependencies, and files that exist only on your computer aren't copied to the cloud environment.
-
-<a name="2-start-the-task-in-a-cloud-sandbox"></a>
 
 ## 2. Start the task in a cloud session
 

@@ -52,6 +52,8 @@ If the CLI isn't installed, `copilot` offers to install it. You can also add the
 
 The new session appears in the sessions list. To continue an existing conversation instead, use [Resume in Terminal](sessions/manage-sessions.md#use-copilot-cli-from-the-terminal), where available.
 
+If you already have a conversation running in the CLI, [continue it in the {% data variables.copilot.chat_view %}](sessions/manage-sessions.md#continue-a-cli-session-in-vs-code-experimental) with `/code` (Experimental).
+
 ## Work with the agent
 
 Keep the code and its checks beside the conversation as you work:
@@ -67,6 +69,8 @@ Keep the code and its checks beside the conversation as you work:
 The {% data variables.product.prodname_copilot_short %} working set works without Git, but only lists changes made through tracked edit tools, not terminal commands. Review other changed files separately. See [review controls by harness and interface](review-code-edits.md#review-agent-changes) for the complete workflow.
 
 To show a changed-files summary after each request, enable `setting(chat.checkpoints.showFileChanges)`. Supported tools depend on your harness and installed extensions. For example, you can [work with Jupyter notebooks](../guides/notebooks-with-ai.md) with the required tools installed. In a [remote workspace](https://code.visualstudio.com/docs/remote/remote-overview), the session uses that project's remote context and tools.
+
+If your project is on another machine, see [Work in a remote workspace](remote-agent-sessions.md#work-in-a-remote-workspace). To make sessions on this machine reachable from other clients, see [Make a host available for remote access](remote-agent-sessions.md#make-a-host-available-for-remote-access).
 
 ## Continue in another interface
 

@@ -65,7 +65,7 @@ Choose a task with a clear outcome and checks you can run to verify it. The foll
 
     You can optionally change the [agent harness](agent-harnesses.md#compare-agent-harnesses), agent, or model.
 
-**TIP:** To start a session in the background without navigating into it, press `kbstyle(Alt+Enter)` or hold `kbstyle(Alt)` and select **Send**. The session appears in the sessions list after you send the prompt.
+**TIP:** To start a session in the background without navigating into it, press `kbstyle(Alt+Enter)` or hold `kbstyle(Alt)` and select **Send**. Focus stays in the composer so you can start another task. Select **Open Session** in the confirmation to open the sent conversation. With the [Inbox mode setting](sessions/organize-sessions.md#turn-on-inbox-mode) enabled, you can also press `kbstyle(Ctrl+Enter)` (`kbstyle(Cmd+Enter)` on macOS).
 
 ### Choose where an agent makes changes
 
@@ -106,7 +106,7 @@ Use the sessions list to check status and change statistics. Select a session to
 * While it works, check that its changes stay within the task's scope. Send corrections to that session, not another task's conversation.
 * When it finishes, [review and validate the result](#review-and-finish-an-agent-session). A completed response isn't proof that the task is correct.
 
-Confirm the [active session](#understand-the-active-session) before sending feedback or running commands. For steering and stopping requests, see [Use chat](../../chat/chat-overview.md). To group, pin, or find sessions, see [Organize sessions](sessions/manage-sessions.md#organize-sessions).
+Confirm the [active session](#understand-the-active-session) before sending feedback or running commands. For steering and stopping requests, see [Use chat](../../chat/chat-overview.md). To group, pin, or prioritize sessions that need attention, see [Organize and triage sessions](sessions/organize-sessions.md).
 
 ### Arrange sessions in a grid
 
@@ -119,6 +119,20 @@ Drag a session to the top, bottom, left, or right edge of another session to cre
 Only one pane is active at a time. Selecting another session in the list replaces an unpinned active view.
 
 When multiple panes are visible, use the session header's **Session Layout** menu to arrange or resize them. **Maximize** expands one pane, and **Restore Size** returns to the grid. These actions are separate from **Session Layout**.
+
+### Open chats in separate windows
+
+`feature(agents-window-chat-windows)`
+
+To keep a conversation and its files on another display, enable `setting(sessions.chatWindows.enabled)`, then right-click a session or chat in the sessions list and select **Open in** > **New Window**. The setting is on by default in Insiders.
+
+You can also drag a chat tab or session title out of the window to open it separately, or into another chat window to move it there.
+
+Use **Configure Layout** in the new window's title bar to show chat and editors side by side or stacked. In the stacked layout, run **Agents: Toggle Chat Conversation** from the Command Palette to hide the conversation and keep only the input visible.
+
+To rearrange content, hover over the top edge of a chat, editor, or terminal area to reveal its layout handle. Drag the handle to an edge of another area, using the placement preview to choose its new position.
+
+To move the window's chats and editors back to the main window, select **More Actions** (**...**) > **Move to Main Window** in the chat header.
 
 ## Review and finish an agent session
 
@@ -277,7 +291,7 @@ For related conversations, select **+** (**New Nested Session**) on a supported 
 
 For shared context, chat tabs, side chats, and moving conversations, see [Run multiple chats in a session](sessions/manage-sessions.md#run-multiple-chats-in-a-session). To choose another harness, see [mixed-harness chats](sessions/manage-sessions.md#use-different-harnesses-in-a-session) `feature(mixed-harness-chats)`.
 
-### Compare model results (Preview)
+### Compare model results
 
 Run the same prompt with multiple models or harnesses to compare responses or isolated code changes. See [Compare model results](compare-models.md) for setup, judging, and synthesis options.
 
@@ -285,7 +299,7 @@ Run the same prompt with multiple models or harnesses to compare responses or is
 
 To edit or debug alongside a supported project conversation, select **Open in Editor** in the title bar. To return, select **Open in Agents**, then select the existing session. Check the [supported session types and continuation requirements](sessions/manage-sessions.md#continue-between-the-chat-view-and-agents-window).
 
-For continuity across apps and devices, use [GitHub Environments (Preview)](remote-agent-sessions.md#github-environments-preview). For {% data variables.product.prodname_vscode_shortname %}-specific remote access, use [SSH or dev tunnels](remote-agent-sessions.md#choose-how-to-connect). Keep the host and its required application or service running.
+For continuity across apps and devices, use [{% data variables.copilot.github_environments %}](remote-agent-sessions.md#github-environments) `feature(github-environments)`. For {% data variables.product.prodname_vscode_shortname %}-specific remote access, use [SSH or dev tunnels](remote-agent-sessions.md#choose-how-to-connect). Keep the host and its required application or service running.
 
 ## Automate follow-up work
 
@@ -339,7 +353,7 @@ Use `setting(git.worktreeIncludeFiles)` to [copy ignored files into new worktree
 
 ## Limitations
 
-* Sessions that use the [experimental Codex integration](agent-harnesses.md#codex) can run in both the {% data variables.copilot.agents_window %} and the main {% data variables.product.prodname_vscode_shortname %} window. Local harness sessions and Codex sessions from the OpenAI extension run only in the main {% data variables.product.prodname_vscode_shortname %} window.
+* Sessions that use the [experimental Codex integration](agent-harnesses.md#codex) can run in both the {% data variables.copilot.agents_window %} and the main {% data variables.product.prodname_vscode_shortname %} window. Local harness sessions `feature(local-harness)` and Codex sessions from the OpenAI extension run only in the main {% data variables.product.prodname_vscode_shortname %} window.
 
 * Copilot Cloud sessions are only supported for GitHub-backed repositories. For non-GitHub projects, you can still use Copilot in the {% data variables.copilot.agents_window %}.
 

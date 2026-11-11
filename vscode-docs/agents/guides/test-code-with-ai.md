@@ -130,5 +130,5 @@ Custom instructions guide the agent but don't enforce these safeguards. Review t
 ## Next steps
 
 * Follow a complete workflow to [fix an API bug with an agent](fix-a-bug-with-agents.md).
-* For a Local-harness example, set up a test-first workflow with [TDD custom agents and handoffs](test-driven-development-guide.md).
+* For a Local-harness example `feature(local-harness)`, set up a test-first workflow with [TDD custom agents and handoffs](test-driven-development-guide.md).
 * Try [testing web apps with browser agent tools](browser-agent-testing-guide.md).
