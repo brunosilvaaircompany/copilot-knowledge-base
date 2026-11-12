@@ -12,6 +12,8 @@ Copilot sends three types of data:
 * **Metrics** are numeric measurements that help you identify patterns over time. For example, token usage metrics track the number of input and output tokens used in model calls.
 * **Events** record individual actions at a specific point in time. For example, an edit feedback event records whether a user accepted or rejected an agent edit.
 
+For configuration options, exported signals, and attributes, see [Opentelemetry Reference](https://docs.github.com/en/copilot/reference/enterprise-administrators/opentelemetry-reference).
+
 By default, the data does not include directly identifying attributes, prompts, responses, tool arguments, tool results, or raw policy details. Enterprise administrators can independently enable the following capture classes through managed settings:
 
 * **Identity** adds the authenticated Copilot account name, local operating-system account, and machine name. This lets you attribute activity without collecting conversation or tool content.
@@ -45,4 +47,3 @@ For more details of how OpenTelemetry is used across clients, see:
 
 * [Monitor agent usage with OpenTelemetry](https://code.visualstudio.com/docs/agents/guides/monitoring-agents) in the VS Code documentation
 * [Opentelemetry](https://docs.github.com/en/copilot/how-tos/copilot-sdk/observability/opentelemetry)
-* [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#opentelemetry-monitoring)

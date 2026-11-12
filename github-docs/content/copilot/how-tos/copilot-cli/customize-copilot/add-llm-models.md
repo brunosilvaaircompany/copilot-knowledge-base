@@ -146,55 +146,12 @@ You must have:
   * **MAI Code 1.1 Flash:**&nbsp; 60 GB
   * **Flint NVFP4:**&nbsp; 23 GB
 
-* llama.cpp v0.7.0 or later installed and `LLAMACPP_SERVER_PATH` set to its path. Required build version:
-
-  * **MAI Code 1.1 Flash:**&nbsp; [b11669](https://github.com/ggml-org/llama.cpp/releases/tag/b11669?utm_source=local-model-prereq-mai-code&utm_medium=docs&utm_campaign=universe-2026) or later
-  * **Flint NVFP4:**&nbsp; [b11803](https://github.com/ggml-org/llama.cpp/releases?q=flint&expanded=true&utm_source=local-model-prerequisite-flint&utm_medium=docs&utm_campaign=universe-2026#release-b11803) or later
-
-  See [Installing llama.cpp for Windows](#installing-llamacpp-for-windows).
-
 
 ### Benefits of using MAI Code 1.1 Flash locally
 
 MAI Code 1.1 Flash is a coding-optimized model that you can run locally on your Windows PC. By using a model that's running locally, you can use Copilot offline and avoid consuming GitHub AI Credits.
 
 After installing MAI Code 1.1 Flash, you can select it from the model picker, just like any other model. The model also becomes available for Copilot Fusion's Fusion Standard effort level to use. When you set the model selection to **Copilot Fusion** with Fusion Standard, MAI Code 1.1 Flash will be automatically chosen to work on appropriate tasks, leaving cloud-based models for tasks that require more resources or higher performance.
-
-
-### Installing llama.cpp for Windows
-
-To install llama.cpp on Windows with the CUDA build:
-
-1. In your browser, go to the releases page of the llama.cpp repository: [https://github.com/ggml-org/llama.cpp/releases](https://github.com/ggml-org/llama.cpp/releases?utm_source=llama-windows-install-cta&utm_medium=docs&utm_campaign=universe-2026).
-1. Choose the release you want to install—for example, [b11803](https://github.com/ggml-org/llama.cpp/releases?q=flint&expanded=true&utm_source=local-model-prerequisite-flint&utm_medium=docs&utm_campaign=universe-2026#release-b11803).
-1. Click the links to download both files for the Windows CUDA 13.4 ARM64 build:
-
-   * Windows arm64 (CUDA 13)
-   * CUDA 13.4 DLLs
-
-1. Open Command Prompt and create the installation folder:
-
-   ```shell copy
-   mkdir "%LOCALAPPDATA%\Programs\llama.cpp\BUILD-cuda-13.4-arm64"
-   ```
-
-   Replacing `BUILD` the the build number—for example, `b11803`.
-
-1. Extract all files from both ZIP files directly into this folder. If you use **Extract All** in File Explorer, change the destination to this folder, because by default File Explorer creates a separate subfolder for each ZIP file. When you're done, the folder should contain a large number of files, including `llama-server.exe`, `cudart64_13.dll`, `cublas64_13.dll`, and `cublasLt64_13.dll`, with no subfolders.
-1. Set the `LLAMACPP_SERVER_PATH` environment variable:
-
-   ```shell copy
-   setx LLAMACPP_SERVER_PATH "%LOCALAPPDATA%\Programs\llama.cpp\BUILD-cuda-13.4-arm64\llama-server.exe"
-   ```
-
-   Replacing `BUILD` the the build number.
-
-1. Close Command Prompt and open a new Command Prompt window. If the Copilot app or VS Code is already open, restart it. If Copilot CLI is running, exit it and start it again from a new terminal window.
-1. To check the installation, run:
-
-   ```shell copy
-   "%LLAMACPP_SERVER_PATH%" --list-devices
-   ```
 
 
 ### Using the model picker to install a local model

@@ -78,6 +78,7 @@ For **SkuPricing** budgets or to query usage by SKU, use one of the following va
 ### GitHub Copilot SKUs
 
 * `coding_agent_ai_credit` - Copilot Cloud Agent
+* `code_review_premium_request` - Copilot code review AI credits
 * `copilot_ai_credit` - Copilot AI credits
 * `copilot_enterprise` - Copilot Enterprise
 * `copilot_for_business` - Copilot for Business
@@ -85,9 +86,12 @@ For **SkuPricing** budgets or to query usage by SKU, use one of the following va
 
 ### GitHub Advanced Security SKUs
 
+* `code_security_ai_unit` - Code Security AI credits
+* `deep_security_research_ai_unit` - Deep Security Research AI credits
 * `ghas_code_security_licenses` - Code Security
 * `ghas_licenses` - Advanced Security
 * `ghas_secret_protection_licenses` - Secret Protection
+* `secret_protection_ai_unit` - Secret Protection AI credits
 
 ### GitHub Code Quality SKUs
 

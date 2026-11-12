@@ -79,13 +79,13 @@ You must have:
   * **MAI Code 1.1 Flash:**&nbsp; 60 GB
   * **Flint NVFP4:**&nbsp; 23 GB
 
+
 * llama.cpp v0.7.0 or later installed and `LLAMACPP_SERVER_PATH` set to its path. Required build version:
 
   * **MAI Code 1.1 Flash:**&nbsp; [b11669](https://github.com/ggml-org/llama.cpp/releases/tag/b11669?utm_source=local-model-prereq-mai-code&utm_medium=docs&utm_campaign=universe-2026) or later
   * **Flint NVFP4:**&nbsp; [b11803](https://github.com/ggml-org/llama.cpp/releases?q=flint&expanded=true&utm_source=local-model-prerequisite-flint&utm_medium=docs&utm_campaign=universe-2026#release-b11803) or later
 
   See [Installing llama.cpp for Windows](#installing-llamacpp-for-windows).
-
 
 ### Benefits of using MAI Code 1.1 Flash locally
 

@@ -49,6 +49,7 @@ The Anthropic Claude coding agent uses the Claude Agent SDK and can be powered b
 * Claude Opus 4.8 (fast mode) (preview)
 * Claude Opus 5
 * Claude Fable 5.1
+* Claude Fable 5.2
 
 
 If you select **Auto**, it will choose one of the available models listed above. **Auto** in Anthropic Claude coding agent does **not** leverage Copilot auto model selection.

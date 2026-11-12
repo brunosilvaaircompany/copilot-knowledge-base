@@ -19,7 +19,7 @@ Your GitHub Enterprise license also entitles you to an enterprise account on Git
 
 You can use your cloud-hosted enterprise account to assign Copilot licenses to users and configure policies for Copilot. Users will then be able to authenticate to their cloud account to use Copilot in local clients such as Copilot CLI.
 
-Copilot will have access to locally checked-out code and files. Users can configure their local [GitHub MCP server](https://github.com/github/github-mcp-server?tab=readme-ov-file#local-github-mcp-server) so that Copilot can connect to your instance and perform actions like opening issues or pull requests.
+Copilot will have access to locally checked-out code and files. To access remote data, users can also sign in to GitHub Enterprise Server in the Copilot app or configure their local [GitHub MCP server](https://github.com/github/github-mcp-server?tab=readme-ov-file#local-github-mcp-server). See [Sign In On Copilot App](https://docs.github.com/en/copilot/copilot-on-ghes/sign-in-on-copilot-app).
 
 If you enable license sync with GitHub Connect, each individual will only consume one GitHub Enterprise license, even with an account on both cloud and server. See [About GitHub Connect](https://docs.github.com/en/admin/configuring-settings/configuring-github-connect/about-github-connect).
 

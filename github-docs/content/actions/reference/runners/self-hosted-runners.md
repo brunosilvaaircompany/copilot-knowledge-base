@@ -112,11 +112,16 @@ To turn off automatic software updates and install software updates yourself, sp
 
 If you disable automatic updates, you must still update your runner version regularly. New functionality in GitHub Actions requires changes in both the GitHub Actions service _and_ the runner software. The runner may not be able to correctly process jobs that take advantage of new features in GitHub Actions without a software update.
 
-If you disable automatic updates, you will be required to update your runner version within 30 days of a new version being made available. You may want to subscribe to notifications for releases in the [`actions/runner` repository](https://github.com/actions/runner/releases). For more information, see [Configuring Notifications](https://docs.github.com/en/subscriptions-and-notifications/get-started/configuring-notifications#about-custom-notifications).
+If you disable automatic updates, you must update your runner version within 63 days of a newer version being made available. You may want to subscribe to notifications for releases in the [`actions/runner` repository](https://github.com/actions/runner/releases). For more information, see [Configuring Notifications](https://docs.github.com/en/subscriptions-and-notifications/get-started/configuring-notifications#about-custom-notifications).
+
+
+The date a runner version becomes available for updates can differ from its release date. To check a version's end-of-life schedule, use the REST API endpoint for your [repository](/rest/actions/self-hosted-runners#get-runner-version-end-of-life-schedule-for-a-repository) or [organization](/rest/actions/self-hosted-runners#get-runner-version-end-of-life-schedule-for-an-organization){% ifversion ghec %}, or for your [enterprise](/rest/actions/self-hosted-runners#get-runner-version-end-of-life-schedule-for-an-enterprise). The `registration_deprecates_at` date is when you can no longer register a runner using that version. The `runtime_deprecates_at` date is when runners on that version can no longer receive jobs. A `null` value means no date is currently scheduled.
+{% endif %}
 
 For instructions on how to install the latest runner version, see the installation instructions for [the latest release](https://github.com/actions/runner/releases).
 
->[!WARNING] Any updates released for the software, including major, minor, or patch releases, are considered as an available update. If you do not perform a software update within 30 days, the GitHub Actions service will not queue jobs to your runner. In addition, if a critical security update is required, the GitHub Actions service will not queue jobs to your runner until it has been updated.
+> [!WARNING]
+> If you do not update your runner within 63 days of a new major, minor, or patch version becoming available, the GitHub Actions service will not assign jobs to it. If a critical security update is required, the service will not assign jobs until the runner is updated.
 
 
 ### Webhooks for autoscaling

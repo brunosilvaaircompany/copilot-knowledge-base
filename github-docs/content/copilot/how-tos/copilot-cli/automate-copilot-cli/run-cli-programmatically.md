@@ -28,7 +28,7 @@ To use Copilot CLI programmatically you can do either of the following.
 * **Always give minimal permissions** — use the `--allow-tool=[TOOLS...]` and `--allow-url=[URLs...]` command-line options to give Copilot permission to use only the tools and access that are necessary to complete the task. Avoid using overly permissive options (such as `--allow-all`) unless you are working in a sandbox environment. For more information, see [About Cloud And Local Sandboxes](https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes).
 * **Consider `--assisted-approval`** when you can't predict in advance which tools a task will need. A model-based safety review can approve eligible permission requests without you granting blanket permissions. Existing permission rules still apply, and requests that still require your approval are denied in unattended runs. For more information, see [CLI Programmatic Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-programmatic-reference#using-assisted-permissions).
 * **Use `-s` (silent)** when capturing output. This suppresses session metadata so you get clean text.
-* **Use `--no-ask-user`** to prevent the agent from attempting to ask clarifying questions.
+* **Use `--no-ask-user`** to turn off the interactive clarifying-question prompt, since there's no user available to respond to it in an automated run. The agent can still ask questions as part of its regular text replies.
 * **Set a model explicitly** with `--model` for consistent behavior across environments.
 
 See [CLI Programmatic Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-programmatic-reference) for options that are particularly useful when running Copilot CLI programmatically.

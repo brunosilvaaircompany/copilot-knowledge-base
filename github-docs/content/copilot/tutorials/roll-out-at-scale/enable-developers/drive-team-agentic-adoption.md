@@ -28,7 +28,7 @@ Select a real project with enough suitable work for participants to use agentic 
 1. Confirm the scope before enabling a policy. Organization policies apply to everyone who receives their license through that organization, not only the selected team. Enterprise policies can also restrict which settings organization owners can change. For more information, see [Policies](https://docs.github.com/en/copilot/concepts/enterprise/policies).
 1. Ask participants to install and sign in to both tools before the kickoff. See [Quickstart Copilot App](https://docs.github.com/en/copilot/get-started/quickstart-copilot-app) and [Set Up Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli).
 1. Confirm that each participant can access the project and use the tools under the intended policies and managed settings.
-1. Give the person measuring the sprint access to Copilot usage metrics. For the required role, see [Copilot Metrics](https://docs.github.com/en/copilot/concepts/copilot-usage-metrics/copilot-metrics).
+1. Give the person measuring the sprint access to Copilot usage metrics. For the required role, see [View Usage And Adoption](https://docs.github.com/en/copilot/how-tos/administer-copilot/view-usage-and-adoption).
 
 If you are enabling these tools for the first time, treat the sprint as part of a broader feature pilot. Before kickoff, estimate usage-based costs, set an appropriate budget with the intended stop behavior, and plan to monitor spending during the sprint. For a complete process, see [Pilot A Feature Or Model](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/govern-at-scale/pilot-a-feature-or-model).
 

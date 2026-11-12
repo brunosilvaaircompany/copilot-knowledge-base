@@ -109,18 +109,16 @@ As the owner of an enterprise or organization account, or as a billing manager, 
 1. Under "Budget Type" select **Product-level budget**, **SKU-level budget**, or **Bundled AI credits budget**.
 
    * **Product-level budget**: Limits spending on a single product (for example, Codespaces).
-   * **SKU-level budget**: Limits spending on a specific SKU within a product (for example, GitHub Secret Protection within GitHub Advanced Security).
-   * **Bundled AI credits budget**: Limits spending across all SKUs that consume AI credits, including Copilot, Copilot cloud agent, Spark, and Advanced Security AI features. Available where overage spend is enabled.
-
-   To limit spending on AI Scan and agentic autofix, select **SKU-level budget**. In the product dropdown, select **Advanced Security**, then in the SKU dropdown, select **Code Security AI Credits**.
+   * **SKU-level budget**: Limits spending on a specific SKU within a product, such as Copilot code review, Secret Protection AI credits, or GitHub Secret Protection within GitHub Advanced Security. For AI Scan and agentic autofix, select Advanced Security and the **Code Security AI Credits** SKU.
+   * **Bundled AI credits budget**: Limits total overage spending across all SKUs that consume AI credits, including Copilot, Copilot cloud agent, Spark, and Advanced Security AI features. Each SKU uses the shared AI credits allowance before generating overage. After the allowance is exhausted, overage from every SKU counts toward the applicable **All AI credits** budget. To also limit overage for a specific SKU, create a SKU-level budget for that SKU. Available where overage spend is enabled.
 
 1. Under "Budget scope", set the scope of spending for this budget.
 
    * **Enterprise**: Tracks spending across all organizations, repositories, and cost centers in the enterprise.
    * **Organization**: Tracks spending for all repositories in the organization.
    * **Cost center**: Tracks spending for a single cost center.
-   * **Users**: Sets a per-user budget. Available when you select **Bundled AI credits budget** as the budget type. 
-     * Leave the user field empty to create a universal budget that applies to all Copilot-licensed users. 
+   * **Users**: Sets a per-user budget. Available when you select **Bundled AI credits budget** as the budget type.
+     * Leave the user field empty to create a universal budget that applies to all Copilot-licensed users.
      * Select a cost center to create a user-level budget that applies to every user in that cost center. This sets one per-user amount for all current and future members, and overrides the universal budget for them.
      * Select a specific user to create an individual budget that overrides both the universal budget and any cost center user-level budget for that user.
 

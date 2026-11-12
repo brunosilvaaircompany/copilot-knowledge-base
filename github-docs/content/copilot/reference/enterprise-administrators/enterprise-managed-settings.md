@@ -377,6 +377,8 @@ In Copilot CLI, this managed default takes precedence over the user's `defaultPe
 
 Configures OpenTelemetry export, routing Copilot usage data to a collector of your choice.
 
+For the exported signals and attributes, see [Opentelemetry Reference](https://docs.github.com/en/copilot/reference/enterprise-administrators/opentelemetry-reference).
+
 See the [supported keys table](#supported-keys) for client support.
 
 When you set the `telemetry` property, Copilot telemetry is sent to the endpoint you specify. The following sub-properties are supported:
@@ -390,7 +392,7 @@ When you set the `telemetry` property, Copilot telemetry is sent to the endpoint
 * `serviceName`: A label for the telemetry service name (for example, `"copilot"`).
 * `resourceAttributes`: An object of OpenTelemetry resource attributes to attach to all exported telemetry (for example, `{"deployment.environment": "production"}`).
 * `headers`: An object of literal HTTP headers to include with each telemetry request (for example, an `Authorization` header for your collector). You must configure `endpoint` in the same `telemetry` object. Header values are not included in logs or status output. Use HTTPS when headers contain credentials because HTTP sends values in plaintext.
-* `headersProvider`: An object that runs a command to supply fresh OTLP headers, or `false` to disable dynamic headers. A managed helper overrides a user helper, and managed static `headers` take precedence over user helper output. This property applies to Copilot CLI. For fields and behavior, see [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#dynamic-authentication-headers).
+* `headersProvider`: An object that runs a command to supply fresh OTLP headers, or `false` to disable dynamic headers. A managed helper overrides a user helper, and managed static `headers` take precedence over user helper output. This property applies to Copilot CLI. For fields and behavior, see [Dynamic authentication headers](/copilot/reference/enterprise-administrators/opentelemetry-reference#dynamic-authentication-headers).
 
 Managed `telemetry` values take precedence over local settings, SDK configuration, and environment variables. If more than one managed source defines `telemetry`, the highest-precedence source supplies the complete managed `telemetry` object. Objects from lower-precedence managed sources are not merged into it.
 
@@ -493,7 +495,7 @@ The following sub-properties are supported:
 * `allowBypass`: `false` prevents individual commands from running outside the sandbox and prevents users from disabling sandboxing for the rest of the current session from an active sandbox-bypass permission prompt. In Copilot CLI, it also prevents users from disabling sandboxing with `/sandbox disable`.
 * `addCurrentWorkingDirectory`: `false` prevents the runtime from automatically adding the current working directory to the sandbox's read/write paths.
 * `sandboxMcpServers`: `true` requires local MCP servers started in the session to run in the sandbox. Remote MCP servers do not run in the local sandbox.
-* `sandboxLspServers`: `true` requires language servers started in the session to run in the sandbox.
+* `sandboxLspServers`: `true` requires language servers started in the session to run in the sandbox. In Copilot CLI, this Boolean defaults to `true` and applies when sandboxing is enabled.
 * `auth.git`: `false` prevents the runtime from injecting a GitHub token for authenticated Git HTTPS operations in the sandbox.
 * `auth.gh`: `false` prevents the runtime from injecting a GitHub token for GitHub CLI in the sandbox.
 * `allowDevToolAccess`: `false` prevents automatic access to development-tool configuration, caches, registries, and toolchains. These locations can contain package registry credentials or tokens. Disabling access can cause package restoration, authenticated registry operations, or builds that use shared caches to fail unless you explicitly grant the required paths.

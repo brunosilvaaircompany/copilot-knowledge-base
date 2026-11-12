@@ -974,6 +974,8 @@ Flag | Description
 `-x/--exclude` | Exclude the local host.
 `--no-cache` | Exclude cache replicas.
 
+
+
 ### ghe-cluster-repl-bootstrap
 
 This utility configures high availability replication to a secondary set of cluster nodes. For more information, see [Configuring High Availability Replication For A Cluster](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-clustering/configuring-high-availability-replication-for-a-cluster).
@@ -997,6 +999,8 @@ This utility displays the replication status for a cluster in a high availabilit
 ```shell
 ghe-cluster-repl-status
 ```
+
+
 
 ### ghe-cluster-set-password
 
@@ -1065,6 +1069,8 @@ This utility removes firewall rules from a cluster node that block all traffic t
 ghe-cluster-unblock-ip IP-ADDRESS
 ```
 
+
+
 ### ghe-cluster-failover
 
 With the `ghe-cluster-failover` utility, you can fail over to your replica cluster. For more information, see [Initiating A Failover To Your Replica Cluster](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/configuring-clustering/initiating-a-failover-to-your-replica-cluster).
@@ -1072,6 +1078,8 @@ With the `ghe-cluster-failover` utility, you can fail over to your replica clust
 ```shell
 ghe-cluster-failover
 ```
+
+
 
 ### ghe-dpages
 
@@ -1152,9 +1160,11 @@ This utility allows you to evacuate all storage services before evacuating a clu
 ghe-storage evacuate storage-server-UUID
 ```
 
+
+
 ### nes
 
-
+{% ifversion ghes > 3.21 %}
 
 > [!IMPORTANT]
 > The `nes` utility and Node Eligibility Service are closing down and will be removed in GitHub Enterprise Server 3.23. There is no replacement.
@@ -1212,6 +1222,8 @@ To manually update a node's eligibility for re-addition to the cluster:
 ```shell
 nes set-node-eligibility eligible HOSTNAME
 ```
+
+{% endif %}
 
 ## Git
 

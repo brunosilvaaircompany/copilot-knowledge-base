@@ -162,7 +162,7 @@ To provide feedback on a review comment from Copilot, click the thumbs up (:+1:)
 You can request an initial review of a highlighted selection of code in Visual Studio Code.
 
 1. In Visual Studio Code, select the code you want to review.
-1. Right-click the selected code and choose **Generate Code** > **Review**.
+1. Right-click the selected code and choose **Review**.
 1. VS Code creates review comments in the **Comments** panel and also shows them inline in the editor.
 
 ### Reviewing all uncommitted changes
