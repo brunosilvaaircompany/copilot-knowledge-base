@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-12 15:53 UTC  
+> Atualizado em: 2026-11-13 15:15 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -32,25 +32,5 @@ The post [Gemini 4 Carbon in GitHub Copilot](https://github.blog/changelog/2026-
 The Microsoft C++ Language Server for GitHub Copilot CLI now bundles its MSBuild compile commands extractor and invokes it automatically. An agent no longer needs to discover and run a&#8230;
 
 The post [C++ language server now auto-configures MSBuild builds](https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Claude Fable 5.2 in GitHub Copilot](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot)
-
-**Data:** 2026-11-09  **Categorias:** `Release`, `copilot`
-
-Claude Fable 5.2, Anthropic&#8217;s newest Fable model, is now generally available in GitHub Copilot. You can use it for complex, multistep coding tasks across large codebases. In early testing, Fable&#8230;
-
-The post [Claude Fable 5.2 in GitHub Copilot](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Copilot code review: API management and review overview updates](https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates)
-
-**Data:** 2026-11-07  **Categorias:** `Improvement`, `copilot`
-
-You can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories. Copilot&#8217;s review overview comment is now more compact,&#8230;
-
-The post [Copilot code review: API management and review overview updates](https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

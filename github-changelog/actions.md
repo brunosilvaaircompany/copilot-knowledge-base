@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-04 15:17 UTC  
+> Atualizado em: 2026-11-13 15:15 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [pull_request_target blocked by default December 2](https://github.blog/changelog/2026-11-02-pull_request_target-blocked-by-default-december-2)
+## [Actions for ARM32 Linux & Windows retirement](https://github.blog/changelog/2026-11-12-actions-for-arm32-linux-windows-retirement)
 
-**Data:** 2026-11-02  **Categorias:** `Retired`, `actions`, `application security`
+**Data:** 2026-11-12  **Categorias:** `Retired`, `actions`
 
-Starting December 2, 2026, GitHub Actions will block pull_request_target events by default in all public repositories, unless an applicable Actions event policy explicitly allows them. Enforcement was previously scheduled for&#8230;
+GitHub Actions hosted runners will be ending support for ARM32 job execution on Windows and Linux by 8th Dec 2026. This follows our end of support for node20 where Node&#8230;
 
-The post [pull_request_target blocked by default December 2](https://github.blog/changelog/2026-11-02-pull_request_target-blocked-by-default-december-2) appeared first on [The GitHub Blog](https://github.blog).
+The post [Actions for ARM32 Linux & Windows retirement](https://github.blog/changelog/2026-11-12-actions-for-arm32-linux-windows-retirement) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
