@@ -381,7 +381,7 @@ The following agents are available:
 Copilot Edits lets you make changes across multiple files directly from a single Copilot Chat prompt, using edit mode and agent mode.
 
 > [!TIP]
-> You can also access Copilot from JetBrains AI Assistant without installing the Copilot plugin. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides).
+> You can also use Copilot in JetBrains Air without installing the Copilot plugin. For more information, see [Copilot In Ides](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides).
 
 ### Using edit mode
 

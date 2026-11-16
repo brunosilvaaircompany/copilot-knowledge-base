@@ -12,10 +12,10 @@ Copilot can store two types of memory:
 |  | Repository-level facts | User-level preferences |
 | --- | --- | --- |
 | **What they capture** | Facts about a repository, such as coding conventions, architectural decisions, build and test commands, and project-specific rules. | Your clearly stated, non-sensitive preferences, approval requirements, and reusable workflows that apply across your projects. |
-| **Who can see them** | Users with read access to the repository who can use Copilot Memory. Viewing memories in the repository's settings requires write access and user-level preferences enabled for your account. | You, and anyone who can view a shared agent session in which the preference appears. On Copilot Business and Copilot Enterprise plans, an organization or enterprise administrator can also view and export them. |
+| **Who can see them** | Users with read access who are eligible to use repository memories. Viewing memories in the repository's settings requires write access, a personal scope choice that allows repository memories, and applicable repository, organization, and enterprise settings that allow them. | You, and anyone who can view a shared agent session in which the preference appears. Your personal **Memory** page requires user-level preferences to be enabled. On Copilot Business and Copilot Enterprise plans, an organization or enterprise administrator can also view and export them. |
 | **Where they apply** | Only in operations on the same repository. | In your Copilot interactions across all your repositories. |
 | **Who can create them** | Users with write access to the repository who have Copilot Memory enabled. | Only you, from your own interactions. |
-| **Who can delete them** | Users with write access to the repository who have user-level preferences enabled for their account. See [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#viewing-and-deleting-repository-level-facts). | You. On Copilot Business and Copilot Enterprise plans, an organization or enterprise administrator can also delete them. |
+| **Who can delete them** | Users with write access who are eligible to use repository memories, including a personal scope choice and applicable repository, organization, and enterprise settings that allow them. User-level preferences do not need to be enabled. See [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#viewing-and-deleting-repository-level-facts). | You, while user-level preferences are enabled. On Copilot Business and Copilot Enterprise plans, an organization or enterprise administrator can also delete them. |
 | **How they are cited** | With citations pointing to the code that supports the fact. | With citations that may include direct quotes of what you said. |
 
 For example, "this repository uses Vitest for unit tests" is a fact about the codebase that is useful to everyone working in it, so it is stored as a repository-level fact. "Explain your changes before you apply them" is a statement about how you personally want Copilot to behave, so it is stored as a user-level preference and applies wherever you work.
@@ -70,7 +70,22 @@ Organization and enterprise owners can export or delete user-level preferences f
 
 Copilot creates memories itself, as a byproduct of working with you. As Copilot works, it notices durable facts about a repository, and details of your own personal preferences, that it determines are worth keeping, and it stores these for later use.
 
-You can review the user-level preferences that Copilot has stored for you, and delete any that you don't want Copilot to use. If you have write access to a repository and user-level preferences enabled for your account, you can also review and delete repository-level facts in the repository's settings. You cannot directly create or edit an individual memory in the settings on GitHub.com, but you can influence Copilot to create memories. If you clearly state a personal preference, or fact about a repository—or explicitly ask Copilot to remember something—it is likely to be captured as a memory. You can also use Copilot CLI to import prepared memories in bulk. See [Importing memories with Copilot CLI](/copilot/how-tos/use-copilot-agents/copilot-memory/create-memories#importing-memories-with-copilot-cli). When Copilot creates a memory as a result of something you said, your words are recorded as the citation for the memory.
+While user-level preferences are enabled, you can review the preferences Copilot has stored for you and delete any you don't want Copilot to use.
+
+To review or delete repository-level memories in the repository's settings, you need:
+
+* Write access to the repository
+* Eligibility to use repository memories, which depends on your personal scope choice and on the repository, organization, and enterprise settings that allow them
+
+User-level preferences do not need to be enabled for this.
+
+You cannot directly create or edit an individual memory in the settings on GitHub.com, but you can influence Copilot to create memories:
+
+* Clearly state a personal preference or a fact about a repository.
+* Explicitly ask Copilot to remember something.
+* Use Copilot CLI to import prepared memories in bulk. See [Importing memories with Copilot CLI](/copilot/how-tos/use-copilot-agents/copilot-memory/create-memories#importing-memories-with-copilot-cli).
+
+When Copilot creates a memory as a result of something you said, your words are recorded as the citation for the memory.
 
 Copilot chooses whether a memory is a repository-level fact or a user-level preference. It bases that choice on who the memory applies to, rather than on who stated it. Something that would be true for anyone working in the repository becomes a repository-level fact, while something that reflects your own way of working becomes a user-level preference. If your intent is ambiguous, Copilot asks you to clarify the scope rather than guessing. You can avoid ambiguity by explicitly stating whether the memory is for you or for everyone working in the repository.
 
@@ -140,13 +155,13 @@ User-level preferences and repository-level facts have separate defaults. The fo
 | Plan | Default for user-level preferences |
 | --- | --- |
 | Copilot Pro, Copilot Pro+, and Copilot Max | Enabled. You can opt out in your [personal settings](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself#disabling-or-enabling-copilot-memory). |
-| Copilot Business and Copilot Enterprise | Disabled until an [organization owner](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#enabling-copilot-memory-for-an-organization) or [enterprise owner](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#enabling-copilot-memory-for-an-enterprise) enables the policy. You can then opt out in your [personal settings](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself#disabling-or-enabling-copilot-memory). |
+| Copilot Business and Copilot Enterprise | Disabled until an [organization owner](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#enabling-copilot-memory-for-an-organization) or [enterprise owner](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#enabling-copilot-memory-for-an-enterprise) enables the policy. You can opt out in your [personal settings](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself#disabling-or-enabling-copilot-memory) even before the policy allows use. |
 
-**Repository-level facts have a separate default for all of these plans.** Repository memory access is allowed unless enterprise, organization, or repository settings restrict it. An organization's **Repository access** setting defaults to **All repositories**. Disabling user-level preferences in your personal settings does not disable repository-level facts. See [Managing Copilot Memory for repositories](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#managing-copilot-memory-for-repositories).
+**Repository-level facts have a separate default for all of these plans.** Repository memory access is allowed unless enterprise, organization, or repository settings restrict it. An organization's **Repository memories** setting defaults to **All repositories** and is independent of its **User memories** control. Your personal scope choice can further restrict memory use in work you start. Choosing **Repository memories allowed** disables only user-level preferences, not repository-level facts. See [Managing Copilot Memory for repositories](/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#managing-copilot-memory-for-repositories).
 
 ### Settings for each surface
 
-Some surfaces have an additional local setting. Turning it on allows the surface to use Copilot Memory only if the settings described above also allow it.
+Some surfaces have an additional local setting. Turning it on allows the surface to use Copilot Memory only if the settings described above also allow it, including your personal scope choice for work you start.
 
 | Surface | Default | More information |
 | --- | --- | --- |
@@ -155,7 +170,7 @@ Some surfaces have an additional local setting. Turning it on allows the surface
 | Visual Studio Code | Off. Enable the local setting. | [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself#copilot-memory-in-visual-studio-code) |
 | GitHub Copilot app | Follows your GitHub settings, where available for your account. | [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself#copilot-memory-in-the-github-copilot-app) |
 | Copilot cloud agent | Follows your GitHub settings. | [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself#disabling-or-enabling-copilot-memory) and [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#managing-copilot-memory-for-repositories) |
-| Copilot code review | Follows repository settings. | [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#managing-copilot-memory-for-repositories) |
+| Copilot code review | Follows repository settings and applicable policies. User-initiated reviews also follow the initiating user's personal scope choice for repository memories. | [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#managing-copilot-memory-for-repositories) |
 | Agentic Autofix | Follows repository settings. | [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator#managing-copilot-memory-for-repositories) |
 
 All of these surfaces support repository-level facts. All except Copilot code review and agentic autofix also support user-level preferences. In Copilot CLI, user preferences belong to the user who started the session.
@@ -164,7 +179,7 @@ In the Copilot app, and Copilot CLI interactive sessions, Copilot can ask you to
 
 The Copilot cloud agent behavior described here also applies to its sessions started from Slack, or Microsoft Teams. See [Integrate Cloud Agent With Slack](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-slack) and [Integrate Cloud Agent With Teams](https://docs.github.com/en/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams).
 
-Copilot code review and agentic autofix never apply user-level preferences, so a personal preference will not change how your pull requests are reviewed or security alerts are fixed.
+Copilot code review and agentic autofix never apply stored user-level preferences. This is separate from your personal scope choice, which can prevent repository memories from being used in code reviews you initiate. Organization-triggered work does not use a personal scope preference.
 
 In Copilot CLI, only the root agent can use `store_memory` or `vote_memory`. Subagents can read memories when they have access to `read_memories`, but they cannot change them.
 
@@ -175,17 +190,20 @@ In Copilot CLI, only the root agent can use `store_memory` or `vote_memory`. Sub
 
 User-level preferences and repository-level facts have separate controls. Whether Copilot Memory is used depends on the settings for the relevant type of memory and the client you are using:
 
-1. **Your personal setting.** The Copilot Memory setting in your personal account controls whether user-level preferences can be stored and used in your sessions. It does not control repository-level facts or override administrator restrictions. See [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself).
+1. **Your personal setting.** Choose **User memories allowed**, **Repository memories allowed**, **User and repository memories allowed**, or **Don't use memories** to control which types of memory can be used in work you start, including agent sessions and user-initiated code reviews. This does not change shared repository settings or other users' choices. Organization-triggered work does not use a personal scope preference. See [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself).
 
-   On enterprise- and organization-managed plans, user-level preferences are off until an administrator enables them, after which you can opt out.
+   All four options remain selectable even when policies block memory use. Your saved preference does not override applicable enterprise, organization, or repository restrictions. It automatically takes effect if policy later allows the selected memory types. On enterprise- and organization-managed plans, user-level preferences are off until an administrator enables them.
 
-1. **Your enterprise or organization policy.** On managed plans, the Copilot Memory policy controls user-level preferences. If you hold licenses from more than one organization, the most restrictive policy applies. Repository access is controlled separately. See [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator).
+1. **Your enterprise or organization policy.** On managed plans, the policy for user-level preferences is separate from repository memory access. An organization's Copilot Memory section has independent **User memories** and **Repository memories** controls. If you have licenses from more than one organization, user memories are allowed if any organization enables them, unless an enterprise policy blocks them. See [Manage As Administrator](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-as-administrator).
+
+   If you belong to more than one enterprise, the most restrictive enterprise policy applies. Your personal setting then determines whether you use user memories within those policy limits.
+   
 1. **Repository access and settings.** An organization owner can allow repository-level facts for all, selected, or no repositories, subject to enterprise restrictions. A repository administrator can also turn off repository-level facts for an individual repository.
 
    > [!NOTE]
    > Turning off repository-level facts does not turn off user-level preferences. Similarly, disabling user-level preferences does not by itself disable repository-level facts.
 
-1. **Your client setting.** In an interactive Copilot CLI session, `/memory off` disables both types of memory, even if the other settings allow them. This preference is independent of your setting on GitHub.com and is saved for future interactive sessions on that machine. `/memory on` clears this preference, but cannot override applicable enterprise, organization, or repository restrictions. Non-interactive runs require the separate `--enable-memory` option. Visual Studio Code also has its own setting within the application. See [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself).
+1. **Your client setting.** In an interactive Copilot CLI session, `/memory off` disables both types of memory, even if the other settings allow them. This preference is independent of your setting on GitHub.com and is saved for future interactive sessions on that machine. `/memory on` clears this preference, but cannot override your personal scope choice or applicable enterprise, organization, or repository restrictions. Non-interactive runs require the separate `--enable-memory` option. Visual Studio Code also has its own setting within the application, which cannot override your personal scope choice or policies. See [Manage For Yourself](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/copilot-memory/manage-for-yourself).
 
 ### Summary of when Copilot Memory is used
 
@@ -199,10 +217,11 @@ For user-level preferences, your personal Copilot Memory setting and any applica
 
 For repository-level facts:
 
+* For work you start, your personal scope choice must allow repository memories. Organization-triggered work does not use a personal scope preference.
 * You must have access to the repository.
 * You must have push permission to the repository for new repository facts to be created.
 * Copilot Memory must **not** be disabled for the repository in the repository's Copilot settings.
-* If the repository is owned by an organization, the organization's Copilot Memory repository access must include that repository.
+* If the repository is owned by an organization, the organization's **Repository memories** setting must include that repository.
 * Any applicable enterprise restriction on repository memory access must allow it.
 
 ## Usage and billing

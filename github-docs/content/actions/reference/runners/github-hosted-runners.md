@@ -66,8 +66,8 @@ For public repositories, jobs using the workflow labels shown in the table below
       <td>14 GB</td>
       <td> x64 </td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-latest</a></code>,
-         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-2025</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-latest</a></code>,
+         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025-vs2026</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2022-Readme.md">windows-2022</a></code>
       </td>
@@ -91,7 +91,7 @@ For public repositories, jobs using the workflow labels shown in the table below
       <td>14 GB</td>
       <td>arm64</td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-Arm64-Readme.md">windows-11-arm</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-arm</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-vs2026-arm</a></code>
       </td>
     </tr>
@@ -170,8 +170,9 @@ For internal and private repositories, jobs using the workflow labels shown in t
       <td>14 GB</td>
       <td> x64 </td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-latest</a></code>,
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-2025</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-latest</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025-vs2026</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2022-Readme.md">windows-2022</a></code>
       </td>
     </tr>
@@ -194,8 +195,8 @@ For internal and private repositories, jobs using the workflow labels shown in t
       <td>14 GB</td>
       <td> arm64 </td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-Arm64-Readme.md">windows-11-arm</a></code>,
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-Arm64-VS2026-Readme.md">windows-11-vs2026-arm</a></code>
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-arm</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-vs2026-arm</a></code>
       </td>
     </tr>
     <tr>
@@ -231,6 +232,10 @@ For internal and private repositories, jobs using the workflow labels shown in t
 
 
 
+
+
+> [!NOTE]
+> During periods of high demand, jobs that run on macOS runners may take longer to start. GitHub monitors macOS usage and plans capacity to meet demand over time.
 
 
 Workflow logs list the runner used to run a job. For more information, see [View Workflow Run History](https://docs.github.com/en/actions/how-tos/monitor-workflows/view-workflow-run-history).
@@ -292,13 +297,13 @@ Windows virtual machines are configured to run as administrators with User Accou
 
 ## IP addresses
 
-To get a list of IP address ranges that GitHub Actions uses for GitHub-hosted runners, you can use the GitHub REST API. For more information, see the `actions` key in the response of the `GET /meta` endpoint. For more information, see [Meta](https://docs.github.com/en/rest/meta/meta#get-github-meta-information).
+To get the full set of IP address ranges from which GitHub-hosted runners may be assigned an IP address, use the `actions` key in the response from the `GET /meta` REST API endpoint. For more information, see [Meta](https://docs.github.com/en/rest/meta/meta#get-github-meta-information).
 
-Eligible Linux runners use a multi-cloud compute pool, so their outbound IP addresses are not limited to Azure datacenter ranges. Keep any IP allowlists or network-based access policies used by your workflows in sync with all ranges in the `actions` array, rather than relying on cloud-provider-specific ranges. Policies that allow only Azure or Microsoft-owned ranges, including Microsoft Entra Conditional Access policies, can block connections or authentication from these runners.
+These ranges are not dedicated to GitHub Actions. They cover the broader address space of the cloud provider regions where GitHub-hosted runners run, and include IP addresses used by unrelated services and customers. macOS runners are hosted in GitHub's own macOS cloud.
 
-For multi-cloud eligibility, see [Cloud hosts used by GitHub-hosted runners](/actions/concepts/runners/github-hosted-runners#cloud-hosts-used-by-github-hosted-runners). macOS runners are hosted in GitHub's own macOS cloud.
+If you use an allowlist to control access to your internal resources from GitHub-hosted runners, we do not recommend adding these ranges to it. Allowlisting the entire set permits network access from unrelated workloads within those ranges, not just your GitHub Actions runners. This substantially broadens access and undermines the restrictions your allowlist is intended to enforce. Instead, we recommend you use larger runners with a static IP address range, or self-hosted runners. For more information, see [Larger Runners](https://docs.github.com/en/actions/how-tos/manage-runners/larger-runners) or [Self Hosted Runners](https://docs.github.com/en/actions/concepts/runners/self-hosted-runners).
 
-Since there are so many IP address ranges for GitHub-hosted runners, we do not recommend that you use these as allowlists for your internal resources. Instead, we recommend you use larger runners with a static IP address range, or self-hosted runners. For more information, see [Larger Runners](https://docs.github.com/en/actions/how-tos/manage-runners/larger-runners) or [Self Hosted Runners](https://docs.github.com/en/actions/concepts/runners/self-hosted-runners).
+Eligible Linux runners use a multi-cloud compute pool, so their outbound IP addresses are not limited to Azure datacenter ranges. Policies that allow only Azure or Microsoft-owned ranges, including Microsoft Entra Conditional Access policies, can block connections or authentication from these runners. For multi-cloud eligibility, see [Cloud hosts used by GitHub-hosted runners](/actions/concepts/runners/github-hosted-runners#cloud-hosts-used-by-github-hosted-runners).
 
 The list of GitHub Actions IP addresses returned by the API is updated once a week.
 

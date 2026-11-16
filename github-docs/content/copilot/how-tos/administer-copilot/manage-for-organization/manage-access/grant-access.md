@@ -59,13 +59,13 @@ When access is granted this way, the `copilot.cfb_seat_added` audit log event at
 
    * Click **Users and teams** to search for and add individual users or teams.
 
-     To search for a user, type their username or full name in the search bar. If you select a user who is not currently a member of your organization, they will be invited to join your organization when you click **Continue to purchase** followed by **Purchase seats**. Outside collaborators will receive a Copilot seat but will not be sent an organization invite.
+     To search for a user, type their username or full name in the search bar. If you select a user who is not currently a member of your organization, they will be invited to join your organization when you click **Continue to purchase** followed by **Purchase seats**.
 
    * Click **Upload CSV** to add users in bulk by uploading a CSV file.
 
      To add members in bulk, click **Choose CSV to upload**, and then upload a CSV file including either the username or email address for each member you want to add, separated by a comma. The file can contain a mixture of usernames and email addresses.
 
-     > [!WARNING] When you upload a CSV file, unless you're using Enterprise Managed Users, GitHub Copilot will search all users on GitHub.com for matches. If the CSV includes users who are not members of your organization, they will be invited to join your organization when you click **Continue to purchase** followed by **Purchase seats**. Outside collaborators will receive a Copilot seat but will not be sent an organization invite. This warning does not apply to accounts using Enterprise Managed Users.
+     > [!WARNING] When you upload a CSV file, unless you're using Enterprise Managed Users, GitHub Copilot will search all users on GitHub.com for matches. If the CSV includes users who are not members of your organization, they will be invited to join your organization when you click **Continue to purchase** followed by **Purchase seats**. This warning does not apply to accounts using Enterprise Managed Users.
 
      Review the list of users generated from your CSV file. Clear the selection of any users you do not want to add.
 

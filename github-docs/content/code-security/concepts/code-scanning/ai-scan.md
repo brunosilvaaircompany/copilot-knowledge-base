@@ -50,3 +50,7 @@ For more information, including coverage, availability, billing, and enablement 
 For enterprises, a shared **AI Scan** policy controls whether organizations can enable these features. Allowing AI Scan does not automatically enable any feature. See [Enforcing Policies For Code Security And Analysis For Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-code-security-and-analysis-for-your-enterprise#enforcing-a-policy-to-manage-ai-scan-in-your-enterprises-repositories).
 
 Organizations enable each feature separately, and repository administrators can opt out for each feature independently. For permissions and setup instructions, see the dedicated article for each feature.
+
+
+
+You can also use the REST API to manage AI Scan for pull requests and AI Scan for repositories at the organization and repository levels, by using the `pr_scan` and `repository_scan` properties. See [Code Scanning](https://docs.github.com/en/rest/code-scanning/code-scanning#update-the-ai-scan-setting-for-an-organization).

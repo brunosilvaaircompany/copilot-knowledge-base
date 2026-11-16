@@ -79,6 +79,12 @@ For information on bulk enablement, see [Configuring Advanced Setup For Code Sca
 
 
 
+### Keeping the CodeQL action up to date
+
+We recommend referencing the CodeQL action using a major version tag (for example, `v4`) in your workflow file. This ensures your workflow automatically picks up the latest release within that major version, including bug fixes, new features, and updated CodeQL CLI versions.
+
+Some CodeQL action features are enabled by server-side flags that may be removed over time, which can cause old versions to lose functionality. If you pin to a specific commit SHA or patch version tag, keep it updated, for example with Dependabot. See [Auto Update Actions](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/auto-update-actions).
+
 ## Configuring code scanning using third-party actions
 
 GitHub includes workflow templates for third-party actions, as well as the CodeQL action. Using a workflow template is much easier than writing a workflow unaided.

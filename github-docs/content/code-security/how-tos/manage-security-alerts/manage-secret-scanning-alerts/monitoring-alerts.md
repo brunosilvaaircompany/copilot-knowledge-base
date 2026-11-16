@@ -52,7 +52,7 @@ For more information about setting up notification preferences, see [Managing Se
 
 For historical scans, GitHub notifies the following users:
 
-* Organization owners, enterprise owners, and security managers—whenever a historical scan is complete, even if no secrets are found.
+* Organization owners, enterprise owners, and security managers—whenever a historical scan that generated secret scanning alerts is complete.
 * Repository administrators, security managers, and users with custom roles with read/write access—whenever a historical scan detects a secret, and according to their notification preferences.
 
 We do _not_ notify commit authors.

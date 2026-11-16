@@ -44,7 +44,7 @@ In general, GitHub Apps and OAuth apps can make the same API requests. However, 
 
 * The REST API to manage check runs and check suites is only available to GitHub Apps.
 * Not every enterprise-level API supports GitHub Apps at this time. New permissions are being added to support more APIs. Check [Permissions Required For GitHub Apps](https://docs.github.com/en/enterprise-cloud@latest/rest/authentication/permissions-required-for-github-apps) to review the list of supported enterprise permissions and APIs.
-* Some requests may return incomplete data depending on the permissions and repository access that was granted to an GitHub App. For example, if your app makes a request to get all repositories that a user can access, the response will only include the repositories that the app was also granted access to.
+* Some requests may return incomplete data depending on the permissions and repository access that was granted to a GitHub App. For example, if your app makes a request to get all repositories that a user can access, the response will only include the repositories that the app was also granted access to.
 
 For more information about the REST API endpoints that are available to GitHub Apps, see [Endpoints Available For GitHub App Installation Access Tokens](https://docs.github.com/en/rest/authentication/endpoints-available-for-github-app-installation-access-tokens).
 

@@ -95,7 +95,7 @@ When creating a security configuration, keep in mind that:
 1. To help identify your custom security configuration and clarify its purpose on the "New configuration" page, name your configuration and create a description.
 1. In the "GitHub Advanced Security features" row, choose whether to include or exclude GitHub Advanced Security (GHAS) features.
 1. In the "Secret scanning" table, choose whether you want to enable, disable, or keep the existing settings for the following security features:
-    * **Alerts**. To learn about secret scanning alerts, see [Secret Scanning](https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning). 
+    * **Alerts**. To learn about secret scanning alerts, see [Secret Scanning](https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning).
     * **Validity checks**. To learn more about validity checks for partner patterns, see [Evaluating Alerts](https://docs.github.com/en/code-security/tutorials/remediate-leaked-secrets/evaluating-alerts#checking-a-secrets-validity).
     * **Generic patterns**. To learn more about scanning for generic patterns, see [Supported Secret Scanning Patterns](https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns#supported-generic-patterns) and [Viewing Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-secret-scanning-alerts/viewing-alerts).
     * **Scan for AI-detected secrets**. {% ifversion fpt or ghec %}To learn more, see [Security And Quality Ai Features](https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features).{% endif %}

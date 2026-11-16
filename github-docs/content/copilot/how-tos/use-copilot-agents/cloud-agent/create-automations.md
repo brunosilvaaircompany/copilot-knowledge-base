@@ -56,6 +56,8 @@ You can work with Copilot to design your automation, setting up the triggers, to
 
 Copilot can even help you create self-improving groups of automations which learn from outcomes and suggest improvements to themselves.
 
+Group members with the same ownership share persistent artifact storage, while access to other information depends on each automation's tools and permissions. See [Proposed improvements](/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations#proposed-improvements).
+
 ### Creating an automation manually
 
 1. Enter a **name** for the automation.

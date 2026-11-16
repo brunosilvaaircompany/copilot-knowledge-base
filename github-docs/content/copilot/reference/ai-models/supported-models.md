@@ -109,6 +109,7 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Gemini 3.8 Flash     | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 4 Argon      | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 4 Carbon     | TBD | TBD                            | TBD | TBD | TBD |
+| Gemini 4 Hydrogen   | TBD | TBD                            | TBD | TBD | TBD |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.6 Luna         | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Sol          | `1.128.0` | TBD | TBD | TBD | TBD |

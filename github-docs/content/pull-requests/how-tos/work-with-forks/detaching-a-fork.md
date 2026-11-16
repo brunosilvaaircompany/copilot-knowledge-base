@@ -23,6 +23,14 @@ You can only detach forks with the leave network option when:
 * The fork is less than 1GB
 * The fork does not have any child forks attached
 
+
+
+If you own a fork that is private or has child forks and want to avoid deleting and recreating it, GitHub Support may be able to help. See [About GitHub Support](https://docs.github.com/en/support/learning-about-github-support/about-github-support).
+
+Support-assisted detachment can retain issues and pull request history, unlike manual recreation, and leaves child forks in the original network. Extraction instead makes your repository the root of a new network and moves its child forks with it.
+
+
+
 1. On GitHub, navigate to the main page of the repository.
 
 1. Under your repository name, click **{% octicon "gear" aria-hidden="true" aria-label="gear" %} Settings**. If you cannot see the "Settings" tab, select the **{% octicon "kebab-horizontal" aria-label="More" %}** dropdown menu, then click **Settings**.
@@ -64,5 +72,3 @@ To turn your fork into a standalone repository, you can clone the fork and use t
    ```shell
    rm -rf FORK.git
    ```
-
-See [our support page](https://support.github.com/request/fork) on forks.

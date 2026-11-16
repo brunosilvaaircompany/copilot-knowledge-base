@@ -226,4 +226,4 @@ You can use the GitHub REST and GraphQL APIs to manage some Copilot code review 
 * **Organization**: Enable or disable Copilot code review when the enterprise lets organization owners decide, set the default review effort level, and configure the runner that Copilot code review uses.
 * **Repository**: Set the review effort level and choose whether reviews use custom instructions and MCP servers.
 
-Other settings on this page, such as maximum review effort, billing, and approvals, are not available through the API. For more information, see [GraphQL API reference for Copilot](/graphql/reference/copilot).
+Other settings on this page, such as maximum review effort, billing, and approvals, are not available through the API. For more information, see [Copilot Code Review](https://docs.github.com/en/rest/copilot/copilot-code-review) and [GraphQL API reference for Copilot](/graphql/reference/copilot).

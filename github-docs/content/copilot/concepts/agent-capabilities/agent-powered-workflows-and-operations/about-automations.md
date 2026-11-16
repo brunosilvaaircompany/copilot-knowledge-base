@@ -30,7 +30,7 @@ When you create an automation, you define:
 * Optionally, the **model** and **reasoning level** Copilot uses.
 * Optionally, **AI credits limits** that control how many AI credits the automation can consume.
 
-You can add automations to automation groups which share context and can suggest improvements to themselves based on outcomes.
+You can add automations to automation groups which share context and can suggest improvements to themselves based on outcomes. Automations in a group with the same ownership share persistent storage for artifacts, such as results, decisions, and feedback. These artifacts let automations use information recorded by other group members and previous runs to evaluate outcomes and propose improvements.
 
 For instructions on creating and managing automations, see [Create Automations](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-automations).
 
@@ -163,11 +163,11 @@ Automations can propose improvements to their own tools, triggers, and prompts, 
 
 Automations may suggest improvements when they run into issues while working, such as missing tools.
 
-When you create automations with Copilot, Copilot can help you to create self-improving automation groups where some automations do work and others evaluate outcomes, continuously proposing improvements.
+When you create automations with Copilot, Copilot can help you to create self-improving automation groups where some automations do work and others evaluate outcomes, continuously proposing improvements. Evaluators can use shared group artifacts, along with automation configuration and outcomes they have permission to inspect, to inform their proposals.
 
 When an automation has a proposed improvement, you'll receive a notification and will see the proposal when viewing the automation.
 
-You will see a description of the proposed improvement and the changes to be applied to the automation group. You can decide whether to apply the proposed improvement or dismiss it.
+You will see a description of the proposed improvement and the changes to be applied to the relevant automation. You can decide whether to apply the proposed improvement or dismiss it.
 
 ## Security and safety
 

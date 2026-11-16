@@ -32,6 +32,9 @@ Enterprise-installed GitHub Apps cannot call every enterprise API, but several A
 * Manage enterprise billing, including budgets, cost centers, and usage reports. For more information, see [Billing](https://docs.github.com/en/rest/billing).
 
 
+* Manage Copilot seat assignments for your enterprise
+
+
 * Authorize personal access tokens (classic) and verified, user-owned SSH authentication keys for SSO in selected organizations. See [Authorizing Credentials For Single Sign On With A GitHub App](https://docs.github.com/en/authentication/authenticating-with-single-sign-on/authorizing-credentials-for-single-sign-on-with-a-github-app).
 
 * Call the enterprise SCIM APIs

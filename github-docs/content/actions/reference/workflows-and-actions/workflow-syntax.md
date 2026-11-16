@@ -809,6 +809,18 @@ A boolean specifying whether the input must be supplied.
 
 The value of this parameter is a string specifying the data type of the input. This must be one of: `boolean`, `choice`, `number`, `environment` or `string`.
 
+## `on.workflow_dispatch.inputs.<input_id>.description`
+
+A string description of the input parameter.
+
+## `on.workflow_dispatch.inputs.<input_id>.default`
+
+The default value used when the input is not specified when the workflow is triggered manually. For inputs with `type: choice`, the default must be one of the values listed in `options`.
+
+## `on.workflow_dispatch.inputs.<input_id>.options`
+
+A sequence of strings that sets the options of the dropdown list for an input with `type: choice`. `options` is valid only for `choice` inputs: a workflow that defines `options` on an input of any other type is invalid and fails to run.
+
 ## `permissions`
 
 You can use `permissions` to modify the default permissions granted to the `GITHUB_TOKEN`, adding or removing access as required, so that you only allow the minimum required access. For more information, see [Authenticate With Github_Token](https://docs.github.com/en/actions/tutorials/authenticate-with-github_token#modifying-the-permissions-for-the-github_token).
@@ -1595,8 +1607,8 @@ For public repositories, jobs using the workflow labels shown in the table below
       <td>14 GB</td>
       <td> x64 </td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-latest</a></code>,
-         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-2025</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-latest</a></code>,
+         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025-vs2026</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2022-Readme.md">windows-2022</a></code>
       </td>
@@ -1620,7 +1632,7 @@ For public repositories, jobs using the workflow labels shown in the table below
       <td>14 GB</td>
       <td>arm64</td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-Arm64-Readme.md">windows-11-arm</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-arm</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-vs2026-arm</a></code>
       </td>
     </tr>
@@ -1699,8 +1711,9 @@ For internal and private repositories, jobs using the workflow labels shown in t
       <td>14 GB</td>
       <td> x64 </td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-latest</a></code>,
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">windows-2025</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-latest</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md">windows-2025-vs2026</a></code>,
         <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2022-Readme.md">windows-2022</a></code>
       </td>
     </tr>
@@ -1723,8 +1736,8 @@ For internal and private repositories, jobs using the workflow labels shown in t
       <td>14 GB</td>
       <td> arm64 </td>
       <td>
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-Arm64-Readme.md">windows-11-arm</a></code>,
-        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-Arm64-VS2026-Readme.md">windows-11-vs2026-arm</a></code>
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-arm</a></code>,
+        <code><a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows11-VS2026-Arm64-Readme.md">windows-11-vs2026-arm</a></code>
       </td>
     </tr>
     <tr>
@@ -3612,7 +3625,7 @@ jobs:
 
 A pair consisting of a string identifier for the input and the value of the input. The identifier must match the name of an input defined by [`on.workflow_call.inputs.<inputs_id>`](/actions/reference/workflows-and-actions/metadata-syntax#inputsinput_id) in the called workflow. The data type of the value must match the type defined by [`on.workflow_call.inputs.<input_id>.type`](#onworkflow_callinputsinput_idtype) in the called workflow.
 
-Allowed expression contexts: `github`, and `needs`.
+Allowed expression contexts: `github`, `needs`, `strategy`, `matrix`, `inputs`, and `vars`.
 
 ## `jobs.<job_id>.secrets`
 
@@ -3670,7 +3683,7 @@ jobs:
 
 A pair consisting of a string identifier for the secret and the value of the secret. The identifier must match the name of a secret defined by [`on.workflow_call.secrets.<secret_id>`](#onworkflow_callsecretssecret_id) in the called workflow.
 
-Allowed expression contexts: `github`, `needs`, and `secrets`.
+Allowed expression contexts: `github`, `needs`, `strategy`, `matrix`, `secrets`, `inputs`, and `vars`.
 
 ## Filter pattern cheat sheet
 

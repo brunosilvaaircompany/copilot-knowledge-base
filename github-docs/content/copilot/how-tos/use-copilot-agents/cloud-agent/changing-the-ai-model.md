@@ -25,6 +25,7 @@ The following options are currently available:
 * Gemini 3.8 Flash
 * Gemini 4 Argon
 * Gemini 4 Carbon
+* Gemini 4 Hydrogen
 * GPT-5.6 Luna
 * GPT-5.6 Sol
 * GPT-5.6 Terra

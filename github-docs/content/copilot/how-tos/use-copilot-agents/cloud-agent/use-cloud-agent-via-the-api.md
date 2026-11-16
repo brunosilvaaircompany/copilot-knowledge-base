@@ -97,7 +97,7 @@ You can assign issues to Copilot using either the GraphQL API or the REST API. B
 ### Using the GraphQL API
 
 > [!NOTE]
-> You must include the `GraphQL-Features` header with the values `issues_copilot_assignment_api_support` and `coding_agent_model_selection`.
+> You must include the `GraphQL-Features` header with the value `coding_agent_model_selection`.
 
 You can use the following GraphQL mutations to assign issues to Copilot:
 
@@ -181,7 +181,7 @@ You can use the following GraphQL mutations to assign issues to Copilot:
           }
         }
       }
-    }' -H 'GraphQL-Features: issues_copilot_assignment_api_support,coding_agent_model_selection'
+    }' -H 'GraphQL-Features: coding_agent_model_selection'
     ```
 
 #### Assigning an existing issue
@@ -252,7 +252,7 @@ You can use the following GraphQL mutations to assign issues to Copilot:
           }
         }
       }
-    }' -H 'GraphQL-Features: issues_copilot_assignment_api_support,coding_agent_model_selection'
+    }' -H 'GraphQL-Features: coding_agent_model_selection'
     ```
 
 1. Alternatively, you can use the `updateIssue` mutation to update an existing issue and assign it to Copilot. Replace `ISSUE_ID` with the issue ID and `BOT_ID` with the bot ID.
@@ -280,7 +280,7 @@ You can use the following GraphQL mutations to assign issues to Copilot:
           }
         }
       }
-    }' -H 'GraphQL-Features: issues_copilot_assignment_api_support,coding_agent_model_selection'
+    }' -H 'GraphQL-Features: coding_agent_model_selection'
     ```
 
 1. You can also use the `addAssigneesToAssignable` mutation to add Copilot to an existing issue while keeping other assignees. Replace `ISSUE_ID` with the issue ID and `BOT_ID` with the bot ID.
@@ -310,7 +310,7 @@ You can use the following GraphQL mutations to assign issues to Copilot:
           }
         }
       }
-    }' -H 'GraphQL-Features: issues_copilot_assignment_api_support,coding_agent_model_selection'
+    }' -H 'GraphQL-Features: coding_agent_model_selection'
     ```
 
 ### Using the REST API

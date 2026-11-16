@@ -24,7 +24,7 @@ As part of the downgrade to the free plan:
 * Protected branch and ruleset configurations will be retained in your settings, but will no longer be applied in private repositories.
 * Existing pull request drafts will remain in draft status. New drafts cannot be created.
 * CODEOWNERS files will no longer be applied in private repositories.
-* Private GitHub Pages sites will no longer be available.
+* Privately published GitHub Pages sites will stay published privately at their current URL, and new sites cannot be published privately. See [About Privately Published GitHub Pages Sites](https://docs.github.com/en/pages/getting-started-with-github-pages/about-privately-published-github-pages-sites#privately-published-sites-after-a-plan-change).
 * Wikis will be retained, but won't be visible unless the organization is upgraded to GitHub Team.
 * Secrets will be retained, but will not be accessible in private repositories unless the organization is upgraded to GitHub Team.
 
