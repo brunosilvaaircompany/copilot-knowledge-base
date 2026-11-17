@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-16 12:13 UTC  
+> Atualizado em: 2026-11-17 16:48 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [GitHub App improvements for least privilege and management](https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management)
+## [Budget limit increased to 40,000 budgets per account](https://github.blog/changelog/2026-11-16-budget-limit-increased-to-40000-budgets-per-account)
 
-**Data:** 2026-10-13  **Categorias:** `Improvement`, `enterprise management tools`, `platform governance`
+**Data:** 2026-11-16  **Categorias:** `Improvement`, `enterprise management tools`
 
-We&#8217;re releasing several GitHub Apps improvements today that help developers move off of classic PATs, improve GitHub App management, and request fewer sensitive permissions. We&#8217;ve also made it easier for&#8230;
+You can now create up to 40,000 budgets per GitHub Enterprise Cloud account, up from 10,000. If you set budgets for individual users, or manage budgets across many cost centers&#8230;
 
-The post [GitHub App improvements for least privilege and management](https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management) appeared first on [The GitHub Blog](https://github.blog).
+The post [Budget limit increased to 40,000 budgets per account](https://github.blog/changelog/2026-11-16-budget-limit-increased-to-40000-budgets-per-account) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
