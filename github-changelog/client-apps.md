@@ -1,26 +1,36 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-17 16:48 UTC  
+> Atualizado em: 2026-11-18 16:19 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [VS Code retires the Local harness in February 2027](https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027)
+## [GitHub Copilot in JetBrains, Ignite releases](https://github.blog/changelog/2026-11-17-github-copilot-in-jetbrains-ignite-releases)
 
-**Data:** 2026-11-16  **Categorias:** `Retired`, `client apps`, `copilot`
+**Data:** 2026-11-17  **Categorias:** `Release`, `client apps`, `copilot`
 
-Visual Studio Code 1.146 deprecates the Local harness, the older software that coordinates the model, context, and tools for GitHub Copilot agent sessions in the editor. The Local harness will&#8230;
+This update brings remote access, on-device voice dictation, and browser use controls to GitHub Copilot for JetBrains. Copilot users in JetBrains IDEs also get context usage shortcuts, historical diffs, simpler&#8230;
 
-The post [VS Code retires the Local harness in February 2027](https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Copilot in JetBrains, Ignite releases](https://github.blog/changelog/2026-11-17-github-copilot-in-jetbrains-ignite-releases) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
-## [Take GitHub Mobile with you on iPhone Duo](https://github.blog/changelog/2026-11-16-take-github-mobile-with-you-on-iphone-duo)
+## [GitHub Copilot CLI adds Microsoft Entra sign-in as a preview](https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview)
 
-**Data:** 2026-11-16  **Categorias:** `Improvement`, `client apps`
+**Data:** 2026-11-17  **Categorias:** `Release`, `client apps`, `copilot`
 
-GitHub Mobile now supports iPhone Duo, with a layout that adapts when unfolded and vertical tabs to help you move between key areas like Copilot, Pull Requests, Issues, and Notifications.&#8230;
+GitHub Copilot CLI now supports Microsoft Entra authentication in public preview. You can sign in with your Microsoft Entra account to silently authenticate to a linked GitHub Enterprise Managed User&#8230;
 
-The post [Take GitHub Mobile with you on iPhone Duo](https://github.blog/changelog/2026-11-16-take-github-mobile-with-you-on-iphone-duo) appeared first on [The GitHub Blog](https://github.blog).
+The post [GitHub Copilot CLI adds Microsoft Entra sign-in as a preview](https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [GitHub Copilot Evals is now in public preview](https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview)
+
+**Data:** 2026-11-17  **Categorias:** `Release`, `client apps`, `copilot`
+
+You can now use GitHub Copilot Evals to optimize GitHub Copilot for yourself. As your prompts, models, skills, and tools change, are you still getting the most out of Copilot?&#8230;
+
+The post [GitHub Copilot Evals is now in public preview](https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
