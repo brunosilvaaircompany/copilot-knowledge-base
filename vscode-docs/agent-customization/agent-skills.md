@@ -47,6 +47,7 @@ Use custom instructions when you want to:
 
 Skills can come from the following sources:
 
+* **Built-in skills:** The {% data variables.copilot.agents_window %} includes skills such as `/automate` to [turn a task into a recurring automation](../agents/run/automations.md#create-an-automation-from-chat). No installation is needed.
 * **Project or personal files:** [Create a skill](#create-a-skill), [copy and adapt one](#copy-and-adapt-an-existing-skill), or use skills included in a repository.
 * **Marketplaces and plugins:** [Install individual skills](#install-a-skill-from-the-customization-marketplace-preview) or use skills bundled in an [agent plugin](agent-plugins.md).
 * **Extensions:** Installed {% data variables.product.prodname_vscode_shortname %} extensions can [contribute skills](#contribute-skills-from-extensions).
@@ -164,18 +165,6 @@ Create a project skill named test-changes in a location supported by this harnes
 
 You can also ask the agent to turn a process from the current conversation into a skill, such as "create a skill from how we just debugged that." Review the generated instructions, file locations, and supporting resources, then [verify the skill](#verify-a-skill).
 
-### Local harness shortcuts
-
-`feature(local-harness)`
-
-With **Local** `feature(local-harness)` selected in the {% data variables.copilot.chat_view %}, you can also:
-
-* Enter `/skills` to open the **Configure Skills** menu.
-* Enter `/create-skill` followed by a description to generate a skill.
-* Select **Generate with AI** in the **Skills** section of the Agent Customizations editor.
-
-For other harnesses, use **Open Customizations** or describe the skill directly in chat.
-
 ## Use skills as slash commands
 
 Skills can appear as slash commands in chat and can be loaded automatically when the request matches their description. Type `/` in the chat input field to see available skills and prompts, and select a skill to invoke it. You can add context after the command, such as `/test-changes for the authentication update`.
@@ -216,7 +205,7 @@ To reuse repository skills with {% data variables.product.prodname_openai_codex 
 
 If skills in `.github/skills/` have duplicate names across workspace roots, the primary root takes precedence.
 
-The Codex harness is disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
+The Codex harness is disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits it. Contact the IT team that deployed the settings to discuss access.
 
 ### Local
 

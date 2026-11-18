@@ -8,6 +8,8 @@ A [session](../../concepts/sessions.md) groups the workspace, code changes, and 
 
 Open an existing session to continue its conversation rather than start the task again.
 
+For an unsent **New Session** request in the {% data variables.copilot.agents_window %}, [resume a saved draft](../agents-window.md#save-and-resume-drafts) instead.
+
 1. Open the sessions list in the interface you use:
 
     | Interface | Location and scope |
@@ -49,7 +51,7 @@ Supported tunnel connections can also reopen the same session in either window. 
 
 To change the harness instead, see [Continue with a different harness](../agent-harnesses.md#continue-with-a-different-harness).
 
-**NOTE:** {% data variables.product.prodname_anthropic_claude_short %} and {% data variables.product.prodname_openai_codex_short %} harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Existing sessions aren't deleted. Contact the IT team that deployed the settings to discuss access.
+**NOTE:** {% data variables.product.prodname_anthropic_claude_short %} and {% data variables.product.prodname_openai_codex_short %} harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits them. Existing sessions aren't deleted. Contact the IT team that deployed the settings to discuss access.
 
 ### View sessions from other applications
 
@@ -286,7 +288,7 @@ Stable context and forks can preserve prompt caching to reduce cost and latency.
 Keep related work together or prioritize what needs attention without finishing the session:
 
 * [Pin sessions and create custom groups](organize-sessions.md#pin-and-group-sessions) to keep related tasks accessible.
-* [Triage sessions with Inbox mode](organize-sessions.md#triage-sessions-with-inbox-mode) to dismiss or defer work without archiving it.
+* [Triage sessions with Inbox mode](organize-sessions.md#triage-sessions-with-inbox-mode) to acknowledge or defer work without archiving it.
 * [Move chats between sessions](organize-sessions.md#move-chats-between-sessions-experimental) to reorganize conversations without changing their working folders.
 
 ## Finish and restore sessions
@@ -296,7 +298,7 @@ Choose the action that matches what you want to keep:
 | Action | Effect |
 |---|---|
 | Close a chat tab | Hide the conversation without deleting it. Reopen it when needed. |
-| [Dismiss from Inbox](organize-sessions.md#dismiss-defer-or-finish-work) | Move the session to **Done** in Inbox mode without stopping or archiving it. New activity can bring it back. |
+| [Acknowledge](organize-sessions.md#acknowledge-defer-or-finish-work) | Clear current Inbox activity without stopping, marking read, or archiving the session. Unpinned sessions move to **Acknowledged** until new activity or a new notification. |
 | Archive or mark as done | Remove completed work from the active list while retaining its conversation. Worktree or container resources can be removed as described below. |
 | Delete | Permanently remove the conversation. Associated worktrees or containers can also be removed. |
 
@@ -312,7 +314,7 @@ Choose the action that matches what you want to keep:
 
 For a worktree session, archiving commits uncommitted changes to the session branch before removing the worktree folder. If changes can't be preserved or the folder can't be removed, the worktree remains. The branch and commits are retained, so restoring re-creates the worktree.
 
-For a [Dev Container session](../agents-window.md#run-a-session-in-a-dev-container), marking done removes the container without waiting for idle shutdown, but only if no other session or unsent draft uses it. Restoring starts a replacement container and retains the conversation.
+For a [Dev Container session](../agents-window.md#run-a-session-in-a-dev-container), marking done removes the container without waiting for idle shutdown, but only if no other session or unsent draft uses it. Restoring starts a replacement container. To retain container-stored conversations across replacements, [configure a persistent state volume](https://code.visualstudio.com/docs/devcontainers/create-dev-container#preserve-chat-sessions-across-rebuilds) `feature(dev-container-state-volume)` before creating the container.
 
 **NOTE:** A Local session automatically archived by [enterprise runtime policy enforcement](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#runtime-policies-and-harness-selection) remains read-only while the policy applies. Continue in its replacement {% data variables.product.prodname_copilot_short %} session instead.
 

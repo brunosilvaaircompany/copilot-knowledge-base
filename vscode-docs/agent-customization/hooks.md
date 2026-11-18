@@ -6,7 +6,7 @@ Use the [Agent Customizations editor](#find-and-manage-hooks) to create and mana
 
 **NOTE:** Individual provider implementations can have a different lifecycle status and release schedule.
 
-**IMPORTANT:** Your organization might restrict which hooks can run. Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access. Administrators can learn how to [manage hooks in enterprise environments](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#enable-or-disable-hooks).
+**IMPORTANT:** Your organization might restrict which hooks can run. Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits them. Contact the IT team that deployed the settings to discuss access. Administrators can learn how to [manage hooks in enterprise environments](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#enable-or-disable-hooks).
 
 ## Choose the hook implementation for your session
 
@@ -51,7 +51,7 @@ Select the harness before opening the hooks interface so the editor shows the re
    * In the {% data variables.copilot.chat_view %}, enter `/hooks` in the chat input.
 1. Select **New Hook** (plus icon) next to **Workspace** or **User** to create a hook, or select an existing hook to open its configuration.
 
-To generate a hook with AI, describe the hook you want in chat. The `/create-hook <description>` and **Chat: Generate Hook** shortcuts are available only for Local sessions. Review generated configuration and scripts against the destination reference before running them. Generation is not automatic migration or verification.
+To generate a hook with AI, describe the hook you want in chat. Review generated configuration and scripts against the destination reference before running them. Generation is not automatic migration or verification.
 
 ## Create your first Copilot hook
 
@@ -141,7 +141,9 @@ If you prefer to create the files directly, use `~/.copilot/hooks/`, or `$COPILO
 
 ## Configure commands and event data
 
-A command hook receives event data as JSON on standard input (stdin). It can return one JSON output object on standard output (stdout). Keep diagnostic text separate from that output.
+A command hook receives event data as JSON on standard input (stdin). It can return one final JSON output object on standard output (stdout). Keep ordinary diagnostic text on standard error (stderr). Redirect or suppress diagnostic output from child processes, such as package managers or dependency installers, if it would otherwise reach the hook's stdout. Extra text can invalidate the JSON response even when the hook exits successfully.
+
+{% data variables.copilot.copilot_cli %} also supports [structured progress messages](https://docs.github.com/en/copilot/reference/hooks-reference#progress-messages) on stdout before the final response. Each progress message must be a complete JSON object on its own line. Recognized progress lines are removed before the remaining output is parsed as one JSON document.
 
 The Copilot harness supports a cross-platform `command` fallback and platform-specific `bash` or `powershell` commands. Command arguments belong in the command string. A shell-free `exec` and `args` form is also available; these arguments are not a replacement for the event JSON on stdin.
 

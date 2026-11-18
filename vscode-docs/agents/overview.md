@@ -1,21 +1,31 @@
 # Build with AI in {% data variables.product.prodname_vscode_shortname %}
 
-Use as much or as little AI as your task needs in {% data variables.product.prodname_vscode %}. Get suggestions as you type, collaborate with an agent beside your code, or coordinate tasks across projects in the {% data variables.copilot.agents_window %}. Combine these approaches as your work changes.
+Use as much or as little AI as your task needs in {% data variables.product.prodname_vscode %}. Get suggestions as you type, collaborate with an agent beside your code, tests, and debugger, or coordinate tasks across projects in the {% data variables.copilot.agents_window %}. Combine these approaches as your work changes.
 
-You can choose models from multiple providers and work with the {% data variables.product.prodname_copilot_short %}, Claude, or Codex agent harness, using a supported account or your own API key. Customizations and plugins help you tailor agents to your work.
+Choose models from multiple providers and work with the {% data variables.product.prodname_copilot_short %}, {% data variables.product.prodname_anthropic_claude_short %}, or {% data variables.product.prodname_openai_codex_short %} agent harness, using a supported account or your own API key. A harness provides the tools and workflow around a model. Customizations and plugins help you tailor agents to your work.
 
 Continuity lets you pick up agent work across supported interfaces without starting over. Connect to sessions on your own machine through {% data variables.copilot.github_environments %}, or use a cloud session without keeping a local host online.
 
-## Try your first agent task
+## Choose where to start
 
-{% action-card title="Build your first app with an agent" %}
-Build and validate a small app, then review the result. The quickstart uses the {% data variables.product.prodname_copilot %} harness with recommended defaults, so you don't need to configure every option first.
+<div class="card-grid">
+    <a class="card" href="/docs/agents/quickstart">
+        <i class="codicon codicon-hubot" aria-hidden="true"></i>
+        <div>
+            <p><strong>Complete your first AI task</strong></p>
+            <p>New to AI coding? Build and validate a small app with recommended defaults, then review the changes.</p>
+        </div>
+    </a>
+    <a class="card" href="/docs/agents/guides/overview#experienced-agent-fast-track">
+        <i class="codicon codicon-tools" aria-hidden="true"></i>
+        <div>
+            <p><strong>Bring your AI workflow to {% data variables.product.prodname_vscode_shortname %}</strong></p>
+            <p>Already use AI coding tools? Connect your account or model, choose an agent harness, and work in your own repository.</p>
+        </div>
+    </a>
+</div>
 
-* [Start the agents quickstart](quickstart.md)
-
-{% /action-card %}
-
-* **Already use agents:** Follow the [experienced-agent fast track](guides/overview.md#experienced-agent-fast-track) in your own repository.
+* **Prefer to start with your own code:** [Explore a codebase without changing files](guides/explore-a-codebase.md), then verify the explanation against your code.
 * **New to {% data variables.product.prodname_vscode_shortname %}:** First [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview).
 
 <video src="images/agents-overview/build-with-ai-overview.mp4" title="Video overview of building with AI in VS Code, showing inline suggestions, collaboration alongside code, and task orchestration in the Agents window." autoplay loop controls muted></video>
@@ -63,7 +73,7 @@ For a first agent task, [use the quickstart](quickstart.md) without configuring 
 
 | Choice | Options |
 |--------|---------|
-| **Models** | Choose [models from multiple providers](../agent-customization/language-models.md) through {% data variables.product.prodname_copilot %}, or use your own [API key (BYOK)](../agent-customization/language-models.md#bring-your-own-language-model-key) or a supported local model. |
+| **Models** | Choose [models from multiple providers](../agent-customization/language-models.md) through {% data variables.product.prodname_copilot %}, or use your own [API key (BYOK)](../agent-customization/language-models.md#bring-your-own-language-model-key) or a supported local model. For help deciding, [compare and choose models for your tasks](guides/choose-a-model.md). |
 | **Agent harnesses** | Choose between {% data variables.product.prodname_copilot_short %}, {% data variables.product.prodname_anthropic_claude_short %}, or {% data variables.product.prodname_openai_codex_short %} based on its [tools and workflows](run/agent-harnesses.md#compare-agent-harnesses). |
 | **Access and billing** | Use your existing {% data variables.product.prodname_copilot %} plan, a supported provider account, or an API key. Check [requirements for your harness](run/agent-harnesses.md#requirements-and-setup). |
 | **Customization** | Tailor agents with [plugins](../agent-customization/agent-plugins.md), [project instructions](guides/customize-copilot-guide.md), and [skills](../agent-customization/agent-skills.md). Connect external tools through [Model Context Protocol (MCP) servers](../agent-customization/mcp-servers.md). |

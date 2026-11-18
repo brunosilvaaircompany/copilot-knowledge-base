@@ -7,7 +7,7 @@ Start with the path for your customization below. You don't need to complete eve
 The Local harness `feature(local-harness)` is deprecated and will be removed by **February 2027**. Complete your customization migration before then. For the broader workflow transition, including session continuity, organization rollout, and policy verification, follow [Move from Local to the Copilot harness](../agents/run/move-to-copilot.md).
 
 **NOTE:** This article covers migration to the Copilot harness. For the Claude or Codex harness, use the locations and formats in the provider documentation.
-Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
+Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits them. Contact the IT team that deployed the settings to discuss access.
 
 ## Choose a migration path
 

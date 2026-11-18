@@ -4,8 +4,6 @@ The {% data variables.copilot.agents_window %} provides an agent-first interface
 
 This guide follows the workflow from choosing where an agent makes changes to monitoring, validating, and integrating its work. Start with one task, then add independent tasks as needed. If you're new to agent-assisted coding, first complete the [agents quickstart](../quickstart.md).
 
-<!-- <video src="../images/agents-window/agents-demo-20260510.mp4" title="Video showing the {% data variables.copilot.agents_window %} experience in {% data variables.product.prodname_vscode_shortname %} Insiders." controls></video> -->
-
 <div class="docs-action" data-show-in-doc="false" data-show-in-sidebar="true" title="Get started with agents">
 Follow a hands-on tutorial to build an app with AI agents in {% data variables.product.prodname_vscode_shortname %}.
 
@@ -65,7 +63,7 @@ Choose a task with a clear outcome and checks you can run to verify it. The foll
 
     You can optionally change the [agent harness](agent-harnesses.md#compare-agent-harnesses), agent, or model.
 
-**TIP:** To start a session in the background without navigating into it, press `kbstyle(Alt+Enter)` or hold `kbstyle(Alt)` and select **Send**. Focus stays in the composer so you can start another task. Select **Open Session** in the confirmation to open the sent conversation. With the [Inbox mode setting](sessions/organize-sessions.md#turn-on-inbox-mode) enabled, you can also press `kbstyle(Ctrl+Enter)` (`kbstyle(Cmd+Enter)` on macOS).
+**TIP:** To start a session in the background without navigating into it, press `kbstyle(Alt+Enter)` or hold `kbstyle(Alt)` and select **Send**. Focus stays in the composer so you can start another task. Select **Open Session** in the confirmation to open the sent conversation. With [Inbox grouping](sessions/organize-sessions.md#turn-on-inbox-mode) selected, you can also press `kbstyle(Ctrl+Enter)` (`kbstyle(Cmd+Enter)` on macOS).
 
 ### Choose where an agent makes changes
 
@@ -89,6 +87,80 @@ Git-ignored files, including dependencies and local configuration, are also abse
 Dev Container sessions work directly in the container workspace and don't support **New Worktree**. See [Run a session in a Dev Container](#run-a-session-in-a-dev-container).
 
 **IMPORTANT:** Worktrees isolate working files, not the agent's access to your machine or external services. Either isolation mode supports the permission levels offered by your harness. For operating system-level restrictions, configure [agent sandboxing](agent-sandboxing.md) or use [cloud sessions](cloud-sandbox-sessions.md).
+
+### Save and resume drafts
+
+`feature(agents-window-drafts)`
+
+Prepare requests for several tasks and return to them when you're ready to send them. In the {% data variables.copilot.agents_window %}, drafts save unsent **New Session** requests without starting an agent session.
+
+1. Open Settings (`kb(workbench.action.openSettings)`) and enable `setting(sessions.drafts.enabled)`. The setting is off by default.
+
+1. Select **New Session** and compose a request, including any context attachments and session options.
+
+1. Navigate to another conversation. When the new-session input is no longer visible, the request is saved in **Drafts** in the sidebar.
+
+1. Select **Resume Draft** beside a saved draft, or **Open Draft** in the notification. Review or edit the request, then send it when you're ready.
+
+Each draft keeps its text, attachments, inline references, workspace, agent, model, and configuration. Saved drafts remain available after restarting the window. To save a new draft, navigate away from the input first. Restarting alone doesn't add it to **Drafts**.
+
+The draft is removed from the list after the request is accepted. To discard one without sending it, select **Delete Draft**.
+
+Turning off `setting(sessions.drafts.enabled)` hides saved drafts and stops saving new ones, but doesn't delete them. Turn it back on to access them again.
+
+## Send a request later
+
+`feature(agents-window-send-later)`
+
+Use **Send Later** to start a new task or send a follow-up to an existing conversation at a future time. For tasks that repeat, [create an automation](automations.md) instead.
+
+Enable `setting(sessions.sendLater.enabled)`, which is off by default, and keep `setting(chat.automations.enabled)` enabled. Send Later currently only works on the local machine and not for remote agent sessions.
+
+1. Compose a request in **New Session** or an existing conversation. For a new session, choose its workspace, agent, model, and other session options.
+
+1. Open the **Send** dropdown and select **Send Later**.
+
+1. Choose a preset, such as **In 5 Minutes** or **Tomorrow Morning** (9 AM the next day). Each preset shows its exact local send time.
+
+    For a custom time, select **Choose Date and Time**, choose a future date and time, and select **Schedule**. The time dropdown uses 15-minute steps. Select **Exact Time** to choose a precise minute. Review the date, time, and time zone before scheduling.
+
+<!-- TODO: Capture the Send Later calendar and an existing conversation's scheduled-message area. -->
+
+A scheduled new-session request appears under **Drafts**. Use **Preview** to check its prompt, time, workspace, and model. A scheduled follow-up appears inside its original conversation, including a nested chat, rather than as a new sidebar draft.
+
+At the scheduled time, a follow-up uses that conversation's current configuration. If the conversation is busy, the request joins its queue without interrupting or steering the active turn.
+
+**NOTE:** Keep your computer awake and the Agent Host running for on-time delivery. Scheduling doesn't wake a sleeping computer or start a stopped host. Pending requests survive window reloads, and a missed send catches up once when the host becomes available.
+
+### Change or cancel a scheduled request
+
+To update or manage a scheduled request, right-click a scheduled chat request and select an action.
+
+| Action | Effect |
+|---|---|
+| **Reschedule** | Change the send time without changing the destination. |
+| **Send Now** | Send immediately, or queue the request if its conversation is busy. It doesn't send again at the original time. |
+| **Edit** | For an existing-chat request, change its text and send time, then select **Save**. |
+| **Cancel Schedule** | Cancel delivery and retain the request content. For a new session, cancellation keeps an ordinary draft if saved drafts are enabled, or restores the content to the composer otherwise. |
+| **Edit as Draft** | For a new-session request, cancel the schedule and reopen its content in the composer. |
+
+Recovery doesn't overwrite other unsent input. If cancellation reports an uncertain outcome, check **Automations** before sending the request again.
+
+Turning off `setting(sessions.sendLater.enabled)` doesn't cancel accepted schedules. Manage those requests in **Automations**.
+
+**TIP:** To view the list of scheduled requests, select the **Scheduled Only** filter option in the sessions list.
+
+### Ask the agent to schedule a follow-up
+
+You can ask the agent to schedule a text-only request in the same conversation:
+
+```prompt
+In 30 minutes, remind me in this chat to review the test results.
+```
+
+An explicit one-time request doesn't require a separate `Create it` message. Review the scheduling tool approval if prompted. Scheduling doesn't approve future tool actions.
+
+The request targets the exact calling conversation unless you explicitly ask for a new session. You can also ask the agent to reschedule, cancel, or send a pending request now. Use the chat UI for requests with attachments.
 
 ## Work with multiple sessions
 
@@ -239,7 +311,7 @@ On desktop, you can run sessions using supported provider credentials instead of
 * Follow the [{% data variables.product.prodname_openai_codex_short %} setup](agent-harnesses.md#codex) to use a ChatGPT sign-in.
 * Configure a [supported BYOK model](../../agent-customization/language-models.md#bring-your-own-language-model-key) for the {% data variables.copilot.agents_window %}.
 
-**NOTE:** {% data variables.product.prodname_anthropic_claude_short %} and {% data variables.product.prodname_openai_codex_short %} harnesses are disabled when [enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), even with separate credentials. Existing sessions aren't deleted. Contact the IT team that deployed the settings to discuss access.
+**NOTE:** {% data variables.product.prodname_anthropic_claude_short %} and {% data variables.product.prodname_openai_codex_short %} harnesses are disabled when [enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits them. Separate credentials don't override that restriction. Existing sessions aren't deleted. Contact the IT team that deployed the settings to discuss access.
 
 If no provider is configured, select **Add Models** or **Sign In** in the window. Models and operations that require {% data variables.product.prodname_github %} authentication prompt you when needed. The browser-based {% data variables.copilot.agents_window %} requires {% data variables.product.prodname_github %} sign-in.
 
@@ -270,6 +342,8 @@ To switch back before starting, select **Use This Computer** or **Use Remote Hos
 If startup fails, check the workspace-specific **Dev Container** Output channel. The picker option isn't available for unsupported hosts or folders nested inside another remote environment. Dev Container support is on by default through `setting(chat.agentHost.devContainer.enabled)`.
 
 Idle containers stop after five minutes when no session is working, waiting for input, or holding an unsent draft. Continuing a session restarts the container without losing the conversation. Change the timeout with `setting(chat.agentHost.devContainer.idleTimeout)` (`300` seconds by default, `0` to turn off automatic shutdown). Marking sessions as done or deleting them can still remove the container.
+
+Restarting an existing container is different from rebuilding or replacing it. To keep container-stored chat sessions across replacements, enable `setting(chat.agentHost.devContainer.stateVolume.enabled)` before creating the container. See [Preserve chat sessions across rebuilds](https://code.visualstudio.com/docs/devcontainers/create-dev-container#preserve-chat-sessions-across-rebuilds) `feature(dev-container-state-volume)`, especially the warning about the first rebuild of an existing container.
 
 ### Start a session from a pull request
 
@@ -335,7 +409,7 @@ To stop monitoring the pull request, select **{% data variables.copilot.agent_me
 
 ### Schedule recurring tasks
 
-Automations run saved agent tasks on a schedule or, for cloud automations `feature(cloud-automations)`, in response to supported repository events. Select **Automations** in the sidebar to get started. Learn how to [create and manage agent automations](automations.md).
+Automations run saved agent tasks on a schedule or, for cloud automations `feature(cloud-automations)`, in response to supported repository events. To turn a completed task into an automation, enter `/automate` in its chat. To start from a new idea, select **Automations** in the sidebar, and then select **Create with Agent**. Follow the [chat-based creation workflow](automations.md#create-an-automation-from-chat) to review the proposal, save it, and check a first run.
 
 ## Configure the {% data variables.copilot.agents_window %}
 

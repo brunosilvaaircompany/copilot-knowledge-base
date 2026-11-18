@@ -16,7 +16,7 @@ Separating the agent from the window that displays it provides these capabilitie
 * **Multiple agent implementations**: different agent runtimes plug into one host-facing interface and present common session concepts to clients.
 * **Dedicated process**: agents run in their own process, where they won't be blocked by busy extensions.
 
-**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
+**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits them. Contact the IT team that deployed the settings to discuss access.
 
 ## Process architecture
 
@@ -49,8 +49,6 @@ The following diagram illustrates local, container, and dev tunnel deployments.
 ![Screenshot showing desktop and browser clients connecting to Agent Hosts. The desktop client can use a host workspace or a Dev Container, while the browser connects to a development machine through a dev tunnel.](../images/concepts/agent-host-deployment.svg)
 
 Clients display and control sessions. The Agent Host owns them. Desktop and browser clients can connect to the same tunnel host.
-
-`feature(agent-host-dev-containers)`
 
 For a Dev Container session, the Agent Host runs inside the project's container. The container can run on your machine or on a supported SSH, Tunnel, or WSL host, while the {% data variables.copilot.agents_window %} remains on your machine. Workspace file edits and commands use the tools and dependencies inside the container, rather than those installed directly on the source host.
 

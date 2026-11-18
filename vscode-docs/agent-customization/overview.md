@@ -280,7 +280,7 @@ These links navigate within the selected session's customization context. They d
   vscode://chat-customizations/open?page=discover
   ```
 
-**NOTE:** For {% data variables.product.prodname_vscode_shortname %} Insiders, use the `vscode-insiders://` scheme instead of `vscode://`. To share links on web pages or markdown badges, use the HTTPS redirect wrapper: `https://vscode.dev/redirect?url=<url-encoded-vscode-URL>`. For more information on URL handlers, see [URL handling](https://code.visualstudio.com/docs/configure/command-line#url-handling).
+**NOTE:** For {% data variables.product.prodname_vscode_shortname %} Insiders, use the `vscode-insiders://` scheme instead of `vscode://`. To share links on web pages or markdown badges, use the HTTPS redirect wrapper: `https://vscode.dev/redirect?url=<url-encoded-vscode-URL>`. For more information on URL handlers, see [URL handling](https://code.visualstudio.com/docs/configure/command-line#opening-vs-code-with-urls).
 
 ### Manage canvas extensions
 

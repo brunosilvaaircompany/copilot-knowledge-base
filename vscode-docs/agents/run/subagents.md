@@ -25,7 +25,7 @@ For a quick lookup or a small edit, a direct request is usually enough. Delegati
 
 Your [agent harness](agent-harnesses.md#compare-agent-harnesses) determines how subagents run and which configuration options they support. [Select a harness](agent-harnesses.md#select-a-harness) before you submit the first prompt.
 
-**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability). Contact the IT team that deployed the settings to discuss access.
+**NOTE:** Claude and Codex harnesses are disabled when [{% data variables.product.prodname_copilot_short %} enterprise-managed settings apply](https://code.visualstudio.com/docs/enterprise/manage-ai-settings#claude-and-codex-availability), unless your administrator explicitly permits them. Contact the IT team that deployed the settings to discuss access.
 Provider documentation also covers CLI workflows. Commands and configuration options can differ in {% data variables.product.prodname_vscode_shortname %}. Use the [harness guide](agent-harnesses.md) for integration-specific setup and limitations.
 
 

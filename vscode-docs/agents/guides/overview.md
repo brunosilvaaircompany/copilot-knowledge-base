@@ -2,13 +2,21 @@
 
 Find a tutorial or guide for the task you want to complete with agents in {% data variables.product.prodname_vscode_shortname %}. Learn with a sample project or apply a workflow to your own codebase.
 
-For help choosing an AI workflow, [compare suggestions, collaboration alongside code, and agent orchestration](../overview.md#choose-how-you-work).
+For help choosing a feature and its first action, use the [AI features cheat sheet](../reference/ai-features-cheat-sheet.md#choose-a-feature).
 
 ## Choose where to start
 
-Choose a starting path. If you're new to {% data variables.product.prodname_vscode_shortname %}, [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview) first.
+New to AI coding? Start by exploring your own code without changing it, or use a sample project to practice making and reviewing changes. If you're new to {% data variables.product.prodname_vscode_shortname %}, [install the editor and open a workspace](https://code.visualstudio.com/docs/getstarted/overview) first.
 
 <div class="card-grid">
+    <a class="card" href="/docs/agents/guides/explore-a-codebase">
+        <i class="codicon codicon-source-control" aria-hidden="true"></i>
+        <div>
+            <p><strong>Explore your own code</strong></p>
+            <p>Ask about a behavior and verify the explanation without changing files.</p>
+            <p>Your repository. Start with a question about code you know.</p>
+        </div>
+    </a>
     <a class="card" href="/docs/agents/quickstart">
         <i class="codicon codicon-hubot" aria-hidden="true"></i>
         <div>
@@ -25,15 +33,9 @@ Choose a starting path. If you're new to {% data variables.product.prodname_vsco
             <p>Sample project. Requires Git.</p>
         </div>
     </a>
-    <a class="card" href="/docs/agents/guides/overview#work-on-a-project">
-        <i class="codicon codicon-source-control" aria-hidden="true"></i>
-        <div>
-            <p><strong>Work in your own repository</strong></p>
-            <p>Explore your codebase, add a feature, or refactor existing code with an agent.</p>
-            <p>Your repository. Check the guide's prerequisites.</p>
-        </div>
-    </a>
 </div>
+
+Already use AI coding tools? Follow the [experienced-agent fast track](#experienced-agent-fast-track) to bring your workflow to {% data variables.product.prodname_vscode_shortname %}.
 
 Or jump to a task:
 
@@ -58,9 +60,9 @@ Or jump to a task:
 
 * [Add tests to existing code](test-code-with-ai.md): generate and run tests, then review assertions, failures, and coverage. **Setup:** your project, {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}.
 
-* [Validate a web app with browser tools](browser-agent-testing-guide.md): build a calculator app and test it against acceptance criteria. **Setup:** sample web app.
+* [Validate a web app with browser tools](browser-agent-testing-guide.md): build a calculator, reproduce a defect, and verify the fix against explicit acceptance criteria. **Setup:** sample web app, {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}.
 
-* [Set up test-driven development](test-driven-development-guide.md): create custom agents and instructions for a repeatable test-first workflow. **Setup:** your repository with working tests, Local harness `feature(local-harness)` in the {% data variables.copilot.chat_view %}.
+* [Practice test-driven development](test-driven-development-guide.md): write a failing test, implement behavior, and refactor with a review checkpoint between phases. **Setup:** your repository with working tests, {% data variables.product.prodname_copilot_short %} in the {% data variables.copilot.chat_view %}. Custom agents are optional.
 
 ## Customize and coordinate agents
 
@@ -74,6 +76,8 @@ Or jump to a task:
 
 ## Improve results and recover
 
+* [Compare and choose models](choose-a-model.md): start with Fusion, Auto, or an individual model, then compare results when you need more evidence. **Use your own repository with working tests.**
+
 * [Get an agent back on track](get-agent-back-on-track.md): choose whether to steer a request, recover unwanted changes, or reset conversation context.
 
 * [Reduce AI credit usage](optimize-usage.md): compare model costs and results, focus context, and scope tools to reduce unnecessary usage.
@@ -82,9 +86,15 @@ Or jump to a task:
 
 ## Experienced-agent fast track
 
-To skip the sample projects, [open your repository as a workspace](https://code.visualstudio.com/docs/getstarted/overview#open-your-code), then [explore the codebase](explore-a-codebase.md) or [add a feature](add-a-feature.md). Follow the guide's setup and [review and validate edits](../run/review-code-edits.md) before you integrate them.
+If you already use AI coding tools but are new to {% data variables.product.prodname_vscode_shortname %}, bring your workflow to your own repository without completing the sample tutorials:
 
-To bring an existing setup, compare [agent harnesses and supported accounts](../run/agent-harnesses.md#requirements-and-setup), or [connect a model with your own API key](../../agent-customization/language-models.md#bring-your-own-language-model-key). Check compatibility with the guide you choose.
+1. [Open your repository as a workspace](https://code.visualstudio.com/docs/getstarted/overview#open-your-code).
+
+1. Connect your existing account by following the [setup for your agent harness](../run/agent-harnesses.md#requirements-and-setup), or [connect a model with your own API key](../../agent-customization/language-models.md#bring-your-own-language-model-key).
+
+1. Use the [{% data variables.copilot.chat_view %}](../run/chat-view.md) to work alongside your editor, tests, and debugger, or the [{% data variables.copilot.agents_window %}](../run/agents-window.md) to coordinate tasks across multiple projects.
+
+Start with a bounded task: [explore the codebase](explore-a-codebase.md) or [add a feature](add-a-feature.md). Check the guide's harness and interface requirements, and [review and validate edits](../run/review-code-edits.md) before you integrate them.
 
 ## Match a guide to your setup
 
