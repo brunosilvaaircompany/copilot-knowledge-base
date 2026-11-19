@@ -1,7 +1,37 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-18 16:19 UTC  
+> Atualizado em: 2026-11-19 16:27 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [Connect Supabase, Box, Calendly, and more to Copilot](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot)
+
+**Data:** 2026-11-18  **Categorias:** `Improvement`, `copilot`
+
+You can now connect eight more services to Copilot using GitHub-verified MCP servers, or connectors, available in public preview. They join more than 25 services you can already connect, like&#8230;
+
+The post [Connect Supabase, Box, Calendly, and more to Copilot](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [Gemini 4 Neon in GitHub Copilot](https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot)
+
+**Data:** 2026-11-18  **Categorias:** `Release`, `copilot`
+
+Gemini 4 Neon is now generally available in GitHub Copilot. It is designed for agentic coding, multistep tool use, and knowledge work. According to Google, Gemini 4 Neon delivers quality&#8230;
+
+The post [Gemini 4 Neon in GitHub Copilot](https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [Customize GitHub Copilot for your team](https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team)
+
+**Data:** 2026-11-18  **Categorias:** `Release`, `copilot`
+
+You can now share the GitHub Copilot plugins your team relies on without asking every member to repeat the same setup. Team customizations are generally available for organization teams. Team&#8230;
+
+The post [Customize GitHub Copilot for your team](https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
@@ -42,25 +72,5 @@ The post [GitHub Copilot app, Microsoft Ignite releases](https://github.blog/cha
 GitHub Copilot code review now helps you catch more issues earlier, with less effort. Adaptive matches review depth to each pull request, so routine changes get a quick pass and&#8230;
 
 The post [Copilot code review: Adaptive effort, secret detection, and more](https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [MAI Code 2 and MAI Code 2 Flash in GitHub Copilot](https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot)
-
-**Data:** 2026-11-17  **Categorias:** `Release`, `copilot`
-
-The next generation of Microsoft AI (MAI) coding models has arrived in GitHub Copilot. Introducing MAI Code 2 and MAI Code 2 Flash, two new models that represent a major&#8230;
-
-The post [MAI Code 2 and MAI Code 2 Flash in GitHub Copilot](https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Monitor GitHub Copilot activity through Microsoft Agent 365](https://github.blog/changelog/2026-11-17-monitor-github-copilot-activity-through-microsoft-agent-365)
-
-**Data:** 2026-11-17  **Categorias:** `Release`, `copilot`
-
-Enterprises can now stream GitHub Copilot agent activity directly into Microsoft Agent 365. This lets you bring audit data from across GitHub Copilot clients into Microsoft&#8217;s agent control plane, where&#8230;
-
-The post [Monitor GitHub Copilot activity through Microsoft Agent 365](https://github.blog/changelog/2026-11-17-monitor-github-copilot-activity-through-microsoft-agent-365) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

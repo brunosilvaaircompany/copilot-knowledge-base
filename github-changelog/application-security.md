@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-17 16:48 UTC  
+> Atualizado em: 2026-11-19 16:27 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Bulk start AI Scan for repositories](https://github.blog/changelog/2026-11-16-bulk-start-ai-scan-for-repositories)
+## [Security risk assessments run automatically on GitHub Team](https://github.blog/changelog/2026-11-18-security-risk-assessments-run-automatically-on-github-team)
 
-**Data:** 2026-11-16  **Categorias:** `Improvement`, `application security`
+**Data:** 2026-11-18  **Categorias:** `Improvement`, `application security`
 
-AI Scan for repositories finds security vulnerabilities on your repository&#8217;s default branch. It covers languages CodeQL doesn&#8217;t support and finds additional issues in languages CodeQL already analyzes. Findings appear in&#8230;
+GitHub security risk assessments now run automatically for organizations on GitHub Team. Organization admins and security managers can review findings from the free assessments to identify exposed credentials and code&#8230;
 
-The post [Bulk start AI Scan for repositories](https://github.blog/changelog/2026-11-16-bulk-start-ai-scan-for-repositories) appeared first on [The GitHub Blog](https://github.blog).
+The post [Security risk assessments run automatically on GitHub Team](https://github.blog/changelog/2026-11-18-security-risk-assessments-run-automatically-on-github-team) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

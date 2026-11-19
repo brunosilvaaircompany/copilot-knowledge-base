@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-17 16:48 UTC  
+> Atualizado em: 2026-11-19 16:27 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Budget limit increased to 40,000 budgets per account](https://github.blog/changelog/2026-11-16-budget-limit-increased-to-40000-budgets-per-account)
+## [S3 audit log streaming with OpenID Connect expands to GHE.com](https://github.blog/changelog/2026-11-19-s3-audit-log-streaming-with-openid-connect-expands-to-ghe-com)
 
-**Data:** 2026-11-16  **Categorias:** `Improvement`, `enterprise management tools`
+**Data:** 2026-11-19  **Categorias:** `Improvement`, `enterprise management tools`, `platform governance`
 
-You can now create up to 40,000 budgets per GitHub Enterprise Cloud account, up from 10,000. If you set budgets for individual users, or manage budgets across many cost centers&#8230;
+You can now stream enterprise audit logs to Amazon S3 using OpenID Connect (OIDC) on GitHub Enterprise Cloud with data residency (GHE.com). This extends the existing github.com capability, letting you&#8230;
 
-The post [Budget limit increased to 40,000 budgets per account](https://github.blog/changelog/2026-11-16-budget-limit-increased-to-40000-budgets-per-account) appeared first on [The GitHub Blog](https://github.blog).
+The post [S3 audit log streaming with OpenID Connect expands to GHE.com](https://github.blog/changelog/2026-11-19-s3-audit-log-streaming-with-openid-connect-expands-to-ghe-com) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
