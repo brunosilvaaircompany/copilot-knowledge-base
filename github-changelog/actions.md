@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-16 16:53 UTC  
+> Atualizado em: 2026-11-20 15:59 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Actions for ARM32 Linux & Windows retirement](https://github.blog/changelog/2026-11-12-actions-for-arm32-linux-windows-retirement)
+## [Red Hat Enterprise Linux runner images now generally available](https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available)
 
-**Data:** 2026-11-12  **Categorias:** `Retired`, `actions`
+**Data:** 2026-11-19  **Categorias:** `Improvement`, `actions`
 
-GitHub Actions hosted runners will be ending support for ARM32 job execution on Windows and Linux by 8th Dec 2026. This follows our end of support for node20 where Node&#8230;
+Red Hat Enterprise Linux (RHEL) 9 and RHEL 10 images for GitHub-hosted larger runners are now generally available. Originally introduced in public preview in June 2026 in partnership with Red&#8230;
 
-The post [Actions for ARM32 Linux & Windows retirement](https://github.blog/changelog/2026-11-12-actions-for-arm32-linux-windows-retirement) appeared first on [The GitHub Blog](https://github.blog).
+The post [Red Hat Enterprise Linux runner images now generally available](https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

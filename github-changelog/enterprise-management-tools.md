@@ -1,7 +1,17 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-19 16:27 UTC  
+> Atualizado em: 2026-11-20 15:59 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [Enterprise Live Migrations from Azure DevOps generally available](https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available)
+
+**Data:** 2026-11-19  **Categorias:** `Release`, `enterprise management tools`
+
+Enterprise Live Migrations (ELM) from Azure DevOps Services to GitHub Enterprise Cloud with data residency is now generally available. You can move your repositories while your teams keep working, then&#8230;
+
+The post [Enterprise Live Migrations from Azure DevOps generally available](https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 

@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-19 16:27 UTC  
+> Atualizado em: 2026-11-20 15:59 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
