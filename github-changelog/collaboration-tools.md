@@ -1,7 +1,27 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-20 15:59 UTC  
+> Atualizado em: 2026-11-21 15:13 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
+
+---
+
+## [GitHub Enterprise Server 3.23 release candidate](https://github.blog/changelog/2026-11-20-github-enterprise-server-3-23-release-candidate)
+
+**Data:** 2026-11-20  **Categorias:** `Release`, `collaboration tools`
+
+GitHub Enterprise Server (GHES) 3.23 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.23 release: When working in GitHub Projects, you&#8230;
+
+The post [GitHub Enterprise Server 3.23 release candidate](https://github.blog/changelog/2026-11-20-github-enterprise-server-3-23-release-candidate) appeared first on [The GitHub Blog](https://github.blog).
+
+---
+
+## [Pin your favorite repositories to your dashboard](https://github.blog/changelog/2026-11-20-pin-your-favorite-repositories-to-your-dashboard)
+
+**Data:** 2026-11-20  **Categorias:** `Improvement`, `collaboration tools`
+
+Choose which repositories appear on the Dashboard with the new Favorite repositories section. If the new dashboard experience isn&#8217;t enabled, Top repositories remains unchanged. Select Edit or Add repositories to&#8230;
+
+The post [Pin your favorite repositories to your dashboard](https://github.blog/changelog/2026-11-20-pin-your-favorite-repositories-to-your-dashboard) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
 
