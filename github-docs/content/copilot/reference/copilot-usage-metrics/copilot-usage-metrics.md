@@ -5,7 +5,7 @@ The Copilot usage metrics dashboard and APIs display and export data using a con
 * The Copilot usage metrics dashboards are available at the **enterprise** and **organization** level.
 * The Copilot usage metrics APIs return reports at the **enterprise** or **organization** scope, with aggregated, **repository-level**, and **individual user-level** report granularities. Shapes vary by scope and granularity.
 * Team-level metrics are not pre-aggregated; you construct them by joining the user-teams report with the per-user usage metrics report. See [Team Level Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/team-level-metrics).
-* Repository-level reports contain one record per repository with pull request activity on the requested day. See [Repository-level fields (API only)](#repository-level-fields-api-only) later in this article.
+* Repository-level reports contain one record per repository with pull request activity on the requested day. Repository insights displays repository-level pull request activity and Copilot code review outcomes. See [Repository-level fields](#repository-level-fields) later in this article.
 
 For guidance on how to read and interpret these metrics, see [Interpret Copilot Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/interpret-copilot-metrics).
 
@@ -255,13 +255,18 @@ Teams with fewer than 5 seated Copilot users on a given day are excluded from th
 | `team_id` | `integer` | No | Unique ID of the team the user belongs to. |
 | `slug` | `string` | No | URL-friendly identifier for the team. |
 
-### Repository-level fields (API only)
+
+<a name="repository-level-fields-api-only"></a>
+
+### Repository-level fields
 
 Repository-level reports cover repositories in an organization or enterprise. They show daily pull request creation, review, merge, and suggestion activity. They also show pull request review stage durations and Copilot code review outcomes. Reports include pull requests created by Copilot cloud agent and reviewed by Copilot code review.
 
 Each row represents one repository that had pull request activity on the requested day; repositories with no activity are omitted. These reports focus on pull request lifecycle activity and can contain data even when IDE usage metrics are absent.
 
 These fields are returned by the daily repository-level report (`repos-1-day`), available via the REST API at the organization and enterprise scopes. For the endpoint URLs, response envelope, permissions, and download workflow, see [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics). For example rows, see [Example Schema](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/example-schema#repository-level-schema-example).
+
+Repository insights uses repository-level data to show pull request activity and review outcomes. For dashboard calculations, reporting periods, and interpretation limits, see [Repository Insights Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/repository-insights-metrics).
 
 | Field | Type | Nullable | Description |
 |:--|:--|:--|:--|
@@ -483,12 +488,35 @@ The `totals_by_client` array appears at the top level of each record in per-user
 | `totals_by_client[].token_usage.avg_tokens_per_request` | `number` | No | Average number of **output** and **prompt** tokens per request, computed as `(output_tokens_sum + prompt_tokens_sum) ÷ request_count`. |
 | `totals_by_client[].totals_by_model` | `array` | No | Per-model breakdown of the client's requests and token usage. Entries are keyed on `model`, `model_selection_mode`, and `is_custom_enterprise_model`, so the same model can appear more than once. For example, a model used both as an enterprise custom model and as a Copilot-hosted model has two entries. |
 | `totals_by_client[].totals_by_model[].model` | `string` | No | Model used for the requests. For `code_review`, the model is always reported as `unknown`. Enterprise custom model names that can't be matched to a known model are also reported as `unknown`. |
-| `totals_by_client[].totals_by_model[].model_selection_mode` | `string` | No | How the model was selected. Possible values are `user_selected` (a specific model was requested rather than Auto), `product_selected` (the product chose the model, used for all Copilot code review and Copilot cloud agent requests), `auto` (Auto chose the model), `other` (selection modes that are grouped together and not yet reported individually), and `unknown` (a selection mode sent by the client that couldn't be normalized). |
+| `totals_by_client[].totals_by_model[].model_selection_mode` | `string` | No | How the model was selected. See [Model selection mode values](#model-selection-mode-values). |
 | `totals_by_client[].totals_by_model[].is_custom_enterprise_model` | `boolean` | Yes | Whether the requests used an enterprise custom model. `true` for custom models that an enterprise or organization owner configured in GitHub settings. `false` for Copilot-hosted models, including when no custom model signal is available. Determined server-side. Omitted for report days before this field was introduced. See [Enable Custom Models](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models). |
 | `totals_by_client[].totals_by_model[].request_count` | `integer` | No | Number of successful model requests from the client that used this model, selection mode, and custom model status. |
 | `totals_by_client[].totals_by_model[].token_usage.prompt_tokens_sum` | `integer` | No | Total number of prompt tokens sent across these requests. |
 | `totals_by_client[].totals_by_model[].token_usage.output_tokens_sum` | `integer` | No | Total number of output tokens generated across these requests. |
 | `totals_by_client[].totals_by_model[].token_usage.avg_tokens_per_request` | `number` | No | Average number of **output** and **prompt** tokens per request, computed as `(output_tokens_sum + prompt_tokens_sum) ÷ request_count`. |
+
+#### Model selection mode values
+
+The `model_selection_mode` field reports the following values.
+
+| Value | Description |
+|:--|:--|
+| `user_selected` | A specific model was requested rather than Auto or Copilot Fusion. |
+| `product_selected` | The product chose the model. Used for all Copilot code review and Copilot cloud agent requests. |
+| `auto` | Auto chose the model, including requests using the Efficiency or Intelligence tier. |
+| `fusion_standard` | Requests using the Fusion Standard effort level. Can also include Auto Balance requests. |
+| `fusion_high` | Requests using the Fusion High effort level. |
+| `fusion_max` | Requests using the Fusion Max effort level. |
+| `fusion_fast` | Requests using the Fusion Fast effort level. This level is used only in Visual Studio Code inline chat. Users can't select it. |
+| `unknown` | The selection mode was missing, empty, or couldn't be normalized. |
+
+Earlier reports can contain `other` for selection modes that were grouped together rather than reported individually.
+
+For details about the effort levels, see [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion#copilot-fusion-effort-levels).
+
+Currently, `fusion_standard` can include Auto Balance requests from clients that don't support Copilot Fusion. Don't use this value alone to measure Copilot Fusion adoption. These Auto Balance requests can appear as Auto in billing reports.
+
+Usage metrics measure activity, not charges. Use billing usage reports to determine billable amounts. Don't infer charges from `model_selection_mode`. See [Billing Reports](https://docs.github.com/en/billing/reference/billing-reports).
 
 ### Pull request activity fields
 
@@ -508,7 +536,7 @@ The `pull_requests` object appears in aggregated enterprise and organization rep
 | `pull_requests.total_created_by_copilot` | `integer` | No | Number of pull requests created by Copilot cloud agent on this specific day. |
 | `pull_requests.total_reviewed_by_copilot` | `integer` | No | Number of pull requests reviewed by Copilot code review on this specific day. <br/><br/>A pull request may be counted on multiple days if Copilot code review reviews it on multiple days. |
 | `pull_requests.total_merged_created_by_copilot` | `integer` | No | Number of pull requests created by Copilot cloud agent that were merged on this specific day. Each pull request is counted only on the day it is merged. |
-| `pull_requests.total_merged_reviewed_by_copilot` | `integer` | No | Number of pull requests that were both merged and reviewed by Copilot code review during the reporting period. |
+| `pull_requests.total_merged_reviewed_by_copilot` | `integer` | No | Number of pull requests merged on this specific day that received at least one Copilot code review review before they merged. Each pull request is counted only on the day it is merged. |
 | `pull_requests.median_minutes_to_merge_copilot_authored` | `number` | Yes | Median time, in minutes, between pull request creation and merge for pull requests created by Copilot cloud agent and merged on this specific day. Null when no such pull requests were merged that day. |
 | `pull_requests.median_minutes_to_merge_copilot_reviewed` | `number` | Yes | Median time, in minutes, between pull request creation and merge, calculated only for pull requests reviewed by Copilot code review. Null when no such pull requests were merged that day. |
 | `pull_requests.total_copilot_suggestions` | `integer` | No | Number of pull request review suggestions generated by Copilot code review on this specific day. |
@@ -561,15 +589,14 @@ The `copilot_code_review` object appears only in repository-level reports. It sh
 #### How comments are counted
 
 * Only comments that Copilot code review posts on pull requests count. Comments from people or other review tools, and Copilot code review reviews in the IDE, are not included.
-* Comments are evaluated when their pull request merges. Each comment counts on the day its pull request merged, not the day Copilot code review posted it.
-* Copilot code review usually does not evaluate comments on pull requests opened by bots, such as Copilot cloud agent.
+* An AI model evaluates comments when their pull request merges to judge whether the issue each comment raised was addressed. Each comment counts on the day its pull request merged, not the day Copilot code review posted it.
 * A comment is addressed when the developer takes any of these actions:
   * Applies the suggested change
   * Asks Copilot code review to make the fix
-  * Edits the code by hand
-  * Replies that the fix will come in a later pull request
+  * Pushes a fix made manually or with any agent
+  * Accepts the feedback and explicitly defers the fix to a later pull request
 
-Comments that were ignored, or that Copilot code review later found to be wrong, count as evaluated but not addressed.
+Comments that were not addressed remain in the evaluated total but not the addressed total.
 
 These counts differ from the suggestion counts in `pull_requests`. Suggestion counts include only comments with a ready-to-apply code suggestion. A suggestion counts as applied only when someone applies it. The `copilot_code_review` counts include every evaluated comment, regardless of whether or how the developer acted on it.
 
@@ -580,7 +607,9 @@ Each `review_comments_by_*` array splits the evaluated and addressed comments by
 * Each comment counts once in the severity, review tier, and comment type arrays. A comment whose severity, review tier, or type was not recorded counts only in the totals, so these arrays can add up to less than the totals.
 * A comment that drew on more than one customization counts once for each, so `review_comments_by_customization` can add up to more than the totals.
 
-To calculate the addressed rate, divide `total_comments_addressed` by `total_comments_evaluated`.
+To calculate the address rate, divide `total_comments_addressed` by `total_comments_evaluated`. For a severity, review tier, customization, or comment type, use both counts from the same array entry. Across days, sum the counts before dividing rather than averaging daily percentages. A zero evaluated count means the rate has no denominator.
+
+For the share of merged pull requests with no subsequent human change request, divide `total_merged_no_human_change_request_after_review` by `pull_requests.total_merged_reviewed_by_copilot`. The number merged without Copilot review is `pull_requests.total_merged` minus `pull_requests.total_merged_reviewed_by_copilot`.
 
 | Field | Type | Nullable | Description |
 |:--|:--|:--|:--|

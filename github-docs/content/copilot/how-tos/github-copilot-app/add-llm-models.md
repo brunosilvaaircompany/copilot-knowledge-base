@@ -111,7 +111,7 @@ To install llama.cpp on Windows with the CUDA build:
    mkdir "%LOCALAPPDATA%\Programs\llama.cpp\BUILD-cuda-13.4-arm64"
    ```
 
-   Replacing `BUILD` the the build number—for example, `b11803`.
+   Replacing `BUILD` with the build number—for example, `b11803`.
 
 1. Extract all files from both ZIP files directly into this folder. If you use **Extract All** in File Explorer, change the destination to this folder, because by default File Explorer creates a separate subfolder for each ZIP file. When you're done, the folder should contain a large number of files, including `llama-server.exe`, `cudart64_13.dll`, `cublas64_13.dll`, and `cublasLt64_13.dll`, with no subfolders.
 1. Set the `LLAMACPP_SERVER_PATH` environment variable:
@@ -120,7 +120,7 @@ To install llama.cpp on Windows with the CUDA build:
    setx LLAMACPP_SERVER_PATH "%LOCALAPPDATA%\Programs\llama.cpp\BUILD-cuda-13.4-arm64\llama-server.exe"
    ```
 
-   Replacing `BUILD` the the build number.
+   Replacing `BUILD` with the build number.
 
 1. Close Command Prompt and open a new Command Prompt window. If the Copilot app or VS Code is already open, restart it. If Copilot CLI is running, exit it and start it again from a new terminal window.
 1. To check the installation, run:

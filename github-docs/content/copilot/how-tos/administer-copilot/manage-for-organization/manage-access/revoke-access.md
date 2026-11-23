@@ -4,7 +4,7 @@
 
 On Copilot Business and Copilot Enterprise, organization owners can revoke seats assigned through their organization using the procedures below. This only removes access for people who receive Copilot through that organization.
 
-If a person also has access through an enterprise team or as an individual, they will retain it. To remove access for those users, an enterprise owner must remove them from the enterprise team or unassign their license in the enterprise settings, which revokes access immediately.
+If a person also has access through an enterprise team or as an individual, they will retain it. When an enterprise owner removes someone from an enterprise team or unassigns their license, the user can continue to use Copilot until the end of the billing cycle. For more information, see [License Changes](https://docs.github.com/en/copilot/reference/copilot-billing/license-changes#copilot-access). To end access immediately, remove the user from the enterprise, or suspend or deprovision them through SCIM in your identity provider.
 
 For people whose access is revoked through organization-level revocation, the removal takes effect from the start of the next billing cycle. If you remove a seat during a cycle, the user will have access to Copilot for the remainder of the billing cycle. For more information, see [GitHub Copilot Licenses](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses).
 

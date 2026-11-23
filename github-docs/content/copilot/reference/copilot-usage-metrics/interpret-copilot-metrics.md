@@ -2,6 +2,8 @@
 
 Use this article to interpret usage and adoption metrics across the Copilot usage metrics and impact dashboards, and to identify opportunities to increase adoption and engagement.
 
+For repository-level review coverage, comment address rates, and related interpretation limits in Repository insights, see [Repository Insights Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/repository-insights-metrics).
+
 ## Reviewing overall usage trends
 
 Use the main usage charts in the dashboard to understand overall adoption and engagement patterns. These charts help you identify where usage is growing, leveling off, or declining, so you can take action to maintain engagement.

@@ -24,7 +24,7 @@ You can see the storage usage for each of your codespaces on the "Your codespace
 > [!NOTE]
 > If the dev container for a codespace was built from the default image, the size of the codespace shown on this page does not include the size of the base dev container. Storage for the base dev container is provided free of charge. See [Storage usage for your base dev container](#storage-usage-for-your-base-dev-container).
 
-For billing purposes, Codespaces storage is counted in GB-hours. See [GitHub Codespaces](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces).
+For billing purposes, Codespaces storage is counted in GB-months. See [GitHub Codespaces](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces).
 
 ### Where did my monthly storage go?
 

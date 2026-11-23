@@ -12,6 +12,8 @@ When you use GitHub Desktop to push a change to a repository that you do not hav
 
 You can also clone a repository directly from GitHub or GitHub Enterprise. For more information, see [Cloning A Repository From GitHub To GitHub Desktop](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
 
+If you're signed in to more than one account, GitHub Desktop assigns each cloned repository to one of your accounts. For more information, see [Using Multiple Accounts In GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/using-multiple-accounts-in-github-desktop).
+
 ## Cloning a repository
 
 1. In the **File** menu, click **Clone Repository**.
@@ -28,13 +30,33 @@ You can also clone a repository directly from GitHub or GitHub Enterprise. For m
 
    {% endwindows %}
 
-1. Click the tab that corresponds to the location of the repository you want to clone. You can also click **URL** to manually enter the repository location.
+1. Click the **GitHub** tab. If you're signed in to more than one account, select the **Account** dropdown menu, then click the account whose repositories you want to see. The repository is assigned to this account when you clone it. You can also click **URL** to manually enter the repository location.
 
-   ![Screenshot of the "Clone a repository" window. At the top of the window, "GitHub.com", "GitHub Enterprise" and "URL" tabs are outlined in orange.](/assets/images/help/desktop/choose-repository-location-mac.png)
+   {% mac %}
+
+   ![Screenshot of the "GitHub" tab in the "Clone a Repository" window on a Mac. The "Account" dropdown is outlined in dark orange.](/assets/images/help/desktop/mac-clone-repository-account-picker.png)
+
+   {% endmac %}
+
+   {% windows %}
+
+   ![Screenshot of the "GitHub" tab in the "Clone a repository" window on Windows. The "Account" dropdown is outlined in dark orange.](/assets/images/help/desktop/windows-clone-repository-account-picker.png)
+
+   {% endwindows %}
 
 1. From the list of repositories, click the repository you want to clone.
 
-   ![Screenshot of the "Clone a repository" window. The "github/docs" repository is highlighted with an orange outline.](/assets/images/help/desktop/clone-a-repository-list-mac.png)
+   {% mac %}
+
+   ![Screenshot of the "Clone a Repository" window on a Mac. The "octocat/Spoon-Knife" repository is highlighted with an orange outline.](/assets/images/help/desktop/mac-clone-repository-list.png)
+
+   {% endmac %}
+
+   {% windows %}
+
+   ![Screenshot of the "Clone a repository" window on Windows. The "octocat/Spoon-Knife" repository is highlighted with an orange outline.](/assets/images/help/desktop/windows-clone-repository-list.png)
+
+   {% endwindows %}
 
 1. To select the local directory into which you want to clone the repository, next to the "Local Path" field, click **Choose...** and navigate to the directory.
 
@@ -63,9 +85,19 @@ In GitHub Desktop, if you clone a repository that you do not have write access t
 
    {% endwindows %}
 
-1. Click the tab that corresponds to the location of the repository you want to clone. In this example, we click on the URL tab.
+1. Click the **URL** tab.
 
-   ![Screenshot of the "URL" tab of the "Clone a repository" window. The "GitHub.com", "GitHub Enterprise" and "URL" tabs are outlined in dark orange.](/assets/images/help/desktop/choose-repository-location-url-tab-windows.png)
+   {% mac %}
+
+   ![Screenshot of the "Clone a Repository" window on a Mac. At the top of the window, the "URL" tab is outlined in dark orange.](/assets/images/help/desktop/mac-clone-repository-url-tab.png)
+
+   {% endmac %}
+
+   {% windows %}
+
+   ![Screenshot of the "Clone a repository" window on Windows. At the top of the window, the "URL" tab is outlined in dark orange.](/assets/images/help/desktop/windows-clone-repository-url-tab.png)
+
+   {% endwindows %}
 
 1. Enter the url or path of the repository you want to clone.
 

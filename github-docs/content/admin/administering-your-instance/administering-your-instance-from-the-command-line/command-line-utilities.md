@@ -400,7 +400,7 @@ ghe-org-admin-promote -a
 
 ### ghe-reactivate-admin-login
 
-Use this command to immediately unlock the Management Console after an account lockout. To configure authentication policies for your GitHub Enterprise Server instance, see [Configuring Rate Limits](https://docs.github.com/en/admin/configuring-settings/configuring-user-applications-for-your-enterprise/configuring-rate-limits#configuring-authentication-policy-rate-limits).
+Use this command to immediately unlock the Management Console after an account lockout. To configure authentication policies for your GitHub Enterprise Server instance, see [Managing Access To The Management Console](https://docs.github.com/en/admin/administering-your-instance/administering-your-instance-from-the-web-ui/managing-access-to-the-management-console#configuring-rate-limits-for-authentication-to-the-management-console).
 
 ```shell
 ghe-reactivate-admin-login
@@ -1680,7 +1680,7 @@ GHE_LICENSE_FILE=/path/license ghe-license import
 
 ### elm
 
-`elm` is the command-line tool for Enterprise Live Migrations, a tool for live migrations to GHE.com. See [Elm CLI Reference](https://docs.github.com/en/migrations/elm/elm-cli-reference).
+`elm` is the command-line tool for Enterprise Live Migrations, a tool for live migrations to GHE.com. See [Elm CLI Reference](https://docs.github.com/en/migrations/elm/ghes-to-ghecom/elm-cli-reference).
 
 ## Security
 

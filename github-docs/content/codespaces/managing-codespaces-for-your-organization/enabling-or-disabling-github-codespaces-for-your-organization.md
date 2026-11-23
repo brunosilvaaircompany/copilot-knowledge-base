@@ -44,8 +44,6 @@ Additionally, ensure that:
 
 
 
-> [!NOTE]
-> If you are a verified educator or a teacher, you must enable GitHub Codespaces from a GitHub Classroom to use your Codespaces Education benefit. For more information, see [Using GitHub Codespaces With GitHub Classroom](https://docs.github.com/en/education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide/using-github-codespaces-with-github-classroom#about-the-codespaces-education-benefit-for-verified-teachers).
 
 
 

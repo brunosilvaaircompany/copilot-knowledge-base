@@ -155,7 +155,7 @@ Sessions can also run **remotely**. When you delegate a task with [`/delegate`](
 
 ### Stopping a session
 
-To stop the session you are currently working in without deleting it, use the `/exit` slash command. The session is saved and you can resume it later.
+To stop the session you are currently working in without deleting it, use the `/exit` slash command. By default, if the sidebar is open and another live session is available, only the current session closes. Otherwise, the CLI exits. The session is saved and you can resume it later.
 
 Alternatively, you can permanently delete a session from the sidebar by highlighting it and pressing <kbd>x</kbd> twice. The session is permanently deleted, whether or not it was still running. You won't be able to resume a session that's been removed this way.
 

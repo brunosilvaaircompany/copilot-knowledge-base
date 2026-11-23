@@ -208,16 +208,19 @@ Follow a link below to review the scope and tooling for your migration to GHE.co
 ### Azure DevOps Services (Azure DevOps Cloud) to GHE.com
 
 * **Scope:** Source, history, and metadata
-* **Tooling:** GitHub Enterprise Importer
-* **More information:** [Using GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer)
+* **Tooling:** GitHub Enterprise Importer or Enterprise Live Migrations
+* **More information:**
+  * [Using GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer)
+  * [Enterprise live migrations overview](https://learn.microsoft.com/azure/devops/repos/enterprise-live-migrations/overview) in the Microsoft Learn documentation
 
 ### Azure DevOps Server to GHE.com
 
 * **Scope:** Source, history, and metadata
-* **Tooling:** Migration to Azure DevOps Services, then GitHub Enterprise Importer
+* **Tooling:** Migration to Azure DevOps Services, then GitHub Enterprise Importer or ELM
 * **More information:**
   * [Migrate data from Azure DevOps Server to Azure DevOps Services](https://learn.microsoft.com/en-us/azure/devops/migrate/migration-overview?view=azure-devops) in the Microsoft Docs
   * [Using GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer)
+  * [Enterprise live migrations overview](https://learn.microsoft.com/azure/devops/repos/enterprise-live-migrations/overview) in the Microsoft Learn documentation
 * **Caveats:** If you can't migrate to Azure DevOps Services first, you must perform a "source and history" migration instead. For more information, see [Migrations from any Git repository to GHE.com](#any-git-repository-to-githubcom).
 
 ### Bitbucket Cloud (Bitbucket.org) to GHE.com

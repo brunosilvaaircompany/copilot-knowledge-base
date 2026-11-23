@@ -75,14 +75,14 @@ Use `/model` to choose from available models based on your task complexity:
 | Model | Best For | Tradeoffs |
 | ----- | -------- | --------- |
 | **Copilot Fusion** | Offers multiple effort levels to let you prioritize the quality, cost, and capability tradeoffs that the system prioritizes for each prompt. | See [Copilot Fusion](https://docs.github.com/en/copilot/concepts/models/copilot-fusion) |
-| **Claude Opus 5** | Complex architecture, difficult debugging, nuanced refactoring | Most capable but more costly |
+| **Claude Opus 5.5** | Complex architecture, difficult debugging, nuanced refactoring | Most capable but more costly |
 | **Claude Sonnet 5** | Day-to-day coding, most routine tasks | Fast, cost-effective, handles most work well |
 | **GPT-5.3-Codex** | Code generation, code review, straightforward implementations | Excellent for reviewing code produced by other models |
 
 **Recommendations:**
 
 * **Copilot Fusion** is an advanced runtime model router and orchestrator. It chooses models and execution patterns for your task, then returns a single response.
-* **Claude Opus 5** is ideal for tasks requiring deep reasoning, complex system design, subtle bug investigation, or extensive context understanding.
+* **Claude Opus 5.5** is ideal for tasks requiring deep reasoning, complex system design, subtle bug investigation, or extensive context understanding.
 * **Switch to Claude Sonnet 5** for routine tasks where speed and cost efficiency matter—it handles the majority of everyday coding effectively.
 * **Use GPT-5.3-Codex** for high-volume code generation and as a second opinion for reviewing code produced by other models.
 
@@ -221,7 +221,7 @@ Copilot CLI features **infinite sessions**. You don't need to worry about runnin
 To view information about the current CLI session, enter:
 
 ```copilot
-/session
+/session info
 ```
 
 To view a list of any session checkpoints, enter:
@@ -324,7 +324,7 @@ Pair with Copilot CLI to develop tests.
 ### Code review assistance
 
 * ``/security-review Review my current local changes for security issues. Prioritize high-severity findings and suggest remediations I can apply before opening a pull request.``
-* ``/review Use Claude Opus 5 and GPT-5.3-Codex to review the changes in my current branch against `main`. Focus on potential bugs and security issues.``
+* ``/review Use Claude Opus 5.5 and GPT-5.3-Codex to review the changes in my current branch against `main`. Focus on potential bugs and security issues.``
 * Triage high-severity findings first, validate your fixes, then continue through your normal pull request review workflow.
 
 ### Git operations

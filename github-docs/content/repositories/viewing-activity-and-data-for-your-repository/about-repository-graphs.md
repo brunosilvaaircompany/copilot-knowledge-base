@@ -12,6 +12,8 @@ A repository's graphs give you information on  traffic, projects that depend on 
 
 
 
+Repository insights is a separate experience under the **Insights** tab for organization-owned repositories. It shows pull request activity and Copilot code review outcomes to help you identify review coverage gaps and opportunities to improve review practices. Its access requirements are separate from the graph availability described below. For prerequisites and navigation, see [View Repository Insights](https://docs.github.com/en/copilot/how-tos/administer-copilot/view-repository-insights). For metric definitions and interpretation, see [Repository Insights Metrics](https://docs.github.com/en/copilot/reference/copilot-usage-metrics/repository-insights-metrics).
+
 Some repository graphs are available only in public repositories with GitHub Free:
 * Pulse
 * Contributors

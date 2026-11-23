@@ -18,7 +18,6 @@ The following features are currently unavailable on GHE.com, but may be planned 
 | Maven and Gradle support for GitHub Packages | Currently unavailable. | [Working With The Apache Maven Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry) |
 | GitHub Marketplace | GitHub Marketplace, as a means of searching for, purchasing, and directly installing apps and actions, is unavailable. Ecosystem apps and actions can still be discovered and installed from their source, but they may require modification to work on GHE.com. | [GitHub Actions workflows from GitHub Marketplace](#github-actions-workflows-from-github-marketplace) |
 | Some features currently in public preview or private preview | Certain features that are in a preview phase on GitHub.com may not be available on GHE.com until GA. | |
-| Streaming audit logs to Amazon S3 with OpenID Connect (OIDC) | Currently unavailable. | [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) |
 
 ## Permanently unavailable features
 

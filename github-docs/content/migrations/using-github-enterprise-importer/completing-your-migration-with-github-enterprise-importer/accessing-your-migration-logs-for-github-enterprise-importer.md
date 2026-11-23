@@ -56,7 +56,7 @@ gh ado2gh download-logs --github-target-org DESTINATION --target-repo REPOSITORY
 ```
 
 * If you don't already have a `GH_PAT` environment variable set for a personal access token with access to the destination organization, add `--github-target-pat TOKEN`, replacing `TOKEN` with the personal access token.
- For personal access token requirements, see [Manage Access](https://docs.github.com/en/migrations/ado/manage-access).
+ For personal access token requirements, see [Manage Access](https://docs.github.com/en/migrations/using-github-enterprise-importer/ado/manage-access).
 * If you're migrating to GHE.com, add `--target-api-url TARGET-API-URL`, where TARGET-API-URL is the base API URL for your enterprise's subdomain. For example: `https://api.octocorp.ghe.com`.
 
 

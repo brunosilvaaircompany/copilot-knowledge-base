@@ -1,6 +1,6 @@
 # Restrict MCP server access to a custom registry
 
-> [!IMPORTANT] This feature is in public preview and is not the recommended method for restricting access to MCP servers. The more secure, generally available method is to define settings in your enterprise's `managed-settings.json` file. See [Configure Enterprise Allowlist](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-enterprise-allowlist).
+> [!IMPORTANT] This feature is in public preview and is not the recommended method for restricting access to MCP servers. The more secure, generally available method is to define settings in your enterprise's `managed-settings.json` file. See [Configure Enterprise Allowlist](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-enterprise-allowlist). If you already use a plugin marketplace, see [Moving MCP distribution to a marketplace](/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/manage-plugin-marketplaces-and-plugins#move-mcp-distribution-from-a-registry-to-a-marketplace).
 
 
 ## Prerequisites

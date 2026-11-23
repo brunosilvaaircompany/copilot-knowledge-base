@@ -14,7 +14,7 @@ Before you investigate further, try these troubleshooting steps that commonly re
 1. Verify that you meet all the access requirements. For more information, see the appropriate article for your migration path.
 
    
-   * [Manage Access](https://docs.github.com/en/migrations/ado/manage-access)
+   * [Manage Access](https://docs.github.com/en/migrations/using-github-enterprise-importer/ado/manage-access)
    
    * [Managing Access For A Migration From Bitbucket Server](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-bitbucket-server-to-github-enterprise-cloud/managing-access-for-a-migration-from-bitbucket-server)
    * [Managing Access For A Migration Between GitHub Products](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/managing-access-for-a-migration-between-github-products)
@@ -57,7 +57,7 @@ This error indicates that a personal access token you provided to the GitHub CLI
 Failures that include a `401` status code usually indicate that the personal access token you provided to the GitHub CLI does not have the required scopes. Verify the scopes on the personal access tokens you provided. For more information about required scopes, see the appropriate article for your migration path.
 
    
-   * [Manage Access](https://docs.github.com/en/migrations/ado/manage-access)
+   * [Manage Access](https://docs.github.com/en/migrations/using-github-enterprise-importer/ado/manage-access)
    
    * [Managing Access For A Migration From Bitbucket Server](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-bitbucket-server-to-github-enterprise-cloud/managing-access-for-a-migration-from-bitbucket-server#required-scopes-for-personal-access-tokens)
    * [Managing Access For A Migration Between GitHub Products](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/managing-access-for-a-migration-between-github-products#required-scopes-for-personal-access-tokens)

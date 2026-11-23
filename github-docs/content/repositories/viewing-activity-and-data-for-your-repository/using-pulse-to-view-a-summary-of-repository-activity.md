@@ -18,4 +18,5 @@ For more information, see [Using The Activity View To See Changes To A Repositor
 
    ![Screenshot of the main page of a repository. In the horizontal navigation bar, a tab, labeled with a graph icon and "Insights," is outlined in orange.](/assets/images/help/repository/repo-nav-insights-tab.png)
 
+1. In the left sidebar, click **Pulse**.
 1. Optionally, to choose a different time period, select the **Period** dropdown menu in the upper-right corner of the Pulse overview. By default, Pulse shows the last seven days of repository activity.

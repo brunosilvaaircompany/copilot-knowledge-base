@@ -37,11 +37,13 @@ On Windows, you can also run agent sessions inside a Windows Subsystem for Linux
 * **Session modes:** Choose how you work with agents: Interactive (collaborative), Plan (agent plans, you approve), or Autopilot (fully autonomous). You can also select from multiple LLMs and adjust reasoning effort for each session.
 * **Model selection:** Select from multiple LLMs, including models from your own provider using bring your own key (BYOK), and adjust reasoning effort for each session.
 * **GitHub integration:** Browse and find issues, start sessions from them, create and close pull requests, review pull requests, view CI check results, and search across your repositories—all within the app.
+* **Azure DevOps integration:** Enable the Azure DevOps integration in the app settings to work with Azure DevOps repositories and review and complete pull requests without leaving the app. See [Manage Azure DevOps Work](https://docs.github.com/en/copilot/how-tos/github-copilot-app/manage-azure-devops-work).
 * **Customizations:** Configure and use global instructions, MCP servers, and agent skills.
 * **Automations:** Save recurring agent tasks and run them on a schedule or on demand.
 * **Chats:** Brainstorm in a conversation mode without creating a dedicated branch or workspace.
 * **Session history:** Use `/chronicle` to get insights from previous sessions, including work you started in the app.
 * **Canvases:** Open custom, agent-driven artifacts and interfaces where people and agents can collaborate.
+* **Browser use:** Allow Copilot to interact with websites as part of a task. For more information, see [Browser Use](https://docs.github.com/en/copilot/how-tos/github-copilot-app/browser-use).
 * **Computer use:** Allow local sessions on macOS and Windows to interact with desktop applications, including legacy and GUI-only software that do not provide an API, command-line interface, or MCP integration. For more information, see [Computer Use](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/computer-use).
 
 ## The GitHub Copilot app workflow

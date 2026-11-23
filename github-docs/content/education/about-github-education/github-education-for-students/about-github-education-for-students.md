@@ -31,10 +31,9 @@ GitHub Education students also receive the following GitHub benefits.
 
 > [!NOTE]
 > If students use GitHub Codespaces in their assignment repositories for GitHub Classroom, the usage will be charged to the organization that owns the classroom, and will not affect the usage for a student's personal account.
- For more information, see [Using GitHub Codespaces With GitHub Classroom](https://docs.github.com/en/education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide/using-github-codespaces-with-github-classroom).
+ For more information, see [Manage Coursework With GitHub Classroom](https://docs.github.com/en/education/manage-coursework-with-github-classroom).
 
 ## Further reading
 
 * [About GitHub Education For Teachers](https://docs.github.com/en/education/about-github-education/github-education-for-teachers/about-github-education-for-teachers)
 * [About GitHub Community Exchange](https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-community-exchange)
-* [About GitHub Classroom](https://docs.github.com/en/education/manage-coursework-with-github-classroom/get-started-with-github-classroom/about-github-classroom)

@@ -9,6 +9,8 @@ GitHub Desktop uses short-lived tokens when you authenticate to GitHub.com. This
 Before you authenticate, you must already have an account on GitHub. For more information, see [Creating An Account On GitHub](https://docs.github.com/en/account-and-profile/how-tos/account-management/creating-an-account-on-github). If you're part of an organization that uses Enterprise Managed Users and you do not have an account, contact your enterprise administrator.{% elsif ghes %} If you're a member of an organization that uses GitHub Enterprise Server and you do not have an account, contact your GitHub Enterprise site administrator.
 
 
+You can sign in to more than one account on the same host, such as a personal account and a work account on GitHub.com. For more information, see [Using Multiple Accounts In GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/using-multiple-accounts-in-github-desktop).
+
 {% mac %}
 
 ## Authenticating to your GitHub account
@@ -18,6 +20,8 @@ Before you authenticate, you must already have an account on GitHub. For more in
    ![Screenshot of the menu bar on a Mac. Under the open "GitHub Desktop" dropdown menu, the cursor hovers over "Settings", which is highlighted in blue.](/assets/images/help/desktop/mac-choose-settings.png)
 
 1. In the "Settings" window, on the **Accounts** pane, click the appropriate "Sign Into" button. Use **Sign Into GitHub Enterprise** to sign into GitHub Enterprise Server or GitHub Enterprise Cloud with data residency.
+
+   If you're already signed in to an account in that section, click **Add GitHub.com account** or **Add GitHub Enterprise account** instead.
 
    ![Screenshot of the "Accounts" pane in the "Settings" window. Blue buttons labeled "Sign Into GitHub.com" and "Sign Into GitHub Enterprise" are shown.](/assets/images/help/desktop/sign-in-github.png)
 
@@ -47,6 +51,8 @@ Before you authenticate, you must already have an account on GitHub. For more in
    ![Screenshot of the "GitHub Desktop" menu bar on Windows. In the expanded "File" dropdown menu, the "Options" item is outlined in orange.](/assets/images/help/desktop/windows-choose-options.png)
 
 1. In the "Options" window, on the **Accounts** pane, click the appropriate "Sign Into" button. Use **Sign Into GitHub Enterprise** to sign into GitHub Enterprise Server or GitHub Enterprise Cloud with data residency.
+
+   If you're already signed in to an account in that section, click **Add GitHub.com account** or **Add GitHub Enterprise account** instead.
 
    ![Screenshot of the "Accounts" pane in the "Options" window. Blue buttons labeled "Sign Into GitHub.com" and "Sign Into GitHub Enterprise" are shown.](/assets/images/help/desktop/windows-sign-in-github.png)
 

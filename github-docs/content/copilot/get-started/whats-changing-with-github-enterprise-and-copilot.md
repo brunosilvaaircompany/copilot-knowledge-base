@@ -74,4 +74,4 @@ For an existing enterprise with Copilot Business or Copilot Enterprise, contact 
 
 Transitions take effect on the first day of a month. Confirm the effective date with your account team.
 
-Don't have a dedicated account team? [Contact sales](https://github.com/enterprise/contact).
+Don't have a dedicated account team? [Contact sales](https://github.com/enterprise/contact?utm_source=docs-article-ghec-access-enterprise-contact&utm_medium=docs&utm_campaign=ignite-nov-2026).

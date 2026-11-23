@@ -18,16 +18,16 @@ This table lists the AI models available in Copilot, along with their release st
 | Model name                                             | Provider  | Release status             |
 |--------------------------------------------------------|-----------|----------------------------|
 | {% for model in tables.copilot.model-release-status %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'MAI-Code-1.1-Flash' %}[^mai-models]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' or model.name == 'Claude Fable 5.2' %}[^claude-fable-5]{% endif %}| {{ model.provider }} | {{ model.release_status }} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'MAI-Code-1.1-Flash' or model.name == 'MAI Code 2' or model.name == 'MAI Code 2 Flash' %}[^mai-models]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' or model.name == 'Claude Fable 5.2' %}[^claude-fable-5]{% endif %}| {{ model.provider }} | {{ model.release_status }} |
 | {% endfor %}                                           |
 
 {% endrowheaders %}
 
 [^claude-fable-5]: When Claude Fable 5, Claude Fable 5.1, or Claude Fable 5.2 is used, Anthropic retains data, including prompts and outputs, by default to operate safety classifiers that detect harmful use. Customers can request to use Claude Fable 5, Claude Fable 5.1, or Claude Fable 5.2 with zero data retention (ZDR) through the end of 2026 under a time-bound exemption while Anthropic rolls out Enterprise Frontier Safeguards (EFS). After that point, continued use of these models would require EFS, which will enable eligible customers to keep their data under their own control while also enabling automated safety monitoring. For an enterprise that has been approved and configured for this type of access, Claude Fable 5, Claude Fable 5.1, and Claude Fable 5.2 requests will use the ZDR endpoint through the end of 2026 when the models are enabled. To learn whether your enterprise is eligible and request access, contact your GitHub account team. Approval for access does not automatically enable Claude Fable 5, Claude Fable 5.1, or Claude Fable 5.2. An enterprise or organization administrator must still enable each model before users can access it. Other Claude models, except for Claude Fable 5, Claude Fable 5.1, and Claude Fable 5.2, continue to operate under ZDR. Customers who enable a Fable model with ZDR agree to use this model only for internal operations, including to develop and evaluate products for their own customers. They may not make the model endpoints or outputs available externally. To enable these models, see [Configure Access To Ai Models](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models).
 
-## Supported AI models in Auto model selection
+## Supported AI models for Auto model selection and Copilot Fusion
 
-This table lists the supported AI models for Auto model selection. Available models may be limited by model policies. For example, as the long term support model, GPT-5.3-Codex will be used in the event no other models are available. See [Fallback And Lts Models](https://docs.github.com/en/copilot/concepts/models/fallback-and-lts-models) and [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
+This table lists the supported AI models for Auto model selection and Copilot Fusion. Available models may be limited by model policies. As the long term support model, GPT-5.3-Codex will be used in the event no other models are available. See [Fallback And Lts Models](https://docs.github.com/en/copilot/concepts/models/fallback-and-lts-models) and [Auto Model Selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection).
 
 {% rowheaders %}
 
@@ -59,7 +59,6 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | --- | --- | --- |
 | Claude Sonnet 4.6 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 4.8 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| Claude Opus 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Opus 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Sonnet 5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Claude Sonnet 5.5 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
@@ -71,13 +70,16 @@ Choosing a larger context window or higher reasoning will impact AI credits cons
 | GPT-5.3-Codex | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-5.6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
-| GPT-5.6 Terra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Astra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Luna | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6.1 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | GPT-6.1 Terra | {% octicon "check" aria-label="Supported" %}  | {% octicon "check" aria-label="Supported" %}  |
+| GPT-6.2 Astra | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| GPT-6.2 Sol | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 | Kimi K3 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| MAI Code 2 | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
+| MAI Code 2 Flash | {% octicon "check" aria-label="Supported" %} | {% octicon "check" aria-label="Supported" %} |
 
 {% endrowheaders %}
 
@@ -110,17 +112,17 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Gemini 4 Argon      | TBD | `17.14.22` or `18.1.0`         | TBD | TBD | TBD |
 | Gemini 4 Carbon     | TBD | TBD                            | TBD | TBD | TBD |
 | Gemini 4 Hydrogen   | TBD | TBD                            | TBD | TBD | TBD |
+| Gemini 4 Neon       | TBD | TBD                            | TBD | TBD | TBD |
 | GPT-5.3-Codex        | `v1.104.1` | `17.14.19`                     | `1.5.61` | `0.45.0` | `0.13.0` |
 | GPT-5.6 Luna         | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-5.6 Sol          | `1.128.0` | TBD | TBD | TBD | TBD |
-| GPT-5.6 Terra        | `1.128.0` | TBD | TBD | TBD | TBD |
 | GPT-6 Astra         | `1.136.1` | `17.14.19` | TBD | TBD | TBD |
 | GPT-6 Luna          | TBD | `17.14.19` | TBD | TBD | TBD |
 | GPT-6 Sol           | TBD | `17.14.19` | TBD | TBD | TBD |
 | GPT-6.1 Sol          | TBD | `17.14.19` | TBD | TBD | TBD |
 | GPT-6.1 Terra        | TBD | TBD | TBD | TBD | TBD |
-| Claude Opus 4.8      | `v1.118` | `17.14.6`                     | TBD | TBD | TBD |
-| Claude Opus 5       | `v1.128.0` | `17.14.22` | TBD | TBD | TBD |
+| GPT-6.2 Astra        | TBD | TBD | TBD | TBD | TBD |
+| GPT-6.2 Sol          | TBD | TBD | TBD | TBD | TBD |
 | Claude Opus 5.5      | TBD | `17.14.6` | TBD | TBD | TBD |
 | Claude Sonnet 5  | `v1.124` | `17.14.6` | TBD | TBD | TBD |
 | Claude Sonnet 5.5 | TBD | `17.14.6` | TBD | TBD | TBD |
@@ -130,6 +132,8 @@ Some Copilot models require minimum versions of supported IDEs or Copilot extens
 | Claude Fable 5.2    | TBD | TBD                    | TBD | TBD | TBD |
 | Kimi K3     | `v1.131` | TBD            | TBD | TBD | TBD |
 | MAI Code 1.1 Flash  | `v1.121` | TBD                            | TBD | TBD | TBD |
+| MAI Code 2          | TBD | `17.14.6` | TBD | TBD | TBD |
+| MAI Code 2 Flash    | TBD | `17.14.6` | TBD | TBD | TBD |
 | Grok 4.5             | TBD | `17.14.19` | TBD | TBD | TBD |
 | Grok 4.6             | TBD | TBD | TBD | TBD | TBD |
 | Grok 4.7             | TBD | `17.14.19` | TBD | TBD | TBD |
@@ -153,7 +157,7 @@ The following table shows which AI models are available in each Copilot plan. Fo
 | Available models                               | Copilot Pro  | Copilot Pro+ | Copilot Max | Copilot Business | Copilot Enterprise |
 |---------------------------------------------------------|-------------------------------------------------|-----------------------------------------------------|------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------|
 | {% for model in tables.copilot.model-supported-plans %} |
-| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' or model.name == 'Claude Fable 5.2' %}[^claude-fable-5]{% endif %}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-plans]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
+| {{ model.name }}{% if model.name == 'GPT-5.4 nano' %}[^gpt54nano]{% endif %}{% if model.name == 'Claude Fable 5' or model.name == 'Claude Fable 5.1' or model.name == 'Claude Fable 5.2' %}[^claude-fable-5]{% endif %}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-plans]{% endif %}{% if model.name == 'Claude Opus 4.8' %}[^claude-opus-48-plans]{% endif %} | {% if model.pro == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.pro_plus == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.max == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.business == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} | {% if model.enterprise == true %}{% octicon "check" aria-label="Included" %}{% else %}{% octicon "x" aria-label="Not included" %}{% endif %} |
 | {% endfor %}                                            |
 
 {% endrowheaders %}
@@ -161,6 +165,8 @@ The following table shows which AI models are available in each Copilot plan. Fo
 [^gpt54nano]: GPT-5.4 nano is currently only available in the Codex Visual Studio Code extension (Copilot Pro+ only) and is not available in Copilot Chat.
 
 [^claude-sonnet-46-plans]: Claude Sonnet 4.6 was retired on September 1, 2026, but remains available to individual Copilot subscribers on annual Copilot Pro and Copilot Pro+ plans. It is not available to subscribers on monthly plans.
+
+[^claude-opus-48-plans]: Claude Opus 4.8 was retired on November 16, 2026, but remains available to individual Copilot subscribers on annual plans. It is not available to subscribers on monthly plans.
 
 
 > [!NOTE]
@@ -224,12 +230,14 @@ The following table lists AI models that are retired or scheduled for retirement
 | Model name                                                  | Retirement date             | Suggested alternative             |
 |-------------------------------------------------------------|-----------------------------|-----------------------------------|
 | {% for model in tables.copilot.model-deprecation-history %} |
-| {{ model.name }}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-annual]{% endif %} | {{ model.retirement_date }} | {{ model.suggested_alternative }} |
+| {{ model.name }}{% if model.name == 'Claude Sonnet 4.6' %}[^claude-sonnet-46-annual]{% endif %}{% if model.name == 'Claude Opus 4.8' %}[^claude-opus-48-annual]{% endif %} | {{ model.retirement_date }} | {{ model.suggested_alternative }} |
 | {% endfor %}                                                |
 
 {% endrowheaders %}
 
 [^claude-sonnet-46-annual]: Claude Sonnet 4.6 remains available to individual Copilot subscribers on annual plans. The retirement of Claude Sonnet 4.6 does not apply to these subscribers.
+
+[^claude-opus-48-annual]: Claude Opus 4.8 remains available to individual Copilot subscribers on annual plans. The retirement of Claude Opus 4.8 does not apply to these subscribers.
 
 ## Next steps
 

@@ -101,6 +101,10 @@ Enabling the organization setting enables AI Scan immediately for all eligible r
 
 You do not need to select a model to enable AI Scan.
 
+> [!NOTE]
+> AI Scan features do not respect the models enabled in the Copilot **Configure models** policy for your enterprise or organization, so AI Scan may use models that the policy doesn't allow. To control whether AI Scan can run, use the AI Scan settings and enterprise policy instead.
+
+
 * **Enterprise**: Enterprise owners can allow or prevent organizations from enabling AI Scan. The policy is set to "Not allowed" by default. This policy controls both AI Scan on pull requests and AI Scan for a repository's backlog. Allowing AI Scan does not enable it automatically. See [Enforcing Policies For Code Security And Analysis For Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-code-security-and-analysis-for-your-enterprise#enforcing-a-policy-to-manage-ai-scan-in-your-enterprises-repositories).
 * **Organization**: Organization owners and security managers can enable AI Scan for pull requests for eligible repositories. Repositories inherit the organization setting. See [Configure Global Settings](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/configure-global-settings#enabling-ai-scan-for-pull-requests).
 * **Organization-owned repository**: People with admin access to the repository can opt out when the organization has enabled AI Scan. They cannot opt in when the organization setting is disabled.

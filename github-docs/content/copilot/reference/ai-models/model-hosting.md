@@ -10,12 +10,13 @@ Used for:
 * GPT-5.4 nano
 * GPT-5.6 Luna
 * GPT-5.6 Sol
-* GPT-5.6 Terra
 * GPT-6 Astra
 * GPT-6 Luna
 * GPT-6 Sol
 * GPT-6.1 Sol
 * GPT-6.1 Terra
+* GPT-6.2 Astra
+* GPT-6.2 Sol
 
 These models are hosted by OpenAI and GitHub's Azure infrastructure.
 
@@ -36,7 +37,6 @@ Used for:
 * Claude Sonnet 5.5
 * Claude Opus 4.8
 * Claude Opus 4.8 (fast mode) (preview)
-* Claude Opus 5
 * Claude Opus 5.5
 * Claude Fable 5
 * Claude Fable 5.1
@@ -73,6 +73,7 @@ Used for:
 * Gemini 4 Argon
 * Gemini 4 Carbon
 * Gemini 4 Hydrogen
+* Gemini 4 Neon
 
 GitHub Copilot uses Gemini models hosted on Google Cloud Platform (GCP). When using Gemini models, prompts and metadata are sent to GCP, which makes the [following data commitment](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance): _Gemini doesn't use your prompts, or its responses, as data to train its models._
 
@@ -107,18 +108,21 @@ When using xAI, input prompts and output completions continue to run through Git
 Used for:
 
 * MAI Code 1.1 Flash
+* MAI Code 2
+* MAI Code 2 Flash
 
-MAI Code 1.1 Flash is a first-party Microsoft model hosted on Azure in GitHub's tenant.
 
-This model can also be hosted locally on a user's own machine, if the GPU and memory requirements are met. See [Add Llm Models](https://docs.github.com/en/copilot/how-tos/github-copilot-app/add-llm-models#installing-a-local-model-from-the-model-picker) and [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models#installing-a-local-model-from-the-model-picker).
+These models are first-party Microsoft models hosted on Azure in GitHub's tenant.
+
+MAI Code 1.1 Flash can also be hosted locally on a user's own machine, if the GPU and memory requirements are met. See [Add Llm Models](https://docs.github.com/en/copilot/how-tos/github-copilot-app/add-llm-models#installing-a-local-model-from-the-model-picker) and [Add Llm Models](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-llm-models#installing-a-local-model-from-the-model-picker).
 
 GitHub does not use Copilot Business or Copilot Enterprise customer data to train AI models.
 
-When the model is cloud hosted, GitHub may use Copilot interaction data for individual subscribers—that is, users on Copilot Free, Copilot Pro, Copilot Pro+, and Copilot Max plans—to train and improve AI models, in accordance with our [GitHub General Privacy Statement](https://docs.github.com/en/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement) and applicable user settings. This may include prompts (inputs), suggestions (outputs), and code snippets generated during Copilot sessions. Individual subscribers can opt out of having their data used for AI model training. To manage this setting, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements).
+When these models are cloud hosted, GitHub may use Copilot interaction data for individual subscribers—that is, users on Copilot Free, Copilot Pro, Copilot Pro+, and Copilot Max plans—to train and improve AI models, in accordance with our [GitHub General Privacy Statement](https://docs.github.com/en/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement) and applicable user settings. This may include prompts (inputs), suggestions (outputs), and code snippets generated during Copilot sessions. Individual subscribers can opt out of having their data used for AI model training. To manage this setting, see [Manage Policies](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements).
 
-When cloud hosted, MAI Code 1.1 Flash is served on Microsoft Azure AI Foundry within GitHub's tenant and is subject to GitHub's data handling configuration for that deployment. For details about how data is processed, retained, and secured for models served on Azure AI Foundry, see [Data, privacy, and security for Foundry Models sold by Azure](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) in the Microsoft documentation.
+When cloud hosted, these models are served on Microsoft Azure AI Foundry within GitHub's tenant and are subject to GitHub's data handling configuration for that deployment. For details about how data is processed, retained, and secured for models served on Azure AI Foundry, see [Data, privacy, and security for Foundry Models sold by Azure](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) in the Microsoft documentation.
 
-When MAI Code 1.1 Flash is cloud hosted, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content. When MAI Code 1.1 Flash is locally hosted, the model may not use the same safety filters as GitHub -provided models and may be more susceptible to malicious instructions, especially when actions are automatically approved.
+When these models are cloud hosted, input prompts and output completions continue to run through GitHub Copilot's content filters for public code matching, when applied, along with those for harmful or offensive content. When MAI Code 1.1 Flash is locally hosted, the model may not use the same safety filters as GitHub -provided models and may be more susceptible to malicious instructions, especially when actions are automatically approved.
 
 ## Open-weight models
 

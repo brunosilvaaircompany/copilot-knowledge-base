@@ -400,6 +400,46 @@ Edit mode is best suited to use cases where:
 1. Submit a prompt. In response to your prompt, Copilot Edits determines which files in your _working set_ to change and adds a short description of the change.
 1. Review the changes and **Accept** or **Discard** the edits for each file.
 
+## Running a session in a cloud sandbox
+
+> [!NOTE]
+> Cloud sandboxes in JetBrains IDEs are in public preview and subject to change.
+
+You can run a Copilot session in a cloud sandbox, an isolated environment that GitHub hosts, instead of on your machine. Copilot makes code changes and runs commands and tests in the sandbox, so you can run several sessions in parallel without using local resources.
+
+To run a session in a cloud sandbox, select **Cloud sandbox** from the environment dropdown in the Copilot Chat panel, then submit your prompt.
+
+For more information, see [About Cloud Sandboxes](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/about-cloud-sandboxes).
+
+## Accessing sessions from other clients
+
+> [!NOTE]
+> Remote access in JetBrains IDEs is in public preview and subject to change.
+
+You can opt in to remote access to make your Copilot chats in your JetBrains IDE available in other Copilot clients, such as Visual Studio Code and the GitHub Copilot app. Your chats are available remotely while your JetBrains IDE is open.
+
+To turn on remote access, in your JetBrains IDE settings, go to **GitHub Copilot** > **Chat**, then select **Enable Copilot Remote**.
+
+If your organization or enterprise disables remote access through enterprise-managed settings, the option is unavailable. Contact your administrator for more information.
+
+With remote access, you can also:
+
+* Discover sessions that are shared from your other remotely accessible computers.
+* Reopen a remote session from your session history to continue the conversation.
+
+## Dictating prompts
+
+> [!NOTE]
+> Voice dictation in JetBrains IDEs is in public preview and subject to change.
+
+You can dictate chat messages instead of typing them. Dictation runs on your device. Voice dictation is available in supported native plugin packages when **Editor Preview** is enabled.
+
+## Using Copilot with split mode remote development
+
+Copilot agent sessions support JetBrains split mode remote development in JetBrains IDE 2026.1 or later. In split mode, the chat and editor UI run on your local client, and Copilot operations run on the remote backend.
+
+To use Copilot in split mode, install the GitHub Copilot plugin both on your local client and on the remote backend.
+
 ## Submitting prompts
 
 You can ask Copilot Chat to give you code suggestions, explain code, generate unit tests, and suggest code fixes.

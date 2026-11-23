@@ -33,6 +33,41 @@ To add a support entitlement to a user, the user must already be a member of an 
 1. In the search bar, start typing the name or username of the person you want to give a support entitlement. Click their name in the list of matches.
 1. Click **Add support entitlement**.
 
+## Approving a partner to open support tickets
+
+Enterprise owners can approve or remove a partner in enterprise settings under **Support**. Billing managers cannot approve or remove partners unless they are also enterprise owners. Approval allows the partner to open support tickets on behalf of your enterprise through GitHub Partner Support. It does not give the partner access to your enterprise or its existing support tickets.
+
+Partner users need support entitlements in their own partner enterprise. They do not need membership or individual support entitlements in your enterprise. Approval works across tenants. Tickets opened by the partner are associated with the partner's enterprise account and do not appear in your enterprise's Support Portal.
+
+* If your enterprise uses data residency, manage partner approval in enterprise settings on your GHE.com tenant.
+* For GitHub Enterprise Server, manage partner approval through your existing global enterprise account on GitHub.com, not on the Server instance.
+
+### Approving a partner
+
+
+1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
+
+
+1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
+
+1. Under "Settings", click **Support**.
+1. Under "Partners", click **Select a partner** and choose the partner you want to approve.
+1. Click **Add partner**.
+
+### Removing a partner
+
+
+1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
+
+
+1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
+
+1. Under "Settings", click **Support**.
+1. Under "Support partners", to the right of the partner you want to remove, click {% octicon "trash" aria-label="Remove support partner" %}.
+1. In the confirmation dialog, click **Remove partner**.
+
+For more information, see [GitHub Partner Support](https://docs.github.com/en/support/learning-about-github-support/github-partner-support).
+
 ## Removing a support entitlement from an enterprise member
 
 When a user is removed from the enterprise, their support entitlement will be automatically removed.

@@ -51,7 +51,7 @@ In an enterprise:
 Next, create a new policy.
 
 1. Choose a name for the policy.
-1. Choose an enforcement status. If you select **Evaluate** (GitHub Enterprise Cloud only), you will be able to monitor when users would hit the restriction in policy insights.
+1. Choose an enforcement status. If you select **Evaluate**, you will be able to monitor when users would hit the restriction in policy insights.
 1. Target your desired workflows, organizations, or repositories.
 1. Configure the following workflow execution protections.
 

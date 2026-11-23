@@ -58,7 +58,7 @@ copilot --model fusion --fusion-tier standard -p "YOUR PROMPT"
 
 You can configure a subagent to use a specific model.
 
-This allows you, for example, to use a locally hosted model for part of the work on a task. To do this, configure a custom agent to use that model and then ask the main Copilot agent to delegate a focused task to to that subagent. This does not change the main session's model. See [Create Custom Agents For CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/create-custom-agents-for-cli#delegating-focused-tasks-to-a-specific-model).
+This allows you, for example, to use a locally hosted model for part of the work on a task. To do this, configure a custom agent to use that model and then ask the main Copilot agent to delegate a focused task to that subagent. This does not change the main session's model. See [Create Custom Agents For CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/create-custom-agents-for-cli#delegating-focused-tasks-to-a-specific-model).
 
 ### Setting your default model
 

@@ -28,7 +28,7 @@ Findings from AI applications scanning appear as pull request comments, the same
 * "AI app" label and thumbs up/down feedback control
 * A dismiss button
 
-As with AI Scan, these findings are advisory. They don't block a pull request from being merged.
+As with AI Scan for pull requests, these findings are advisory. They don't block a pull request from being merged.
 
 Copilot Autofix suggestions are generated automatically for findings from this detector. This behavior is independent of the Code Scanning Autofix setting, which controls Copilot Autofix for CodeQL results.
 

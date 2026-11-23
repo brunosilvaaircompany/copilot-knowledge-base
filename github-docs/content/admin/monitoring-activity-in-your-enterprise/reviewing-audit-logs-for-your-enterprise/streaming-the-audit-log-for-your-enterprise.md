@@ -13,7 +13,7 @@ Streaming audit log data has these benefits:
 * **Data continuity**. If you pause a stream, it retains a buffer for seven days, so there is no data loss for the first week. If the stream remains paused for more than seven days, it will resume from a point one week prior to the current time. If paused for three weeks or more, the stream won't retain any data and will start anew from the current timestamp.
 * **Data retention**. Keep your exported audit logs and Git events data as long as you need to.
 
-You can also stream agent session activity from GitHub Copilot to the same destination you use for other enterprise audit events. This is currently in public preview. See [Monitor Agentic Activity](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/monitor-agentic-activity#tracking-agentic-activity-in-your-enterprise-through-the-audit-log) in the GitHub Enterprise Cloud documentation.
+You can also stream agent session activity from GitHub Copilot to the same destination you use for other enterprise audit events. This is currently in public preview.
 
 You can set up, pause, or delete a stream at any time. The stream exports audit and Git events data for all of the organizations in your enterprise, for activity from the time the stream is enabled onwards.
 
@@ -23,17 +23,41 @@ All streamed audit logs are sent as compressed JSON files. The filename format i
 
 
 
+## Health checks for audit log streams
+
+Every 24 hours, a health check runs for each stream. If a stream is set up incorrectly, an email will be sent to the enterprise owners. To avoid audit log events being dropped from the stream, a misconfigured stream must be fixed within six days.
+
+
+
+## Prerequisites
+
+If you have data residency requirements, configure your SIEM destination to ingest and store streamed data in the appropriate region before enabling streaming.
+
+
+
 Enabling audit log streaming can cause a minor impact on the performance of {% ifversion ghes %}your GitHub Enterprise Server instance. To learn about increasing resources to mitigate this performance impact, see [Increasing Cpu Or Memory Resources](https://docs.github.com/en/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-cpu-or-memory-resources).
 
 {% endif %}
 
 
 
-## Health checks for audit log streams
+## Enabling audit log streaming of Copilot agent session events
 
-Every 24 hours, a health check runs for each stream. If a stream is set up incorrectly, an email will be sent to the enterprise owners. To avoid audit log events being dropped from the stream, a misconfigured stream must be fixed within six days.
+> [!NOTE] This feature is in public preview. It is only available for enterprises that use Enterprise Managed Users on GitHub.com or GitHub Enterprise Cloud with data residency.
 
-To fix your streaming configuration, follow the steps in [Setting up audit log streaming](#setting-up-audit-log-streaming).
+
+1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
+
+
+1. At the top of the page, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} AI controls**.
+
+1. In the sidebar, click **{% octicon "copilot" aria-hidden="true" aria-label="copilot" %} Copilot**.
+1. In the "Billing & usage" section, enable the **Copilot Usage Records Streaming** policy.
+1. Configure a streaming destination. See [Setting up audit log streaming](#setting-up-audit-log-streaming).
+
+You can also retrieve Copilot usage data through the REST API. To do this, you must enable the **Copilot Usage Records API** policy. See [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics#get-copilot-usage-records-for-an-enterprise).
+
+For help interpreting the audit log events for agentic activity, see [Agentic Audit Log Events](https://docs.github.com/en/copilot/reference/enterprise-administrators/agentic-audit-log-events#streaming-audit-log-events).
 
 
 
@@ -46,6 +70,7 @@ To set up the audit log stream, follow the instructions for your provider:
 * [Azure Event Hubs](#setting-up-streaming-to-azure-event-hubs)
 * [Datadog](#setting-up-streaming-to-datadog)
 * [Google Cloud Storage](#setting-up-streaming-to-google-cloud-storage)
+* [Microsoft Agent 365](#setting-up-streaming-to-microsoft-agent-365) (Copilot agent session events only)
 * [Microsoft Purview](#setting-up-streaming-to-microsoft-purview) (Copilot agent session events only)
 * [Splunk](#setting-up-streaming-to-splunk)
 
@@ -150,8 +175,8 @@ From GitHub:
 
 #### Setting up streaming to S3 with OpenID Connect
 
-> [!NOTE]
-> Audit log streaming to S3 with OpenID Connect for GitHub Enterprise Cloud with data residency is currently unavailable. See [Feature Overview For GitHub Enterprise Cloud With Data Residency](https://docs.github.com/en/admin/data-residency/feature-overview-for-github-enterprise-cloud-with-data-residency#currently-unavailable-features).
+> [!WARNING]
+> Streaming exports audit log data to the AWS bucket and region you choose, which can be outside your enterprise's data residency region. Review the destination against your data residency and compliance requirements before enabling streaming.
 
 From AWS:
 
@@ -197,6 +222,16 @@ From AWS:
       }
       ```
 
+     For GitHub Enterprise Cloud with data residency, replace the `sub` condition with the following, replacing `SUBDOMAIN` with your enterprise's subdomain:
+
+     ```json
+     "oidc-configuration.audit-log.githubusercontent.com:sub": "https://SUBDOMAIN.ghe.com"
+     ```
+
+     The `SUBDOMAIN` value is case-sensitive. Use the lowercase subdomain exactly as it appears in your enterprise's URL, not its display name. Keep the `aud` condition set to `sts.amazonaws.com`.
+
+     If your enterprise's subdomain changes or the enterprise is deleted, remove the old subject from your AWS role trust policies. Creating a new trust policy does not revoke an old one.
+
    * Make note of the Amazon Resource Name (ARN) of the created role.
 
 From GitHub:
@@ -213,12 +248,11 @@ From GitHub:
 1. Select the **Configure stream** dropdown menu and click **Amazon S3**.
 
 1. Under "Authentication", click **OpenID Connect**.
-1. Configure the stream settings.
+1. Configure the stream settings.{% ifversion ghec %}
 
-{% ifversion ghec %}
-    - Under "Region", select the bucket's region. For example, `us-east-1`; an option for Auto Discovery is also available.
-    - Under "Bucket", type the name of the bucket you want to stream to. For example, `auditlog-streaming-test`.
-    - Under "ARN Role" type the ARN role you noted earlier. For example, `arn:aws::iam::1234567890:role/github-audit-log-streaming-role`.
+    * Under "Region", select the bucket's region. For example, `us-east-1`. An option for Auto Discovery is also available. If you use Auto Discovery, verify the destination bucket's region and role ARN before enabling streaming.
+    * Under "Bucket", type the name of the bucket you want to stream to. For example, `auditlog-streaming-test`.
+    * Under "ARN Role" type the ARN role you noted earlier. For example, `arn:aws::iam::1234567890:role/github-audit-log-streaming-role`.
 1. To verify that GitHub can connect and write to the Amazon S3 endpoint, click **Check endpoint**.
 
 1. After you have successfully verified the endpoint, click **Save**.
@@ -363,15 +397,43 @@ To set up streaming to Google Cloud Storage, create a service account in Google 
 
 
 
+### Setting up streaming to Microsoft Agent 365
+
+> [!NOTE] This feature is in public preview. It is only available for enterprises that use Enterprise Managed Users on GitHub.com or GitHub Enterprise Cloud with data residency.
+
+Microsoft Agent 365 only supports streaming Copilot agent session events.
+
+First, enable audit log streaming of Copilot agent sessions. See [Enabling audit log streaming of Copilot agent session events](#enabling-audit-log-streaming-of-copilot-agent-session-events) above.
+
+Next, configure streaming in GitHub and sign in to Microsoft Entra to authorize the connection:
+
+
+1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
+
+
+1. At the top of the page, click {% octicon "gear" aria-hidden="true" aria-label="gear" %} **Settings**.
+
+1. Under "Settings", click **Audit log**.
+
+1. Under "Audit log", click **Log streaming**.
+
+1. Select the **Configure stream** dropdown, then click **Microsoft Agent 365**.
+1. Click **Authorize with Microsoft Entra**.
+1. Sign in with a Microsoft Entra account for your tenant and authorize the GitHub app.
+1. Choose how much Copilot activity data to share with this Microsoft Agent 365 connection. This setting applies only to this connection. Other streams are not affected.
+
+   * **Include raw content** is selected by default. This content includes prompts, responses, tool inputs and results, and client addresses.  
+   * If you turn off **Include raw content**, only activity metadata is shared, such as dates, model names, token counts, and tool names.
+
 ### Setting up streaming to Microsoft Purview
 
->[!NOTE] This feature is in public preview and is available for enterprises that use Enterprise Managed Users and for enterprises that use GitHub Enterprise Cloud with data residency.
+> [!NOTE] This feature is in public preview. It is only available for enterprises that use Enterprise Managed Users on GitHub.com or GitHub Enterprise Cloud with data residency.
 
 Microsoft Purview only supports streaming Copilot agent session events. For more information on Microsoft Purview, see [Learn about the Microsoft Purview portal](https://learn.microsoft.com/en-us/purview/purview-portal) in the Microsoft documentation.
 
 To set up streaming to Microsoft Purview, configure streaming in GitHub, then authorize access through Microsoft Entra.
 
-1. Configure streaming in GitHub. See [Enabling audit log streaming of Copilot agent session events](#enabling-audit-log-streaming-of-copilot-agent-session-events) below.
+1. Configure streaming in GitHub. See [Enabling audit log streaming of Copilot agent session events](#enabling-audit-log-streaming-of-copilot-agent-session-events) above.
 
 1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
 
@@ -482,23 +544,3 @@ To restart streaming, click **Resume stream**.
 1. Under "Audit log", click **Settings**.
 1. Under "API Requests", select **Enable API Request Events**.
 1. Click **Save**.
-
-
-
-
-
-## Enabling audit log streaming of Copilot agent session events
-
->[!NOTE] This feature is in public preview and is available for enterprises that use Enterprise Managed Users and for enterprises that use GitHub Enterprise Cloud with data residency.
-
-
-1. In the top-right corner of GitHub Enterprise Server, click your profile picture, then click **Enterprise settings**.
-
-
-1. At the top of the page, click AI Controls
-1. Under "Copilot", select **Enabled everywhere** for "Copilot Usage Records Streaming"
-1. Configure a streaming destination. See [Setting up audit log streaming](#setting-up-audit-log-streaming).
-
-You can also retrieve Copilot usage data through the REST API by selecting **Enabled everywhere** for "Copilot Usage Records API". See [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics#get-copilot-usage-records-for-an-enterprise).
-
-For help interpreting the audit log events for agentic activity, see [Agentic Audit Log Events](https://docs.github.com/en/copilot/reference/enterprise-administrators/agentic-audit-log-events#streaming-audit-log-events).

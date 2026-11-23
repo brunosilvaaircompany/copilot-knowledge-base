@@ -4,7 +4,7 @@ AI Scan is a set of AI-powered scanning capabilities that complement CodeQL. The
 
 * **AI Scan for repositories** scans a repository’s default branch on demand across all languages, including languages already supported by CodeQL.
 * **AI Scan for pull requests** currently finds general security vulnerabilities in selected languages and frameworks not covered by CodeQL.
-* **Scan for AI applications** finds risks specific to AI applications and agents, such as indirect prompt injection, independently of CodeQL language coverage.
+* **AI applications scanning** finds risks specific to AI applications and agents, such as indirect prompt injection, independently of CodeQL language coverage.
 
 Each feature has its own coverage, availability, and billing requirements.
 
@@ -37,7 +37,7 @@ For more information, including coverage, availability, billing, and enablement 
 
 ### AI application and agent risks
 
-**Scan for AI applications** finds security risks in AI applications and agents in pull requests, initially focusing on indirect prompt injection.
+**AI applications scanning** finds security risks in AI applications and agents in pull requests, initially focusing on indirect prompt injection.
 
 When enabled, the detector scans eligible pull requests when they are created and after each new commit. Findings appear as comments on the pull request.
 

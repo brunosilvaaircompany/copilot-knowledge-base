@@ -13,7 +13,7 @@ The following key fields can help you interpret agentic events:
 
 ## Streaming audit log events
 
->[!NOTE] This feature is in public preview and is available for enterprises that use Enterprise Managed Users and for enterprises that use GitHub Enterprise Cloud with data residency.
+> [!NOTE] This feature is in public preview. It is only available for enterprises that use Enterprise Managed Users on GitHub.com or GitHub Enterprise Cloud with data residency.
 
 The table below shows the fields that are included in each streamed Copilot API usage record.
 

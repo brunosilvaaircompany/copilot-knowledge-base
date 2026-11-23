@@ -16,7 +16,7 @@ The available assignment methods depend on your enterprise's plan or billing mod
 
 With Copilot access or Copilot Business, enterprise owners can assign seats directly to individual members or enterprise teams. With Copilot access, you can also assign seats to all members of an organization. For guidance on organizing members before assignment, see [Organize Work](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/enterprise-best-practices/organize-work).
 
-When you assign seats to an enterprise team, each member receives a seat. Users receive or lose access when they are added or removed from the team. If you use Enterprise Managed Users, you can sync the team with an identity provider (IdP) group and manage licensing from your IdP.
+When you assign seats to an enterprise team, each member receives a seat. Users gain access immediately when they are added to the team. When they are removed, their seat is unassigned, but they can continue to use Copilot until the end of the billing cycle. If you use Enterprise Managed Users, you can sync the team with an identity provider (IdP) group and manage licensing from your IdP.
 
 ### Prerequisites
 

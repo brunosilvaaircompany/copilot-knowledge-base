@@ -81,7 +81,7 @@ By default, the organization member will receive an invitation via email, and th
 If your migration source is Azure DevOps, you can reclaim mannequins with the ADO2GH extension of the GitHub CLI.
 
 * If you don't already have a `GH_PAT` environment variable set for a personal access token with access to the destination organization, add `--github-target-pat TOKEN` to each of the commands below, replacing `TOKEN` with the personal access token.
- For personal access token requirements, see [Manage Access](https://docs.github.com/en/migrations/ado/manage-access).
+ For personal access token requirements, see [Manage Access](https://docs.github.com/en/migrations/using-github-enterprise-importer/ado/manage-access).
 * If you're migrating to GHE.com, add `--target-api-url TARGET-API-URL`, where TARGET-API-URL is the base API URL for your enterprise's subdomain. For example: `https://api.octocorp.ghe.com`.
 
 

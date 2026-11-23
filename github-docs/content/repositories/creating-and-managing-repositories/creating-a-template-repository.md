@@ -16,8 +16,6 @@ After you make your repository a template, anyone with access to the repository 
 
 
 
-> [!NOTE]
-> You can use a template repository as starter code for an assignment on GitHub Classroom. For more information, see [Create An Assignment From A Template Repository](https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/create-an-assignment-from-a-template-repository).
 
 
 

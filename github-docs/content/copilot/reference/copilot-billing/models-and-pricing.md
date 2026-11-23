@@ -28,7 +28,7 @@ All prices are **per 1 million tokens**.
 
 > [!NOTE] Models with a **Long context** tier, offer extended capabilities and longer context windows. See [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models#models-with-extended-capabilities)
 
-GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-6 Astra, GPT-6 Luna, GPT-6 Sol, GPT-6.1 Sol, and GPT-6.1 Terra include a cache write cost in addition to cached input. Earlier OpenAI models have no cache write cost.
+GPT-5.6 Sol, GPT-5.6 Luna, GPT-6 Astra, GPT-6 Luna, GPT-6 Sol, GPT-6.1 Sol, GPT-6.1 Terra, GPT-6.2 Astra, and GPT-6.2 Sol include a cache write cost in addition to cached input. Earlier OpenAI models have no cache write cost.
 
 | Model | Release status | Category | Tier | Threshold (input tokens) | Input | Cached input | Cache write | Output |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
@@ -123,6 +123,8 @@ The number of AI credits a review consumes depends on the review effort level. T
 
 These figures are estimates only. Consumption generally increases with pull request size and repository custom instructions. Actual costs can fall outside these ranges and may change as models evolve. Estimates exclude GitHub Actions minutes.
 
+If you choose Adaptive as the review effort level, Copilot selects Lite, Balanced, or Max within the configured maximum review effort. Estimated consumption varies depending on the effort level selected.
+
 
 GitHub Actions minutes are attributed to the repository, and from there to the enterprise or cost center where applicable. For requests associated with organization members who have paid Copilot licenses, AI credits are charged to the member or organization, depending on how the **Choose how members with a Copilot license are billed** policy is configured.
 
@@ -144,3 +146,11 @@ Copilot Pro and Copilot Pro+ subscribers on **existing annual billing plans** us
 [^gemini-4-argon-promo]: Gemini 4 Argon is available at the promotional pricing of $2.00 per 1M input tokens, $0.10 per 1M cached input tokens, and $10.00 per 1M output tokens until December 1, 2026.
 
 [^gemini-4-carbon-promo]: Gemini 4 Carbon is available at the promotional pricing of $2.00 per 1M input tokens, $0.10 per 1M cached input tokens, and $10.00 per 1M output tokens until December 1, 2026. Starting December 1, 2026, pricing is $4.00 per 1M input tokens, $0.20 per 1M cached input tokens, and $20.00 per 1M output tokens.
+
+
+
+
+
+[^mai-code-2-promo]: MAI Code 2 is available at the promotional pricing of $0.50 per 1M input tokens, $0.025 per 1M cached input tokens, and $2.50 per 1M output tokens until May 17, 2027. Starting May 17, 2027, pricing is $1.00 per 1M input tokens, $0.05 per 1M cached input tokens, and $5.00 per 1M output tokens.
+
+[^mai-code-2-flash-promo]: MAI Code 2 Flash is available at the promotional pricing of $0.05 per 1M input tokens, $0.005 per 1M cached input tokens, and $0.25 per 1M output tokens until May 17, 2027. Starting May 17, 2027, pricing is $0.10 per 1M input tokens, $0.01 per 1M cached input tokens, and $0.50 per 1M output tokens.

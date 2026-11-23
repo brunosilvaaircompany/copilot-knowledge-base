@@ -13,6 +13,7 @@ Image generation is available in:
 * Visual Studio Code
 * GitHub Copilot app
 * GitHub Copilot CLI
+* Copilot in the cloud on GitHub.com
 
 Image generation is not available with Copilot Free or Copilot Student.
 

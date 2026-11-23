@@ -17,7 +17,7 @@ Use this table to find a suitable model quickly, see more detail in the sections
 | Model                                              | Task area             | Excels at (primary use case) | Further reading             |
 |----------------------------------------------------|-----------------------|------------------------------|-----------------------------|
 | {% for model in tables.copilot.model-comparison %} |
-| {{ model.name }}{% if model.name == 'MAI-Code-1.1-Flash' %}[^mai-models]{% elsif model.name == 'Kimi K3' %}[^kimi-k3]{% endif %}                                   | {{ model.task_area }} | {{ model.excels_at }}        | {{ model.further_reading }} |
+| {{ model.name }}{% if model.name == 'MAI-Code-1.1-Flash' or model.name == 'MAI Code 2' or model.name == 'MAI Code 2 Flash' %}[^mai-models]{% elsif model.name == 'Kimi K3' %}[^kimi-k3]{% endif %}                                   | {{ model.task_area }} | {{ model.excels_at }}        | {{ model.further_reading }} |
 | {% endfor %}                                       |
 
 ## Task: General-purpose coding and writing
@@ -27,7 +27,7 @@ Use these models for common development tasks that require a balance of quality,
 | Model                                             | Why it's a good fit                                                                                                                             |
 |---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | GPT-5.3-Codex | Delivers higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews without lengthy instructions. |
-| GPT-5.6 Terra | Balanced all-round choice for everyday interactive and agentic coding.                                                                          |
+| GPT-6.1 Terra | Balanced all-round choice for everyday agentic coding and terminal work.                                                                        |
 
 ### When to use these models
 
@@ -131,7 +131,7 @@ Kimi K3 is designed for long-context, multi-step coding and agentic workflows. F
 
 [^kimi-k3]: For important information about Kimi K3 behavior and safeguards, see [Model-specific considerations](#kimi-k3).
 
-Choosing the right model helps you get the most out of Copilot. If you're not sure which model to use, start with a general-purpose option like GPT-5.6 Terra, then adjust based on your needs.
+Choosing the right model helps you get the most out of Copilot. If you're not sure which model to use, start with a general-purpose option like GPT-6.1 Terra, then adjust based on your needs.
 
 * For detailed model specs and pricing, see [Supported Models](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
 * To switch between models, refer to [Change The Chat Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model) or [Change The Completion Model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/change-the-completion-model).

@@ -77,6 +77,9 @@ For more information about configuring self-hosted runners for Dependabot, see [
 
 To update private dependencies of repositories in your organization, Dependabot needs access to those repositories. To grant Dependabot access to the desired private or internal repository, scroll down to the "Grant Dependabot access to private repositories" section, then use the search bar to find and select the desired repository. Be aware that granting Dependabot access to a repository means all users in your organization will have access to the contents of that repository through Dependabot updates. For more information about the supported ecosystems for private repositories, see [Supported Ecosystems And Repositories](https://docs.github.com/en/code-security/reference/supply-chain-security/supported-ecosystems-and-repositories).
 
+> [!NOTE]
+> For Swift updates, this setting does not grant access to private dependencies. Configure a `git` registry with credentials in your `dependabot.yml` file instead. See [Configure Access To Private Registries](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git).
+
 ## Configuring global code scanning settings
 
 Code scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown in your repository.
@@ -130,10 +133,9 @@ You can select **AI Scan for pull requests** to enable the feature for eligible 
 
 You can select **AI Scan for repositories** to enable the feature for eligible repositories in your organization where code scanning is enabled. Repositories inherit the organization setting, but repository administrators can opt out for individual repositories. See [Ai Scan For Repositories](https://docs.github.com/en/code-security/concepts/code-scanning/ai-scan-for-repositories).
 
-After enabling the setting, you can start one-off scans of up to 20 repositories. Enabling the setting alone does not start scans. Alternatively, you can start an AI scan for an individual repository from its code scanning repository alerts page.
+After enabling the setting, you can start one-off scans of up to 20 repositories. Enabling the setting alone does not start scans. Alternatively, you can start one-off AI Scans in bulk for multiple repositories from the code scanning organization alerts page, or start an AI Scan for a single repository from its code scanning repository alerts page.
 
 You can also manage this setting with the REST API by using the `repository_scan` property. See [Code Scanning](https://docs.github.com/en/rest/code-scanning/code-scanning#update-the-ai-scan-setting-for-an-organization).
-
 
 
 

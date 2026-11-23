@@ -75,6 +75,9 @@ Group members with the same ownership share persistent artifact storage, while a
    * **Whether activity from Copilot in the cloud can trigger this automation**: From the **Can be triggered by** dropdown, pick **Anyone except Copilot in the cloud** to ignore events triggered by Copilot, including automations. Pick **Anyone** to listen for all events, including events triggered by Copilot.
    * **Whether users with only read access to the repository can trigger this automation**: By default, automations ignore activity from users who don't have write access to the repository. Uncheck the **Ignore events triggered by users without write access to this repository** box to listen for these events. Depending on your repository configuration, the **Ignore events triggered by users without write access to this repository** option may be locked in an enabled state.
 
+> [!NOTE]
+> Some events created by GitHub Apps cannot trigger automations. An app-authored label, assignment, closure, comment, and review events are filtered out, regardless of the app's repository permissions. Granting the app write access does not allow the event to trigger automations.
+
 1. In the **prompt** field, describe the task you want Copilot to perform each time the automation runs.
 
    For example, `Label this issue as a bug, an enhancement, or other, based on its content.`

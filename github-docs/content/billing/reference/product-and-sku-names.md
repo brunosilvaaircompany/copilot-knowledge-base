@@ -79,10 +79,11 @@ For **SkuPricing** budgets or to query usage by SKU, use one of the following va
 
 * `coding_agent_ai_credit` - Copilot Cloud Agent
 * `code_review_premium_request` - Copilot code review AI credits
+* `copilot_access_pay_as_you_go` - Copilot Standalone
 * `copilot_ai_credit` - Copilot AI credits
 * `copilot_enterprise` - Copilot Enterprise
 * `copilot_for_business` - Copilot for Business
-* `copilot_standalone` - Copilot standalone
+* `copilot_standalone` - Copilot Business (legacy SKU)
 
 ### GitHub Advanced Security SKUs
 

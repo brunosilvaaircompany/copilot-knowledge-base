@@ -163,6 +163,15 @@ For more information, see [Managing A Merge Queue](https://docs.github.com/en/re
 * View secret scanning alerts
 * Dismiss, reopen, or assign secret scanning alerts
 
+* View security advisories
+* Create, edit, and manage security advisories
+  * Includes "View security advisories"
+* Accept private vulnerability reports and close or reopen security advisories
+  * Requires "View security advisories" or "Create, edit, and manage security advisories"
+* Publish security advisories and request CVEs
+  * Requires "View security advisories" or "Create, edit, and manage security advisories"
+
+
 
 ### Actions
 

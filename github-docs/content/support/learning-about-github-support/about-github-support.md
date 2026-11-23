@@ -45,6 +45,8 @@ In addition to all of the benefits of GitHub Enterprise Support, GitHub Enterpri
 
 For more information, see [About GitHub Premium Support](https://docs.github.com/en/support/learning-about-github-support/about-github-premium-support).
 
+Select partners can purchase GitHub Partner Support to open support tickets on behalf of their customers. For more information, see [GitHub Partner Support](https://docs.github.com/en/support/learning-about-github-support/github-partner-support).
+
 
 
 

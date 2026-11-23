@@ -27,9 +27,11 @@ Track agentic activity on GitHub or through streaming to an external destination
 
 ### Streaming agentic activity from the audit log
 
->[!NOTE] This feature is in public preview and is available for enterprises that use Enterprise Managed Users and for enterprises that use GitHub Enterprise Cloud with data residency.
+> [!NOTE] This feature is in public preview. It is only available for enterprises that use Enterprise Managed Users on GitHub.com or GitHub Enterprise Cloud with data residency.
 
 To enable streaming for Copilot agent session events and configure a streaming destination from your enterprise audit log settings, see [Streaming The Audit Log For Your Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#enabling-audit-log-streaming-of-copilot-agent-session-events).
+
+You can stream to any supported destination, including Microsoft Agent 365, which lets you review Copilot agent activity alongside your other agents in Microsoft Agent 365.
 
 In addition to streaming, you can also retrieve Copilot usage data through the REST API. See [Copilot Usage Metrics](https://docs.github.com/en/rest/copilot/copilot-usage-metrics#get-copilot-usage-records-for-an-enterprise).
 

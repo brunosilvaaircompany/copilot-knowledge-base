@@ -48,7 +48,9 @@ To work on code, you need at least one repository or local folder connected to t
 1. Choose where to add the repository or folder from:
   * **Open local folder** — Select a folder already on your machine, including one that contains a repository you've already cloned locally.
   * **Add GitHub repository** — Browse and clone a repository from GitHub.
-  * **Clone repository** — Clone from a Git URL for repositories hosted outside GitHub (for example, on Azure DevOps) or for private repositories without app access.
+  * **Clone repository** — Clone from a Git URL for repositories hosted outside GitHub or for private repositories without app access.
+
+To browse and add Azure DevOps repositories, enable the Azure DevOps integration in the app settings and connect your Microsoft account. See [Manage Azure DevOps Work](https://docs.github.com/en/copilot/how-tos/github-copilot-app/manage-azure-devops-work).
 
 To add repositories hosted on GitHub Enterprise Server, sign in to your account. See [Sign In On Copilot App](https://docs.github.com/en/enterprise-server@latest/copilot/copilot-on-ghes/sign-in-on-copilot-app).
 

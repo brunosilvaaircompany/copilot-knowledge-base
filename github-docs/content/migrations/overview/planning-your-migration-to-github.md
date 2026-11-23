@@ -55,7 +55,7 @@ If you’re migrating from GitHub Enterprise Cloud or GitHub Enterprise Server, 
 
 
 
-If you’re migrating from Azure DevOps, we recommend the `inventory-report` command in the ADO2GH extension of the GitHub CLI. The `inventory-report` command will connect with the Azure DevOps API, then build a simple CSV with some of the fields suggested above. For more information about how to install the ADO2GH extension of the GitHub CLI, see [Migrate Your Repositories From Azure DevOps To GitHub](https://docs.github.com/en/migrations/ado/migrate-your-repositories-from-azure-devops-to-github).
+If you’re migrating from Azure DevOps, we recommend the `inventory-report` command in the ADO2GH extension of the GitHub CLI. The `inventory-report` command will connect with the Azure DevOps API, then build a simple CSV with some of the fields suggested above. For more information about how to install the ADO2GH extension of the GitHub CLI, see [Migrate Your Repositories From Azure DevOps To GitHub](https://docs.github.com/en/migrations/using-github-enterprise-importer/ado/migrate-your-repositories-from-azure-devops-to-github).
 
 
 If you’re migrating from Bitbucket Server or Bitbucket Data Center, we recommend the `inventory-report` command in the BBS2GH extension of the GitHub CLI. The `inventory-report` command will use your Bitbucket instance's API to build a simple CSV. For more information about how to install the BBS2GH extension of the GitHub CLI, see [Migrating Repositories From Bitbucket Server To GitHub Enterprise Cloud](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-bitbucket-server-to-github-enterprise-cloud/migrating-repositories-from-bitbucket-server-to-github-enterprise-cloud).

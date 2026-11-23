@@ -53,7 +53,7 @@ Hooks allow you to extend and customize the behavior of GitHub Copilot agents by
          "type": "command",
          "bash": "./scripts/log-prompt.sh",
          "powershell": "./scripts/log-prompt.ps1",
-         "cwd": "scripts",
+         "cwd": ".",
          "env": {
            "LOG_LEVEL": "INFO"
          }

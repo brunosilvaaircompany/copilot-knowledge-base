@@ -9,6 +9,8 @@ Access controls for agentic autofix cascade from the enterprise to the organizat
 
 Agentic Autofix is not available for user-owned repositories in an enterprise that uses Enterprise Managed Users.
 
+Enabling agentic autofix does not change the authentication requirements for assigning alerts through the REST API. GitHub App installation access tokens cannot be used to assign an alert to Copilot or start an agentic autofix session. For information about assigning an alert to Copilot, see [Resolve Alerts](https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-code-scanning-alerts/resolve-alerts#fixing-alerts-with-copilot).
+
 If your organization used agentic autofix during the public preview, you must enable it again.
 
 Before you enable the feature, review how the use of AI credits and GitHub Actions minutes affects your costs.

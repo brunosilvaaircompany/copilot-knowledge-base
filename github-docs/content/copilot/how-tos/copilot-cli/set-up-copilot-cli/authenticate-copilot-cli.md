@@ -1,6 +1,6 @@
 ## About authentication
 
-If you use your own LLM provider API keys (BYOK), GitHub authentication is not required.
+GitHub authentication is not required if you use your own LLM provider API keys (BYOK) or sign in with a Microsoft Entra account.
 
 Authentication is required for any other GitHub Copilot CLI usage.
 
@@ -12,9 +12,12 @@ When authentication is required, Copilot CLI supports several methods. The metho
 
 Once authenticated, Copilot CLI remembers your login and automatically uses the token for all Copilot API requests. You can log in with multiple accounts, and the CLI will remember the last-used account. Token lifetime and expiration depend on how the token was created on your account or organization settings.
 
-## Unauthenticated use
+## Using Copilot CLI without GitHub authentication
 
-If you configure Copilot CLI to use your own LLM provider API keys (BYOK), GitHub authentication is **not required**. Copilot CLI can connect directly to your configured provider without a GitHub account or token.
+GitHub authentication is **not required** if you use either of the following for AI model requests:
+
+* **Your own LLM provider API keys (BYOK)**: Copilot CLI connects directly to your configured provider without a GitHub account or token.
+* **A Microsoft Entra account**: If your Microsoft Entra tenant uses OpenID Connect (OIDC) to connect to GitHub Enterprise Managed Users, you can use your Microsoft Entra account to sign in on Windows or macOS. If a Microsoft 365 Copilot license exists for that Microsoft Entra user, model requests can go to Microsoft 365 Copilot. See [Authenticating with Microsoft Entra](#authenticating-with-microsoft-entra).
 
 However, without GitHub authentication, the following features are **not available**:
 
@@ -22,7 +25,7 @@ However, without GitHub authentication, the following features are **not availab
 * GitHub MCP server: Requires authentication to access GitHub APIs
 * GitHub Code Search: Requires authentication to query GitHub's search index
 
-You can combine BYOK with GitHub authentication to get the best of both: your preferred model for AI responses, plus access to GitHub-hosted features like `/delegate` and code search.
+You can combine BYOK or Microsoft Entra authentication with GitHub authentication to get the best of both: your preferred model for AI responses, plus access to GitHub-hosted features like `/delegate` and code search.
 
 ### Offline mode
 
@@ -79,12 +82,13 @@ OAuth is the default authentication method for interactive use. You can authenti
    /login
    ```
 
-1. Select the account you want to authenticate with. For GitHub Enterprise Cloud with data residency, enter the hostname of your instance
+1. Select the account you want to authenticate with. For GitHub Enterprise Cloud with data residency, enter the hostname of your instance. If you select **Your organization (Microsoft Entra)**, Copilot CLI automatically signs you in with your existing Microsoft Entra account.
 
    ```text
    What account do you want to log into?
     1. GitHub.com
     2. GitHub Enterprise Cloud with data residency (*.ghe.com)
+    3. Your organization (Microsoft Entra)
    ```
 
 1. Choose how you want to sign in. The recommended option is listed first, and depends on your environment: the browser flow on a local terminal, or the device code flow in a remote or headless environment. The following example shows the prompt in a local terminal:
@@ -159,6 +163,34 @@ OAuth is the default authentication method for interactive use. You can authenti
    ```text
    Signed in successfully as Octocat.
    ```
+
+## Authenticating with Microsoft Entra
+
+> [!NOTE]
+> Using Microsoft Entra with Copilot CLI is in public preview and subject to change.
+
+Authentication with a Microsoft Entra account is supported on Windows and macOS in Copilot CLI version 1.0.113 and later.
+
+### Prerequisites for using GitHub Enterprise Managed Users
+
+Your Microsoft Entra tenant must use OIDC to connect to GitHub Enterprise Managed Users. For more information, see [About Enterprise Managed Authorization](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/configuring-authentication-for-enterprise-managed-users/about-enterprise-managed-authorization).
+
+### Prerequisites for using Microsoft 365 Copilot models
+
+Copilot CLI supports Microsoft 365 Copilot licenses for [Frontier](https://learn.microsoft.com/microsoft-365/admin/manage/get-started-frontier?view=o365-worldwide) customers only. To use this feature, you must have:
+
+* A Microsoft Entra account with access to Microsoft 365 Copilot through your organization.
+* An administrator must enable the following settings in the [Microsoft 365 admin center](https://admin.cloud.microsoft.com/):
+  * The Microsoft Copilot **Code** spending policy for [usage-based billing](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-overview-copilot-credits). Your organization's [Billing Administrator](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#billing-administrator) or [Global Administrator](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#global-administrator) can enable this policy.
+  * The **Copilot Frontier** setting. Your organization's [AI Administrator](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#ai-administrator) or Global Administrator can update this setting.
+  * The **GitHub Copilot access (Frontier)** setting, which is disabled by default. Your organization's Global Administrator can update this setting.
+
+### Signing in with your organization
+
+1. Run `/login` in Copilot CLI.
+1. Select **Your organization (Microsoft Entra)**. Copilot CLI automatically signs you in with your existing Microsoft Entra account.
+
+After you sign in, models permitted by your entitlements appear in the `/model` picker. For more information on how this works with Microsoft 365 Copilot, see [Copilot CLI](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli#using-microsoft-365-copilot-models).
 
 ## Authenticating with environment variables
 

@@ -68,9 +68,13 @@ With review effort levels, you can choose the level of thoroughness of Copilot's
 * **Balanced**: Deeper analysis of complex logic, security-sensitive code, and cross-service changes, using a higher-reasoning model.
 * **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
 
+Alternatively, you can select **Adaptive** to let Copilot choose Lite, Balanced, or Max based on the complexity and risk of your pull request. Adaptive never picks a level above the maximum review effort level set for your enterprise, organization, or repository. Unless you set a different default, the review effort level defaults to Balanced, not Adaptive.
+
+> [!NOTE] Adaptive is currently in public preview and subject to change.
+
 Higher effort levels consume more AI credits. As a rough guide, a review costs approximately $0.25 USD on average with Lite, $1.50 USD with Balanced, and $10 USD with Max. Actual costs vary by review, depending on factors such as pull request size. For estimated ranges, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#estimated-consumption).
 
-You can select Copilot review effort in the pull request before you request a review from Copilot, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort in your settings. Organization owners and repository administrators can set a default Copilot review effort for automatic reviews.
+You can select Copilot review effort in the pull request before you request a review from Copilot, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort, or set Adaptive as the default, in your settings. Organization owners and repository administrators can set a default Copilot review effort for automatic reviews.
 
 For more information, see [Code Review](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review#review-effort-level).
 
@@ -276,7 +280,7 @@ Copilot will review the changes and provide feedback.
 
 ## Prerequisite
 
-To use Copilot code review in Xcode, you must use version 0.41.0 or later of the GitHub Copilot Chat extension. Download the latest release from the [`github/CopilotForXcode` repository](https://github.com/github/CopilotForXcode/releases/latest).
+To use Copilot code review in Xcode, you must use version 0.41.0 or later of the GitHub Copilot Chat extension. Download the latest release from the [`github/CopilotForXcode` repository](https://github.com/github/CopilotForXcode/releases/latest?utm_source=docs-cta-xcode-release&utm_medium=docs&utm_campaign=ignite-nov-2026).
 
 ## Using Copilot code review
 

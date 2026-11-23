@@ -125,7 +125,7 @@ The specific webhook events that you can select for your GitHub App registration
 You can change the visibility settings of your GitHub App to control who can install it. Public apps cannot be made private if they're installed on other accounts. See [Making A GitHub App Public Or Private](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/making-a-github-app-public-or-private).
 
 
-You can't change the visibility of an GitHub App owned by an enterprise. GitHub Apps owned by an enterprise can only be installed on organizations within the enterprise{% ifversion enterprise-installed-apps %} or the enterprise itself.
+You can't change the visibility of a GitHub App owned by an enterprise. GitHub Apps owned by an enterprise can only be installed on organizations within the enterprise{% ifversion enterprise-installed-apps %} or the enterprise itself.
 {% endif %}
 
 1. Navigate to the settings page for the app you'd like to modify. For more information, see [Navigating to your GitHub App settings](#navigating-to-your-github-app-settings) in this article.

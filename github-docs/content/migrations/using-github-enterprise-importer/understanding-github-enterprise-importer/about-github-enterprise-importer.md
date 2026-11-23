@@ -39,7 +39,7 @@ In supported patch releases in version 3.17 and later, Enterprise Live Migration
 To learn more about the migration path you require, and the data that GitHub Enterprise Importer migrates, see the following articles.
 
 
-* [Understand Migrations From Azure DevOps To GitHub](https://docs.github.com/en/migrations/ado/understand-migrations-from-azure-devops-to-github)
+* [Understand Migrations From Azure DevOps To GitHub](https://docs.github.com/en/migrations/using-github-enterprise-importer/ado/understand-migrations-from-azure-devops-to-github)
 
 * [About Migrations From Bitbucket Server To GitHub Enterprise Cloud](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-bitbucket-server-to-github-enterprise-cloud/about-migrations-from-bitbucket-server-to-github-enterprise-cloud)
 * [About Migrations Between GitHub Products](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-between-github-products/about-migrations-between-github-products)

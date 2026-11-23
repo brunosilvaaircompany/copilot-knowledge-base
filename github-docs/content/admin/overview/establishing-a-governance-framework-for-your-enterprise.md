@@ -30,6 +30,10 @@ Many enterprises add rules that:
 Other rules, such as requiring signed commits or a linear commit history, are more situational and depend on your compliance requirements.
 
 
+These rules apply no matter who or what proposes a change. For example, suppose agentic autofix opens a pull request with a suggested fix for a code scanning alert. That pull request still goes through your normal review process and must satisfy any rules you've applied to the target branch, such as required reviews or status checks.
+
+
+
 As an enterprise owner, you can create rulesets at the enterprise level that flexibly target the repositories and branches where you want rules to apply. You can start by adding a base level of protection to every default branch in your enterprise, then build your framework from there. To get started, see [Enforcing Policies For Code Governance](https://docs.github.com/en/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-code-governance).
 
 
@@ -55,6 +59,8 @@ You can enable better governance through automated policy enforcement. This is p
 With **repository custom properties**, you can classify repositories by attributes like risk level, team ownership, or compliance requirements. This metadata enables you to automatically apply different governance rules based on repository characteristics.
 
 With **organization custom properties**, you can categorize organizations within your enterprise by data sensitivity, regulatory frameworks, or business units. You can then use these properties to selectively target organizations with enterprise rulesets.
+
+For example, you could tag repositories where AI coding agents are active with a custom property, then target those repositories with stricter rulesets.
 
 Both types of custom properties integrate with rulesets, allowing you to create powerful governance frameworks that automatically enforce the right policies based on metadata rather than manual repository selection.
 

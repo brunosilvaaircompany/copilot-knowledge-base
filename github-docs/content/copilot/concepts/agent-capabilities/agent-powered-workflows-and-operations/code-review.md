@@ -17,7 +17,7 @@ Copilot code review is supported in:
 * Visual Studio
 * Xcode
 * JetBrains IDEs
-* Azure DevOps (public preview)
+* Azure DevOps
 
 > [!NOTE]
 > If you receive Copilot from an organization, your organization must enable the **Copilot code review** option in the Copilot policy settings. This applies to reviews on GitHub.com or in GitHub Mobile. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).
@@ -53,6 +53,12 @@ Copilot code review for users without a license is not available in IDEs.
 Copilot code review utilizes agentic capabilities to extend its functionality.
 
 * **Full project context gathering**. This provides more specific, accurate, and contextually aware code reviews. This capability analyzes your entire repository to better understand the context of code changes.
+* **Cross-repository context**. On GitHub.com, Copilot can search the default branch of related public repositories during a review to find code that depends on your change and related context, such as documentation. Repository administrators can manage this with the **Search public repositories** setting. If you receive Copilot from an organization or enterprise, the **Opt in to preview features** policy must be enabled. See [Opting in to previews or feedback](/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies#opting-in-to-previews-or-feedback).
+
+  > [!NOTE]
+  > Cross-repository context for Copilot code review is in public preview and subject to change.
+
+
 * **The ability to pass suggestions to Copilot cloud agent**. This automates creating a new pull request against your branch with the suggested fixes applied. Passing suggestions to Copilot cloud agent is in public preview and subject to change.
 
 These capabilities are enabled automatically for all plans that include Copilot code review. See [Review effort level](#review-effort-level) later in this article for information about choosing between Lite, Balanced, and Max analysis levels.
@@ -85,6 +91,8 @@ The following table shows the estimated AI credits consumption of a single revie
 | Max | $1.50 USD to $25 USD | $10 USD |
 
 These figures are estimates only. Consumption generally increases with pull request size and repository custom instructions. Actual costs can fall outside these ranges and may change as models evolve. Estimates exclude GitHub Actions minutes.
+
+If you choose Adaptive as the review effort level, Copilot selects Lite, Balanced, or Max within the configured maximum review effort. Estimated consumption varies depending on the effort level selected.
 
 
 Repository and organization administrators can set the default review effort level for automatic code reviews. For configuration steps, see [Configure Code Review](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review#customizing-copilot-code-review-1).
@@ -172,19 +180,27 @@ For full instructions, see [Configure Code Review](https://docs.github.com/en/co
 
 ## Review effort level
 
-Copilot code review supports multiple Copilot review effort levels, so you can choose the level of thoroughness that matches the criticality of your code.
+Copilot code review offers several review effort levels:
 
 * **Lite**: Standard review. Provides fast, targeted feedback on common issues such as bugs, security vulnerabilities, and style inconsistencies.
 * **Balanced**: Routes pull requests to a higher-reasoning model for longer analysis of complex logic, security-sensitive code, and cross-service changes (default). Balanced reviews use more AI credits, and may consume marginally more GitHub Actions minutes, than Lite reviews.
 * **Max**: The highest-effort review. Uses multiple high-reasoning models for the most intensive review of pull requests that require the most scrutiny.
 
->[!NOTE] Max review effort level is currently in public preview and subject to change.
+You can select **Adaptive** to let Copilot choose Lite, Balanced, or Max based on the complexity and risk of your pull request. Adaptive never picks a level above the maximum review effort level set for your enterprise, organization, or repository. Unless you set a different default, the review effort level defaults to Balanced, not Adaptive.
 
-Use Max for high-risk or release-critical pull requests that need the most thorough review. Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
+> [!NOTE] Max review effort level and Adaptive are currently in public preview and subject to change.
+
+Alternatively, you can choose an effort level yourself: 
+
+* Use Max for high-risk or release-critical pull requests that need the most thorough review. 
+* Use Balanced for security-sensitive code, multi-service pull requests, or repositories with strict quality standards. 
+* Use Lite for routine changes where fast feedback is more important than exhaustive analysis.
 
 Higher effort levels consume more AI credits. On average, a review costs an estimated $0.25 USD with Lite, $1.50 USD with Balanced, and $10 USD with Max. For typical ranges, see [Estimated consumption](#estimated-consumption).
 
-You can select Copilot review effort when requesting a review in the pull request, under the **Reviewers** section where Copilot appears as a reviewer. You can also set a default Copilot review effort in your Copilot code review settings. Organization owners can set a default Copilot review effort for automatic code reviews in their organization. Repository administrators can override the organization default for a specific repository.
+You can select an effort level or Adaptive when requesting a review in the pull request, under the **Reviewers** section where Copilot appears as a reviewer. 
+
+You can also set an effort level or set Adaptive as the default Copilot review effort in your Copilot code review settings. Organization owners can set a default Copilot review effort for automatic code reviews in their organization. Repository administrators can override the organization default for a specific repository.
 
 When Copilot determines which review effort to use, it checks the following options in order and uses the first one that applies:
 
@@ -193,7 +209,8 @@ When Copilot determines which review effort to use, it checks the following opti
 1. The requestor's Copilot review effort. For a new pull request, the requestor is the author. When someone marks a draft ready for review, that person is the requestor.
 1. A Copilot review effort set for the repository
 1. A Copilot review effort set for the organization, or the repository owner's Copilot review effort on a user-owned repository
-1. GitHub's built-in default, which is Balanced.
+1. A Copilot review effort set for the enterprise
+1. GitHub's built-in default, which is Balanced
 
 After Copilot code review reviews a pull request, the pull request overview comment shows the effort level used for each review run.
 

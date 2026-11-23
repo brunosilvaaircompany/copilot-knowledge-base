@@ -2,7 +2,7 @@ To find out about Copilot CLI before you install it, see [Copilot CLI](https://d
 
 ## Prerequisites
 
-* **An active GitHub Copilot subscription**. See [Copilot plans](https://github.com/features/copilot/plans?ref_product=copilot&ref_type=engagement&ref_style=text).
+* **An active GitHub Copilot subscription**. See [Copilot plans](https://github.com/features/copilot/plans?ref_product=copilot&ref_type=engagement&ref_style=text&utm_source=docs-article-installing-cli-plans&utm_medium=docs&utm_campaign=ignite-nov-2026).
 * (On Windows) **PowerShell** v6 or higher
 
 If you have access to GitHub Copilot via your organization or enterprise, you cannot use Copilot CLI if your organization owner or enterprise administrator has disabled it in the organization or enterprise settings. See [Manage Policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).
@@ -82,13 +82,13 @@ curl -fsSL https://gh.io/copilot-install | VERSION="v0.0.369" PREFIX="$HOME/cust
 
 ### Download from GitHub.com
 
-You can download the executables directly from [the `copilot-cli` repository](https://github.com/github/copilot-cli/releases/).
+You can download the executables directly from [the `copilot-cli` repository](https://github.com/github/copilot-cli/releases/?utm_source=docs-article-cli-releases&utm_medium=docs&utm_campaign=ignite-nov-2026).
 
 Download the executable for your platform, unpack it, and run.
 
 ## Authenticating with Copilot CLI
 
-On first launch, if you're not currently logged in to GitHub, you'll be prompted to use the `/login` slash command. Enter this command and follow the on-screen instructions to authenticate. For more information on the authentication process, see [Authenticate Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli).
+On first launch, if you're not currently logged in, you'll be prompted to use the `/login` slash command. Enter this command and follow the on-screen instructions to authenticate with your GitHub account or your Microsoft Entra account. For more information on the authentication process, see [Authenticate Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli).
 
 ### Authenticating with a personal access token
 
