@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-22 15:10 UTC  
+> Atualizado em: 2026-11-23 19:07 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -19,7 +19,7 @@ The post [GitHub Enterprise Server 3.23 release candidate](https://github.blog/c
 
 **Data:** 2026-11-20  **Categorias:** `Improvement`, `collaboration tools`
 
-Choose which repositories appear on the Dashboard with the new Favorite repositories section. If the new dashboard experience isn&#8217;t enabled, Top repositories remains unchanged. Select Edit or Add repositories to&#8230;
+Editor&#8217;s note (November 23, 2026): We have temporarily rolled back this change while we improve the experience based on user feedback. Choose which repositories appear on the Dashboard with the&#8230;
 
 The post [Pin your favorite repositories to your dashboard](https://github.blog/changelog/2026-11-20-pin-your-favorite-repositories-to-your-dashboard) appeared first on [The GitHub Blog](https://github.blog).
 

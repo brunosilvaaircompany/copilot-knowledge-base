@@ -3,7 +3,7 @@
 ## Indice
 
 - [actions](actions.md): 1 entrada
-- [client-apps](client-apps.md): 2 entradas
+- [application-security](application-security.md): 2 entradas
+- [client-apps](client-apps.md): 1 entrada
 - [collaboration-tools](collaboration-tools.md): 3 entradas
-- [copilot](copilot.md): 1 entrada
 - [enterprise-management-tools](enterprise-management-tools.md): 3 entradas
