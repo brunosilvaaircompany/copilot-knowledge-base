@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-16 16:53 UTC  
+> Atualizado em: 2026-11-24 18:46 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Issue types and fields are available for personal accounts](https://github.blog/changelog/2026-11-11-issue-types-and-fields-are-available-for-personal-accounts)
+## [Issue statuses and repository boards are in public preview](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview)
 
-**Data:** 2026-11-11  **Categorias:** `Improvement`, `projects &amp; issues`
+**Data:** 2026-11-23  **Categorias:** `Release`, `projects &amp; issues`
 
-Issue types and issue fields are now generally available on repositories owned by personal accounts. This brings the same planning capabilities to individual developers and open source maintainers to standardize&#8230;
+Open or closed doesn&#8217;t always tell you where an issue stands. You can now use more specific statuses to give your team and agents shared context about what&#8217;s in flight&#8230;
 
-The post [Issue types and fields are available for personal accounts](https://github.blog/changelog/2026-11-11-issue-types-and-fields-are-available-for-personal-accounts) appeared first on [The GitHub Blog](https://github.blog).
+The post [Issue statuses and repository boards are in public preview](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

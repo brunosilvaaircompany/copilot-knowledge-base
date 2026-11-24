@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-18 16:19 UTC  
+> Atualizado em: 2026-11-24 18:46 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Track Copilot code review outcomes in Repository insights](https://github.blog/changelog/2026-11-17-track-copilot-code-review-outcomes-in-repository-insights)
+## [Usage reports will include a user ID column starting December 1](https://github.blog/changelog/2026-11-23-usage-reports-will-include-a-user-id-column-starting-december-1)
 
-**Data:** 2026-11-17  **Categorias:** `Release`, `account management`, `copilot`, `enterprise management tools`
+**Data:** 2026-11-23  **Categorias:** `Improvement`, `account management`, `enterprise management tools`
 
-You can now see how Copilot code review feedback lands in each repository. A new &#8220;Repository insights&#8221; page, the first item in a repository&#8217;s Insights tab, brings Copilot code review&#8230;
+Starting December 1, 2026, usage reports that include a username column will also include a user_id column next to it. Every column after username will move one position to the&#8230;
 
-The post [Track Copilot code review outcomes in Repository insights](https://github.blog/changelog/2026-11-17-track-copilot-code-review-outcomes-in-repository-insights) appeared first on [The GitHub Blog](https://github.blog).
+The post [Usage reports will include a user ID column starting December 1](https://github.blog/changelog/2026-11-23-usage-reports-will-include-a-user-id-column-starting-december-1) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

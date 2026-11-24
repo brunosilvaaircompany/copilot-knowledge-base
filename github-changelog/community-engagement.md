@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-10-19 14:31 UTC  
+> Atualizado em: 2026-11-24 18:46 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Email notifications for repository push events have been retired](https://github.blog/changelog/2026-10-15-email-notifications-for-repository-push-events-have-been-retired)
+## [More predictable notifications on GitHub.com](https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com)
 
-**Data:** 2026-10-15  **Categorias:** `Retired`, `community engagement`
+**Data:** 2026-11-24  **Categorias:** `Improvement`, `community engagement`
 
-As of October 15, 2026, email notifications for repository push events have been retired and are no longer sent. We shut down this feature to help prevent spam and abuse.&#8230;
+Starting December 1, 2026, we&#8217;re migrating notifications on GitHub.com over the course of a week to make subscriptions more predictable, correct unexpected behavior, and support the growing scale of activity.&#8230;
 
-The post [Email notifications for repository push events have been retired](https://github.blog/changelog/2026-10-15-email-notifications-for-repository-push-events-have-been-retired) appeared first on [The GitHub Blog](https://github.blog).
+The post [More predictable notifications on GitHub.com](https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
