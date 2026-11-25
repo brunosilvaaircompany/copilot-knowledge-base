@@ -68,7 +68,7 @@ Add a task named "Review browser tools", mark it complete, and reload the page.
 Verify that the completed task persists. If any step fails, fix the issue and repeat the flow.
 ```
 
-**TIP:** Select only the tools that are relevant to your task. Learn more about [selecting tools for agents](tools.md#select-tools-for-a-request).
+**TIP:** Select only the tools that are relevant to your task. Learn more about [selecting tools for agents](tools.md#manage-available-tools).
 
 ## Choose a browser session
 
@@ -95,6 +95,8 @@ By default, an agent can't access browser pages that you opened. To grant access
 1. Ask the agent to read or interact with the page.
 
 A visual indicator shows that the page is shared. Select **Share with Agent** again to revoke access immediately.
+
+**NOTE:** For sites that use HTTP Basic authentication, enter your credentials yourself in the browser's sign-in dialog. Agents can answer JavaScript page dialogs, but can't submit credentials to the HTTP Basic sign-in dialog.
 
 If an agent needs access to an unshared tab, it can ask you to share one. In autopilot mode, {% data variables.product.prodname_vscode_shortname %} declines these requests automatically to protect your privacy.
 

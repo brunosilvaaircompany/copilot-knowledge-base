@@ -32,10 +32,11 @@ Select **Ask** or **Agent** in chat, type `/plan` to plan a change, or select co
 | Build, fix, or test | [Agent](../guides/add-a-feature.md) | "Fix this failure and run the relevant tests." |
 | Edit selected code inline | [Inline chat](../../chat/inline-chat.md#use-editor-inline-chat) | "Handle empty input without changing other behavior." |
 | Validate a web app | [Browser tools](../run/browser-tools.md) | "Submit an empty form and verify the validation message." |
+| Work in a desktop app | [{% data variables.copilot.computer_use_caps %}](../run/tools.md#control-desktop-applications) `feature(computer-use)`. Requires setup in a local {% data variables.product.prodname_copilot_short %} session on macOS or Windows. | "Find this app's export options without changing its settings." |
 
 For assistance without writing a prompt:
 
-* **Complete code as you type:** Review [inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions), then press `kbstyle(Tab)` to accept or `kbstyle(Escape)` to dismiss them.
+* **Complete code as you type:** Review [inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions), then press `kbstyle(Tab)` to accept or `kbstyle(Escape)` to dismiss them. [Next edit suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions#next-edit-suggestions) propose related changes based on edits you make.
 * **Write a commit message:** Select the sparkle beside the **Source Control** message input to [generate a message](https://code.visualstudio.com/docs/editing/copilot-smart-actions#generate-a-commit-message-and-pr-information), then review it.
 
 <a name="review-code-experimental"></a>
@@ -100,7 +101,8 @@ Run the relevant tests and summarize the change and results.
 | I need to... | Action |
 |---|---|
 | Ground a request in my code | Select **Add Context** or type `#` to [attach files, symbols, or other context](../../chat/copilot-chat-context.md). Include relevant errors and test output. |
-| Balance quality, speed, and cost | Use the [model picker](../../agent-customization/language-models.md#change-the-model-for-chat), or **Auto** when available. Changing the model doesn't change the harness. |
+| Balance quality, speed, and cost | Use the [model picker](../../agent-customization/language-models.md#change-the-model-for-chat) to select an available option. Follow the [model selection guide](../guides/choose-a-model.md) to choose between Fusion, Auto, and individual models. Changing the model doesn't change the harness. |
+| Compare models on the same task | For a new session in the {% data variables.copilot.agents_window %}, open the model picker and select [**Compare Models**](../run/compare-models.md#configure-a-comparison). Run the same prompt across multiple models and review their results side by side. Multiple attempts add model usage. |
 | Use another agent provider | Open **Session Target** and [choose a harness](../run/agent-harnesses.md#compare-agent-harnesses). Check its account and tool requirements. |
 | Use my own model credentials | Follow [BYOK setup](../../agent-customization/language-models.md#bring-your-own-language-model-key) for {% data variables.product.prodname_copilot_short %} sessions. `feature(agent-host-byok-models)` Inline suggestions and semantic search still require the {% data variables.product.prodname_copilot %} service. |
 | Reuse knowledge across conversations | Ask the agent to remember a durable convention with [{% data variables.copilot.copilot_memory %}](../run/memory.md#copilot-memory). [Review and delete cloud memories](../run/memory.md#review-and-delete-cloud-memories) on {% data variables.product.prodname_github %}. |
@@ -123,6 +125,7 @@ Run **Chat: Open Customizations** to open the [Agent Customizations editor](../.
 | Reuse a task or multi-step workflow | [Agent skills](../../agent-customization/agent-skills.md), loaded when relevant or invoked by name. |
 | Define a specialized role | [Custom agents](../../agent-customization/custom-agents.md) with focused instructions and tools. |
 | Connect an external service | [{% data variables.product.prodname_copilot_short %} connectors](../../agent-customization/copilot-connectors.md) `feature(copilot-connectors)` for supported services without server setup, or [MCP servers](../../agent-customization/mcp-servers.md) you configure yourself. |
+| Use extension-provided tools | Follow [extension tool setup](../run/tools.md#add-extension-tools-for-the-copilot-harness) to install and enable an extension in the editor or {% data variables.copilot.agents_window %}, then check its tools in **Customizations > Tools**. Extension management in the {% data variables.copilot.agents_window %} is Experimental. |
 | Run commands at workflow events | [Hooks](../../agent-customization/hooks.md) supported by your harness. |
 | Install a packaged setup | [Agent plugins](../../agent-customization/agent-plugins.md) from [community or organization marketplaces](../../agent-customization/agent-plugins.md#install-a-plugin-from-a-marketplace). |
 
@@ -131,7 +134,7 @@ Run **Chat: Open Customizations** to open the [Agent Customizations editor](../.
 | I want to... | Start with |
 |---|---|
 | Manage independent tasks | Select **Open in Agents** to use the [{% data variables.copilot.agents_window %}](../run/agents-window.md). Use [separate worktrees](../guides/delegate-two-tasks.md) when changes must stay separate. |
-| Delegate part of a task | Ask for a [subagent](../run/subagents.md#subagents-by-harness) to investigate a bounded question and report back. |
+| Delegate part of a task | Ask for a [subagent](../run/subagents.md#delegate-a-task) to investigate a bounded question and report back. |
 | Continue work from another device | Register your host through **Remote Connections** with [{% data variables.copilot.github_environments %}](../run/remote-agent-sessions.md#make-a-host-available-for-remote-access). `feature(github-environments)` Keep the host running and reachable. |
 | Work without keeping my machine online | Follow [cloud session setup](../run/cloud-sandbox-sessions.md#prerequisites), then select **Cloud** for a new session. `feature(cloud-sessions)` |
 | Repeat a task automatically | Enter `/automate` in the {% data variables.copilot.agents_window %} to [turn the task into an automation](../run/automations.md#create-an-automation-from-chat). Review the proposed prompt and schedule, then check a manual run before enabling recurring work. |

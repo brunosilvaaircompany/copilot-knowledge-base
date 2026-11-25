@@ -180,7 +180,7 @@ Save the file, then try the handoff. If you prefer to create the file directly, 
 
 Set `send: true` to submit the handoff prompt automatically. For all properties, including selecting a model for the next step, see the [handoff field reference](../agents/reference/custom-agent-file-reference.md#handoff-fields).
 
-Handoffs switch the active agent in your conversation. To delegate work without switching the main agent, use [subagents](../agents/run/subagents.md#delegate-implementation-to-a-worker).
+Handoffs switch the active agent in your conversation. To delegate work without switching the main agent, [request a subagent](../agents/run/subagents.md#delegate-a-task).
 
 ## Troubleshoot custom agents
 
@@ -200,4 +200,4 @@ For unresolved problems, [inspect chat interactions](../agents/agent-troubleshoo
 
 * [Custom agent file reference](../agents/reference/custom-agent-file-reference.md)
 * [Configure AI for your codebase](../agents/guides/customize-copilot-guide.md)
-* [Coordinate research and implementation with subagents](../agents/run/subagents.md#delegate-implementation-to-a-worker)
+* [Create and use a reusable subagent](../agents/run/subagents.md#run-a-custom-agent-as-a-subagent)

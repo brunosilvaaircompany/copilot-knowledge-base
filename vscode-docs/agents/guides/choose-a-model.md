@@ -43,6 +43,8 @@ Start with the recommended configuration. See [Fusion setup and effort levels](.
 
 Review the result as you would any AI-generated change. If it meets your needs within your time and credit budget, keep using that approach. Fusion's additional model calls can use more time and AI credits. Compare alternatives if the extra work isn't helping.
 
+If you already prefer different models for recurring tasks, [create a model router](../../agent-customization/language-models.md#use-model-routers) `feature(model-routers)` instead. Routers use your own model choices and routing criteria, with optional guidance for each kind of work. Model routers are available in {% data variables.product.prodname_vscode_shortname %} Insiders for Copilot harness sessions.
+
 ## Choose an individual model
 
 Use this path when you already prefer a model, need a particular capability, or want control over its configuration. Use the [current model comparison reference](https://docs.github.com/en/copilot/reference/ai-models/model-comparison) to find candidates that fit your task:
@@ -73,7 +75,7 @@ For this walkthrough:
 
 * Open a trusted Git repository with at least one commit and a Git remote.
 * Make sure you can run the relevant tests. Resolve setup problems before comparing models.
-* Preserve unrelated work and commit the starting code. Worktrees don't include your uncommitted changes. See [worktree requirements](../run/agents-window.md#choose-where-an-agent-makes-changes).
+* Preserve unrelated work and commit the starting code. Worktrees don't include your uncommitted changes. See [worktree requirements](../run/worktrees.md#prepare-a-worktree).
 
 Choose a bounded task with a result you can check. For example, if your app has a profile form:
 
