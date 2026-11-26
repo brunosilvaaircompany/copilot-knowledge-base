@@ -1,16 +1,16 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-22 15:10 UTC  
+> Atualizado em: 2026-11-26 17:38 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
 
-## [Connect Supabase, Box, Calendly, and more to Copilot](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot)
+## [Copilot code review billing will default to the organization](https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization)
 
-**Data:** 2026-11-18  **Categorias:** `Improvement`, `copilot`
+**Data:** 2026-11-25  **Categorias:** `Improvement`, `copilot`
 
-You can now connect eight more services to Copilot using GitHub-verified MCP servers, or connectors, available in public preview. They join more than 25 services you can already connect, like&#8230;
+If you haven&#8217;t chosen how to bill Copilot code review for members with a Copilot license, those reviews will be billed to your organization starting December 30, 2026. To keep&#8230;
 
-The post [Connect Supabase, Box, Calendly, and more to Copilot](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot) appeared first on [The GitHub Blog](https://github.blog).
+The post [Copilot code review billing will default to the organization](https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization) appeared first on [The GitHub Blog](https://github.blog).
 
 ---

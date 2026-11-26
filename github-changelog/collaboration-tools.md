@@ -1,6 +1,6 @@
 # GitHub Changelog
 
-> Atualizado em: 2026-11-25 17:53 UTC  
+> Atualizado em: 2026-11-26 17:38 UTC  
 > Fonte: <https://github.blog/changelog/feed/>
 
 ---
@@ -22,15 +22,5 @@ The post [GitHub Enterprise Server 3.23 release candidate](https://github.blog/c
 Editor&#8217;s note (November 23, 2026): We have temporarily rolled back this change while we improve the experience based on user feedback. Choose which repositories appear on the Dashboard with the&#8230;
 
 The post [Pin your favorite repositories to your dashboard](https://github.blog/changelog/2026-11-20-pin-your-favorite-repositories-to-your-dashboard) appeared first on [The GitHub Blog](https://github.blog).
-
----
-
-## [Improvements on the pull request overview in public preview](https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview)
-
-**Data:** 2026-11-20  **Categorias:** `Improvement`, `collaboration tools`
-
-Your feedback has helped improve the new pull request Overview page since its November 5, 2026 public preview. Here&#8217;s what&#8217;s new! Clearer merge status and next steps Failed optional checks&#8230;
-
-The post [Improvements on the pull request overview in public preview](https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).
 
 ---
